@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Or So She Thought — Reading Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-desk: #ECE7E1;        /* Desk surface */
+      --bg-page: #FAF8F5;        /* Book leaf cream */
+      --text-ink: #1C1A17;       /* Editorial print black */
+      --text-muted: #736E67;     /* Header & folio gray */
+      --border-subtle: #E3DDD4;  /* Hairline rule */
+      --book-shadow: 0 4px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --reader-size: 19px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-desk);
+      color: var(--text-ink);
+      font-family: var(--font-serif);
+      font-size: var(--reader-size);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 6rem;
+    }
+
+    /* Reading Progress Line */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background-color: var(--text-ink);
+      width: 0%;
+      z-index: 101;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Utility HUD */
+    .reader-hud {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-subtle);
+      font-family: var(--font-sans);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
+      font-size: 0.8rem;
+    }
+
+    .hud-controls {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .hud-btn {
+      background: none;
+      border: 1px solid var(--border-subtle);
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-ink);
+      font-family: var(--font-sans);
+      transition: all 0.2s ease;
+    }
+
+    .hud-btn:hover {
+      background-color: var(--text-ink);
+      color: var(--bg-page);
+    }
+
+    /* Slide-out Table of Contents */
+    .toc-drawer {
+      position: fixed;
+      top: 0;
+      left: -320px;
+      width: 300px;
+      height: 100vh;
+      background-color: var(--bg-page);
+      border-right: 1px solid var(--border-subtle);
+      z-index: 200;
+      padding: 3rem 2rem;
+      box-shadow: 2px 0 20px rgba(0,0,0,0.08);
+      transition: left 0.3s ease;
+      overflow-y: auto;
+      font-family: var(--font-sans);
+    }
+
+    .toc-drawer.open {
+      left: 0;
+    }
+
+    .toc-drawer h3 {
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .toc-list a {
+      color: var(--text-ink);
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .toc-list a:hover {
+      color: var(--text-muted);
+    }
+
+    /* Book Sheet (PDF Look) */
+    .page-sheet {
+      background-color: var(--bg-page);
+      max-width: 720px;
+      margin: 2.5rem auto;
+      padding: 5rem 5.5rem 6rem;
+      box-shadow: var(--book-shadow);
+      border: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    /* Running Header */
+    .running-head {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    /* Chapter Header */
+    .chapter-num {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-size: 2.3rem;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 3.5rem;
+    }
+
+    /* Drop Cap */
+    .drop-cap::first-letter {
+      font-size: 4.5rem;
+      float: left;
+      line-height: 0.8;
+      margin-right: 0.85rem;
+      margin-top: 0.2rem;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      color: var(--text-ink);
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      text-indent: 1.5em;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    p.no-indent {
+      text-indent: 0;
+    }
+
+    /* Page Navigation Footer */
+    .page-turn {
+      margin-top: 4.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+    }
+
+    .page-turn a {
+      color: var(--text-ink);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .page-turn a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .page-sheet {
+        margin: 1rem;
+        padding: 3rem 1.75rem;
+      }
+      p {
+        text-align: left;
+        hyphens: manual;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Slide-Out Table of Contents -->
+  <aside class="toc-drawer" id="tocDrawer">
+    <h3>Contents</h3>
+    <ul class="toc-list">
+      <li><a href="#ch1"><span>Chapter I</span> <span style="color: var(--text-muted);">1</span></a></li>
+      <li><a href="#ch2"><span>Chapter II</span> <span style="color: var(--text-muted);">16</span></a></li>
+      <li><a href="#ch3"><span>Chapter III</span> <span style="color: var(--text-muted);">32</span></a></li>
+    </ul>
+  </aside>
+
+  <!-- Reader Top Bar -->
+  <header class="reader-hud">
+    <button class="hud-btn" id="tocToggle">Contents ☰</button>
+    <span style="letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.75rem;">Or So She Thought</span>
+    <div class="hud-controls">
+      <button class="hud-btn" id="fontDown">A−</button>
+      <button class="hud-btn" id="fontUp">A+</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PDF Replica Page Leaf -->
+    <article class="page-sheet">
+      
+      <!-- Running Header -->
+      <div class="running-head">
+        <span>Norwyn, 1994</span>
+        <span>Or So She Thought</span>
+      </div>
+
+      <!-- Chapter Number & Title -->
+      <span class="chapter-num">Chapter One</span>
+      <h1 class="chapter-title">The Arrangement of Desire</h1>
+
+      <!-- Opening Paragraph with Drop Cap -->
+      <p class="drop-cap no-indent">
+        Elizabeth has spent her life learning how to live correctly. The courtyard at dawn was quiet with the particular stillness of an estate that ran on unwritten precision. Her future had been drafted by others, yet every responsibility was so thoroughly understood that it had long ceased to feel like an imposition.
+      </p>
+
+      <p>
+        Until the morning she found herself standing before the registry portrait, tracing the gilded border where her mother's signatures ended and hers were soon to begin. It was not anger that moved through her, but something much quieter and far more disorienting: the sudden inability to tell whether the things she wanted had ever been entirely hers to begin with.
+      </p>
+
+      <p>
+        In Norwyn, decisions were not announced as commands. They arrived as assumptions so gentle that dissenting felt like forgetting your own language. She adjusted the cuff of her jacket and stepped into the corridor, aware of every footstep echoing against the limestone floor.
+      </p>
+
+      <!-- Bottom Folio & Page Turn -->
+      <div class="page-turn">
+        <span>Folio 01</span>
+        <a href="#ch2">Chapter II →</a>
+      </div>
+
+    </article>
+  </main>
+
+  <script>
+    // Progress Bar on Scroll
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // TOC Drawer Toggle
+    const tocDrawer = document.getElementById('tocDrawer');
+    document.getElementById('tocToggle').addEventListener('click', (e) => {
+      e.stopPropagation();
+      tocDrawer.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!tocDrawer.contains(e.target) && e.target.id !== 'tocToggle') {
+        tocDrawer.classList.remove('open');
+      }
+    });
+
+    // Reader Font Sizing
+    let currentSize = 19;
+    document.getElementById('fontUp').addEventListener('click', () => {
+      if (currentSize < 24) {
+        currentSize += 1;
+        document.documentElement.style.setProperty('--reader-size', currentSize + 'px');
+      }
+    });
+    document.getElementById('fontDown').addEventListener('click', () => {
+      if (currentSize > 15) {
+        currentSize -= 1;
+        document.documentElement.style.setProperty('--reader-size', currentSize + 'px');
+      }
+    });
+  </script>
+
+</body>
+</html>
