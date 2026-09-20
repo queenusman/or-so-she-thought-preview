@@ -42,7 +42,7 @@
   </script>
 
   <style>
-    /* Custom subtle paper grain texture overlay */
+    /* Paper background */
     body {
       background-color: #FDFBF7;
       color: #1F1B16;
@@ -50,112 +50,134 @@
       background-size: 24px 24px;
     }
 
-    /* 3D Realistic Hardcover Presentation */
+    /* 3D Stage & Hardware Sharpness */
     .book-stage {
-      perspective: 1600px;
+      perspective: 1400px;
+      perspective-origin: 50% 50%;
     }
 
     .book-container {
+      position: relative;
       transform-style: preserve-3d;
       transform: rotateY(-18deg) rotateX(6deg);
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.3, 1), box-shadow 0.25s ease;
+      touch-action: pan-y;
+      will-change: transform;
+      -webkit-transform: rotateY(-18deg) rotateX(6deg);
+      -webkit-font-smoothing: subpixel-antialiased;
     }
 
-    .book-container:hover {
-      transform: rotateY(-4deg) rotateX(2deg) translateY(-10px);
+    /* Ambient Floating Idle Animation */
+    @keyframes gentleFloat {
+      0%, 100% {
+        transform: rotateY(-18deg) rotateX(5deg) translateY(0px);
+      }
+      50% {
+        transform: rotateY(-13deg) rotateX(2deg) translateY(-8px);
+      }
     }
 
+    .book-container.floating {
+      animation: gentleFloat 6s ease-in-out infinite;
+    }
+
+    /* Hardcover Book Frame */
     .book-cover {
-      box-shadow: 
-        -2px 0 4px rgba(31, 27, 22, 0.15),
-        20px 24px 40px -6px rgba(31, 27, 22, 0.32),
-        2px 2px 10px rgba(31, 27, 22, 0.12);
       position: relative;
+      background-color: #1f1b16;
+      border-radius: 3px 8px 8px 3px;
+      box-shadow: 
+        -2px 0 4px rgba(31, 27, 22, 0.12),
+        18px 24px 38px -4px rgba(31, 27, 22, 0.35),
+        2px 2px 8px rgba(31, 27, 22, 0.1);
+      overflow: hidden;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
     }
 
-    /* Book Cover Image */
+    /* HD Sharp Cover Image */
     .book-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 3px 6px 6px 3px;
       display: block;
+      border-radius: 3px 8px 8px 3px;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: high-quality;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
     }
 
-    /* Hardcover Spine Hinge & Crease */
+    /* Spine Hinge Groove (Subtle & Crisp) */
     .book-spine-crease {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 18px;
-      width: 16px;
+      left: 14px;
+      width: 12px;
       background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.32) 0%,
-        rgba(255, 255, 255, 0.28) 35%,
+        rgba(255, 255, 255, 0.18) 35%,
         rgba(0, 0, 0, 0.22) 70%,
-        rgba(255, 255, 255, 0.05) 100%
+        transparent 100%
       );
-      mix-blend-mode: overlay;
+      mix-blend-mode: multiply;
       pointer-events: none;
-      z-index: 20;
+      z-index: 15;
     }
 
-    /* Tactile Hardcover Lighting Sheen */
+    /* Soft Realistic Hardcover Sheen */
     .book-sheen {
       position: absolute;
       inset: 0;
-      border-radius: 3px 6px 6px 3px;
+      border-radius: 3px 8px 8px 3px;
       background: linear-gradient(
         125deg,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 255, 255, 0.06) 35%,
-        rgba(0, 0, 0, 0.06) 60%,
-        rgba(0, 0, 0, 0.28) 100%
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.03) 40%,
+        rgba(0, 0, 0, 0.04) 65%,
+        rgba(0, 0, 0, 0.25) 100%
       );
       pointer-events: none;
-      z-index: 20;
+      z-index: 15;
     }
 
-    /* Realistic 3D Paper Edge (Right side pages) */
+    /* Paper Page Edges (Right side depth) */
     .book-edge {
       position: absolute;
       right: -14px;
-      top: 4px;
-      bottom: 4px;
+      top: 3px;
+      bottom: 3px;
       width: 16px;
       background: repeating-linear-gradient(
         to bottom,
-        #FAF8F2 0px,
-        #E8E2D4 2px,
-        #D4CCBC 3px,
-        #FAF8F2 4px
+        #fbf9f4 0px,
+        #ece4d3 2px,
+        #ddd3be 3px,
+        #fbf9f4 4px
       );
       transform: rotateY(90deg) translateZ(-8px);
       border-radius: 0 3px 3px 0;
       box-shadow: inset 1px 0 3px rgba(0, 0, 0, 0.25);
-      z-index: 10;
+      z-index: 5;
     }
 
-    /* Soft Realistic Drop Shadow Under Book */
+    /* Ground Shadow */
     .book-shadow {
       position: absolute;
       bottom: -22px;
-      left: 5%;
-      width: 90%;
-      height: 24px;
-      background: rgba(31, 27, 22, 0.35);
+      left: 6%;
+      width: 88%;
+      height: 22px;
+      background: rgba(31, 27, 22, 0.32);
       filter: blur(14px);
       border-radius: 50%;
-      transform: rotateX(80deg);
+      transform: rotateX(85deg);
       pointer-events: none;
-      transition: all 0.6s ease;
-    }
-
-    .book-container:hover .book-shadow {
-      transform: rotateX(80deg) scale(0.92);
-      filter: blur(18px);
-      opacity: 0.7;
+      transition: transform 0.25s ease, opacity 0.25s ease;
     }
 
     /* Editorial Drop Cap */
@@ -171,7 +193,7 @@
       font-weight: 500;
     }
 
-    /* Subtle custom scrollbar */
+    /* Scrollbar */
     ::-webkit-scrollbar {
       width: 7px;
     }
@@ -189,14 +211,13 @@
 </head>
 <body class="font-sans antialiased selection:bg-ivory-300 selection:text-ink-900 min-h-screen flex flex-col relative overflow-x-hidden">
 
-  <!-- Top Progress Bar -->
+  <!-- Scroll Progress -->
   <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] bg-ink-900 z-50 transition-all duration-100 ease-out" style="width: 0%;"></div>
 
   <!-- Header / Navigation -->
   <header id="main-nav" class="fixed top-0 inset-x-0 z-40 bg-ivory-50/90 backdrop-blur-md border-b border-ivory-border transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
       
-      <!-- Monogram & Title -->
       <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
         <div class="w-9 h-9 rounded-full border border-ink-900/30 flex items-center justify-center font-serif text-lg font-semibold tracking-wider text-ink-900 group-hover:border-ink-900 group-hover:bg-ivory-200 transition-colors">
           N
@@ -207,7 +228,7 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
+      <!-- Desktop Links -->
       <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-[0.16em] font-medium text-ink-charcoal">
         <a href="#novel-overview" class="hover:text-ink-900 transition-colors py-1">Overview</a>
         <a href="#excerpts" class="hover:text-ink-900 transition-colors py-1">Excerpts</a>
@@ -220,7 +241,7 @@
         </a>
       </nav>
 
-      <!-- Mobile Hamburger Button -->
+      <!-- Mobile Button -->
       <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="lg:hidden p-2 text-ink-900 focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16" />
@@ -228,7 +249,7 @@
       </button>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer -->
     <div id="mobile-nav" class="hidden lg:hidden border-b border-ivory-border bg-ivory-100/95 backdrop-blur-lg px-6 py-6 transition-all duration-200">
       <div class="flex flex-col space-y-4 text-xs uppercase tracking-[0.18em] font-medium text-ink-charcoal">
         <a href="#hero" class="mobile-link hover:text-ink-900">Cover & Motto</a>
@@ -248,40 +269,44 @@
     <!-- HERO SECTION -->
     <section id="hero" class="relative min-h-[92vh] flex flex-col justify-center items-center px-6 py-16 md:py-24 border-b border-ivory-border">
       
-      <!-- Top Decorative Accent -->
       <div class="text-center mb-10 max-w-xl mx-auto">
         <span class="inline-block text-[11px] uppercase tracking-[0.3em] text-ink-muted font-medium pb-2 border-b border-ivory-border">
           An Editorial First Edition
         </span>
       </div>
 
-      <!-- 3D Book Presentation Container with Your Cover Image -->
+      <!-- 3D INTERACTIVE HARDCOVER BOOK -->
       <div class="book-stage mb-14 mt-4 w-full flex justify-center items-center">
-        <div class="relative book-container cursor-pointer select-none">
+        <div id="book-element" class="relative book-container floating cursor-grab active:cursor-grabbing select-none">
           
-          <!-- Realistic Hardcover Book Wrapper -->
-          <div class="book-cover relative w-[250px] sm:w-[290px] md:w-[330px] aspect-[1/1.55] rounded-r-[6px] rounded-l-[3px] border border-ivory-border">
+          <div class="book-cover relative w-[250px] sm:w-[290px] md:w-[330px] aspect-[1/1.55] border border-ivory-border">
             
-            <!-- YOUR BOOK COVER IMAGE (Upload cover.jpg to your repo) -->
-            <img src="cover.jpg" alt="Novel Book Cover" class="book-img" />
+            <!-- Book Cover Image (Loads cover.jpg from your repo) -->
+            <img 
+              src="cover.jpg" 
+              alt="Novel Book Cover" 
+              class="book-img" 
+              loading="eager" 
+              decoding="sync"
+            />
 
-            <!-- Book Spine Accent Line Overlay -->
+            <!-- Spine Hinge Accent -->
             <div class="book-spine-crease"></div>
 
-            <!-- Soft Realistic Sheen Overlay -->
+            <!-- Crisp Sheen Overlay -->
             <div class="book-sheen"></div>
 
-            <!-- Simulated Paper Edge Depth (Right side pages) -->
+            <!-- 3D Paper Pages on Right Side -->
             <div class="book-edge"></div>
           </div>
 
-          <!-- Contact Depth Shadow Under the Book -->
+          <!-- Bottom Contact Shadow -->
           <div class="book-shadow"></div>
 
         </div>
       </div>
 
-      <!-- Novel Motto Section -->
+      <!-- Novel Motto -->
       <div class="text-center max-w-3xl mx-auto px-4 mt-2">
         <div class="flex items-center justify-center gap-4 mb-4">
           <span class="h-[1px] w-12 bg-ivory-border"></span>
@@ -398,7 +423,6 @@
           <p class="font-serif italic text-ink-muted text-base mt-2">Transcribed from original folios and early proofs</p>
         </div>
 
-        <!-- Excerpt Tab Controls -->
         <div class="flex justify-center border-b border-ivory-border mb-10 overflow-x-auto">
           <div class="inline-flex gap-2 sm:gap-6 p-1">
             <button onclick="switchExcerpt(0)" id="excerpt-tab-0" class="excerpt-tab active px-4 py-2 font-serif text-base text-ink-900 border-b-2 border-ink-900 -mb-[1px] transition-colors focus:outline-none">
@@ -413,7 +437,6 @@
           </div>
         </div>
 
-        <!-- Excerpt Display Area -->
         <div class="bg-ivory-100 rounded-xl p-8 sm:p-12 md:p-14 border border-ivory-border shadow-sm min-h-[360px] relative transition-all duration-300">
           <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.22em] text-ink-muted pb-6 border-b border-ivory-border/70 mb-8">
             <span id="excerpt-folio">Folio 14 &bull; Act I</span>
@@ -585,7 +608,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: WRITING THE NOVEL (THINGS WRITING THIS NOVEL TAUGHT ME) -->
+    <!-- SECTION 5: WRITING THE NOVEL -->
     <section id="reflections" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
       <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
@@ -711,7 +734,7 @@
       </div>
     </section>
 
-    <!-- SECTION 7: EMAIL SUBSCRIPTION ("THE NORWYN DISPATCHES") -->
+    <!-- SECTION 7: EMAIL SUBSCRIPTION -->
     <section id="dispatch" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100">
       <div class="max-w-2xl mx-auto text-center">
         <div class="w-12 h-12 rounded-full border border-ink-900/20 flex items-center justify-center mx-auto mb-6 bg-ivory-50 text-ink-900">
@@ -727,7 +750,7 @@
         </p>
 
         <form id="dispatch-form" class="space-y-4" onsubmit="handleSubscribe(event)">
-          <div class="flex flex-col sm:row gap-2 max-w-md mx-auto">
+          <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
             <input 
               type="email" 
               id="dispatch-email" 
@@ -748,7 +771,7 @@
           </p>
         </form>
 
-        <div id="dispatch-success" class="hidden mt-6 p-5 rounded-lg bg-ivory-50 border border-ink-900/30 text-ink-900 text-sm animate-fade-in">
+        <div id="dispatch-success" class="hidden mt-6 p-5 rounded-lg bg-ivory-50 border border-ink-900/30 text-ink-900 text-sm">
           <div class="font-serif italic text-lg mb-1">Your name has been entered into the ledger.</div>
           <p class="text-xs text-ink-charcoal font-light">
             A confirmation dispatch is journeying to <span id="confirmed-email-display" class="font-semibold text-ink-900"></span>. Thank you for joining our quiet fellowship.
@@ -793,7 +816,7 @@
     </div>
   </footer>
 
-  <!-- Floating "Back to Top" Button -->
+  <!-- Floating Back to Top Button -->
   <button 
     id="floating-top-btn" 
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
@@ -806,7 +829,57 @@
   </button>
 
   <script>
-    // 1. Dynamic Scroll Progress Bar & Floating Top Button
+    // 1. DYNAMIC TOUCH & MOUSE 3D INTERACTION
+    const book = document.getElementById('book-element');
+
+    if (book) {
+      let isInteracting = false;
+
+      const setTilt = (clientX, clientY) => {
+        book.classList.remove('floating');
+        const rect = book.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const tiltY = ((x - centerX) / centerX) * 24;
+        const tiltX = -((y - centerY) / centerY) * 18;
+
+        book.style.transform = `rotateY(${tiltY}deg) rotateX(${tiltX}deg) translateY(-8px) scale(1.02)`;
+      };
+
+      const resetBook = () => {
+        isInteracting = false;
+        book.style.transform = '';
+        book.classList.add('floating');
+      };
+
+      // Mouse Event Listeners (Desktop)
+      book.addEventListener('mousemove', (e) => {
+        setTilt(e.clientX, e.clientY);
+      });
+      book.addEventListener('mouseleave', resetBook);
+
+      // Touch Event Listeners (Mobile & Tablet)
+      book.addEventListener('touchstart', (e) => {
+        isInteracting = true;
+        const touch = e.touches[0];
+        setTilt(touch.clientX, touch.clientY);
+      }, { passive: true });
+
+      book.addEventListener('touchmove', (e) => {
+        if (!isInteracting) return;
+        const touch = e.touches[0];
+        setTilt(touch.clientX, touch.clientY);
+      }, { passive: true });
+
+      book.addEventListener('touchend', resetBook);
+      book.addEventListener('touchcancel', resetBook);
+    }
+
+    // 2. Scroll Progress Bar & Floating Top Button
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -829,7 +902,7 @@
       }
     });
 
-    // 2. Interactive Excerpt Tabs Switcher
+    // 3. Excerpt Tabs
     const folios = [
       "Folio 14 • Act I",
       "Folio 82 • Act II",
@@ -863,7 +936,7 @@
       }
     }
 
-    // 3. Email Subscription Form Submission Handling
+    // 4. Newsletter Subscription Form
     function handleSubscribe(event) {
       event.preventDefault();
       const emailInput = document.getElementById('dispatch-email');
@@ -872,7 +945,6 @@
       const emailDisplay = document.getElementById('confirmed-email-display');
 
       if (!emailInput || !emailInput.value) return;
-
       const emailVal = emailInput.value.trim();
 
       submitBtn.disabled = true;
@@ -888,7 +960,7 @@
       }, 700);
     }
 
-    // 4. Mobile Menu Drawer Toggle
+    // 5. Mobile Navigation Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -905,7 +977,7 @@
       });
     }
 
-    // 5. Dynamic Footer Year
+    // 6. Year in Footer
     const yearElem = document.getElementById('current-year');
     if (yearElem) {
       yearElem.innerText = new Date().getFullYear();
