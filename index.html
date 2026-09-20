@@ -97,8 +97,17 @@
     }
 
     @media (max-width: 1024px) {
+      .nav {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.9rem 1rem;
+      }
       .nav-links {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 0.72rem;
       }
     }
 
@@ -175,7 +184,7 @@
       -webkit-backface-visibility: hidden;
     }
 
-    /* Crisp, Ultra-Clean Spine Hinge (Doesn't cover your artwork) */
+    /* Crisp Spine Hinge */
     .book-spine-crease {
       position: absolute;
       top: 0;
@@ -486,7 +495,7 @@
   <header class="nav">
     <a href="#home" class="nav-brand">Or So She Thought</a>
     <nav class="nav-links">
-      <a href="#novel">Or So She Thought</a>
+      <a href="#novel">The Webnovel</a>
       <a href="#norwyn">Norwyn</a>
       <a href="#people">The People</a>
       <a href="#questions">The Questions</a>
@@ -520,7 +529,7 @@
 
   </section>
 
-  <!-- 1. OR SO SHE THOUGHT (THE NOVEL) -->
+  <!-- 1. THE WEBNOVEL -->
   <section id="novel">
     <div class="container">
       <div class="section-eyebrow">The Web Novel</div>
