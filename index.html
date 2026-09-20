@@ -131,7 +131,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* --- CRYSTAL CLEAR 3D HARDCOVER WITH SMOOTH MOTION --- */
+    /* --- CLICKABLE 3D HARDCOVER WITH SMOOTH MOTION --- */
     .book-stage {
       perspective: 1400px;
       perspective-origin: 50% 50%;
@@ -142,6 +142,7 @@
     }
 
     .book-cover {
+      display: block;
       width: 270px;
       height: 410px;
       border-radius: 4px 12px 12px 4px;
@@ -161,10 +162,12 @@
       will-change: transform;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
+      text-decoration: none;
     }
 
     .book-cover:hover,
     .book-cover:active {
+      opacity: 1;
       transform: rotateY(0deg) rotateX(0deg) translateY(-8px) translate3d(0,0,0);
       -webkit-transform: rotateY(0deg) rotateX(0deg) translateY(-8px) translate3d(0,0,0);
       box-shadow: 0 24px 44px rgba(31, 27, 22, 0.28);
@@ -505,12 +508,12 @@
     </nav>
   </header>
 
-  <!-- Hero Section with Crystal Clear Book Cover and Motto -->
+  <!-- Hero Section with Clickable Book Cover -->
   <section class="hero">
     
-    <!-- 3D Hardcover with High-Definition Rendering -->
+    <!-- Clickable 3D Hardcover Cover leading to #novel -->
     <div class="book-stage">
-      <div class="book-cover" onclick="this.classList.toggle('active')">
+      <a href="#novel" class="book-cover" title="Enter The Webnovel">
         <img 
           src="cover.jpg" 
           alt="Or So She Thought Book Cover" 
@@ -519,7 +522,7 @@
           decoding="sync" 
         />
         <div class="book-spine-crease"></div>
-      </div>
+      </a>
     </div>
 
     <div class="motto-wrapper">
