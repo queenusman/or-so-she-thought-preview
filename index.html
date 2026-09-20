@@ -20,7 +20,6 @@
       --ink-faint: #8a8377;
       --border: #e6dfd1;
       --border-dark: #2b2620;
-      --btn-brown: #4a382a;
       --gold-subtle: #bda376;
       --shadow: 0 16px 36px -12px rgba(31, 27, 22, 0.08);
       --font-serif: "Cormorant Garamond", Georgia, serif;
@@ -65,7 +64,7 @@
       background: rgba(251, 249, 244, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 0.9rem 2rem;
+      padding: 1.1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -80,34 +79,29 @@
       cursor: pointer;
     }
 
-    /* Circular Hamburger Menu Button (Matches Screenshot) */
-    .circle-menu-btn {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background-color: var(--btn-brown);
+    /* Minimalist Three Black Lines Menu Button (No frame) */
+    .hamburger-btn {
+      background: none;
       border: none;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 4px;
-      box-shadow: 0 4px 12px rgba(46, 35, 26, 0.18);
-      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s ease;
-      flex-shrink: 0;
+      gap: 5px;
+      padding: 8px 4px;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
-    .circle-menu-btn:hover {
-      transform: scale(1.06);
-      background-color: #38291d;
+    .hamburger-btn:hover {
+      opacity: 0.65;
     }
 
-    .circle-menu-btn .bar {
-      width: 18px;
-      height: 2.2px;
-      background-color: #ffffff;
-      border-radius: 2px;
+    .hamburger-btn .bar {
+      width: 24px;
+      height: 2px;
+      background-color: var(--ink);
+      border-radius: 1px;
     }
 
     /* Slide-out Menu Overlay & Drawer */
@@ -671,8 +665,8 @@
       Or So She Thought
     </div>
 
-    <!-- The Circular Hamburger Menu Button (Matches Screenshot) -->
-    <button class="circle-menu-btn" onclick="toggleMenu(true)" aria-label="Open Navigation Menu">
+    <!-- Minimalist Three Black Lines Button (No circular frame) -->
+    <button class="hamburger-btn" onclick="toggleMenu(true)" aria-label="Open Navigation Menu">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
@@ -1066,7 +1060,7 @@
       if (open) {
         drawer.classList.add('open');
         overlay.classList.add('open');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden';
       } else {
         drawer.classList.remove('open');
         overlay.classList.remove('open');
