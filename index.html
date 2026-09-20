@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OR SO SHE THOUGHT — A Novel by Queen Usman</title>
+  <title>OR SO SHE THOUGHT — A Novel of Silence and Stone</title>
   
   <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +42,7 @@
   </script>
 
   <style>
-    /* Paper background */
+    /* Custom subtle paper grain texture overlay */
     body {
       background-color: #FDFBF7;
       color: #1F1B16;
@@ -50,133 +50,106 @@
       background-size: 24px 24px;
     }
 
-    /* 3D Stage & Hardware Antialiasing */
+    /* 3D Realistic Hardcover Presentation */
     .book-stage {
-      perspective: 1500px;
-      perspective-origin: 50% 50%;
+      perspective: 1600px;
     }
 
     .book-container {
-      position: relative;
       transform-style: preserve-3d;
       transform: rotateY(-18deg) rotateX(6deg);
-      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.3, 1), box-shadow 0.25s ease;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       touch-action: pan-y;
       will-change: transform;
-      -webkit-transform: rotateY(-18deg) rotateX(6deg);
     }
 
-    /* Ambient Float Animation */
-    @keyframes gentleFloat {
-      0%, 100% {
-        transform: rotateY(-18deg) rotateX(5deg) translateY(0px);
-      }
-      50% {
-        transform: rotateY(-13deg) rotateX(2deg) translateY(-8px);
-      }
-    }
-
-    .book-container.floating {
-      animation: gentleFloat 6s ease-in-out infinite;
-    }
-
-    /* Hardcover Book Frame */
     .book-cover {
-      position: relative;
-      background-color: #1f1b16;
-      border-radius: 3px 8px 8px 3px;
       box-shadow: 
-        -2px 0 4px rgba(31, 27, 22, 0.12),
-        18px 24px 38px -4px rgba(31, 27, 22, 0.35),
-        2px 2px 8px rgba(31, 27, 22, 0.1);
-      overflow: hidden;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
+        -2px 0 4px rgba(31, 27, 22, 0.15),
+        20px 24px 40px -6px rgba(31, 27, 22, 0.32),
+        2px 2px 10px rgba(31, 27, 22, 0.12);
+      position: relative;
     }
 
-    /* HD Sharp Cover Image */
+    /* Book Cover Image */
     .book-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 3px 6px 6px 3px;
       display: block;
-      border-radius: 3px 8px 8px 3px;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: high-quality;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
     }
 
-    /* Spine Hinge Groove */
+    /* Hardcover Spine Hinge & Crease */
     .book-spine-crease {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 14px;
-      width: 12px;
+      left: 18px;
+      width: 16px;
       background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.32) 0%,
-        rgba(255, 255, 255, 0.18) 35%,
+        rgba(255, 255, 255, 0.28) 35%,
         rgba(0, 0, 0, 0.22) 70%,
-        transparent 100%
+        rgba(255, 255, 255, 0.05) 100%
       );
-      mix-blend-mode: multiply;
+      mix-blend-mode: overlay;
       pointer-events: none;
-      z-index: 15;
+      z-index: 20;
     }
 
-    /* Soft Realistic Hardcover Sheen */
+    /* Tactile Hardcover Lighting Sheen */
     .book-sheen {
       position: absolute;
       inset: 0;
-      border-radius: 3px 8px 8px 3px;
+      border-radius: 3px 6px 6px 3px;
       background: linear-gradient(
         125deg,
-        rgba(255, 255, 255, 0.18) 0%,
-        rgba(255, 255, 255, 0.03) 40%,
-        rgba(0, 0, 0, 0.04) 65%,
-        rgba(0, 0, 0, 0.25) 100%
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.06) 35%,
+        rgba(0, 0, 0, 0.06) 60%,
+        rgba(0, 0, 0, 0.28) 100%
       );
       pointer-events: none;
-      z-index: 15;
+      z-index: 20;
     }
 
-    /* Paper Page Edges (Right side depth) */
+    /* Realistic 3D Paper Edge (Right side pages) */
     .book-edge {
       position: absolute;
       right: -14px;
-      top: 3px;
-      bottom: 3px;
+      top: 4px;
+      bottom: 4px;
       width: 16px;
       background: repeating-linear-gradient(
         to bottom,
-        #fbf9f4 0px,
-        #ece4d3 2px,
-        #ddd3be 3px,
-        #fbf9f4 4px
+        #FAF8F2 0px,
+        #E8E2D4 2px,
+        #D4CCBC 3px,
+        #FAF8F2 4px
       );
       transform: rotateY(90deg) translateZ(-8px);
       border-radius: 0 3px 3px 0;
       box-shadow: inset 1px 0 3px rgba(0, 0, 0, 0.25);
-      z-index: 5;
+      z-index: 10;
     }
 
-    /* Ground Shadow */
+    /* Soft Realistic Drop Shadow Under Book */
     .book-shadow {
       position: absolute;
       bottom: -22px;
-      left: 6%;
-      width: 88%;
-      height: 22px;
-      background: rgba(31, 27, 22, 0.32);
+      left: 5%;
+      width: 90%;
+      height: 24px;
+      background: rgba(31, 27, 22, 0.35);
       filter: blur(14px);
       border-radius: 50%;
-      transform: rotateX(85deg);
+      transform: rotateX(80deg);
       pointer-events: none;
-      transition: transform 0.25s ease, opacity 0.25s ease;
+      transition: all 0.6s ease;
     }
 
     /* Editorial Drop Cap */
@@ -192,7 +165,7 @@
       font-weight: 500;
     }
 
-    /* Custom Scrollbar */
+    /* Subtle custom scrollbar */
     ::-webkit-scrollbar {
       width: 7px;
     }
@@ -213,7 +186,7 @@
   <!-- Top Progress Bar -->
   <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] bg-ink-900 z-50 transition-all duration-100 ease-out" style="width: 0%;"></div>
 
-  <!-- Main Navigation Bar -->
+  <!-- Header / Navigation -->
   <header id="main-nav" class="fixed top-0 inset-x-0 z-40 bg-ivory-50/90 backdrop-blur-md border-b border-ivory-border transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
       
@@ -230,16 +203,13 @@
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden xl:flex items-center gap-6 text-[11px] uppercase tracking-[0.16em] font-medium text-ink-charcoal">
-        <a href="#novel" class="hover:text-ink-900 transition-colors py-1">The Novel</a>
-        <a href="#norwyn" class="hover:text-ink-900 transition-colors py-1">Norwyn</a>
+        <a href="#novel-overview" class="hover:text-ink-900 transition-colors py-1">Or So She Thought</a>
+        <a href="#world" class="hover:text-ink-900 transition-colors py-1">Norwyn</a>
         <a href="#people" class="hover:text-ink-900 transition-colors py-1">The People</a>
-        <a href="#questions" class="hover:text-ink-900 transition-colors py-1">The Questions</a>
-        <a href="#making" class="hover:text-ink-900 transition-colors py-1">The Making</a>
-        <a href="#journal" class="hover:text-ink-900 transition-colors py-1">Journal</a>
-        <a href="#about" class="hover:text-ink-900 transition-colors py-1">About</a>
-        <a href="#dispatch" class="px-3.5 py-1.5 rounded-full border border-ink-900 text-ink-900 hover:bg-ink-900 hover:text-ivory-50 transition-all duration-300">
-          Dispatches
-        </a>
+        <a href="#genesis" class="hover:text-ink-900 transition-colors py-1">The Questions</a>
+        <a href="#reflections" class="hover:text-ink-900 transition-colors py-1">The Making</a>
+        <a href="#dispatch" class="hover:text-ink-900 transition-colors py-1">Journal</a>
+        <a href="#author" class="hover:text-ink-900 transition-colors py-1">About</a>
       </nav>
 
       <!-- Mobile Hamburger Button -->
@@ -254,14 +224,13 @@
     <div id="mobile-nav" class="hidden xl:hidden border-b border-ivory-border bg-ivory-100/95 backdrop-blur-lg px-6 py-6 transition-all duration-200">
       <div class="flex flex-col space-y-4 text-xs uppercase tracking-[0.18em] font-medium text-ink-charcoal">
         <a href="#hero" class="mobile-link hover:text-ink-900">Cover & Motto</a>
-        <a href="#novel" class="mobile-link hover:text-ink-900">Or So She Thought — The Novel</a>
-        <a href="#norwyn" class="mobile-link hover:text-ink-900">Norwyn — The World</a>
+        <a href="#novel-overview" class="mobile-link hover:text-ink-900">Or So She Thought</a>
+        <a href="#world" class="mobile-link hover:text-ink-900">Norwyn</a>
         <a href="#people" class="mobile-link hover:text-ink-900">The People</a>
-        <a href="#questions" class="mobile-link hover:text-ink-900">The Questions</a>
-        <a href="#making" class="mobile-link hover:text-ink-900">The Making</a>
-        <a href="#journal" class="mobile-link hover:text-ink-900">Journal</a>
-        <a href="#about" class="mobile-link hover:text-ink-900">About Queen Usman</a>
-        <a href="#dispatch" class="mobile-link pt-2 text-ink-900 font-semibold border-t border-ivory-border">Subscribe to Dispatches &rarr;</a>
+        <a href="#genesis" class="mobile-link hover:text-ink-900">The Questions</a>
+        <a href="#reflections" class="mobile-link hover:text-ink-900">The Making</a>
+        <a href="#dispatch" class="mobile-link hover:text-ink-900">Journal</a>
+        <a href="#author" class="mobile-link hover:text-ink-900">About Queen Usman</a>
       </div>
     </div>
   </header>
@@ -271,553 +240,435 @@
     <!-- HERO SECTION -->
     <section id="hero" class="relative min-h-[92vh] flex flex-col justify-center items-center px-6 py-16 md:py-24 border-b border-ivory-border">
       
+      <!-- Top Decorative Accent -->
       <div class="text-center mb-10 max-w-xl mx-auto">
         <span class="inline-block text-[11px] uppercase tracking-[0.3em] text-ink-muted font-medium pb-2 border-b border-ivory-border">
-          A Psychological Novel &bull; By Queen Usman
+          An Editorial First Edition
         </span>
       </div>
 
-      <!-- 3D INTERACTIVE HARDCOVER BOOK -->
+      <!-- 3D Book Presentation Container with Your Cover Image -->
       <div class="book-stage mb-14 mt-4 w-full flex justify-center items-center">
-        <div id="book-element" class="relative book-container floating cursor-grab active:cursor-grabbing select-none">
+        <div class="relative book-container cursor-pointer select-none">
           
-          <div class="book-cover relative w-[250px] sm:w-[290px] md:w-[330px] aspect-[1/1.55] border border-ivory-border">
+          <!-- Realistic Hardcover Book Wrapper -->
+          <div class="book-cover relative w-[250px] sm:w-[290px] md:w-[330px] aspect-[1/1.55] rounded-r-[6px] rounded-l-[3px] border border-ivory-border">
             
-            <!-- Book Cover Image (cover.jpg) -->
-            <img 
-              src="cover.jpg" 
-              alt="Or So She Thought Book Cover" 
-              class="book-img" 
-              loading="eager" 
-              decoding="sync"
-            />
+            <!-- Cover Image -->
+            <img src="cover.jpg" alt="Novel Book Cover" class="book-img" />
 
-            <!-- Spine Hinge Accent -->
+            <!-- Book Spine Accent Line Overlay -->
             <div class="book-spine-crease"></div>
 
-            <!-- Crisp Sheen Overlay -->
+            <!-- Soft Realistic Sheen Overlay -->
             <div class="book-sheen"></div>
 
-            <!-- 3D Paper Pages on Right Side -->
+            <!-- Simulated Paper Edge Depth (Right side pages) -->
             <div class="book-edge"></div>
           </div>
 
-          <!-- Bottom Contact Shadow -->
+          <!-- Contact Depth Shadow Under the Book -->
           <div class="book-shadow"></div>
 
         </div>
       </div>
 
-      <!-- Novel Motto -->
+      <!-- Novel Motto Section -->
       <div class="text-center max-w-3xl mx-auto px-4 mt-2">
         <div class="flex items-center justify-center gap-4 mb-4">
           <span class="h-[1px] w-12 bg-ivory-border"></span>
-          <span class="font-serif italic text-ink-accent text-sm">The Novel Motto</span>
+          <span class="font-serif italic text-ink-accent text-sm">The Motto of the Citadel</span>
           <span class="h-[1px] w-12 bg-ivory-border"></span>
         </div>
         
         <blockquote class="font-serif text-2xl sm:text-3xl md:text-4xl italic text-ink-900 leading-relaxed font-normal">
-          &ldquo;Every crown demands obedience; some demands are settled in silence.&rdquo;
+          &ldquo;In a city forged from winter&rsquo;s silence, every whispered secret is a debt paid in blood.&rdquo;
         </blockquote>
 
         <p class="text-xs uppercase tracking-[0.22em] text-ink-muted mt-4">
-          From the classified records of the court &bull; Or So She Thought
+          Recorded in the Archives of the Sunless Spire &bull; Chapter VII
         </p>
 
         <!-- Subsection Navigation Pills -->
         <div class="mt-12 flex flex-wrap justify-center gap-2 sm:gap-3 text-xs">
-          <a href="#novel" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
-            The Novel
+          <a href="#novel-overview" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
+            Or So She Thought
           </a>
-          <a href="#norwyn" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
+          <a href="#world" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
             Norwyn
           </a>
           <a href="#people" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
             The People
           </a>
-          <a href="#questions" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
+          <a href="#genesis" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
             The Questions
           </a>
-          <a href="#making" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
+          <a href="#reflections" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
             The Making
           </a>
-          <a href="#journal" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
+          <a href="#dispatch" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
             Journal
           </a>
-          <a href="#about" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
-            Queen Usman
+          <a href="#author" class="px-4 py-2 rounded-full bg-ivory-100 hover:bg-ivory-200 border border-ivory-border text-ink-charcoal hover:text-ink-900 transition-all">
+            About
           </a>
         </div>
       </div>
     </section>
 
-    <!-- 1. OR SO SHE THOUGHT (THE NOVEL) -->
-    <section id="novel" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
+    <!-- SECTION 1: THE NOVEL (OVERVIEW & THE PEOPLE) -->
+    <section id="novel-overview" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
       <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-ivory-border">
-          <div>
-            <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">The Web Novel</span>
-            <h2 class="font-serif text-3xl sm:text-5xl text-ink-900 font-normal tracking-wide">Or So She Thought</h2>
-          </div>
-          <p class="font-serif italic text-ink-muted text-base max-w-md mt-4 md:mt-0">
-            Chapters, manuscript contents, and reading experience through the quiet rooms of power.
-          </p>
-        </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          <!-- Metadata & Reading Mechanics -->
           <div class="lg:col-span-4 space-y-8">
+            <div>
+              <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Synopsis & Record</span>
+              <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">The Work</h2>
+              <div class="w-10 h-[1px] bg-ink-900 mt-3"></div>
+            </div>
+
             <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border space-y-4 text-xs">
               <div class="flex justify-between pb-3 border-b border-ivory-border">
-                <span class="text-ink-muted uppercase tracking-wider">Structure</span>
-                <span class="font-medium text-ink-900">26 Serialized Chapters</span>
+                <span class="text-ink-muted uppercase tracking-wider">Format</span>
+                <span class="font-medium text-ink-900">Clothbound Hardcover & Digital</span>
               </div>
               <div class="flex justify-between pb-3 border-b border-ivory-border">
-                <span class="text-ink-muted uppercase tracking-wider">Setting</span>
-                <span class="font-medium text-ink-900">1990s Royal Court of Norwyn</span>
+                <span class="text-ink-muted uppercase tracking-wider">Length</span>
+                <span class="font-medium text-ink-900">416 Pages / 112,000 Words</span>
               </div>
               <div class="flex justify-between pb-3 border-b border-ivory-border">
                 <span class="text-ink-muted uppercase tracking-wider">Genre</span>
-                <span class="font-medium text-ink-900">Psychological Fiction &bull; Court Drama</span>
+                <span class="font-medium text-ink-900">Gothic Fantasy &bull; Court Intrigue</span>
               </div>
               <div class="flex justify-between pb-3 border-b border-ivory-border">
-                <span class="text-ink-muted uppercase tracking-wider">Tone</span>
-                <span class="font-medium text-ink-900">Restrained, Tense, Architectural</span>
+                <span class="text-ink-muted uppercase tracking-wider">Atmosphere</span>
+                <span class="font-medium text-ink-900">Chilly, Austere, Poignant</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-ink-muted uppercase tracking-wider">Author</span>
-                <span class="font-medium text-ink-900">Queen Usman</span>
+                <span class="text-ink-muted uppercase tracking-wider">Publication</span>
+                <span class="font-medium text-ink-900">Autumn Equinox</span>
               </div>
             </div>
 
-            <!-- Chapter Navigation Selector -->
-            <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border">
-              <h3 class="font-serif text-lg text-ink-900 mb-3">Contents & Readings</h3>
-              <p class="text-xs text-ink-muted leading-relaxed mb-4">
-                Select an excerpt below to enter the folio reader.
-              </p>
-              <div class="space-y-2">
-                <button onclick="switchExcerpt(0)" id="chapter-btn-0" class="w-full text-left p-2.5 rounded border border-ink-900 bg-ivory-200 text-xs font-serif text-ink-900 transition-all">
-                  Chapter I — The Etiquette of Shadows
-                </button>
-                <button onclick="switchExcerpt(1)" id="chapter-btn-1" class="w-full text-left p-2.5 rounded border border-ivory-border bg-ivory-50 hover:bg-ivory-100 text-xs font-serif text-ink-charcoal transition-all">
-                  Chapter XI — The Glass Conservatory
-                </button>
-                <button onclick="switchExcerpt(2)" id="chapter-btn-2" class="w-full text-left p-2.5 rounded border border-ivory-border bg-ivory-50 hover:bg-ivory-100 text-xs font-serif text-ink-charcoal transition-all">
-                  Chapter XVIII — Cold Rites
-                </button>
+            <div id="people">
+              <p class="text-[10px] uppercase tracking-[0.2em] text-ink-muted mb-2 font-medium">The People & Tensions</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1 rounded bg-ivory-200/80 border border-ivory-border text-ink-charcoal">Elizabeth</span>
+                <span class="text-xs px-3 py-1 rounded bg-ivory-200/80 border border-ivory-border text-ink-charcoal">Anne</span>
+                <span class="text-xs px-3 py-1 rounded bg-ivory-200/80 border border-ivory-border text-ink-charcoal">Edward</span>
+                <span class="text-xs px-3 py-1 rounded bg-ivory-200/80 border border-ivory-border text-ink-charcoal">Elias</span>
+                <span class="text-xs px-3 py-1 rounded bg-ivory-200/80 border border-ivory-border text-ink-charcoal">Isabel</span>
               </div>
             </div>
           </div>
 
-          <!-- Reading Screen Pane -->
-          <div class="lg:col-span-8 bg-ivory-50 p-8 sm:p-12 rounded-xl border border-ivory-border shadow-sm min-h-[420px]">
-            <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.22em] text-ink-muted pb-6 border-b border-ivory-border mb-8">
-              <span id="reading-folio">Folio 04 &bull; Chapter I</span>
-              <span class="font-serif italic capitalize">The Court of Norwyn</span>
+          <div class="lg:col-span-8 space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
+            <p class="drop-cap text-ink-900">
+              Norwyn stands upon the sheer slate precipices of the Northern Shelf, a metropolis constructed not from marble or wood, but carved directly into dormant glacial stone. For seven generations, its aristocratic dynasties have governed under the iron decree of the <em>Treaty of the Bell</em>: no citizen may utter the names of the five drowned lords, and every treasonous thought is weighed against the tribute of salt and lead.
+            </p>
+
+            <p>
+              When Julian Vane, the reclusive custodian of the Imperial Reliquary, discovers an unsealed missive hidden inside the hollow chest of an ebony saint, the precarious silence begins to fray. The letter bears the wax seal of a consul executed twenty years earlier—and names the current Grand Regent as an impostor whose true birthright belongs to the exiled winter cloister.
+            </p>
+
+            <div class="my-8 pl-6 border-l-2 border-ink-accent/40 italic font-serif text-xl sm:text-2xl text-ink-900">
+              &ldquo;Norwyn does not forgive memory. In this court, remembering is an act of war.&rdquo;
             </div>
 
-            <!-- Excerpt 0 -->
-            <div id="excerpt-content-0" class="excerpt-pane space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
-              <p class="drop-cap text-ink-900">
-                She had mastered the peculiar art of looking directly at power without letting it witness her appraisal. In the court of Norwyn, to be seen thinking was already a confession.
-              </p>
-              <p>
-                Every hallway had been measured not in paces, but in the echo of spoken words. The carpets were thick enough to smother anger, and the doors closed with the heavy, oiled finality of a bank vault. When Elizabeth stood before the high table, she did not look at the crown; she looked at the hands that held it steady.
-              </p>
-              <div class="pt-4 border-t border-ivory-border/70 text-xs font-serif italic text-ink-muted">
-                &mdash; From Chapter I: The Etiquette of Shadows
-              </div>
-            </div>
-
-            <!-- Excerpt 1 -->
-            <div id="excerpt-content-1" class="excerpt-pane hidden space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
-              <p class="drop-cap text-ink-900">
-                Permission was never denied aloud. It was simply delayed through formalities so meticulously polite that refusal took the shape of patience.
-              </p>
-              <p>
-                Anne looked out through the tall conservatory panes toward the frozen outer gardens. &ldquo;If they keep us waiting three more days,&rdquo; she remarked, keeping her voice even beneath the sound of melting sleet, &ldquo;the winter port closes, and we will have consented to our own arrest simply by standing still.&rdquo;
-              </p>
-              <div class="pt-4 border-t border-ivory-border/70 text-xs font-serif italic text-ink-muted">
-                &mdash; From Chapter XI: The Glass Conservatory
-              </div>
-            </div>
-
-            <!-- Excerpt 2 -->
-            <div id="excerpt-content-2" class="excerpt-pane hidden space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
-              <p class="drop-cap text-ink-900">
-                There is no sanctuary like an empty ceremony. When the rites begin, nobody looks at your eyes; they only examine your knees.
-              </p>
-              <p>
-                Edward adjusted the gold braid on his mantle, his posture so rigid that it appeared carved from the limestone balustrade behind him. To survive Norwyn was not a matter of courage, but of duration. You simply had to outlast the ceremony until the room emptied and the lamps burned down to cold grease.
-              </p>
-              <div class="pt-4 border-t border-ivory-border/70 text-xs font-serif italic text-ink-muted">
-                &mdash; From Chapter XVIII: Cold Rites
-              </div>
-            </div>
+            <p>
+              Caught between the inquisitorial order of the Silver Brand and a cadre of clockmaker conspirators operating from the Sunken Basin, Julian must navigate a winter where cold words carve deeper than iron swords. What begins as a search for historical truth becomes an unspooling of an empire founded entirely upon an orchestrated delusion.
+            </p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 2. NORWYN (THE WORLD) -->
-    <section id="norwyn" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
+    <!-- SECTION 2: EXCERPTS ("WORDS FROM NORWYN") -->
+    <section id="excerpts" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Selected Passages</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">Words from Norwyn</h2>
+          <p class="font-serif italic text-ink-muted text-base mt-2">Transcribed from original folios and early proofs</p>
+        </div>
+
+        <!-- Excerpt Tab Controls -->
+        <div class="flex justify-center border-b border-ivory-border mb-10 overflow-x-auto">
+          <div class="inline-flex gap-2 sm:gap-6 p-1">
+            <button onclick="switchExcerpt(0)" id="excerpt-tab-0" class="excerpt-tab active px-4 py-2 font-serif text-base text-ink-900 border-b-2 border-ink-900 -mb-[1px] transition-colors focus:outline-none">
+              I. The Frost on the Reliquary
+            </button>
+            <button onclick="switchExcerpt(1)" id="excerpt-tab-1" class="excerpt-tab px-4 py-2 font-serif text-base text-ink-muted hover:text-ink-900 border-b-2 border-transparent -mb-[1px] transition-colors focus:outline-none">
+              II. The Letter in Wax
+            </button>
+            <button onclick="switchExcerpt(2)" id="excerpt-tab-2" class="excerpt-tab px-4 py-2 font-serif text-base text-ink-muted hover:text-ink-900 border-b-2 border-transparent -mb-[1px] transition-colors focus:outline-none">
+              III. The Midnight Conclave
+            </button>
+          </div>
+        </div>
+
+        <!-- Excerpt Display Area -->
+        <div class="bg-ivory-100 rounded-xl p-8 sm:p-12 md:p-14 border border-ivory-border shadow-sm min-h-[360px] relative transition-all duration-300">
+          <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.22em] text-ink-muted pb-6 border-b border-ivory-border/70 mb-8">
+            <span id="excerpt-folio">Folio 14 &bull; Act I</span>
+            <span class="font-serif italic capitalize">The Great Library of Norwyn</span>
+          </div>
+
+          <div id="excerpt-content-0" class="excerpt-pane space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
+            <p class="drop-cap text-ink-900">
+              The cold here was not an absence of warmth, but an active inhabitant of the stone. It seeped between the bindings of vellum and sheepskin, turning centuries of ecclesiastical disputation into brittle, grey wafers that snapped if turned too quickly. Julian held his candle six inches from the cedar catalog, careful not to let grease fall upon the seals.
+            </p>
+            <p>
+              Outside, across the frozen expanse of the Grand Plaza, the Bells of the Five Consuls rang three times—the toll for midnight, or for a prisoner who would not see the sunrise. In Norwyn, one rarely needed to distinguish between the two.
+            </p>
+            <div class="pt-4 border-t border-ivory-border/60">
+              <span class="font-serif italic text-sm text-ink-muted">&mdash; From Chapter One: The Shelf of Unread Decrees</span>
+            </div>
+          </div>
+
+          <div id="excerpt-content-1" class="excerpt-pane hidden space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
+            <p class="drop-cap text-ink-900">
+              The seal was not the sovereign raven, nor the twin anchors of the Admiralty, but a solitary bell without a clapper. Julian recognized the impression instantly. It belonged to no magistrate alive. The wax was old, dyed with dried elderberry that had oxidized into the hue of bruised plum.
+            </p>
+            <p>
+              <em>&ldquo;To whomsoever pulls the fifth rib from the wood,&rdquo;</em> the cursive began, thin and frantic as though scraped by a raven&rsquo;s talon. <em>&ldquo;You believe the city to be sleeping. I tell you it is only holding its breath until the tide remembers what we buried in the limestone.&rdquo;</em>
+            </p>
+            <div class="pt-4 border-t border-ivory-border/60">
+              <span class="font-serif italic text-sm text-ink-muted">&mdash; From Chapter Four: The Hollow Saint</span>
+            </div>
+          </div>
+
+          <div id="excerpt-content-2" class="excerpt-pane hidden space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
+            <p class="drop-cap text-ink-900">
+              They met beneath the lower sluices where the reservoir hummed like a slumbering beast. Seven shadows huddled near the brazier, their faces shrouded in heavy wool mantles smelling of coal gas and tallow.
+            </p>
+            <p>
+              &ldquo;The Regent signs the ordinance at dusk tomorrow,&rdquo; Mara whispered, her fingers resting lightly on the brass mechanism of her cipher box. &ldquo;If the bells ring before the ink dries, every district south of the canal is forfeit. We either sever the bell-ropes or we learn to swim in winter ice.&rdquo;
+            </p>
+            <div class="pt-4 border-t border-ivory-border/60">
+              <span class="font-serif italic text-sm text-ink-muted">&mdash; From Chapter Eleven: The Mechanism of Treason</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE WORLD OF NORWYN -->
+    <section id="world" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/40">
       <div class="max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-ivory-border">
           <div>
-            <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">The Realm</span>
-            <h2 class="font-serif text-3xl sm:text-5xl text-ink-900 font-normal tracking-wide">Norwyn</h2>
+            <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Cartography & Geography</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-ink-900 font-normal tracking-wide">The Realm of Norwyn</h2>
           </div>
           <p class="font-serif italic text-ink-muted text-base max-w-md mt-4 md:mt-0">
-            Kingdom, court etiquette, customs, places, institutions, and the silent weight of history.
+            A metropolis balanced at the edge of the world, suspended between frozen seas and hollow mountains.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          <div class="bg-ivory-100 rounded-lg p-7 border border-ivory-border flex flex-col justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">The Monarchy & Court</span>
-              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">The Sunless Spire</h3>
+              <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">The High Citadel</span>
+              <h3 class="font-serif text-xl text-ink-900 font-normal mb-3">The Sunless Spire</h3>
               <p class="text-xs text-ink-charcoal font-light leading-relaxed">
-                Carved straight from cold northern granite, the Spire governs not through declarations of war, but through an overwhelming regime of protocol, chamberlains' clearance, and perpetual observation.
+                Carved straight from a granite needle rising four hundred paces above the harbour. Here, the Council of Edicts presides behind mullioned windows covered in layers of translucent oilcloth to keep out the gale.
               </p>
             </div>
-            <div class="pt-6 mt-6 border-t border-ivory-border text-[11px] font-serif italic text-ink-muted">
-              Seat of Sovereign Bureaucracy
+            <div class="pt-6 mt-6 border-t border-ivory-border/70 text-[11px] font-serif italic text-ink-muted">
+              Seat of the Grand Regent
             </div>
           </div>
 
-          <div class="bg-ivory-100 rounded-lg p-7 border border-ivory-border flex flex-col justify-between">
+          <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">Customs & Etiquette</span>
-              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">The Protocol of Restraint</h3>
+              <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">The Canal District</span>
+              <h3 class="font-serif text-xl text-ink-900 font-normal mb-3">The Glass Quarter</h3>
               <p class="text-xs text-ink-charcoal font-light leading-relaxed">
-                In Norwyn, anger is considered a procedural disqualification. Disagreements are settled through delayed appointments, polite deferrals, and unwritten rules that keep courtiers self-policing.
+                Once the center of northern lenscraft and optical mechanics. Now a maze of steaming thermal flues, clandestine pawnshops, and philosophers who trade in illegal pamphlets written under pseudonym.
               </p>
             </div>
-            <div class="pt-6 mt-6 border-t border-ivory-border text-[11px] font-serif italic text-ink-muted">
-              Unwritten Civil Law
+            <div class="pt-6 mt-6 border-t border-ivory-border/70 text-[11px] font-serif italic text-ink-muted">
+              Heart of the Clockmakers Guild
             </div>
           </div>
 
-          <div class="bg-ivory-100 rounded-lg p-7 border border-ivory-border flex flex-col justify-between">
+          <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
             <div>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">Institutions & Memory</span>
-              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">The Glass Quarter</h3>
+              <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">The Subterranean</span>
+              <h3 class="font-serif text-xl text-ink-900 font-normal mb-3">The Whispering Basin</h3>
               <p class="text-xs text-ink-charcoal font-light leading-relaxed">
-                The district of lenses, legal transcripts, and archived correspondences. Here, historical documents are quietly redacted before the public can ever perceive the state’s human fallibility.
+                An ancient dry reservoir whose curved lime walls possess an uncanny acoustic property: a murmur spoken at the western perimeter can be heard with needle-sharp clarity on the eastern gallery two miles away.
               </p>
             </div>
-            <div class="pt-6 mt-6 border-t border-ivory-border text-[11px] font-serif italic text-ink-muted">
-              Archival Redaction Order
+            <div class="pt-6 mt-6 border-t border-ivory-border/70 text-[11px] font-serif italic text-ink-muted">
+              The Listening Market
             </div>
           </div>
 
+          <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">The Outer Shallows</span>
+              <h3 class="font-serif text-xl text-ink-900 font-normal mb-3">The Grey Reach</h3>
+              <p class="text-xs text-ink-charcoal font-light leading-relaxed">
+                Where the black fjord meets the open northern storm-tides. Ships anchor here only in dead calm, their hulls guarded by pilot lanterns against jagged subterranean teeth of iron-hard basalt.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-ivory-border/70 text-[11px] font-serif italic text-ink-muted">
+              Threshold to the Exiled Sea
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. THE PEOPLE -->
-    <section id="people" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/40">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-ivory-border">
-          <div>
-            <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Dramatis Personae</span>
-            <h2 class="font-serif text-3xl sm:text-5xl text-ink-900 font-normal tracking-wide">The People</h2>
-          </div>
-          <p class="font-serif italic text-ink-muted text-base max-w-md mt-4 md:mt-0">
-            Those who navigate the quiet corridors, their motivations, tensions, and loyalties.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Elizabeth -->
-          <div class="bg-ivory-50 p-6 rounded-lg border border-ivory-border hover:border-ink-accent transition-all duration-300">
-            <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-serif text-2xl text-ink-900">Elizabeth</h3>
-              <span class="text-[10px] uppercase tracking-[0.18em] text-ink-muted">Protagonist</span>
-            </div>
-            <p class="text-xs text-ink-charcoal font-light leading-relaxed mb-4">
-              Possessing an incisive intellect and a guarded demeanor, Elizabeth navigates the court by calculating the unspoken cost of compliance before every word she releases.
-            </p>
-            <div class="text-[11px] font-serif italic text-ink-muted border-t border-ivory-border/70 pt-3">
-              &ldquo;I have learned to live inside the pause between questions.&rdquo;
-            </div>
-          </div>
-
-          <!-- Anne -->
-          <div class="bg-ivory-50 p-6 rounded-lg border border-ivory-border hover:border-ink-accent transition-all duration-300">
-            <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-serif text-2xl text-ink-900">Anne</h3>
-              <span class="text-[10px] uppercase tracking-[0.18em] text-ink-muted">The Confidante</span>
-            </div>
-            <p class="text-xs text-ink-charcoal font-light leading-relaxed mb-4">
-              Clear-eyed, observant, and less patient with the court's decorative deceptions. Anne sees through the polite veneers and recognizes when patience becomes a trap.
-            </p>
-            <div class="text-[11px] font-serif italic text-ink-muted border-t border-ivory-border/70 pt-3">
-              &ldquo;They dress our cage in velvet and expect us to call it protection.&rdquo;
-            </div>
-          </div>
-
-          <!-- Edward -->
-          <div class="bg-ivory-50 p-6 rounded-lg border border-ivory-border hover:border-ink-accent transition-all duration-300">
-            <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-serif text-2xl text-ink-900">Edward</h3>
-              <span class="text-[10px] uppercase tracking-[0.18em] text-ink-muted">The Regency Guard</span>
-            </div>
-            <p class="text-xs text-ink-charcoal font-light leading-relaxed mb-4">
-              Bound by generational vows and the ceremonial uniform he wears. Edward wrestles with the quiet horror of upholding an order he knows to be hollow.
-            </p>
-            <div class="text-[11px] font-serif italic text-ink-muted border-t border-ivory-border/70 pt-3">
-              &ldquo;If I break my oath, the stone does not forgive me.&rdquo;
-            </div>
-          </div>
-
-          <!-- Elias -->
-          <div class="bg-ivory-50 p-6 rounded-lg border border-ivory-border hover:border-ink-accent transition-all duration-300">
-            <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-serif text-2xl text-ink-900">Elias</h3>
-              <span class="text-[10px] uppercase tracking-[0.18em] text-ink-muted">The Archivist</span>
-            </div>
-            <p class="text-xs text-ink-charcoal font-light leading-relaxed mb-4">
-              A keeper of uncatalogued folios and discarded papers. Elias understands that power does not burn records; it simply hides them behind older lies.
-            </p>
-            <div class="text-[11px] font-serif italic text-ink-muted border-t border-ivory-border/70 pt-3">
-              &ldquo;Paper is the only thing in this kingdom that outlives a decree.&rdquo;
-            </div>
-          </div>
-
-          <!-- Isabel -->
-          <div class="bg-ivory-50 p-6 rounded-lg border border-ivory-border hover:border-ink-accent transition-all duration-300">
-            <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-serif text-2xl text-ink-900">Isabel</h3>
-              <span class="text-[10px] uppercase tracking-[0.18em] text-ink-muted">The Matron of Protocol</span>
-            </div>
-            <p class="text-xs text-ink-charcoal font-light leading-relaxed mb-4">
-              The living encyclopedia of etiquette. Isabel does not enforce obedience through punishment, but by convincing those around her that defiance is untidy.
-            </p>
-            <div class="text-[11px] font-serif italic text-ink-muted border-t border-ivory-border/70 pt-3">
-              &ldquo;Everything has an appointment. Even rebellion must take its turn.&rdquo;
-            </div>
-          </div>
-
-          <!-- The Council -->
-          <div class="bg-ivory-50 p-6 rounded-lg border border-ivory-border hover:border-ink-accent transition-all duration-300">
-            <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-serif text-2xl text-ink-900">The Council</h3>
-              <span class="text-[10px] uppercase tracking-[0.18em] text-ink-muted">The Unseen Bench</span>
-            </div>
-            <p class="text-xs text-ink-charcoal font-light leading-relaxed mb-4">
-              The collective institution that sits behind drawn curtains. They rarely issue names; only signatures stamped into wax at midnight.
-            </p>
-            <div class="text-[11px] font-serif italic text-ink-muted border-t border-ivory-border/70 pt-3">
-              &ldquo;The court does not forget. It records.&rdquo;
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. THE QUESTIONS -->
-    <section id="questions" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
+    <!-- SECTION 4: THE IDEA BEHIND THE NOVEL (THE QUESTIONS) -->
+    <section id="genesis" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
       <div class="max-w-4xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Philosophical Inquests</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">The Questions</h2>
-          <p class="font-serif italic text-ink-muted text-base mt-2">
-            The ideas the novel keeps asking without neatly answering them.
-          </p>
+          <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">The Genesis & Questions</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">The Spark Behind the Story</h2>
           <div class="w-12 h-[1px] bg-ink-900 mx-auto mt-4"></div>
         </div>
 
-        <div class="space-y-6 font-sans">
-          
-          <div class="p-8 bg-ivory-100 rounded-lg border border-ivory-border">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-ink-accent font-semibold block mb-2">Inquest 01</span>
-            <h3 class="font-serif text-2xl text-ink-900 mb-3">Where does duty end and self-erasure begin?</h3>
-            <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-              When an individual conforms to etiquette for years to survive, at what point does the mask become the face? Is composure an armor, or does it slowly hollow out the person wearing it?
+        <div class="space-y-8 font-sans text-ink-charcoal text-base sm:text-lg leading-relaxed font-light">
+          <p class="drop-cap text-ink-900">
+            Every novel begins as an unpaid debt to a feeling one cannot shake. For *Norwyn*, the genesis was not a character or an intricate plot mechanism, but an architectural sensation: the profound quiet of an ancient, stone-vaulted university library during an unyielding December snowstorm, when all street noise outside ceased and the only sound was the deliberate, almost cautious turning of pages.
+          </p>
+
+          <p>
+            I wondered: what happens to a culture when silence is not merely an aesthetic, but an enforced political doctrine? What if an entire civilization chose collective amnesia because the truth of their founding was so monstrous that remembering it would cause the city to crumble morally before nightfall?
+          </p>
+
+          <div class="p-8 sm:p-10 bg-ivory-100 border border-ivory-border rounded-lg my-10 relative">
+            <span class="text-xs uppercase tracking-[0.2em] text-ink-accent font-semibold block mb-3">Core Inquest</span>
+            <p class="font-serif italic text-xl sm:text-2xl text-ink-900 leading-relaxed">
+              &ldquo;Can a society be preserved by an engineered lie, or does every buried secret eventually rot the foundations beneath those who walk upon it?&rdquo;
             </p>
           </div>
 
-          <div class="p-8 bg-ivory-100 rounded-lg border border-ivory-border">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-ink-accent font-semibold block mb-2">Inquest 02</span>
-            <h3 class="font-serif text-2xl text-ink-900 mb-3">Can an architecture of silence truly protect what it conceals?</h3>
-            <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-              The court believes that avoiding the discussion of catastrophe prevents it from repeating. Does communal silence preserve peace, or does it leave the foundation vulnerable to subterranean collapse?
-            </p>
-          </div>
+          <p>
+            Julian Vane emerged directly from this inquiry. He is not a swashbuckler or an ambitious prince. He is an archivist—a man whose duty is to catalogue items the state would prefer never existed. In putting him at the center of the storm, I wanted to explore the quiet courage of someone whose sole weapon is a meticulous attention to the recorded word.
+          </p>
 
-          <div class="p-8 bg-ivory-100 rounded-lg border border-ivory-border">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-ink-accent font-semibold block mb-2">Inquest 03</span>
-            <h3 class="font-serif text-2xl text-ink-900 mb-3">Who pays the debt of an inherited lie?</h3>
-            <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-              The younger generation did not write the treaties, yet they are the ones who must kneel to keep them unbroken. How much loyalty is owed to treaties signed before one was born?
-            </p>
-          </div>
-
-          <div class="p-8 bg-ivory-100 rounded-lg border border-ivory-border">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-ink-accent font-semibold block mb-2">Inquest 04</span>
-            <h3 class="font-serif text-2xl text-ink-900 mb-3">What is the true price of permission?</h3>
-            <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-              If freedom must be granted by someone else, is it ever truly freedom, or merely an extended leash?
-            </p>
-          </div>
-
+          <p>
+            *Norwyn* is fundamentally about the moral friction between order and truth. It asks whether quietude is worth the sacrifice of honesty, and whether freedom can ever be anything other than a dangerous, terrifying wakefulness.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- 5. THE MAKING -->
-    <section id="making" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
+    <!-- SECTION 5: WRITING THE NOVEL (THE MAKING) -->
+    <section id="reflections" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
       <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Craft & Architecture</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">The Making</h2>
-          <p class="font-serif italic text-ink-muted text-base mt-2">
-            Where the story began, how it evolved, abandoned drafts, surviving scenes, and building Norwyn.
-          </p>
+          <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Craft & The Making</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">Things Writing This Novel Taught Me</h2>
+          <p class="font-serif italic text-ink-muted text-base mt-2">Notes compiled across four years of drafting, cutting, and revision</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border flex flex-col justify-between">
+          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">01</span>
-              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">The Genesis & Early Title Shifts</h3>
+              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">Atmosphere is Not Decoration; It is Cause</h3>
               <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-                The manuscript began with a different weight and title, initially drafted around the economic realities of power before shifting directly into the psychological restraint of permission. Reframing the central conflict transformed it from external struggle into an architectural study of composure.
+                In early drafts, I treated the cold, stone walls of Norwyn as mere scenery. But prose comes alive only when the environment exerts constant physical pressure upon the characters. When characters' fingers are numb, their decisions are shorter. When fuel is rationed, midnight conversations become costly transactions. The world must dictate behavior.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-ivory-border text-xs text-ink-muted font-mono uppercase tracking-wider">
-              Evolution of the Core Motif
+              On Scenecraft & Weight
             </div>
           </div>
 
-          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border flex flex-col justify-between">
+          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">02</span>
-              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">Abandoned Drafts & Surviving Anchor Scenes</h3>
+              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">Discipline Trumps the Romantic Myth of Inspiration</h3>
               <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-                Over forty thousand words were pruned to sharpen the emotional tension. What survived were the quiet rooms: the conservatory discussion at dusk, the silent examination of records in the archive, and the long, unbroken pauses between Elizabeth and the Council.
+                I discarded over 60,000 words during the second year of writing. Waiting for a burst of lyrical inspiration yielded only ornamental sentences that led nowhere. The breakthrough came from showing up at 5:30 AM every morning, writing five hundred unremarkable words, and letting patience reveal the subterranean geometry of the plot.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-ivory-border text-xs text-ink-muted font-mono uppercase tracking-wider">
-              Drafting & Editorial Cuts
+              On Routine & Daily Labor
             </div>
           </div>
 
-          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border flex flex-col justify-between">
+          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">03</span>
-              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">Building the City of Norwyn</h3>
+              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">Silence on the Page is as Potent as Dialogue</h3>
               <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-                Norwyn was designed not just as a geography, but as a psychological mirror. Every thick granite corridor, vaulted ceiling, and muffling carpet was structured to make the characters feel contained, forcing dialogue to be compressed into sharp, restrained exchanges.
+                The most challenging craft challenge in *Norwyn* was learning what <em>not</em> to state explicitly. Giving the reader credit to detect hesitation between two lines of dialogue, or an unmentioned shadow in an empty corridor, honors their intelligence and makes the prose breathe with an unmistakable editorial tension.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-ivory-border text-xs text-ink-muted font-mono uppercase tracking-wider">
-              Atmosphere & World Architecture
+              On Economy of Language
             </div>
           </div>
 
-          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border flex flex-col justify-between">
+          <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">04</span>
-              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">Character Refinements</h3>
+              <h3 class="font-serif text-2xl text-ink-900 font-normal mb-3">Characters Must Believe Their Own Rationales</h3>
               <p class="text-sm text-ink-charcoal font-light leading-relaxed">
-                Clarifying the central voice—bringing Elizabeth into sharp relief against the ancient stone of Norwyn—allowed the novel to focus on the quiet courage of maintaining an autonomous mind while standing in rooms designed to make you kneel.
+                No antagonist in Norwyn considers themselves malicious. The inquisitors honestly believe they are preserving peace; the conspirators are terrified of starvation. Once I granted every character their own coherent, painful moral justification, the story ceased being a simple struggle and became a genuine tragedy.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-ivory-border text-xs text-ink-muted font-mono uppercase tracking-wider">
-              Voice & Internal Agency
+              On Psychological Truth
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- 6. JOURNAL -->
-    <section id="journal" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
+    <!-- SECTION 6: ABOUT THE AUTHOR (ABOUT QUEEN USMAN) -->
+    <section id="author" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
       <div class="max-w-5xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-ivory-border">
-          <div>
-            <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Ongoing Writings</span>
-            <h2 class="font-serif text-3xl sm:text-5xl text-ink-900 font-normal tracking-wide">The Journal</h2>
-          </div>
-          <p class="font-serif italic text-ink-muted text-base max-w-md mt-4 md:mt-0">
-            Notes, writing dispatches, and contemplative essays from the desk of Queen Usman.
-          </p>
-        </div>
-
-        <div class="space-y-8">
-          
-          <article class="p-8 bg-ivory-100 rounded-lg border border-ivory-border">
-            <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-ink-muted mb-2">
-              <span>Dispatch No. 12</span>
-              <span>Autumn Notes</span>
-            </div>
-            <h3 class="font-serif text-2xl text-ink-900 mb-3 hover:text-ink-accent transition-colors cursor-pointer">
-              On Writing Composure: Why the Best Dialogue Happens in Silence
-            </h3>
-            <p class="text-sm text-ink-charcoal font-light leading-relaxed mb-4">
-              When writing characters trapped in strict hierarchies, the temptation is to give them fiery speeches. But real resistance in restrained spaces rarely announces itself; it lives in the deliberate delay before answering, the unhurried glance, and the decision not to defend oneself when accused of something trivial.
-            </p>
-            <div class="text-xs uppercase tracking-wider text-ink-900 font-medium">
-              Read Entry &rarr;
-            </div>
-          </article>
-
-          <article class="p-8 bg-ivory-100 rounded-lg border border-ivory-border">
-            <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-ink-muted mb-2">
-              <span>Dispatch No. 11</span>
-              <span>Craft Inquest</span>
-            </div>
-            <h3 class="font-serif text-2xl text-ink-900 mb-3 hover:text-ink-accent transition-colors cursor-pointer">
-              The Architecture of Containment: Constructing Norwyn's Corridors
-            </h3>
-            <p class="text-sm text-ink-charcoal font-light leading-relaxed mb-4">
-              A reflection on how building physical spaces in fiction dictates character psychology. In Norwyn, every room is intentionally cold to keep meetings brief, and the ceilings are vaulted to make individuals feel diminutive before the sovereign crown.
-            </p>
-            <div class="text-xs uppercase tracking-wider text-ink-900 font-medium">
-              Read Entry &rarr;
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. ABOUT QUEEN USMAN -->
-    <section id="about" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
-      <div class="max-w-5xl mx-auto">
-        <div class="bg-ivory-50 rounded-xl border border-ivory-border p-8 sm:p-12 md:p-16">
+        <div class="bg-ivory-100 rounded-xl border border-ivory-border p-8 sm:p-12 md:p-16">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             
-            <!-- Author Portrait Frame -->
             <div class="md:col-span-5 flex justify-center">
-              <div class="relative w-56 sm:w-64 aspect-[3/4] rounded-lg border border-ivory-border p-3 bg-ivory-100 shadow-sm">
+              <div class="relative w-56 sm:w-64 aspect-[3/4] rounded-lg border border-ivory-border p-3 bg-ivory-50 shadow-sm">
                 <div class="w-full h-full rounded border border-ink-900/20 bg-ivory-200 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden group">
-                  <div class="w-24 h-24 rounded-full border border-ink-900/30 flex items-center justify-center mb-4 bg-ivory-50">
+                  <div class="w-24 h-24 rounded-full border border-ink-900/30 flex items-center justify-center mb-4 bg-ivory-100">
                     <span class="font-serif text-3xl font-semibold text-ink-900">Q</span>
                   </div>
                   <span class="font-serif text-lg tracking-wider text-ink-900 font-medium">Queen Usman</span>
-                  <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted mt-1">Author & Designer</span>
-                  <div class="absolute bottom-2 text-[9px] font-serif italic text-ink-muted">Norwyn Archives</div>
+                  <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted mt-1">Author &bull; Archivist</span>
+                  <div class="absolute bottom-2 text-[9px] font-serif italic text-ink-muted">Norwyn Archives &bull; 2026</div>
                 </div>
               </div>
             </div>
 
-            <!-- Author Bio & Statement -->
             <div class="md:col-span-7 space-y-5 text-ink-charcoal font-sans text-sm sm:text-base leading-relaxed font-light">
               <div>
-                <span class="text-[10px] uppercase tracking-[0.25em] text-ink-muted font-medium">The Desk</span>
-                <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal">Queen Usman</h2>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-ink-muted font-medium">The Creator</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal">About Queen Usman</h2>
                 <div class="w-10 h-[1px] bg-ink-900 mt-2"></div>
               </div>
 
@@ -830,9 +681,9 @@
               </p>
 
               <div class="pt-4 border-t border-ivory-border/80">
-                <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">Author's Philosophy</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">Philosophy of the Desk</span>
                 <p class="font-serif italic text-ink-900 text-base">
-                  &ldquo;A story is not merely an invention; it is an architectural excavation of truth from behind polite silence.&rdquo;
+                  &ldquo;A story is not an invention from nothing; it is an excavation of something that was always there, waiting beneath the shale.&rdquo;
                 </p>
               </div>
 
@@ -840,11 +691,11 @@
                 <a href="#dispatch" class="text-ink-900 hover:text-ink-accent transition-colors flex items-center gap-1">
                   <span>Send a Letter</span> &rarr;
                 </a>
-                <a href="#novel" class="text-ink-muted hover:text-ink-900 transition-colors">
+                <a href="#novel-overview" class="text-ink-muted hover:text-ink-900 transition-colors">
                   The Novel
                 </a>
-                <a href="#journal" class="text-ink-muted hover:text-ink-900 transition-colors">
-                  Read Dispatches
+                <a href="#reflections" class="text-ink-muted hover:text-ink-900 transition-colors">
+                  The Making
                 </a>
               </div>
             </div>
@@ -854,29 +705,29 @@
       </div>
     </section>
 
-    <!-- SECTION 8: EMAIL DISPATCHES -->
-    <section id="dispatch" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
+    <!-- SECTION 7: JOURNAL & EMAIL SUBSCRIPTION -->
+    <section id="dispatch" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100">
       <div class="max-w-2xl mx-auto text-center">
-        <div class="w-12 h-12 rounded-full border border-ink-900/20 flex items-center justify-center mx-auto mb-6 bg-ivory-100 text-ink-900">
+        <div class="w-12 h-12 rounded-full border border-ink-900/20 flex items-center justify-center mx-auto mb-6 bg-ivory-50 text-ink-900">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </div>
 
-        <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Epistolary Circle</span>
+        <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Epistolary Circle & Journal</span>
         <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">The Norwyn Dispatches</h2>
         <p class="font-sans text-ink-charcoal text-sm sm:text-base font-light mt-3 mb-8 leading-relaxed max-w-lg mx-auto">
           Delivered seasonally. Receive private chapter releases, cut manuscripts, high-resolution cartography, and contemplative essays from Queen Usman&rsquo;s writing desk.
         </p>
 
         <form id="dispatch-form" class="space-y-4" onsubmit="handleSubscribe(event)">
-          <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+          <div class="flex flex-col sm:row gap-2 max-w-md mx-auto">
             <input 
               type="email" 
               id="dispatch-email" 
               required
               placeholder="Enter your private correspondence email" 
-              class="flex-grow px-5 py-3 rounded-full bg-ivory-100 border border-ivory-border text-ink-900 placeholder:text-ink-muted/70 text-xs focus:outline-none focus:ring-1 focus:ring-ink-900 transition-all"
+              class="flex-grow px-5 py-3 rounded-full bg-ivory-50 border border-ivory-border text-ink-900 placeholder:text-ink-muted/70 text-xs focus:outline-none focus:ring-1 focus:ring-ink-900 transition-all"
             >
             <button 
               type="submit" 
@@ -891,7 +742,7 @@
           </p>
         </form>
 
-        <div id="dispatch-success" class="hidden mt-6 p-5 rounded-lg bg-ivory-100 border border-ink-900/30 text-ink-900 text-sm">
+        <div id="dispatch-success" class="hidden mt-6 p-5 rounded-lg bg-ivory-50 border border-ink-900/30 text-ink-900 text-sm animate-fade-in">
           <div class="font-serif italic text-lg mb-1">Your name has been entered into the ledger.</div>
           <p class="text-xs text-ink-charcoal font-light">
             A confirmation dispatch is journeying to <span id="confirmed-email-display" class="font-semibold text-ink-900"></span>. Thank you for joining our quiet fellowship.
@@ -912,18 +763,18 @@
           OR SO SHE THOUGHT
         </div>
         <p class="text-ink-muted text-[11px]">
-          &copy; <span id="current-year">2026</span> Queen Usman. All rights reserved.
+          &copy; <span id="current-year">2026</span> Queen Usman. Published on GitHub Pages. All rights reserved.
         </p>
       </div>
 
       <div class="flex flex-wrap justify-center gap-6 text-[11px] uppercase tracking-[0.15em] text-ink-muted">
-        <a href="#novel" class="hover:text-ink-900 transition-colors">The Novel</a>
-        <a href="#norwyn" class="hover:text-ink-900 transition-colors">Norwyn</a>
+        <a href="#novel-overview" class="hover:text-ink-900 transition-colors">Or So She Thought</a>
+        <a href="#world" class="hover:text-ink-900 transition-colors">Norwyn</a>
         <a href="#people" class="hover:text-ink-900 transition-colors">The People</a>
-        <a href="#questions" class="hover:text-ink-900 transition-colors">The Questions</a>
-        <a href="#making" class="hover:text-ink-900 transition-colors">The Making</a>
-        <a href="#journal" class="hover:text-ink-900 transition-colors">Journal</a>
-        <a href="#about" class="hover:text-ink-900 transition-colors">About</a>
+        <a href="#genesis" class="hover:text-ink-900 transition-colors">The Questions</a>
+        <a href="#reflections" class="hover:text-ink-900 transition-colors">The Making</a>
+        <a href="#dispatch" class="hover:text-ink-900 transition-colors">Journal</a>
+        <a href="#author" class="hover:text-ink-900 transition-colors">About</a>
       </div>
 
       <div>
@@ -938,7 +789,7 @@
     </div>
   </footer>
 
-  <!-- Floating Back to Top Button -->
+  <!-- Floating "Back to Top" Button -->
   <button 
     id="floating-top-btn" 
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
@@ -951,57 +802,7 @@
   </button>
 
   <script>
-    // 1. DYNAMIC TOUCH & MOUSE 3D INTERACTION FOR BOOK COVER
-    const book = document.getElementById('book-element');
-
-    if (book) {
-      let isInteracting = false;
-
-      const setTilt = (clientX, clientY) => {
-        book.classList.remove('floating');
-        const rect = book.getBoundingClientRect();
-        const x = clientX - rect.left;
-        const y = clientY - rect.top;
-
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const tiltY = ((x - centerX) / centerX) * 24;
-        const tiltX = -((y - centerY) / centerY) * 18;
-
-        book.style.transform = `rotateY(${tiltY}deg) rotateX(${tiltX}deg) translateY(-8px) scale(1.02)`;
-      };
-
-      const resetBook = () => {
-        isInteracting = false;
-        book.style.transform = '';
-        book.classList.add('floating');
-      };
-
-      // Mouse Listeners (Desktop)
-      book.addEventListener('mousemove', (e) => {
-        setTilt(e.clientX, e.clientY);
-      });
-      book.addEventListener('mouseleave', resetBook);
-
-      // Touch Listeners (Mobile)
-      book.addEventListener('touchstart', (e) => {
-        isInteracting = true;
-        const touch = e.touches[0];
-        setTilt(touch.clientX, touch.clientY);
-      }, { passive: true });
-
-      book.addEventListener('touchmove', (e) => {
-        if (!isInteracting) return;
-        const touch = e.touches[0];
-        setTilt(touch.clientX, touch.clientY);
-      }, { passive: true });
-
-      book.addEventListener('touchend', resetBook);
-      book.addEventListener('touchcancel', resetBook);
-    }
-
-    // 2. Scroll Progress Bar & Floating Top Button
+    // 1. Dynamic Scroll Progress Bar & Floating Top Button
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1024,47 +825,41 @@
       }
     });
 
-    // 3. Excerpt Reader Switcher
+    // 2. Interactive Excerpt Tabs Switcher
     const folios = [
-      "Folio 04 • Chapter I",
-      "Folio 48 • Chapter XI",
-      "Folio 112 • Chapter XVIII"
+      "Folio 14 • Act I",
+      "Folio 82 • Act II",
+      "Folio 219 • Act III"
     ];
 
     function switchExcerpt(tabIndex) {
-      // Toggle button states
-      [0, 1, 2].forEach((i) => {
-        const btn = document.getElementById(`chapter-btn-${i}`);
-        if (btn) {
-          if (i === tabIndex) {
-            btn.classList.add('border-ink-900', 'bg-ivory-200', 'text-ink-900');
-            btn.classList.remove('border-ivory-border', 'bg-ivory-50', 'text-ink-charcoal');
-          } else {
-            btn.classList.remove('border-ink-900', 'bg-ivory-200', 'text-ink-900');
-            btn.classList.add('border-ivory-border', 'bg-ivory-50', 'text-ink-charcoal');
-          }
+      const tabs = document.querySelectorAll('.excerpt-tab');
+      tabs.forEach((tab, index) => {
+        if (index === tabIndex) {
+          tab.classList.add('active', 'border-ink-900', 'text-ink-900');
+          tab.classList.remove('border-transparent', 'text-ink-muted');
+        } else {
+          tab.classList.remove('active', 'border-ink-900', 'text-ink-900');
+          tab.classList.add('border-transparent', 'text-ink-muted');
         }
       });
 
-      // Toggle panes
-      [0, 1, 2].forEach((i) => {
-        const pane = document.getElementById(`excerpt-content-${i}`);
-        if (pane) {
-          if (i === tabIndex) {
-            pane.classList.remove('hidden');
-          } else {
-            pane.classList.add('hidden');
-          }
+      const panes = document.querySelectorAll('.excerpt-pane');
+      panes.forEach((pane, index) => {
+        if (index === tabIndex) {
+          pane.classList.remove('hidden');
+        } else {
+          pane.classList.add('hidden');
         }
       });
 
-      const folioCounter = document.getElementById('reading-folio');
+      const folioCounter = document.getElementById('excerpt-folio');
       if (folioCounter && folios[tabIndex]) {
         folioCounter.innerText = folios[tabIndex];
       }
     }
 
-    // 4. Newsletter Subscription Handling
+    // 3. Email Subscription Form Submission Handling
     function handleSubscribe(event) {
       event.preventDefault();
       const emailInput = document.getElementById('dispatch-email');
@@ -1073,6 +868,7 @@
       const emailDisplay = document.getElementById('confirmed-email-display');
 
       if (!emailInput || !emailInput.value) return;
+
       const emailVal = emailInput.value.trim();
 
       submitBtn.disabled = true;
@@ -1088,7 +884,7 @@
       }, 700);
     }
 
-    // 5. Mobile Navigation Drawer Toggle
+    // 4. Mobile Menu Drawer Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -1105,10 +901,54 @@
       });
     }
 
-    // 6. Current Year in Footer
+    // 5. Dynamic Footer Year
     const yearElem = document.getElementById('current-year');
     if (yearElem) {
       yearElem.innerText = new Date().getFullYear();
+    }
+
+    // 6. Interactive 3D Touch & Mouse Reaction for the Book
+    const bookContainer = document.querySelector('.book-container');
+
+    if (bookContainer) {
+      const resetTilt = () => {
+        bookContainer.style.transform = 'rotateY(-18deg) rotateX(6deg) translateY(0px)';
+      };
+
+      const handleMove = (clientX, clientY) => {
+        const rect = bookContainer.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // Calculate tilt angles based on touch / cursor position
+        const tiltY = ((x - centerX) / centerX) * 22; // left-to-right tilt
+        const tiltX = -((y - centerY) / centerY) * 16; // up-and-down tilt
+
+        bookContainer.style.transform = `rotateY(${tiltY}deg) rotateX(${tiltX}deg) translateY(-8px) scale(1.02)`;
+      };
+
+      // Mouse Listeners (Desktop)
+      bookContainer.addEventListener('mousemove', (e) => {
+        handleMove(e.clientX, e.clientY);
+      });
+      bookContainer.addEventListener('mouseleave', resetTilt);
+
+      // Touch Listeners (Mobile & Tablets)
+      bookContainer.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        handleMove(touch.clientX, touch.clientY);
+      }, { passive: true });
+
+      bookContainer.addEventListener('touchmove', (e) => {
+        const touch = e.touches[0];
+        handleMove(touch.clientX, touch.clientY);
+      }, { passive: true });
+
+      bookContainer.addEventListener('touchend', resetTilt);
+      bookContainer.addEventListener('touchcancel', resetTilt);
     }
   </script>
 </body>
