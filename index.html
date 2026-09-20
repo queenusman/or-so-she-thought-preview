@@ -50,7 +50,7 @@
       background-size: 24px 24px;
     }
 
-    /* 3D Book Presentation */
+    /* 3D Realistic Hardcover Presentation */
     .book-stage {
       perspective: 1600px;
     }
@@ -58,40 +58,104 @@
     .book-container {
       transform-style: preserve-3d;
       transform: rotateY(-18deg) rotateX(6deg);
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .book-container:hover {
-      transform: rotateY(-8deg) rotateX(2deg) translateY(-8px);
+      transform: rotateY(-4deg) rotateX(2deg) translateY(-10px);
     }
 
     .book-cover {
       box-shadow: 
-        -1px 0 2px rgba(31, 27, 22, 0.1),
-        16px 20px 38px -6px rgba(31, 27, 22, 0.28),
-        2px 2px 8px rgba(31, 27, 22, 0.12);
+        -2px 0 4px rgba(31, 27, 22, 0.15),
+        20px 24px 40px -6px rgba(31, 27, 22, 0.32),
+        2px 2px 10px rgba(31, 27, 22, 0.12);
+      position: relative;
     }
 
+    /* Book Cover Image */
+    .book-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 3px 6px 6px 3px;
+      display: block;
+    }
+
+    /* Hardcover Spine Hinge & Crease */
     .book-spine-crease {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 28px;
-      width: 14px;
-      background: linear-gradient(to right, rgba(0,0,0,0.12), transparent 45%, rgba(255,255,255,0.2) 75%, rgba(0,0,0,0.08));
+      left: 18px;
+      width: 16px;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.32) 0%,
+        rgba(255, 255, 255, 0.28) 35%,
+        rgba(0, 0, 0, 0.22) 70%,
+        rgba(255, 255, 255, 0.05) 100%
+      );
+      mix-blend-mode: overlay;
       pointer-events: none;
+      z-index: 20;
     }
 
+    /* Tactile Hardcover Lighting Sheen */
+    .book-sheen {
+      position: absolute;
+      inset: 0;
+      border-radius: 3px 6px 6px 3px;
+      background: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.06) 35%,
+        rgba(0, 0, 0, 0.06) 60%,
+        rgba(0, 0, 0, 0.28) 100%
+      );
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* Realistic 3D Paper Edge (Right side pages) */
     .book-edge {
       position: absolute;
       right: -14px;
       top: 4px;
       bottom: 4px;
       width: 16px;
-      background: linear-gradient(to right, #FAF8F2 0%, #E8E2D4 40%, #D4CCBC 70%, #FAF8F2 100%);
+      background: repeating-linear-gradient(
+        to bottom,
+        #FAF8F2 0px,
+        #E8E2D4 2px,
+        #D4CCBC 3px,
+        #FAF8F2 4px
+      );
       transform: rotateY(90deg) translateZ(-8px);
       border-radius: 0 3px 3px 0;
-      box-shadow: inset 1px 0 2px rgba(0,0,0,0.15);
+      box-shadow: inset 1px 0 3px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+    }
+
+    /* Soft Realistic Drop Shadow Under Book */
+    .book-shadow {
+      position: absolute;
+      bottom: -22px;
+      left: 5%;
+      width: 90%;
+      height: 24px;
+      background: rgba(31, 27, 22, 0.35);
+      filter: blur(14px);
+      border-radius: 50%;
+      transform: rotateX(80deg);
+      pointer-events: none;
+      transition: all 0.6s ease;
+    }
+
+    .book-container:hover .book-shadow {
+      transform: rotateX(80deg) scale(0.92);
+      filter: blur(18px);
+      opacity: 0.7;
     }
 
     /* Editorial Drop Cap */
@@ -191,64 +255,29 @@
         </span>
       </div>
 
-      <!-- 3D Book Presentation Container -->
+      <!-- 3D Book Presentation Container with Your Cover Image -->
       <div class="book-stage mb-14 mt-4 w-full flex justify-center items-center">
         <div class="relative book-container cursor-pointer select-none">
           
           <!-- Realistic Hardcover Book Wrapper -->
-          <div class="book-cover relative w-[250px] sm:w-[290px] md:w-[330px] aspect-[1/1.55] bg-ivory-100 rounded-r-[6px] rounded-l-[3px] border border-ivory-border p-7 md:p-9 flex flex-col justify-between overflow-hidden">
+          <div class="book-cover relative w-[250px] sm:w-[290px] md:w-[330px] aspect-[1/1.55] rounded-r-[6px] rounded-l-[3px] border border-ivory-border">
             
-            <!-- Book Spine Accent Line -->
+            <!-- YOUR BOOK COVER IMAGE (Upload cover.jpg to your repo) -->
+            <img src="cover.jpg" alt="Novel Book Cover" class="book-img" />
+
+            <!-- Book Spine Accent Line Overlay -->
             <div class="book-spine-crease"></div>
-            
-            <!-- Cover Frame Borders -->
-            <div class="absolute inset-3.5 border border-ink-900/15 pointer-events-none rounded-[2px]"></div>
-            <div class="absolute inset-4 border border-ink-900/10 pointer-events-none rounded-[1px]"></div>
 
-            <!-- Cover Top Header -->
-            <div class="text-center z-10 pt-2">
-              <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-ink-charcoal font-medium block">
-                A Chronicle of the Silent Reach
-              </span>
-            </div>
+            <!-- Soft Realistic Sheen Overlay -->
+            <div class="book-sheen"></div>
 
-            <!-- Cover Center Title & Artwork Emblem -->
-            <div class="text-center z-10 my-auto py-4">
-              <!-- Geometric Crest Emblem (SVG) -->
-              <div class="w-16 h-16 mx-auto mb-6 text-ink-900/70 flex items-center justify-center">
-                <svg viewBox="0 0 100 100" class="w-full h-full fill-none stroke-current" stroke-width="1.3">
-                  <circle cx="50" cy="50" r="42" stroke-dasharray="2 3" />
-                  <polygon points="50,15 80,75 20,75" />
-                  <circle cx="50" cy="50" r="18" />
-                  <circle cx="50" cy="50" r="3" class="fill-current" />
-                  <line x1="50" y1="8" x2="50" y2="92" stroke-dasharray="1 3" />
-                </svg>
-              </div>
-
-              <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-[0.14em] uppercase text-ink-900 leading-none">
-                NORWYN
-              </h1>
-              
-              <div class="flex items-center justify-center gap-3 my-3">
-                <span class="w-8 h-[1px] bg-ink-900/25"></span>
-                <span class="text-[10px] uppercase tracking-[0.28em] text-ink-muted">Volume I</span>
-                <span class="w-8 h-[1px] bg-ink-900/25"></span>
-              </div>
-            </div>
-
-            <!-- Cover Bottom Meta -->
-            <div class="text-center z-10 pb-1">
-              <p class="font-serif italic text-xs tracking-wider text-ink-charcoal">
-                By J. C. Valmont
-              </p>
-              <span class="text-[9px] uppercase tracking-[0.24em] text-ink-muted block mt-1">
-                Atelier Press &bull; MCMXXVI
-              </span>
-            </div>
-
-            <!-- Simulated Paper Edge Depth -->
+            <!-- Simulated Paper Edge Depth (Right side pages) -->
             <div class="book-edge"></div>
           </div>
+
+          <!-- Contact Depth Shadow Under the Book -->
+          <div class="book-shadow"></div>
+
         </div>
       </div>
 
@@ -295,10 +324,8 @@
     <!-- SECTION 1: THE NOVEL (OVERVIEW) -->
     <section id="novel-overview" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
       <div class="max-w-6xl mx-auto">
-        
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          <!-- Left Column: Section Title & Book Metadata -->
           <div class="lg:col-span-4 space-y-8">
             <div>
               <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Synopsis & Record</span>
@@ -306,7 +333,6 @@
               <div class="w-10 h-[1px] bg-ink-900 mt-3"></div>
             </div>
 
-            <!-- Novel Specifications -->
             <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border space-y-4 text-xs">
               <div class="flex justify-between pb-3 border-b border-ivory-border">
                 <span class="text-ink-muted uppercase tracking-wider">Format</span>
@@ -330,7 +356,6 @@
               </div>
             </div>
 
-            <!-- Thematic Tags -->
             <div>
               <p class="text-[10px] uppercase tracking-[0.2em] text-ink-muted mb-2 font-medium">Themes Explored</p>
               <div class="flex flex-wrap gap-2">
@@ -342,7 +367,6 @@
             </div>
           </div>
 
-          <!-- Right Column: Narrative Summary -->
           <div class="lg:col-span-8 space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
             <p class="drop-cap text-ink-900">
               Norwyn stands upon the sheer slate precipices of the Northern Shelf, a metropolis constructed not from marble or wood, but carved directly into dormant glacial stone. For seven generations, its aristocratic dynasties have governed under the iron decree of the <em>Treaty of the Bell</em>: no citizen may utter the names of the five drowned lords, and every treasonous thought is weighed against the tribute of salt and lead.
@@ -362,14 +386,12 @@
           </div>
 
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 2: EXCERPTS ("WORDS FROM NORWYN") -->
     <section id="excerpts" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
       <div class="max-w-5xl mx-auto">
-        
         <div class="text-center max-w-2xl mx-auto mb-12">
           <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Selected Passages</span>
           <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">Words from Norwyn</h2>
@@ -393,14 +415,11 @@
 
         <!-- Excerpt Display Area -->
         <div class="bg-ivory-100 rounded-xl p-8 sm:p-12 md:p-14 border border-ivory-border shadow-sm min-h-[360px] relative transition-all duration-300">
-          
-          <!-- Decorative Top Monogram & Folio Counter -->
           <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.22em] text-ink-muted pb-6 border-b border-ivory-border/70 mb-8">
             <span id="excerpt-folio">Folio 14 &bull; Act I</span>
             <span class="font-serif italic capitalize">The Great Library of Norwyn</span>
           </div>
 
-          <!-- Tab 0 Content -->
           <div id="excerpt-content-0" class="excerpt-pane space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
             <p class="drop-cap text-ink-900">
               The cold here was not an absence of warmth, but an active inhabitant of the stone. It seeped between the bindings of vellum and sheepskin, turning centuries of ecclesiastical disputation into brittle, grey wafers that snapped if turned too quickly. Julian held his candle six inches from the cedar catalog, careful not to let grease fall upon the seals.
@@ -413,7 +432,6 @@
             </div>
           </div>
 
-          <!-- Tab 1 Content -->
           <div id="excerpt-content-1" class="excerpt-pane hidden space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
             <p class="drop-cap text-ink-900">
               The seal was not the sovereign raven, nor the twin anchors of the Admiralty, but a solitary bell without a clapper. Julian recognized the impression instantly. It belonged to no magistrate alive. The wax was old, dyed with dried elderberry that had oxidized into the hue of bruised plum.
@@ -426,7 +444,6 @@
             </div>
           </div>
 
-          <!-- Tab 2 Content -->
           <div id="excerpt-content-2" class="excerpt-pane hidden space-y-6 text-ink-charcoal font-sans text-base sm:text-lg leading-relaxed font-light">
             <p class="drop-cap text-ink-900">
               They met beneath the lower sluices where the reservoir hummed like a slumbering beast. Seven shadows huddled near the brazier, their faces shrouded in heavy wool mantles smelling of coal gas and tallow.
@@ -438,7 +455,6 @@
               <span class="font-serif italic text-sm text-ink-muted">&mdash; From Chapter Eleven: The Mechanism of Treason</span>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -447,7 +463,6 @@
     <!-- SECTION 3: THE WORLD OF NORWYN -->
     <section id="world" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/40">
       <div class="max-w-6xl mx-auto">
-        
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-ivory-border">
           <div>
             <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Cartography & Geography</span>
@@ -458,10 +473,7 @@
           </p>
         </div>
 
-        <!-- Lore Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- World Card 1 -->
           <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
@@ -480,7 +492,6 @@
             </div>
           </div>
 
-          <!-- World Card 2 -->
           <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
@@ -499,7 +510,6 @@
             </div>
           </div>
 
-          <!-- World Card 3 -->
           <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
@@ -518,7 +528,6 @@
             </div>
           </div>
 
-          <!-- World Card 4 -->
           <div class="bg-ivory-50 rounded-lg p-6 border border-ivory-border hover:border-ink-accent transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="w-10 h-10 rounded-full bg-ivory-200 flex items-center justify-center text-ink-900 mb-6 group-hover:bg-ink-900 group-hover:text-ivory-50 transition-colors">
@@ -536,16 +545,13 @@
               Threshold to the Exiled Sea
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 4: THE IDEA BEHIND THE NOVEL -->
     <section id="genesis" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
       <div class="max-w-4xl mx-auto">
-        
         <div class="text-center max-w-2xl mx-auto mb-16">
           <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">The Genesis</span>
           <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">The Spark Behind the Story</h2>
@@ -561,7 +567,6 @@
             I wondered: what happens to a culture when silence is not merely an aesthetic, but an enforced political doctrine? What if an entire civilization chose collective amnesia because the truth of their founding was so monstrous that remembering it would cause the city to crumble morally before nightfall?
           </p>
 
-          <!-- Highlight Box -->
           <div class="p-8 sm:p-10 bg-ivory-100 border border-ivory-border rounded-lg my-10 relative">
             <span class="text-xs uppercase tracking-[0.2em] text-ink-accent font-semibold block mb-3">Core Inquest</span>
             <p class="font-serif italic text-xl sm:text-2xl text-ink-900 leading-relaxed">
@@ -577,14 +582,12 @@
             *Norwyn* is fundamentally about the moral friction between order and truth. It asks whether quietude is worth the sacrifice of honesty, and whether freedom can ever be anything other than a dangerous, terrifying wakefulness.
           </p>
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 5: WRITING THE NOVEL (THINGS WRITING THIS NOVEL TAUGHT ME) -->
     <section id="reflections" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100/60">
       <div class="max-w-6xl mx-auto">
-        
         <div class="text-center max-w-2xl mx-auto mb-16">
           <span class="text-[11px] uppercase tracking-[0.25em] text-ink-muted block mb-2 font-medium">Craft & Solitude</span>
           <h2 class="font-serif text-3xl sm:text-4xl text-ink-900 font-normal tracking-wide">Things Writing This Novel Taught Me</h2>
@@ -592,8 +595,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Lesson 1 -->
           <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">01</span>
@@ -607,7 +608,6 @@
             </div>
           </div>
 
-          <!-- Lesson 2 -->
           <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">02</span>
@@ -621,7 +621,6 @@
             </div>
           </div>
 
-          <!-- Lesson 3 -->
           <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">03</span>
@@ -635,7 +634,6 @@
             </div>
           </div>
 
-          <!-- Lesson 4 -->
           <div class="bg-ivory-50 p-8 rounded-lg border border-ivory-border relative flex flex-col justify-between">
             <div>
               <span class="font-serif text-3xl font-light text-ink-900/40 block mb-3">04</span>
@@ -648,25 +646,19 @@
               On Psychological Truth
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 6: ABOUT THE AUTHOR -->
     <section id="author" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-50">
       <div class="max-w-5xl mx-auto">
-        
         <div class="bg-ivory-100 rounded-xl border border-ivory-border p-8 sm:p-12 md:p-16">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             
-            <!-- Author Portrait / Engraving -->
             <div class="md:col-span-5 flex justify-center">
               <div class="relative w-56 sm:w-64 aspect-[3/4] rounded-lg border border-ivory-border p-3 bg-ivory-50 shadow-sm">
-                <!-- Inner Engraving Style Silhouette -->
                 <div class="w-full h-full rounded border border-ink-900/20 bg-ivory-200 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden group">
-                  <!-- Vector Silhouette Portrait -->
                   <div class="w-24 h-24 rounded-full border border-ink-900/30 flex items-center justify-center mb-4 bg-ivory-100">
                     <svg class="w-14 h-14 text-ink-900/60" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
@@ -679,7 +671,6 @@
               </div>
             </div>
 
-            <!-- Author Biography & Notes -->
             <div class="md:col-span-7 space-y-5 text-ink-charcoal font-sans text-sm sm:text-base leading-relaxed font-light">
               <div>
                 <span class="text-[10px] uppercase tracking-[0.25em] text-ink-muted font-medium">The Creator</span>
@@ -695,7 +686,6 @@
                 Before publishing <em>Norwyn</em>, Valmont spent seven years cataloguing rare incunabula and illuminated manuscripts for private collegiate collections. When not writing in their study, they can be found binding leather folios by hand, collecting antique surveying instruments, or walking coastal trails in all seasons.
               </p>
 
-              <!-- Author Personal Philosophy -->
               <div class="pt-4 border-t border-ivory-border/80">
                 <span class="text-[10px] uppercase tracking-[0.2em] text-ink-muted block mb-1">Philosophy of the Desk</span>
                 <p class="font-serif italic text-ink-900 text-base">
@@ -703,7 +693,6 @@
                 </p>
               </div>
 
-              <!-- Social / Contact Links -->
               <div class="pt-4 flex flex-wrap gap-4 text-xs font-medium uppercase tracking-[0.15em]">
                 <a href="#dispatch" class="text-ink-900 hover:text-ink-accent transition-colors flex items-center gap-1">
                   <span>Send a Letter</span> &rarr;
@@ -719,14 +708,12 @@
 
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 7: EMAIL SUBSCRIPTION ("THE NORWYN DISPATCHES") -->
     <section id="dispatch" class="py-24 px-6 md:px-12 border-b border-ivory-border bg-ivory-100">
       <div class="max-w-2xl mx-auto text-center">
-        
         <div class="w-12 h-12 rounded-full border border-ink-900/20 flex items-center justify-center mx-auto mb-6 bg-ivory-50 text-ink-900">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -739,9 +726,8 @@
           Delivered seasonally. Receive private chapter releases, cut manuscripts, high-resolution cartography, and contemplative essays from the author&rsquo;s writing desk.
         </p>
 
-        <!-- Subscription Form -->
         <form id="dispatch-form" class="space-y-4" onsubmit="handleSubscribe(event)">
-          <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+          <div class="flex flex-col sm:row gap-2 max-w-md mx-auto">
             <input 
               type="email" 
               id="dispatch-email" 
@@ -762,7 +748,6 @@
           </p>
         </form>
 
-        <!-- Dynamic Success Message Banner -->
         <div id="dispatch-success" class="hidden mt-6 p-5 rounded-lg bg-ivory-50 border border-ink-900/30 text-ink-900 text-sm animate-fade-in">
           <div class="font-serif italic text-lg mb-1">Your name has been entered into the ledger.</div>
           <p class="text-xs text-ink-charcoal font-light">
@@ -779,7 +764,6 @@
   <footer class="bg-ivory-50 py-16 px-6 md:px-12 border-t border-ivory-border text-xs text-ink-charcoal">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
       
-      <!-- Left Monogram & Copyright -->
       <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-1">
         <div class="font-serif text-lg tracking-[0.2em] uppercase font-semibold text-ink-900">
           NORWYN
@@ -789,7 +773,6 @@
         </p>
       </div>
 
-      <!-- Quick Nav Anchors -->
       <div class="flex flex-wrap justify-center gap-6 text-[11px] uppercase tracking-[0.15em] text-ink-muted">
         <a href="#hero" class="hover:text-ink-900 transition-colors">Cover</a>
         <a href="#novel-overview" class="hover:text-ink-900 transition-colors">Overview</a>
@@ -798,7 +781,6 @@
         <a href="#author" class="hover:text-ink-900 transition-colors">Author</a>
       </div>
 
-      <!-- Back to Top Direct Button -->
       <div>
         <a href="#hero" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-ivory-border bg-ivory-100 hover:bg-ivory-200 text-ink-900 transition-all">
           <span class="text-[11px] uppercase tracking-[0.14em]">Return to Top</span>
@@ -811,7 +793,7 @@
     </div>
   </footer>
 
-  <!-- Floating "Back to Top" Button for smooth navigation -->
+  <!-- Floating "Back to Top" Button -->
   <button 
     id="floating-top-btn" 
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
@@ -855,7 +837,6 @@
     ];
 
     function switchExcerpt(tabIndex) {
-      // Update Tab button states
       const tabs = document.querySelectorAll('.excerpt-tab');
       tabs.forEach((tab, index) => {
         if (index === tabIndex) {
@@ -867,7 +848,6 @@
         }
       });
 
-      // Update pane visibility
       const panes = document.querySelectorAll('.excerpt-pane');
       panes.forEach((pane, index) => {
         if (index === tabIndex) {
@@ -877,7 +857,6 @@
         }
       });
 
-      // Update Folio badge
       const folioCounter = document.getElementById('excerpt-folio');
       if (folioCounter && folios[tabIndex]) {
         folioCounter.innerText = folios[tabIndex];
@@ -896,12 +875,10 @@
 
       const emailVal = emailInput.value.trim();
 
-      // UI Loading state
       submitBtn.disabled = true;
       submitBtn.innerText = "Inscribing...";
 
       setTimeout(() => {
-        // Render success feedback
         if (emailDisplay) emailDisplay.innerText = emailVal;
         if (successBanner) successBanner.classList.remove('hidden');
         
