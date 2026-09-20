@@ -60,7 +60,7 @@
       opacity: 0.75;
     }
 
-    /* Top Sticky Navigation */
+    /* Top Sticky Navigation Bar */
     .nav {
       position: sticky;
       top: 0;
@@ -70,14 +70,15 @@
       border-bottom: 1px solid var(--border);
       padding: 1.1rem 2rem;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      gap: 0.85rem;
     }
 
     .nav-brand {
       font-family: var(--font-serif);
       font-size: 1.25rem;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       font-weight: 700;
       cursor: pointer;
@@ -85,12 +86,22 @@
 
     .nav-links {
       display: flex;
-      gap: 1.6rem;
-      font-size: 0.78rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1.2rem;
+      row-gap: 0.5rem;
+      font-size: 0.73rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       font-weight: 500;
-      align-items: center;
+    }
+
+    .nav-dot {
+      color: var(--border-dark);
+      opacity: 0.35;
+      font-size: 0.8rem;
+      user-select: none;
     }
 
     .nav-link-btn {
@@ -102,9 +113,10 @@
       text-transform: inherit;
       color: var(--ink);
       cursor: pointer;
-      padding: 0.3rem 0;
-      border-bottom: 2px solid transparent;
-      transition: all 0.25s ease;
+      padding: 0.25rem 0;
+      border-bottom: 1.5px solid transparent;
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
 
     .nav-link-btn:hover {
@@ -118,18 +130,17 @@
       border-bottom-color: var(--ink);
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       .nav {
-        flex-direction: column;
-        gap: 0.75rem;
         padding: 0.9rem 1rem;
+        gap: 0.6rem;
+      }
+      .nav-dot {
+        display: none;
       }
       .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        font-size: 0.72rem;
+        gap: 0.65rem 1rem;
+        font-size: 0.68rem;
       }
     }
 
@@ -241,7 +252,7 @@
       color: var(--ink-faint);
     }
 
-    /* --- HIDDEN UNTIL CLICKED CONTENT SECTIONS --- */
+    /* --- CONTENT SECTIONS (HIDDEN UNTIL CLICKED) --- */
     .content-section {
       display: none;
       padding: 6.5rem 0;
@@ -309,7 +320,15 @@
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.01em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-description {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--ink-muted);
+      margin-bottom: 2.2rem;
+      font-family: var(--font-serif);
     }
 
     .lead-text {
@@ -399,7 +418,7 @@
       color: var(--ink-faint);
     }
 
-    /* Making List */
+    /* Making / Lessons List */
     .lesson-item {
       padding: 1.6rem 0;
       border-bottom: 1px solid var(--border);
@@ -564,13 +583,19 @@
       Or So She Thought
     </div>
     <nav class="nav-links">
-      <button class="nav-link-btn" onclick="openSection('novel')">The Webnovel</button>
-      <button class="nav-link-btn" onclick="openSection('norwyn')">Norwyn</button>
-      <button class="nav-link-btn" onclick="openSection('people')">The People</button>
-      <button class="nav-link-btn" onclick="openSection('questions')">The Questions</button>
-      <button class="nav-link-btn" onclick="openSection('making')">The Making</button>
-      <button class="nav-link-btn" onclick="openSection('journal')">Journal</button>
-      <button class="nav-link-btn" onclick="openSection('about')">About</button>
+      <button class="nav-link-btn" onclick="openSection('novel')">READ THE NOVEL</button>
+      <span class="nav-dot">·</span>
+      <button class="nav-link-btn" onclick="openSection('norwyn')">EXPLORE NORWYN</button>
+      <span class="nav-dot">·</span>
+      <button class="nav-link-btn" onclick="openSection('people')">MEET THE PEOPLE</button>
+      <span class="nav-dot">·</span>
+      <button class="nav-link-btn" onclick="openSection('questions')">THE QUESTIONS BEHIND THE STORY</button>
+      <span class="nav-dot">·</span>
+      <button class="nav-link-btn" onclick="openSection('making')">HOW THE NOVEL WAS MADE</button>
+      <span class="nav-dot">·</span>
+      <button class="nav-link-btn" onclick="openSection('notes')">NOTES FROM THE NOVEL</button>
+      <span class="nav-dot">·</span>
+      <button class="nav-link-btn" onclick="openSection('about')">ABOUT THE AUTHOR</button>
     </nav>
   </header>
 
@@ -578,7 +603,7 @@
   <section class="hero">
     
     <div class="book-stage">
-      <div class="book-cover" onclick="openSection('novel')" title="Click to read The Webnovel">
+      <div class="book-cover" onclick="openSection('novel')" title="Click to Read the Novel">
         <img 
           src="cover.jpg" 
           alt="Or So She Thought Book Cover" 
@@ -599,14 +624,16 @@
 
   <!-- ==================== CONTENT SECTIONS (HIDDEN UNTIL CLICKED) ==================== -->
 
-  <!-- 1. THE WEBNOVEL -->
+  <!-- 1. READ THE NOVEL -->
   <section id="novel" class="content-section">
     <div class="container">
       <div class="section-header-bar">
         <div class="section-eyebrow">The Web Novel</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">Or So She Thought</h2>
+      <h2 class="section-title">Read the Novel</h2>
+      <p class="section-description">Chapters, contents, and the full interactive reading experience.</p>
+      
       <div class="dropcap lead-text">
         Set within the veiled corridors of high court intrigue, *Or So She Thought* charts the psychological fracturing of individuals bound by duty, ancient etiquette, and unspoken expectations. It is a story of quiet subversion—where authority is not claimed by force of sword, but through the patient architecture of restraint.
       </div>
@@ -641,14 +668,16 @@
     </div>
   </section>
 
-  <!-- 2. NORWYN (THE WORLD) -->
+  <!-- 2. EXPLORE NORWYN -->
   <section id="norwyn" class="content-section section-alt">
     <div class="container">
       <div class="section-header-bar">
         <div class="section-eyebrow">The Setting & Institutions</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">Norwyn</h2>
+      <h2 class="section-title">Explore Norwyn</h2>
+      <p class="section-description">The kingdom, court, places, customs, institutions, and history.</p>
+
       <p class="lead-text">
         Norwyn is a realm defined by monumental stone, cold sea mists, and the heavy atmosphere of an era poised on the brink of profound institutional transition.
       </p>
@@ -676,14 +705,16 @@
     </div>
   </section>
 
-  <!-- 3. THE PEOPLE -->
+  <!-- 3. MEET THE PEOPLE -->
   <section id="people" class="content-section">
     <div class="container">
       <div class="section-header-bar">
         <div class="section-eyebrow">Dramatis Personae</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">The People</h2>
+      <h2 class="section-title">Meet the People</h2>
+      <p class="section-description">Elizabeth, Anne, Edward, Elias, Isabel, and the people surrounding them.</p>
+
       <p class="lead-text">
         The figures who navigate the quiet corridors of Norwyn, bound together by hierarchy, tactical silence, and survival.
       </p>
@@ -729,17 +760,15 @@
     </div>
   </section>
 
-  <!-- 4. THE QUESTIONS -->
+  <!-- 4. THE QUESTIONS BEHIND THE STORY -->
   <section id="questions" class="content-section section-alt">
     <div class="container">
       <div class="section-header-bar">
         <div class="section-eyebrow">Philosophical Inquests</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">The Questions</h2>
-      <p class="lead-text">
-        The central ideas the novel continues to interrogate without reducing them to neat or comforting answers.
-      </p>
+      <h2 class="section-title">The Questions Behind the Story</h2>
+      <p class="section-description">The ideas and questions the novel explores without settling them.</p>
 
       <div class="grid-2">
         <div>
@@ -769,22 +798,20 @@
     </div>
   </section>
 
-  <!-- 5. THE MAKING -->
+  <!-- 5. HOW THE NOVEL WAS MADE -->
   <section id="making" class="content-section">
     <div class="container">
       <div class="section-header-bar">
-        <div class="section-eyebrow">Craft & Evolution</div>
+        <div class="section-eyebrow">Craft & Architecture</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">The Making</h2>
-      <p class="lead-text">
-        The creation of the novel—where it began, how it evolved, abandoned ideas, surviving scenes, and building Norwyn.
-      </p>
+      <h2 class="section-title">How the Novel Was Made</h2>
+      <p class="section-description">Its origins, development, abandoned ideas, surviving scenes, and the making of Norwyn.</p>
 
       <div class="lesson-item">
         <div class="lesson-num">01</div>
         <div class="lesson-content">
-          <h4>Origins and Early Transitions</h4>
+          <h4>Origins and Development</h4>
           <p>The manuscript began as a broader study of social currency before sharpening into a focused psychological drama centered on sovereign permission, composure, and royal etiquette.</p>
         </div>
       </div>
@@ -815,21 +842,19 @@
     </div>
   </section>
 
-  <!-- 6. JOURNAL -->
-  <section id="journal" class="content-section section-alt">
+  <!-- 6. NOTES FROM THE NOVEL -->
+  <section id="notes" class="content-section section-alt">
     <div class="container">
       <div class="section-header-bar">
-        <div class="section-eyebrow">Ongoing Writings</div>
+        <div class="section-eyebrow">Dispatches & Fragments</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">The Journal</h2>
-      <p class="lead-text">
-        Ongoing reflections on the novel, writer’s dispatches, and thoughts surrounding the questions of Norwyn.
-      </p>
+      <h2 class="section-title">Notes from the Novel</h2>
+      <p class="section-description">Ongoing writing, discoveries, fragments, and reflections from the making of the book.</p>
 
       <div class="grid-2">
         <div class="card">
-          <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);">Dispatch 01</span>
+          <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);">Fragment 01</span>
           <h3 style="margin-top: 0.5rem;">On Writing Composure</h3>
           <p>
             Notes on why the most compelling dialogue in fiction happens in what characters deliberately maneuver to avoid saying aloud.
@@ -837,7 +862,7 @@
         </div>
 
         <div class="card">
-          <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);">Dispatch 02</span>
+          <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);">Fragment 02</span>
           <h3 style="margin-top: 0.5rem;">The Architecture of Containment</h3>
           <p>
             An exploration of how the physical stone of Norwyn shapes the psychology of the court, making quietness an act of survival.
@@ -847,14 +872,15 @@
     </div>
   </section>
 
-  <!-- 7. ABOUT QUEEN USMAN -->
+  <!-- 7. ABOUT THE AUTHOR -->
   <section id="about" class="content-section">
     <div class="container">
       <div class="section-header-bar">
         <div class="section-eyebrow">The Author</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">About Queen Usman</h2>
+      <h2 class="section-title">About the Author</h2>
+      <p class="section-description">Queen Usman and her work.</p>
 
       <div class="author-card">
         <div class="author-portrait-frame">
@@ -874,7 +900,7 @@
     </div>
   </section>
 
-  <!-- 8. EMAIL SUBSCRIPTION (Always accessible at bottom) -->
+  <!-- 8. EMAIL SUBSCRIPTION -->
   <section id="subscribe" class="section-alt">
     <div class="container">
       <div class="subscribe-box">
@@ -902,10 +928,10 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT TO HANDLE OPENING & CLOSING SECTIONS -->
+  <!-- JAVASCRIPT FOR INTERACTIVE SECTIONS -->
   <script>
     function openSection(sectionId) {
-      // 1. Hide all content sections first
+      // 1. Hide all content sections
       const sections = document.querySelectorAll('.content-section');
       sections.forEach(sec => sec.classList.remove('active-section'));
 
@@ -913,7 +939,7 @@
       const navButtons = document.querySelectorAll('.nav-link-btn');
       navButtons.forEach(btn => btn.classList.remove('active-nav'));
 
-      // 3. Show target section
+      // 3. Reveal chosen section
       const targetSection = document.getElementById(sectionId);
       if (targetSection) {
         targetSection.classList.add('active-section');
