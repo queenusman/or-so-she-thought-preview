@@ -7,7 +7,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -41,7 +41,7 @@
     body {
       font-family: var(--font-sans);
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
       background: var(--bg-cream);
       color: var(--ink);
       overflow-x: hidden;
@@ -54,6 +54,10 @@
       color: inherit;
       text-decoration: none;
       transition: opacity 0.2s ease;
+    }
+
+    a:hover {
+      opacity: 0.75;
     }
 
     /* Top Sticky Navigation Bar */
@@ -79,7 +83,7 @@
       cursor: pointer;
     }
 
-    /* Minimalist Three Black Lines Menu Button (No frame) */
+    /* Minimalist Three Black Lines Button */
     .hamburger-btn {
       background: none;
       border: none;
@@ -90,7 +94,7 @@
       justify-content: center;
       gap: 5px;
       padding: 8px 4px;
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.2s ease;
     }
 
     .hamburger-btn:hover {
@@ -124,9 +128,9 @@
     .menu-drawer {
       position: fixed;
       top: 0;
-      right: -420px;
+      right: -450px;
       width: 100%;
-      max-width: 380px;
+      max-width: 420px;
       height: 100vh;
       background: var(--bg-cream);
       border-left: 1px solid var(--border);
@@ -134,7 +138,7 @@
       z-index: 999;
       display: flex;
       flex-direction: column;
-      padding: 2.5rem 2rem 3rem;
+      padding: 2.5rem 2.2rem 3rem;
       transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       overflow-y: auto;
     }
@@ -184,7 +188,7 @@
     .drawer-links {
       display: flex;
       flex-direction: column;
-      gap: 1.4rem;
+      gap: 1.2rem;
     }
 
     .drawer-link-btn {
@@ -192,7 +196,7 @@
       border: none;
       text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--ink);
@@ -228,7 +232,7 @@
 
     /* Container Layout */
     .container {
-      max-width: 980px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
@@ -365,7 +369,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .section-eyebrow {
@@ -398,41 +402,29 @@
 
     .section-title {
       font-family: var(--font-serif);
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-description {
-      font-size: 0.95rem;
-      font-style: italic;
-      color: var(--ink-muted);
-      margin-bottom: 2.2rem;
-      font-family: var(--font-serif);
-    }
-
-    .lead-text {
-      font-size: 1.15rem;
-      line-height: 1.85;
-      color: var(--ink-muted);
       margin-bottom: 1.5rem;
     }
 
-    .dropcap::first-letter {
-      font-family: var(--font-serif);
-      float: left;
-      font-size: 4.2rem;
-      line-height: 0.8;
-      padding-top: 4px;
-      padding-right: 12px;
-      padding-bottom: 2px;
+    .lead-text {
+      font-size: 1.18rem;
+      line-height: 1.85;
       color: var(--ink);
-      font-weight: 700;
+      margin-bottom: 2rem;
+      font-family: var(--font-serif);
     }
 
-    /* Grids */
+    .sub-lead-text {
+      font-size: 0.98rem;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Grids & Item Cards */
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -448,11 +440,10 @@
     @media (max-width: 768px) {
       .grid-2, .grid-3 {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.8rem;
       }
     }
 
-    /* Cards */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -466,6 +457,7 @@
       font-size: 1.45rem;
       margin-bottom: 0.75rem;
       font-weight: 600;
+      letter-spacing: 0.04em;
     }
 
     .card p {
@@ -474,94 +466,175 @@
       line-height: 1.7;
     }
 
-    /* Excerpts Quote Box */
-    .excerpt-box {
-      background: var(--surface);
-      border-left: 3px solid var(--ink);
-      padding: 2.5rem 2rem 2rem;
-      margin-bottom: 2rem;
-      border-radius: 0 4px 4px 0;
-      box-shadow: var(--shadow);
-    }
-
-    .excerpt-text {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      line-height: 1.7;
-      font-style: italic;
-      color: var(--ink);
-      margin-bottom: 1.25rem;
-    }
-
-    .excerpt-source {
-      font-size: 0.8rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-
-    /* Making List */
-    .lesson-item {
-      padding: 1.6rem 0;
+    /* Table of Contents Chapter Grid */
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem 2rem;
+      margin: 2.5rem 0;
+      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 1.5rem;
-      align-items: baseline;
-    }
-
-    .lesson-item:last-child {
-      border-bottom: none;
-    }
-
-    .lesson-num {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      color: var(--ink-faint);
-      min-width: 34px;
-    }
-
-    .lesson-content h4 {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .lesson-content p {
-      font-size: 0.95rem;
-      color: var(--ink-muted);
-      line-height: 1.7;
-    }
-
-    /* Author Card */
-    .author-card {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 3.5rem 2.8rem;
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-    }
-
-    .author-portrait-frame {
-      width: 170px;
-      height: 220px;
-      background: var(--bg-ivory);
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--ink);
-      border-radius: 2px;
+      padding: 2.5rem 0;
     }
 
     @media (max-width: 680px) {
-      .author-card {
+      .toc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .toc-item {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      padding: 0.35rem 0;
+      border-bottom: 1px dashed rgba(217, 210, 197, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .toc-item span.ch-num {
+      color: var(--ink-faint);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-right: 0.75rem;
+    }
+
+    /* Chapter Navigation Bar */
+    .chapter-nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ink-muted);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .chapter-nav-bar a:hover {
+      color: var(--ink);
+    }
+
+    /* Reading Prompt Button */
+    .begin-reading-btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: var(--ink);
+      color: var(--bg-cream);
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 2px;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid var(--ink);
+      transition: all 0.2s ease;
+    }
+
+    .begin-reading-btn:hover {
+      background: #383129;
+      color: #ffffff;
+      opacity: 1;
+    }
+
+    /* Large Questions Inquests */
+    .question-block {
+      padding: 2.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .question-block:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    .question-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      line-height: 1.4;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+
+    .question-body {
+      font-size: 0.98rem;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      max-width: 800px;
+    }
+
+    /* Customs List */
+    .customs-box {
+      background: var(--surface);
+      border-left: 3px solid var(--ink);
+      padding: 2.5rem 2.2rem;
+      margin-top: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .customs-line {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--ink);
+      padding: 0.4rem 0;
+    }
+
+    /* Notes from the Novel Articles */
+    .note-entry {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.2rem;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .note-entry h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+    }
+
+    .note-entry p {
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .read-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ink);
+      align-self: flex-start;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+    }
+
+    /* Author Section Layout */
+    .author-frame {
+      display: flex;
+      gap: 3.5rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .author-frame {
         flex-direction: column;
-        text-align: center;
       }
     }
 
@@ -595,10 +668,6 @@
       outline: none;
     }
 
-    .subscribe-input:focus {
-      border-color: var(--ink);
-    }
-
     .subscribe-btn {
       padding: 0.85rem 1.8rem;
       background: var(--ink);
@@ -624,7 +693,7 @@
       }
     }
 
-    /* Footer & Return Home Button */
+    /* Footer */
     footer {
       padding: 4rem 1.5rem;
       text-align: center;
@@ -665,7 +734,7 @@
       Or So She Thought
     </div>
 
-    <!-- Minimalist Three Black Lines Button (No circular frame) -->
+    <!-- Minimalist Three Black Lines Button -->
     <button class="hamburger-btn" onclick="toggleMenu(true)" aria-label="Open Navigation Menu">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -755,38 +824,54 @@
         <div class="section-eyebrow">The Web Novel</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">Read the Novel</h2>
-      <p class="section-description">Chapters, contents, and the full interactive reading experience.</p>
+      <h2 class="section-title">READ THE NOVEL</h2>
       
-      <div class="dropcap lead-text">
-        Set within the veiled corridors of high court intrigue, *Or So She Thought* charts the psychological fracturing of individuals bound by duty, ancient etiquette, and unspoken expectations. It is a story of quiet subversion—where authority is not claimed by force of sword, but through the patient architecture of restraint.
-      </div>
-      <p class="lead-text" style="font-size: 1.05rem;">
-        Through twenty-six detailed chapters, the narrative unfolds the complex inner life of protagonists trapped under royal surveillance, investigating what remains of an individual when every spoken utterance requires unspoken clearance.
+      <p class="lead-text">
+        <em>Or So She Thought</em> is a psychological novel set in 1990s Norwyn, where duty is inherited, futures are often arranged before they are questioned, and knowing what you want can become difficult when you have spent your life learning what you are supposed to want.
       </p>
 
-      <div style="margin-top: 3.5rem;">
-        <div class="section-eyebrow" style="margin-bottom: 1rem;">Selected Excerpts & Reading Experience</div>
+      <div>
+        <a href="#contents-anchor" class="begin-reading-btn">BEGIN READING</a>
+      </div>
+
+      <div id="contents-anchor" style="margin-top: 3rem;">
+        <div class="section-eyebrow" style="letter-spacing: 0.28em;">CONTENTS</div>
         
-        <div class="excerpt-box">
-          <p class="excerpt-text">
-            "She had mastered the peculiar art of looking directly at power without letting it witness her appraisal. In the court of Norwyn, to be seen thinking was already a confession."
-          </p>
-          <span class="excerpt-source">— Chapter I, The Etiquette of Shadows</span>
+        <div class="toc-grid">
+          <div class="toc-item"><span><span class="ch-num">01</span> The Life She Is Supposed to Want</span></div>
+          <div class="toc-item"><span><span class="ch-num">02</span> Edward of Valenne</span></div>
+          <div class="toc-item"><span><span class="ch-num">03</span> The Girl Who Corrects Herself</span></div>
+          <div class="toc-item"><span><span class="ch-num">04</span> The Book</span></div>
+          <div class="toc-item"><span><span class="ch-num">05</span> The Mended Blouse</span></div>
+          <div class="toc-item"><span><span class="ch-num">06</span> The Woman Who Knows Before You Speak</span></div>
+          <div class="toc-item"><span><span class="ch-num">07</span> The Man She Might Have Married</span></div>
+          <div class="toc-item"><span><span class="ch-num">08</span> The Founders’ Gala</span></div>
+          <div class="toc-item"><span><span class="ch-num">09</span> The Record</span></div>
+          <div class="toc-item"><span><span class="ch-num">10</span> What Elias Wanted</span></div>
+          <div class="toc-item"><span><span class="ch-num">11</span> The Wrong Question</span></div>
+          <div class="toc-item"><span><span class="ch-num">12</span> The Person She Became</span></div>
+          <div class="toc-item"><span><span class="ch-num">13</span> What If I Stay?</span></div>
+          <div class="toc-item"><span><span class="ch-num">14</span> The Woman Who Left Once</span></div>
+          <div class="toc-item"><span><span class="ch-num">15</span> The Other Reason for the Marriage</span></div>
+          <div class="toc-item"><span><span class="ch-num">16</span> The Escape That Wasn’t Planned</span></div>
+          <div class="toc-item"><span><span class="ch-num">17</span> The Letter</span></div>
+          <div class="toc-item"><span><span class="ch-num">18</span> The Mountain</span></div>
+          <div class="toc-item"><span><span class="ch-num">19</span> Another Set of Rules</span></div>
+          <div class="toc-item"><span><span class="ch-num">20</span> Elias Arrives</span></div>
+          <div class="toc-item"><span><span class="ch-num">21</span> Fast Hands</span></div>
+          <div class="toc-item"><span><span class="ch-num">22</span> The Secret Elias Carried</span></div>
+          <div class="toc-item"><span><span class="ch-num">23</span> The Price of Her Freedom</span></div>
+          <div class="toc-item"><span><span class="ch-num">24</span> The People Who Love Her</span></div>
+          <div class="toc-item"><span><span class="ch-num">25</span> The Choice</span></div>
+          <div class="toc-item"><span><span class="ch-num">26</span> Or So She Thought</span></div>
         </div>
 
-        <div class="excerpt-box">
-          <p class="excerpt-text">
-            "Permission was never denied aloud. It was simply delayed through formalities so meticulously polite that refusal took the shape of patience."
-          </p>
-          <span class="excerpt-source">— Chapter XI, The Glass Conservatory</span>
-        </div>
-
-        <div class="excerpt-box">
-          <p class="excerpt-text">
-            "There is no sanctuary like an empty ceremony. When the rites begin, nobody looks at your eyes; they only examine your knees."
-          </p>
-          <span class="excerpt-source">— Chapter XVIII, Cold Rites</span>
+        <div class="chapter-nav-bar">
+          <a href="#contents-anchor">← PREVIOUS</a>
+          <span>·</span>
+          <a href="#contents-anchor">CONTENTS</a>
+          <span>·</span>
+          <a href="#contents-anchor">NEXT →</a>
         </div>
       </div>
     </div>
@@ -796,35 +881,81 @@
   <section id="norwyn" class="content-section section-alt">
     <div class="container">
       <div class="section-header-bar">
-        <div class="section-eyebrow">The Setting & Institutions</div>
+        <div class="section-eyebrow">The World</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">Explore Norwyn</h2>
-      <p class="section-description">The kingdom, court, places, customs, institutions, and history.</p>
-
+      <h2 class="section-title">EXPLORE NORWYN</h2>
+      
       <p class="lead-text">
-        Norwyn is a realm defined by monumental stone, cold sea mists, and the heavy atmosphere of an era poised on the brink of profound institutional transition.
+        Norwyn is a kingdom shaped by inheritance, tradition, hierarchy, and the quiet agreements that allow a society to keep calling its arrangements natural.
+      </p>
+      <p class="sub-lead-text">
+        Most of its rules are not announced. They are learned.<br />
+        This is the world Elizabeth has always known.
       </p>
 
-      <div class="grid-3">
+      <div class="grid-2">
         <div class="card">
-          <h3>The Sunless Spire</h3>
+          <h3>THE KINGDOM</h3>
           <p>
-            The seat of supreme royal protocol. Built from grey quarried granite, its halls are constructed to dampen whispers and magnify the sound of footsteps.
+            Norwyn is more than the palace Elizabeth knows. Its customs, institutions, class divisions, and expectations extend far beyond the royal household, shaping what people consider respectable, possible, necessary, and strange.
           </p>
         </div>
+
         <div class="card">
-          <h3>The Glass Quarter</h3>
+          <h3>THE COURT</h3>
           <p>
-            Where royal decrees, family lineages, and private correspondences are cataloged and quietly edited to preserve the crown’s infallibility.
+            At court, very little is said without consequence. Position determines proximity. Tradition determines behaviour. Information has value, and knowing when to speak can matter as much as knowing what to say.
           </p>
         </div>
+
         <div class="card">
-          <h3>The Outer Verandas</h3>
+          <h3>THE ROYAL HOUSE</h3>
           <p>
-            Perched over the cold coastal waters, these gardens serve as the sole place where courtiers risk speaking without the formal permission of the chamberlain.
+            The royal family lives under obligations that are both public and deeply personal. Marriage, inheritance, reputation, and succession are never entirely private matters.
           </p>
         </div>
+
+        <div class="card">
+          <h3>VALENNE</h3>
+          <p>
+            Valenne is more than the kingdom from which Elizabeth's future husband comes. Its relationship with Norwyn carries political, economic, and personal consequences that extend beyond the marriage itself.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>THE MOUNTAIN</h3>
+          <p>
+            The Mountain is far from the court Elizabeth knows, but distance does not make it a place without rules.<br /><br />
+            Here, too, people have expectations of one another. The difference is that Elizabeth has never learned them.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>RAG</h3>
+          <p>
+            RAG is one of the places where Elizabeth encounters ideas that do not fit comfortably inside the life already prepared for her.
+          </p>
+        </div>
+      </div>
+
+      <!-- CUSTOMS & EXPECTATIONS -->
+      <div class="customs-box">
+        <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 1rem; letter-spacing: 0.04em;">CUSTOMS & EXPECTATIONS</h3>
+        <p style="color: var(--ink-muted); margin-bottom: 1.5rem; font-size: 1.05rem;">
+          Much of Norwyn's power lies in what nobody needs to explain:
+        </p>
+
+        <div class="customs-line">How people dress.</div>
+        <div class="customs-line">How they marry.</div>
+        <div class="customs-line">Who serves whom.</div>
+        <div class="customs-line">What is considered respectable.</div>
+        <div class="customs-line">What is expected of a daughter.</div>
+        <div class="customs-line">What a future is supposed to look like.</div>
+
+        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--ink); margin-top: 1.5rem; pt-2;">
+          "The rules are easiest to follow when they no longer feel like rules."
+        </p>
       </div>
     </div>
   </section>
@@ -836,50 +967,83 @@
         <div class="section-eyebrow">Dramatis Personae</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">Meet the People</h2>
-      <p class="section-description">Elizabeth, Anne, Edward, Elias, Isabel, and the people surrounding them.</p>
+      <h2 class="section-title">MEET THE PEOPLE</h2>
 
       <p class="lead-text">
-        The figures who navigate the quiet corridors of Norwyn, bound together by hierarchy, tactical silence, and survival.
+        Elizabeth's life is shaped by the people around her, but none of them can be reduced to what they want from her.
+      </p>
+      <p class="sub-lead-text">
+        They love her.<br />
+        They need things from her.<br />
+        They protect her.<br />
+        They misunderstand her.<br />
+        Sometimes they do several of these things at once.
       </p>
 
-      <div class="grid-3">
+      <div class="grid-2">
         <div class="card">
-          <h3>Elizabeth</h3>
+          <h3>ELIZABETH</h3>
           <p>
-            Possessing an incisive mind and an unyielding composure. She has learned that in rooms designed to make you kneel, silence is the only autonomous ground left.
+            Elizabeth has spent most of her life knowing what is expected of her.<br /><br />
+            She is a daughter, a royal, a student, and a future bride. She has learned how to read a room, anticipate a response, and make herself appropriate to the circumstances around her.<br /><br />
+            What she has not yet learned is how to recognize what she wants before everyone else has had the opportunity to tell her.
           </p>
         </div>
+
         <div class="card">
-          <h3>Anne</h3>
+          <h3>ANNE</h3>
           <p>
-            Observant and perceptive, Anne recognizes the subterranean shifts in the court long before formal decrees are issued from the dais.
+            Queen Anne is Elizabeth's mother and one of the principal architects of the life prepared for her.<br /><br />
+            She does not believe she is taking Elizabeth's choices away.<br /><br />
+            She believes she is preparing her for a world that will not forgive her for being unprepared.
           </p>
         </div>
+
         <div class="card">
-          <h3>Edward</h3>
+          <h3>EDWARD OF VALENNE</h3>
           <p>
-            A man shaped by generational obligations. His loyalty to the crown is matched only by the exhaustion of maintaining an unbroken exterior.
+            Edward enters Elizabeth's life as the man she is expected to marry.<br /><br />
+            He is intelligent, observant, politically aware, and more difficult to understand than the arrangement between them initially suggests.
           </p>
         </div>
+
         <div class="card">
-          <h3>Elias</h3>
+          <h3>ELIAS</h3>
           <p>
-            Keeper of uncataloged records in the lower archives, Elias understands that paper outlasts sovereign dynasties, provided it is kept dry.
+            Elias is one of the first people to notice the difference between what Elizabeth says and what she has learned to say.<br /><br />
+            He is not her answer.<br /><br />
+            He has a life, loyalties, ambitions, and reasons of his own for being there.
           </p>
         </div>
+
         <div class="card">
-          <h3>Isabel</h3>
+          <h3>ISABEL</h3>
           <p>
-            The custodian of high court etiquette. Isabel enforces royal discipline not through punishment, but by convincing courtiers that dissent is vulgar.
+            Isabel has spent years serving the royal household and understands its rules from a position Elizabeth has rarely had reason to consider.<br /><br />
+            She knows what the palace asks of people.<br /><br />
+            She also knows that people sometimes choose to give it more than it asks.
           </p>
         </div>
+
         <div class="card">
-          <h3>The Council</h3>
+          <h3>MAMA ELENA</h3>
           <p>
-            The faceless collective behind closed double doors whose decisions arrive not with fanfare, but as quiet procedural realities.
+            Far from the world Elizabeth knows, Mama Elena introduces her to another way of living—and another set of expectations.<br /><br />
+            The Mountain does not turn out to be a place without rules.<br /><br />
+            It simply has rules Elizabeth has never learned.
           </p>
         </div>
+      </div>
+
+      <div class="card" style="margin-top: 2rem;">
+        <h3>ROWAN</h3>
+        <p>
+          Rowan's influence reaches Elizabeth through ideas before it reaches her through memory.<br /><br />
+          His work raises a question that becomes increasingly difficult for her to ignore:
+        </p>
+        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; color: var(--ink); margin-top: 0.75rem;">
+          What does a person carry with them when they leave?
+        </p>
       </div>
     </div>
   </section>
@@ -888,34 +1052,82 @@
   <section id="questions" class="content-section section-alt">
     <div class="container">
       <div class="section-header-bar">
-        <div class="section-eyebrow">Philosophical Inquests</div>
+        <div class="section-eyebrow">Inquests</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">The Questions Behind the Story</h2>
-      <p class="section-description">The ideas and questions the novel explores without settling them.</p>
+      <h2 class="section-title">THE QUESTIONS BEHIND THE STORY</h2>
 
-      <div class="grid-2">
-        <div>
-          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.6rem;">Where does duty end and self-erasure begin?</h4>
-          <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.7;">
-            When an individual practices obedience for years to protect their position, at what exact moment does the mask adhere permanently to the skin?
-          </p>
+      <p class="lead-text">
+        <em>Or So She Thought</em> began with questions that were easier to ask than to answer.
+      </p>
+      <p class="sub-lead-text">
+        Some of them changed while the novel was being written.<br />
+        Some became more difficult.<br />
+        None of them disappeared completely.
+      </p>
 
-          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.6rem;">Can silence preserve what it conceals?</h4>
-          <p style="color: var(--ink-muted); line-height: 1.7;">
-            Norwyn treats silence as a civic virtue. But does refusing to name a fracture prevent it from spreading, or simply guarantee that the collapse will be total?
+      <div>
+        <div class="question-block">
+          <h3 class="question-title">HOW DO YOU KNOW WHAT YOU WANT WHEN YOU WERE TAUGHT WHAT TO WANT?</h3>
+          <p class="question-body">
+            A person can be influenced by family, culture, class, circumstance, and expectation without their desires becoming false.<br />
+            So where does influence end and choice begin?
           </p>
         </div>
 
-        <div>
-          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.6rem;">Who pays for an inherited compromise?</h4>
-          <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.7;">
-            The younger courtiers did not draft the treaties that govern their days, yet they must pay the daily tax of composure to honor them.
+        <div class="question-block">
+          <h3 class="question-title">CAN A LIFE CHOSEN FOR YOU BECOME GENUINELY YOURS?</h3>
+          <p class="question-body">
+            We inherit more than possessions.<br />
+            We inherit assumptions about what a good life looks like, what is sensible, what is respectable, and what is possible.<br />
+            Sometimes we eventually choose those things ourselves. Does their history make the choice less real?
           </p>
+        </div>
 
-          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.6rem;">What is the true cost of permission?</h4>
-          <p style="color: var(--ink-muted); line-height: 1.7;">
-            If every action requires sanction from another, can genuine autonomy ever exist, or is all freedom merely a provisional favor?
+        <div class="question-block">
+          <h3 class="question-title">CAN SOMEONE LOVE YOU AND STILL DECIDE TOO MUCH OF YOUR LIFE?</h3>
+          <p class="question-body">
+            Love does not always arrive separately from power.<br />
+            Sometimes the person protecting you is also the person deciding what you need protection from.
+          </p>
+        </div>
+
+        <div class="question-block">
+          <h3 class="question-title">IS LEAVING ALWAYS FREEDOM?</h3>
+          <p class="question-body">
+            Leaving changes what surrounds a person.<br />
+            It does not necessarily change what that person has learned to expect, fear, value, or repeat.
+          </p>
+        </div>
+
+        <div class="question-block">
+          <h3 class="question-title">WHAT DO WE CARRY WITH US WHEN WE LEAVE?</h3>
+          <p class="question-body">
+            A person can cross a border, leave a house, change their clothes, abandon a role—and still bring much of the old world with them.
+          </p>
+        </div>
+
+        <div class="question-block">
+          <h3 class="question-title">CAN RETURNING BE A CHOICE?</h3>
+          <p class="question-body">
+            Sometimes leaving is necessary.<br />
+            Sometimes staying is.<br />
+            Sometimes the harder question is whether returning can ever mean going back freely.
+          </p>
+        </div>
+
+        <div class="question-block">
+          <h3 class="question-title">WHAT HAPPENS WHEN NOBODY HAS TO TELL YOU NO?</h3>
+          <p class="question-body">
+            The deepest rules are sometimes the ones we learn well enough to enforce ourselves.
+          </p>
+        </div>
+
+        <div class="question-block">
+          <h3 class="question-title">WHAT DOES IT MEAN TO CHOOSE WHEN SO MUCH OF YOU WAS FORMED BEFORE YOU COULD CHOOSE?</h3>
+          <p class="question-body">
+            Before a person can decide what they believe, they have already learned what to notice, what to expect, what to fear, and what to call normal.<br />
+            Choice does not begin from nowhere.
           </p>
         </div>
       </div>
@@ -926,42 +1138,77 @@
   <section id="making" class="content-section">
     <div class="container">
       <div class="section-header-bar">
-        <div class="section-eyebrow">Craft & Architecture</div>
+        <div class="section-eyebrow">Craft & Evolution</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">How the Novel Was Made</h2>
-      <p class="section-description">Its origins, development, abandoned ideas, surviving scenes, and the making of Norwyn.</p>
+      <h2 class="section-title">HOW THE NOVEL WAS MADE</h2>
 
-      <div class="lesson-item">
-        <div class="lesson-num">01</div>
-        <div class="lesson-content">
-          <h4>Origins and Development</h4>
-          <p>The manuscript began as a broader study of social currency before sharpening into a focused psychological drama centered on sovereign permission, composure, and royal etiquette.</p>
+      <p class="lead-text">
+        <em>Or So She Thought</em> did not arrive fully formed. It changed as I wrote it.
+      </p>
+      <p class="sub-lead-text">
+        Characters became more complicated. Questions became less convenient. Scenes survived that I expected to cut, while others disappeared after revealing that they belonged to an earlier version of the story.<br />
+        This is a record of some of what changed along the way.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>WHERE IT BEGAN</h3>
+          <p>
+            Every novel has a version of itself that existed before the version the reader eventually sees.<br /><br />
+            <em>Or So She Thought</em> began with a different story, and Elizabeth was not initially the person I thought she would become.<br /><br />
+            Somewhere along the way, her story became more interesting than the story I had originally intended to tell.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>BUILDING NORWYN</h3>
+          <p>
+            Norwyn had to feel like a place that existed before Elizabeth began questioning it.<br /><br />
+            Its traditions could not exist simply to obstruct her. Its people had to have reasons for believing what they believed.<br /><br />
+            A world becomes more convincing when the people inside it do not think of themselves as characters in someone else's conflict.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>BUILDING ELIZABETH</h3>
+          <p>
+            Elizabeth's development was never meant to be a simple movement from obedience to rebellion. The more I understood her, the less satisfying that story became.<br /><br />
+            She could love the life she had been given and still question it. She could leave and still carry it with her. She could return without becoming the same person who had left.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>THE CHARACTERS WHO CHANGED</h3>
+          <p>
+            Characters rarely remain exactly where an author first puts them.<br /><br />
+            Some become more sympathetic. Some become less. Some become harder to judge at all.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>THE SCENES THAT SURVIVED</h3>
+          <p>
+            Some scenes survive because they move the plot forward.<br /><br />
+            Others survive because removing them changes the meaning of everything around them. These are some of the scenes that refused to disappear.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>THE SCENES THAT DIDN'T</h3>
+          <p>
+            Not every scene belongs in the finished novel.<br /><br />
+            Some exist only to teach the writer something the reader never needs to see.
+          </p>
         </div>
       </div>
 
-      <div class="lesson-item">
-        <div class="lesson-num">02</div>
-        <div class="lesson-content">
-          <h4>Abandoned Drafts & Editorial Restraint</h4>
-          <p>Dozens of scenes were pruned away to ensure that tension resided not in loud arguments, but in the quiet spaces between characters who cannot afford to speak freely.</p>
-        </div>
-      </div>
-
-      <div class="lesson-item">
-        <div class="lesson-num">03</div>
-        <div class="lesson-content">
-          <h4>Building the Architecture of Norwyn</h4>
-          <p>The stone corridors, heavy drapes, and sound-absorbing carpets were designed with architectural intention—every physical room mirrors the emotional containment of its inhabitants.</p>
-        </div>
-      </div>
-
-      <div class="lesson-item">
-        <div class="lesson-num">04</div>
-        <div class="lesson-content">
-          <h4>Surviving Scenes</h4>
-          <p>The pivotal conversations—in the cold conservatory, over ceremonial teas, and before the Council's bench—remain the anchor points around which the entire 26 chapters revolve.</p>
-        </div>
+      <div class="card" style="margin-top: 2rem;">
+        <h3>THE TITLE</h3>
+        <p>
+          <em>Or So She Thought</em> became the title because certainty is part of Elizabeth's story.<br /><br />
+          The phrase belongs to the space between what a person believes and what they later discover was incomplete.
+        </p>
       </div>
     </div>
   </section>
@@ -970,28 +1217,68 @@
   <section id="notes" class="content-section section-alt">
     <div class="container">
       <div class="section-header-bar">
-        <div class="section-eyebrow">Dispatches & Fragments</div>
+        <div class="section-eyebrow">Living Archive</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">Notes from the Novel</h2>
-      <p class="section-description">Ongoing writing, discoveries, fragments, and reflections from the making of the book.</p>
+      <h2 class="section-title">NOTES FROM THE NOVEL</h2>
+
+      <p class="lead-text">
+        A living archive from the making of <em>Or So She Thought</em>.
+      </p>
+      <p class="sub-lead-text">
+        Fragments, questions, discoveries, discarded ideas, research, scenes, and occasional notes from the long process of writing a novel.
+      </p>
 
       <div class="grid-2">
-        <div class="card">
-          <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);">Fragment 01</span>
-          <h3 style="margin-top: 0.5rem;">On Writing Composure</h3>
-          <p>
-            Notes on why the most compelling dialogue in fiction happens in what characters deliberately maneuver to avoid saying aloud.
-          </p>
+        <div class="note-entry">
+          <div>
+            <h3>WHERE OR SO SHE THOUGHT REALLY BEGAN</h3>
+            <p>
+              On the story that came before Elizabeth's story, and the moment one character quietly became more interesting than the novel I had originally planned.
+            </p>
+          </div>
+          <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
         </div>
 
-        <div class="card">
-          <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);">Fragment 02</span>
-          <h3 style="margin-top: 0.5rem;">The Architecture of Containment</h3>
+        <div class="note-entry">
+          <div>
+            <h3>THE MENDED BLOUSE</h3>
+            <p>
+              On one of the smallest objects in the novel, and why Elizabeth repairing something badly became more important than I expected.
+            </p>
+          </div>
+          <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
+        </div>
+
+        <div class="note-entry">
+          <div>
+            <h3>WHY ELIAS HAD TO LIVE</h3>
+            <p>
+              On refusing to let tragedy make Elizabeth's choices too easy.
+            </p>
+          </div>
+          <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
+        </div>
+
+        <div class="note-entry">
+          <div>
+            <h3>BUILDING A PALACE NOBODY THINKS IS A PRISON</h3>
+            <p>
+              On writing a world where control can genuinely feel like care to the person doing the controlling.
+            </p>
+          </div>
+          <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
+        </div>
+      </div>
+
+      <div class="note-entry" style="margin-top: 2rem;">
+        <div>
+          <h3>WHAT I DIDN'T UNDERSTAND ABOUT ANNE</h3>
           <p>
-            An exploration of how the physical stone of Norwyn shapes the psychology of the court, making quietness an act of survival.
+            On discovering that making Anne more human did not make her choices less consequential.
           </p>
         </div>
+        <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
       </div>
     </div>
   </section>
@@ -1003,22 +1290,52 @@
         <div class="section-eyebrow">The Author</div>
         <button class="close-section-btn" onclick="closeAllSections()">✕ Close Section</button>
       </div>
-      <h2 class="section-title">About the Author</h2>
-      <p class="section-description">Queen Usman and her work.</p>
+      <h2 class="section-title">ABOUT QUEEN USMAN</h2>
+      <p class="section-description" style="font-size: 1.15rem; color: var(--ink); margin-bottom: 2rem;">
+        A novelist interested in how people become who they are.
+      </p>
 
-      <div class="author-card">
-        <div class="author-portrait-frame">
-          <span style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 600;">Q</span>
-          <span style="font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 0.5rem; color: var(--ink-faint);">Queen Usman</span>
-        </div>
-        <div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.7rem; margin-bottom: 0.75rem;">Queen Usman</h3>
-          <p style="color: var(--ink-muted); margin-bottom: 1rem; line-height: 1.8;">
-            Queen Usman is an author, writer, and creator dedicated to psychological precision, calm intentionality, and structured storytelling. Her writing explores authority, self-possession, and the intricate social rituals that govern human life.
+      <div class="author-frame">
+        <div style="flex: 1;">
+          <p class="lead-text" style="font-size: 1.15rem; margin-bottom: 1.5rem;">
+            Queen Usman writes fiction about the things that shape people before they fully understand they are being shaped—family, desire, expectation, relationships, power, circumstance, and repetition.
+          </p>
+          <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.8;">
+            Her current novel, <em>Or So She Thought</em>, is a psychological novel set in 1990s Norwyn. It follows Elizabeth, a young woman whose future has been carefully prepared for her, and the increasingly difficult question of how much of that future she has actually chosen.
           </p>
           <p style="color: var(--ink-muted); line-height: 1.8;">
-            Through <em>Or So She Thought</em> and the world of Norwyn, she examines the quiet friction between sovereign duty and individual will, charting what happens to an autonomous mind in rooms designed to demand silence.
+            Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people become who they are.
           </p>
+
+          <!-- Current Novel Banner -->
+          <div class="card" style="margin-top: 3rem; background: var(--bg-ivory);">
+            <div class="section-eyebrow" style="margin-bottom: 0.5rem;">CURRENT NOVEL</div>
+            <h3 style="margin-bottom: 0.4rem;">OR SO SHE THOUGHT</h3>
+            <p style="margin-bottom: 1.2rem;">
+              A 1990s Royal Psychological Novel of Duty, Doubt, and Choice
+            </p>
+            <a href="#novel" onclick="openSection('novel')" class="read-link">ENTER THE NOVEL →</a>
+          </div>
+
+          <!-- Elsewhere & Contact Links -->
+          <div class="grid-2" style="margin-top: 2rem;">
+            <div class="card">
+              <div class="section-eyebrow" style="margin-bottom: 0.5rem;">ELSEWHERE</div>
+              <p>Essays, notes, and other writing by Queen Usman.</p>
+              <div style="margin-top: 1rem; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <a href="#notes" onclick="openSection('notes')" style="text-decoration: underline;">Writing Dispatches &rarr;</a>
+                <a href="#novel" onclick="openSection('novel')" style="text-decoration: underline;">Manuscript Folios &rarr;</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="section-eyebrow" style="margin-bottom: 0.5rem;">CONTACT</div>
+              <p>For literary, rights, interview, or professional inquiries:</p>
+              <div style="margin-top: 1rem; font-size: 0.95rem; font-family: var(--font-serif); color: var(--ink);">
+                contact@queenusman.com
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
