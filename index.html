@@ -47,6 +47,7 @@
       overflow-x: hidden;
       background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
       background-size: 24px 24px;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -64,7 +65,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(251, 249, 244, 0.94);
+      background: rgba(251, 249, 244, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       padding: 1.1rem 2rem;
@@ -121,9 +122,10 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* 3D Hardcover Book */
+    /* --- CRYSTAL CLEAR 3D HARDCOVER WITH SMOOTH MOTION --- */
     .book-stage {
-      perspective: 1200px;
+      perspective: 1400px;
+      perspective-origin: 50% 50%;
       margin-bottom: 2.5rem;
       display: flex;
       justify-content: center;
@@ -131,14 +133,15 @@
     }
 
     .book-cover {
-      width: 250px;
-      height: 380px;
+      width: 270px;
+      height: 410px;
       border-radius: 4px 12px 12px 4px;
       position: relative;
       cursor: pointer;
       background: #1b1713;
       overflow: hidden;
-      transform: rotateY(-14deg) rotateX(4deg);
+      transform: rotateY(-14deg) rotateX(4deg) translate3d(0,0,0);
+      -webkit-transform: rotateY(-14deg) rotateX(4deg) translate3d(0,0,0);
       transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
       box-shadow:
         -10px 14px 30px rgba(0, 0, 0, 0.22),
@@ -146,15 +149,19 @@
         3px 0 5px rgba(255, 255, 255, 0.15) inset;
       transform-style: preserve-3d;
       -webkit-transform-style: preserve-3d;
+      will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
 
     .book-cover:hover,
     .book-cover:active {
-      transform: rotateY(0deg) rotateX(0deg) translateY(-8px);
+      transform: rotateY(0deg) rotateX(0deg) translateY(-8px) translate3d(0,0,0);
+      -webkit-transform: rotateY(0deg) rotateX(0deg) translateY(-8px) translate3d(0,0,0);
       box-shadow: 0 24px 44px rgba(31, 27, 22, 0.28);
     }
 
-    /* Sharp Image Mounting */
+    /* Crystal Clear High-Definition Image Rendering */
     .book-img {
       width: 100%;
       height: 100%;
@@ -162,36 +169,21 @@
       display: block;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: high-quality;
+      transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
     }
 
-    /* Spine Crease Line */
+    /* Crisp, Ultra-Clean Spine Hinge (Doesn't cover your artwork) */
     .book-spine-crease {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 14px;
       width: 2px;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 1px 0 2px rgba(0, 0, 0, 0.5);
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    /* Soft Sheen Lighting */
-    .book-sheen {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        125deg,
-        rgba(255, 255, 255, 0.18) 0%,
-        rgba(255, 255, 255, 0.03) 40%,
-        rgba(0, 0, 0, 0.04) 65%,
-        rgba(0, 0, 0, 0.25) 100%
-      );
+      background: rgba(255, 255, 255, 0.18);
+      box-shadow: 1px 0 2px rgba(0, 0, 0, 0.45);
       pointer-events: none;
       z-index: 10;
     }
@@ -504,15 +496,20 @@
     </nav>
   </header>
 
-  <!-- Hero Section with Book Cover and Motto -->
+  <!-- Hero Section with Crystal Clear Book Cover and Motto -->
   <section class="hero">
     
-    <!-- 3D Hardcover with Smooth CSS Tilt -->
+    <!-- 3D Hardcover with High-Definition Rendering -->
     <div class="book-stage">
       <div class="book-cover" onclick="this.classList.toggle('active')">
-        <img src="cover.jpg" alt="Or So She Thought Book Cover" class="book-img" />
+        <img 
+          src="cover.jpg" 
+          alt="Or So She Thought Book Cover" 
+          class="book-img"
+          loading="eager"
+          decoding="sync" 
+        />
         <div class="book-spine-crease"></div>
-        <div class="book-sheen"></div>
       </div>
     </div>
 
