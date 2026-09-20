@@ -20,6 +20,7 @@
       --ink-faint: #8a8377;
       --border: #e6dfd1;
       --border-dark: #2b2620;
+      --btn-brown: #4a382a;
       --gold-subtle: #bda376;
       --shadow: 0 16px 36px -12px rgba(31, 27, 22, 0.08);
       --font-serif: "Cormorant Garamond", Georgia, serif;
@@ -56,10 +57,6 @@
       transition: opacity 0.2s ease;
     }
 
-    a:hover {
-      opacity: 0.75;
-    }
-
     /* Top Sticky Navigation Bar */
     .nav {
       position: sticky;
@@ -68,80 +65,171 @@
       background: rgba(251, 249, 244, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 1.1rem 2rem;
+      padding: 0.9rem 2rem;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.85rem;
     }
 
     .nav-brand {
       font-family: var(--font-serif);
-      font-size: 1.25rem;
-      letter-spacing: 0.22em;
+      font-size: 1.35rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       font-weight: 700;
       cursor: pointer;
     }
 
-    .nav-links {
+    /* Circular Hamburger Menu Button (Matches Screenshot) */
+    .circle-menu-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background-color: var(--btn-brown);
+      border: none;
+      cursor: pointer;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      column-gap: 1.2rem;
-      row-gap: 0.5rem;
-      font-size: 0.73rem;
-      letter-spacing: 0.14em;
+      justify-content: center;
+      gap: 4px;
+      box-shadow: 0 4px 12px rgba(46, 35, 26, 0.18);
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .circle-menu-btn:hover {
+      transform: scale(1.06);
+      background-color: #38291d;
+    }
+
+    .circle-menu-btn .bar {
+      width: 18px;
+      height: 2.2px;
+      background-color: #ffffff;
+      border-radius: 2px;
+    }
+
+    /* Slide-out Menu Overlay & Drawer */
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(31, 27, 22, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .menu-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .menu-drawer {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 100%;
+      max-width: 380px;
+      height: 100vh;
+      background: var(--bg-cream);
+      border-left: 1px solid var(--border);
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      padding: 2.5rem 2rem 3rem;
+      transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+
+    .menu-drawer.open {
+      right: 0;
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .drawer-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 700;
     }
 
-    .nav-dot {
-      color: var(--border-dark);
-      opacity: 0.35;
-      font-size: 0.8rem;
-      user-select: none;
+    .drawer-close-btn {
+      background: none;
+      border: 1px solid var(--border);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--ink);
+      transition: all 0.2s ease;
     }
 
-    .nav-link-btn {
+    .drawer-close-btn:hover {
+      background: var(--ink);
+      color: var(--bg-cream);
+      border-color: var(--ink);
+    }
+
+    .drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .drawer-link-btn {
       background: none;
       border: none;
-      font-family: inherit;
-      font-size: inherit;
-      letter-spacing: inherit;
-      text-transform: inherit;
+      text-align: left;
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--ink);
       cursor: pointer;
-      padding: 0.25rem 0;
-      border-bottom: 1.5px solid transparent;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(217, 210, 197, 0.4);
       transition: all 0.2s ease;
-      white-space: nowrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .nav-link-btn:hover {
-      color: #000;
-      border-bottom-color: var(--border);
+    .drawer-link-btn:hover {
+      color: var(--gold-subtle);
+      padding-left: 6px;
     }
 
-    .nav-link-btn.active-nav {
-      color: #000;
-      font-weight: 600;
-      border-bottom-color: var(--ink);
+    .drawer-link-arrow {
+      font-size: 0.95rem;
+      opacity: 0.4;
+      font-family: var(--font-sans);
     }
 
-    @media (max-width: 768px) {
-      .nav {
-        padding: 0.9rem 1rem;
-        gap: 0.6rem;
-      }
-      .nav-dot {
-        display: none;
-      }
-      .nav-links {
-        gap: 0.65rem 1rem;
-        font-size: 0.68rem;
-      }
+    .drawer-footer {
+      margin-top: auto;
+      padding-top: 2rem;
+      font-size: 0.75rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
     }
 
     /* Container Layout */
@@ -418,7 +506,7 @@
       color: var(--ink-faint);
     }
 
-    /* Making / Lessons List */
+    /* Making List */
     .lesson-item {
       padding: 1.6rem 0;
       border-bottom: 1px solid var(--border);
@@ -582,22 +670,64 @@
     <div class="nav-brand" onclick="closeAllSections(); window.scrollTo({top: 0, behavior: 'smooth'});">
       Or So She Thought
     </div>
-    <nav class="nav-links">
-      <button class="nav-link-btn" onclick="openSection('novel')">READ THE NOVEL</button>
-      <span class="nav-dot">·</span>
-      <button class="nav-link-btn" onclick="openSection('norwyn')">EXPLORE NORWYN</button>
-      <span class="nav-dot">·</span>
-      <button class="nav-link-btn" onclick="openSection('people')">MEET THE PEOPLE</button>
-      <span class="nav-dot">·</span>
-      <button class="nav-link-btn" onclick="openSection('questions')">THE QUESTIONS BEHIND THE STORY</button>
-      <span class="nav-dot">·</span>
-      <button class="nav-link-btn" onclick="openSection('making')">HOW THE NOVEL WAS MADE</button>
-      <span class="nav-dot">·</span>
-      <button class="nav-link-btn" onclick="openSection('notes')">NOTES FROM THE NOVEL</button>
-      <span class="nav-dot">·</span>
-      <button class="nav-link-btn" onclick="openSection('about')">ABOUT THE AUTHOR</button>
-    </nav>
+
+    <!-- The Circular Hamburger Menu Button (Matches Screenshot) -->
+    <button class="circle-menu-btn" onclick="toggleMenu(true)" aria-label="Open Navigation Menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
   </header>
+
+  <!-- Slide-Out Navigation Drawer -->
+  <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu(false)"></div>
+  <aside id="menu-drawer" class="menu-drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">Navigation</div>
+      <button class="drawer-close-btn" onclick="toggleMenu(false)" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="drawer-links">
+      <button class="drawer-link-btn" onclick="openSectionFromMenu('novel')">
+        <span>READ THE NOVEL</span>
+        <span class="drawer-link-arrow">→</span>
+      </button>
+
+      <button class="drawer-link-btn" onclick="openSectionFromMenu('norwyn')">
+        <span>EXPLORE NORWYN</span>
+        <span class="drawer-link-arrow">→</span>
+      </button>
+
+      <button class="drawer-link-btn" onclick="openSectionFromMenu('people')">
+        <span>MEET THE PEOPLE</span>
+        <span class="drawer-link-arrow">→</span>
+      </button>
+
+      <button class="drawer-link-btn" onclick="openSectionFromMenu('questions')">
+        <span>THE QUESTIONS BEHIND THE STORY</span>
+        <span class="drawer-link-arrow">→</span>
+      </button>
+
+      <button class="drawer-link-btn" onclick="openSectionFromMenu('making')">
+        <span>HOW THE NOVEL WAS MADE</span>
+        <span class="drawer-link-arrow">→</span>
+      </button>
+
+      <button class="drawer-link-btn" onclick="openSectionFromMenu('notes')">
+        <span>NOTES FROM THE NOVEL</span>
+        <span class="drawer-link-arrow">→</span>
+      </button>
+
+      <button class="drawer-link-btn" onclick="openSectionFromMenu('about')">
+        <span>ABOUT THE AUTHOR</span>
+        <span class="drawer-link-arrow">→</span>
+      </button>
+    </div>
+
+    <div class="drawer-footer">
+      Queen Usman &bull; 2026
+    </div>
+  </aside>
 
   <!-- Hero Section with Clickable Crystal Clear Cover -->
   <section class="hero">
@@ -928,48 +1058,54 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT FOR INTERACTIVE SECTIONS -->
+  <!-- JAVASCRIPT: DRAWER MENU & INTERACTIVE SECTIONS -->
   <script>
+    function toggleMenu(open) {
+      const drawer = document.getElementById('menu-drawer');
+      const overlay = document.getElementById('menu-overlay');
+      if (open) {
+        drawer.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      } else {
+        drawer.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function openSectionFromMenu(sectionId) {
+      toggleMenu(false);
+      openSection(sectionId);
+    }
+
     function openSection(sectionId) {
       // 1. Hide all content sections
       const sections = document.querySelectorAll('.content-section');
       sections.forEach(sec => sec.classList.remove('active-section'));
 
-      // 2. Remove active state from nav buttons
-      const navButtons = document.querySelectorAll('.nav-link-btn');
-      navButtons.forEach(btn => btn.classList.remove('active-nav'));
-
-      // 3. Reveal chosen section
+      // 2. Reveal chosen section
       const targetSection = document.getElementById(sectionId);
       if (targetSection) {
         targetSection.classList.add('active-section');
 
-        // 4. Highlight matching nav button
-        navButtons.forEach(btn => {
-          if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(sectionId)) {
-            btn.classList.add('active-nav');
-          }
-        });
-
-        // 5. Smooth scroll down to the revealed section
+        // 3. Smooth scroll down to the revealed section
         setTimeout(() => {
           targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 50);
+        }, 100);
       }
     }
 
     function closeAllSections() {
-      // Hide all content sections
       const sections = document.querySelectorAll('.content-section');
       sections.forEach(sec => sec.classList.remove('active-section'));
-
-      // Remove active states from nav
-      const navButtons = document.querySelectorAll('.nav-link-btn');
-      navButtons.forEach(btn => btn.classList.remove('active-nav'));
-
-      // Scroll smoothly back up to the book
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Close menu with ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') toggleMenu(false);
+    });
   </script>
 
 </body>
