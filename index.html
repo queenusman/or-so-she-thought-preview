@@ -396,25 +396,31 @@
       line-height: 1.7;
     }
 
-    /* Location Card with Image Frame */
+    /* Minimalist Location Card — Pure Image & Title */
     .location-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 1.4rem;
+      padding: 0.85rem;
       border-radius: 4px;
       box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .location-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px -10px rgba(31, 27, 22, 0.14);
     }
 
     .location-img-wrap {
       width: 100%;
-      height: 180px;
+      height: 200px;
       background: var(--bg-ivory);
       border: 1px solid var(--border);
       border-radius: 2px;
       overflow: hidden;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.85rem;
       position: relative;
     }
 
@@ -429,16 +435,13 @@
 
     .location-card h3 {
       font-family: var(--font-serif);
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
+      font-size: 1.12rem;
+      margin-bottom: 0.2rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-
-    .location-card p {
-      font-size: 0.93rem;
-      color: var(--ink-muted);
-      line-height: 1.7;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--ink);
     }
 
     /* Archive Units Styling */
@@ -939,7 +942,7 @@
         </div>
       </div>
 
-      <!-- UNIT 02 — MAP OF NORWYN & LOCATION CARDS WITH IMAGES -->
+      <!-- UNIT 02 — MAP OF NORWYN & LOCATION CARDS WITH IMAGES ONLY (NO EXPLANATIONS) -->
       <div class="archive-unit">
         <span class="archive-unit-tag">Unit 02 &bull; Cartography</span>
         <h3 class="archive-unit-title">02 — MAP OF NORWYN</h3>
@@ -960,7 +963,7 @@
           </div>
         </div>
 
-        <!-- 6 Location Cards with Image Containers -->
+        <!-- 6 Location Cards — Pure Images & Names -->
         <div class="grid-3">
           
           <!-- 1. THE PALACE -->
@@ -975,7 +978,6 @@
               />
             </div>
             <h3>THE PALACE</h3>
-            <p>The official residence of the royal family and the place where Elizabeth spent most of her life.</p>
           </div>
 
           <!-- 2. THE CAPITAL -->
@@ -990,7 +992,6 @@
               />
             </div>
             <h3>THE CAPITAL</h3>
-            <p>The center of government, commerce, education, legal benches, and structured public life.</p>
           </div>
 
           <!-- 3. RAG -->
@@ -999,13 +1000,12 @@
               <img 
                 src="rag.jpg" 
                 onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='rag.jpg.jpg';}" 
-                alt="RAG" 
+                alt="RAG [Royal Academy of Governance]" 
                 class="location-img" 
                 loading="lazy"
               />
             </div>
-            <h3>RAG</h3>
-            <p>An important institution in Elizabeth's world, harboring ideas outside royal expectations.</p>
+            <h3>RAG [ROYAL ACADEMY OF GOVERNANCE]</h3>
           </div>
 
           <!-- 4. VALENNE -->
@@ -1020,7 +1020,6 @@
               />
             </div>
             <h3>VALENNE</h3>
-            <p>The neighboring kingdom whose diplomatic relationship with Norwyn extends beyond geography.</p>
           </div>
 
           <!-- 5. THE WORKSHOP -->
@@ -1035,10 +1034,9 @@
               />
             </div>
             <h3>THE WORKSHOP</h3>
-            <p>A quiet place connected to Elias and his family, smelling of timber, iron, and independent labor.</p>
           </div>
 
-          <!-- 6. THE MOUNTAIN REGION (Directly loads mountain.jpg with fallback) -->
+          <!-- 6. THE MOUNTAIN REGION -->
           <div class="location-card">
             <div class="location-img-wrap">
               <img 
@@ -1050,7 +1048,6 @@
               />
             </div>
             <h3>THE MOUNTAIN REGION</h3>
-            <p>A different Norwyn, governed by colder winds, communal work, and distinct expectations.</p>
           </div>
 
         </div>
