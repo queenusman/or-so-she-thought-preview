@@ -396,80 +396,128 @@
       line-height: 1.7;
     }
 
-    /* Table of Contents Grid */
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.8rem 2rem;
-      margin: 2.5rem 0;
+    /* Archive Units Styling */
+    .archive-unit {
+      margin-top: 5rem;
+      padding-top: 3.5rem;
       border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 0;
     }
 
-    @media (max-width: 680px) {
-      .toc-grid {
-        grid-template-columns: 1fr;
-      }
+    .archive-unit-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-subtle);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
     }
 
-    .toc-item {
+    .archive-unit-title {
       font-family: var(--font-serif);
-      font-size: 1.05rem;
-      color: var(--ink);
-      padding: 0.35rem 0;
-      border-bottom: 1px dashed rgba(217, 210, 197, 0.5);
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .toc-item span.ch-num {
-      color: var(--ink-faint);
-      font-family: var(--font-sans);
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      margin-right: 0.75rem;
-    }
-
-    .chapter-nav-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      font-size: 2rem;
       font-weight: 600;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.02em;
+    }
+
+    .archive-unit-sub {
+      font-family: var(--font-serif);
+      font-style: italic;
       color: var(--ink-muted);
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
     }
 
-    .chapter-nav-bar a:hover {
+    /* Ledger & Comparison Tables */
+    .ledger-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    .ledger-table th, .ledger-table td {
+      padding: 1rem 1.4rem;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .ledger-table th {
+      background: var(--bg-ivory);
+      font-family: var(--font-serif);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      font-size: 0.82rem;
+    }
+
+    /* Primary Document Cards */
+    .document-card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--border-dark);
+      padding: 2.2rem;
+      margin-bottom: 1.5rem;
+      font-family: var(--font-serif);
+    }
+
+    .document-meta {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.75rem;
+    }
+
+    .document-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
       color: var(--ink);
     }
 
-    .begin-reading-btn {
-      display: inline-block;
-      padding: 0.9rem 2.2rem;
-      background: var(--ink);
-      color: var(--bg-cream);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 600;
-      border-radius: 2px;
-      margin: 1.5rem 0 2rem;
-      border: 1px solid var(--ink);
-      transition: all 0.2s ease;
+    .document-excerpt {
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--ink-muted);
     }
 
-    .begin-reading-btn:hover {
-      background: #383129;
-      color: #ffffff;
-      opacity: 1;
+    /* Timeline Stepper */
+    .timeline-chain {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      border-left: 2px solid var(--border);
+      padding-left: 1.8rem;
+    }
+
+    .timeline-node h4 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-node p {
+      font-size: 0.93rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+
+    /* Map Placeholder Block */
+    .map-presentation-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 2.5rem 0;
+      border-radius: 4px;
     }
 
     /* Questions Blocks */
@@ -497,22 +545,6 @@
       color: var(--ink-muted);
       line-height: 1.8;
       max-width: 800px;
-    }
-
-    /* Customs Box */
-    .customs-box {
-      background: var(--surface);
-      border-left: 3px solid var(--ink);
-      padding: 2.5rem 2.2rem;
-      margin-top: 2rem;
-      box-shadow: var(--shadow);
-    }
-
-    .customs-line {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      color: var(--ink);
-      padding: 0.4rem 0;
     }
 
     /* Notes / Dispatches */
@@ -689,7 +721,6 @@
 
   <!-- Hero Section with Clickable Crystal Clear Cover -->
   <section class="hero">
-    
     <div class="book-stage">
       <div class="book-cover" onclick="openSection('novel')" title="Click to Read the Novel">
         <img 
@@ -703,12 +734,10 @@
       </div>
     </div>
 
-    <!-- Motto Section -->
     <div class="motto-wrapper">
       <p class="motto">"She was never forbidden to choose. She was simply taught what the right choice looked like."</p>
       <p class="motto-sub">A psychological novel of duty, doubt, and choice</p>
     </div>
-
   </section>
 
   <!-- ==================== CONTENT SECTIONS ==================== -->
@@ -726,42 +755,42 @@
       </p>
 
       <div>
-        <a href="#contents-anchor" class="begin-reading-btn">BEGIN READING</a>
+        <a href="#contents-anchor" class="begin-reading-btn" style="display:inline-block; padding:0.9rem 2.2rem; background:var(--ink); color:var(--bg-cream); font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; border-radius:2px; margin:1.5rem 0 2rem;">BEGIN READING</a>
       </div>
 
       <div id="contents-anchor" style="margin-top: 3rem;">
         <div class="section-eyebrow" style="letter-spacing: 0.28em;">CONTENTS</div>
         
-        <div class="toc-grid">
-          <div class="toc-item"><span><span class="ch-num">01</span> The Life She Is Supposed to Want</span></div>
-          <div class="toc-item"><span><span class="ch-num">02</span> Edward of Valenne</span></div>
-          <div class="toc-item"><span><span class="ch-num">03</span> The Girl Who Corrects Herself</span></div>
-          <div class="toc-item"><span><span class="ch-num">04</span> The Book</span></div>
-          <div class="toc-item"><span><span class="ch-num">05</span> The Mended Blouse</span></div>
-          <div class="toc-item"><span><span class="ch-num">06</span> The Woman Who Knows Before You Speak</span></div>
-          <div class="toc-item"><span><span class="ch-num">07</span> The Man She Might Have Married</span></div>
-          <div class="toc-item"><span><span class="ch-num">08</span> The Founders’ Gala</span></div>
-          <div class="toc-item"><span><span class="ch-num">09</span> The Record</span></div>
-          <div class="toc-item"><span><span class="ch-num">10</span> What Elias Wanted</span></div>
-          <div class="toc-item"><span><span class="ch-num">11</span> The Wrong Question</span></div>
-          <div class="toc-item"><span><span class="ch-num">12</span> The Person She Became</span></div>
-          <div class="toc-item"><span><span class="ch-num">13</span> What If I Stay?</span></div>
-          <div class="toc-item"><span><span class="ch-num">14</span> The Woman Who Left Once</span></div>
-          <div class="toc-item"><span><span class="ch-num">15</span> The Other Reason for the Marriage</span></div>
-          <div class="toc-item"><span><span class="ch-num">16</span> The Escape That Wasn’t Planned</span></div>
-          <div class="toc-item"><span><span class="ch-num">17</span> The Letter</span></div>
-          <div class="toc-item"><span><span class="ch-num">18</span> The Mountain</span></div>
-          <div class="toc-item"><span><span class="ch-num">19</span> Another Set of Rules</span></div>
-          <div class="toc-item"><span><span class="ch-num">20</span> Elias Arrives</span></div>
-          <div class="toc-item"><span><span class="ch-num">21</span> Fast Hands</span></div>
-          <div class="toc-item"><span><span class="ch-num">22</span> The Secret Elias Carried</span></div>
-          <div class="toc-item"><span><span class="ch-num">23</span> The Price of Her Freedom</span></div>
-          <div class="toc-item"><span><span class="ch-num">24</span> The People Who Love Her</span></div>
-          <div class="toc-item"><span><span class="ch-num">25</span> The Choice</span></div>
-          <div class="toc-item"><span><span class="ch-num">26</span> Or So She Thought</span></div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0.8rem 2rem; margin:2.5rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:2.5rem 0;">
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">01</span> The Life She Is Supposed to Want</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">02</span> Edward of Valenne</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">03</span> The Girl Who Corrects Herself</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">04</span> The Book</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">05</span> The Mended Blouse</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">06</span> The Woman Who Knows Before You Speak</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">07</span> The Man She Might Have Married</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">08</span> The Founders’ Gala</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">09</span> The Record</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">10</span> What Elias Wanted</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">11</span> The Wrong Question</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">12</span> The Person She Became</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">13</span> What If I Stay?</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">14</span> The Woman Who Left Once</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">15</span> The Other Reason for the Marriage</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">16</span> The Escape That Wasn’t Planned</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">17</span> The Letter</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">18</span> The Mountain</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">19</span> Another Set of Rules</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">20</span> Elias Arrives</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">21</span> Fast Hands</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">22</span> The Secret Elias Carried</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">23</span> The Price of Her Freedom</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">24</span> The People Who Love Her</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">25</span> The Choice</div>
+          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">26</span> Or So She Thought</div>
         </div>
 
-        <div class="chapter-nav-bar">
+        <div style="display:flex; justify-content:center; gap:2rem; font-size:0.82rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; color:var(--ink-muted); margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border);">
           <a href="#contents-anchor">← PREVIOUS</a>
           <span>·</span>
           <a href="#contents-anchor">CONTENTS</a>
@@ -772,85 +801,711 @@
     </div>
   </section>
 
-  <!-- 2. EXPLORE THE KINGDOM OF NORWYN -->
+  <!-- 2. EXPLORE THE KINGDOM OF NORWYN (IMMERSIVE WORLD ARCHIVE) -->
   <section id="norwyn" class="content-section section-alt">
     <div class="container">
+      
+      <!-- ARCHIVE HEADER & ATMOSPHERE -->
       <div class="section-header-bar">
-        <div class="section-eyebrow">The World</div>
+        <span class="section-eyebrow">The World Archive</span>
       </div>
       <h2 class="section-title">EXPLORE THE KINGDOM OF NORWYN</h2>
-      
-      <p class="lead-text">
-        Norwyn is a kingdom shaped by inheritance, tradition, hierarchy, and the quiet agreements that allow a society to keep calling its arrangements natural.
-      </p>
-      <p class="sub-lead-text">
-        Most of its rules are not announced. They are learned.<br />
-        This is the world Elizabeth has always known.
+      <p class="lead-text" style="font-size: 1.35rem; margin-bottom: 1rem;">
+        A kingdom shaped by inheritance, tradition, wealth, and the people who have learned how to live within them.
       </p>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>THE KINGDOM</h3>
-          <p>
-            Norwyn is more than the palace Elizabeth knows. Its customs, institutions, class divisions, and expectations extend far beyond the royal household, shaping what people consider respectable, possible, necessary, and strange.
-          </p>
+      <div class="card" style="margin: 2.5rem 0; background: var(--surface); border-left: 3px solid var(--ink);">
+        <p style="font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; line-height: 1.8; color: var(--ink); margin-bottom: 1.2rem;">
+          "Norwyn is a kingdom with a long memory. Its traditions reach into ordinary life. Its institutions carry the weight of generations. Its wealth is visible in some places and carefully hidden in others."
+        </p>
+        <p style="color: var(--ink-muted); line-height: 1.8;">
+          For Elizabeth, Norwyn is not simply the country she lives in. It is the world that taught her what a life was supposed to look like.
+        </p>
+        <div style="margin-top: 1.5rem; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; color: var(--ink);">
+          ENTER NORWYN &darr;
+        </div>
+      </div>
+
+      <!-- UNIT 01 — THE KINGDOM -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 01 &bull; Geography & Realm</span>
+        <h3 class="archive-unit-title">01 — THE KINGDOM</h3>
+        <p class="archive-unit-sub">A Kingdom With a History</p>
+        
+        <p class="sub-lead-text">
+          Before entering Elizabeth's story, begin with the world itself. Norwyn is a constitutional kingdom whose modern identity has been shaped by an old monarchy, inherited wealth, regional differences, and a complicated relationship between tradition and modern life.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>THE CAPITAL</h3>
+            <p>The political and social center of Norwyn. Built along stone quays, where commerce, civil service, and dynastic institutions converge.</p>
+          </div>
+          <div class="card">
+            <h3>THE PALACE</h3>
+            <p>The seat of the royal family and the center of ceremonial life. A compound designed to make authority feel natural and uninterrupted.</p>
+          </div>
+          <div class="card">
+            <h3>VALENNE</h3>
+            <p>A neighboring kingdom with significant economic and political ties to Norwyn, bound by treaties that predate Elizabeth's birth.</p>
+          </div>
+          <div class="card">
+            <h3>THE MOUNTAINS</h3>
+            <p>A remote region where geography has preserved ways of life that feel increasingly distant from the protocols of the capital.</p>
+          </div>
+          <div class="card">
+            <h3>THE GOVERNMENT</h3>
+            <p>The civil institutions, administrative benches, and ministers responsible for governing Norwyn alongside the Crown.</p>
+          </div>
+          <div class="card">
+            <h3>THE ROYAL FAMILY</h3>
+            <p>An institution whose private decisions, marriages, and personal doubts can carry public and national consequences.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>THE COURT</h3>
-          <p>
-            At court, very little is said without consequence. Position determines proximity. Tradition determines behaviour. Information has value, and knowing when to speak can matter as much as knowing what to say.
-          </p>
+        <div style="margin-top: 2.5rem; padding: 1.8rem; background: var(--bg-cream); border: 1px solid var(--border); border-radius: 4px;">
+          <span class="section-eyebrow" style="margin-bottom: 0.8rem; display: block;">NORWYN AT A GLANCE</span>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; font-size: 0.88rem; color: var(--ink-muted);">
+            <div>&bull; Capital & Harbor District</div>
+            <div>&bull; Royal Residence Compound</div>
+            <div>&bull; Northern Mountain Provinces</div>
+            <div>&bull; Frontier Border with Valenne</div>
+            <div>&bull; Rail Arteries & Royal Roads</div>
+            <div>&bull; Aristocratic Country Estates</div>
+            <div>&bull; Manufacturing & Trade Centers</div>
+            <div>&bull; Regional Market Towns</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 02 — MAP OF NORWYN -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 02 &bull; Cartography</span>
+        <h3 class="archive-unit-title">02 — MAP OF NORWYN</h3>
+        <p class="archive-unit-sub">Find Your Way Around the Kingdom</p>
+
+        <div class="map-presentation-frame">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem;">Cartographic Survey of Norwyn</div>
+          <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-muted); margin-bottom: 1.5rem;">1994 Royal Survey Bureau Edition</p>
+          <div style="max-width: 500px; margin: 0 auto; padding: 2rem; border: 1px dashed var(--border); font-size: 0.9rem; color: var(--ink-faint);">
+            [Illustrated Territorial Map &bull; Selected Major Centers Visible]
+          </div>
         </div>
 
-        <div class="card">
-          <h3>THE ROYAL HOUSE</h3>
-          <p>
-            The royal family lives under obligations that are both public and deeply personal. Marriage, inheritance, reputation, and succession are never entirely private matters.
-          </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>THE PALACE</h3>
+            <p>The official residence of the royal family and the place where Elizabeth spent most of her life.</p>
+          </div>
+          <div class="card">
+            <h3>THE CAPITAL</h3>
+            <p>The center of government, commerce, education, legal benches, and structured public life.</p>
+          </div>
+          <div class="card">
+            <h3>RAG</h3>
+            <p>An important institution in Elizabeth's world, harboring ideas outside royal expectations.</p>
+          </div>
+          <div class="card">
+            <h3>VALENNE</h3>
+            <p>The neighboring kingdom whose diplomatic relationship with Norwyn extends beyond geography.</p>
+          </div>
+          <div class="card">
+            <h3>THE WORKSHOP</h3>
+            <p>A quiet place connected to Elias and his family, smelling of timber, iron, and independent labor.</p>
+          </div>
+          <div class="card">
+            <h3>THE MOUNTAIN REGION</h3>
+            <p>A different Norwyn, governed by colder winds, communal work, and distinct expectations.</p>
+          </div>
+        </div>
+        <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-faint); margin-top: 1.5rem; text-align: center;">
+          *Certain border territories and mountain paths remain deliberately unmapped until the narrative reveals them.
+        </p>
+      </div>
+
+      <!-- UNIT 03 — THE ROYAL PALACE -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 03 &bull; Architecture of Protocol</span>
+        <h3 class="archive-unit-title">03 — THE ROYAL PALACE</h3>
+        <p class="archive-unit-sub">The World Elizabeth Learned First</p>
+
+        <p class="lead-text">
+          The palace is not simply where Elizabeth lives. It is the first system she learns.
+        </p>
+        <p class="sub-lead-text">
+          The palace is where Elizabeth learned what was expected of her long before anyone thought to explain why.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>THE LIBRARY</h3>
+            <p>Books, education, private thought, and the ideas Elizabeth encounters beyond the official ceremonies around her.</p>
+          </div>
+          <div class="card">
+            <h3>THE ROYAL GARDENS</h3>
+            <p>A place removed from ceremony, where steps slow and conversations can risk becoming less formal.</p>
+          </div>
+          <div class="card">
+            <h3>THE DINING ROOM</h3>
+            <p>Etiquette, seating hierarchy, family rituals, and everything that can be communicated across a table without being spoken.</p>
+          </div>
+          <div class="card">
+            <h3>THE PRIVATE WING</h3>
+            <p>The quiet distance between the royal family the public imagines and the family Elizabeth actually lives with.</p>
+          </div>
+          <div class="card">
+            <h3>THE SERVANTS' QUARTERS</h3>
+            <p>The palace seen from a completely different position within its hierarchy: early mornings, laundry steam, and unwritten patience.</p>
+          </div>
+          <div class="card">
+            <h3>THE ROYAL CHAPEL</h3>
+            <p>Religion, ceremony, family burials, and the solemn rituals that sanctify the Crown’s permanence.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 04 — LIFE IN NORWYN -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 04 &bull; Society</span>
+        <h3 class="archive-unit-title">04 — LIFE IN NORWYN</h3>
+        <p class="archive-unit-sub">How People Live</p>
+
+        <p class="sub-lead-text">
+          Norwyn is not one experience. A royal household, an aristocratic estate, a city apartment, a village home, and a workshop can all exist within the same kingdom while producing very different understandings of what life is supposed to be.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>THE ROYAL FAMILY</h3>
+            <p>Public duty, private surveillance, arranged education, protocol, ceremonial appearances, and the permanent scrutiny of reputation.</p>
+          </div>
+          <div class="card">
+            <h3>THE ARISTOCRACY</h3>
+            <p>Land holdings, inherited titles, country seats, elite academies, marital alliances, and subtle social influence.</p>
+          </div>
+          <div class="card">
+            <h3>THE MIDDLE CLASS</h3>
+            <p>Civil servants, solicitors, merchants, academics, clinic doctors, and administrative business owners.</p>
+          </div>
+          <div class="card">
+            <h3>WORKING LIFE</h3>
+            <p>Craftspeople, estate servants, agricultural tenants, factory machinists, and independent workshop owners.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>VALENNE</h3>
-          <p>
-            Valenne is more than the kingdom from which Elizabeth's future husband comes. Its relationship with Norwyn carries political, economic, and personal consequences that extend beyond the marriage itself.
-          </p>
+        <div class="card" style="margin-top: 2rem;">
+          <h3>RURAL NORWYN</h3>
+          <p>Communities further from the capital, where weather, season, manual work, and oral tradition shape everyday life far more than royal gazettes.</p>
+        </div>
+      </div>
+
+      <!-- UNIT 05 — THE CROWN -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 05 &bull; The Institution</span>
+        <h3 class="archive-unit-title">05 — THE CROWN</h3>
+        <p class="archive-unit-sub">The Institution Behind the Family</p>
+
+        <div class="grid-3" style="margin-bottom: 2.5rem;">
+          <div class="card">
+            <h3>SUCCESSION</h3>
+            <p>Strict constitutional lineage establishing who inherits the Crown and how authority is handed across generations.</p>
+          </div>
+          <div class="card">
+            <h3>ROYAL RESPONSIBILITY</h3>
+            <p>What members of the family are required to embody before the public, regardless of private inclination.</p>
+          </div>
+          <div class="card">
+            <h3>MARRIAGE</h3>
+            <p>Why royal unions carry diplomatic, economic, and institutional significance that overshadows romance.</p>
+          </div>
+          <div class="card">
+            <h3>PUBLIC LIFE</h3>
+            <p>State openings, galas, patronages, diplomacy, and ceremonial appearances before the cameras.</p>
+          </div>
+          <div class="card">
+            <h3>ROYAL CHILDREN</h3>
+            <p>What is expected of sons and daughters born into the dynasty from their earliest formative years.</p>
+          </div>
+          <div class="card">
+            <h3>REFUSING THE ROLE</h3>
+            <p>What happens when a member of the royal family does not want the life prepared for them.</p>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>THE MOUNTAIN</h3>
-          <p>
-            The Mountain is far from the court Elizabeth knows, but distance does not make it a place without rules.<br /><br />
-            Here, too, people have expectations of one another. The difference is that Elizabeth has never learned them.
-          </p>
+        <!-- Archival Documents -->
+        <div class="document-card">
+          <div class="document-meta">Constitutional Archive &bull; Excerpt</div>
+          <div class="document-title">The Norwyn Succession Act (1882, as amended)</div>
+          <div class="document-excerpt">
+            &sect; 4(b): &ldquo;Any union entered into without the formal assent of the Sovereign in Council shall forfeit all claim to the Crown, titles of state, and rights of domicile within the royal properties.&rdquo;
+          </div>
         </div>
 
-        <div class="card">
-          <h3>RAG</h3>
+        <div class="document-card">
+          <div class="document-meta">Palace Office Confidential Protocol &bull; 1994</div>
+          <div class="document-title">Royal Household Protocol &mdash; Section VII: The Princess Royal</div>
+          <div class="document-excerpt">
+            &ldquo;Public correspondence shall pass through the Private Secretary's desk. Private engagements, including travel beyond the capital county, require seventy-two hours notice to the Chamberlain.&rdquo;
+          </div>
+        </div>
+
+        <div class="document-card">
+          <div class="document-meta">Palace Office &bull; Circular 12</div>
+          <div class="document-title">Guidelines for Royal Marriages (Norwyn & Valenne Accord)</div>
+          <div class="document-excerpt">
+            &ldquo;The betrothal represents a reaffirmation of the Valenne Border Agreements. Public announcements shall coincide with the bilateral opening of Parliament.&rdquo;
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 06 — A SHORT HISTORY OF NORWYN -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 06 &bull; Chronology</span>
+        <h3 class="archive-unit-title">06 — A SHORT HISTORY OF NORWYN</h3>
+        <p class="archive-unit-sub">What Came Before Elizabeth</p>
+
+        <div class="timeline-chain">
+          <div class="timeline-node">
+            <h4>THE FOUNDING</h4>
+            <p>The consolidation of the coastal fjord tribes and the establishment of the sovereign realm.</p>
+          </div>
+          <div class="timeline-node">
+            <h4>THE FIRST DYNASTY</h4>
+            <p>The beginnings of the royal house and the early construction of the stone palace along the harbor.</p>
+          </div>
+          <div class="timeline-node">
+            <h4>THE SUCCESSION CRISIS</h4>
+            <p>A contested inheritance that altered the Crown and forced the monarchy to sign covenants with the civil parliament.</p>
+          </div>
+          <div class="timeline-node">
+            <h4>THE MODERNIZATION PERIOD</h4>
+            <p>The arrival of rail, postal networks, electricity, and the uneasy transition between older aristocratic power and industrial wealth.</p>
+          </div>
+          <div class="timeline-node">
+            <h4>THE VALENNE AGREEMENTS</h4>
+            <p>The formal treaties establishing trade borders, mutual defense, and diplomatic marriages with Valenne.</p>
+          </div>
+          <div class="timeline-node">
+            <h4>THE PRESENT MONARCHY</h4>
+            <p>The quiet, decorous court presided over by Queen Anne—the world Elizabeth was born into.</p>
+          </div>
+          <div class="timeline-node">
+            <h4>NORWYN IN THE 1990s</h4>
+            <p>The kingdom as it exists during the novel: caught between inherited silence and modern scrutiny.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <span class="section-eyebrow" style="margin-bottom: 0.5rem; display: block;">WHAT HISTORY LEFT BEHIND</span>
           <p>
-            RAG is one of the places where Elizabeth encounters ideas that do not fit comfortably inside the life already prepared for her.
+            How history still dictates modern Norwyn: in who owns land, how marriages are calculated, how infrastructure favors the capital over the mountains, and what families still expect of their daughters.
           </p>
         </div>
       </div>
 
-      <!-- CUSTOMS & EXPECTATIONS -->
-      <div class="customs-box">
-        <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 1rem; letter-spacing: 0.04em;">CUSTOMS & EXPECTATIONS</h3>
-        <p style="color: var(--ink-muted); margin-bottom: 1.5rem; font-size: 1.05rem;">
-          Much of Norwyn's power lies in what nobody needs to explain:
+      <!-- UNIT 07 — NORWYN IN THE 1990s -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 07 &bull; Period & Atmosphere</span>
+        <h3 class="archive-unit-title">07 — NORWYN IN THE 1990s</h3>
+        <p class="archive-unit-sub">The World Elizabeth Lives In</p>
+
+        <p class="sub-lead-text">
+          The 1990s is not simply a date printed on the cover. It is everywhere: in the technology, the speed of information, and the tactile texture of daily life.
         </p>
 
-        <div class="customs-line">How people dress.</div>
-        <div class="customs-line">How they marry.</div>
-        <div class="customs-line">Who serves whom.</div>
-        <div class="customs-line">What is considered respectable.</div>
-        <div class="customs-line">What is expected of a daughter.</div>
-        <div class="customs-line">What a future is supposed to look like.</div>
-
-        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--ink); margin-top: 1.5rem;">
-          "The rules are easiest to follow when they no longer feel like rules."
-        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>TECHNOLOGY</h3>
+            <p>Boxy computer terminals in government basements, bulky television sets, landline telephones with coiled cords, and analog radios.</p>
+          </div>
+          <div class="card">
+            <h3>COMMUNICATION</h3>
+            <p>Handwritten letters on crested paper, crackling international phone calls, morning broadsheets, and mechanical fax machines.</p>
+          </div>
+          <div class="card">
+            <h3>TRANSPORTATION</h3>
+            <p>Black official sedans, regional diesel trains, gravel country roads, and sparse bus lines servicing the high mountain passes.</p>
+          </div>
+          <div class="card">
+            <h3>NEWS</h3>
+            <p>Evening broadcasts, print gossip columns, foreign press clippings, and the slow, deliberate leaking of royal engagements.</p>
+          </div>
+          <div class="card">
+            <h3>MONEY</h3>
+            <p>Crisp banknotes, bank books stamped in ink, locked desk drawers, and wealth counted in estates rather than digital numbers.</p>
+          </div>
+          <div class="card">
+            <h3>DOMESTIC LIFE</h3>
+            <p>Linen presses, silver polish, kitchen tea kettles on constant boil, and formal routine measured by grandfather clocks.</p>
+          </div>
+        </div>
       </div>
+
+      <!-- UNIT 08 — CUSTOMS & TRADITIONS -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 08 &bull; Behavioral Code</span>
+        <h3 class="archive-unit-title">08 — CUSTOMS & TRADITIONS</h3>
+        <p class="archive-unit-sub">What Norwyn Expects</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>ROYAL INTRODUCTIONS</h3>
+            <p>How people address members of the royal house; when to lower your eyes, when to speak, and when to wait for acknowledgment.</p>
+          </div>
+          <div class="card">
+            <h3>FORMAL DINNERS</h3>
+            <p>Seating arrangements decided days in advance. Who speaks first over soup. What opinions are considered vulgar to air in company.</p>
+          </div>
+          <div class="card">
+            <h3>ENGAGEMENTS</h3>
+            <p>A private proposal that immediately becomes an affair of state, accompanied by press photocalls and formal diplomatic dispatches.</p>
+          </div>
+          <div class="card">
+            <h3>GREETINGS</h3>
+            <p>The subtle handshakes, nods, and pauses that instantly communicate class, familiarity, and distance.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); text-align: center;">
+          <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.3rem; color: var(--ink);">
+            &ldquo;Norwyn does not need to state its rules aloud. Elizabeth knows exactly when to stand.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <!-- UNIT 09 — FOOD, CLOTHING & EVERYDAY NORWYN -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 09 &bull; Material Culture</span>
+        <h3 class="archive-unit-title">09 — FOOD, CLOTHING & EVERYDAY NORWYN</h3>
+        <p class="archive-unit-sub">What Norwyn Looks Like Up Close</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>A NORWYN BREAKFAST</h3>
+            <p>Porridge, tea served from silver pots, toast in racks, cold butter, and morning newspapers folded beside the plate.</p>
+          </div>
+          <div class="card">
+            <h3>A VILLAGE KITCHEN</h3>
+            <p>Heavy iron pans, root vegetables stored in dark bins, bread baked twice a week, and chipped ceramic cups.</p>
+          </div>
+          <div class="card">
+            <h3>ROYAL FORMALWEAR</h3>
+            <p>Tailored wool coats, silk scarves, modest pearls, and structured evening dresses chosen for dignity over fashion.</p>
+          </div>
+          <div class="card">
+            <h3>SCHOOL UNIFORMS</h3>
+            <p>Pleated skirts, stiff blazers, embroidered pocket crests, and polished black shoes that establish pedigree before words are spoken.</p>
+          </div>
+          <div class="card">
+            <h3>WORK CLOTHES</h3>
+            <p>Canvas aprons in Elias’s workshop, heavy wool sweaters in the mountain chill, and starched shirts for civil servants.</p>
+          </div>
+          <div class="card">
+            <h3>THE HOUSE</h3>
+            <p>Mahogany credenzas, sound-muffling wool carpets, ticking hallway clocks, and heavy draperies keeping out the harbor gale.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 10 — ECONOMY & CLASS -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 10 &bull; Structure of Wealth</span>
+        <h3 class="archive-unit-title">10 — ECONOMY & CLASS</h3>
+        <p class="archive-unit-sub">Who Has What?</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>THE CROWN & ARISTOCRACY</h3>
+            <p>Inherited forestry, tenant farmland, historic palatial freeholds, trust investments, and ceremonial state endowments.</p>
+          </div>
+          <div class="card">
+            <h3>BUSINESS OWNERS & PROFESSIONALS</h3>
+            <p>Commercial shipping, hardware foundries, regional banks, legal firms, university chairs, and medical practices.</p>
+          </div>
+          <div class="card">
+            <h3>WORKING LIFE</h3>
+            <p>Wages paid weekly, workshop journeymen, domestic staff, dockhands, and transport workers whose labor underwrites the capital.</p>
+          </div>
+          <div class="card">
+            <h3>RURAL ECONOMIES</h3>
+            <p>Farming cooperatives, timber mills, seasonal shearing, and barter networks that operate outside the bank books.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; text-align: center; border-left: 2px solid var(--border-dark); background: var(--bg-cream);">
+          <p style="font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; color: var(--ink);">
+            The same decision does not carry the same consequences for everyone.
+          </p>
+        </div>
+      </div>
+
+      <!-- UNIT 11 — NORWYN & VALENNE -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 11 &bull; Bilateral Relations</span>
+        <h3 class="archive-unit-title">11 — NORWYN & VALENNE</h3>
+        <p class="archive-unit-sub">Two Kingdoms</p>
+
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>The Kingdom of Norwyn</th>
+              <th>The Kingdom of Valenne</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Political Order</strong></td>
+              <td>Constitutional Monarchy with ancient palace council</td>
+              <td>Centralized royal court with aggressive industrial expansion</td>
+            </tr>
+            <tr>
+              <td><strong>Economic Foundation</strong></td>
+              <td>Inherited land, shipping routes, maritime trade</td>
+              <td>Steel manufacturing, mineral extraction, modern banking</td>
+            </tr>
+            <tr>
+              <td><strong>Royal Household</strong></td>
+              <td>Austere, restrained, obsessed with procedural decorum</td>
+              <td>Politically dynamic, ambitious, commercially engaged</td>
+            </tr>
+            <tr>
+              <td><strong>The Accord</strong></td>
+              <td colspan="2">The dynastic marriage between Elizabeth and Edward is designed to prevent economic severance.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card">
+          <h3>THE AGREEMENT</h3>
+          <p>
+            Why do these two realms matter to one another? Valenne provides the industrial capital and raw coal Norwyn requires, while Norwyn commands the deepwater ports and royal legitimacy Valenne craves. A marriage between Edward and Elizabeth is not a romance; it is a financial treaty that neither court can afford to dismantle.
+          </p>
+        </div>
+      </div>
+
+      <!-- UNIT 12 — THE MOUNTAIN REGION -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 12 &bull; The North</span>
+        <h3 class="archive-unit-title">12 — THE MOUNTAIN REGION</h3>
+        <p class="archive-unit-sub">A Different Norwyn</p>
+
+        <p class="sub-lead-text">
+          The mountains are not a romantic paradise of freedom. They are another Norwyn, defined by their own rigorous social agreements, communal obligations, and ancient survivals.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>GEOGRAPHY</h3>
+            <p>Granite shelves, cold rushing rivers, pine ridges, and winter roads that can remain blocked by ice for weeks.</p>
+          </div>
+          <div class="card">
+            <h3>COMMUNITY & WORK</h3>
+            <p>Work is shared because survival demands it: woodcutting, roof repairs, garden harvests, and mutual watching.</p>
+          </div>
+          <div class="card">
+            <h3>LOCAL AUTHORITY</h3>
+            <p>The Queen's magistrates rarely ascend the pass. Authority rests with elders like Mama Elena, whose respect is earned through decades of memory.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 1.5rem;">
+          <span class="section-eyebrow" style="margin-bottom: 0.5rem; display: block;">THE RULES THAT EXIST HERE</span>
+          <p>
+            Elizabeth does not leave a world of expectations and enter a world without them. She enters another set of demands entirely—demands that ask who you are when you have no title to shield you.
+          </p>
+        </div>
+      </div>
+
+      <!-- UNIT 13 — THE NORWYN ARCHIVE -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 13 &bull; Primary Sources</span>
+        <h3 class="archive-unit-title">13 — THE NORWYN ARCHIVE</h3>
+        <p class="archive-unit-sub">Documents From a Kingdom That Existed Before the Story</p>
+
+        <div class="document-card">
+          <div class="document-meta">The Norwyn Herald &bull; Front Page &bull; March 14, 1994</div>
+          <div class="document-title">ROYAL BETROTHAL ANNOUNCED: PRINCESS ELIZABETH TO WED PRINCE EDWARD OF VALENNE</div>
+          <div class="document-excerpt">
+            &ldquo;The Palace Office confirmed this morning that the Princess Royal has accepted the suit of Prince Edward. Celebrations are expected in both capitals following the conclusion of the spring parliamentary session...&rdquo;
+          </div>
+          <div style="margin-top: 1rem;"><a href="#novel" class="read-link" onclick="openSection('novel')">READ ARTICLE &rarr;</a></div>
+        </div>
+
+        <div class="document-card">
+          <div class="document-meta">Private Ledger &bull; Undated</div>
+          <div class="document-title">Workshop Accounts &bull; Timber and Joinery Orders</div>
+          <div class="document-excerpt">
+            &ldquo;Repairs completed on three library cabinets. Balance outstanding: forty crowns. Payment delayed pending review by the Comptroller's assistant.&rdquo;
+          </div>
+        </div>
+
+        <div class="document-card">
+          <div class="document-meta">Institutional Circular &bull; RAG Committee</div>
+          <div class="document-title">Pamphlet Distribution &bull; Autumn Discussion Series</div>
+          <div class="document-excerpt">
+            &ldquo;Topic: The Myth of Natural Duty in Modern Governance. All attendees are advised not to leave notes or signed lists behind.&rdquo;
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 14 — PLACES IN THE NOVEL -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 14 &bull; Gazetteer</span>
+        <h3 class="archive-unit-title">14 — PLACES IN THE NOVEL</h3>
+        <p class="archive-unit-sub">Places of Norwyn</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>THE ROYAL PALACE</h3>
+            <p><strong>First Appearance:</strong> Chapter 01<br /><strong>Key Figures:</strong> Elizabeth, Queen Anne, Isabel<br /><strong>Significance:</strong> The stone labyrinth of duty Elizabeth was conditioned to accept as natural.</p>
+          </div>
+          <div class="card">
+            <h3>RAG</h3>
+            <p><strong>First Appearance:</strong> Chapter 04<br /><strong>Key Figures:</strong> Elizabeth, Rowan<br /><strong>Significance:</strong> The intellectual threshold where questions first become words.</p>
+          </div>
+          <div class="card">
+            <h3>VALENNE</h3>
+            <p><strong>First Appearance:</strong> Chapter 02<br /><strong>Key Figures:</strong> Edward of Valenne<br /><strong>Significance:</strong> The destination prepared for Elizabeth long before she was old enough to refuse.</p>
+          </div>
+          <div class="card">
+            <h3>THE WORKSHOP</h3>
+            <p><strong>First Appearance:</strong> Chapter 10<br /><strong>Key Figures:</strong> Elias<br /><strong>Significance:</strong> A world governed by hands, tools, and things that can be honestly broken and repaired.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 1.5rem;">
+          <h3>THE MOUNTAIN VILLAGE</h3>
+          <p><strong>First Appearance:</strong> Chapter 18<br /><strong>Key Figures:</strong> Mama Elena, Elizabeth<br /><strong>Significance:</strong> Where Elizabeth discovers what remains of herself when etiquette is stripped away.</p>
+        </div>
+      </div>
+
+      <!-- UNIT 15 — A DAY IN NORWYN -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 15 &bull; Comparative Routine</span>
+        <h3 class="archive-unit-title">15 — A DAY IN NORWYN</h3>
+        <p class="archive-unit-sub">24 Hours in the Kingdom</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <span class="section-eyebrow" style="display:block; margin-bottom:0.75rem;">A DAY IN THE PALACE</span>
+            <p style="font-size:0.9rem; line-height:1.7;">
+              <strong>6:00 AM:</strong> Staff unlatch back gates; stoves stoked.<br />
+              <strong>8:00 AM:</strong> Queen Anne reviews morning correspondence.<br />
+              <strong>12:00 PM:</strong> Formal reception in the long gallery.<br />
+              <strong>6:00 PM:</strong> Dressing bells ring for evening dinner.<br />
+              <strong>9:30 PM:</strong> Guard rounds; heavy oak doors bolted.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="section-eyebrow" style="display:block; margin-bottom:0.75rem;">A DAY IN THE CAPITAL</span>
+            <p style="font-size:0.9rem; line-height:1.7;">
+              <strong>7:00 AM:</strong> Trams clatter down cobblestones.<br />
+              <strong>10:00 AM:</strong> Government offices open to public petitioners.<br />
+              <strong>1:00 PM:</strong> Market stalls busy around the harbor.<br />
+              <strong>5:30 PM:</strong> Offices empty; pubs and tea shops fill.<br />
+              <strong>11:00 PM:</strong> Streetlights flicker down the avenue.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="section-eyebrow" style="display:block; margin-bottom:0.75rem;">A DAY IN THE MOUNTAINS</span>
+            <p style="font-size:0.9rem; line-height:1.7;">
+              <strong>5:00 AM:</strong> Goats milked in cold dawn mist.<br />
+              <strong>8:00 AM:</strong> Men ascend timber ridges; women light community ovens.<br />
+              <strong>12:00 PM:</strong> Bread and soup shared at the stone bench.<br />
+              <strong>5:00 PM:</strong> Wood hauled before mountain temperature drops.<br />
+              <strong>8:00 PM:</strong> Stoves banked; pitch darkness falls outside.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 16 — NORWYN THROUGH ELIZABETH'S EYES -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 16 &bull; Psychology</span>
+        <h3 class="archive-unit-title">16 — NORWYN THROUGH ELIZABETH'S EYES</h3>
+        <p class="archive-unit-sub">The World She Knows</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>WHAT SHE NOTICES</h3>
+            <p>The tightening of her mother’s jaw before a word is spoken. The tiny tear in a servant's sleeve that shouldn't be there. The exact order in which dignitaries step into the room.</p>
+          </div>
+          <div class="card">
+            <h3>WHAT SHE DOES NOT NOTICE</h3>
+            <p>That nobody in the palace ever asks her what she would prefer to study, wear, or say—because asking would imply that her preference mattered.</p>
+          </div>
+          <div class="card">
+            <h3>WHAT SHE ASSUMES IS NORMAL</h3>
+            <p>That marriage is an arrangement negotiated between older people who understand finance, and that fear before a public event is simply the price of having bloodline.</p>
+          </div>
+          <div class="card">
+            <h3>WHAT BECOMES STRANGE</h3>
+            <p>The sound of laughter in a mountain kitchen where nobody looks at the door when someone enters. The realization that permission was never a law—it was a habit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 17 — THE NORWYN GALLERY -->
+      <div class="archive-unit">
+        <span class="archive-unit-tag">Unit 17 &bull; Visual Culture</span>
+        <h3 class="archive-unit-title">17 — THE NORWYN GALLERY</h3>
+        <p class="archive-unit-sub">A Visual Archive</p>
+
+        <div class="grid-3">
+          <div class="card" style="text-align: center; padding: 2.5rem 1.5rem;">
+            <span class="section-eyebrow">Catalogue 01</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0.5rem 0;">Palace Architecture</h4>
+            <p style="font-size: 0.85rem;">Carved limestone cornices, high multipaned sash windows, and grey slate roofs overlooking the cold fjord.</p>
+          </div>
+
+          <div class="card" style="text-align: center; padding: 2.5rem 1.5rem;">
+            <span class="section-eyebrow">Catalogue 02</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0.5rem 0;">Objects of Court</h4>
+            <p style="font-size: 0.85rem;">Engraved tea services, leather-bound registries, ceremonial signet rings, and crest-embossed wax seals.</p>
+          </div>
+
+          <div class="card" style="text-align: center; padding: 2.5rem 1.5rem;">
+            <span class="section-eyebrow">Catalogue 03</span>
+            <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin: 0.5rem 0;">Mountain Scenery</h4>
+            <p style="font-size: 0.85rem;">Glacial granite scree, timber-built cottages, stone stone dry-walls, and winter fog rolling down the pass.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UNIT 18 — AFTER THE NOVEL -->
+      <div class="archive-unit" style="border-bottom: none;">
+        <span class="archive-unit-tag">Unit 18 &bull; Sealed Archive</span>
+        <h3 class="archive-unit-title">18 — AFTER THE NOVEL</h3>
+        <p class="archive-unit-sub">Norwyn Beyond the Story</p>
+
+        <div class="card" style="background: var(--surface-subtle); border: 1px dashed var(--border-dark); text-align: center; padding: 3rem 2rem;">
+          <span class="section-eyebrow" style="letter-spacing: 0.22em; color: var(--ink);">SPOILERS BEYOND THIS POINT</span>
+          <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--ink-muted); margin: 1rem auto; max-width: 550px;">
+            Deep historical context, character connections, and documents that only disclose their full meaning after the final chapter has been read.
+          </p>
+          <div style="font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink-faint); margin-top: 1.5rem;">
+            [SEALED UNTIL PUBLICATION &bull; CHAPTER 26 COMPLETE]
+          </div>
+        </div>
+      </div>
+
+      <!-- ARCHIVE CODA & TRANSITION TO MEET THE PEOPLE -->
+      <div style="margin-top: 5rem; padding-top: 3.5rem; border-top: 1px solid var(--border); text-align: center;">
+        <span class="section-eyebrow" style="letter-spacing: 0.25em;">NORWYN IS MORE THAN A SETTING</span>
+        <p class="lead-text" style="max-width: 650px; margin: 1.5rem auto 2.5rem;">
+          Elizabeth has spent most of her life inside one version of Norwyn.<br />
+          Leaving does not mean leaving Norwyn behind.<br />
+          She carries parts of it with her.
+        </p>
+
+        <button onclick="openSection('people')" style="background: none; border: 1px solid var(--border-dark); padding: 0.85rem 2rem; font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink); cursor: pointer; border-radius: 999px; transition: all 0.2s ease;">
+          MEET THE PEOPLE OF NORWYN &rarr;
+        </button>
+      </div>
+
     </div>
   </section>
 
@@ -1019,7 +1674,7 @@
     </div>
   </section>
 
-  <!-- 5. BEYOND THE NOVEL (Questions & Notes Archive) -->
+  <!-- 5. BEYOND THE NOVEL -->
   <section id="beyond" class="content-section">
     <div class="container">
       <div class="section-header-bar">
