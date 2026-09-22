@@ -1023,7 +1023,7 @@
             <p>The neighboring kingdom whose diplomatic relationship with Norwyn extends beyond geography.</p>
           </div>
 
-          <!-- 5. THE WORKSHOP (Directly loads workshop.jpg with fallback) -->
+          <!-- 5. THE WORKSHOP -->
           <div class="location-card">
             <div class="location-img-wrap">
               <img 
@@ -1038,12 +1038,12 @@
             <p>A quiet place connected to Elias and his family, smelling of timber, iron, and independent labor.</p>
           </div>
 
-          <!-- 6. THE MOUNTAIN REGION -->
+          <!-- 6. THE MOUNTAIN REGION (Directly loads mountain.jpg with fallback) -->
           <div class="location-card">
             <div class="location-img-wrap">
               <img 
                 src="mountain.jpg" 
-                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='mountain.jpg.jpg';}else{this.style.display='none';}" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='mountain.jpg.jpg';}" 
                 alt="The Mountain Region" 
                 class="location-img" 
                 loading="lazy"
