@@ -396,6 +396,51 @@
       line-height: 1.7;
     }
 
+    /* Location Card with Image Frame */
+    .location-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.4rem;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .location-img-wrap {
+      width: 100%;
+      height: 180px;
+      background: var(--bg-ivory);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    .location-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: high-quality;
+    }
+
+    .location-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .location-card p {
+      font-size: 0.93rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+
     /* Archive Units Styling */
     .archive-unit {
       margin-top: 5rem;
@@ -894,7 +939,7 @@
         </div>
       </div>
 
-      <!-- UNIT 02 — MAP OF NORWYN (LOADS map.jpg.jpg) -->
+      <!-- UNIT 02 — MAP OF NORWYN & LOCATION CARDS WITH IMAGES -->
       <div class="archive-unit">
         <span class="archive-unit-tag">Unit 02 &bull; Cartography</span>
         <h3 class="archive-unit-title">02 — MAP OF NORWYN</h3>
@@ -904,10 +949,10 @@
           <div style="font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem;">Cartographic Survey of Norwyn</div>
           <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-muted); margin-bottom: 2rem;">1994 Royal Survey Bureau Edition</p>
           
-          <!-- Responsive Map Image Container pointing to map.jpg.jpg -->
           <div style="max-width: 820px; margin: 0 auto; overflow: hidden; border-radius: 4px; box-shadow: var(--shadow); border: 1px solid var(--border);">
             <img 
               src="map.jpg.jpg" 
+              onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='map.jpg';}"
               alt="Territorial Map of the Kingdom of Norwyn" 
               style="width: 100%; height: auto; display: block; image-rendering: -webkit-optimize-contrast; image-rendering: high-quality;"
               loading="lazy"
@@ -915,33 +960,102 @@
           </div>
         </div>
 
+        <!-- 6 Location Cards with Image Containers -->
         <div class="grid-3">
-          <div class="card">
+          
+          <!-- 1. THE PALACE (Directly points to palace.jpg.jpg) -->
+          <div class="location-card">
+            <div class="location-img-wrap">
+              <img 
+                src="palace.jpg.jpg" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='palace.jpg';}" 
+                alt="The Palace" 
+                class="location-img" 
+                loading="lazy"
+              />
+            </div>
             <h3>THE PALACE</h3>
             <p>The official residence of the royal family and the place where Elizabeth spent most of her life.</p>
           </div>
-          <div class="card">
+
+          <!-- 2. THE CAPITAL -->
+          <div class="location-card">
+            <div class="location-img-wrap">
+              <img 
+                src="capital.jpg.jpg" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='capital.jpg';}else{this.style.display='none';}" 
+                alt="The Capital" 
+                class="location-img" 
+                loading="lazy"
+              />
+            </div>
             <h3>THE CAPITAL</h3>
             <p>The center of government, commerce, education, legal benches, and structured public life.</p>
           </div>
-          <div class="card">
+
+          <!-- 3. RAG -->
+          <div class="location-card">
+            <div class="location-img-wrap">
+              <img 
+                src="rag.jpg.jpg" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='rag.jpg';}else{this.style.display='none';}" 
+                alt="RAG" 
+                class="location-img" 
+                loading="lazy"
+              />
+            </div>
             <h3>RAG</h3>
             <p>An important institution in Elizabeth's world, harboring ideas outside royal expectations.</p>
           </div>
-          <div class="card">
+
+          <!-- 4. VALENNE -->
+          <div class="location-card">
+            <div class="location-img-wrap">
+              <img 
+                src="valenne.jpg.jpg" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='valenne.jpg';}else{this.style.display='none';}" 
+                alt="Valenne" 
+                class="location-img" 
+                loading="lazy"
+              />
+            </div>
             <h3>VALENNE</h3>
             <p>The neighboring kingdom whose diplomatic relationship with Norwyn extends beyond geography.</p>
           </div>
-          <div class="card">
+
+          <!-- 5. THE WORKSHOP -->
+          <div class="location-card">
+            <div class="location-img-wrap">
+              <img 
+                src="workshop.jpg.jpg" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='workshop.jpg';}else{this.style.display='none';}" 
+                alt="The Workshop" 
+                class="location-img" 
+                loading="lazy"
+              />
+            </div>
             <h3>THE WORKSHOP</h3>
             <p>A quiet place connected to Elias and his family, smelling of timber, iron, and independent labor.</p>
           </div>
-          <div class="card">
+
+          <!-- 6. THE MOUNTAIN REGION -->
+          <div class="location-card">
+            <div class="location-img-wrap">
+              <img 
+                src="mountain.jpg.jpg" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='mountain.jpg';}else{this.style.display='none';}" 
+                alt="The Mountain Region" 
+                class="location-img" 
+                loading="lazy"
+              />
+            </div>
             <h3>THE MOUNTAIN REGION</h3>
             <p>A different Norwyn, governed by colder winds, communal work, and distinct expectations.</p>
           </div>
+
         </div>
-        <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-faint); margin-top: 1.5rem; text-align: center;">
+
+        <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-faint); margin-top: 1.8rem; text-align: center;">
           *Certain border territories and mountain paths remain deliberately unmapped until the narrative reveals them.
         </p>
       </div>
