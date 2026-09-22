@@ -993,12 +993,12 @@
             <p>The center of government, commerce, education, legal benches, and structured public life.</p>
           </div>
 
-          <!-- 3. RAG -->
+          <!-- 3. RAG (Directly loads rag.jpg with fallback) -->
           <div class="location-card">
             <div class="location-img-wrap">
               <img 
                 src="rag.jpg" 
-                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='rag.jpg.jpg';}else{this.style.display='none';}" 
+                onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='rag.jpg.jpg';}" 
                 alt="RAG" 
                 class="location-img" 
                 loading="lazy"
@@ -1008,7 +1008,7 @@
             <p>An important institution in Elizabeth's world, harboring ideas outside royal expectations.</p>
           </div>
 
-          <!-- 4. VALENNE (Points directly to valenne.jpg) -->
+          <!-- 4. VALENNE -->
           <div class="location-card">
             <div class="location-img-wrap">
               <img 
