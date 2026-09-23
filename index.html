@@ -396,9 +396,18 @@
       line-height: 1.7;
     }
 
-    /* =========================================================
-       EXPANDABLE ARCHIVE BOXES ("More" to read more)
-       ========================================================= */
+    /* Map Presentation Frame */
+    .map-presentation-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      margin: 2.5rem 0 1.5rem;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Expandable Archive Boxes */
     .archive-category-block {
       margin-top: 5rem;
       padding-top: 3.5rem;
@@ -505,26 +514,6 @@
 
     .read-more-toggle:hover {
       color: var(--gold-subtle);
-    }
-
-    /* Thumbnail Wrapper for Established Place Cards */
-    .box-thumb-wrap {
-      width: 100%;
-      height: 180px;
-      background: var(--bg-ivory);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-bottom: 1.25rem;
-    }
-
-    .box-thumb-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: high-quality;
     }
 
     /* Subscription Box */
@@ -766,6 +755,31 @@
         </p>
         <p style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--ink);">
           Elizabeth has spent most of her life inside one version of Norwyn. The further she moves through it, the more she begins to notice how many versions there are.
+        </p>
+      </div>
+
+      <!-- CARTOGRAPHY / MAP OF NORWYN (PRESERVED AS CENTERPIECE) -->
+      <div class="archive-category-block" style="margin-top: 2rem; padding-top: 1rem; border-top: none;">
+        <div class="section-eyebrow" style="letter-spacing: 0.24em; margin-bottom: 0.5rem; color: var(--gold-subtle);">CARTOGRAPHY</div>
+        <h3 class="category-title">MAP OF NORWYN</h3>
+        <div class="category-subtitle">FIND YOUR WAY AROUND THE KINGDOM</div>
+
+        <div class="map-presentation-frame">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem;">Cartographic Survey of Norwyn</div>
+          <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-muted); margin-bottom: 2rem;">1994 Royal Survey Bureau Edition</p>
+          
+          <div style="max-width: 820px; margin: 0 auto; overflow: hidden; border-radius: 4px; box-shadow: var(--shadow); border: 1px solid var(--border);">
+            <img 
+              src="map.jpg.jpg" 
+              onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='map.jpg';}"
+              alt="Territorial Map of the Kingdom of Norwyn" 
+              style="width: 100%; height: auto; display: block; image-rendering: -webkit-optimize-contrast; image-rendering: high-quality;"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-faint); margin-top: 1.2rem; text-align: center;">
+          *Certain border territories and mountain paths remain deliberately unmapped until the narrative reveals them.
         </p>
       </div>
 
@@ -1280,22 +1294,14 @@
         </p>
 
         <div class="grid-2">
-          <!-- Box 1: MAPS (Uses established map asset) -->
+          <!-- Box 1: MAPS -->
           <div class="expandable-box">
             <div>
               <h4>MAPS</h4>
               <p class="box-preview">Maps of Norwyn, the capital, the mountain region, royal properties, major roads, and the border with Valenne.</p>
               <div class="box-more-content">
-                <div style="margin: 1.2rem 0; border: 1px solid var(--border); border-radius: 2px; overflow: hidden;">
-                  <img 
-                    src="map.jpg.jpg" 
-                    onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='map.jpg';}" 
-                    alt="Cartographic Survey of Norwyn" 
-                    style="width: 100%; height: auto; display: block;" 
-                  />
-                </div>
-                <em>Norwyn Royal Survey Bureau &bull; 1994 Edition</em><br>
-                The cartographic survey shows both sovereign roads and the unmapped passages of the northern range.
+                <em>Norwyn Royal Survey Bureau &bull; 1994 Edition</em><br><br>
+                The cartographic surveys document territorial borders, county boundaries, shipping straits, and mountain passes preserved across decades of state recordkeeping.
               </div>
             </div>
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
@@ -1374,17 +1380,9 @@
         </p>
 
         <div class="grid-2">
-          <!-- 1. The Royal Palace (Established image) -->
+          <!-- 1. The Royal Palace -->
           <div class="expandable-box">
             <div>
-              <div class="box-thumb-wrap">
-                <img 
-                  src="palace.jpg.jpg" 
-                  onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='palace.jpg';}" 
-                  alt="The Royal Palace" 
-                  class="box-thumb-img" 
-                />
-              </div>
               <h4>THE ROYAL PALACE</h4>
               <p class="box-preview">Elizabeth's childhood home and the center of her family's public life.</p>
               <div class="box-more-content">
@@ -1394,7 +1392,7 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- 2. The Royal Library (Clean typography card) -->
+          <!-- 2. The Royal Library -->
           <div class="expandable-box">
             <div>
               <h4>THE ROYAL LIBRARY</h4>
@@ -1406,17 +1404,9 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- 3. The Capital (Established image) -->
+          <!-- 3. The Capital -->
           <div class="expandable-box">
             <div>
-              <div class="box-thumb-wrap">
-                <img 
-                  src="capital.jpg" 
-                  onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='capital.jpg.jpg';}" 
-                  alt="The Capital" 
-                  class="box-thumb-img" 
-                />
-              </div>
               <h4>THE CAPITAL</h4>
               <p class="box-preview">The city surrounding the palace, where royal life meets ordinary life.</p>
               <div class="box-more-content">
@@ -1426,17 +1416,9 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- 4. The RAG (Established image) -->
+          <!-- 4. The RAG -->
           <div class="expandable-box">
             <div>
-              <div class="box-thumb-wrap">
-                <img 
-                  src="rag.jpg" 
-                  onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='rag.jpg.jpg';}" 
-                  alt="The RAG" 
-                  class="box-thumb-img" 
-                />
-              </div>
               <h4>THE RAG</h4>
               <p class="box-preview">An institution connected to Elizabeth's education and intellectual development.</p>
               <div class="box-more-content">
@@ -1446,17 +1428,9 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- 5. Elias's Workshop (Established image) -->
+          <!-- 5. Elias's Workshop -->
           <div class="expandable-box">
             <div>
-              <div class="box-thumb-wrap">
-                <img 
-                  src="workshop.jpg" 
-                  onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='workshop.jpg.jpg';}" 
-                  alt="Elias's Workshop" 
-                  class="box-thumb-img" 
-                />
-              </div>
               <h4>ELIAS'S WORKSHOP</h4>
               <p class="box-preview">A family workshop shaped by timber, iron, mechanical work, and independent labor.</p>
               <div class="box-more-content">
@@ -1466,17 +1440,9 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- 6. Valenne (Established image) -->
+          <!-- 6. Valenne -->
           <div class="expandable-box">
             <div>
-              <div class="box-thumb-wrap">
-                <img 
-                  src="valenne.jpg" 
-                  onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='valenne.jpg.jpg';}" 
-                  alt="Valenne" 
-                  class="box-thumb-img" 
-                />
-              </div>
               <h4>VALENNE</h4>
               <p class="box-preview">The neighboring kingdom Elizabeth is expected to enter through marriage.</p>
               <div class="box-more-content">
@@ -1486,17 +1452,9 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- 7. The Mountains (Established image) -->
+          <!-- 7. The Mountains -->
           <div class="expandable-box">
             <div>
-              <div class="box-thumb-wrap">
-                <img 
-                  src="mountain.jpg" 
-                  onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='mountain.jpg.jpg';}" 
-                  alt="The Mountains" 
-                  class="box-thumb-img" 
-                />
-              </div>
               <h4>THE MOUNTAINS</h4>
               <p class="box-preview">A region of Norwyn where Elizabeth encounters a different set of expectations and a different understanding of work, community, and responsibility.</p>
               <div class="box-more-content">
@@ -1506,7 +1464,7 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- 8. Mama Elena's Home (Clean typography card) -->
+          <!-- 8. Mama Elena's Home -->
           <div class="expandable-box">
             <div>
               <h4>MAMA ELENA'S HOME</h4>
