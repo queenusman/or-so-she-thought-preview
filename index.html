@@ -393,7 +393,7 @@
     .card p {
       font-size: 0.95rem;
       color: var(--ink-muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     /* Map Presentation Frame */
@@ -719,7 +719,7 @@
     </div>
   </section>
 
-  <!-- 2. EXPLORE THE KINGDOM OF NORWYN (PRECISE PROSE & EXPANDABLE BOXES) -->
+  <!-- 2. EXPLORE THE KINGDOM OF NORWYN -->
   <section id="norwyn" class="content-section section-alt">
     <div class="container">
       
@@ -758,7 +758,7 @@
         </p>
       </div>
 
-      <!-- CARTOGRAPHY / MAP OF NORWYN (PRESERVED AS CENTERPIECE) -->
+      <!-- CARTOGRAPHY / MAP OF NORWYN (PRESERVED AS THE SOLE IMAGE CENTERPIECE) -->
       <div class="archive-category-block" style="margin-top: 2rem; padding-top: 1rem; border-top: none;">
         <div class="section-eyebrow" style="letter-spacing: 0.24em; margin-bottom: 0.5rem; color: var(--gold-subtle);">CARTOGRAPHY</div>
         <h3 class="category-title">MAP OF NORWYN</h3>
@@ -771,7 +771,7 @@
           <div style="max-width: 820px; margin: 0 auto; overflow: hidden; border-radius: 4px; box-shadow: var(--shadow); border: 1px solid var(--border);">
             <img 
               src="map.jpg.jpg" 
-              onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='map.jpg';}"
+              onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='map.jpg';}" 
               alt="Territorial Map of the Kingdom of Norwyn" 
               style="width: 100%; height: auto; display: block; image-rendering: -webkit-optimize-contrast; image-rendering: high-quality;"
               loading="lazy"
@@ -1294,7 +1294,7 @@
         </p>
 
         <div class="grid-2">
-          <!-- Box 1: MAPS -->
+          <!-- Box 1 -->
           <div class="expandable-box">
             <div>
               <h4>MAPS</h4>
@@ -1307,7 +1307,7 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 2: NEWSPAPERS -->
+          <!-- Box 2 -->
           <div class="expandable-box">
             <div>
               <h4>NEWSPAPERS</h4>
@@ -1320,7 +1320,7 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 3: ROYAL DOCUMENTS -->
+          <!-- Box 3 -->
           <div class="expandable-box">
             <div>
               <h4>ROYAL DOCUMENTS</h4>
@@ -1333,7 +1333,7 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 4: GOVERNMENT RECORDS -->
+          <!-- Box 4 -->
           <div class="expandable-box">
             <div>
               <h4>GOVERNMENT RECORDS</h4>
@@ -1345,7 +1345,7 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 5: PERSONAL PAPERS -->
+          <!-- Box 5 -->
           <div class="expandable-box">
             <div>
               <h4>PERSONAL PAPERS</h4>
@@ -1357,7 +1357,7 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 6: EVERYDAY NORWYN -->
+          <!-- Box 6 -->
           <div class="expandable-box">
             <div>
               <h4>EVERYDAY NORWYN</h4>
@@ -1371,7 +1371,7 @@
         </div>
       </div>
 
-      <!-- 09 — PLACES IN THE NOVEL -->
+      <!-- 09 — PLACES IN THE NOVEL (PURE TYPOGRAPHY, NO PHOTO FRAMES) -->
       <div class="archive-category-block">
         <h3 class="category-title">09 — PLACES IN THE NOVEL</h3>
         <div class="category-subtitle">WHERE THE STORY HAPPENS</div>
@@ -1496,18 +1496,27 @@
     </div>
   </section>
 
-  <!-- 3. MEET THE PEOPLE OF NORWYN -->
+  <!-- 3. MEET THE PEOPLE OF NORWYN (UPDATED PROSE & DISCLAIMER) -->
   <section id="people" class="content-section">
     <div class="container">
+      
+      <!-- ABOUT THIS WORLD NOTICE -->
+      <div style="margin-bottom: 3.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
+        <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 0.6rem; color: var(--ink);">ABOUT THIS WORLD</div>
+        <p style="font-size: 1.05rem; color: var(--ink-muted); font-style: italic; line-height: 1.8;">
+          Norwyn, its people, places, institutions, histories, and events are fictional creations from <em>Or So She Thought</em>.
+        </p>
+      </div>
+
       <div class="section-header-bar">
         <div class="section-eyebrow">Dramatis Personae</div>
       </div>
       <h2 class="section-title">MEET THE PEOPLE OF NORWYN</h2>
 
-      <p class="lead-text">
+      <p class="lead-text" style="margin-bottom: 1.2rem;">
         Elizabeth's life is shaped by the people around her, but none of them can be reduced to what they want from her.
       </p>
-      <p class="sub-lead-text">
+      <p class="sub-lead-text" style="font-size: 1.05rem; line-height: 1.9; color: var(--ink-muted); margin-bottom: 3rem;">
         They love her.<br />
         They need things from her.<br />
         They protect her.<br />
@@ -1516,68 +1525,81 @@
       </p>
 
       <div class="grid-2">
+        <!-- Elizabeth -->
         <div class="card">
           <h3>ELIZABETH</h3>
           <p>
             Elizabeth has spent most of her life knowing what is expected of her.<br /><br />
-            She is a daughter, a royal, a student, and a future bride. She has learned how to read a room, anticipate a response, and make herself appropriate to the circumstances around her.<br /><br />
-            What she has not yet learned is how to recognize what she wants before everyone else has had the opportunity to tell her.
+            She is a daughter, a royal, a student, and a future bride. She has learned how to read a room, anticipate a response, and understand what a situation requires of her.<br /><br />
+            For most of her life, this has been useful.<br />
+            It has also made certain questions harder to answer.
           </p>
         </div>
 
+        <!-- Anne -->
         <div class="card">
           <h3>ANNE</h3>
           <p>
-            Queen Anne is Elizabeth's mother and one of the principal architects of the life prepared for her.<br /><br />
-            She does not believe she is taking Elizabeth's choices away.<br /><br />
-            She believes she is preparing her for a world that will not forgive her for being unprepared.
+            Queen Anne is Elizabeth's mother.<br /><br />
+            She has spent years preparing her daughter for a life in which very little can be treated as purely personal. She knows what the position requires, what the kingdom expects, and what can happen when someone enters that world unprepared.<br /><br />
+            She believes preparation is a form of protection.<br />
+            She does not always recognize when the two begin to become difficult to separate.
           </p>
         </div>
 
+        <!-- Edward of Valenne -->
         <div class="card">
           <h3>EDWARD OF VALENNE</h3>
           <p>
             Edward enters Elizabeth's life as the man she is expected to marry.<br /><br />
-            He is intelligent, observant, politically aware, and more difficult to understand than the arrangement between them initially suggests.
+            He is intelligent, observant, politically aware, and more complicated than the arrangement between them initially suggests.<br /><br />
+            The marriage has consequences beyond the two people expected to enter it.<br />
+            That does not make what exists between them less personal.
           </p>
         </div>
 
+        <!-- Elias -->
         <div class="card">
           <h3>ELIAS</h3>
           <p>
-            Elias is one of the first people to notice the difference between what Elizabeth says and what she has learned to say.<br /><br />
-            He is not her answer.<br /><br />
-            He has a life, loyalties, ambitions, and reasons of his own for being there.
+            Elias is connected to Elizabeth's life through the city, the palace, and the people who move between them.<br /><br />
+            He notices things Elizabeth has learned not to notice about herself.<br /><br />
+            But Elias has reasons of his own for being there. He has a life beyond Elizabeth, loyalties she does not initially understand, and questions that do not always have anything to do with her.
           </p>
         </div>
 
+        <!-- Isabel -->
         <div class="card">
           <h3>ISABEL</h3>
           <p>
             Isabel has spent years serving the royal household and understands its rules from a position Elizabeth has rarely had reason to consider.<br /><br />
             She knows what the palace asks of people.<br /><br />
-            She also knows that people sometimes choose to give it more than it asks.
+            She also knows that people can give more than they are asked to give, and that sometimes the difference matters.
           </p>
         </div>
 
+        <!-- Mama Elena -->
         <div class="card">
           <h3>MAMA ELENA</h3>
           <p>
-            Far from the world Elizabeth knows, Mama Elena introduces her to another way of living—and another set of expectations.<br /><br />
-            The Mountain does not turn out to be a place without rules.<br /><br />
-            It simply has rules Elizabeth has never learned.
+            Mama Elena lives far from the world Elizabeth has known.<br /><br />
+            Her life is shaped by work, community, necessity, and expectations of a different kind.<br /><br />
+            Elizabeth does not find a place without rules.<br />
+            She finds people whose rules she has never learned.
           </p>
         </div>
       </div>
 
-      <div class="card" style="margin-top: 2rem;">
+      <!-- Rowan -->
+      <div class="card" style="margin-top: 2.5rem;">
         <h3>ROWAN</h3>
         <p>
-          Rowan's influence reaches Elizabeth through ideas before it reaches her through memory.<br /><br />
-          His work raises a question that becomes increasingly difficult for her to ignore:
+          Rowan's influence reaches Elizabeth through a book before it reaches her through memory.<br /><br />
+          His ideas give language to questions Elizabeth has not yet learned how to ask.<br /><br />
+          One of them stays with her longer than she expects:
         </p>
-        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; color: var(--ink); margin-top: 0.75rem;">
-          What does a person carry with them when they leave?
+        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--ink); margin-top: 1rem;">
+          "What does a person carry with them when they leave?"
         </p>
       </div>
     </div>
