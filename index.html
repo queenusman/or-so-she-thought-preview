@@ -197,7 +197,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 5rem 1rem 4.5rem;
+      padding: 5rem 1.5rem 5.5rem;
       background: radial-gradient(circle at center 35%, var(--surface) 0%, var(--bg-cream) 75%);
       border-bottom: 1px solid var(--border);
     }
@@ -289,6 +289,80 @@
       text-transform: uppercase;
       letter-spacing: 0.2em;
       color: var(--ink-faint);
+    }
+
+    /* THE WORK / SYNOPSIS & RECORD CARD */
+    .work-section-wrap {
+      max-width: 820px;
+      width: 100%;
+      margin: 4.5rem auto 0;
+      text-align: left;
+    }
+
+    .work-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-top: 1.2rem;
+    }
+
+    .work-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.15rem 1.6rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .work-row:last-child {
+      border-bottom: none;
+    }
+
+    .work-label {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      font-weight: 600;
+    }
+
+    .work-val {
+      color: var(--ink);
+      text-align: right;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .work-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+      .work-val {
+        text-align: left;
+      }
+    }
+
+    .theme-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.85rem;
+    }
+
+    .theme-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      font-size: 0.88rem;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
     }
 
     /* --- CONTENT SECTIONS --- */
@@ -637,7 +711,7 @@
     </div>
   </aside>
 
-  <!-- Hero Section with Clickable Crystal Clear Cover -->
+  <!-- Hero Section with Clickable Crystal Clear Cover & The Work Record -->
   <section class="hero">
     <div class="book-stage">
       <div class="book-cover" onclick="openSection('novel')" title="Click to Read the Novel">
@@ -655,6 +729,47 @@
     <div class="motto-wrapper">
       <p class="motto">"She was never forbidden to choose. She was simply taught what the right choice looked like."</p>
       <p class="motto-sub">A psychological novel of duty, doubt, and choice</p>
+    </div>
+
+    <!-- THE WORK METADATA & THEMES (HOME PAGE) -->
+    <div class="work-section-wrap">
+      <div class="section-eyebrow" style="letter-spacing: 0.24em; margin-bottom: 0.35rem;">SYNOPSIS & RECORD</div>
+      <h3 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--ink);">The Work</h3>
+      <div style="width: 45px; height: 1px; background: var(--ink); margin-bottom: 2rem;"></div>
+
+      <div class="work-card">
+        <div class="work-row">
+          <span class="work-label">FORMAT</span>
+          <span class="work-val">Digital Novel & Print Edition</span>
+        </div>
+        <div class="work-row">
+          <span class="work-label">GENRE</span>
+          <span class="work-val">Psychological Fiction • Royal Drama</span>
+        </div>
+        <div class="work-row">
+          <span class="work-label">SETTING</span>
+          <span class="work-val">1990s Norwyn</span>
+        </div>
+        <div class="work-row">
+          <span class="work-label">ATMOSPHERE</span>
+          <span class="work-val">Elegant • Restrained • Uneasy</span>
+        </div>
+        <div class="work-row">
+          <span class="work-label">PUBLICATION</span>
+          <span class="work-val">August 21st, 2026</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 2.2rem;">
+        <div class="section-eyebrow" style="letter-spacing: 0.2em; margin-bottom: 0.85rem; color: var(--ink);">THEMES EXPLORED</div>
+        <div class="theme-tags-wrap">
+          <span class="theme-tag">Duty & Desire</span>
+          <span class="theme-tag">Family & Control</span>
+          <span class="theme-tag">Marriage & Choice</span>
+          <span class="theme-tag">Power & Privilege</span>
+          <span class="theme-tag">The Formation of Self</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -719,7 +834,7 @@
     </div>
   </section>
 
-  <!-- 2. EXPLORE THE KINGDOM OF NORWYN -->
+  <!-- 2. EXPLORE THE KINGDOM OF NORWYN (PRECISE PROSE & EXPANDABLE BOXES) -->
   <section id="norwyn" class="content-section section-alt">
     <div class="container">
       
@@ -1371,7 +1486,7 @@
         </div>
       </div>
 
-      <!-- 09 — PLACES IN THE NOVEL (PURE TYPOGRAPHY, NO PHOTO FRAMES) -->
+      <!-- 09 — PLACES IN THE NOVEL -->
       <div class="archive-category-block">
         <h3 class="category-title">09 — PLACES IN THE NOVEL</h3>
         <div class="category-subtitle">WHERE THE STORY HAPPENS</div>
