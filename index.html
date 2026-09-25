@@ -734,6 +734,11 @@
       border-color: #383129;
     }
 
+    .contact-submit-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
     /* Subscription Box */
     .subscribe-box {
       text-align: center;
@@ -1389,20 +1394,17 @@
             Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people acquire expectations, habits, assumptions, preferences, and ways of seeing.
           </p>
 
-          <!-- Palette-Matched Active Email Form -->
+          <!-- Palette-Matched Active Email Form (No Page Redirect) -->
           <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 500px; padding: 2.4rem 2rem;">
             <div class="section-eyebrow" style="margin-bottom: 0.4rem;">CONTACT</div>
             <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1.2rem;">
               For literary, rights, interview, and professional inquiries:
             </p>
             
-            <form class="contact-form" action="https://formsubmit.co/usmanshazaan@gmail.com" method="POST">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="New Inquiry — Or So She Thought">
-
-              <input type="text" name="name" class="contact-input" placeholder="Name" required />
-              <input type="email" name="email" class="contact-input" placeholder="Email *" required />
-              <textarea name="message" class="contact-textarea" placeholder="Message ..." required></textarea>
+            <form class="contact-form" id="authorContactForm" onsubmit="submitContactForm(event)">
+              <input type="text" id="contactName" class="contact-input" placeholder="Name" required />
+              <input type="email" id="contactEmail" class="contact-input" placeholder="Email *" required />
+              <textarea id="contactMessage" class="contact-textarea" placeholder="Message ..." required></textarea>
               
               <div class="contact-security-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1412,7 +1414,8 @@
                 <span>Protected by reCAPTCHA</span>
               </div>
 
-              <button type="submit" class="contact-submit-btn">&rarr; SEND MESSAGE</button>
+              <button type="submit" id="contactSubmitBtn" class="contact-submit-btn">&rarr; SEND MESSAGE</button>
+              <div id="formStatusMsg" style="display:none; font-size:0.9rem; margin-top:0.8rem; text-align:center; font-family:var(--font-sans);"></div>
             </form>
           </div>
         </div>
@@ -1444,7 +1447,7 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES -->
+  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & AJAX CONTACT FORM -->
   <script>
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
@@ -1500,6 +1503,47 @@
         moreContent.classList.add('open');
         btn.innerHTML = (card.closest('#making') ? 'CLOSE &uarr;' : 'Less &uarr;');
       }
+    }
+
+    // AJAX Form Submission (Sends straight to usmanshazaan@gmail.com without page redirect)
+    function submitContactForm(event) {
+      event.preventDefault();
+      const btn = document.getElementById('contactSubmitBtn');
+      const status = document.getElementById('formStatusMsg');
+      const form = document.getElementById('authorContactForm');
+
+      btn.innerHTML = 'Sending...';
+      btn.disabled = true;
+
+      fetch('https://formsubmit.co/ajax/usmanshazaan@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: document.getElementById('contactName').value,
+          email: document.getElementById('contactEmail').value,
+          message: document.getElementById('contactMessage').value,
+          _subject: 'New Inquiry — Or So She Thought'
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        form.reset();
+        btn.innerHTML = '&rarr; SEND MESSAGE';
+        btn.disabled = false;
+        status.style.display = 'block';
+        status.style.color = '#2e7d32';
+        status.innerHTML = '✓ Thank you, your message has been sent directly to Queen Usman.';
+      })
+      .catch(error => {
+        btn.innerHTML = '&rarr; SEND MESSAGE';
+        btn.disabled = false;
+        status.style.display = 'block';
+        status.style.color = '#c62828';
+        status.innerHTML = 'Something went wrong. Please try again.';
+      });
     }
 
     // Touch swipe right to close drawer on mobile
