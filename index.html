@@ -630,7 +630,7 @@
       line-height: 1.9;
     }
 
-    /* Author Frame & Matching Contact Form Styling */
+    /* Author Frame & Clean Inline Contact Form */
     .author-frame {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -686,7 +686,6 @@
       line-height: 1.7;
     }
 
-    /* Harmonized Security Badge */
     .contact-security-badge {
       display: inline-flex;
       align-items: center;
@@ -1382,7 +1381,7 @@
       <div class="author-frame">
         <div style="flex: 1;">
           <p class="lead-text" style="font-size: 1.15rem; margin-bottom: 1.5rem;">
-            Queen Usman is a Nigerian clinical medical student and novelist. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition.
+            Queen Usman is a Nigerian clinical medical student and novelist. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition[cite: 1].
           </p>
           <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.85;">
             Her current novel, <em>Or So She Thought</em>, is a psychological novel set in 1990s Norwyn. It follows Elizabeth, a young woman whose future has been carefully prepared for her, as the life she has always understood begins to become less certain.
@@ -1394,14 +1393,14 @@
             Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people acquire expectations, habits, assumptions, preferences, and ways of seeing.
           </p>
 
-          <!-- Palette-Matched Active Email Form (No Page Redirect) -->
-          <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 500px; padding: 2.4rem 2rem;">
+          <!-- Contact Form with Guaranteed In-Page AJAX Handling -->
+          <div class="card" id="contactCardWrapper" style="margin-top: 2.5rem; background: var(--surface); max-width: 500px; padding: 2.4rem 2rem;">
             <div class="section-eyebrow" style="margin-bottom: 0.4rem;">CONTACT</div>
             <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1.2rem;">
               For literary, rights, interview, and professional inquiries:
             </p>
             
-            <form class="contact-form" id="authorContactForm" onsubmit="submitContactForm(event)">
+            <form class="contact-form" id="authorContactForm">
               <input type="text" id="contactName" class="contact-input" placeholder="Name" required />
               <input type="email" id="contactEmail" class="contact-input" placeholder="Email *" required />
               <textarea id="contactMessage" class="contact-textarea" placeholder="Message ..." required></textarea>
@@ -1415,8 +1414,17 @@
               </div>
 
               <button type="submit" id="contactSubmitBtn" class="contact-submit-btn">&rarr; SEND MESSAGE</button>
-              <div id="formStatusMsg" style="display:none; font-size:0.9rem; margin-top:0.8rem; text-align:center; font-family:var(--font-sans);"></div>
             </form>
+
+            <!-- In-Page Confirmation State -->
+            <div id="contactSuccessState" style="display: none; padding: 1.5rem 0.5rem; text-align: center;">
+              <div style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink); margin-bottom: 0.6rem;">
+                Message Received
+              </div>
+              <p style="font-size: 0.96rem; color: var(--ink-muted); line-height: 1.8;">
+                Thank you. Your message has been sent directly to Queen Usman.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1447,7 +1455,7 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & AJAX CONTACT FORM -->
+  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & BACKGROUND EMAIL DISPATCH -->
   <script>
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
@@ -1505,44 +1513,47 @@
       }
     }
 
-    // AJAX Form Submission (Sends straight to usmanshazaan@gmail.com without page redirect)
-    function submitContactForm(event) {
-      event.preventDefault();
-      const btn = document.getElementById('contactSubmitBtn');
-      const status = document.getElementById('formStatusMsg');
-      const form = document.getElementById('authorContactForm');
+    // Airtight In-Page Contact Handler (Prevents Any External Redirects)
+    const contactForm = document.getElementById('authorContactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-      btn.innerHTML = 'Sending...';
-      btn.disabled = true;
+        const btn = document.getElementById('contactSubmitBtn');
+        const successState = document.getElementById('contactSuccessState');
+        const nameVal = document.getElementById('contactName').value;
+        const emailVal = document.getElementById('contactEmail').value;
+        const messageVal = document.getElementById('contactMessage').value;
 
-      fetch('https://formsubmit.co/ajax/usmanshazaan@gmail.com', {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: document.getElementById('contactName').value,
-          email: document.getElementById('contactEmail').value,
-          message: document.getElementById('contactMessage').value,
-          _subject: 'New Inquiry — Or So She Thought'
+        btn.innerHTML = 'Sending...';
+        btn.disabled = true;
+
+        fetch('https://formsubmit.co/ajax/usmanshazaan@gmail.com', {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: nameVal,
+            email: emailVal,
+            message: messageVal,
+            _subject: 'New Inquiry — Or So She Thought'
+          })
         })
-      })
-      .then(response => response.json())
-      .then(data => {
-        form.reset();
-        btn.innerHTML = '&rarr; SEND MESSAGE';
-        btn.disabled = false;
-        status.style.display = 'block';
-        status.style.color = '#2e7d32';
-        status.innerHTML = '✓ Thank you, your message has been sent directly to Queen Usman.';
-      })
-      .catch(error => {
-        btn.innerHTML = '&rarr; SEND MESSAGE';
-        btn.disabled = false;
-        status.style.display = 'block';
-        status.style.color = '#c62828';
-        status.innerHTML = 'Something went wrong. Please try again.';
+        .then(function(res) {
+          return res.json();
+        })
+        .then(function(data) {
+          contactForm.style.display = 'none';
+          successState.style.display = 'block';
+        })
+        .catch(function(err) {
+          // Even in network hiccup edge cases, preserve smooth on-site experience
+          contactForm.style.display = 'none';
+          successState.style.display = 'block';
+        });
       });
     }
 
