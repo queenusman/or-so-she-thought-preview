@@ -590,6 +590,134 @@
       color: var(--gold-subtle);
     }
 
+    /* Chapter Grid Links */
+    .chapter-link-btn {
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      padding: 0.45rem 0.2rem;
+      border-bottom: 1px dashed rgba(217, 210, 197, 0.6);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .chapter-link-btn:hover {
+      color: var(--gold-subtle);
+      padding-left: 6px;
+    }
+
+    .chapter-link-num {
+      color: var(--ink-faint);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-right: 0.75rem;
+      min-width: 22px;
+    }
+
+    /* =========================================================
+       INLINE CHAPTER READER VIEW
+       ========================================================= */
+    .reader-pane {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4rem 3rem;
+      box-shadow: var(--shadow);
+      margin: 2.5rem 0;
+      animation: fadeInText 0.4s ease;
+    }
+
+    .reader-pane.open {
+      display: block;
+    }
+
+    .reader-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .reader-number {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    .reader-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .reader-body {
+      max-width: 680px;
+      margin: 0 auto;
+      font-family: var(--font-serif);
+      font-size: 1.18rem;
+      line-height: 2.05;
+      color: #24201b;
+    }
+
+    .reader-body p {
+      margin-bottom: 1.8rem;
+    }
+
+    .reader-body p:first-of-type::first-letter {
+      font-size: 3.2rem;
+      line-height: 0.85;
+      float: left;
+      margin: 0.12rem 0.6rem 0 0;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .reader-nav-bar {
+      max-width: 680px;
+      margin: 3.5rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .reader-nav-btn {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.65rem 1.4rem;
+      border-radius: 2px;
+      cursor: pointer;
+      color: var(--ink);
+      transition: all 0.2s ease;
+    }
+
+    .reader-nav-btn:hover {
+      border-color: var(--ink);
+      background: var(--surface-subtle);
+    }
+
     /* =========================================================
        EXPANDABLE ESSAY ACCORDION LIST (WHERE IT BEGAN)
        ========================================================= */
@@ -670,6 +798,138 @@
       color: var(--ink);
     }
 
+    /* =========================================================
+       BEYOND THE NOVEL & ABOUT STYLES
+       ========================================================= */
+    .question-block {
+      padding: 2.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .question-block:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    .question-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      line-height: 1.45;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .question-body {
+      font-size: 1.02rem;
+      color: var(--ink-muted);
+      line-height: 1.85;
+    }
+
+    .note-entry {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2.2rem 2rem;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .note-entry:hover {
+      box-shadow: 0 16px 32px -10px rgba(31, 27, 22, 0.12);
+    }
+
+    .note-entry h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 0.65rem;
+      text-transform: uppercase;
+    }
+
+    .note-entry p {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.75;
+    }
+
+    .read-link {
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 1.2rem;
+      transition: color 0.2s ease;
+    }
+
+    .read-link:hover {
+      color: var(--gold-subtle);
+    }
+
+    .author-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 3.2rem 2.8rem;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .author-frame {
+        padding: 2rem 1.5rem;
+      }
+      .reader-pane {
+        padding: 2.5rem 1.4rem;
+      }
+    }
+
+    /* Section Return Bar */
+    .section-return-bar {
+      margin-top: 4.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .section-return-btn {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.75rem 1.6rem;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .section-return-btn:hover {
+      border-color: var(--ink);
+      background: var(--surface);
+    }
+
     /* Subscription Box */
     .subscribe-box {
       text-align: center;
@@ -743,7 +1003,7 @@
 
   <!-- Main Top Navigation -->
   <header class="nav">
-    <div class="nav-brand" onclick="closeAllSections(); window.scrollTo({top: 0, behavior: 'smooth'});">
+    <div class="nav-brand" onclick="closeAllSections();">
       Or So She Thought
     </div>
 
@@ -791,7 +1051,7 @@
     </div>
   </aside>
 
-  <!-- Hero Section with Clickable Crystal Clear Cover & The Work Record -->
+  <!-- Hero Section with Clickable Cover & The Work Record -->
   <section class="hero">
     <div class="book-stage">
       <div class="book-cover" onclick="openSection('novel')" title="Click to Read the Novel">
@@ -867,53 +1127,70 @@
       </p>
 
       <div>
-        <a href="#contents-anchor" class="begin-reading-btn" style="display:inline-block; padding:0.9rem 2.2rem; background:var(--ink); color:var(--bg-cream); font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; border-radius:2px; margin:1.5rem 0 2rem;">BEGIN READING</a>
+        <button onclick="readChapter(1)" style="display:inline-block; padding:0.9rem 2.2rem; background:var(--ink); color:var(--bg-cream); font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; border-radius:2px; margin:1.5rem 0 2rem; border:none; cursor:pointer;">
+          BEGIN READING
+        </button>
       </div>
 
+      <!-- IN-PAGE INTERACTIVE READER PANE -->
+      <div id="reader-pane" class="reader-pane">
+        <div class="reader-header">
+          <div id="reader-ch-num" class="reader-number">CHAPTER 01</div>
+          <h3 id="reader-ch-title" class="reader-title">The Life She Is Supposed to Want</h3>
+        </div>
+
+        <div id="reader-content" class="reader-body">
+          <!-- Chapter prose dynamically rendered via JavaScript -->
+        </div>
+
+        <div class="reader-nav-bar">
+          <button id="reader-prev-btn" class="reader-nav-btn" onclick="prevChapter()">← Previous</button>
+          <button class="reader-nav-btn" onclick="closeReader()">Contents</button>
+          <button id="reader-next-btn" class="reader-nav-btn" onclick="nextChapter()">Next →</button>
+        </div>
+      </div>
+
+      <!-- CONTENTS LIST (26 CHAPTERS) -->
       <div id="contents-anchor" style="margin-top: 3rem;">
         <div class="section-eyebrow" style="letter-spacing: 0.28em;">CONTENTS</div>
         
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0.8rem 2rem; margin:2.5rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:2.5rem 0;">
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">01</span> The Life She Is Supposed to Want</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">02</span> Edward of Valenne</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">03</span> The Girl Who Corrects Herself</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">04</span> The Book</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">05</span> The Mended Blouse</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">06</span> The Woman Who Knows Before You Speak</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">07</span> The Man She Might Have Married</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">08</span> The Founders’ Gala</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">09</span> The Record</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">10</span> What Elias Wanted</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">11</span> The Wrong Question</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">12</span> The Person She Became</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">13</span> What If I Stay?</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">14</span> The Woman Who Left Once</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">15</span> The Other Reason for the Marriage</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">16</span> The Escape That Wasn’t Planned</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">17</span> The Letter</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">18</span> The Mountain</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">19</span> Another Set of Rules</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">20</span> Elias Arrives</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">21</span> Fast Hands</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">22</span> The Secret Elias Carried</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">23</span> The Price of Her Freedom</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">24</span> The People Who Love Her</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">25</span> The Choice</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">26</span> Or So She Thought</div>
+          <button class="chapter-link-btn" onclick="readChapter(1)"><span class="chapter-link-num">01</span> The Life She Is Supposed to Want</button>
+          <button class="chapter-link-btn" onclick="readChapter(2)"><span class="chapter-link-num">02</span> Edward of Valenne</button>
+          <button class="chapter-link-btn" onclick="readChapter(3)"><span class="chapter-link-num">03</span> The Girl Who Corrects Herself</button>
+          <button class="chapter-link-btn" onclick="readChapter(4)"><span class="chapter-link-num">04</span> The Book</button>
+          <button class="chapter-link-btn" onclick="readChapter(5)"><span class="chapter-link-num">05</span> The Mended Blouse</button>
+          <button class="chapter-link-btn" onclick="readChapter(6)"><span class="chapter-link-num">06</span> The Woman Who Knows Before You Speak</button>
+          <button class="chapter-link-btn" onclick="readChapter(7)"><span class="chapter-link-num">07</span> The Man She Might Have Married</button>
+          <button class="chapter-link-btn" onclick="readChapter(8)"><span class="chapter-link-num">08</span> The Founders’ Gala</button>
+          <button class="chapter-link-btn" onclick="readChapter(9)"><span class="chapter-link-num">09</span> The Record</button>
+          <button class="chapter-link-btn" onclick="readChapter(10)"><span class="chapter-link-num">10</span> What Elias Wanted</button>
+          <button class="chapter-link-btn" onclick="readChapter(11)"><span class="chapter-link-num">11</span> The Wrong Question</button>
+          <button class="chapter-link-btn" onclick="readChapter(12)"><span class="chapter-link-num">12</span> The Person She Became</button>
+          <button class="chapter-link-btn" onclick="readChapter(13)"><span class="chapter-link-num">13</span> What If I Stay?</button>
+          <button class="chapter-link-btn" onclick="readChapter(14)"><span class="chapter-link-num">14</span> The Woman Who Left Once</button>
+          <button class="chapter-link-btn" onclick="readChapter(15)"><span class="chapter-link-num">15</span> The Other Reason for the Marriage</button>
+          <button class="chapter-link-btn" onclick="readChapter(16)"><span class="chapter-link-num">16</span> The Escape That Wasn’t Planned</button>
+          <button class="chapter-link-btn" onclick="readChapter(17)"><span class="chapter-link-num">17</span> The Letter</button>
+          <button class="chapter-link-btn" onclick="readChapter(18)"><span class="chapter-link-num">18</span> The Mountain</button>
+          <button class="chapter-link-btn" onclick="readChapter(19)"><span class="chapter-link-num">19</span> Another Set of Rules</button>
+          <button class="chapter-link-btn" onclick="readChapter(20)"><span class="chapter-link-num">20</span> Elias Arrives</button>
+          <button class="chapter-link-btn" onclick="readChapter(21)"><span class="chapter-link-num">21</span> Fast Hands</button>
+          <button class="chapter-link-btn" onclick="readChapter(22)"><span class="chapter-link-num">22</span> The Secret Elias Carried</button>
+          <button class="chapter-link-btn" onclick="readChapter(23)"><span class="chapter-link-num">23</span> The Price of Her Freedom</button>
+          <button class="chapter-link-btn" onclick="readChapter(24)"><span class="chapter-link-num">24</span> The People Who Love Her</button>
+          <button class="chapter-link-btn" onclick="readChapter(25)"><span class="chapter-link-num">25</span> The Choice</button>
+          <button class="chapter-link-btn" onclick="readChapter(26)"><span class="chapter-link-num">26</span> Or So She Thought</button>
         </div>
+      </div>
 
-        <div style="display:flex; justify-content:center; gap:2rem; font-size:0.82rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; color:var(--ink-muted); margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border);">
-          <a href="#contents-anchor">← PREVIOUS</a>
-          <span>·</span>
-          <a href="#contents-anchor">CONTENTS</a>
-          <span>·</span>
-          <a href="#contents-anchor">NEXT →</a>
-        </div>
+      <div class="section-return-bar">
+        <button class="section-return-btn" onclick="closeAllSections()">Close & Return to Home ↑</button>
       </div>
     </div>
   </section>
 
-  <!-- 2. EXPLORE THE KINGDOM OF NORWYN (PRECISE PROSE & EXPANDABLE BOXES) -->
+  <!-- 2. EXPLORE THE KINGDOM OF NORWYN -->
   <section id="norwyn" class="content-section section-alt">
     <div class="container">
       
@@ -952,7 +1229,7 @@
         </p>
       </div>
 
-      <!-- CARTOGRAPHY / MAP OF NORWYN (PRESERVED AS THE SOLE IMAGE CENTERPIECE) -->
+      <!-- CARTOGRAPHY / MAP OF NORWYN -->
       <div class="archive-category-block" style="margin-top: 2rem; padding-top: 1rem; border-top: none;">
         <div class="section-eyebrow" style="letter-spacing: 0.24em; margin-bottom: 0.5rem; color: var(--gold-subtle);">CARTOGRAPHY</div>
         <h3 class="category-title">MAP OF NORWYN</h3>
@@ -990,7 +1267,6 @@
         </p>
 
         <div class="grid-2">
-          <!-- Box 1 -->
           <div class="expandable-box">
             <div>
               <h4>THE WATERFRONT</h4>
@@ -1004,7 +1280,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 2 -->
           <div class="expandable-box">
             <div>
               <h4>THE GOVERNMENT QUARTER</h4>
@@ -1018,7 +1293,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 3 -->
           <div class="expandable-box">
             <div>
               <h4>THE COMMERCIAL DISTRICT</h4>
@@ -1032,7 +1306,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 4 -->
           <div class="expandable-box">
             <div>
               <h4>THE RESIDENTIAL DISTRICTS</h4>
@@ -1059,7 +1332,6 @@
         </p>
 
         <div class="grid-2">
-          <!-- Box 1 -->
           <div class="expandable-box">
             <div>
               <h4>THE STATE ROOMS</h4>
@@ -1072,7 +1344,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 2 -->
           <div class="expandable-box">
             <div>
               <h4>THE ROYAL LIBRARY</h4>
@@ -1085,7 +1356,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 3 -->
           <div class="expandable-box">
             <div>
               <h4>THE PRIVATE WING</h4>
@@ -1098,7 +1368,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 4 -->
           <div class="expandable-box">
             <div>
               <h4>THE HOUSEHOLD</h4>
@@ -1111,18 +1380,6 @@
             </div>
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
-        </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>THE ARCHIVES</h4>
-            <p class="box-preview">Correspondence, photographs, treaties, invitations, and historical records from previous generations.</p>
-            <div class="box-more-content">
-              The royal archives preserve what the institution chooses to remember.<br><br>
-              It can also reveal what earlier generations were trying to manage, protect, or conceal.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
         </div>
       </div>
 
@@ -1137,7 +1394,6 @@
         </p>
 
         <div class="grid-2">
-          <!-- Box 1 -->
           <div class="expandable-box">
             <div>
               <h4>VALENNE'S GOVERNMENT</h4>
@@ -1150,7 +1406,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 2 -->
           <div class="expandable-box">
             <div>
               <h4>VALENNE'S ECONOMY</h4>
@@ -1158,32 +1413,6 @@
               <div class="box-more-content">
                 Businesses depend on agreements between the kingdoms. Financial institutions follow political developments. Industries benefit from stable relations.<br><br>
                 A royal marriage can therefore attract attention for reasons that have little to do with romance.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 3 -->
-          <div class="expandable-box">
-            <div>
-              <h4>NORWYN AND VALENNE</h4>
-              <p class="box-preview">Treaties, mutual obligations, economic interests, and generational history.</p>
-              <div class="box-more-content">
-                The relationship between the kingdoms is built on more than friendship. There are agreements, obligations, economic interests, and history.<br><br>
-                And there are things each kingdom would prefer the other not to misunderstand.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 4 -->
-          <div class="expandable-box">
-            <div>
-              <h4>EDWARD OF VALENNE</h4>
-              <p class="box-preview">A brief contextual introduction to the man representing Valenne's dynastic agreement.</p>
-              <div class="box-more-content">
-                Edward has grown up understanding his position within this bilateral accord. He knows that marriage can be personal and political at the same time.<br><br>
-                He also knows that Elizabeth is being asked to enter a world that existed before she was asked to enter it. For Elizabeth, understanding Edward eventually means understanding what comes with him.
               </div>
             </div>
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
@@ -1203,7 +1432,6 @@
         </p>
 
         <div class="grid-2">
-          <!-- Box 1 -->
           <div class="expandable-box">
             <div>
               <h4>THE LANDSCAPE</h4>
@@ -1216,34 +1444,6 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <!-- Box 2 -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE VILLAGES</h4>
-              <p class="box-preview">Small settlements where reputation, usefulness, and contribution matter above formal titles.</p>
-              <div class="box-more-content">
-                Mountain villages are small enough that people often know one another's families.<br><br>
-                Someone who repairs roofs, grows food, cares for animals, weaves cloth, works with timber, or helps during difficult weather becomes part of the community through repeated acts rather than formal titles.<br><br>
-                People notice who contributes. They also notice who does not.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 3 -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE HOMES</h4>
-              <p class="box-preview">Stone, timber, practical heat retention, and kitchens built for seasonal food storage.</p>
-              <div class="box-more-content">
-                Mountain homes are built around practicality. Timber and stone are common. Rooms are designed to retain heat. Kitchens are important because food preparation and preservation matter across the colder months.<br><br>
-                Homes contain fewer things that exist only for display. The beauty of the region is often found in materials that have been used for a long time rather than objects that have been carefully arranged to impress.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 4 -->
           <div class="expandable-box">
             <div>
               <h4>THE WORK</h4>
@@ -1256,435 +1456,11 @@
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
         </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>THE COMMUNITY</h4>
-            <p class="box-preview">Relationships, shared obligations, mutual watching, and unwritten social expectations.</p>
-            <div class="box-more-content">
-              The mountains offer Elizabeth something she initially associates with freedom: fewer formal ceremonies, fewer servants, fewer people concerned with rank.<br><br>
-              But community creates its own expectations. People remember. People notice. People help each other and therefore acquire obligations to one another.<br><br>
-              The absence of palace protocol does not mean the absence of social rules. Elizabeth eventually begins to understand the difference.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-        </div>
       </div>
 
-      <!-- 05 — THE GOVERNMENT -->
-      <div class="archive-category-block">
-        <h3 class="category-title">05 — THE GOVERNMENT</h3>
-        <div class="category-subtitle">THE WORK BEHIND THE KINGDOM</div>
-        <p class="category-prose">
-          Norwyn is not governed by the royal family alone. The Crown exists alongside ministers, civil servants, courts, financial institutions, administrative departments, and other state institutions responsible for running the kingdom.<br><br>
-          Most government work is invisible to ordinary people. That is partly the point.<br><br>
-          A citizen notices the road being repaired. They may not notice the meeting that approved the money. A business notices a change in trade regulations. It may never see the document that produced it. A treaty changes the conditions under which goods move between countries. Most people experience the result without ever meeting the people who negotiated it.
-        </p>
-
-        <div class="grid-2">
-          <!-- Box 1 -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE CROWN</h4>
-              <p class="box-preview">Constitutional authority, national representation, and formal ceremonial assent.</p>
-              <div class="box-more-content">
-                The Crown represents continuity, national identity, and the monarchy's constitutional responsibilities. The Queen receives foreign representatives, participates in state occasions, and signs documents where required.<br><br>
-                The monarchy is not the entire state; it operates within established covenants.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 2 -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE MINISTRIES</h4>
-              <p class="box-preview">Administrative departments handling finance, trade, transport, education, and domestic rule.</p>
-              <div class="box-more-content">
-                Ministries handle the practical responsibilities of the state. Ministers make decisions, while civil servants carry much of the actual administrative work forward.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 3 -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE COURTS</h4>
-              <p class="box-preview">Independent legal benches interpreting legislation and resolving civil and criminal disputes.</p>
-              <div class="box-more-content">
-                The courts belong to the kingdom's institutional structure rather than to the royal household, maintaining the rule of law across all social tiers.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 4 -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE TREASURY</h4>
-              <p class="box-preview">Management of the kingdom's revenue, public spending, debt, and bilateral accords.</p>
-              <div class="box-more-content">
-                The Treasury oversees public finance. Budgets, taxation, spending allocations, and trade subsidies determined here eventually dictate the price of daily goods in market stalls.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>FOREIGN AFFAIRS</h4>
-            <p class="box-preview">Diplomatic missions, bilateral negotiations, and treaties connecting Norwyn to Valenne.</p>
-            <div class="box-more-content">
-              Treaties, diplomatic summits, trade concessions, and state visits are formulated here. Some of the international agreements made inside these rooms directly shape Elizabeth's life before she is ever informed of their existence.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-        </div>
-      </div>
-
-      <!-- 06 — THE ROYAL FAMILY -->
-      <div class="archive-category-block">
-        <h3 class="category-title">06 — THE ROYAL FAMILY</h3>
-        <div class="category-subtitle">A FAMILY THAT IS ALSO AN INSTITUTION</div>
-        <p class="category-prose">
-          The royal family occupies an unusual position in Norwyn. They are a family. They are also an institution.<br><br>
-          Their private decisions can carry public consequences.<br><br>
-          A marriage can affect diplomacy. An inheritance can affect succession. A disagreement can become political if it concerns the future of the Crown.<br><br>
-          Even an ordinary family decision can become complicated when the people involved are expected to represent an entire kingdom.
-        </p>
-
-        <div class="grid-2">
-          <!-- Box 1 -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE CROWN</h4>
-              <p class="box-preview">The sovereign office personified by Queen Anne, where duty and preservation precede personal inclination.</p>
-              <div class="box-more-content">
-                Authority is experienced as an inherited burden. To those inside it, maintaining the stability of the realm is an obligation that overrides private preferences.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 2 -->
-          <div class="expandable-box">
-            <div>
-              <h4>SUCCESSION</h4>
-              <p class="box-preview">Strict constitutional lineage establishing who inherits the throne and how status is transmitted.</p>
-              <div class="box-more-content">
-                Succession determines how public continuity is maintained across generations. From childhood, potential heirs learn that their futures belong to the kingdom before they belong to themselves.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 3 -->
-          <div class="expandable-box">
-            <div>
-              <h4>ROYAL MARRIAGE</h4>
-              <p class="box-preview">Alliances that function simultaneously as personal partnerships and diplomatic treaties.</p>
-              <div class="box-more-content">
-                A royal union is scrutinized by cabinets, foreign ministries, and the press. It is negotiated to protect borders, reassure allies, and ensure dynastic survival.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 4 -->
-          <div class="expandable-box">
-            <div>
-              <h4>PUBLIC LIFE</h4>
-              <p class="box-preview">Perpetual scrutiny, state appearances, press coverage, and living under continuous observation.</p>
-              <div class="box-more-content">
-                Births are announced. Marriages are reported. Ceremonies are photographed. Clothing is analyzed. The family learns to live with being observed, while the public learns to treat observation as ordinary.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 07 — NORWYN IN THE 1990s -->
-      <div class="archive-category-block">
-        <h3 class="category-title">07 — NORWYN IN THE 1990s</h3>
-        <div class="category-subtitle">A KINGDOM BETWEEN ERAS</div>
-        <p class="category-prose">
-          Norwyn in the 1990s is modernizing, but it has not abandoned the systems that came before it.<br><br>
-          Television exists alongside newspapers. Landline telephones remain ordinary. Computers are becoming more common without yet being everywhere. Cars and buses fill streets designed decades earlier. Traditional businesses operate alongside newer industries.<br><br>
-          Young people have access to music, films, books, and ideas that move across borders more quickly than they once did.<br><br>
-          The monarchy carries its history into a decade in which many other parts of life are changing.
-        </p>
-
-        <div class="grid-2">
-          <!-- Box 1 -->
-          <div class="expandable-box">
-            <div>
-              <h4>COMMUNICATION</h4>
-              <p class="box-preview">Letters still matter. Telephone calls are common. Information moves faster while leaving room for silence.</p>
-              <div class="box-more-content">
-                Newspapers remain influential. Television brings national events directly into people's living rooms. Information moves faster than it once did, but it is still entirely possible for a person to be unreachable.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 2 -->
-          <div class="expandable-box">
-            <div>
-              <h4>TRANSPORT</h4>
-              <p class="box-preview">Cars, regional diesel trains, buses, river barges, and difficult mountain gravel passes.</p>
-              <div class="box-more-content">
-                The capital is comparatively easy to navigate; the mountains are not. Distance still determines who can visit whom and how quickly news can travel across county lines.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 3 -->
-          <div class="expandable-box">
-            <div>
-              <h4>MEDIA</h4>
-              <p class="box-preview">Broadsheets, evening news broadcasts, royal speculation, and public coverage.</p>
-              <div class="box-more-content">
-                Newspapers report on politics, business, royal events, culture, and society. Television gives the Crown another way to enter ordinary homes, making royal figures feel both distant and strangely familiar.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 4 -->
-          <div class="expandable-box">
-            <div>
-              <h4>FASHION</h4>
-              <p class="box-preview">Clothing reflecting class, occupation, age, location, and the requirements of occasion.</p>
-              <div class="box-more-content">
-                Royal clothing is formal and carefully considered. Capital residents have access to modern fashion trends, while mountain communities favor wool and canvas that survive harsh weather. A person's clothes reveal their world before they speak.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>EVERYDAY LIFE</h4>
-            <p class="box-preview">Offices, morning schools, predictable market closing hours, and quiet domestic routines.</p>
-            <div class="box-more-content">
-              Families eat together or separately depending on their circumstances. People work, read, listen to radio, attend religious services, meet friends, shop, and argue. Norwyn is not always dramatic; most of the time, it is ordinary. That is what makes the moments that disrupt it matter.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-        </div>
-      </div>
-
-      <!-- 08 — THE NORWYN ARCHIVE -->
-      <div class="archive-category-block">
-        <h3 class="category-title">08 — THE NORWYN ARCHIVE</h3>
-        <div class="category-subtitle">THE KINGDOM AS IT WAS RECORDED</div>
-        <p class="category-prose">
-          Some parts of Norwyn are easier to understand through documents than descriptions. The archive collects pieces of the world that existed around the story.
-        </p>
-
-        <div class="grid-2">
-          <!-- Box 1: MAPS -->
-          <div class="expandable-box">
-            <div>
-              <h4>MAPS</h4>
-              <p class="box-preview">Maps of Norwyn, the capital, the mountain region, royal properties, major roads, and the border with Valenne.</p>
-              <div class="box-more-content">
-                <em>Norwyn Royal Survey Bureau &bull; 1994 Edition</em><br><br>
-                The cartographic surveys document territorial borders, county boundaries, shipping straits, and mountain passes preserved across decades of state recordkeeping.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 2: NEWSPAPERS -->
-          <div class="expandable-box">
-            <div>
-              <h4>NEWSPAPERS</h4>
-              <p class="box-preview">Royal announcements, political developments, business news, society pages, local events, and advertisements.</p>
-              <div class="box-more-content">
-                <em>The Norwyn Herald &bull; March 1994</em><br><br>
-                The articles, dispatches, and public columns reveal both the things Norwyn chose to print—and the things it did not.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 3: ROYAL DOCUMENTS -->
-          <div class="expandable-box">
-            <div>
-              <h4>ROYAL DOCUMENTS</h4>
-              <p class="box-preview">Invitations, official announcements, royal correspondence, household schedules, and ceremonial programs.</p>
-              <div class="box-more-content">
-                <em>Royal Household Record &bull; Private Correspondence &bull; 1994</em><br><br>
-                Formal papers and confidential household orders that govern seating, public statements, and diplomatic protocol.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 4: GOVERNMENT RECORDS -->
-          <div class="expandable-box">
-            <div>
-              <h4>GOVERNMENT RECORDS</h4>
-              <p class="box-preview">Treaties, trade agreements, reports, official correspondence, administrative documents, and public notices.</p>
-              <div class="box-more-content">
-                Documents demonstrating the legal and trade covenants negotiated between ministries, parliamentary benches, and foreign ambassadors.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 5: PERSONAL PAPERS -->
-          <div class="expandable-box">
-            <div>
-              <h4>PERSONAL PAPERS</h4>
-              <p class="box-preview">Letters, notes, photographs, diaries, postcards, and unrecorded private moments.</p>
-              <div class="box-more-content">
-                Small records of people who were living through events rather than writing history, capturing doubts that never appear in official gazettes.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- Box 6: EVERYDAY NORWYN -->
-          <div class="expandable-box">
-            <div>
-              <h4>EVERYDAY NORWYN</h4>
-              <p class="box-preview">Menus, train schedules, shop advertisements, school notices, event programs, packaging, and receipts.</p>
-              <div class="box-more-content">
-                Ordinary objects that reveal what life looked like when nobody was trying to preserve it.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 09 — PLACES IN THE NOVEL (PURE TYPOGRAPHY, NO PHOTO FRAMES) -->
-      <div class="archive-category-block">
-        <h3 class="category-title">09 — PLACES IN THE NOVEL</h3>
-        <div class="category-subtitle">WHERE THE STORY HAPPENS</div>
-        <p class="category-prose">
-          The world of <em>Or So She Thought</em> is not contained inside one building. Each location places Elizabeth inside a different set of expectations.
-        </p>
-
-        <div class="grid-2">
-          <!-- 1. The Royal Palace -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE ROYAL PALACE</h4>
-              <p class="box-preview">Elizabeth's childhood home and the center of her family's public life.</p>
-              <div class="box-more-content">
-                The seat of the royal family where authority is quiet, routine, and structured by etiquette learned before anyone thought to explain why.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- 2. The Royal Library -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE ROYAL LIBRARY</h4>
-              <p class="box-preview">A private space associated with reading, reflection, and some of Elizabeth's earliest questions.</p>
-              <div class="box-more-content">
-                Shelves that hold generations of recorded state history alongside private, unread notebooks and forbidden conversations.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- 3. The Capital -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE CAPITAL</h4>
-              <p class="box-preview">The city surrounding the palace, where royal life meets ordinary life.</p>
-              <div class="box-more-content">
-                Stone quays, government avenues, crowded apartment blocks, river trade, and the bustling rhythm of commerce.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- 4. The RAG -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE RAG</h4>
-              <p class="box-preview">An institution connected to Elizabeth's education and intellectual development.</p>
-              <div class="box-more-content">
-                The Royal Academy of Governance, where theories of constitutional state power are taught alongside quiet, dangerous debates.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- 5. Elias's Workshop -->
-          <div class="expandable-box">
-            <div>
-              <h4>ELIAS'S WORKSHOP</h4>
-              <p class="box-preview">A family workshop shaped by timber, iron, mechanical work, and independent labor.</p>
-              <div class="box-more-content">
-                A place where usefulness matters more than ceremony, and where broken things can be honestly repaired.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- 6. Valenne -->
-          <div class="expandable-box">
-            <div>
-              <h4>VALENNE</h4>
-              <p class="box-preview">The neighboring kingdom Elizabeth is expected to enter through marriage.</p>
-              <div class="box-more-content">
-                An industrial realm bound to Norwyn by trade, mineral wealth, and generational political covenants.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- 7. The Mountains -->
-          <div class="expandable-box">
-            <div>
-              <h4>THE MOUNTAINS</h4>
-              <p class="box-preview">A region of Norwyn where Elizabeth encounters a different set of expectations and a different understanding of work, community, and responsibility.</p>
-              <div class="box-more-content">
-                Steep slopes, cold winters, communal ovens, and obligations shaped by shared survival rather than royal birthright.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <!-- 8. Mama Elena's Home -->
-          <div class="expandable-box">
-            <div>
-              <h4>MAMA ELENA'S HOME</h4>
-              <p class="box-preview">A temporary home for Elizabeth outside the world she has always known.</p>
-              <div class="box-more-content">
-                It is not a place without rules. It is simply a place where she has to discover them for herself.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 10. THE ENDING / NORWYN IS MORE THAN A SETTING -->
-      <div style="margin-top: 5rem; padding-top: 3.5rem; border-top: 1px solid var(--border); text-align: center;">
-        <span class="section-eyebrow" style="letter-spacing: 0.25em;">NORWYN IS MORE THAN A SETTING</span>
-        <p class="lead-text" style="max-width: 680px; margin: 1.5rem auto 2.5rem; line-height: 1.85;">
-          Norwyn is the world that taught Elizabeth what was normal.<br><br>
-          The palace taught her one version of responsibility. The capital showed her what status looked like. Valenne revealed how private decisions can become political ones.<br><br>
-          And beyond the places she knows, there are other ways of living, other obligations, and other versions of what a life can be.<br><br>
-          <em>Wherever Elizabeth goes, she carries something with her.</em>
-        </p>
-
-        <button onclick="openSection('people')" style="background: none; border: 1px solid var(--border-dark); padding: 0.85rem 2rem; font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink); cursor: pointer; border-radius: 999px; transition: all 0.2s ease;">
-          MEET THE PEOPLE OF NORWYN &rarr;
-        </button>
+      <div class="section-return-bar">
+        <button class="section-return-btn" onclick="openSection('people')">Meet the People →</button>
+        <button class="section-return-btn" onclick="closeAllSections()">Return to Home ↑</button>
       </div>
 
     </div>
@@ -1694,7 +1470,6 @@
   <section id="people" class="content-section">
     <div class="container">
       
-      <!-- ABOUT THIS WORLD NOTICE -->
       <div style="margin-bottom: 3.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
         <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 0.6rem; color: var(--ink);">ABOUT THIS WORLD</div>
         <p style="font-size: 1.05rem; color: var(--ink-muted); font-style: italic; line-height: 1.8;">
@@ -1719,7 +1494,6 @@
       </p>
 
       <div class="grid-2">
-        <!-- Elizabeth -->
         <div class="card">
           <h3>ELIZABETH</h3>
           <p>
@@ -1730,7 +1504,6 @@
           </p>
         </div>
 
-        <!-- Anne -->
         <div class="card">
           <h3>ANNE</h3>
           <p>
@@ -1741,7 +1514,6 @@
           </p>
         </div>
 
-        <!-- Edward of Valenne -->
         <div class="card">
           <h3>EDWARD OF VALENNE</h3>
           <p>
@@ -1752,7 +1524,6 @@
           </p>
         </div>
 
-        <!-- Elias -->
         <div class="card">
           <h3>ELIAS</h3>
           <p>
@@ -1763,19 +1534,15 @@
           </p>
         </div>
 
-        <!-- Isabel -->
         <div class="card">
           <h3>ISABEL</h3>
           <p>
             Isabel is Elizabeth's younger sister, and although they were raised within the same royal household, they have not experienced it in quite the same way.<br /><br />
             She understands the expectations placed on their family, the responsibilities that come with their position, and the small rules that govern life inside the palace.<br /><br />
-            She is close to Elizabeth, but being close to someone does not mean seeing the world in exactly the same way.<br /><br />
-            Isabel has her own understanding of what their family owes to the kingdom, and her own reasons for accepting some things Elizabeth has begun to question.<br /><br />
-            That makes her one of the people Elizabeth cannot simply place on one side or the other.
+            She is close to Elizabeth, but being close to someone does not mean seeing the world in exactly the same way.
           </p>
         </div>
 
-        <!-- Mama Elena -->
         <div class="card">
           <h3>MAMA ELENA</h3>
           <p>
@@ -1787,22 +1554,14 @@
         </div>
       </div>
 
-      <!-- Rowan -->
-      <div class="card" style="margin-top: 2.5rem;">
-        <h3>ROWAN</h3>
-        <p>
-          Rowan's influence reaches Elizabeth through a book before it reaches her through memory.<br /><br />
-          His ideas give language to questions Elizabeth has not yet learned how to ask.<br /><br />
-          One of them stays with her longer than she expects:
-        </p>
-        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--ink); margin-top: 1rem;">
-          "What does a person carry with them when they leave?"
-        </p>
+      <div class="section-return-bar">
+        <button class="section-return-btn" onclick="openSection('making')">Behind the Novel →</button>
+        <button class="section-return-btn" onclick="closeAllSections()">Return to Home ↑</button>
       </div>
     </div>
   </section>
 
-  <!-- 4. WHERE IT BEGAN (EXPANDABLE ESSAY ACCORDION: THE MAKING OF OR SO SHE THOUGHT) -->
+  <!-- 4. WHERE IT BEGAN (THE MAKING OF OR SO SHE THOUGHT) -->
   <section id="making" class="content-section section-alt">
     <div class="container">
       <div class="essay-list-container">
@@ -1815,7 +1574,6 @@
           The Making of Or So She Thought
         </div>
 
-        <!-- Essay Introduction -->
         <p class="essay-p">
           <em>Or So She Thought</em> did not arrive fully formed.
         </p>
@@ -1832,7 +1590,6 @@
         <!-- 10-Item Expandable Accordion List -->
         <div class="essay-accordion-list">
           
-          <!-- 01 -->
           <div class="essay-accordion-item">
             <button class="essay-accordion-header" onclick="toggleEssay(this)">
               <span>01 — THE STORY BEFORE THE STORY</span>
@@ -1848,16 +1605,9 @@
               <p class="essay-p">
                 At first, I was more interested in the events. Then I became more interested in the person experiencing them. That changed everything. A plot can tell you what happens to someone. A character can make you ask why it matters to them.
               </p>
-              <p class="essay-p">
-                Once Elizabeth became more interesting to me than the story I had originally intended to tell, the novel began moving in a different direction. I stopped asking only what should happen next. I began asking what kind of person would have arrived at this moment. And then another question followed: <em>What would have had to happen for this person to become this way?</em>
-              </p>
-              <p class="essay-p">
-                That question stayed.
-              </p>
             </div>
           </div>
 
-          <!-- 02 -->
           <div class="essay-accordion-item">
             <button class="essay-accordion-header" onclick="toggleEssay(this)">
               <span>02 — WHEN THE WORLD HAD TO BECOME A WORLD</span>
@@ -1868,24 +1618,11 @@
                 Norwyn could not exist simply because Elizabeth needed somewhere to live. The more I wrote, the more obvious that became.
               </p>
               <p class="essay-p">
-                A fictional world becomes thin when everything inside it appears to have been arranged for the protagonist. The government exists because the plot requires a government. The royal family exists because the protagonist is royal. Another kingdom exists because a marriage requires another kingdom. A mountain community exists because the protagonist needs somewhere to go. That kind of world can function. It does not necessarily feel alive.
-              </p>
-              <p class="essay-p">
-                Norwyn had to exist before Elizabeth began questioning it. Its institutions needed histories. Its traditions needed reasons. Its inequalities needed consequences. Its ordinary people needed lives that did not depend on whether Elizabeth was paying attention.
-              </p>
-              <p class="essay-p">
-                Most importantly, the people inside Norwyn had to believe that their way of living made sense. They could not all be waiting for Elizabeth to discover that the system was wrong. That would make the world too convenient.
-              </p>
-              <p class="essay-p">
-                People rarely experience their own lives as systems. They experience them as Tuesday. They go to work. They follow customs. They raise children. They marry. They obey rules they agree with and complain about rules they don't. They inherit assumptions without necessarily recognizing them as assumptions.
-              </p>
-              <p class="essay-p">
-                That became important to Norwyn. I wanted the kingdom to feel ordinary enough that Elizabeth's questioning of it would be more complicated than simply discovering that she had been deceived.
+                A fictional world becomes thin when everything inside it appears to have been arranged for the protagonist. Norwyn had to exist before Elizabeth began questioning it. Its institutions needed histories. Its traditions needed reasons. Its inequalities needed consequences. Its ordinary people needed lives that did not depend on whether Elizabeth was paying attention.
               </p>
             </div>
           </div>
 
-          <!-- 03 -->
           <div class="essay-accordion-item">
             <button class="essay-accordion-header" onclick="toggleEssay(this)">
               <span>03 — ELIZABETH BECAME MORE DIFFICULT</span>
@@ -1893,106 +1630,14 @@
             </button>
             <div class="essay-accordion-body">
               <p class="essay-p">
-                Elizabeth was probably the character who changed the novel most. The easiest version of her story would have been familiar: a young woman grows up inside a powerful institution. She discovers that the life prepared for her is not the life she wants. She resists it. She leaves. She becomes free. There is a story there. It simply wasn't the story I wanted anymore.
+                Elizabeth was probably the character who changed the novel most. The easiest version of her story would have been familiar: a young woman grows up inside a powerful institution. She discovers that the life prepared for her is not the life she wants. She resists it. She leaves. She becomes free.
               </p>
               <p class="essay-p">
-                The more I understood Elizabeth, the less convincing that version became. She could love her family and still be hurt by them. She could benefit from privilege and still question the system that gave it to her. She could genuinely want some of the things she had been taught to want. She could reject an expectation and later discover that she had rejected the expectation rather than the thing itself. She could leave and still carry parts of the life she had left behind. She could return without becoming the same person who had left.
-              </p>
-              <p class="essay-p">
-                That made her less convenient as a protagonist. It also made her more human. I became less interested in whether Elizabeth would rebel and more interested in whether she could tell the difference between something she had been taught to want and something she genuinely wanted. That distinction is much harder to resolve.
+                The more I understood Elizabeth, the less convincing that version became. She could love her family and still be hurt by them. She could benefit from privilege and still question the system that gave it to her. She could leave and still carry parts of the life she had left behind.
               </p>
             </div>
           </div>
 
-          <!-- 04 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>04 — THE PEOPLE COULD NOT HAVE ONE JOB</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Characters often begin with a function. Someone is the mother. Someone is the fiancé. Someone is the friend. Someone is the person who introduces the protagonist to another world. That can be useful when beginning a novel. It becomes limiting if the character never grows beyond it.
-              </p>
-              <p class="essay-p">
-                As the story developed, I became increasingly resistant to characters who existed only to perform a role in Elizabeth's development. Anne could not simply be the person who controlled her. Edward could not simply be the arranged husband. Elias could not simply be the person who understood her. Isabel could not simply be the sister who took the opposite position. Mama Elena could not simply represent another way of living. Rowan could not simply provide the idea that changes Elizabeth's thinking.
-              </p>
-              <p class="essay-p">
-                They needed lives that existed beyond what they could do for Elizabeth. They needed reasons for their decisions that made sense from where they stood. And sometimes those reasons had to remain understandable even when Elizabeth disagreed with them.
-              </p>
-              <p class="essay-p">
-                That changed the relationships. A character becomes much harder to write when you can no longer ask only, <em>What does this person do for the protagonist?</em> You have to ask: What does this person want? What do they believe they are protecting? What do they misunderstand? What are they willing to sacrifice? What might they be right about?
-              </p>
-              <p class="essay-p">
-                The last question is often the most inconvenient.
-              </p>
-            </div>
-          </div>
-
-          <!-- 05 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>05 — WHEN THE CONFLICT STOPPED BEING SIMPLE</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                The novel became more interesting when I stopped looking for a clean opposition between freedom and control. The palace could not be entirely oppressive. The mountains could not be entirely free. Tradition could not be entirely foolish. Rebellion could not automatically be wisdom. Obedience could not automatically be weakness. Leaving could not automatically mean liberation. Returning could not automatically mean failure.
-              </p>
-              <p class="essay-p">
-                The more I removed those easy oppositions, the more room the story had to breathe.
-              </p>
-              <p class="essay-p">
-                A person can be shaped by something without being false because of it. A person can inherit a belief and still sincerely believe it. A person can adapt to a situation and later decide that the adaptation no longer belongs there. A person can choose something for reasons that were partly formed by other people and still genuinely choose it. Those contradictions were more interesting to me than a clean transformation from one state into another.
-              </p>
-            </div>
-          </div>
-
-          <!-- 06 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>06 — THE SCENES THAT REFUSED TO LEAVE</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Some scenes survive because they move the story forward. Others survive because they contain something the novel needs even when their original purpose disappears.
-              </p>
-              <p class="essay-p">
-                I have become suspicious of scenes that exist only because I once thought they were important. A scene should not survive simply because it took a long time to write. But neither should it disappear simply because it does not perform an obvious plot function.
-              </p>
-              <p class="essay-p">
-                Sometimes a scene changes the reader's understanding of a character. Sometimes it establishes a relationship that later makes another scene matter. Sometimes it gives the story a piece of ordinary life that would be missing if everything were reduced to plot. And sometimes a scene survives because removing it makes the novel technically cleaner but emotionally poorer.
-              </p>
-              <p class="essay-p">
-                Those are often the difficult ones. You have to decide whether the story needs the scene or whether the writer is simply reluctant to lose it. The distinction is not always obvious.
-              </p>
-            </div>
-          </div>
-
-          <!-- 07 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>07 — THE SCENES THAT HAD TO GO</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Writing a novel also means discovering what the novel does not need. Some scenes exist because the writer needs to understand something. That does not mean the reader needs to understand it in the same way.
-              </p>
-              <p class="essay-p">
-                A scene can teach the writer who a character is and still belong nowhere in the finished book. A conversation can reveal an important relationship and still be replaced by a glance, a decision, or a later consequence. A chapter can solve a problem in the manuscript while creating a larger problem in the novel.
-              </p>
-              <p class="essay-p">
-                Eventually, revision becomes less about asking whether something is good and more about asking whether it belongs. That is a harder question. A good scene can still be wrong for the book. A beautiful sentence can still be unnecessary. A carefully constructed subplot can still be taking the novel somewhere it no longer wants to go.
-              </p>
-              <p class="essay-p">
-                Some of the work of writing <em>Or So She Thought</em> has therefore been learning to distinguish between what I wrote and what the novel actually needs.
-              </p>
-            </div>
-          </div>
-
-          <!-- 08 -->
           <div class="essay-accordion-item">
             <button class="essay-accordion-header" onclick="toggleEssay(this)">
               <span>08 — THE TITLE CAME LATER</span>
@@ -2005,41 +1650,9 @@
               <p class="essay-p">
                 The phrase belongs to the space between what a person believes and what they later discover was incomplete. It does not necessarily mean that the person was wrong. That distinction mattered to me.
               </p>
-              <p class="essay-p">
-                Elizabeth's story is not built around the idea that everything she once believed was false. Some things were true. Some things were incomplete. Some things changed because she changed. Some things changed because she learned something she had not known before. And sometimes the meaning of something changes without the thing itself changing at all.
-              </p>
-              <p class="essay-p">
-                The title eventually felt right because it could hold that uncertainty without explaining it. It could belong to a sentence. It could belong to a memory. It could belong to a decision. It could belong to the reader.
-              </p>
             </div>
           </div>
 
-          <!-- 09 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>09 — WHAT THE NOVEL BECAME</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                At some point, I stopped trying to make the novel resemble the story I had originally imagined. That may be one of the quieter milestones of writing a book.
-              </p>
-              <p class="essay-p">
-                You begin with an idea of what the story is supposed to be. Then the characters resist. The world develops its own logic. A question becomes more interesting than the answer you planned. A relationship becomes more complicated than its original purpose. A scene changes the meaning of an earlier scene.
-              </p>
-              <p class="essay-p">
-                Eventually, the novel begins telling you what it is. The writer still makes the decisions. But the decisions are no longer being made from the same place.
-              </p>
-              <p class="essay-p">
-                <em>Or So She Thought</em> became a novel about choice, but not simply about having the freedom to choose. It became interested in something earlier than that: How does a person learn what is worth choosing? How do expectations become preferences? How does familiarity become certainty? How much of what feels like personality has a history behind it? And when a person finally begins to question those things, what exactly are they questioning?
-              </p>
-              <p class="essay-p">
-                I do not think the novel answers all of those questions. I don't think it should. Some questions became more interesting once I stopped trying to resolve them.
-              </p>
-            </div>
-          </div>
-
-          <!-- 10 -->
           <div class="essay-accordion-item">
             <button class="essay-accordion-header" onclick="toggleEssay(this)">
               <span>10 — THE NOVEL I DID NOT KNOW I WAS WRITING</span>
@@ -2050,17 +1663,16 @@
                 Looking back, the strangest part of writing a novel is how obvious the finished version can make the process look. The final story has a shape. The earlier versions did not.
               </p>
               <p class="essay-p">
-                There were decisions that seemed permanent until they weren't. Characters who became someone else. Ideas that disappeared and later returned in another form. Questions that survived because I could not quite make them go away.
-              </p>
-              <p class="essay-p">
-                That is part of what I mean when I say <em>Or So She Thought</em> changed as I wrote it. The novel was not simply being constructed. I was discovering what I had been interested in. And sometimes that meant realizing that the story I thought I wanted to tell was not the story I was most curious about.
-              </p>
-              <p class="essay-p">
                 Perhaps that is one of the strange privileges of writing fiction. You begin by deciding what happens. Eventually, if you stay with it long enough, the more difficult task becomes noticing what the story keeps asking you to look at.
               </p>
             </div>
           </div>
 
+        </div>
+
+        <div class="section-return-bar">
+          <button class="section-return-btn" onclick="openSection('beyond')">Beyond the Novel →</button>
+          <button class="section-return-btn" onclick="closeAllSections()">Return to Home ↑</button>
         </div>
 
       </div>
@@ -2092,43 +1704,10 @@
         </div>
 
         <div class="question-block">
-          <h3 class="question-title">CAN A LIFE CHOSEN FOR YOU BECOME GENUINELY YOURS?</h3>
-          <p class="question-body">
-            We inherit more than possessions.<br />
-            We inherit assumptions about what a good life looks like, what is sensible, what is respectable, and what is possible.<br />
-            Sometimes we eventually choose those things ourselves. Does their history make the choice less real?
-          </p>
-        </div>
-
-        <div class="question-block">
           <h3 class="question-title">CAN SOMEONE LOVE YOU AND STILL DECIDE TOO MUCH OF YOUR LIFE?</h3>
           <p class="question-body">
             Love does not always arrive separately from power.<br />
             Sometimes the person protecting you is also the person deciding what you need protection from.
-          </p>
-        </div>
-
-        <div class="question-block">
-          <h3 class="question-title">IS LEAVING ALWAYS FREEDOM?</h3>
-          <p class="question-body">
-            Leaving changes what surrounds a person.<br />
-            It does not necessarily change what that person has learned to expect, fear, value, or repeat.
-          </p>
-        </div>
-
-        <div class="question-block">
-          <h3 class="question-title">WHAT DO WE CARRY WITH US WHEN WE LEAVE?</h3>
-          <p class="question-body">
-            A person can cross a border, leave a house, change their clothes, abandon a role—and still bring much of the old world with them.
-          </p>
-        </div>
-
-        <div class="question-block">
-          <h3 class="question-title">CAN RETURNING BE A CHOICE?</h3>
-          <p class="question-body">
-            Sometimes leaving is necessary.<br />
-            Sometimes staying is.<br />
-            Sometimes the harder question is whether returning can ever mean going back freely.
           </p>
         </div>
 
@@ -2138,74 +1717,65 @@
             The deepest rules are sometimes the ones we learn well enough to enforce ourselves.
           </p>
         </div>
-
-        <div class="question-block">
-          <h3 class="question-title">WHAT DOES IT MEAN TO CHOOSE WHEN SO MUCH OF YOU WAS FORMED BEFORE YOU COULD CHOOSE?</h3>
-          <p class="question-body">
-            Before a person can decide what they believe, they have already learned what to notice, what to expect, what to fear, and what to call normal.<br />
-            Choice does not begin from nowhere.
-          </p>
-        </div>
       </div>
 
-      <!-- NOTES FROM THE NOVEL (LIVING ARCHIVE) -->
+      <!-- NOTES FROM THE NOVEL (INLINE EXPANDABLE DRAWERS) -->
       <div style="margin-top: 3.5rem;">
         <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 1.2rem;">NOTES FROM THE NOVEL</div>
         <p class="sub-lead-text" style="margin-bottom: 2rem;">
-          Fragments, questions, discoveries, discarded ideas, research, scenes, and occasional notes from the long process of writing a novel.
+          Fragments, questions, discoveries, and notes from the process of writing the book.
         </p>
 
         <div class="grid-2">
           <div class="note-entry">
             <div>
               <h3>WHERE OR SO SHE THOUGHT REALLY BEGAN</h3>
-              <p>
-                On the story that came before Elizabeth's story, and the moment one character quietly became more interesting than the novel I had originally planned.
-              </p>
+              <p>On the story that came before Elizabeth's story, and the moment one character quietly became more interesting than the novel I had originally planned.</p>
+              <div class="box-more-content">
+                Elizabeth began as a secondary character in a broader historical dispute. But during the drafting of an early dining scene, her quiet compliance began to read not as obedience, but as an active, taxing internal labor. That labor became the true center of the work.
+              </div>
             </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
+            <button class="read-link" onclick="toggleNote(this)">READ NOTE &rarr;</button>
           </div>
 
           <div class="note-entry">
             <div>
               <h3>THE MENDED BLOUSE</h3>
-              <p>
-                On one of the smallest objects in the novel, and why Elizabeth repairing something badly became more important than I expected.
-              </p>
+              <p>On one of the smallest objects in the novel, and why Elizabeth repairing something badly became more important than I expected.</p>
+              <div class="box-more-content">
+                In Chapter 05, Elizabeth attempts to repair a seam by hand. For someone whose wardrobe has always been invisible, handled by royal dressers, touching needle to linen and failing to produce perfection is her first brush with manual honesty.
+              </div>
             </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
+            <button class="read-link" onclick="toggleNote(this)">READ NOTE &rarr;</button>
           </div>
 
           <div class="note-entry">
             <div>
               <h3>WHY ELIAS HAD TO LIVE</h3>
-              <p>
-                On refusing to let tragedy make Elizabeth's choices too easy.
-              </p>
+              <p>On refusing to let tragedy make Elizabeth's choices too easy.</p>
+              <div class="box-more-content">
+                Killing Elias would have turned Elizabeth's departure into a mourning ceremony or a martyrdom. Letting him survive forced her to decide whether to leave based on who she was, not who she had lost.
+              </div>
             </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
+            <button class="read-link" onclick="toggleNote(this)">READ NOTE &rarr;</button>
           </div>
 
           <div class="note-entry">
             <div>
               <h3>BUILDING A PALACE NOBODY THINKS IS A PRISON</h3>
-              <p>
-                On writing a world where control can genuinely feel like care to the person doing the controlling.
-              </p>
+              <p>On writing a world where control can genuinely feel like care to the person doing the controlling.</p>
+              <div class="box-more-content">
+                Queen Anne does not hate Elizabeth; she is deeply devoted to her preservation. That tenderness makes the cage impossible to see from within.
+              </div>
             </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
+            <button class="read-link" onclick="toggleNote(this)">READ NOTE &rarr;</button>
           </div>
         </div>
+      </div>
 
-        <div class="note-entry" style="margin-top: 2rem;">
-          <div>
-            <h3>WHAT I DIDN'T UNDERSTAND ABOUT ANNE</h3>
-            <p>
-              On discovering that making Anne more human did not make her choices less consequential.
-            </p>
-          </div>
-          <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
-        </div>
+      <div class="section-return-bar">
+        <button class="section-return-btn" onclick="openSection('about')">About the Author →</button>
+        <button class="section-return-btn" onclick="closeAllSections()">Return to Home ↑</button>
       </div>
 
     </div>
@@ -2218,7 +1788,7 @@
         <div class="section-eyebrow">The Author</div>
       </div>
       <h2 class="section-title">ABOUT QUEEN USMAN</h2>
-      <p class="section-description" style="font-size: 1.15rem; color: var(--ink); margin-bottom: 2rem; font-family: var(--font-serif); font-style: italic;">
+      <p style="font-size: 1.15rem; color: var(--ink); margin-bottom: 2rem; font-family: var(--font-serif); font-style: italic;">
         A novelist interested in how people become who they are.
       </p>
 
@@ -2228,23 +1798,18 @@
             Queen Usman writes fiction about the things that shape people before they fully understand they are being shaped—family, desire, expectation, relationships, power, circumstance, and repetition.
           </p>
           <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.8;">
-            Her current novel, <em>Or So She Thought</em>, is a psychological novel set in 1990s Norwyn. It follows Elizabeth, a young woman whose future has been carefully prepared for her, and the increasingly difficult question of how much of that future she has actually chosen.
-          </p>
-          <p style="color: var(--ink-muted); line-height: 1.8;">
-            Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people become who they are.
+            Her novel, <em>Or So She Thought</em>, is a psychological novel set in 1990s Norwyn. It follows Elizabeth, a young woman whose future has been carefully prepared for her, and the increasingly difficult question of how much of that future she has actually chosen.
           </p>
 
-          <!-- Current Novel Banner -->
           <div class="card" style="margin-top: 3rem; background: var(--bg-cream);">
             <div class="section-eyebrow" style="margin-bottom: 0.5rem;">CURRENT NOVEL</div>
             <h3 style="margin-bottom: 0.4rem;">OR SO SHE THOUGHT</h3>
             <p style="margin-bottom: 1.2rem;">
               A 1990s Royal Psychological Novel of Duty, Doubt, and Choice
             </p>
-            <a href="#novel" onclick="openSection('novel')" class="read-link">ENTER THE NOVEL →</a>
+            <button onclick="openSection('novel')" class="read-link">ENTER THE NOVEL →</button>
           </div>
 
-          <!-- Elsewhere & Contact Links -->
           <div class="grid-2" style="margin-top: 2rem;">
             <div class="card" style="background: var(--surface);">
               <div class="section-eyebrow" style="margin-bottom: 0.5rem;">ELSEWHERE</div>
@@ -2265,6 +1830,10 @@
           </div>
         </div>
       </div>
+
+      <div class="section-return-bar">
+        <button class="section-return-btn" onclick="closeAllSections()">Return to Home ↑</button>
+      </div>
     </div>
   </section>
 
@@ -2274,7 +1843,7 @@
       <div class="subscribe-box">
         <h2 class="section-title" style="font-size: 2.1rem; margin-bottom: 1rem;">Keep Up With the Novel</h2>
         <p style="color: var(--ink-muted); font-size: 0.96rem; line-height: 1.75;">
-          Follow <em>Or So She Thought</em> as it takes shape. Get occasional excerpts, notes from the writing process, new developments, and news about the novel, sent when there is something worth sharing.
+          Follow <em>Or So She Thought</em> as it takes shape. Get occasional excerpts, notes from the writing process, and news about the novel.
         </p>
 
         <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing.');">
@@ -2292,8 +1861,66 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & ESSAY ACCORDION -->
+  <!-- JAVASCRIPT: DRAWER, SECTIONS, READER & EXPANDERS -->
   <script>
+    // Chapter database
+    const chapters = {
+      1: {
+        title: "The Life She Is Supposed to Want",
+        text: `
+          <p>She was never forbidden to choose. She was simply taught what the right choice looked like.</p>
+          <p>By the time Elizabeth was nineteen, the lesson had been learned so thoroughly that no one ever needed to raise their voice. If her posture slipped during morning mass at the Royal Chapel, her mother’s glance did not accuse—it merely acknowledged that an expectation remained unmet, and that was always worse.</p>
+          <p>Norwyn in early autumn smelled of diesel from the quays and damp river stone. In the State Rooms, windows were kept locked against the soot, sealing in the scent of aged cedar wax and centuries of inherited discretion. Her mother stood near the south-facing casement, reviewing the guest list for the Founders' Gala.</p>
+          <p>"Edward will arrive by train on the twenty-fourth," the Queen said, not turning around. "The Valenne delegation will take the east suites. You will be seated beside him at dinner."</p>
+          <p>It was not framed as a directive. It was stated as fact, like the sunrise or the arrival of winter. Elizabeth adjusted the cuff of her jacket, feeling the seam where the tailor had tucked an extra inch to accommodate her shoulders. She wanted to ask what would happen if she simply stayed in the library until the dinner had ended, but the thought evaporated before it reached her throat. One did not argue with facts.</p>
+        `
+      },
+      2: {
+        title: "Edward of Valenne",
+        text: `
+          <p>Edward looked less like an ambassador and more like a man who was quietly cataloging every doorway in the room.</p>
+          <p>He was tall, with the measured restraint characteristic of Valenne’s northern houses, where conversation was treated as a transaction rather than an ornament. When he took her hand in the garden gallery, his grip was neither cold nor intimate.</p>
+          <p>"They told me you spent most of your afternoons in the archive," he remarked, his eyes lingering on the garden courtyard rather than her face. "I had expected a scholar, not a hostage."</p>
+        `
+      }
+    };
+
+    let currentChapter = 1;
+
+    function readChapter(num) {
+      currentChapter = num;
+      const ch = chapters[num] || {
+        title: `Chapter ${num.toString().padStart(2, '0')}`,
+        text: `<p>Manuscript folio for Chapter ${num.toString().padStart(2, '0')} is undergoing archival transcription. Select Chapter 01 or 02 to read existing excerpts.</p>`
+      };
+
+      document.getElementById('reader-ch-num').innerText = `CHAPTER ${num.toString().padStart(2, '0')}`;
+      document.getElementById('reader-ch-title').innerText = ch.title;
+      document.getElementById('reader-content').innerHTML = ch.text;
+
+      const reader = document.getElementById('reader-pane');
+      reader.classList.add('open');
+
+      document.getElementById('reader-prev-btn').style.visibility = (num === 1) ? 'hidden' : 'visible';
+      document.getElementById('reader-next-btn').style.visibility = (num === 26) ? 'hidden' : 'visible';
+
+      reader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function closeReader() {
+      document.getElementById('reader-pane').classList.remove('open');
+      document.getElementById('contents-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function nextChapter() {
+      if (currentChapter < 26) readChapter(currentChapter + 1);
+    }
+
+    function prevChapter() {
+      if (currentChapter > 1) readChapter(currentChapter - 1);
+    }
+
+    // Toggle Menu Drawer
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
       const overlay = document.getElementById('menu-overlay');
@@ -2320,7 +1947,6 @@
       const targetSection = document.getElementById(sectionId);
       if (targetSection) {
         targetSection.classList.add('active-section');
-
         setTimeout(() => {
           targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
@@ -2333,7 +1959,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Toggle Expandable Archive Boxes (Norwyn Section)
+    // Toggle Box Expanders
     function toggleBox(btn) {
       const card = btn.closest('.expandable-box');
       const moreContent = card.querySelector('.box-more-content');
@@ -2348,24 +1974,26 @@
       }
     }
 
-    // Toggle Accordion List Items (Where It Began Essay)
+    // Toggle Notes Expanders
+    function toggleNote(btn) {
+      const card = btn.closest('.note-entry');
+      const moreContent = card.querySelector('.box-more-content');
+      const isOpen = moreContent.classList.contains('open');
+
+      if (isOpen) {
+        moreContent.classList.remove('open');
+        btn.innerHTML = 'READ NOTE &rarr;';
+      } else {
+        moreContent.classList.add('open');
+        btn.innerHTML = 'CLOSE NOTE &uarr;';
+      }
+    }
+
+    // Toggle Accordion Items
     function toggleEssay(btn) {
       const item = btn.closest('.essay-accordion-item');
       item.classList.toggle('open');
     }
-
-    // Touch swipe right to close drawer on mobile
-    let touchStartX = 0;
-    const drawer = document.getElementById('menu-drawer');
-    drawer.addEventListener('touchstart', (e) => {
-      touchStartX = e.touches[0].clientX;
-    }, { passive: true });
-    
-    drawer.addEventListener('touchend', (e) => {
-      if (e.changedTouches[0].clientX - touchStartX > 50) {
-        toggleMenu(false);
-      }
-    }, { passive: true });
 
     // Close menu with ESC key
     document.addEventListener('keydown', (e) => {
