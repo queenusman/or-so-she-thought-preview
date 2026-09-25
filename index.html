@@ -591,37 +591,109 @@
     }
 
     /* =========================================================
-       LONG-FORM ESSAY STYLES (WHERE IT BEGAN)
+       EXPANDABLE & RETRACTABLE ESSAY ACCORDION (WHERE IT BEGAN)
        ========================================================= */
-    .essay-container {
-      max-width: 760px;
+    .essay-list-container {
+      max-width: 820px;
       margin: 0 auto;
     }
 
-    .essay-section {
-      margin-top: 3.8rem;
-      padding-top: 2.5rem;
+    .essay-accordion-list {
+      margin-top: 2.5rem;
       border-top: 1px solid var(--border);
     }
 
-    .essay-num-title {
+    .essay-accordion-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .essay-accordion-header {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.4rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.65rem;
+      font-size: 1.32rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
-      margin-bottom: 1.35rem;
       color: var(--ink);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .essay-accordion-header:hover {
+      color: var(--gold-subtle);
+      padding-left: 8px;
+    }
+
+    .essay-accordion-icon {
+      font-family: var(--font-sans);
+      font-size: 1.35rem;
+      font-weight: 300;
+      color: var(--ink-faint);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+      line-height: 1;
+    }
+
+    .essay-accordion-item.open .essay-accordion-icon {
+      transform: rotate(45deg);
+      color: var(--ink);
+    }
+
+    .essay-accordion-body {
+      display: none;
+      padding: 0.5rem 0.5rem 2.2rem;
+      animation: fadeInText 0.35s ease;
+    }
+
+    .essay-accordion-item.open .essay-accordion-body {
+      display: block;
     }
 
     .essay-p {
       font-size: 1.05rem;
       line-height: 1.95;
       color: var(--ink-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .essay-p:last-child {
+      margin-bottom: 0;
     }
 
     .essay-p em, .essay-p strong {
       color: var(--ink);
+    }
+
+    /* Retract Button at the bottom of each essay chapter */
+    .essay-retract-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.65rem 1.4rem;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-top: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .essay-retract-btn:hover {
+      background: var(--ink);
+      color: var(--bg-cream);
+      border-color: var(--ink);
     }
 
     /* Subscription Box */
@@ -1756,20 +1828,20 @@
     </div>
   </section>
 
-  <!-- 4. WHERE IT BEGAN (LONG-FORM ESSAY: THE MAKING OF OR SO SHE THOUGHT) -->
+  <!-- 4. WHERE IT BEGAN (EXPANDABLE & RETRACTABLE ESSAY: THE MAKING OF OR SO SHE THOUGHT) -->
   <section id="making" class="content-section section-alt">
     <div class="container">
-      <div class="essay-container">
+      <div class="essay-list-container">
         
         <div class="section-header-bar">
           <div class="section-eyebrow">BEHIND THE NOVEL</div>
         </div>
         <h2 class="section-title">WHERE IT BEGAN</h2>
-        <div style="font-family: var(--font-serif); font-size: 1.35rem; font-style: italic; color: var(--gold-subtle); margin-top: -0.75rem; margin-bottom: 2.8rem; letter-spacing: 0.02em;">
+        <div style="font-family: var(--font-serif); font-size: 1.35rem; font-style: italic; color: var(--gold-subtle); margin-top: -0.75rem; margin-bottom: 2.2rem; letter-spacing: 0.02em;">
           The Making of Or So She Thought
         </div>
 
-        <!-- Essay Intro -->
+        <!-- Essay Introduction -->
         <p class="essay-p">
           <em>Or So She Thought</em> did not arrive fully formed.
         </p>
@@ -1777,249 +1849,254 @@
           There was a version of the story before there was this one. There were characters who belonged to earlier versions of it, places that existed before I understood what they were for, scenes that seemed essential until they weren't, and questions I thought I was writing about before realizing I had been asking a different question all along.
         </p>
         <p class="essay-p">
-          That is probably true of most novels.
+          That is probably true of most novels. The finished book creates the illusion that it was always heading toward itself. But novels are not usually discovered in that order. They are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.
         </p>
-        <p class="essay-p">
-          The finished book creates the illusion that it was always heading toward itself. Once the characters have names and the places have histories and the ending exists, it becomes difficult to remember how uncertain everything once was.
-        </p>
-        <p class="essay-p">
-          But novels are not usually discovered in that order.
-        </p>
-        <p class="essay-p">
-          They are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.
-        </p>
-        <p class="essay-p">
+        <p class="essay-p" style="margin-bottom: 2.5rem;">
           <em>Or So She Thought</em> changed because I kept following those changes.
         </p>
 
-        <!-- 01 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">01 — THE STORY BEFORE THE STORY</h3>
-          <p class="essay-p">
-            Every novel has an earlier version of itself.
-          </p>
-          <p class="essay-p">
-            Sometimes that earlier version survives in obvious ways: a character's name, a scene, a location, a discarded chapter. Sometimes it survives more quietly.
-          </p>
-          <p class="essay-p">
-            A question remains even after the story that produced it has disappeared.
-          </p>
-          <p class="essay-p">
-            <em>Or So She Thought</em> began with a different story. Elizabeth was not initially the person I thought she would become, and the novel did not begin with the particular question that eventually came to define it.
-          </p>
-          <p class="essay-p">
-            At first, I was more interested in the events. Then I became more interested in the person experiencing them. That changed everything.
-          </p>
-          <p class="essay-p">
-            A plot can tell you what happens to someone. A character can make you ask why it matters to them.
-          </p>
-          <p class="essay-p">
-            Once Elizabeth became more interesting to me than the story I had originally intended to tell, the novel began moving in a different direction. I stopped asking only what should happen next. I began asking what kind of person would have arrived at this moment.
-          </p>
-          <p class="essay-p">
-            And then another question followed: <em>What would have had to happen for this person to become this way?</em>
-          </p>
-          <p class="essay-p">
-            That question stayed.
-          </p>
-        </div>
+        <!-- 10-Item Expandable & Retractable Accordion List -->
+        <div class="essay-accordion-list">
+          
+          <!-- 01 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>01 — THE STORY BEFORE THE STORY</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Every novel has an earlier version of itself. Sometimes that earlier version survives in obvious ways: a character's name, a scene, a location, a discarded chapter. Sometimes it survives more quietly. A question remains even after the story that produced it has disappeared.
+              </p>
+              <p class="essay-p">
+                <em>Or So She Thought</em> began with a different story. Elizabeth was not initially the person I thought she would become, and the novel did not begin with the particular question that eventually came to define it.
+              </p>
+              <p class="essay-p">
+                At first, I was more interested in the events. Then I became more interested in the person experiencing them. That changed everything. A plot can tell you what happens to someone. A character can make you ask why it matters to them.
+              </p>
+              <p class="essay-p">
+                Once Elizabeth became more interesting to me than the story I had originally intended to tell, the novel began moving in a different direction. I stopped asking only what should happen next. I began asking what kind of person would have arrived at this moment. And then another question followed: <em>What would have had to happen for this person to become this way?</em>
+              </p>
+              <p class="essay-p">
+                That question stayed.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 02 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">02 — WHEN THE WORLD HAD TO BECOME A WORLD</h3>
-          <p class="essay-p">
-            Norwyn could not exist simply because Elizabeth needed somewhere to live. The more I wrote, the more obvious that became.
-          </p>
-          <p class="essay-p">
-            A fictional world becomes thin when everything inside it appears to have been arranged for the protagonist. The government exists because the plot requires a government. The royal family exists because the protagonist is royal. Another kingdom exists because a marriage requires another kingdom. A mountain community exists because the protagonist needs somewhere to go.
-          </p>
-          <p class="essay-p">
-            That kind of world can function. It does not necessarily feel alive.
-          </p>
-          <p class="essay-p">
-            Norwyn had to exist before Elizabeth began questioning it. Its institutions needed histories. Its traditions needed reasons. Its inequalities needed consequences. Its ordinary people needed lives that did not depend on whether Elizabeth was paying attention.
-          </p>
-          <p class="essay-p">
-            Most importantly, the people inside Norwyn had to believe that their way of living made sense. They could not all be waiting for Elizabeth to discover that the system was wrong. That would make the world too convenient.
-          </p>
-          <p class="essay-p">
-            People rarely experience their own lives as systems. They experience them as Tuesday.
-          </p>
-          <p class="essay-p">
-            They go to work. They follow customs. They raise children. They marry. They obey rules they agree with and complain about rules they don't. They inherit assumptions without necessarily recognizing them as assumptions.
-          </p>
-          <p class="essay-p">
-            That became important to Norwyn. I wanted the kingdom to feel ordinary enough that Elizabeth's questioning of it would be more complicated than simply discovering that she had been deceived.
-          </p>
-        </div>
+          <!-- 02 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>02 — WHEN THE WORLD HAD TO BECOME A WORLD</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Norwyn could not exist simply because Elizabeth needed somewhere to live. The more I wrote, the more obvious that became.
+              </p>
+              <p class="essay-p">
+                A fictional world becomes thin when everything inside it appears to have been arranged for the protagonist. The government exists because the plot requires a government. The royal family exists because the protagonist is royal. Another kingdom exists because a marriage requires another kingdom. A mountain community exists because the protagonist needs somewhere to go. That kind of world can function. It does not necessarily feel alive.
+              </p>
+              <p class="essay-p">
+                Norwyn had to exist before Elizabeth began questioning it. Its institutions needed histories. Its traditions needed reasons. Its inequalities needed consequences. Its ordinary people needed lives that did not depend on whether Elizabeth was paying attention.
+              </p>
+              <p class="essay-p">
+                Most importantly, the people inside Norwyn had to believe that their way of living made sense. They could not all be waiting for Elizabeth to discover that the system was wrong. That would make the world too convenient.
+              </p>
+              <p class="essay-p">
+                People rarely experience their own lives as systems. They experience them as Tuesday. They go to work. They follow customs. They raise children. They marry. They obey rules they agree with and complain about rules they don't. They inherit assumptions without necessarily recognizing them as assumptions.
+              </p>
+              <p class="essay-p">
+                That became important to Norwyn. I wanted the kingdom to feel ordinary enough that Elizabeth's questioning of it would be more complicated than simply discovering that she had been deceived.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 03 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">03 — ELIZABETH BECAME MORE DIFFICULT</h3>
-          <p class="essay-p">
-            Elizabeth was probably the character who changed the novel most.
-          </p>
-          <p class="essay-p">
-            The easiest version of her story would have been familiar: a young woman grows up inside a powerful institution. She discovers that the life prepared for her is not the life she wants. She resists it. She leaves. She becomes free.
-          </p>
-          <p class="essay-p">
-            There is a story there. It simply wasn't the story I wanted anymore.
-          </p>
-          <p class="essay-p">
-            The more I understood Elizabeth, the less convincing that version became. She could love her family and still be hurt by them. She could benefit from privilege and still question the system that gave it to her. She could genuinely want some of the things she had been taught to want. She could reject an expectation and later discover that she had rejected the expectation rather than the thing itself. She could leave and still carry parts of the life she had left behind. She could return without becoming the same person who had left.
-          </p>
-          <p class="essay-p">
-            That made her less convenient as a protagonist. It also made her more human.
-          </p>
-          <p class="essay-p">
-            I became less interested in whether Elizabeth would rebel and more interested in whether she could tell the difference between something she had been taught to want and something she genuinely wanted.
-          </p>
-          <p class="essay-p">
-            That distinction is much harder to resolve.
-          </p>
-        </div>
+          <!-- 03 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>03 — ELIZABETH BECAME MORE DIFFICULT</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Elizabeth was probably the character who changed the novel most. The easiest version of her story would have been familiar: a young woman grows up inside a powerful institution. She discovers that the life prepared for her is not the life she wants. She resists it. She leaves. She becomes free. There is a story there. It simply wasn't the story I wanted anymore.
+              </p>
+              <p class="essay-p">
+                The more I understood Elizabeth, the less convincing that version became. She could love her family and still be hurt by them. She could benefit from privilege and still question the system that gave it to her. She could genuinely want some of the things she had been taught to want. She could reject an expectation and later discover that she had rejected the expectation rather than the thing itself. She could leave and still carry parts of the life she had left behind. She could return without becoming the same person who had left.
+              </p>
+              <p class="essay-p">
+                That made her less convenient as a protagonist. It also made her more human. I became less interested in whether Elizabeth would rebel and more interested in whether she could tell the difference between something she had been taught to want and something she genuinely wanted. That distinction is much harder to resolve.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 04 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">04 — THE PEOPLE COULD NOT HAVE ONE JOB</h3>
-          <p class="essay-p">
-            Characters often begin with a function. Someone is the mother. Someone is the fiancé. Someone is the friend. Someone is the person who introduces the protagonist to another world.
-          </p>
-          <p class="essay-p">
-            That can be useful when beginning a novel. It becomes limiting if the character never grows beyond it.
-          </p>
-          <p class="essay-p">
-            As the story developed, I became increasingly resistant to characters who existed only to perform a role in Elizabeth's development. Anne could not simply be the person who controlled her. Edward could not simply be the arranged husband. Elias could not simply be the person who understood her. Isabel could not simply be the sister who took the opposite position. Mama Elena could not simply represent another way of living. Rowan could not simply provide the idea that changes Elizabeth's thinking.
-          </p>
-          <p class="essay-p">
-            They needed lives that existed beyond what they could do for Elizabeth. They needed reasons for their decisions that made sense from where they stood. And sometimes those reasons had to remain understandable even when Elizabeth disagreed with them.
-          </p>
-          <p class="essay-p">
-            That changed the relationships. A character becomes much harder to write when you can no longer ask only, <em>What does this person do for the protagonist?</em>
-          </p>
-          <p class="essay-p">
-            You have to ask: What does this person want? What do they believe they are protecting? What do they misunderstand? What are they willing to sacrifice? What might they be right about?
-          </p>
-          <p class="essay-p">
-            The last question is often the most inconvenient.
-          </p>
-        </div>
+          <!-- 04 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>04 — THE PEOPLE COULD NOT HAVE ONE JOB</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Characters often begin with a function. Someone is the mother. Someone is the fiancé. Someone is the friend. Someone is the person who introduces the protagonist to another world. That can be useful when beginning a novel. It becomes limiting if the character never grows beyond it.
+              </p>
+              <p class="essay-p">
+                As the story developed, I became increasingly resistant to characters who existed only to perform a role in Elizabeth's development. Anne could not simply be the person who controlled her. Edward could not simply be the arranged husband. Elias could not simply be the person who understood her. Isabel could not simply be the sister who took the opposite position. Mama Elena could not simply represent another way of living. Rowan could not simply provide the idea that changes Elizabeth's thinking.
+              </p>
+              <p class="essay-p">
+                They needed lives that existed beyond what they could do for Elizabeth. They needed reasons for their decisions that made sense from where they stood. And sometimes those reasons had to remain understandable even when Elizabeth disagreed with them.
+              </p>
+              <p class="essay-p">
+                That changed the relationships. A character becomes much harder to write when you can no longer ask only, <em>What does this person do for the protagonist?</em> You have to ask: What does this person want? What do they believe they are protecting? What do they misunderstand? What are they willing to sacrifice? What might they be right about?
+              </p>
+              <p class="essay-p">
+                The last question is often the most inconvenient.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 05 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">05 — WHEN THE CONFLICT STOPPED BEING SIMPLE</h3>
-          <p class="essay-p">
-            The novel became more interesting when I stopped looking for a clean opposition between freedom and control.
-          </p>
-          <p class="essay-p">
-            The palace could not be entirely oppressive. The mountains could not be entirely free. Tradition could not be entirely foolish. Rebellion could not automatically be wisdom. Obedience could not automatically be weakness. Leaving could not automatically mean liberation. Returning could not automatically mean failure.
-          </p>
-          <p class="essay-p">
-            The more I removed those easy oppositions, the more room the story had to breathe.
-          </p>
-          <p class="essay-p">
-            A person can be shaped by something without being false because of it. A person can inherit a belief and still sincerely believe it. A person can adapt to a situation and later decide that the adaptation no longer belongs there. A person can choose something for reasons that were partly formed by other people and still genuinely choose it.
-          </p>
-          <p class="essay-p">
-            Those contradictions were more interesting to me than a clean transformation from one state into another.
-          </p>
-        </div>
+          <!-- 05 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>05 — WHEN THE CONFLICT STOPPED BEING SIMPLE</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                The novel became more interesting when I stopped looking for a clean opposition between freedom and control. The palace could not be entirely oppressive. The mountains could not be entirely free. Tradition could not be entirely foolish. Rebellion could not automatically be wisdom. Obedience could not automatically be weakness. Leaving could not automatically mean liberation. Returning could not automatically mean failure.
+              </p>
+              <p class="essay-p">
+                The more I removed those easy oppositions, the more room the story had to breathe.
+              </p>
+              <p class="essay-p">
+                A person can be shaped by something without being false because of it. A person can inherit a belief and still sincerely believe it. A person can adapt to a situation and later decide that the adaptation no longer belongs there. A person can choose something for reasons that were partly formed by other people and still genuinely choose it. Those contradictions were more interesting to me than a clean transformation from one state into another.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 06 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">06 — THE SCENES THAT REFUSED TO LEAVE</h3>
-          <p class="essay-p">
-            Some scenes survive because they move the story forward. Others survive because they contain something the novel needs even when their original purpose disappears.
-          </p>
-          <p class="essay-p">
-            I have become suspicious of scenes that exist only because I once thought they were important. A scene should not survive simply because it took a long time to write. But neither should it disappear simply because it does not perform an obvious plot function.
-          </p>
-          <p class="essay-p">
-            Sometimes a scene changes the reader's understanding of a character. Sometimes it establishes a relationship that later makes another scene matter. Sometimes it gives the story a piece of ordinary life that would be missing if everything were reduced to plot. And sometimes a scene survives because removing it makes the novel technically cleaner but emotionally poorer.
-          </p>
-          <p class="essay-p">
-            Those are often the difficult ones. You have to decide whether the story needs the scene or whether the writer is simply reluctant to lose it. The distinction is not always obvious.
-          </p>
-        </div>
+          <!-- 06 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>06 — THE SCENES THAT REFUSED TO LEAVE</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Some scenes survive because they move the story forward. Others survive because they contain something the novel needs even when their original purpose disappears.
+              </p>
+              <p class="essay-p">
+                I have become suspicious of scenes that exist only because I once thought they were important. A scene should not survive simply because it took a long time to write. But neither should it disappear simply because it does not perform an obvious plot function.
+              </p>
+              <p class="essay-p">
+                Sometimes a scene changes the reader's understanding of a character. Sometimes it establishes a relationship that later makes another scene matter. Sometimes it gives the story a piece of ordinary life that would be missing if everything were reduced to plot. And sometimes a scene survives because removing it makes the novel technically cleaner but emotionally poorer.
+              </p>
+              <p class="essay-p">
+                Those are often the difficult ones. You have to decide whether the story needs the scene or whether the writer is simply reluctant to lose it. The distinction is not always obvious.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 07 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">07 — THE SCENES THAT HAD TO GO</h3>
-          <p class="essay-p">
-            Writing a novel also means discovering what the novel does not need.
-          </p>
-          <p class="essay-p">
-            Some scenes exist because the writer needs to understand something. That does not mean the reader needs to understand it in the same way.
-          </p>
-          <p class="essay-p">
-            A scene can teach the writer who a character is and still belong nowhere in the finished book. A conversation can reveal an important relationship and still be replaced by a glance, a decision, or a later consequence. A chapter can solve a problem in the manuscript while creating a larger problem in the novel.
-          </p>
-          <p class="essay-p">
-            Eventually, revision becomes less about asking whether something is good and more about asking whether it belongs. That is a harder question.
-          </p>
-          <p class="essay-p">
-            A good scene can still be wrong for the book. A beautiful sentence can still be unnecessary. A carefully constructed subplot can still be taking the novel somewhere it no longer wants to go.
-          </p>
-          <p class="essay-p">
-            Some of the work of writing <em>Or So She Thought</em> has therefore been learning to distinguish between what I wrote and what the novel actually needs.
-          </p>
-        </div>
+          <!-- 07 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>07 — THE SCENES THAT HAD TO GO</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Writing a novel also means discovering what the novel does not need. Some scenes exist because the writer needs to understand something. That does not mean the reader needs to understand it in the same way.
+              </p>
+              <p class="essay-p">
+                A scene can teach the writer who a character is and still belong nowhere in the finished book. A conversation can reveal an important relationship and still be replaced by a glance, a decision, or a later consequence. A chapter can solve a problem in the manuscript while creating a larger problem in the novel.
+              </p>
+              <p class="essay-p">
+                Eventually, revision becomes less about asking whether something is good and more about asking whether it belongs. That is a harder question. A good scene can still be wrong for the book. A beautiful sentence can still be unnecessary. A carefully constructed subplot can still be taking the novel somewhere it no longer wants to go.
+              </p>
+              <p class="essay-p">
+                Some of the work of writing <em>Or So She Thought</em> has therefore been learning to distinguish between what I wrote and what the novel actually needs.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 08 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">08 — THE TITLE CAME LATER</h3>
-          <p class="essay-p">
-            Titles can make a story sound more certain than it is. <em>Or So She Thought</em> did the opposite. It left something unresolved.
-          </p>
-          <p class="essay-p">
-            The phrase belongs to the space between what a person believes and what they later discover was incomplete. It does not necessarily mean that the person was wrong.
-          </p>
-          <p class="essay-p">
-            That distinction mattered to me. Elizabeth's story is not built around the idea that everything she once believed was false. Some things were true. Some things were incomplete. Some things changed because she changed. Some things changed because she learned something she had not known before. And sometimes the meaning of something changes without the thing itself changing at all.
-          </p>
-          <p class="essay-p">
-            The title eventually felt right because it could hold that uncertainty without explaining it. It could belong to a sentence. It could belong to a memory. It could belong to a decision. It could belong to the reader.
-          </p>
-        </div>
+          <!-- 08 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>08 — THE TITLE CAME LATER</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Titles can make a story sound more certain than it is. <em>Or So She Thought</em> did the opposite. It left something unresolved.
+              </p>
+              <p class="essay-p">
+                The phrase belongs to the space between what a person believes and what they later discover was incomplete. It does not necessarily mean that the person was wrong. That distinction mattered to me.
+              </p>
+              <p class="essay-p">
+                Elizabeth's story is not built around the idea that everything she once believed was false. Some things were true. Some things were incomplete. Some things changed because she changed. Some things changed because she learned something she had not known before. And sometimes the meaning of something changes without the thing itself changing at all.
+              </p>
+              <p class="essay-p">
+                The title eventually felt right because it could hold that uncertainty without explaining it. It could belong to a sentence. It could belong to a memory. It could belong to a decision. It could belong to the reader.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 09 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">09 — WHAT THE NOVEL BECAME</h3>
-          <p class="essay-p">
-            At some point, I stopped trying to make the novel resemble the story I had originally imagined.
-          </p>
-          <p class="essay-p">
-            That may be one of the quieter milestones of writing a book. You begin with an idea of what the story is supposed to be. Then the characters resist. The world develops its own logic. A question becomes more interesting than the answer you planned. A relationship becomes more complicated than its original purpose. A scene changes the meaning of an earlier scene.
-          </p>
-          <p class="essay-p">
-            Eventually, the novel begins telling you what it is. The writer still makes the decisions. But the decisions are no longer being made from the same place.
-          </p>
-          <p class="essay-p">
-            <em>Or So She Thought</em> became a novel about choice, but not simply about having the freedom to choose. It became interested in something earlier than that: How does a person learn what is worth choosing? How do expectations become preferences? How does familiarity become certainty? How much of what feels like personality has a history behind it? And when a person finally begins to question those things, what exactly are they questioning?
-          </p>
-          <p class="essay-p">
-            I do not think the novel answers all of those questions. I don't think it should. Some questions became more interesting once I stopped trying to resolve them.
-          </p>
-        </div>
+          <!-- 09 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>09 — WHAT THE NOVEL BECAME</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                At some point, I stopped trying to make the novel resemble the story I had originally imagined. That may be one of the quieter milestones of writing a book.
+              </p>
+              <p class="essay-p">
+                You begin with an idea of what the story is supposed to be. Then the characters resist. The world develops its own logic. A question becomes more interesting than the answer you planned. A relationship becomes more complicated than its original purpose. A scene changes the meaning of an earlier scene.
+              </p>
+              <p class="essay-p">
+                Eventually, the novel begins telling you what it is. The writer still makes the decisions. But the decisions are no longer being made from the same place.
+              </p>
+              <p class="essay-p">
+                <em>Or So She Thought</em> became a novel about choice, but not simply about having the freedom to choose. It became interested in something earlier than that: How does a person learn what is worth choosing? How do expectations become preferences? How does familiarity become certainty? How much of what feels like personality has a history behind it? And when a person finally begins to question those things, what exactly are they questioning?
+              </p>
+              <p class="essay-p">
+                I do not think the novel answers all of those questions. I don't think it should. Some questions became more interesting once I stopped trying to resolve them.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
 
-        <!-- 10 -->
-        <div class="essay-section">
-          <h3 class="essay-num-title">10 — THE NOVEL I DID NOT KNOW I WAS WRITING</h3>
-          <p class="essay-p">
-            Looking back, the strangest part of writing a novel is how obvious the finished version can make the process look.
-          </p>
-          <p class="essay-p">
-            The final story has a shape. The earlier versions did not.
-          </p>
-          <p class="essay-p">
-            There were decisions that seemed permanent until they weren't. Characters who became someone else. Ideas that disappeared and later returned in another form. Questions that survived because I could not quite make them go away.
-          </p>
-          <p class="essay-p">
-            That is part of what I mean when I say <em>Or So She Thought</em> changed as I wrote it. The novel was not simply being constructed. I was discovering what I had been interested in. And sometimes that meant realizing that the story I thought I wanted to tell was not the story I was most curious about.
-          </p>
-          <p class="essay-p">
-            Perhaps that is one of the strange privileges of writing fiction. You begin by deciding what happens. Eventually, if you stay with it long enough, the more difficult task becomes noticing what the story keeps asking you to look at.
-          </p>
+          <!-- 10 -->
+          <div class="essay-accordion-item">
+            <button class="essay-accordion-header" onclick="toggleEssay(this)">
+              <span>10 — THE NOVEL I DID NOT KNOW I WAS WRITING</span>
+              <span class="essay-accordion-icon">+</span>
+            </button>
+            <div class="essay-accordion-body">
+              <p class="essay-p">
+                Looking back, the strangest part of writing a novel is how obvious the finished version can make the process look. The final story has a shape. The earlier versions did not.
+              </p>
+              <p class="essay-p">
+                There were decisions that seemed permanent until they weren't. Characters who became someone else. Ideas that disappeared and later returned in another form. Questions that survived because I could not quite make them go away.
+              </p>
+              <p class="essay-p">
+                That is part of what I mean when I say <em>Or So She Thought</em> changed as I wrote it. The novel was not simply being constructed. I was discovering what I had been interested in. And sometimes that meant realizing that the story I thought I wanted to tell was not the story I was most curious about.
+              </p>
+              <p class="essay-p">
+                Perhaps that is one of the strange privileges of writing fiction. You begin by deciding what happens. Eventually, if you stay with it long enough, the more difficult task becomes noticing what the story keeps asking you to look at.
+              </p>
+              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -2251,7 +2328,7 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS & EXPANDABLE BOXES -->
+  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & ESSAY ACCORDION -->
   <script>
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
@@ -2292,7 +2369,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Toggle Expandable Archive Boxes
+    // Toggle Expandable Archive Boxes (Norwyn Section)
     function toggleBox(btn) {
       const card = btn.closest('.expandable-box');
       const moreContent = card.querySelector('.box-more-content');
@@ -2304,6 +2381,21 @@
       } else {
         moreContent.classList.add('open');
         btn.innerHTML = 'Less &uarr;';
+      }
+    }
+
+    // Toggle Accordion List Items (Where It Began Essay)
+    function toggleEssay(btn) {
+      const item = btn.closest('.essay-accordion-item');
+      item.classList.toggle('open');
+    }
+
+    // Retract Accordion Item and Smoothly Return to Header
+    function retractEssay(btn) {
+      const item = btn.closest('.essay-accordion-item');
+      if (item) {
+        item.classList.remove('open');
+        item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     }
 
