@@ -630,7 +630,7 @@
       line-height: 1.9;
     }
 
-    /* Author Frame */
+    /* Author Frame & Contact Link */
     .author-frame {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -639,6 +639,23 @@
       box-shadow: var(--shadow);
       display: flex;
       gap: 2.5rem;
+    }
+
+    .contact-email-link {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s ease, opacity 0.2s ease;
+      cursor: pointer;
+    }
+
+    .contact-email-link:hover {
+      color: var(--gold-subtle);
+      opacity: 0.9;
     }
 
     @media (max-width: 600px) {
@@ -1302,11 +1319,17 @@
             Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people acquire expectations, habits, assumptions, preferences, and ways of seeing.
           </p>
 
-          <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 440px;">
+          <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 480px;">
             <div class="section-eyebrow" style="margin-bottom: 0.5rem;">CONTACT</div>
-            <p>For literary, rights, interview, or professional inquiries:</p>
-            <div style="margin-top: 0.85rem; font-size: 0.95rem; font-family: var(--font-serif); color: var(--ink);">
-              contact@queenusman.com
+            <p>For literary, rights, interview, and professional inquiries:</p>
+            <div style="margin-top: 0.85rem; font-size: 1.05rem; font-family: var(--font-serif);">
+              <a 
+                href="mailto:usmanshazaan@gmail.com?subject=Literary%20Inquiry%20%E2%80%94%20Or%20So%20She%20Thought" 
+                class="contact-email-link"
+                title="Send an email to Queen Usman"
+              >
+                usmanshazaan@gmail.com <span>↗</span>
+              </a>
             </div>
           </div>
         </div>
