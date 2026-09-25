@@ -451,14 +451,8 @@
       gap: 2.5rem;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
     @media (max-width: 768px) {
-      .grid-2, .grid-3 {
+      .grid-2 {
         grid-template-columns: 1fr;
         gap: 1.8rem;
       }
@@ -606,154 +600,65 @@
       color: var(--gold-subtle);
     }
 
-    /* Expandable Essay Accordion List */
-    .essay-list-container {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .essay-accordion-list {
-      margin-top: 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .essay-accordion-item {
+    /* =========================================================
+       BEYOND THE NOVEL: INTELLECTUAL QUESTION ARCHIVE
+       ========================================================= */
+    .question-archive-block {
+      padding: 2.2rem 0;
       border-bottom: 1px solid var(--border);
     }
 
-    .essay-accordion-header {
-      width: 100%;
+    .question-archive-block:first-of-type {
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    .question-archive-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .question-archive-body {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      line-height: 1.9;
+    }
+
+    .archive-quiet-link-wrap {
+      margin-top: 5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .archive-quiet-link-btn {
       background: none;
       border: none;
-      padding: 1.4rem 0.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--ink);
       cursor: pointer;
-      text-align: left;
-      font-family: var(--font-serif);
-      font-size: 1.32rem;
-      font-weight: 600;
-      color: var(--ink);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s ease, padding-left 0.2s ease;
-    }
-
-    .essay-accordion-header:hover {
-      color: var(--gold-subtle);
-      padding-left: 8px;
-    }
-
-    .essay-accordion-icon {
-      font-family: var(--font-sans);
-      font-size: 1.35rem;
-      font-weight: 300;
-      color: var(--ink-faint);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
-      line-height: 1;
-    }
-
-    .essay-accordion-item.open .essay-accordion-icon {
-      transform: rotate(45deg);
-      color: var(--ink);
-    }
-
-    .essay-accordion-body {
-      display: none;
-      padding: 0.5rem 0.5rem 2.2rem;
-      animation: fadeInText 0.35s ease;
-    }
-
-    .essay-accordion-item.open .essay-accordion-body {
-      display: block;
-    }
-
-    .essay-p {
-      font-size: 1.05rem;
-      line-height: 1.95;
-      color: var(--ink-muted);
-      margin-bottom: 1.4rem;
-    }
-
-    .essay-p:last-child {
-      margin-bottom: 0;
-    }
-
-    .essay-p em, .essay-p strong {
-      color: var(--ink);
-    }
-
-    /* Beyond the Novel & About Styles */
-    .question-block {
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .question-block:first-of-type {
-      border-top: 1px solid var(--border);
-    }
-
-    .question-title {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--ink);
-      line-height: 1.45;
-      margin-bottom: 0.75rem;
-    }
-
-    .question-body {
-      font-size: 1.02rem;
-      color: var(--ink-muted);
-      line-height: 1.85;
-    }
-
-    .note-entry {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.2rem 2rem;
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 1.2rem;
-    }
-
-    .note-entry h3 {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--ink);
-      margin-bottom: 0.65rem;
-    }
-
-    .note-entry p {
-      font-size: 0.95rem;
-      color: var(--ink-muted);
-      line-height: 1.75;
-    }
-
-    .read-link {
-      font-family: var(--font-sans);
-      font-size: 0.76rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: var(--ink);
+      padding: 0;
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
-      transition: color 0.2s ease;
+      gap: 0.5rem;
+      transition: color 0.2s ease, transform 0.2s ease;
     }
 
-    .read-link:hover {
+    .archive-quiet-link-btn:hover {
       color: var(--gold-subtle);
+      transform: translateX(4px);
     }
 
+    /* Author Frame */
     .author-frame {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -967,7 +872,7 @@
       </p>
 
       <div>
-        <a href="#contents-anchor" class="begin-reading-btn" style="display:inline-block; padding:0.9rem 2.2rem; background:var(--ink); color:var(--bg-cream); font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; border-radius:2px; margin:1.5rem 0 2rem;">BEGIN READING</a>
+        <a href="#contents-anchor" style="display:inline-block; padding:0.9rem 2.2rem; background:var(--ink); color:var(--bg-cream); font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; border-radius:2px; margin:1.5rem 0 2rem;">BEGIN READING</a>
       </div>
 
       <div id="contents-anchor" style="margin-top: 3rem;">
@@ -1001,14 +906,6 @@
           <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">25</span> The Choice</div>
           <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">26</span> Or So She Thought</div>
         </div>
-
-        <div style="display:flex; justify-content:center; gap:2rem; font-size:0.82rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; color:var(--ink-muted); margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border);">
-          <a href="#contents-anchor">← PREVIOUS</a>
-          <span>·</span>
-          <a href="#contents-anchor">CONTENTS</a>
-          <span>·</span>
-          <a href="#contents-anchor">NEXT →</a>
-        </div>
       </div>
     </div>
   </section>
@@ -1017,7 +914,6 @@
   <section id="norwyn" class="content-section section-alt">
     <div class="container">
       
-      <!-- ABOUT THIS WORLD NOTICE -->
       <div style="margin-bottom: 3.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
         <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 0.6rem; color: var(--ink);">ABOUT THIS WORLD</div>
         <p style="font-size: 1.05rem; color: var(--ink-muted); font-style: italic; line-height: 1.8;">
@@ -1025,7 +921,6 @@
         </p>
       </div>
 
-      <!-- HEADER -->
       <div class="section-header-bar">
         <span class="section-eyebrow">The World</span>
       </div>
@@ -1043,9 +938,6 @@
         </p>
         <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.8;">
           Across the border lies Valenne, a neighboring kingdom whose relationship with Norwyn has been built through treaties, trade, diplomacy, and obligations older than Elizabeth herself.
-        </p>
-        <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.8;">
-          These places are part of the same region, but they do not produce the same kind of life.
         </p>
         <p style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--ink);">
           Elizabeth has spent most of her life inside one version of Norwyn. The further she moves through it, the more she begins to notice how many versions there are.
@@ -1083,10 +975,7 @@
         <div class="category-subtitle">WHERE THE KINGDOM MEETS ITSELF</div>
         <p class="category-prose">
           Norwyn's capital was built along stone quays beside the river, where commerce, government, and public life have grown around one another for generations.<br><br>
-          The waterfront begins early. Barges arrive carrying goods from elsewhere in the kingdom and beyond it. Workers unload cargo while merchants, clerks, and drivers begin the day's business. Further inland, government offices fill with civil servants. Shops open along the commercial streets. Newspapers appear at kiosks and cafés. Buses move through the older avenues, sharing the roads with cars that belong to a newer decade.<br><br>
-          The city changes gradually as one district gives way to another. The buildings around the government quarter are formal and imposing. Commercial streets are louder, with shopfronts, restaurants, banks, hotels, and offices occupying buildings that have often served several purposes over their lifetimes. Residential neighborhoods range from large private houses and carefully maintained avenues to crowded districts where ordinary families live much closer together.<br><br>
-          The palace sits within this city, but it does not belong entirely to it. The people of the capital know the royal family exists behind its walls. They see them at ceremonies, read about them in newspapers, hear about them through television broadcasts and conversations, and sometimes encounter the consequences of decisions made inside rooms they will never enter.<br><br>
-          The capital has learned to live alongside the monarchy. For most people, it is not extraordinary. It is simply part of the city.
+          The waterfront begins early. Barges arrive carrying goods from elsewhere in the kingdom and beyond it. Workers unload cargo while merchants, clerks, and drivers begin the day's business. Further inland, government offices fill with civil servants. Shops open along the commercial streets. Newspapers appear at kiosks and cafés. Buses move through the older avenues, sharing the roads with cars that belong to a newer decade.
         </p>
 
         <div class="grid-2">
@@ -1095,9 +984,7 @@
               <h4>THE WATERFRONT</h4>
               <p class="box-preview">The stone quays are one of the oldest working parts of the capital. Commerce, river trade, workers, goods, connection between regions.</p>
               <div class="box-more-content">
-                Goods arrive here before making their way into warehouses, shops, factories, restaurants, and private homes. The waterfront is practical rather than decorative: stone, iron, warehouses, loading areas, carts, vehicles, workers, river traffic, and businesses that depend on the movement of goods.<br><br>
-                It is also one of the places where different parts of Norwyn meet. A shipment from the mountains can pass through the same streets as imported goods from Valenne. A merchant can conduct business within sight of a government building. A royal decision about trade can eventually become something as ordinary as the price of a product in a shop.<br><br>
-                The river connects more of Norwyn than the people standing beside it necessarily realize.
+                Goods arrive here before making their way into warehouses, shops, factories, restaurants, and private homes. The waterfront is practical rather than decorative: stone, iron, warehouses, loading areas, carts, vehicles, workers, river traffic, and businesses that depend on the movement of goods.
               </div>
             </div>
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
@@ -1108,34 +995,7 @@
               <h4>THE GOVERNMENT QUARTER</h4>
               <p class="box-preview">Ministries, civil servants, courts, and institutions responsible for the ordinary administrative work of the state.</p>
               <div class="box-more-content">
-                Its buildings are formal because government is meant to appear permanent.<br><br>
-                Inside them, however, much of the work is ordinary: clerks sort documents, officials attend meetings, ministers receive reports, budgets are discussed, letters are answered, and agreements are reviewed.<br><br>
-                The kingdom is maintained through thousands of such decisions.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE COMMERCIAL DISTRICT</h4>
-              <p class="box-preview">Banks, shops, hotels, restaurants, and the places where the capital's wealth becomes visible.</p>
-              <div class="box-more-content">
-                Banks stand beside shops. Hotels serve diplomats and visiting businessmen. Restaurants fill at lunchtime. Department stores display goods that would have been difficult to obtain in previous generations.<br><br>
-                There are expensive establishments where wealth is expected and ordinary businesses where people come simply because they need something.<br><br>
-                The capital does not divide neatly into rich and poor. Different kinds of wealth exist beside one another.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE RESIDENTIAL DISTRICTS</h4>
-              <p class="box-preview">Affluent neighborhoods, ordinary families, and different experiences of domestic life in the same city.</p>
-              <div class="box-more-content">
-                Some neighborhoods are quiet and affluent, with large houses, gardens, private schools, and established families. Others are densely populated, with apartments, small shops, schools, markets, and streets where people know one another because they have little choice but to share the same spaces.<br><br>
-                The city changes depending on who is looking at it. A palace resident, a government clerk, a shopkeeper, a student, and a dock worker can all live in the same capital without experiencing quite the same city.
+                Its buildings are formal because government is meant to appear permanent. Inside them, however, much of the work is ordinary: clerks sort documents, officials attend meetings, ministers receive reports, budgets are discussed, and letters are answered.
               </div>
             </div>
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
@@ -1148,10 +1008,8 @@
         <h3 class="category-title">02 — THE PALACE</h3>
         <div class="category-subtitle">WHERE AUTHORITY BECOMES ORDINARY</div>
         <p class="category-prose">
-          The palace is the seat of the royal family and the center of ceremonial life in Norwyn. Its public rooms are designed for occasions that make authority visible: state dinners, diplomatic receptions, royal announcements, formal visits, ceremonies, and celebrations.<br><br>
-          But the palace is not only the rooms shown to visitors. Behind the ceremonial spaces are private apartments, family rooms, offices, kitchens, staff corridors, storage rooms, gardens, archives, and the countless practical spaces required to keep a large household functioning.<br><br>
-          There is a difference between the palace people visit and the palace people live in. Elizabeth knows the second one. She knows which doors are used by guests and which are used by staff. She knows which rooms require formality and which allow people to relax. She knows how quickly a conversation can change when someone important enters the room.<br><br>
-          She has learned these things gradually. Nobody sat her down and explained all of them. She simply grew up knowing.
+          The palace is the seat of the royal family and the center of ceremonial life in Norwyn. Behind the ceremonial spaces are private apartments, family rooms, offices, kitchens, staff corridors, storage rooms, gardens, archives, and practical household spaces.<br><br>
+          There is a difference between the palace people visit and the palace people live in. Elizabeth knows the second one.
         </p>
 
         <div class="grid-2">
@@ -1160,8 +1018,7 @@
               <h4>THE STATE ROOMS</h4>
               <p class="box-preview">Official dinners, receptions, diplomatic meetings, ceremonies, and royal representation.</p>
               <div class="box-more-content">
-                Everything in these rooms has a purpose. Where people sit matters. Who enters first matters. Who speaks first matters.<br><br>
-                What is displayed on a table, wall, or mantel can carry meaning even when nobody mentions it aloud. The rooms are designed to make continuity visible.
+                Everything in these rooms has a purpose. Where people sit matters. Who enters first matters. Who speaks first matters. The rooms are designed to make continuity visible.
               </div>
             </div>
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
@@ -1172,577 +1029,12 @@
               <h4>THE ROYAL LIBRARY</h4>
               <p class="box-preview">Books, records, private reading, and the space associated with Elizabeth's intellectual life.</p>
               <div class="box-more-content">
-                Books accumulate across generations. Official documents sit alongside private reading. Correspondence may be kept nearby. Family records and political material can exist within the same walls.<br><br>
-                For Elizabeth, the library is one of the places where the palace feels less like an institution and more like a home. That distinction is not always easy to maintain.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE PRIVATE WING</h4>
-              <p class="box-preview">Bedrooms, sitting rooms, private studies, and family spaces removed from performance.</p>
-              <div class="box-more-content">
-                The private wing contains the rooms in which the royal family can temporarily stop performing the public version of themselves.<br><br>
-                It is where conversations happen without an audience. It is also where some of the most important decisions are made.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE HOUSEHOLD</h4>
-              <p class="box-preview">Staff, routines, invisible labor, and the accumulated knowledge that sustains the residence.</p>
-              <div class="box-more-content">
-                Household staff manage meals, clothing, schedules, rooms, correspondence, gardens, transport, security, and countless details that most visitors never notice.<br><br>
-                Some staff have worked for the family for years. They know routines. They recognize moods. They know which family members prefer silence in the morning and which expect conversation. They know when an event has gone badly before anyone says so.<br><br>
-                Their knowledge is part of the palace's invisible structure.
+                Books accumulate across generations. Official documents sit alongside private reading. For Elizabeth, the library is one of the places where the palace feels less like an institution and more like a home.
               </div>
             </div>
             <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
         </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>THE ARCHIVES</h4>
-            <p class="box-preview">Correspondence, photographs, treaties, invitations, and historical records from previous generations.</p>
-            <div class="box-more-content">
-              The royal archives preserve what the institution chooses to remember.<br><br>
-              It can also reveal what earlier generations were trying to manage, protect, or conceal.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-        </div>
-      </div>
-
-      <!-- 03 — VALENNE -->
-      <div class="archive-category-block">
-        <h3 class="category-title">03 — VALENNE</h3>
-        <div class="category-subtitle">THE KINGDOM BEYOND THE BORDER</div>
-        <p class="category-prose">
-          Valenne is Norwyn's neighboring kingdom and one of its most important political and economic partners. Its relationship with Norwyn began long before Elizabeth was born. Treaties connect the two kingdoms. Trade connects their businesses. Diplomacy connects their governments. Previous agreements continue to shape decisions being made in the present.<br><br>
-          Elizabeth's proposed marriage therefore does not exist in isolation. It is personal. It is also part of a relationship between two countries that has been developing for generations.<br><br>
-          Valenne has its own history, institutions, customs, social hierarchy, and expectations. It is not simply another version of Norwyn, and Edward is not simply a man who happens to come from across the border. He belongs to a different political and social world.
-        </p>
-
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>VALENNE'S GOVERNMENT</h4>
-              <p class="box-preview">Governing institutions and the unique balance between monarchy, executive power, and public life.</p>
-              <div class="box-more-content">
-                Its political priorities do not always correspond perfectly with Norwyn's. That difference matters when agreements are negotiated.<br><br>
-                A treaty can benefit both countries while benefiting them in different ways.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>VALENNE'S ECONOMY</h4>
-              <p class="box-preview">Trade, industry, manufacturing, and financial interests that extend far beyond royal households.</p>
-              <div class="box-more-content">
-                Businesses depend on agreements between the kingdoms. Financial institutions follow political developments. Industries benefit from stable relations.<br><br>
-                A royal marriage can therefore attract attention for reasons that have little to do with romance.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>NORWYN AND VALENNE</h4>
-              <p class="box-preview">Treaties, mutual obligations, economic interests, and generational history.</p>
-              <div class="box-more-content">
-                The relationship between the kingdoms is built on more than friendship. There are agreements, obligations, economic interests, and history.<br><br>
-                And there are things each kingdom would prefer the other not to misunderstand.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>EDWARD OF VALENNE</h4>
-              <p class="box-preview">A brief contextual introduction to the man representing Valenne's dynastic agreement.</p>
-              <div class="box-more-content">
-                Edward has grown up understanding his position within this bilateral accord. He knows that marriage can be personal and political at the same time.<br><br>
-                He also knows that Elizabeth is being asked to enter a world that existed before she was asked to enter it. For Elizabeth, understanding Edward eventually means understanding what comes with him.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 04 — THE MOUNTAINS -->
-      <div class="archive-category-block">
-        <h3 class="category-title">04 — THE MOUNTAINS</h3>
-        <div class="category-subtitle">A DIFFERENT NORWYN</div>
-        <p class="category-prose">
-          The mountains are part of Norwyn, but they can feel like another country. The weather is colder. Roads are more difficult. Villages are smaller. Work is more visible because survival in a difficult landscape leaves little room for pretending that things maintain themselves.<br><br>
-          Wood has to be gathered. Buildings have to be repaired. Food has to be stored. Animals have to be cared for. People depend on one another.<br><br>
-          The mountains have preserved ways of life that have changed more slowly than those of the capital.<br><br>
-          But they have not preserved a world without rules. They simply have different ones.
-        </p>
-
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>THE LANDSCAPE</h4>
-              <p class="box-preview">Steep slopes, pine forests, granite valleys, rocky paths, and roads blocked during colder months.</p>
-              <div class="box-more-content">
-                Distance matters here. A place that looks close on a map may take hours to reach.<br><br>
-                Weather can change plans. Geography shapes what people can build, grow, transport, and afford to waste.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE VILLAGES</h4>
-              <p class="box-preview">Small settlements where reputation, usefulness, and contribution matter above formal titles.</p>
-              <div class="box-more-content">
-                Mountain villages are small enough that people often know one another's families.<br><br>
-                Someone who repairs roofs, grows food, cares for animals, weaves cloth, works with timber, or helps during difficult weather becomes part of the community through repeated acts rather than formal titles.<br><br>
-                People notice who contributes. They also notice who does not.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE HOMES</h4>
-              <p class="box-preview">Stone, timber, practical heat retention, and kitchens built for seasonal food storage.</p>
-              <div class="box-more-content">
-                Mountain homes are built around practicality. Timber and stone are common. Rooms are designed to retain heat. Kitchens are important because food preparation and preservation matter across the colder months.<br><br>
-                Homes contain fewer things that exist only for display. The beauty of the region is often found in materials that have been used for a long time rather than objects that have been carefully arranged to impress.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE WORK</h4>
-              <p class="box-preview">Woodworking, farming, animal care, weaving, repair, trade, and seasonal survival labor.</p>
-              <div class="box-more-content">
-                Work is closely connected to survival. Some work belongs to individuals; some work belongs to everyone.<br><br>
-                A difficult task can become a community task simply because it is easier to complete together.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>THE COMMUNITY</h4>
-            <p class="box-preview">Relationships, shared obligations, mutual watching, and unwritten social expectations.</p>
-            <div class="box-more-content">
-              The mountains offer Elizabeth something she initially associates with freedom: fewer formal ceremonies, fewer servants, fewer people concerned with rank.<br><br>
-              But community creates its own expectations. People remember. People notice. People help each other and therefore acquire obligations to one another.<br><br>
-              The absence of palace protocol does not mean the absence of social rules. Elizabeth eventually begins to understand the difference.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-        </div>
-      </div>
-
-      <!-- 05 — THE GOVERNMENT -->
-      <div class="archive-category-block">
-        <h3 class="category-title">05 — THE GOVERNMENT</h3>
-        <div class="category-subtitle">THE WORK BEHIND THE KINGDOM</div>
-        <p class="category-prose">
-          Norwyn is not governed by the royal family alone. The Crown exists alongside ministers, civil servants, courts, financial institutions, administrative departments, and other state institutions responsible for running the kingdom.<br><br>
-          Most government work is invisible to ordinary people. That is partly the point.<br><br>
-          A citizen notices the road being repaired. They may not notice the meeting that approved the money. A business notices a change in trade regulations. It may never see the document that produced it. A treaty changes the conditions under which goods move between countries. Most people experience the result without ever meeting the people who negotiated it.
-        </p>
-
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>THE CROWN</h4>
-              <p class="box-preview">Constitutional authority, national representation, and formal ceremonial assent.</p>
-              <div class="box-more-content">
-                The Crown represents continuity, national identity, and the monarchy's constitutional responsibilities. The Queen receives foreign representatives, participates in state occasions, and signs documents where required.<br><br>
-                The monarchy is not the entire state; it operates within established covenants.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE MINISTRIES</h4>
-              <p class="box-preview">Administrative departments handling finance, trade, transport, education, and domestic rule.</p>
-              <div class="box-more-content">
-                Ministries handle the practical responsibilities of the state. Ministers make decisions, while civil servants carry much of the actual administrative work forward.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE COURTS</h4>
-              <p class="box-preview">Independent legal benches interpreting legislation and resolving civil and criminal disputes.</p>
-              <div class="box-more-content">
-                The courts belong to the kingdom's institutional structure rather than to the royal household, maintaining the rule of law across all social tiers.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE TREASURY</h4>
-              <p class="box-preview">Management of the kingdom's revenue, public spending, debt, and bilateral accords.</p>
-              <div class="box-more-content">
-                The Treasury oversees public finance. Budgets, taxation, spending allocations, and trade subsidies determined here eventually dictate the price of daily goods in market stalls.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>FOREIGN AFFAIRS</h4>
-            <p class="box-preview">Diplomatic missions, bilateral negotiations, and treaties connecting Norwyn to Valenne.</p>
-            <div class="box-more-content">
-              Treaties, diplomatic summits, trade concessions, and state visits are formulated here. Some of the international agreements made inside these rooms directly shape Elizabeth's life before she is ever informed of their existence.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-        </div>
-      </div>
-
-      <!-- 06 — THE ROYAL FAMILY -->
-      <div class="archive-category-block">
-        <h3 class="category-title">06 — THE ROYAL FAMILY</h3>
-        <div class="category-subtitle">A FAMILY THAT IS ALSO AN INSTITUTION</div>
-        <p class="category-prose">
-          The royal family occupies an unusual position in Norwyn. They are a family. They are also an institution.<br><br>
-          Their private decisions can carry public consequences.<br><br>
-          A marriage can affect diplomacy. An inheritance can affect succession. A disagreement can become political if it concerns the future of the Crown.<br><br>
-          Even an ordinary family decision can become complicated when the people involved are expected to represent an entire kingdom.
-        </p>
-
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>THE CROWN</h4>
-              <p class="box-preview">The sovereign office personified by Queen Anne, where duty and preservation precede personal inclination.</p>
-              <div class="box-more-content">
-                Authority is experienced as an inherited burden. To those inside it, maintaining the stability of the realm is an obligation that overrides private preferences.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>SUCCESSION</h4>
-              <p class="box-preview">Strict constitutional lineage establishing who inherits the throne and how status is transmitted.</p>
-              <div class="box-more-content">
-                Succession determines how public continuity is maintained across generations. From childhood, potential heirs learn that their futures belong to the kingdom before they belong to themselves.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>ROYAL MARRIAGE</h4>
-              <p class="box-preview">Alliances that function simultaneously as personal partnerships and diplomatic treaties.</p>
-              <div class="box-more-content">
-                A royal union is scrutinized by cabinets, foreign ministries, and the press. It is negotiated to protect borders, reassure allies, and ensure dynastic survival.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>PUBLIC LIFE</h4>
-              <p class="box-preview">Perpetual scrutiny, state appearances, press coverage, and living under continuous observation.</p>
-              <div class="box-more-content">
-                Births are announced. Marriages are reported. Ceremonies are photographed. Clothing is analyzed. The family learns to live with being observed, while the public learns to treat observation as ordinary.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 07 — NORWYN IN THE 1990s -->
-      <div class="archive-category-block">
-        <h3 class="category-title">07 — NORWYN IN THE 1990s</h3>
-        <div class="category-subtitle">A KINGDOM BETWEEN ERAS</div>
-        <p class="category-prose">
-          Norwyn in the 1990s is modernizing, but it has not abandoned the systems that came before it.<br><br>
-          Television exists alongside newspapers. Landline telephones remain ordinary. Computers are becoming more common without yet being everywhere. Cars and buses fill streets designed decades earlier. Traditional businesses operate alongside newer industries.<br><br>
-          Young people have access to music, films, books, and ideas that move across borders more quickly than they once did.<br><br>
-          The monarchy carries its history into a decade in which many other parts of life are changing.
-        </p>
-
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>COMMUNICATION</h4>
-              <p class="box-preview">Letters still matter. Telephone calls are common. Information moves faster while leaving room for silence.</p>
-              <div class="box-more-content">
-                Newspapers remain influential. Television brings national events directly into people's living rooms. Information moves faster than it once did, but it is still entirely possible for a person to be unreachable.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>TRANSPORT</h4>
-              <p class="box-preview">Cars, regional diesel trains, buses, river barges, and difficult mountain gravel passes.</p>
-              <div class="box-more-content">
-                The capital is comparatively easy to navigate; the mountains are not. Distance still determines who can visit whom and how quickly news can travel across county lines.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>MEDIA</h4>
-              <p class="box-preview">Broadsheets, evening news broadcasts, royal speculation, and public coverage.</p>
-              <div class="box-more-content">
-                Newspapers report on politics, business, royal events, culture, and society. Television gives the Crown another way to enter ordinary homes, making royal figures feel both distant and strangely familiar.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>FASHION</h4>
-              <p class="box-preview">Clothing reflecting class, occupation, age, location, and the requirements of occasion.</p>
-              <div class="box-more-content">
-                Royal clothing is formal and carefully considered. Capital residents have access to modern fashion trends, while mountain communities favor wool and canvas that survive harsh weather. A person's clothes reveal their world before they speak.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-
-        <div class="expandable-box" style="margin-top: 2rem;">
-          <div>
-            <h4>EVERYDAY LIFE</h4>
-            <p class="box-preview">Offices, morning schools, predictable market closing hours, and quiet domestic routines.</p>
-            <div class="box-more-content">
-              Families eat together or separately depending on their circumstances. People work, read, listen to radio, attend religious services, meet friends, shop, and argue. Norwyn is not always dramatic; most of the time, it is ordinary. That is what makes the moments that disrupt it matter.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-        </div>
-      </div>
-
-      <!-- 08 — THE NORWYN ARCHIVE -->
-      <div class="archive-category-block">
-        <h3 class="category-title">08 — THE NORWYN ARCHIVE</h3>
-        <div class="category-subtitle">THE KINGDOM AS IT WAS RECORDED</div>
-        <p class="category-prose">
-          Some parts of Norwyn are easier to understand through documents than descriptions. The archive collects pieces of the world that existed around the story.
-        </p>
-
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>MAPS</h4>
-              <p class="box-preview">Maps of Norwyn, the capital, the mountain region, royal properties, major roads, and the border with Valenne.</p>
-              <div class="box-more-content">
-                <em>Norwyn Royal Survey Bureau &bull; 1994 Edition</em><br><br>
-                The cartographic surveys document territorial borders, county boundaries, shipping straits, and mountain passes preserved across decades of state recordkeeping.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>NEWSPAPERS</h4>
-              <p class="box-preview">Royal announcements, political developments, business news, society pages, local events, and advertisements.</p>
-              <div class="box-more-content">
-                <em>The Norwyn Herald &bull; March 1994</em><br><br>
-                The articles, dispatches, and public columns reveal both the things Norwyn chose to print—and the things it did not.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>ROYAL DOCUMENTS</h4>
-              <p class="box-preview">Invitations, official announcements, royal correspondence, household schedules, and ceremonial programs.</p>
-              <div class="box-more-content">
-                <em>Royal Household Record &bull; Private Correspondence &bull; 1994</em><br><br>
-                Formal papers and confidential household orders that govern seating, public statements, and diplomatic protocol.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>GOVERNMENT RECORDS</h4>
-              <p class="box-preview">Treaties, trade agreements, reports, official correspondence, administrative documents, and public notices.</p>
-              <div class="box-more-content">
-                Documents demonstrating the legal and trade covenants negotiated between ministries, parliamentary benches, and foreign ambassadors.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>PERSONAL PAPERS</h4>
-              <p class="box-preview">Letters, notes, photographs, diaries, postcards, and unrecorded private moments.</p>
-              <div class="box-more-content">
-                Small records of people who were living through events rather than writing history, capturing doubts that never appear in official gazettes.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>EVERYDAY NORWYN</h4>
-              <p class="box-preview">Menus, train schedules, shop advertisements, school notices, event programs, packaging, and receipts.</p>
-              <div class="box-more-content">
-                Ordinary objects that reveal what life looked like when nobody was trying to preserve it.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 09 — PLACES IN THE NOVEL -->
-      <div class="archive-category-block">
-        <h3 class="category-title">09 — PLACES IN THE NOVEL</h3>
-        <div class="category-subtitle">WHERE THE STORY HAPPENS</div>
-        <p class="category-prose">
-          The world of <em>Or So She Thought</em> is not contained inside one building. Each location places Elizabeth inside a different set of expectations.
-        </p>
-
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>THE ROYAL PALACE</h4>
-              <p class="box-preview">Elizabeth's childhood home and the center of her family's public life.</p>
-              <div class="box-more-content">
-                The seat of the royal family where authority is quiet, routine, and structured by etiquette learned before anyone thought to explain why.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE ROYAL LIBRARY</h4>
-              <p class="box-preview">A private space associated with reading, reflection, and some of Elizabeth's earliest questions.</p>
-              <div class="box-more-content">
-                Shelves that hold generations of recorded state history alongside private, unread notebooks and forbidden conversations.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE CAPITAL</h4>
-              <p class="box-preview">The city surrounding the palace, where royal life meets ordinary life.</p>
-              <div class="box-more-content">
-                Stone quays, government avenues, crowded apartment blocks, river trade, and the bustling rhythm of commerce.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE RAG</h4>
-              <p class="box-preview">An institution connected to Elizabeth's education and intellectual development.</p>
-              <div class="box-more-content">
-                The Royal Academy of Governance, where theories of constitutional state power are taught alongside quiet, dangerous debates.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>ELIAS'S WORKSHOP</h4>
-              <p class="box-preview">A family workshop shaped by timber, iron, mechanical work, and independent labor.</p>
-              <div class="box-more-content">
-                A place where usefulness matters more than ceremony, and where broken things can be honestly repaired.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>VALENNE</h4>
-              <p class="box-preview">The neighboring kingdom Elizabeth is expected to enter through marriage.</p>
-              <div class="box-more-content">
-                An industrial realm bound to Norwyn by trade, mineral wealth, and generational political covenants.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>THE MOUNTAINS</h4>
-              <p class="box-preview">A region of Norwyn where Elizabeth encounters a different set of expectations and a different understanding of work, community, and responsibility.</p>
-              <div class="box-more-content">
-                Steep slopes, cold winters, communal ovens, and obligations shaped by shared survival rather than royal birthright.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-
-          <div class="expandable-box">
-            <div>
-              <h4>MAMA ELENA'S HOME</h4>
-              <p class="box-preview">A temporary home for Elizabeth outside the world she has always known.</p>
-              <div class="box-more-content">
-                It is not a place without rules. It is simply a place where she has to discover them for herself.
-              </div>
-            </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 10. THE ENDING / NORWYN IS MORE THAN A SETTING -->
-      <div style="margin-top: 5rem; padding-top: 3.5rem; border-top: 1px solid var(--border); text-align: center;">
-        <span class="section-eyebrow" style="letter-spacing: 0.25em;">NORWYN IS MORE THAN A SETTING</span>
-        <p class="lead-text" style="max-width: 680px; margin: 1.5rem auto 2.5rem; line-height: 1.85;">
-          Norwyn is the world that taught Elizabeth what was normal.<br><br>
-          The palace taught her one version of responsibility. The capital showed her what status looked like. Valenne revealed how private decisions can become political ones.<br><br>
-          And beyond the places she knows, there are other ways of living, other obligations, and other versions of what a life can be.<br><br>
-          <em>Wherever Elizabeth goes, she carries something with her.</em>
-        </p>
-
-        <button onclick="openSection('people')" style="background: none; border: 1px solid var(--border-dark); padding: 0.85rem 2rem; font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink); cursor: pointer; border-radius: 999px; transition: all 0.2s ease;">
-          MEET THE PEOPLE OF NORWYN &rarr;
-        </button>
       </div>
 
     </div>
@@ -1752,7 +1044,6 @@
   <section id="people" class="content-section">
     <div class="container">
       
-      <!-- ABOUT THIS WORLD NOTICE -->
       <div style="margin-bottom: 3.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
         <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 0.6rem; color: var(--ink);">ABOUT THIS WORLD</div>
         <p style="font-size: 1.05rem; color: var(--ink-muted); font-style: italic; line-height: 1.8;">
@@ -1777,492 +1068,245 @@
       </p>
 
       <div class="grid-2">
-        <!-- Elizabeth -->
         <div class="card">
           <h3>ELIZABETH</h3>
           <p>
             Elizabeth has spent most of her life knowing what is expected of her.<br /><br />
             She is a daughter, a royal, a student, and a future bride. She has learned how to read a room, anticipate a response, and understand what a situation requires of her.<br /><br />
-            For most of her life, this has been useful.<br />
-            It has also made certain questions harder to answer.
+            For most of her life, this has been useful. It has also made certain questions harder to answer.
           </p>
         </div>
 
-        <!-- Anne -->
         <div class="card">
           <h3>ANNE</h3>
           <p>
             Queen Anne is Elizabeth's mother.<br /><br />
-            She has spent years preparing her daughter for a life in which very little can be treated as purely personal. She knows what the position requires, what the kingdom expects, and what can happen when someone enters that world unprepared.<br /><br />
-            She believes preparation is a form of protection.<br />
-            She does not always recognize when the two begin to become difficult to separate.
+            She has spent years preparing her daughter for a life in which very little can be treated as purely personal. She believes preparation is a form of protection. She does not always recognize when the two begin to become difficult to separate.
           </p>
         </div>
 
-        <!-- Edward of Valenne -->
         <div class="card">
           <h3>EDWARD OF VALENNE</h3>
           <p>
             Edward enters Elizabeth's life as the man she is expected to marry.<br /><br />
-            He is intelligent, observant, politically aware, and more complicated than the arrangement between them initially suggests.<br /><br />
-            The marriage has consequences beyond the two people expected to enter it.<br />
-            That does not make what exists between them less personal.
+            He is intelligent, observant, politically aware, and more complicated than the arrangement between them initially suggests. The marriage has consequences beyond the two people expected to enter it.
           </p>
         </div>
 
-        <!-- Elias -->
         <div class="card">
           <h3>ELIAS</h3>
           <p>
             Elias comes from a world outside the palace, but his work brings him into places Elizabeth has spent most of her life taking for granted.<br /><br />
-            He is observant, independent, and not easily impressed by the distinctions that matter inside the royal household.<br /><br />
-            His relationship with Elizabeth develops gradually, shaped by conversations, disagreements, shared curiosity, and circumstances neither of them initially understands very well.<br /><br />
-            There is more to his connection to the palace than Elizabeth knows.
+            He is observant, independent, and not easily impressed by the distinctions that matter inside the royal household.
           </p>
         </div>
 
-        <!-- Isabel -->
         <div class="card">
           <h3>ISABEL</h3>
           <p>
             Isabel is Elizabeth's younger sister, and although they were raised within the same royal household, they have not experienced it in quite the same way.<br /><br />
-            She understands the expectations placed on their family, the responsibilities that come with their position, and the small rules that govern life inside the palace.<br /><br />
-            She is close to Elizabeth, but being close to someone does not mean seeing the world in exactly the same way.<br /><br />
-            Isabel has her own understanding of what their family owes to the kingdom, and her own reasons for accepting some things Elizabeth has begun to question.<br /><br />
-            That makes her one of the people Elizabeth cannot simply place on one side or the other.
+            She has her own understanding of what their family owes to the kingdom, and her own reasons for accepting some things Elizabeth has begun to question.
           </p>
         </div>
 
-        <!-- Mama Elena -->
         <div class="card">
           <h3>MAMA ELENA</h3>
           <p>
             Mama Elena lives far from the world Elizabeth has known.<br /><br />
-            Her life is shaped by work, community, necessity, and expectations of a different kind.<br /><br />
-            Elizabeth does not find a place without rules.<br />
-            She finds people whose rules she has never learned.
+            Her life is shaped by work, community, necessity, and expectations of a different kind. Elizabeth does not find a place without rules; she finds people whose rules she has never learned.
           </p>
         </div>
       </div>
 
-      <!-- Rowan -->
       <div class="card" style="margin-top: 2.5rem;">
         <h3>ROWAN</h3>
         <p>
           Rowan's influence reaches Elizabeth through a book before it reaches her through memory.<br /><br />
-          His ideas give language to questions Elizabeth has not yet learned how to ask.<br /><br />
-          One of them stays with her longer than she expects:
-        </p>
-        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; color: var(--ink); margin-top: 1rem;">
-          "What does a person carry with them when they leave?"
+          His ideas give language to questions Elizabeth has not yet learned how to ask.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 4. WHERE IT BEGAN -->
+  <!-- 4. WHERE IT BEGAN (THE MAKING OF OR SO SHE THOUGHT - BEHIND THE SCENES ARCHIVE) -->
   <section id="making" class="content-section section-alt">
     <div class="container">
-      <div class="essay-list-container">
-        
-        <div class="section-header-bar">
-          <div class="section-eyebrow">BEHIND THE NOVEL</div>
-        </div>
-        <h2 class="section-title">WHERE IT BEGAN</h2>
-        <div style="font-family: var(--font-serif); font-size: 1.35rem; font-style: italic; color: var(--gold-subtle); margin-top: -0.75rem; margin-bottom: 2.2rem; letter-spacing: 0.02em;">
-          The Making of Or So She Thought
-        </div>
+      <div class="section-header-bar">
+        <div class="section-eyebrow">THE MAKING OF THE NOVEL</div>
+      </div>
+      <h2 class="section-title">WHERE IT BEGAN</h2>
+      <div style="font-family: var(--font-serif); font-size: 1.35rem; font-style: italic; color: var(--gold-subtle); margin-top: -0.75rem; margin-bottom: 2.2rem; letter-spacing: 0.02em;">
+        The Making of Or So She Thought
+      </div>
 
-        <p class="essay-p">
-          <em>Or So She Thought</em> did not arrive fully formed.
-        </p>
-        <p class="essay-p">
-          There was a version of the story before there was this one. There were characters who belonged to earlier versions of it, places that existed before I understood what they were for, scenes that seemed essential until they weren't, and questions I thought I was writing about before realizing I had been asking a different question all along.
-        </p>
-        <p class="essay-p">
-          That is probably true of most novels. The finished book creates the illusion that it was always heading toward itself. But novels are not usually discovered in that order. They are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.
-        </p>
-        <p class="essay-p" style="margin-bottom: 2.5rem;">
-          <em>Or So She Thought</em> changed because I kept following those changes.
-        </p>
+      <p class="lead-text" style="font-size: 1.15rem; margin-bottom: 1.2rem;">
+        <em>Or So She Thought</em> did not arrive fully formed.
+      </p>
+      <p style="color: var(--ink-muted); font-size: 1.02rem; line-height: 1.85; margin-bottom: 3.5rem;">
+        There was a version of the story before there was this one. There were characters who belonged to earlier drafts, places that existed before I understood what they were for, scenes that seemed essential until they weren't, and questions I thought I was writing about before realizing I had been asking a different question all along.<br><br>
+        Novels are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available. <em>Or So She Thought</em> changed because I kept following those changes.
+      </p>
 
-        <!-- 10-Item Expandable Accordion List -->
-        <div class="essay-accordion-list">
-          
-          <!-- 01 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>01 — THE STORY BEFORE THE STORY</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Every novel has an earlier version of itself. Sometimes that earlier version survives in obvious ways: a character's name, a scene, a location, a discarded chapter. Sometimes it survives more quietly. A question remains even after the story that produced it has disappeared.
-              </p>
-              <p class="essay-p">
-                <em>Or So She Thought</em> began with a different story. Elizabeth was not initially the person I thought she would become, and the novel did not begin with the particular question that eventually came to define it.
-              </p>
-              <p class="essay-p">
-                At first, I was more interested in the events. Then I became more interested in the person experiencing them. That changed everything. A plot can tell you what happens to someone. A character can make you ask why it matters to them.
-              </p>
-              <p class="essay-p">
-                Once Elizabeth became more interesting to me than the story I had originally intended to tell, the novel began moving in a different direction. I stopped asking only what should happen next. I began asking what kind of person would have arrived at this moment. And then another question followed: <em>What would have had to happen for this person to become this way?</em>
-              </p>
-              <p class="essay-p">
-                That question stayed.
-              </p>
+      <div class="grid-2">
+        <!-- 1. The Story Before Elizabeth -->
+        <div class="expandable-box">
+          <div>
+            <h4>THE STORY BEFORE ELIZABETH</h4>
+            <p class="box-preview">On the story that existed before Or So She Thought, and the moment Elizabeth became more interesting than the novel I had originally planned.</p>
+            <div class="box-more-content">
+              Every novel begins somewhere else. At first, I was more interested in external events and political maneuvering across borders. Then Elizabeth began to emerge—not as an instrument of the plot, but as a person whose quiet compliance was itself an exhausting form of labor. Once her inner life became the primary question, the entire architecture of the book had to shift to meet her.
             </div>
           </div>
-
-          <!-- 02 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>02 — WHEN THE WORLD HAD TO BECOME A WORLD</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Norwyn could not exist simply because Elizabeth needed somewhere to live. The more I wrote, the more obvious that became.
-              </p>
-              <p class="essay-p">
-                A fictional world becomes thin when everything inside it appears to have been arranged for the protagonist. The government exists because the plot requires a government. The royal family exists because the protagonist is royal. Another kingdom exists because a marriage requires another kingdom. A mountain community exists because the protagonist needs somewhere to go. That kind of world can function. It does not necessarily feel alive.
-              </p>
-              <p class="essay-p">
-                Norwyn had to exist before Elizabeth began questioning it. Its institutions needed histories. Its traditions needed reasons. Its inequalities needed consequences. Its ordinary people needed lives that did not depend on whether Elizabeth was paying attention.
-              </p>
-              <p class="essay-p">
-                Most importantly, the people inside Norwyn had to believe that their way of living made sense. They could not all be waiting for Elizabeth to discover that the system was wrong. That would make the world too convenient.
-              </p>
-              <p class="essay-p">
-                People rarely experience their own lives as systems. They experience them as Tuesday. They go to work. They follow customs. They raise children. They marry. They obey rules they agree with and complain about rules they don't. They inherit assumptions without necessarily recognizing them as assumptions.
-              </p>
-              <p class="essay-p">
-                That became important to Norwyn. I wanted the kingdom to feel ordinary enough that Elizabeth's questioning of it would be more complicated than simply discovering that she had been deceived.
-              </p>
-            </div>
-          </div>
-
-          <!-- 03 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>03 — ELIZABETH BECAME MORE DIFFICULT</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Elizabeth was probably the character who changed the novel most. The easiest version of her story would have been familiar: a young woman grows up inside a powerful institution. She discovers that the life prepared for her is not the life she wants. She resists it. She leaves. She becomes free. There is a story there. It simply wasn't the story I wanted anymore.
-              </p>
-              <p class="essay-p">
-                The more I understood Elizabeth, the less convincing that version became. She could love her family and still be hurt by them. She could benefit from privilege and still question the system that gave it to her. She could genuinely want some of the things she had been taught to want. She could reject an expectation and later discover that she had rejected the expectation rather than the thing itself. She could leave and still carry parts of the life she had left behind. She could return without becoming the same person who had left.
-              </p>
-              <p class="essay-p">
-                That made her less convenient as a protagonist. It also made her more human. I became less interested in whether Elizabeth would rebel and more interested in whether she could tell the difference between something she had been taught to want and something she genuinely wanted. That distinction is much harder to resolve.
-              </p>
-            </div>
-          </div>
-
-          <!-- 04 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>04 — THE PEOPLE COULD NOT HAVE ONE JOB</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Characters often begin with a function. Someone is the mother. Someone is the fiancé. Someone is the friend. Someone is the person who introduces the protagonist to another world. That can be useful when beginning a novel. It becomes limiting if the character never grows beyond it.
-              </p>
-              <p class="essay-p">
-                As the story developed, I became increasingly resistant to characters who existed only to perform a role in Elizabeth's development. Anne could not simply be the person who controlled her. Edward could not simply be the arranged husband. Elias could not simply be the person who understood her. Isabel could not simply be the sister who took the opposite position. Mama Elena could not simply represent another way of living. Rowan could not simply provide the idea that changes Elizabeth's thinking.
-              </p>
-              <p class="essay-p">
-                They needed lives that existed beyond what they could do for Elizabeth. They needed reasons for their decisions that made sense from where they stood. And sometimes those reasons had to remain understandable even when Elizabeth disagreed with them.
-              </p>
-              <p class="essay-p">
-                That changed the relationships. A character becomes much harder to write when you can no longer ask only, <em>What does this person do for the protagonist?</em> You have to ask: What does this person want? What do they believe they are protecting? What do they misunderstand? What are they willing to sacrifice? What might they be right about?
-              </p>
-              <p class="essay-p">
-                The last question is often the most inconvenient.
-              </p>
-            </div>
-          </div>
-
-          <!-- 05 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>05 — WHEN THE CONFLICT STOPPED BEING SIMPLE</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                The novel became more interesting when I stopped looking for a clean opposition between freedom and control. The palace could not be entirely oppressive. The mountains could not be entirely free. Tradition could not be entirely foolish. Rebellion could not automatically be wisdom. Obedience could not automatically be weakness. Leaving could not automatically mean liberation. Returning could not automatically mean failure.
-              </p>
-              <p class="essay-p">
-                The more I removed those easy oppositions, the more room the story had to breathe.
-              </p>
-              <p class="essay-p">
-                A person can be shaped by something without being false because of it. A person can inherit a belief and still sincerely believe it. A person can adapt to a situation and later decide that the adaptation no longer belongs there. A person can choose something for reasons that were partly formed by other people and still genuinely choose it. Those contradictions were more interesting to me than a clean transformation from one state into another.
-              </p>
-            </div>
-          </div>
-
-          <!-- 06 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>06 — THE SCENES THAT REFUSED TO LEAVE</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Some scenes survive because they move the story forward. Others survive because they contain something the novel needs even when their original purpose disappears.
-              </p>
-              <p class="essay-p">
-                I have become suspicious of scenes that exist only because I once thought they were important. A scene should not survive simply because it took a long time to write. But neither should it disappear simply because it does not perform an obvious plot function.
-              </p>
-              <p class="essay-p">
-                Sometimes a scene changes the reader's understanding of a character. Sometimes it establishes a relationship that later makes another scene matter. Sometimes it gives the story a piece of ordinary life that would be missing if everything were reduced to plot. And sometimes a scene survives because removing it makes the novel technically cleaner but emotionally poorer.
-              </p>
-              <p class="essay-p">
-                Those are often the difficult ones. You have to decide whether the story needs the scene or whether the writer is simply reluctant to lose it. The distinction is not always obvious.
-              </p>
-            </div>
-          </div>
-
-          <!-- 07 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>07 — THE SCENES THAT HAD TO GO</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Writing a novel also means discovering what the novel does not need. Some scenes exist because the writer needs to understand something. That does not mean the reader needs to understand it in the same way.
-              </p>
-              <p class="essay-p">
-                A scene can teach the writer who a character is and still belong nowhere in the finished book. A conversation can reveal an important relationship and still be replaced by a glance, a decision, or a later consequence. A chapter can solve a problem in the manuscript while creating a larger problem in the novel.
-              </p>
-              <p class="essay-p">
-                Eventually, revision becomes less about asking whether something is good and more about asking whether it belongs. That is a harder question. A good scene can still be wrong for the book. A beautiful sentence can still be unnecessary. A carefully constructed subplot can still be taking the novel somewhere it no longer wants to go.
-              </p>
-              <p class="essay-p">
-                Some of the work of writing <em>Or So She Thought</em> has therefore been learning to distinguish between what I wrote and what the novel actually needs.
-              </p>
-            </div>
-          </div>
-
-          <!-- 08 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>08 — THE TITLE CAME LATER</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Titles can make a story sound more certain than it is. <em>Or So She Thought</em> did the opposite. It left something unresolved.
-              </p>
-              <p class="essay-p">
-                The phrase belongs to the space between what a person believes and what they later discover was incomplete. It does not necessarily mean that the person was wrong. That distinction mattered to me.
-              </p>
-              <p class="essay-p">
-                Elizabeth's story is not built around the idea that everything she once believed was false. Some things were true. Some things were incomplete. Some things changed because she changed. Some things changed because she learned something she had not known before. And sometimes the meaning of something changes without the thing itself changing at all.
-              </p>
-              <p class="essay-p">
-                The title eventually felt right because it could hold that uncertainty without explaining it. It could belong to a sentence. It could belong to a memory. It could belong to a decision. It could belong to the reader.
-              </p>
-            </div>
-          </div>
-
-          <!-- 09 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>09 — WHAT THE NOVEL BECAME</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                At some point, I stopped trying to make the novel resemble the story I had originally imagined. That may be one of the quieter milestones of writing a book.
-              </p>
-              <p class="essay-p">
-                You begin with an idea of what the story is supposed to be. Then the characters resist. The world develops its own logic. A question becomes more interesting than the answer you planned. A relationship becomes more complicated than its original purpose. A scene changes the meaning of an earlier scene.
-              </p>
-              <p class="essay-p">
-                Eventually, the novel begins telling you what it is. The writer still makes the decisions. But the decisions are no longer being made from the same place.
-              </p>
-              <p class="essay-p">
-                <em>Or So She Thought</em> became a novel about choice, but not simply about having the freedom to choose. It became interested in something earlier than that: How does a person learn what is worth choosing? How do expectations become preferences? How does familiarity become certainty? How much of what feels like personality has a history behind it? And when a person finally begins to question those things, what exactly are they questioning?
-              </p>
-              <p class="essay-p">
-                I do not think the novel answers all of those questions. I don't think it should. Some questions became more interesting once I stopped trying to resolve them.
-              </p>
-            </div>
-          </div>
-
-          <!-- 10 -->
-          <div class="essay-accordion-item">
-            <button class="essay-accordion-header" onclick="toggleEssay(this)">
-              <span>10 — THE NOVEL I DID NOT KNOW I WAS WRITING</span>
-              <span class="essay-accordion-icon">+</span>
-            </button>
-            <div class="essay-accordion-body">
-              <p class="essay-p">
-                Looking back, the strangest part of writing a novel is how obvious the finished version can make the process look. The final story has a shape. The earlier versions did not.
-              </p>
-              <p class="essay-p">
-                There were decisions that seemed permanent until they weren't. Characters who became someone else. Ideas that disappeared and later returned in another form. Questions that survived because I could not quite make them go away.
-              </p>
-              <p class="essay-p">
-                That is part of what I mean when I say <em>Or So She Thought</em> changed as I wrote it. The novel was not simply being constructed. I was discovering what I had been interested in. And sometimes that meant realizing that the story I thought I wanted to tell was not the story I was most curious about.
-              </p>
-              <p class="essay-p">
-                Perhaps that is one of the strange privileges of writing fiction. You begin by deciding what happens. Eventually, if you stay with it long enough, the more difficult task becomes noticing what the story keeps asking you to look at.
-              </p>
-            </div>
-          </div>
-
+          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
         </div>
 
+        <!-- 2. The Mended Blouse -->
+        <div class="expandable-box">
+          <div>
+            <h4>THE MENDED BLOUSE</h4>
+            <p class="box-preview">On a small object that unexpectedly became part of Elizabeth's story.</p>
+            <div class="box-more-content">
+              Some objects in fiction are chosen deliberately for their symbolism; others arrive by accident and refuse to leave. In early drafts, the blouse was merely a detail in a domestic scene. But watching someone whose clothes have always been selected, tailored, and maintained by others attempt to fix an imperfect hem became a quiet study in what happens when self-reliance begins with clumsy fingers.
+            </div>
+          </div>
+          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
+        </div>
+
+        <!-- 3. The Title -->
+        <div class="expandable-box">
+          <div>
+            <h4>THE TITLE</h4>
+            <p class="box-preview">On how Or So She Thought became the title, and why uncertainty mattered more than certainty.</p>
+            <div class="box-more-content">
+              Titles often attempt to declare what a book is about. <em>Or So She Thought</em> does the opposite—it creates hesitation. It belongs to the narrow space between what a person assumes to be true and what they slowly realize was incomplete. It is not about discovering that everything was a lie; it is about discovering how much more complicated the truth actually is.
+            </div>
+          </div>
+          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
+        </div>
+
+        <!-- 4. Building Norwyn -->
+        <div class="expandable-box">
+          <div>
+            <h4>BUILDING NORWYN</h4>
+            <p class="box-preview">On creating a kingdom that had to feel lived in before Elizabeth ever began questioning it.</p>
+            <div class="box-more-content">
+              A world cannot feel like a stage set constructed merely for the protagonist's dilemma. Norwyn’s ministries, stone quays, river barges, and mountain passes had to exist as places where ordinary people live their ordinary days. If the rules of the kingdom did not make coherent sense to the people upholding them, Elizabeth's quiet resistance would have cost her nothing.
+            </div>
+          </div>
+          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
+        </div>
+
+        <!-- 5. Writing Anne -->
+        <div class="expandable-box">
+          <div>
+            <h4>WRITING ANNE</h4>
+            <p class="box-preview">On writing a mother whose love, certainty, responsibility, and mistakes could not be separated neatly from one another.</p>
+            <div class="box-more-content">
+              The easiest version of Anne would have been an imposing tyrant. But power inside families rarely operates through overt hostility. Anne is driven by duty and a fierce belief that discipline is the highest form of protection. When control looks and feels like genuine care, the boundaries between devotion and constraint become almost impossible to disentangle.
+            </div>
+          </div>
+          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
+        </div>
+
+        <!-- 6. The Scenes That Survived -->
+        <div class="expandable-box">
+          <div>
+            <h4>THE SCENES THAT SURVIVED</h4>
+            <p class="box-preview">On the scenes that remained after earlier versions of the novel disappeared.</p>
+            <div class="box-more-content">
+              As a manuscript is rewritten, whole chapters, characters, and subplots fall away. The scenes that endure are rarely the loudest ones. They are the moments of silence: a conversation in a carriage where nothing of consequence is said, an unread letter left on a cedar desk, or a shared glance across a banquet hall that registers an unspoken change.
+            </div>
+          </div>
+          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. BEYOND THE NOVEL -->
+  <!-- 5. BEYOND THE NOVEL (QUESTIONS THE NOVEL LEAVES BEHIND) -->
   <section id="beyond" class="content-section">
     <div class="container">
       <div class="section-header-bar">
-        <div class="section-eyebrow">Questions & Archive</div>
+        <div class="section-eyebrow">QUESTIONS THE NOVEL LEAVES BEHIND</div>
       </div>
       <h2 class="section-title">BEYOND THE NOVEL</h2>
 
-      <p class="lead-text">
-        The ideas, unresolved questions, and living archive from the world of <em>Or So She Thought</em>.
+      <p class="lead-text" style="font-size: 1.25rem; margin-bottom: 1.2rem;">
+        <em>Or So She Thought</em> is a story, but some of the questions it raises do not belong entirely to Elizabeth, Norwyn, or the world of the novel.
       </p>
 
-      <!-- THE QUESTIONS BEHIND THE STORY -->
-      <div style="margin-top: 3.5rem; margin-bottom: 4rem;">
-        <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 1.2rem;">THE QUESTIONS BEHIND THE STORY</div>
+      <div style="font-size: 1.05rem; color: var(--ink-muted); line-height: 1.95; margin-bottom: 3.5rem;">
+        They appear in ordinary lives too.<br><br>
+        How much of what we call preference was learned?<br>
+        How much of what feels inevitable was simply repeated?<br>
+        When does something we were taught become something we genuinely believe?<br>
+        And what happens when we begin to notice?
+      </div>
 
-        <div class="question-block">
-          <h3 class="question-title">HOW DO YOU KNOW WHAT YOU WANT WHEN YOU WERE TAUGHT WHAT TO WANT?</h3>
-          <p class="question-body">
-            A person can be influenced by family, culture, class, circumstance, and expectation without their desires becoming false.<br />
+      <div class="section-eyebrow" style="letter-spacing: 0.24em; margin-bottom: 1.5rem; color: var(--ink);">THE QUESTIONS</div>
+
+      <!-- THE 6 QUESTIONS -->
+      <div>
+        <div class="question-archive-block">
+          <h3 class="question-archive-title">HOW DO YOU KNOW WHAT YOU WANT?</h3>
+          <p class="question-archive-body">
+            Family, culture, circumstance, expectation, and experience all participate in forming a person.<br>
+            But influence does not make a desire false.<br>
             So where does influence end and choice begin?
           </p>
         </div>
 
-        <div class="question-block">
-          <h3 class="question-title">CAN A LIFE CHOSEN FOR YOU BECOME GENUINELY YOURS?</h3>
-          <p class="question-body">
-            We inherit more than possessions.<br />
-            We inherit assumptions about what a good life looks like, what is sensible, what is respectable, and what is possible.<br />
-            Sometimes we eventually choose those things ourselves. Does their history make the choice less real?
+        <div class="question-archive-block">
+          <h3 class="question-archive-title">CAN A LIFE CHOSEN FOR YOU BECOME YOUR OWN?</h3>
+          <p class="question-archive-body">
+            We inherit ideas about what a good life should look like.<br>
+            Sometimes we reject them.<br>
+            Sometimes we keep them.<br>
+            Sometimes we cannot tell which happened.
           </p>
         </div>
 
-        <div class="question-block">
-          <h3 class="question-title">CAN SOMEONE LOVE YOU AND STILL DECIDE TOO MUCH OF YOUR LIFE?</h3>
-          <p class="question-body">
-            Love does not always arrive separately from power.<br />
-            Sometimes the person protecting you is also the person deciding what you need protection from.
+        <div class="question-archive-block">
+          <h3 class="question-archive-title">CAN LOVE AND CONTROL EXIST TOGETHER?</h3>
+          <p class="question-archive-body">
+            The person who knows you best may also be the person who feels most entitled to decide what is best for you.<br>
+            Where does care become something else?
           </p>
         </div>
 
-        <div class="question-block">
-          <h3 class="question-title">IS LEAVING ALWAYS FREEDOM?</h3>
-          <p class="question-body">
-            Leaving changes what surrounds a person.<br />
-            It does not necessarily change what that person has learned to expect, fear, value, or repeat.
+        <div class="question-archive-block">
+          <h3 class="question-archive-title">WHAT HAPPENS WHEN A RULE BECOMES ORDINARY?</h3>
+          <p class="question-archive-body">
+            Some rules remain visible.<br>
+            Others become so familiar that nobody thinks to call them rules anymore.
           </p>
         </div>
 
-        <div class="question-block">
-          <h3 class="question-title">WHAT DO WE CARRY WITH US WHEN WE LEAVE?</h3>
-          <p class="question-body">
-            A person can cross a border, leave a house, change their clothes, abandon a role—and still bring much of the old world with them.
+        <div class="question-archive-block">
+          <h3 class="question-archive-title">WHEN DOES A RESPONSE BECOME A TRAIT?</h3>
+          <p class="question-archive-body">
+            A person does something often enough.<br>
+            Other people begin to expect it.<br>
+            Eventually, the person may begin to expect it too.
           </p>
         </div>
 
-        <div class="question-block">
-          <h3 class="question-title">CAN RETURNING BE A CHOICE?</h3>
-          <p class="question-body">
-            Sometimes leaving is necessary.<br />
-            Sometimes staying is.<br />
-            Sometimes the harder question is whether returning can ever mean going back freely.
-          </p>
-        </div>
-
-        <div class="question-block">
-          <h3 class="question-title">WHAT HAPPENS WHEN NOBODY HAS TO TELL YOU NO?</h3>
-          <p class="question-body">
-            The deepest rules are sometimes the ones we learn well enough to enforce ourselves.
-          </p>
-        </div>
-
-        <div class="question-block">
-          <h3 class="question-title">WHAT DOES IT MEAN TO CHOOSE WHEN SO MUCH OF YOU WAS FORMED BEFORE YOU COULD CHOOSE?</h3>
-          <p class="question-body">
-            Before a person can decide what they believe, they have already learned what to notice, what to expect, what to fear, and what to call normal.<br />
-            Choice does not begin from nowhere.
+        <div class="question-archive-block">
+          <h3 class="question-archive-title">WHAT DO WE CALL CHOICE WHEN THE OPTIONS ALREADY FEEL OBVIOUS?</h3>
+          <p class="question-archive-body">
+            A decision can feel completely voluntary and still have a long history behind it.<br>
+            That does not make it meaningless.<br>
+            It makes its history worth examining.
           </p>
         </div>
       </div>
 
-      <!-- NOTES FROM THE NOVEL (LIVING ARCHIVE) -->
-      <div style="margin-top: 3.5rem;">
-        <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 1.2rem;">NOTES FROM THE NOVEL</div>
-        <p class="sub-lead-text" style="margin-bottom: 2rem;">
-          Fragments, questions, discoveries, discarded ideas, research, scenes, and occasional notes from the long process of writing a novel.
-        </p>
-
-        <div class="grid-2">
-          <div class="note-entry">
-            <div>
-              <h3>WHERE OR SO SHE THOUGHT REALLY BEGAN</h3>
-              <p>
-                On the story that came before Elizabeth's story, and the moment one character quietly became more interesting than the novel I had originally planned.
-              </p>
-            </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
-          </div>
-
-          <div class="note-entry">
-            <div>
-              <h3>THE MENDED BLOUSE</h3>
-              <p>
-                On one of the smallest objects in the novel, and why Elizabeth repairing something badly became more important than I expected.
-              </p>
-            </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
-          </div>
-
-          <div class="note-entry">
-            <div>
-              <h3>WHY ELIAS HAD TO LIVE</h3>
-              <p>
-                On refusing to let tragedy make Elizabeth's choices too easy.
-              </p>
-            </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
-          </div>
-
-          <div class="note-entry">
-            <div>
-              <h3>BUILDING A PALACE NOBODY THINKS IS A PRISON</h3>
-              <p>
-                On writing a world where control can genuinely feel like care to the person doing the controlling.
-              </p>
-            </div>
-            <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
-          </div>
-        </div>
-
-        <div class="note-entry" style="margin-top: 2rem;">
-          <div>
-            <h3>WHAT I DIDN'T UNDERSTAND ABOUT ANNE</h3>
-            <p>
-              On discovering that making Anne more human did not make her choices less consequential.
-            </p>
-          </div>
-          <a href="#novel" class="read-link" onclick="openSection('novel')">READ →</a>
-        </div>
+      <!-- QUIET LINK TO THE MAKING ARCHIVE -->
+      <div class="archive-quiet-link-wrap">
+        <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 0.8rem;">THE MAKING OF THE NOVEL</div>
+        <button onclick="openSection('making')" class="archive-quiet-link-btn">
+          WHERE IT BEGAN &rarr;
+        </button>
       </div>
 
     </div>
@@ -2287,21 +1331,16 @@
           <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.8;">
             Her current novel, <em>Or So She Thought</em>, is a psychological novel set in 1990s Norwyn. It follows Elizabeth, a young woman whose future has been carefully prepared for her, and the increasingly difficult question of how much of that future she has actually chosen.
           </p>
-          <p style="color: var(--ink-muted); line-height: 1.8;">
-            Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people become who they are.
-          </p>
 
-          <!-- Current Novel Banner -->
           <div class="card" style="margin-top: 3rem; background: var(--bg-cream);">
             <div class="section-eyebrow" style="margin-bottom: 0.5rem;">CURRENT NOVEL</div>
             <h3 style="margin-bottom: 0.4rem;">OR SO SHE THOUGHT</h3>
             <p style="margin-bottom: 1.2rem;">
               A 1990s Royal Psychological Novel of Duty, Doubt, and Choice
             </p>
-            <a href="#novel" onclick="openSection('novel')" class="read-link">ENTER THE NOVEL →</a>
+            <a href="#novel" onclick="openSection('novel')" style="font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600;">ENTER THE NOVEL →</a>
           </div>
 
-          <!-- Elsewhere & Contact Links -->
           <div class="grid-2" style="margin-top: 2rem;">
             <div class="card" style="background: var(--surface);">
               <div class="section-eyebrow" style="margin-bottom: 0.5rem;">ELSEWHERE</div>
@@ -2349,7 +1388,7 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & ESSAY ACCORDION -->
+  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES -->
   <script>
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
@@ -2392,7 +1431,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Toggle Expandable Archive Boxes (Norwyn Section)
+    // Toggle Expandable Archive Boxes (Norwyn & Where It Began Sections)
     function toggleBox(btn) {
       const card = btn.closest('.expandable-box');
       const moreContent = card.querySelector('.box-more-content');
@@ -2400,17 +1439,11 @@
 
       if (isOpen) {
         moreContent.classList.remove('open');
-        btn.innerHTML = 'More &rarr;';
+        btn.innerHTML = (card.closest('#making') ? 'READ &rarr;' : 'More &rarr;');
       } else {
         moreContent.classList.add('open');
-        btn.innerHTML = 'Less &uarr;';
+        btn.innerHTML = (card.closest('#making') ? 'CLOSE &uarr;' : 'Less &uarr;');
       }
-    }
-
-    // Toggle Accordion List Items (Where It Began Essay)
-    function toggleEssay(btn) {
-      const item = btn.closest('.essay-accordion-item');
-      item.classList.toggle('open');
     }
 
     // Touch swipe right to close drawer on mobile
