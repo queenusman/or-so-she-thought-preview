@@ -591,7 +591,7 @@
     }
 
     /* =========================================================
-       EXPANDABLE & RETRACTABLE ESSAY ACCORDION (WHERE IT BEGAN)
+       EXPANDABLE ESSAY ACCORDION LIST (WHERE IT BEGAN)
        ========================================================= */
     .essay-list-container {
       max-width: 820px;
@@ -668,32 +668,6 @@
 
     .essay-p em, .essay-p strong {
       color: var(--ink);
-    }
-
-    /* Retract Button at the bottom of each essay chapter */
-    .essay-retract-btn {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--ink);
-      font-family: var(--font-sans);
-      font-size: 0.76rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      padding: 0.65rem 1.4rem;
-      border-radius: 2px;
-      cursor: pointer;
-      margin-top: 1.6rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: all 0.2s ease;
-    }
-
-    .essay-retract-btn:hover {
-      background: var(--ink);
-      color: var(--bg-cream);
-      border-color: var(--ink);
     }
 
     /* Subscription Box */
@@ -1828,7 +1802,7 @@
     </div>
   </section>
 
-  <!-- 4. WHERE IT BEGAN (EXPANDABLE & RETRACTABLE ESSAY: THE MAKING OF OR SO SHE THOUGHT) -->
+  <!-- 4. WHERE IT BEGAN (EXPANDABLE ESSAY ACCORDION: THE MAKING OF OR SO SHE THOUGHT) -->
   <section id="making" class="content-section section-alt">
     <div class="container">
       <div class="essay-list-container">
@@ -1855,7 +1829,7 @@
           <em>Or So She Thought</em> changed because I kept following those changes.
         </p>
 
-        <!-- 10-Item Expandable & Retractable Accordion List -->
+        <!-- 10-Item Expandable Accordion List -->
         <div class="essay-accordion-list">
           
           <!-- 01 -->
@@ -1880,7 +1854,6 @@
               <p class="essay-p">
                 That question stayed.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -1909,7 +1882,6 @@
               <p class="essay-p">
                 That became important to Norwyn. I wanted the kingdom to feel ordinary enough that Elizabeth's questioning of it would be more complicated than simply discovering that she had been deceived.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -1929,7 +1901,6 @@
               <p class="essay-p">
                 That made her less convenient as a protagonist. It also made her more human. I became less interested in whether Elizabeth would rebel and more interested in whether she could tell the difference between something she had been taught to want and something she genuinely wanted. That distinction is much harder to resolve.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -1955,7 +1926,6 @@
               <p class="essay-p">
                 The last question is often the most inconvenient.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -1975,7 +1945,6 @@
               <p class="essay-p">
                 A person can be shaped by something without being false because of it. A person can inherit a belief and still sincerely believe it. A person can adapt to a situation and later decide that the adaptation no longer belongs there. A person can choose something for reasons that were partly formed by other people and still genuinely choose it. Those contradictions were more interesting to me than a clean transformation from one state into another.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -1998,7 +1967,6 @@
               <p class="essay-p">
                 Those are often the difficult ones. You have to decide whether the story needs the scene or whether the writer is simply reluctant to lose it. The distinction is not always obvious.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -2021,7 +1989,6 @@
               <p class="essay-p">
                 Some of the work of writing <em>Or So She Thought</em> has therefore been learning to distinguish between what I wrote and what the novel actually needs.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -2044,7 +2011,6 @@
               <p class="essay-p">
                 The title eventually felt right because it could hold that uncertainty without explaining it. It could belong to a sentence. It could belong to a memory. It could belong to a decision. It could belong to the reader.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -2070,7 +2036,6 @@
               <p class="essay-p">
                 I do not think the novel answers all of those questions. I don't think it should. Some questions became more interesting once I stopped trying to resolve them.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -2093,7 +2058,6 @@
               <p class="essay-p">
                 Perhaps that is one of the strange privileges of writing fiction. You begin by deciding what happens. Eventually, if you stay with it long enough, the more difficult task becomes noticing what the story keeps asking you to look at.
               </p>
-              <button class="essay-retract-btn" onclick="retractEssay(this)">Retract &uarr;</button>
             </div>
           </div>
 
@@ -2388,15 +2352,6 @@
     function toggleEssay(btn) {
       const item = btn.closest('.essay-accordion-item');
       item.classList.toggle('open');
-    }
-
-    // Retract Accordion Item and Smoothly Return to Header
-    function retractEssay(btn) {
-      const item = btn.closest('.essay-accordion-item');
-      if (item) {
-        item.classList.remove('open');
-        item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
     }
 
     // Touch swipe right to close drawer on mobile
