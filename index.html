@@ -630,7 +630,7 @@
       line-height: 1.9;
     }
 
-    /* Author Frame & Contact Link */
+    /* Author Frame & Interactive Contact Box */
     .author-frame {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -649,13 +649,35 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      transition: color 0.2s ease, opacity 0.2s ease;
+      transition: color 0.2s ease;
       cursor: pointer;
     }
 
     .contact-email-link:hover {
       color: var(--gold-subtle);
-      opacity: 0.9;
+    }
+
+    .action-pill-btn {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .action-pill-btn:hover {
+      border-color: var(--ink);
+      background: var(--surface-subtle);
     }
 
     @media (max-width: 600px) {
@@ -1319,17 +1341,47 @@
             Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people acquire expectations, habits, assumptions, preferences, and ways of seeing.
           </p>
 
-          <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 480px;">
+          <!-- Interactive Fail-Proof Contact Card -->
+          <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 520px;">
             <div class="section-eyebrow" style="margin-bottom: 0.5rem;">CONTACT</div>
             <p>For literary, rights, interview, and professional inquiries:</p>
-            <div style="margin-top: 0.85rem; font-size: 1.05rem; font-family: var(--font-serif);">
+            
+            <div style="margin-top: 1rem;">
               <a 
                 href="mailto:usmanshazaan@gmail.com?subject=Literary%20Inquiry%20%E2%80%94%20Or%20So%20She%20Thought" 
+                onclick="handleEmailClick(event)" 
                 class="contact-email-link"
-                title="Send an email to Queen Usman"
+                style="font-size: 1.15rem; font-family: var(--font-serif);"
+                title="Click to write an email"
               >
                 usmanshazaan@gmail.com <span>↗</span>
               </a>
+            </div>
+
+            <!-- Action shortcuts: Copy address + Open directly in Gmail web -->
+            <div style="margin-top: 0.85rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+              <button 
+                type="button" 
+                class="action-pill-btn" 
+                onclick="copyEmailToClipboard()"
+                title="Copy address to clipboard"
+              >
+                Copy Address
+              </button>
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=usmanshazaan@gmail.com&su=Literary%20Inquiry%20%E2%80%94%20Or%20So%20She%20Thought" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="action-pill-btn"
+                title="Compose in Gmail in your browser"
+              >
+                Open in Gmail ↗
+              </a>
+            </div>
+
+            <!-- Feedback Toast -->
+            <div id="email-toast" style="display: none; margin-top: 0.75rem; font-size: 0.84rem; color: #2e7d32; font-weight: 500;">
+              ✓ Email address copied to clipboard!
             </div>
           </div>
         </div>
@@ -1361,7 +1413,7 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES -->
+  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & EMAIL HANDLER -->
   <script>
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
@@ -1436,6 +1488,50 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') toggleMenu(false);
     });
+
+    // Email link handler: Copies to clipboard immediately and attempts mail app launch
+    function handleEmailClick(e) {
+      copyEmailToClipboard();
+      // Allow the default mailto: to trigger for users with mail clients configured
+    }
+
+    function copyEmailToClipboard() {
+      const email = 'usmanshazaan@gmail.com';
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast('✓ Email address copied to clipboard!');
+        }).catch(() => fallbackCopy(email));
+      } else {
+        fallbackCopy(email);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast('✓ Email address copied to clipboard!');
+      } catch (err) {
+        showToast('Address: ' + text);
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('email-toast');
+      if (toast) {
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 4000);
+      }
+    }
   </script>
 
 </body>
