@@ -11,16 +11,16 @@
 
   <style>
     :root {
-      --desk-bg: #141210;
-      --book-cover: #1b1713;
-      --page-bg: #f7f3eb;
-      --page-bg-alt: #f0eae1;
-      --ink: #1f1b16;
-      --ink-muted: #575249;
-      --ink-faint: #8a8377;
-      --border: #d9d1c1;
-      --gold: #bda376;
-      --gutter-shadow: linear-gradient(to right, rgba(0,0,0,0.06), rgba(0,0,0,0.24), rgba(0,0,0,0.05));
+      --desk-bg: #0e0d0b;
+      --book-cover: #161412;
+      --page-bg: #f5f0e6;
+      --page-bg-alt: #eae4d8;
+      --ink: #1a1714;
+      --ink-muted: #524c44;
+      --ink-faint: #827a6e;
+      --border: #d4cbbe;
+      --gold: #b39966;
+      --gutter-shadow: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0.28), rgba(0,0,0,0.06));
       --font-serif: "Cormorant Garamond", Georgia, serif;
       --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
     }
@@ -44,7 +44,7 @@
       perspective: 2000px;
     }
 
-    /* Ambient Desk Environment */
+    /* Ambient Literary Desk Stage */
     .desk-stage {
       width: 100%;
       height: 100%;
@@ -57,7 +57,7 @@
     }
 
     /* =========================================================
-       CLOSED HARDCOVER BOOK STATE
+       CLOSED HARDCOVER COVER STATE (The Fifth Corner Press Vibe)
        ========================================================= */
     .closed-book-stage {
       display: flex;
@@ -71,29 +71,29 @@
     }
 
     .closed-book-stage.opening {
-      transform: scale(1.2) rotateY(-20deg) translateZ(120px);
+      transform: scale(1.15) rotateY(-18deg) translateZ(100px);
       opacity: 0;
       pointer-events: none;
     }
 
     .physical-cover-object {
-      width: min(72vw, 300px);
-      height: min(108vw, 440px);
+      width: min(75vw, 310px);
+      height: min(110vw, 450px);
       background: var(--book-cover);
-      border-radius: 4px 14px 14px 4px;
+      border-radius: 2px 10px 10px 2px;
       position: relative;
       box-shadow: 
-        -25px 35px 70px rgba(0, 0, 0, 0.8),
-        -3px 0 10px rgba(0, 0, 0, 0.6) inset,
-        4px 0 8px rgba(255, 255, 255, 0.12) inset;
+        -25px 40px 80px rgba(0, 0, 0, 0.85),
+        -3px 0 12px rgba(0, 0, 0, 0.7) inset,
+        3px 0 6px rgba(255, 255, 255, 0.08) inset;
       overflow: hidden;
-      transform: rotateY(-12deg) rotateX(4deg);
+      transform: rotateY(-10deg) rotateX(3deg);
       transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
     }
 
     .physical-cover-object:hover {
-      transform: rotateY(0deg) rotateX(0deg) translateY(-8px);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.85);
+      transform: rotateY(0deg) rotateX(0deg) translateY(-6px);
+      box-shadow: 0 45px 90px rgba(0, 0, 0, 0.9);
     }
 
     .cover-image-el {
@@ -107,40 +107,40 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 16px;
-      width: 3px;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 1px 0 3px rgba(0, 0, 0, 0.6);
+      left: 14px;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 1px 0 2px rgba(0, 0, 0, 0.5);
       pointer-events: none;
     }
 
     .open-book-prompt {
       margin-top: 2rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.35em;
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: rgba(247, 243, 235, 0.6);
+      color: rgba(245, 240, 230, 0.5);
       font-weight: 500;
       animation: pulsePrompt 2.5s infinite ease-in-out;
     }
 
     @keyframes pulsePrompt {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.95; }
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.9; }
     }
 
     /* =========================================================
-       OPENED TWO-PAGE SPREAD STATE (Active on ALL screens)
+       OPENED TWO-PAGE SPREAD STATE (Active on Mobile and Desktop)
        ========================================================= */
     .opened-book-container {
       display: none;
       width: 100%;
       height: 100%;
-      max-width: 1040px;
-      max-height: 820px;
+      max-width: 1080px;
+      max-height: 840px;
       background: var(--page-bg);
-      border-radius: 4px;
-      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255,255,255,0.06);
+      border-radius: 3px;
+      box-shadow: 0 40px 90px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255,255,255,0.05);
       position: relative;
       opacity: 0;
       transform: scale(0.95);
@@ -162,7 +162,7 @@
       top: 0;
       bottom: 0;
       left: 50%;
-      width: 28px;
+      width: 32px;
       background: var(--gutter-shadow);
       transform: translateX(-50%);
       z-index: 20;
@@ -171,7 +171,7 @@
 
     /* Physical Page Pane */
     .book-page-pane {
-      padding: 2rem 1.8rem 2.2rem;
+      padding: 1.5rem 1.25rem 1.8rem;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -183,16 +183,16 @@
 
     .book-page-pane:first-child {
       border-right: 1px solid var(--border);
-      background-image: linear-gradient(to left, rgba(0,0,0,0.025), transparent);
+      background-image: linear-gradient(to left, rgba(0,0,0,0.03), transparent);
     }
 
     .book-page-pane:last-child {
-      background-image: linear-gradient(to right, rgba(0,0,0,0.025), transparent);
+      background-image: linear-gradient(to right, rgba(0,0,0,0.03), transparent);
     }
 
     @media (min-width: 600px) {
       .book-page-pane {
-        padding: 3rem 2.5rem 3.2rem;
+        padding: 2.8rem 2.4rem 3rem;
       }
     }
 
@@ -202,10 +202,10 @@
       justify-content: space-between;
       align-items: baseline;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.45rem;
       margin-bottom: 1.2rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--ink-faint);
     }
@@ -215,10 +215,10 @@
       justify-content: space-between;
       align-items: center;
       border-top: 1px solid var(--border);
-      padding-top: 0.8rem;
+      padding-top: 0.75rem;
       margin-top: 1.2rem;
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--ink-faint);
     }
@@ -227,8 +227,8 @@
       background: none;
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
       color: var(--ink);
@@ -238,33 +238,34 @@
     }
 
     .book-page-turn-action:hover {
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     /* Typography inside Book Pages */
     .page-serif-title {
       font-family: var(--font-serif);
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 600;
       line-height: 1.15;
       color: var(--ink);
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
     }
 
     .page-serif-subtitle {
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-style: italic;
       color: var(--ink-muted);
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.75rem;
       line-height: 1.35;
     }
 
     .page-prose-text {
-      font-size: 0.88rem;
-      line-height: 1.7;
+      font-size: 0.84rem;
+      line-height: 1.75;
       color: var(--ink-muted);
-      margin-bottom: 1rem;
+      margin-bottom: 0.95rem;
     }
 
     .page-prose-text strong {
@@ -273,16 +274,16 @@
     }
 
     @media (min-width: 600px) {
-      .page-serif-title { font-size: 2.1rem; }
-      .page-serif-subtitle { font-size: 1.3rem; }
-      .page-prose-text { font-size: 0.95rem; line-height: 1.85; }
+      .page-serif-title { font-size: 2.15rem; }
+      .page-serif-subtitle { font-size: 1.35rem; }
+      .page-prose-text { font-size: 0.94rem; line-height: 1.9; }
     }
 
     /* Table of Contents */
     .book-toc-list {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.45rem;
       margin-top: 0.3rem;
     }
 
@@ -290,36 +291,36 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding-bottom: 0.4rem;
+      padding-bottom: 0.38rem;
       border-bottom: 1px dashed var(--border);
       cursor: pointer;
       font-family: var(--font-serif);
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       color: var(--ink);
       transition: color 0.2s ease, padding-left 0.2s ease;
     }
 
     .book-toc-row:hover {
       color: var(--ink-muted);
-      padding-left: 4px;
+      padding-left: 5px;
     }
 
     .book-toc-pageNum {
       font-family: var(--font-sans);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
       color: var(--ink-faint);
     }
 
     @media (min-width: 600px) {
-      .book-toc-row { font-size: 1.1rem; }
+      .book-toc-row { font-size: 1.12rem; }
     }
 
     /* Accordions / Folds */
     .book-fold-box {
       border: 1px solid var(--border);
-      border-radius: 3px;
-      margin-bottom: 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.55rem;
       background: var(--page-bg-alt);
     }
 
@@ -327,7 +328,7 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 0.75rem 0.95rem;
+      padding: 0.7rem 0.9rem;
       text-align: left;
       font-family: var(--font-serif);
       font-size: 1rem;
@@ -337,14 +338,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      letter-spacing: 0.02em;
     }
 
     .book-fold-body {
       display: none;
-      padding: 0 0.95rem 0.95rem;
-      font-size: 0.85rem;
+      padding: 0 0.9rem 0.9rem;
+      font-size: 0.82rem;
       color: var(--ink-muted);
-      line-height: 1.7;
+      line-height: 1.75;
       border-top: 1px dashed var(--border);
     }
 
@@ -356,24 +358,29 @@
     .book-author-form {
       display: flex;
       flex-direction: column;
-      gap: 0.7rem;
+      gap: 0.65rem;
       margin-top: 0.6rem;
     }
 
     .book-form-input, .book-form-textarea {
       width: 100%;
-      padding: 0.7rem 0.85rem;
+      padding: 0.65rem 0.8rem;
       border: 1px solid var(--border);
       background: var(--page-bg-alt);
       font-family: var(--font-sans);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--ink);
       border-radius: 2px;
       outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .book-form-input:focus, .book-form-textarea:focus {
+      border-color: var(--ink);
     }
 
     .book-form-textarea {
-      min-height: 85px;
+      min-height: 80px;
       resize: vertical;
     }
 
@@ -384,8 +391,8 @@
       color: var(--page-bg);
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       font-weight: 600;
       border-radius: 2px;
@@ -394,7 +401,7 @@
     }
 
     .book-form-btn:hover {
-      background: #383129;
+      background: #332e29;
     }
   </style>
 </head>
@@ -411,7 +418,7 @@
       <div class="open-prompt">Open the Book</div>
     </div>
 
-    <!-- OPENED TWO-PAGE SPREAD (Active on Mobile and Desktop) -->
+    <!-- OPENED TWO-PAGE SPREAD -->
     <div id="openedBookContainer" class="opened-book-container">
       <div class="book-gutter-shadow"></div>
 
@@ -428,7 +435,7 @@
 
         <div class="page-running-foot">
           <button class="book-page-turn-action" onclick="turnSpread(-1)">← Previous</button>
-          <span id="leftSpreadLabel" style="font-size: 0.65rem; color: var(--ink-faint);">SPREAD 1</span>
+          <span id="leftSpreadLabel" style="font-size: 0.62rem; color: var(--ink-faint);">SPREAD 1</span>
         </div>
       </div>
 
@@ -444,7 +451,7 @@
         </div>
 
         <div class="page-running-foot">
-          <span id="rightSpreadLabel" style="font-size: 0.65rem; color: var(--ink-faint);">SPREAD 1</span>
+          <span id="rightSpreadLabel" style="font-size: 0.62rem; color: var(--ink-faint);">SPREAD 1</span>
           <button class="book-page-turn-action" onclick="turnSpread(1)">Next →</button>
         </div>
       </div>
@@ -465,10 +472,10 @@
           pageNum: "— 1 —",
           html: `
             <div style="display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; padding: 1rem 0;">
-              <h1 class="page-serif-title" style="font-size: 2.2rem; margin-bottom: 0.5rem;">OR SO SHE THOUGHT</h1>
-              <p class="page-serif-subtitle" style="margin-bottom: 1.5rem;">A psychological novel of duty, doubt, and choice</p>
-              <div style="width: 40px; height: 1px; background: var(--ink); margin: 0 auto 1.5rem;"></div>
-              <p style="font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-faint);">Queen Usman</p>
+              <h1 class="page-serif-title" style="font-size: 2.1rem; margin-bottom: 0.4rem;">OR SO SHE THOUGHT</h1>
+              <p class="page-serif-subtitle" style="margin-bottom: 1.3rem;">A psychological novel of duty, doubt, and choice</p>
+              <div style="width: 35px; height: 1px; background: var(--ink); margin: 0 auto 1.3rem;"></div>
+              <p style="font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-faint);">Queen Usman</p>
             </div>
           `
         },
@@ -476,7 +483,7 @@
           header: "Contents",
           pageNum: "— 2 —",
           html: `
-            <h2 class="page-serif-title" style="font-size: 1.5rem; margin-bottom: 1rem;">TABLE OF CONTENTS</h2>
+            <h2 class="page-serif-title" style="font-size: 1.4rem; margin-bottom: 0.85rem;">TABLE OF CONTENTS</h2>
             <div class="book-toc-list">
               <div class="book-toc-row" onclick="jumpToSpread(1)"><span class="book-toc-title">01 — The Novel</span><span class="book-toc-pageNum">P. 03</span></div>
               <div class="book-toc-row" onclick="jumpToSpread(2)"><span class="book-toc-title">02 — The Kingdom of Norwyn</span><span class="book-toc-pageNum">P. 05</span></div>
@@ -504,8 +511,8 @@
           header: "The Novel",
           pageNum: "— 4 —",
           html: `
-            <h3 class="page-serif-subtitle" style="margin-bottom: 0.8rem;">Selected Chapters</h3>
-            <div class="book-toc-list" style="font-size: 0.9rem;">
+            <h3 class="page-serif-subtitle" style="margin-bottom: 0.6rem;">Selected Chapters</h3>
+            <div class="book-toc-list" style="font-size: 0.88rem;">
               <div class="book-toc-row"><span>01. The Life She Is Supposed to Want</span></div>
               <div class="book-toc-row"><span>02. Edward of Valenne</span></div>
               <div class="book-toc-row"><span>03. The Girl Who Corrects Herself</span></div>
@@ -687,7 +694,7 @@
           pageNum: "— 18 —",
           html: `
             <h3 class="page-serif-subtitle" style="font-size: 1rem; margin-bottom: 0.5rem;">Contact the Author</h3>
-            <p class="page-prose-text" style="font-size: 0.82rem; margin-bottom: 0.6rem;">For literary, rights, interview, and professional inquiries:</p>
+            <p class="page-prose-text" style="font-size: 0.8rem; margin-bottom: 0.6rem;">For literary, rights, interview, and professional inquiries:</p>
             
             <form class="book-author-form" id="authorContactForm">
               <input type="text" id="contactName" class="book-form-input" placeholder="Name" required />
