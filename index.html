@@ -11,17 +11,17 @@
 
   <style>
     :root {
-      --bg-cream: #fbf9f4;
-      --bg-ivory: #f4eee3;
-      --surface: #ffffff;
-      --surface-subtle: #f7f3eb;
+      --bg-cream: #f4efe6;
+      --bg-desk: #2b241c;
+      --surface: #fbf9f4;
+      --surface-alt: #f0eae1;
       --ink: #1f1b16;
       --ink-muted: #575249;
       --ink-faint: #8a8377;
-      --border: #e6dfd1;
+      --border: #d9d1c1;
       --border-dark: #2b2620;
       --gold-subtle: #bda376;
-      --shadow: 0 16px 36px -12px rgba(31, 27, 22, 0.08);
+      --shadow-book: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
       --font-serif: "Cormorant Garamond", Georgia, serif;
       --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
     }
@@ -34,19 +34,21 @@
 
     html {
       scroll-behavior: smooth;
-      background-color: var(--bg-cream);
+      background-color: var(--bg-desk);
       color: var(--ink);
     }
 
     body {
       font-family: var(--font-sans);
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.75;
-      background: var(--bg-cream);
+      background: var(--bg-desk);
       color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       overflow-x: hidden;
-      background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
-      background-size: 24px 24px;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -60,30 +62,27 @@
       opacity: 0.75;
     }
 
-    /* Top Sticky Navigation Bar */
+    /* Top Navigation / Bookmark Bar */
     .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(251, 249, 244, 0.96);
+      background: rgba(31, 27, 22, 0.92);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      padding: 1.1rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.9rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: #fbf9f4;
     }
 
     .nav-brand {
       font-family: var(--font-serif);
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       font-weight: 700;
       cursor: pointer;
     }
 
-    /* Minimalist Three Black Lines Button */
     .hamburger-btn {
       background: none;
       border: none;
@@ -92,27 +91,22 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 5px;
-      padding: 8px 4px;
-      transition: opacity 0.2s ease;
-    }
-
-    .hamburger-btn:hover {
-      opacity: 0.65;
+      gap: 4px;
+      padding: 6px;
     }
 
     .hamburger-btn .bar {
-      width: 24px;
+      width: 22px;
       height: 2px;
-      background-color: var(--ink);
+      background-color: #fbf9f4;
       border-radius: 1px;
     }
 
-    /* Slide-out Menu Overlay & Drawer */
+    /* Slide-out Menu Drawer */
     .menu-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(31, 27, 22, 0.45);
+      background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(4px);
       z-index: 998;
       opacity: 0;
@@ -128,17 +122,17 @@
     .menu-drawer {
       position: fixed;
       top: 0;
-      right: -450px;
-      width: 84%;
-      max-width: 380px;
+      right: -400px;
+      width: 85%;
+      max-width: 360px;
       height: 100vh;
-      background: var(--bg-cream);
+      background: var(--surface);
       border-left: 1px solid var(--border);
-      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.3);
       z-index: 999;
       display: flex;
       flex-direction: column;
-      padding: 3.5rem 2.2rem 3rem;
+      padding: 3.5rem 2rem 3rem;
       transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       overflow-y: auto;
     }
@@ -150,7 +144,7 @@
     .drawer-links {
       display: flex;
       flex-direction: column;
-      gap: 1.4rem;
+      gap: 1.2rem;
     }
 
     .drawer-link-btn {
@@ -158,382 +152,230 @@
       border: none;
       text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--ink);
       cursor: pointer;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid rgba(217, 210, 197, 0.4);
-      transition: all 0.2s ease;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: color 0.2s ease;
     }
 
     .drawer-link-btn:hover {
       color: var(--gold-subtle);
-      padding-left: 6px;
     }
 
-    .drawer-link-arrow {
-      font-size: 0.95rem;
-      opacity: 0.4;
-      font-family: var(--font-sans);
+    /* =========================================================
+       PHYSICAL BOOK ENVIRONMENT
+       ========================================================= */
+    .book-stage-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem;
     }
 
-    /* Container Layout */
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 88vh;
+    /* Closed Book Cover State */
+    .closed-book-view {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 5rem 1.5rem 5.5rem;
-      background: radial-gradient(circle at center 35%, var(--surface) 0%, var(--bg-cream) 75%);
-      border-bottom: 1px solid var(--border);
-      transition: padding 0.3s ease;
+      animation: fadeIn 0.5s ease;
     }
 
-    /* Hide Motto & The Work when a section is open */
-    body.section-active .motto-wrapper,
-    body.section-active .work-section-wrap {
-      display: none !important;
-    }
-
-    body.section-active .hero {
-      min-height: auto;
-      padding: 2.8rem 1.5rem 1.8rem;
-    }
-
-    body.section-active .book-stage {
-      margin-bottom: 0;
-    }
-
-    /* 3D Hardcover Cover */
-    .book-stage {
-      perspective: 1400px;
-      perspective-origin: 50% 50%;
-      margin-bottom: 2.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .book-cover {
-      display: block;
-      width: 270px;
-      height: 410px;
+    .book-cover-3d {
+      width: 280px;
+      height: 420px;
       border-radius: 4px 12px 12px 4px;
       position: relative;
       cursor: pointer;
       background: #1b1713;
       overflow: hidden;
-      transform: rotateY(-14deg) rotateX(4deg) translate3d(0,0,0);
-      -webkit-transform: rotateY(-14deg) rotateX(4deg) translate3d(0,0,0);
-      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
-      box-shadow:
-        -10px 14px 30px rgba(0, 0, 0, 0.22),
-        -2px 0 6px rgba(0, 0, 0, 0.4) inset,
-        3px 0 5px rgba(255, 255, 255, 0.15) inset;
-      transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
-      will-change: transform;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      text-decoration: none;
+      transform: rotateY(-12deg) rotateX(3deg);
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+      box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.6), -2px 0 8px rgba(0,0,0,0.5) inset;
+      margin-bottom: 2rem;
     }
 
-    .book-cover:hover,
-    .book-cover:active {
-      opacity: 1;
-      transform: rotateY(0deg) rotateX(0deg) translateY(-8px) translate3d(0,0,0);
-      -webkit-transform: rotateY(0deg) rotateX(0deg) translateY(-8px) translate3d(0,0,0);
-      box-shadow: 0 24px 44px rgba(31, 27, 22, 0.28);
+    .book-cover-3d:hover {
+      transform: rotateY(0deg) rotateX(0deg) translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
     }
 
-    .book-img {
+    .book-cover-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: high-quality;
-      transform: translate3d(0,0,0);
-      -webkit-transform: translate3d(0,0,0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
     }
 
-    .book-spine-crease {
+    .open-book-btn {
+      padding: 0.9rem 2.4rem;
+      background: #fbf9f4;
+      color: var(--ink);
+      border: 1px solid var(--border);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
+    }
+
+    .open-book-btn:hover {
+      background: var(--gold-subtle);
+      color: #fff;
+      border-color: var(--gold-subtle);
+    }
+
+    /* Opened Book Spread View */
+    .opened-book-view {
+      display: none;
+      width: 100%;
+      max-width: 980px;
+      min-height: 620px;
+      background: var(--surface);
+      border-radius: 6px;
+      box-shadow: var(--shadow-book);
+      position: relative;
+      border: 1px solid var(--border);
+      background-image: linear-gradient(to right, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 3%, rgba(0,0,0,0) 97%, rgba(0,0,0,0.06) 100%);
+      animation: bookOpenAnim 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes bookOpenAnim {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .book-spine-crease-center {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 14px;
+      left: 50%;
       width: 2px;
-      background: rgba(255, 255, 255, 0.18);
-      box-shadow: 1px 0 2px rgba(0, 0, 0, 0.45);
-      pointer-events: none;
+      background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0.18), rgba(0,0,0,0.02));
+      transform: translateX(-50%);
       z-index: 10;
+      pointer-events: none;
     }
 
-    /* Motto */
-    .motto-wrapper {
-      max-width: 680px;
-      margin: 0 auto;
+    .book-page-content {
+      padding: 3.5rem 3rem 4.5rem;
+      height: 100%;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .motto {
-      font-family: var(--font-serif);
-      font-size: 1.85rem;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--ink);
-      margin-bottom: 0.8rem;
-    }
-
-    .motto-sub {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--ink-faint);
-    }
-
-    /* THE WORK / RECORD CARD */
-    .work-section-wrap {
-      max-width: 820px;
-      width: 100%;
-      margin: 4.5rem auto 0;
-      text-align: left;
-    }
-
-    .work-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      margin-top: 1.2rem;
-    }
-
-    .work-row {
+    .page-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 1.15rem 1.6rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.95rem;
+      align-items: baseline;
     }
 
-    .work-row:last-child {
-      border-bottom: none;
-    }
-
-    .work-label {
+    .page-number {
       font-family: var(--font-sans);
-      font-size: 0.78rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      font-weight: 600;
-    }
-
-    .work-val {
-      color: var(--ink);
-      text-align: right;
-      font-weight: 500;
-    }
-
-    @media (max-width: 600px) {
-      .work-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.35rem;
-      }
-      .work-val {
-        text-align: left;
-      }
-    }
-
-    .theme-tags-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin-top: 0.85rem;
-    }
-
-    .theme-tag {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      font-size: 0.88rem;
-      color: var(--ink);
-      font-family: var(--font-sans);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    }
-
-    /* --- CONTENT SECTIONS --- */
-    .content-section {
-      display: none;
-      padding: 6.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .content-section.active-section {
-      display: block;
-      animation: sectionReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    @keyframes sectionReveal {
-      from {
-        opacity: 0;
-        transform: translateY(22px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .section-alt {
-      background-color: var(--bg-ivory);
-    }
-
-    .section-header-bar {
-      margin-bottom: 1.2rem;
-    }
-
-    .section-eyebrow {
       font-size: 0.75rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
+      letter-spacing: 0.2em;
       color: var(--ink-faint);
-      font-weight: 600;
+      text-transform: uppercase;
     }
 
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: 2.5rem;
-      font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-bottom: 1.5rem;
-    }
-
-    .lead-text {
-      font-size: 1.18rem;
-      line-height: 1.85;
-      color: var(--ink);
-      margin-bottom: 2rem;
-      font-family: var(--font-serif);
-    }
-
-    .sub-lead-text {
-      font-size: 0.98rem;
-      color: var(--ink-muted);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
-
-    /* Grids & Cards */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 1.8rem;
-      }
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.2rem 2rem;
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-    }
-
-    .card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.45rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: var(--ink-muted);
-      line-height: 1.75;
-    }
-
-    /* Map Presentation Frame */
-    .map-presentation-frame {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 3.5rem 2rem;
-      text-align: center;
-      margin: 2.5rem 0 1.5rem;
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-    }
-
-    /* Expandable Archive Blocks (Norwyn Accordion Lists) */
-    .archive-category-block {
-      margin-top: 5rem;
-      padding-top: 3.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .category-title {
+    .section-title-book {
       font-family: var(--font-serif);
       font-size: 2.1rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .book-body-text {
+      font-size: 1.05rem;
+      line-height: 1.95;
+      color: var(--ink-muted);
+      flex: 1;
+    }
+
+    .book-body-text p {
+      margin-bottom: 1.2rem;
+    }
+
+    /* Page Turn Footer Navigation */
+    .book-page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      margin-bottom: 0.35rem;
+      font-weight: 600;
+    }
+
+    .page-turn-btn {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.6rem 1.2rem;
+      border-radius: 2px;
+      cursor: pointer;
+      color: var(--ink);
+      transition: all 0.2s ease;
+    }
+
+    .page-turn-btn:hover {
+      background: var(--surface-alt);
+      border-color: var(--ink);
+    }
+
+    /* Grids & Cards inside Book Pages */
+    .book-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .book-card-item {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 3px;
+    }
+
+    .book-card-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
       color: var(--ink);
     }
 
-    .category-subtitle {
-      font-family: var(--font-serif);
-      font-size: 1.15rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold-subtle);
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .category-prose {
-      font-size: 1.05rem;
-      line-height: 1.85;
+    .book-card-item p {
+      font-size: 0.9rem;
       color: var(--ink-muted);
-      margin-bottom: 2.2rem;
-      max-width: 860px;
+      line-height: 1.6;
     }
 
-    /* Norwyn Accordion List Styling */
+    /* Norwyn Accordion inside Book */
     .norwyn-accordion-list {
-      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      margin-top: 2rem;
+      border-radius: 3px;
+      background: var(--surface-alt);
+      margin-top: 1rem;
     }
 
     .norwyn-accordion-item {
@@ -548,285 +390,111 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 1.4rem 1.8rem;
+      padding: 1rem 1.2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
       text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      color: var(--ink);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s ease, background 0.2s ease;
-    }
-
-    .norwyn-accordion-header:hover {
-      color: var(--gold-subtle);
-      background: var(--surface-subtle);
-    }
-
-    .norwyn-accordion-icon {
-      font-family: var(--font-sans);
-      font-size: 1.35rem;
-      font-weight: 300;
-      color: var(--ink-faint);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
-      line-height: 1;
-    }
-
-    .norwyn-accordion-item.open .norwyn-accordion-icon {
-      transform: rotate(45deg);
       color: var(--ink);
     }
 
     .norwyn-accordion-body {
       display: none;
-      padding: 0 1.8rem 1.8rem;
-      animation: fadeInText 0.35s ease;
-      font-size: 0.98rem;
+      padding: 0 1.2rem 1.2rem;
+      font-size: 0.92rem;
       color: var(--ink-muted);
-      line-height: 1.85;
+      line-height: 1.75;
       border-top: 1px dashed var(--border);
-      background: var(--surface-subtle);
     }
 
     .norwyn-accordion-item.open .norwyn-accordion-body {
       display: block;
     }
 
-    .norwyn-p {
-      padding-top: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .norwyn-p:last-child {
-      margin-bottom: 0;
-    }
-
-    @keyframes fadeInText {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* =========================================================
-       BEYOND THE NOVEL: INTELLECTUAL QUESTION ARCHIVE
-       ========================================================= */
-    .question-archive-block {
-      padding: 2.2rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .question-archive-block:first-of-type {
-      border-top: 1px solid var(--border);
-      margin-top: 2rem;
-    }
-
-    .question-archive-title {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--ink);
-      line-height: 1.35;
-      margin-bottom: 0.85rem;
-      text-transform: uppercase;
-    }
-
-    .question-archive-body {
-      font-size: 1.05rem;
-      color: var(--ink-muted);
-      line-height: 1.9;
-    }
-
-    /* Author Frame & Matching Contact Form Styling */
-    .author-frame {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 3rem 2.4rem;
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-      display: flex;
-      gap: 2.5rem;
-    }
-
-    @media (max-width: 600px) {
-      .author-frame {
-        padding: 2rem 1.4rem;
-      }
-    }
-
+    /* Contact Form inside Book */
     .contact-form {
       display: flex;
       flex-direction: column;
-      gap: 1.15rem;
-      margin-top: 1.2rem;
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     .contact-input,
     .contact-textarea {
       width: 100%;
-      padding: 0.95rem 1.2rem;
+      padding: 0.85rem 1rem;
       border: 1px solid var(--border);
-      background: var(--bg-cream);
+      background: var(--surface-alt);
       font-family: var(--font-sans);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--ink);
-      border-radius: 3px;
+      border-radius: 2px;
       outline: none;
-      transition: border-color 0.2s ease, background 0.2s ease;
-    }
-
-    .contact-input::placeholder,
-    .contact-textarea::placeholder {
-      color: var(--ink-faint);
-      opacity: 0.75;
-    }
-
-    .contact-input:focus,
-    .contact-textarea:focus {
-      border-color: var(--ink);
-      background: var(--surface);
     }
 
     .contact-textarea {
-      min-height: 135px;
+      min-height: 100px;
       resize: vertical;
-      line-height: 1.7;
-    }
-
-    .contact-security-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.55rem 0.9rem;
-      background: var(--surface-subtle);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      width: fit-content;
-      color: var(--ink-muted);
-      font-size: 0.76rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 500;
-      margin-top: 0.2rem;
-    }
-
-    .contact-security-badge svg {
-      opacity: 0.7;
     }
 
     .contact-submit-btn {
       width: 100%;
-      padding: 1rem 1.8rem;
-      background: var(--ink);
-      color: var(--bg-cream);
-      border: 1px solid var(--ink);
-      font-family: var(--font-sans);
-      font-size: 0.84rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 0.4rem;
-    }
-
-    .contact-submit-btn:hover {
-      background: #383129;
-      border-color: #383129;
-    }
-
-    .contact-submit-btn:disabled {
-      opacity: 0.65;
-      cursor: not-allowed;
-    }
-
-    /* Subscription Box */
-    .subscribe-box {
-      text-align: center;
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 3.5rem 2rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-    }
-
-    .subscribe-form {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .subscribe-input {
-      flex: 1;
-      padding: 0.85rem 1.2rem;
-      border: 1px solid var(--border);
-      background: var(--bg-cream);
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      color: var(--ink);
-      border-radius: 2px;
-      outline: none;
-    }
-
-    .subscribe-input:focus {
-      border-color: var(--ink);
-    }
-
-    .subscribe-btn {
-      padding: 0.85rem 1.8rem;
+      padding: 0.9rem;
       background: var(--ink);
       color: var(--bg-cream);
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
-      cursor: pointer;
       border-radius: 2px;
+      cursor: pointer;
       transition: background 0.2s ease;
     }
 
-    .subscribe-btn:hover {
+    .contact-submit-btn:hover {
       background: #383129;
-    }
-
-    @media (max-width: 500px) {
-      .subscribe-form {
-        flex-direction: column;
-      }
     }
 
     /* Footer */
     footer {
-      padding: 3.5rem 1.5rem;
+      padding: 1.5rem;
       text-align: center;
-      font-size: 0.82rem;
-      color: var(--ink-faint);
-      background: var(--bg-cream);
+      font-size: 0.78rem;
+      color: rgba(244, 238, 227, 0.5);
+      background: rgba(31, 27, 22, 0.92);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 800px) {
+      .opened-book-view {
+        min-height: auto;
+      }
+      .book-spine-crease-center {
+        display: none;
+      }
+      .book-page-content {
+        padding: 2rem 1.5rem 3rem;
+      }
+      .book-grid-2 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body id="home">
 
-  <!-- Main Top Navigation -->
+  <!-- Top Bookmark Bar / Navigation -->
   <header class="nav">
-    <div class="nav-brand" onclick="closeAllSections();">
+    <div class="nav-brand" onclick="closeBookToCover()">
       Or So She Thought
     </div>
 
-    <!-- Minimalist Three Black Lines Button -->
     <button class="hamburger-btn" onclick="toggleMenu(true)" aria-label="Open Navigation Menu">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -838,1170 +506,61 @@
   <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu(false)"></div>
   <aside id="menu-drawer" class="menu-drawer">
     <div class="drawer-links">
-      <button class="drawer-link-btn" onclick="openSectionFromMenu('novel')">
-        <span>READ THE NOVEL</span>
-        <span class="drawer-link-arrow">→</span>
-      </button>
-
-      <button class="drawer-link-btn" onclick="openSectionFromMenu('norwyn')">
-        <span>EXPLORE THE KINGDOM OF NORWYN</span>
-        <span class="drawer-link-arrow">→</span>
-      </button>
-
-      <button class="drawer-link-btn" onclick="openSectionFromMenu('people')">
-        <span>MEET THE PEOPLE OF NORWYN</span>
-        <span class="drawer-link-arrow">→</span>
-      </button>
-
-      <button class="drawer-link-btn" onclick="openSectionFromMenu('making')">
-        <span>WHERE IT BEGAN</span>
-        <span class="drawer-link-arrow">→</span>
-      </button>
-
-      <button class="drawer-link-btn" onclick="openSectionFromMenu('beyond')">
-        <span>BEYOND THE NOVEL</span>
-        <span class="drawer-link-arrow">→</span>
-      </button>
-
-      <button class="drawer-link-btn" onclick="openSectionFromMenu('about')">
-        <span>ABOUT THE AUTHOR</span>
-        <span class="drawer-link-arrow">→</span>
-      </button>
+      <button class="drawer-link-btn" onclick="jumpToPage(1)"><span>Cover</span><span>→</span></button>
+      <button class="drawer-link-btn" onclick="jumpToPage(2)"><span>Read The Novel</span><span>→</span></button>
+      <button class="drawer-link-btn" onclick="jumpToPage(3)"><span>Explore Norwyn</span><span>→</span></button>
+      <button class="drawer-link-btn" onclick="jumpToPage(4)"><span>Meet The People</span><span>→</span></button>
+      <button class="drawer-link-btn" onclick="jumpToPage(5)"><span>Where It Began</span><span>→</span></button>
+      <button class="drawer-link-btn" onclick="jumpToPage(6)"><span>Beyond The Novel</span><span>→</span></button>
+      <button class="drawer-link-btn" onclick="jumpToPage(7)"><span>About The Author</span><span>→</span></button>
     </div>
   </aside>
 
-  <!-- Hero Section with Clickable Cover & The Work Record -->
-  <section class="hero">
-    <div class="book-stage">
-      <div class="book-cover" onclick="openSection('novel')" title="Click to Read the Novel">
-        <img 
-          src="cover.jpg" 
-          alt="Or So She Thought Book Cover" 
-          class="book-img"
-          loading="eager"
-          decoding="sync" 
-        />
-        <div class="book-spine-crease"></div>
+  <!-- Main Physical Book Stage -->
+  <main class="book-stage-wrapper">
+
+    <!-- 1. CLOSED BOOK COVER (Page 1) -->
+    <div id="closed-cover" class="closed-book-view">
+      <div class="book-cover-3d" onclick="openBook()" title="Click to Open Book">
+        <img src="cover.jpg" alt="Or So She Thought Book Cover" class="book-cover-img" loading="eager" />
+      </div>
+      <div style="max-width: 580px; margin-bottom: 1.8rem; padding: 0 1rem;">
+        <p style="font-family: var(--font-serif); font-size: 1.5rem; font-style: italic; color: #fbf9f4; margin-bottom: 0.6rem;">
+          "She was never forbidden to choose. She was simply taught what the right choice looked like."
+        </p>
+        <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-subtle);">
+          A psychological novel of duty, doubt, and choice
+        </p>
+      </div>
+      <button class="open-book-btn" onclick="openBook()">Open Book</button>
+    </div>
+
+    <!-- 2. OPENED BOOK SPREAD -->
+    <div id="opened-book" class="opened-book-view">
+      <div class="book-spine-crease-center"></div>
+
+      <div class="book-page-content">
+        <div>
+          <div class="page-header">
+            <span id="book-page-num" class="page-number">PAGE 02</span>
+            <span class="page-number" style="letter-spacing: 0.1em;">QUEEN USMAN</span>
+          </div>
+
+          <!-- DYNAMIC BOOK PAGE CONTAINER -->
+          <div id="book-page-body" class="book-body-text">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+
+        <div class="book-page-nav">
+          <button id="book-prev-btn" class="page-turn-btn" onclick="turnPage(-1)">← Previous Page</button>
+          <span id="page-indicator" style="font-size: 0.75rem; letter-spacing: 0.2em; color: var(--ink-faint);">2 / 7</span>
+          <button id="book-next-btn" class="page-turn-btn" onclick="turnPage(1)">Next Page →</button>
+        </div>
       </div>
     </div>
 
-    <div class="motto-wrapper">
-      <p class="motto">"She was never forbidden to choose. She was simply taught what the right choice looked like."</p>
-      <p class="motto-sub">A psychological novel of duty, doubt, and choice</p>
-    </div>
-
-    <!-- THE WORK METADATA & THEMES (HOME PAGE) -->
-    <div class="work-section-wrap">
-      <h3 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--ink);">The Work</h3>
-      <div style="width: 45px; height: 1px; background: var(--ink); margin-bottom: 2rem;"></div>
-
-      <div class="work-card">
-        <div class="work-row">
-          <span class="work-label">FORMAT</span>
-          <span class="work-val">Web Novel</span>
-        </div>
-        <div class="work-row">
-          <span class="work-label">GENRE</span>
-          <span class="work-val">Psychological Fiction • Royal Drama</span>
-        </div>
-        <div class="work-row">
-          <span class="work-label">SETTING</span>
-          <span class="work-val">1990s Norwyn</span>
-        </div>
-        <div class="work-row">
-          <span class="work-label">ATMOSPHERE</span>
-          <span class="work-val">Elegant • Restrained • Uneasy</span>
-        </div>
-        <div class="work-row">
-          <span class="work-label">PUBLICATION</span>
-          <span class="work-val">August 21st, 2026</span>
-        </div>
-      </div>
-
-      <div style="margin-top: 2.2rem;">
-        <div class="section-eyebrow" style="letter-spacing: 0.2em; margin-bottom: 0.85rem; color: var(--ink);">THEMES EXPLORED</div>
-        <div class="theme-tags-wrap">
-          <span class="theme-tag">Duty & Desire</span>
-          <span class="theme-tag">Family & Control</span>
-          <span class="theme-tag">Marriage & Choice</span>
-          <span class="theme-tag">Power & Privilege</span>
-          <span class="theme-tag">The Formation of Self</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CONTENT SECTIONS ==================== -->
-
-  <!-- 1. READ THE NOVEL -->
-  <section id="novel" class="content-section">
-    <div class="container">
-      <div class="section-header-bar">
-        <div class="section-eyebrow">The Web Novel</div>
-      </div>
-      <h2 class="section-title">READ THE NOVEL</h2>
-      
-      <p class="lead-text">
-        <em>Or So She Thought</em> is a psychological novel set in 1990s Norwyn, where duty is inherited, futures are often arranged before they are questioned, and knowing what you want can become difficult when you have spent your life learning what you are supposed to want.
-      </p>
-
-      <div>
-        <a href="#contents-anchor" style="display:inline-block; padding:0.9rem 2.2rem; background:var(--ink); color:var(--bg-cream); font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; border-radius:2px; margin:1.5rem 0 2rem;">BEGIN READING</a>
-      </div>
-
-      <div id="contents-anchor" style="margin-top: 3rem;">
-        <div class="section-eyebrow" style="letter-spacing: 0.28em;">CONTENTS</div>
-        
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0.8rem 2rem; margin:2.5rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:2.5rem 0;">
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">01</span> The Life She Is Supposed to Want</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">02</span> Edward of Valenne</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">03</span> The Girl Who Corrects Herself</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">04</span> The Book</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">05</span> The Mended Blouse</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">06</span> The Woman Who Knows Before You Speak</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">07</span> The Man She Might Have Married</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">08</span> The Founders’ Gala</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">09</span> The Record</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">10</span> What Elias Wanted</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">11</span> The Wrong Question</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">12</span> The Person She Became</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">13</span> What If I Stay?</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">14</span> The Woman Who Left Once</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">15</span> The Other Reason for the Marriage</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">16</span> The Escape That Wasn’t Planned</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">17</span> The Letter</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">18</span> The Mountain</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">19</span> Another Set of Rules</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">20</span> Elias Arrives</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">21</span> Fast Hands</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">22</span> The Secret Elias Carried</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">23</span> The Price of Her Freedom</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">24</span> The People Who Love Her</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">25</span> The Choice</div>
-          <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed rgba(217,210,197,0.5);"><span style="color:var(--ink-faint); font-family:var(--font-sans); font-size:0.8rem; letter-spacing:0.1em; margin-right:0.75rem;">26</span> Or So She Thought</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. EXPLORE THE KINGDOM OF NORWYN -->
-  <section id="norwyn" class="content-section section-alt">
-    <div class="container">
-      
-      <div style="margin-bottom: 3.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
-        <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 0.6rem; color: var(--ink);">ABOUT THIS WORLD</div>
-        <p style="font-size: 1.05rem; color: var(--ink-muted); font-style: italic; line-height: 1.8;">
-          Norwyn, its people, places, institutions, histories, and events are fictional creations from <em>Or So She Thought</em>.
-        </p>
-      </div>
-
-      <div class="section-header-bar">
-        <span class="section-eyebrow">The World</span>
-      </div>
-      <h2 class="section-title">EXPLORE THE KINGDOM OF NORWYN</h2>
-      <p class="lead-text" style="font-size: 1.35rem; margin-bottom: 1.5rem;">
-        A kingdom shaped by inheritance, tradition, commerce, and the people who have learned how to live within them.
-      </p>
-
-      <div class="card" style="margin-bottom: 3.5rem; background: var(--surface); border-left: 3px solid var(--ink);">
-        <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.8;">
-          Norwyn is a kingdom of contrasts.
-        </p>
-        <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.8;">
-          The capital is busy with commerce, government, diplomacy, and social life. The palace exists within the capital but operates according to rules of its own. Beyond the city, the mountains preserve ways of life shaped by colder weather, difficult geography, and generations of communal work.
-        </p>
-        <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.8;">
-          Across the border lies Valenne, a neighboring kingdom whose relationship with Norwyn has been built through treaties, trade, diplomacy, and obligations older than Elizabeth herself.
-        </p>
-        <p style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--ink);">
-          Elizabeth has spent most of her life inside one version of Norwyn. The further she moves through it, the more she begins to notice how many versions there are.
-        </p>
-      </div>
-
-      <!-- CARTOGRAPHY / MAP OF NORWYN -->
-      <div class="archive-category-block" style="margin-top: 2rem; padding-top: 1rem; border-top: none;">
-        <div class="section-eyebrow" style="letter-spacing: 0.24em; margin-bottom: 0.5rem; color: var(--gold-subtle);">CARTOGRAPHY</div>
-        <h3 class="category-title">MAP OF NORWYN</h3>
-        <div class="category-subtitle">FIND YOUR WAY AROUND THE KINGDOM</div>
-
-        <div class="map-presentation-frame">
-          <div style="font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem;">Cartographic Survey of Norwyn</div>
-          <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-muted); margin-bottom: 2rem;">1994 Royal Survey Bureau Edition</p>
-          
-          <div style="max-width: 820px; margin: 0 auto; overflow: hidden; border-radius: 4px; box-shadow: var(--shadow); border: 1px solid var(--border);">
-            <img 
-              src="map.jpg.jpg" 
-              onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='map.jpg';}" 
-              alt="Territorial Map of the Kingdom of Norwyn" 
-              style="width: 100%; height: auto; display: block; image-rendering: -webkit-optimize-contrast; image-rendering: high-quality;"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-faint); margin-top: 1.2rem; text-align: center;">
-          *Certain border territories and mountain paths remain deliberately unmapped until the narrative reveals them.
-        </p>
-      </div>
-
-      <!-- 01 — THE CAPITAL -->
-      <div class="archive-category-block">
-        <h3 class="category-title">01 — THE CAPITAL</h3>
-        <div class="category-subtitle">WHERE THE KINGDOM MEETS ITSELF</div>
-        <p class="category-prose">
-          Norwyn's capital was built along stone quays beside the river, where commerce, government, and public life have grown around one another for generations.<br><br>
-          The waterfront begins early. Barges arrive carrying goods from elsewhere in the kingdom and beyond it. Workers unload cargo while merchants, clerks, and drivers begin the day's business. Further inland, government offices fill with civil servants. Shops open along the commercial streets. Newspapers appear at kiosks and cafés. Buses move through the older avenues, sharing the roads with cars that belong to a newer decade.<br><br>
-          The city changes gradually as one district gives way to another. The buildings around the government quarter are formal and imposing. Commercial streets are louder, with shopfronts, restaurants, banks, hotels, and offices occupying buildings that have often served several purposes over their lifetimes. Residential neighborhoods range from large private houses and carefully maintained avenues to crowded districts where ordinary families live much closer together.<br><br>
-          The palace sits within this city, but it does not belong entirely to it. The people of the capital know the royal family exists behind its walls. They see them at ceremonies, read about them in newspapers, hear about them through television broadcasts and conversations, and sometimes encounter the consequences of decisions made inside rooms they will never enter.<br><br>
-          The capital has learned to live alongside the monarchy. For most people, it is not extraordinary. It is simply part of the city.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE WATERFRONT</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Goods arrive here before making their way into warehouses, shops, factories, restaurants, and private homes. The waterfront is practical rather than decorative: stone, iron, warehouses, loading areas, carts, vehicles, workers, river traffic, and businesses that depend on the movement of goods.</p>
-              <p class="norwyn-p">It is also one of the places where different parts of Norwyn meet. A shipment from the mountains can pass through the same streets as imported goods from Valenne. A merchant can conduct business within sight of a government building. A royal decision about trade can eventually become something as ordinary as the price of a product in a shop.</p>
-              <p class="norwyn-p">The river connects more of Norwyn than the people standing beside it necessarily realize.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE GOVERNMENT QUARTER</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Its buildings are formal because government is meant to appear permanent.</p>
-              <p class="norwyn-p">Inside them, however, much of the work is ordinary: clerks sort documents, officials attend meetings, ministers receive reports, budgets are discussed, letters are answered, and agreements are reviewed.</p>
-              <p class="norwyn-p">The kingdom is maintained through thousands of such decisions.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE COMMERCIAL DISTRICT</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Banks stand beside shops. Hotels serve diplomats and visiting businessmen. Restaurants fill at lunchtime. Department stores display goods that would have been difficult to obtain in previous generations.</p>
-              <p class="norwyn-p">There are expensive establishments where wealth is expected and ordinary businesses where people come simply because they need something.</p>
-              <p class="norwyn-p">The capital does not divide neatly into rich and poor. Different kinds of wealth exist beside one another.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE RESIDENTIAL DISTRICTS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Some neighborhoods are quiet and affluent, with large houses, gardens, private schools, and established families. Others are densely populated, with apartments, small shops, schools, markets, and streets where people know one another because they have little choice but to share the same spaces.</p>
-              <p class="norwyn-p">The city changes depending on who is looking at it. A palace resident, a government clerk, a shopkeeper, a student, and a dock worker can all live in the same capital without experiencing quite the same city.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 02 — THE PALACE -->
-      <div class="archive-category-block">
-        <h3 class="category-title">02 — THE PALACE</h3>
-        <div class="category-subtitle">WHERE AUTHORITY BECOMES ORDINARY</div>
-        <p class="category-prose">
-          The palace is the seat of the royal family and the center of ceremonial life in Norwyn. Its public rooms are designed for occasions that make authority visible: state dinners, diplomatic receptions, royal announcements, formal visits, ceremonies, and celebrations.<br><br>
-          But the palace is not only the rooms shown to visitors. Behind the ceremonial spaces are private apartments, family rooms, offices, kitchens, staff corridors, storage rooms, gardens, archives, and the countless practical spaces required to keep a large household functioning.<br><br>
-          There is a difference between the palace people visit and the palace people live in. Elizabeth knows the second one. She knows which doors are used by guests and which are used by staff. She knows which rooms require formality and which allow people to relax. She knows how quickly a conversation can change when someone important enters the room.<br><br>
-          She has learned these things gradually. Nobody sat her down and explained all of them. She simply grew up knowing.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE STATE ROOMS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Everything in these rooms has a purpose. Where people sit matters. Who enters first matters. Who speaks first matters.</p>
-              <p class="norwyn-p">What is displayed on a table, wall, or mantel can carry meaning even when nobody mentions it aloud. The rooms are designed to make continuity visible.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE ROYAL LIBRARY</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Books accumulate across generations. Official documents sit alongside private reading. Correspondence may be kept nearby. Family records and political material can exist within the same walls.</p>
-              <p class="norwyn-p">For Elizabeth, the library is one of the places where the palace feels less like an institution and more like a home. That distinction is not always easy to maintain.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE PRIVATE WING</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The private wing contains the rooms in which the royal family can temporarily stop performing the public version of themselves.</p>
-              <p class="norwyn-p">It is where conversations happen without an audience. It is also where some of the most important decisions are made.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE HOUSEHOLD</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Household staff manage meals, clothing, schedules, rooms, correspondence, gardens, transport, security, and countless details that most visitors never notice.</p>
-              <p class="norwyn-p">Some staff have worked for the family for years. They know routines. They recognize moods. They know which family members prefer silence in the morning and which expect conversation. They know when an event has gone badly before anyone says so.</p>
-              <p class="norwyn-p">Their knowledge is part of the palace's invisible structure.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE ARCHIVES</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The royal archives preserve what the institution chooses to remember.</p>
-              <p class="norwyn-p">It can also reveal what earlier generations were trying to manage, protect, or conceal.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 03 — VALENNE -->
-      <div class="archive-category-block">
-        <h3 class="category-title">03 — VALENNE</h3>
-        <div class="category-subtitle">THE KINGDOM BEYOND THE BORDER</div>
-        <p class="category-prose">
-          Valenne is Norwyn's neighboring kingdom and one of its most important political and economic partners. Its relationship with Norwyn began long before Elizabeth was born. Treaties connect the two kingdoms. Trade connects their businesses. Diplomacy connects their governments. Previous agreements continue to shape decisions being made in the present.<br><br>
-          Elizabeth's proposed marriage therefore does not exist in isolation. It is personal. It is also part of a relationship between two countries that has been developing for generations.<br><br>
-          Valenne has its own history, institutions, customs, social hierarchy, and expectations. It is not simply another version of Norwyn, and Edward is not simply a man who happens to come from across the border. He belongs to a different political and social world.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>VALENNE'S GOVERNMENT</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Its political priorities do not always correspond perfectly with Norwyn's. That difference matters when agreements are negotiated.</p>
-              <p class="norwyn-p">A treaty can benefit both countries while benefiting them in different ways.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>VALENNE'S ECONOMY</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Businesses depend on agreements between the kingdoms. Financial institutions follow political developments. Industries benefit from stable relations.</p>
-              <p class="norwyn-p">A royal marriage can therefore attract attention for reasons that have little to do with romance.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>NORWYN AND VALENNE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The relationship between the kingdoms is built on more than friendship. There are agreements, obligations, economic interests, and history.</p>
-              <p class="norwyn-p">And there are things each kingdom would prefer the other not to misunderstand.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>EDWARD OF VALENNE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Edward has grown up understanding his position within this bilateral accord. He knows that marriage can be personal and political at the same time.</p>
-              <p class="norwyn-p">He also knows that Elizabeth is being asked to enter a world that existed before she was asked to enter it. For Elizabeth, understanding Edward eventually means understanding what comes with him.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 04 — THE MOUNTAINS -->
-      <div class="archive-category-block">
-        <h3 class="category-title">04 — THE MOUNTAINS</h3>
-        <div class="category-subtitle">A DIFFERENT NORWYN</div>
-        <p class="category-prose">
-          The mountains are part of Norwyn, but they can feel like another country. The weather is colder. Roads are more difficult. Villages are smaller. Work is more visible because survival in a difficult landscape leaves little room for pretending that things maintain themselves.<br><br>
-          Wood has to be gathered. Buildings have to be repaired. Food has to be stored. Animals have to be cared for. People depend on one another.<br><br>
-          The mountains have preserved ways of life that have changed more slowly than those of the capital.<br><br>
-          But they have not preserved a world without rules. They simply have different ones.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE LANDSCAPE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Distance matters here. A place that looks close on a map may take hours to reach.</p>
-              <p class="norwyn-p">Weather can change plans. Geography shapes what people can build, grow, transport, and afford to waste.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE VILLAGES</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Mountain villages are small enough that people often know one another's families.</p>
-              <p class="norwyn-p">Someone who repairs roofs, grows food, cares for animals, weaves cloth, works with timber, or helps during difficult weather becomes part of the community through repeated acts rather than formal titles.</p>
-              <p class="norwyn-p">People notice who contributes. They also notice who does not.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE HOMES</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Mountain homes are built around practicality. Timber and stone are common. Rooms are designed to retain heat. Kitchens are important because food preparation and preservation matter across the colder months.</p>
-              <p class="norwyn-p">Homes contain fewer things that exist only for display. The beauty of the region is often found in materials that have been used for a long time rather than objects that have been carefully arranged to impress.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE WORK</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Work is closely connected to survival. Some work belongs to individuals; some work belongs to everyone.</p>
-              <p class="norwyn-p">A difficult task can become a community task simply because it is easier to complete together.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE COMMUNITY</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The mountains offer Elizabeth something she initially associates with freedom: fewer formal ceremonies, fewer servants, fewer people concerned with rank.</p>
-              <p class="norwyn-p">But community creates its own expectations. People remember. People notice. People help each other and therefore acquire obligations to one another.</p>
-              <p class="norwyn-p">The absence of palace protocol does not mean the absence of social rules. Elizabeth eventually begins to understand the difference.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 05 — THE GOVERNMENT -->
-      <div class="archive-category-block">
-        <h3 class="category-title">05 — THE GOVERNMENT</h3>
-        <div class="category-subtitle">THE WORK BEHIND THE KINGDOM</div>
-        <p class="category-prose">
-          Norwyn is not governed by the royal family alone. The Crown exists alongside ministers, civil servants, courts, financial institutions, administrative departments, and other state institutions responsible for running the kingdom.<br><br>
-          Most government work is invisible to ordinary people. That is partly the point.<br><br>
-          A citizen notices the road being repaired. They may not notice the meeting that approved the money. A business notices a change in trade regulations. It may never see the document that produced it. A treaty changes the conditions under which goods move between countries. Most people experience the result without ever meeting the people who negotiated it.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE CROWN</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The Crown represents continuity, national identity, and the monarchy's constitutional responsibilities. The Queen receives foreign representatives, participates in state occasions, and signs documents where required.</p>
-              <p class="norwyn-p">The monarchy is not the entire state; it operates within established covenants.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE MINISTRIES</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Ministries handle the practical responsibilities of the state. Ministers make decisions, while civil servants carry much of the actual administrative work forward.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE COURTS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The courts belong to the kingdom's institutional structure rather than to the royal household, maintaining the rule of law across all social tiers.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE TREASURY</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The Treasury oversees public finance. Budgets, taxation, spending allocations, and trade subsidies determined here eventually dictate the price of daily goods in market stalls.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>FOREIGN AFFAIRS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Treaties, diplomatic summits, trade concessions, and state visits are formulated here. Some of the international agreements made inside these rooms directly shape Elizabeth's life before she is ever informed of their existence.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 06 — THE ROYAL FAMILY -->
-      <div class="archive-category-block">
-        <h3 class="category-title">06 — THE ROYAL FAMILY</h3>
-        <div class="category-subtitle">A FAMILY THAT IS ALSO AN INSTITUTION</div>
-        <p class="category-prose">
-          The royal family occupies an unusual position in Norwyn. They are a family. They are also an institution.<br><br>
-          Their private decisions can carry public consequences.<br><br>
-          A marriage can affect diplomacy. An inheritance can affect succession. A disagreement can become political if it concerns the future of the Crown.<br><br>
-          Even an ordinary family decision can become complicated when the people involved are expected to represent an entire kingdom.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE CROWN</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Authority is experienced as an inherited burden. To those inside it, maintaining the stability of the realm is an obligation that overrides private preferences.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>SUCCESSION</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Succession determines how public continuity is maintained across generations. From childhood, potential heirs learn that their futures belong to the kingdom before they belong to themselves.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>ROYAL MARRIAGE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">A royal union is scrutinized by cabinets, foreign ministries, and the press. It is negotiated to protect borders, reassure allies, and ensure dynastic survival.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>PUBLIC LIFE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Births are announced. Marriages are reported. Ceremonies are photographed. Clothing is analyzed. The family learns to live with being observed, while the public learns to treat observation as ordinary.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 07 — NORWYN IN THE 1990s -->
-      <div class="archive-category-block">
-        <h3 class="category-title">07 — NORWYN IN THE 1990s</h3>
-        <div class="category-subtitle">A KINGDOM BETWEEN ERAS</div>
-        <p class="category-prose">
-          Norwyn in the 1990s is modernizing, but it has not abandoned the systems that came before it.<br><br>
-          Television exists alongside newspapers. Landline telephones remain ordinary. Computers are becoming more common without yet being everywhere. Cars and buses fill streets designed decades earlier. Traditional businesses operate alongside newer industries.<br><br>
-          Young people have access to music, films, books, and ideas that move across borders more quickly than they once did.<br><br>
-          The monarchy carries its history into a decade in which many other parts of life are changing.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>COMMUNICATION</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Newspapers remain influential. Television brings national events directly into people's living rooms. Information moves faster than it once did, but it is still entirely possible for a person to be unreachable.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>TRANSPORT</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The capital is comparatively easy to navigate; the mountains are not. Distance still determines who can visit whom and how quickly news can travel across county lines.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>MEDIA</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Newspapers report on politics, business, royal events, culture, and society. Television gives the Crown another way to enter ordinary homes, making royal figures feel both distant and strangely familiar.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>FASHION</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Royal clothing is formal and carefully considered. Capital residents have access to modern fashion trends, while mountain communities favor wool and canvas that survive harsh weather. A person's clothes reveal their world before they speak.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>EVERYDAY LIFE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Families eat together or separately depending on their circumstances. People work, read, listen to radio, attend religious services, meet friends, shop, and argue. Norwyn is not always dramatic; most of the time, it is ordinary. That is what makes the moments that disrupt it matter.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 08 — THE NORWYN ARCHIVE -->
-      <div class="archive-category-block">
-        <h3 class="category-title">08 — THE NORWYN ARCHIVE</h3>
-        <div class="category-subtitle">THE KINGDOM AS IT WAS RECORDED</div>
-        <p class="category-prose">
-          Some parts of Norwyn are easier to understand through documents than descriptions. The archive collects pieces of the world that existed around the story.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>MAPS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p"><em>Norwyn Royal Survey Bureau &bull; 1994 Edition</em><br><br>The cartographic surveys document territorial borders, county boundaries, shipping straits, and mountain passes preserved across decades of state recordkeeping.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>NEWSPAPERS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p"><em>The Norwyn Herald &bull; March 1994</em><br><br>The articles, dispatches, and public columns reveal both the things Norwyn chose to print—and the things it did not.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>ROYAL DOCUMENTS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p"><em>Royal Household Record &bull; Private Correspondence &bull; 1994</em><br><br>Formal papers and confidential household orders that govern seating, public statements, and diplomatic protocol.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>GOVERNMENT RECORDS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Documents demonstrating the legal and trade covenants negotiated between ministries, parliamentary benches, and foreign ambassadors.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>PERSONAL PAPERS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Small records of people who were living through events rather than writing history, capturing doubts that never appear in official gazettes.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>EVERYDAY NORWYN</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Ordinary objects that reveal what life looked like when nobody was trying to preserve it.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 09 — PLACES IN THE NOVEL -->
-      <div class="archive-category-block">
-        <h3 class="category-title">09 — PLACES IN THE NOVEL</h3>
-        <div class="category-subtitle">WHERE THE STORY HAPPENS</div>
-        <p class="category-prose">
-          The world of <em>Or So She Thought</em> is not contained inside one building. Each location places Elizabeth inside a different set of expectations.
-        </p>
-
-        <!-- Norwyn Accordion List -->
-        <div class="norwyn-accordion-list">
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE ROYAL PALACE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The seat of the royal family where authority is quiet, routine, and structured by etiquette learned before anyone thought to explain why.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE ROYAL LIBRARY</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Shelves that hold generations of recorded state history alongside private, unread notebooks and forbidden conversations.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE CAPITAL</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Stone quays, government avenues, crowded apartment blocks, river trade, and the bustling rhythm of commerce.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE RAG</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">The Royal Academy of Governance, where theories of constitutional state power are taught alongside quiet, dangerous debates.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>ELIAS'S WORKSHOP</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">A place where usefulness matters more than ceremony, and where broken things can be honestly repaired.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>VALENNE</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">An industrial realm bound to Norwyn by trade, mineral wealth, and generational political covenants.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>THE MOUNTAINS</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">Steep slopes, cold winters, communal ovens, and obligations shaped by shared survival rather than royal birthright.</p>
-            </div>
-          </div>
-
-          <div class="norwyn-accordion-item">
-            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
-              <span>MAMA ELENA'S HOME</span>
-              <span class="norwyn-accordion-icon">+</span>
-            </button>
-            <div class="norwyn-accordion-body">
-              <p class="norwyn-p">It is not a place without rules. It is simply a place where she has to discover them for herself.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 3. MEET THE PEOPLE OF NORWYN -->
-  <section id="people" class="content-section">
-    <div class="container">
-      
-      <div style="margin-bottom: 3.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
-        <div class="section-eyebrow" style="letter-spacing: 0.22em; margin-bottom: 0.6rem; color: var(--ink);">ABOUT THIS WORLD</div>
-        <p style="font-size: 1.05rem; color: var(--ink-muted); font-style: italic; line-height: 1.8;">
-          Norwyn, its people, places, institutions, histories, and events are fictional creations from <em>Or So She Thought</em>.
-        </p>
-      </div>
-
-      <div class="section-header-bar">
-        <div class="section-eyebrow">Dramatis Personae</div>
-      </div>
-      <h2 class="section-title">MEET THE PEOPLE OF NORWYN</h2>
-
-      <p class="lead-text" style="margin-bottom: 1.2rem;">
-        Elizabeth's life is shaped by the people around her, but none of them can be reduced to what they want from her.
-      </p>
-      <p class="sub-lead-text" style="font-size: 1.05rem; line-height: 1.9; color: var(--ink-muted); margin-bottom: 3rem;">
-        They love her.<br />
-        They need things from her.<br />
-        They protect her.<br />
-        They misunderstand her.<br />
-        Sometimes they do several of these things at once.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>ELIZABETH</h3>
-          <p>
-            Elizabeth has spent most of her life knowing what is expected of her.<br /><br />
-            She is a daughter, a royal, a student, and a future bride. She has learned how to read a room, anticipate a response, and understand what a situation requires of her.<br /><br />
-            For most of her life, this has been useful. It has also made certain questions harder to answer.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>ANNE</h3>
-          <p>
-            Queen Anne is Elizabeth's mother.<br /><br />
-            She has spent years preparing her daughter for a life in which very little can be treated as purely personal. She believes preparation is a form of protection. She does not always recognize when the two begin to become difficult to separate.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>EDWARD OF VALENNE</h3>
-          <p>
-            Edward enters Elizabeth's life as the man she is expected to marry.<br /><br />
-            He is intelligent, observant, politically aware, and more complicated than the arrangement between them initially suggests. The marriage has consequences beyond the two people expected to enter it.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>ELIAS</h3>
-          <p>
-            Elias comes from a world outside the palace, but his work brings him into places Elizabeth has spent most of her life taking for granted.<br /><br />
-            He is observant, independent, and not easily impressed by the distinctions that matter inside the royal household.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>ISABEL</h3>
-          <p>
-            Isabel is Elizabeth's younger sister, and although they were raised within the same royal household, they have not experienced it in quite the same way.<br /><br />
-            She has her own understanding of what their family owes to the kingdom, and her own reasons for accepting some things Elizabeth has begun to question.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>MAMA ELENA</h3>
-          <p>
-            Mama Elena lives far from the world Elizabeth has known.<br /><br />
-            Her life is shaped by work, community, necessity, and expectations of a different kind. Elizabeth does not find a place without rules; she finds people whose rules she has never learned.
-          </p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top: 2.5rem;">
-        <h3>ROWAN</h3>
-        <p>
-          Rowan's influence reaches Elizabeth through a book before it reaches her through memory.<br /><br />
-          His ideas give language to questions Elizabeth has not yet learned how to ask.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. WHERE IT BEGAN (THE MAKING OF OR SO SHE THOUGHT - BEHIND THE SCENES ARCHIVE) -->
-  <section id="making" class="content-section section-alt">
-    <div class="container">
-      <div class="section-header-bar">
-        <div class="section-eyebrow">THE MAKING OF THE NOVEL</div>
-      </div>
-      <h2 class="section-title">WHERE IT BEGAN</h2>
-      <div style="font-family: var(--font-serif); font-size: 1.35rem; font-style: italic; color: var(--gold-subtle); margin-top: -0.75rem; margin-bottom: 2.2rem; letter-spacing: 0.02em;">
-        The Making of Or So She Thought
-      </div>
-
-      <p class="lead-text" style="font-size: 1.15rem; margin-bottom: 1.2rem;">
-        <em>Or So She Thought</em> did not arrive fully formed.
-      </p>
-      <p style="color: var(--ink-muted); font-size: 1.02rem; line-height: 1.85; margin-bottom: 3.5rem;">
-        There was a version of the story before there was this one. There were characters who belonged to earlier drafts, places that existed before I understood what they were for, scenes that seemed essential until they weren't, and questions I thought I was writing about before realizing I had been asking a different question all along.<br><br>
-        Novels are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available. <em>Or So She Thought</em> changed because I kept following those changes.
-      </p>
-
-      <div class="grid-2">
-        <!-- 1. The Story Before Elizabeth -->
-        <div class="expandable-box">
-          <div>
-            <h4>THE STORY BEFORE ELIZABETH</h4>
-            <p class="box-preview">On the story that existed before Or So She Thought, and the moment Elizabeth became more interesting than the novel I had originally planned.</p>
-            <div class="box-more-content">
-              Every novel begins somewhere else. At first, I was more interested in external events and political maneuvering across borders. Then Elizabeth began to emerge—not as an instrument of the plot, but as a person whose quiet compliance was itself an exhausting form of labor. Once her inner life became the primary question, the entire architecture of the book had to shift to meet her.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
-        </div>
-
-        <!-- 2. The Mended Blouse -->
-        <div class="expandable-box">
-          <div>
-            <h4>THE MENDED BLOUSE</h4>
-            <p class="box-preview">On a small object that unexpectedly became part of Elizabeth's story.</p>
-            <div class="box-more-content">
-              Some objects in fiction are chosen deliberately for their symbolism; others arrive by accident and refuse to leave. In early drafts, the blouse was merely a detail in a domestic scene. But watching someone whose clothes have always been selected, tailored, and maintained by others attempt to fix an imperfect hem became a quiet study in what happens when self-reliance begins with clumsy fingers.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
-        </div>
-
-        <!-- 3. The Title -->
-        <div class="expandable-box">
-          <div>
-            <h4>THE TITLE</h4>
-            <p class="box-preview">On how Or So She Thought became the title, and why uncertainty mattered more than certainty.</p>
-            <div class="box-more-content">
-              Titles often attempt to declare what a book is about. <em>Or So She Thought</em> does the opposite—it creates hesitation. It belongs to the narrow space between what a person assumes to be true and what they slowly realize was incomplete. It is not about discovering that everything was a lie; it is about discovering how much more complicated the truth actually is.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
-        </div>
-
-        <!-- 4. Building Norwyn -->
-        <div class="expandable-box">
-          <div>
-            <h4>BUILDING NORWYN</h4>
-            <p class="box-preview">On creating a kingdom that had to feel lived in before Elizabeth ever began questioning it.</p>
-            <div class="box-more-content">
-              A world cannot feel like a stage set constructed merely for the protagonist's dilemma. Norwyn’s ministries, stone quays, river barges, and mountain passes had to exist as places where ordinary people live their ordinary days. If the rules of the kingdom did not make coherent sense to the people upholding them, Elizabeth's quiet resistance would have cost her nothing.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
-        </div>
-
-        <!-- 5. Writing Anne -->
-        <div class="expandable-box">
-          <div>
-            <h4>WRITING ANNE</h4>
-            <p class="box-preview">On writing a mother whose love, certainty, responsibility, and mistakes could not be separated neatly from one another.</p>
-            <div class="box-more-content">
-              The easiest version of Anne would have been an imposing tyrant. But power inside families rarely operates through overt hostility. Anne is driven by duty and a fierce belief that discipline is the highest form of protection. When control looks and feels like genuine care, the boundaries between devotion and constraint become almost impossible to disentangle.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
-        </div>
-
-        <!-- 6. The Scenes That Survived -->
-        <div class="expandable-box">
-          <div>
-            <h4>THE SCENES THAT SURVIVED</h4>
-            <p class="box-preview">On the scenes that remained after earlier versions of the novel disappeared.</p>
-            <div class="box-more-content">
-              As a manuscript is rewritten, whole chapters, characters, and subplots fall away. The scenes that endure are rarely the loudest ones. They are the moments of silence: a conversation in a carriage where nothing of consequence is said, an unread letter left on a cedar desk, or a shared glance across a banquet hall that registers an unspoken change.
-            </div>
-          </div>
-          <button class="read-more-toggle" onclick="toggleBox(this)">READ &rarr;</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. BEYOND THE NOVEL (QUESTIONS THE NOVEL LEAVES BEHIND) -->
-  <section id="beyond" class="content-section">
-    <div class="container">
-      <div class="section-header-bar">
-        <div class="section-eyebrow">QUESTIONS THE NOVEL LEAVES BEHIND</div>
-      </div>
-      <h2 class="section-title">BEYOND THE NOVEL</h2>
-
-      <p class="lead-text" style="font-size: 1.25rem; margin-bottom: 1.2rem;">
-        <em>Or So She Thought</em> is a story, but some of the questions it raises do not belong entirely to Elizabeth, Norwyn, or the world of the novel.
-      </p>
-
-      <div style="font-size: 1.05rem; color: var(--ink-muted); line-height: 1.95; margin-bottom: 3.5rem;">
-        They appear in ordinary lives too.<br><br>
-        How much of what we call preference was learned?<br>
-        How much of what feels inevitable was simply repeated?<br>
-        When does something we were taught become something we genuinely believe?<br>
-        And what happens when we begin to notice?
-      </div>
-
-      <div class="section-eyebrow" style="letter-spacing: 0.24em; margin-bottom: 1.5rem; color: var(--ink);">THE QUESTIONS</div>
-
-      <!-- THE 6 QUESTIONS -->
-      <div>
-        <div class="question-archive-block">
-          <h3 class="question-archive-title">HOW DO YOU KNOW WHAT YOU WANT?</h3>
-          <p class="question-archive-body">
-            Family, culture, circumstance, expectation, and experience all participate in forming a person.<br>
-            But influence does not make a desire false.<br>
-            So where does influence end and choice begin?
-          </p>
-        </div>
-
-        <div class="question-archive-block">
-          <h3 class="question-archive-title">CAN A LIFE CHOSEN FOR YOU BECOME YOUR OWN?</h3>
-          <p class="question-archive-body">
-            We inherit ideas about what a good life should look like.<br>
-            Sometimes we reject them.<br>
-            Sometimes we keep them.<br>
-            Sometimes we cannot tell which happened.
-          </p>
-        </div>
-
-        <div class="question-archive-block">
-          <h3 class="question-archive-title">CAN LOVE AND CONTROL EXIST TOGETHER?</h3>
-          <p class="question-archive-body">
-            The person who knows you best may also be the person who feels most entitled to decide what is best for you.<br>
-            Where does care become something else?
-          </p>
-        </div>
-
-        <div class="question-archive-block">
-          <h3 class="question-archive-title">WHAT HAPPENS WHEN A RULE BECOMES ORDINARY?</h3>
-          <p class="question-archive-body">
-            Some rules remain visible.<br>
-            Others become so familiar that nobody thinks to call them rules anymore.
-          </p>
-        </div>
-
-        <div class="question-archive-block">
-          <h3 class="question-archive-title">WHEN DOES A RESPONSE BECOME A TRAIT?</h3>
-          <p class="question-archive-body">
-            A person does something often enough.<br>
-            Other people begin to expect it.<br>
-            Eventually, the person may begin to expect it too.
-          </p>
-        </div>
-
-        <div class="question-archive-block">
-          <h3 class="question-archive-title">WHAT DO WE CALL CHOICE WHEN THE OPTIONS ALREADY FEEL OBVIOUS?</h3>
-          <p class="question-archive-body">
-            A decision can feel completely voluntary and still have a long history behind it.<br>
-            That does not make it meaningless.<br>
-            It makes its history worth examining.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 6. ABOUT THE AUTHOR -->
-  <section id="about" class="content-section section-alt">
-    <div class="container">
-      <div class="section-header-bar">
-        <div class="section-eyebrow">The Author</div>
-      </div>
-      <h2 class="section-title">ABOUT QUEEN USMAN</h2>
-      <p style="font-size: 1.15rem; color: var(--ink); margin-bottom: 2rem; font-family: var(--font-serif); font-style: italic;">
-        A clinical medical student and novelist interested in how people become who they are.
-      </p>
-
-      <div class="author-frame">
-        <div style="flex: 1;">
-          <p class="lead-text" style="font-size: 1.15rem; margin-bottom: 1.5rem;">
-            Queen Usman is a Nigerian clinical medical student and novelist. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition[cite: 1].
-          </p>
-          <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.85;">
-            Her current novel, <em>Or So She Thought</em>, is a psychological novel set in 1990s Norwyn. It follows Elizabeth, a young woman whose future has been carefully prepared for her, as the life she has always understood begins to become less certain.
-          </p>
-          <p style="color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.85;">
-            Her medical training has sharpened her interest in observation, human behavior, and the ways people are shaped by the worlds they inhabit. She is particularly interested in the space between what happens to a person and what that person eventually becomes.
-          </p>
-          <p style="color: var(--ink-muted); line-height: 1.85;">
-            Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people acquire expectations, habits, assumptions, preferences, and ways of seeing.
-          </p>
-
-          <!-- Contact Form Card -->
-          <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 500px; padding: 2.4rem 2rem;">
-            <div class="section-eyebrow" style="margin-bottom: 0.4rem;">CONTACT</div>
-            <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1.2rem;">
-              For literary, rights, interview, and professional inquiries:
-            </p>
-            
-            <form class="contact-form" id="authorContactForm">
-              <input type="text" id="contactName" class="contact-input" placeholder="Name" required />
-              <input type="email" id="contactEmail" class="contact-input" placeholder="Email *" required />
-              <textarea id="contactMessage" class="contact-textarea" placeholder="Message ..." required></textarea>
-              
-              <div class="contact-security-badge">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-                <span>Protected by reCAPTCHA</span>
-              </div>
-
-              <button type="submit" id="contactSubmitBtn" class="contact-submit-btn">&rarr; SEND MESSAGE</button>
-            </form>
-
-            <div id="contactSuccessState" style="display: none; padding: 1.5rem 0.5rem; text-align: center;">
-              <div style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink); margin-bottom: 0.6rem;">
-                Message Received
-              </div>
-              <p style="font-size: 0.96rem; color: var(--ink-muted); line-height: 1.8;">
-                Thank you. Your message has been sent directly to Queen Usman.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. EMAIL SUBSCRIPTION -->
-  <section id="subscribe" class="section-alt">
-    <div class="container">
-      <div class="subscribe-box">
-        <h2 class="section-title" style="font-size: 2.1rem; margin-bottom: 1rem;">Keep Up With the Novel</h2>
-        <p style="color: var(--ink-muted); font-size: 0.96rem; line-height: 1.75;">
-          Follow <em>Or So She Thought</em> as it takes shape. Get occasional excerpts, notes from the writing process, new developments, and news about the novel, sent when there is something worth sharing.
-        </p>
-
-        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing.');">
-          <input type="email" class="subscribe-input" placeholder="Enter your email address" required />
-          <button type="submit" class="subscribe-btn">Join</button>
-        </form>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -2010,8 +569,182 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & ACCORDIONS -->
+  <!-- JAVASCRIPT: BOOK NAVIGATION, PAGES & ACCORDIONS -->
   <script>
+    let currentPage = 1; // 1 = Cover, 2 to 7 = Book Pages
+
+    const bookPages = {
+      2: {
+        title: "Read the Novel",
+        num: "PAGE 02 — 03",
+        content: `
+          <p><em>Or So She Thought</em> is a psychological novel set in 1990s Norwyn, where duty is inherited, futures are often arranged before they are questioned, and knowing what you want can become difficult when you have spent your life learning what you are supposed to want.</p>
+          <div style="margin-top: 1.5rem;">
+            <div style="font-size:0.75rem; letter-spacing:0.24em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:1rem; font-weight:600;">TABLE OF CONTENTS (26 CHAPTERS)</div>
+            <div class="book-grid-2" style="max-height: 280px; overflow-y: auto; padding-right: 0.5rem;">
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">01. The Life She Is Supposed to Want</div>
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">02. Edward of Valenne</div>
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">03. The Girl Who Corrects Herself</div>
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">04. The Book</div>
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">05. The Mended Blouse</div>
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">06. The Woman Who Knows</div>
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">07. The Man She Might Have Married</div>
+              <div style="font-size:0.95rem; font-family:var(--font-serif); padding:0.25rem 0; border-bottom:1px dashed var(--border);">08. The Founders’ Gala</div>
+            </div>
+          </div>
+        `
+      },
+      3: {
+        title: "Explore the Kingdom of Norwyn",
+        num: "PAGE 04 — 05",
+        content: `
+          <p><em>Norwyn, its people, places, institutions, histories, and events are fictional creations from Or So She Thought.</em></p>
+          <p>A kingdom shaped by inheritance, tradition, commerce, and the people who have learned how to live within them.</p>
+          <div class="norwyn-accordion-list">
+            <div class="norwyn-accordion-item">
+              <button class="norwyn-accordion-header" onclick="toggleBookAccordion(this)"><span>01 — The Capital</span><span>+</span></button>
+              <div class="norwyn-accordion-body">Norwyn's capital was built along stone quays beside the river, where commerce, government, and public life have grown around one another for generations.</div>
+            </div>
+            <div class="norwyn-accordion-item">
+              <button class="norwyn-accordion-header" onclick="toggleBookAccordion(this)"><span>02 — The Palace</span><span>+</span></button>
+              <div class="norwyn-accordion-body">The palace is the seat of the royal family and the center of ceremonial life in Norwyn, containing both state rooms and private family wings.</div>
+            </div>
+            <div class="norwyn-accordion-item">
+              <button class="norwyn-accordion-header" onclick="toggleBookAccordion(this)"><span>03 — Valenne</span><span>+</span></button>
+              <div class="norwyn-accordion-body">Valenne is Norwyn's neighboring kingdom and one of its most important political and economic partners, bound by generational treaties.</div>
+            </div>
+          </div>
+        `
+      },
+      4: {
+        title: "Meet the People of Norwyn",
+        num: "PAGE 06 — 07",
+        content: `
+          <p style="font-style: italic; margin-bottom: 1.2rem;">They love her. They need things from her. They protect her. They misunderstand her.</p>
+          <div class="book-grid-2">
+            <div class="book-card-item">
+              <h3>Elizabeth</h3>
+              <p>A daughter, royal, student, and future bride learning how to read a room and anticipate what is required of her.</p>
+            </div>
+            <div class="book-card-item">
+              <h3>Anne</h3>
+              <p>Queen Anne is Elizabeth's mother, believing discipline and rigorous preparation are forms of protection.</p>
+            </div>
+            <div class="book-card-item">
+              <h3>Edward of Valenne</h3>
+              <p>Intelligent, observant, and politically aware, entering Elizabeth's life through an expected dynastic marriage.</p>
+            </div>
+            <div class="book-card-item">
+              <h3>Elias</h3>
+              <p>Independent and observant, bringing a world outside the palace into Elizabeth's predictable orbit.</p>
+            </div>
+          </div>
+        `
+      },
+      5: {
+        title: "Where It Began",
+        num: "PAGE 08 — 09",
+        content: `
+          <p><em>The Making of Or So She Thought</em></p>
+          <p>Novels are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.</p>
+          <div class="norwyn-accordion-list" style="margin-top: 1rem;">
+            <div class="norwyn-accordion-item">
+              <button class="norwyn-accordion-header" onclick="toggleBookAccordion(this)"><span>The Story Before Elizabeth</span><span>+</span></button>
+              <div class="norwyn-accordion-body">Every novel begins somewhere else. At first, I was more interested in external events until Elizabeth emerged as a person whose quiet compliance was an exhausting form of labor.</div>
+            </div>
+            <div class="norwyn-accordion-item">
+              <button class="norwyn-accordion-header" onclick="toggleBookAccordion(this)"><span>The Mended Blouse</span><span>+</span></button>
+              <div class="norwyn-accordion-body">Watching someone whose clothes have always been maintained by others attempt to fix an imperfect hem became a quiet study in clumsy self-reliance.</div>
+            </div>
+            <div class="norwyn-accordion-item">
+              <button class="norwyn-accordion-header" onclick="toggleBookAccordion(this)"><span>The Title</span><span>+</span></button>
+              <div class="norwyn-accordion-body">Or So She Thought creates hesitation, capturing the narrow space between what a person assumes is true and what they slowly realize was incomplete.</div>
+            </div>
+          </div>
+        `
+      },
+      6: {
+        title: "Beyond the Novel",
+        num: "PAGE 10 — 11",
+        content: `
+          <p style="font-style: italic; margin-bottom: 1.2rem;">Questions the novel leaves behind that appear in ordinary lives too.</p>
+          <div style="font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.8; color: var(--ink);">
+            <p style="margin-bottom: 1rem;"><strong>1. How do you know what you want when you were taught what to want?</strong></p>
+            <p style="margin-bottom: 1rem;"><strong>2. Can a life chosen for you become genuinely yours?</strong></p>
+            <p style="margin-bottom: 1rem;"><strong>3. Can love and control exist together?</strong></p>
+            <p style="margin-bottom: 1rem;"><strong>4. What happens when a rule becomes ordinary?</strong></p>
+          </div>
+        `
+      },
+      7: {
+        title: "About the Author",
+        num: "PAGE 12 — 13",
+        content: `
+          <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; margin-bottom: 1rem;">A clinical medical student and novelist interested in how people become who they are.</p>
+          <p style="font-size: 0.92rem; margin-bottom: 1rem;">Queen Usman is a Nigerian clinical medical student and novelist. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition.</p>
+          
+          <div class="card" style="padding: 1.5rem; background: var(--surface-alt); margin-top: 1rem;">
+            <div style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.4rem; font-weight: 600;">CONTACT</div>
+            <p style="font-size: 0.88rem; margin-bottom: 0.8rem;">For literary, rights, interview, and professional inquiries:</p>
+            
+            <form class="contact-form" id="authorContactForm">
+              <input type="text" id="contactName" class="contact-input" placeholder="Name" required />
+              <input type="email" id="contactEmail" class="contact-input" placeholder="Email *" required />
+              <textarea id="contactMessage" class="contact-textarea" placeholder="Message ..." required></textarea>
+              <button type="submit" id="contactSubmitBtn" class="contact-submit-btn">&rarr; SEND MESSAGE</button>
+            </form>
+            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.25rem;">
+              ✓ Message sent directly to Queen Usman.
+            </div>
+          </div>
+        `
+      }
+    };
+
+    function openBook() {
+      document.getElementById('closed-cover').style.display = 'none';
+      document.getElementById('opened-book').style.display = 'block';
+      jumpToPage(2);
+    }
+
+    function closeBookToCover() {
+      document.getElementById('opened-book').style.display = 'none';
+      document.getElementById('closed-cover').style.display = 'flex';
+      currentPage = 1;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function jumpToPage(pageNum) {
+      if (pageNum === 1) {
+        closeBookToCover();
+        return;
+      }
+      currentPage = pageNum;
+      const pageData = bookPages[currentPage];
+
+      document.getElementById('closed-cover').style.display = 'none';
+      document.getElementById('opened-book').style.display = 'block';
+
+      document.getElementById('book-page-num').innerText = pageData.num;
+      
+      let html = `<h3 class="section-title-book" style="margin-bottom: 1.5rem;">${pageData.title}</h3>`;
+      html += pageData.content;
+      document.getElementById('book-page-body').innerHTML = html;
+
+      document.getElementById('book-prev-btn').style.visibility = (currentPage === 2) ? 'hidden' : 'visible';
+      document.getElementById('book-next-btn').style.visibility = (currentPage === 7) ? 'hidden' : 'visible';
+      document.getElementById('page-indicator').innerText = `${currentPage - 1} / 6`;
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function turnPage(direction) {
+      const target = currentPage + direction;
+      if (target >= 2 && target <= 7) {
+        jumpToPage(target);
+      }
+    }
+
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
       const overlay = document.getElementById('menu-overlay');
@@ -2026,111 +759,47 @@
       }
     }
 
-    function openSectionFromMenu(sectionId) {
-      toggleMenu(false);
-      openSection(sectionId);
-    }
-
-    function openSection(sectionId) {
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(sec => sec.classList.remove('active-section'));
-
-      const targetSection = document.getElementById(sectionId);
-      if (targetSection) {
-        document.body.classList.add('section-active');
-        targetSection.classList.add('active-section');
-
-        setTimeout(() => {
-          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
-    }
-
-    function closeAllSections() {
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(sec => sec.classList.remove('active-section'));
-      document.body.classList.remove('section-active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Toggle Norwyn Accordion Items
-    function toggleNorwynAccordion(btn) {
+    function toggleBookAccordion(btn) {
       const item = btn.closest('.norwyn-accordion-item');
       item.classList.toggle('open');
+      const icon = btn.querySelector('span:last-child');
+      icon.textContent = item.classList.contains('open') ? '−' : '+';
     }
 
-    // Toggle Expandable Archive Boxes (Where It Began Section)
-    function toggleBox(btn) {
-      const card = btn.closest('.expandable-box');
-      const moreContent = card.querySelector('.box-more-content');
-      const isOpen = moreContent.classList.contains('open');
-
-      if (isOpen) {
-        moreContent.classList.remove('open');
-        btn.innerHTML = 'READ &rarr;';
-      } else {
-        moreContent.classList.add('open');
-        btn.innerHTML = 'CLOSE &uarr;';
-      }
-    }
-
-    // AJAX Contact Form Handler
-    const contactForm = document.getElementById('authorContactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
+    // Contact Form AJAX Handler
+    document.addEventListener('submit', function(e) {
+      if (e.target && e.target.id === 'authorContactForm') {
         e.preventDefault();
-        e.stopPropagation();
-
         const btn = document.getElementById('contactSubmitBtn');
-        const successState = document.getElementById('contactSuccessState');
-        const nameVal = document.getElementById('contactName').value;
-        const emailVal = document.getElementById('contactEmail').value;
-        const messageVal = document.getElementById('contactMessage').value;
+        const form = document.getElementById('authorContactForm');
+        const success = document.getElementById('contactSuccessState');
 
         btn.innerHTML = 'Sending...';
         btn.disabled = true;
 
         fetch('https://formsubmit.co/ajax/usmanshazaan@gmail.com', {
           method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
-            name: nameVal,
-            email: emailVal,
-            message: messageVal,
+            name: document.getElementById('contactName').value,
+            email: document.getElementById('contactEmail').value,
+            message: document.getElementById('contactMessage').value,
             _subject: 'New Inquiry — Or So She Thought'
           })
         })
-        .then(function(res) {
-          return res.json();
+        .then(res => res.json())
+        .then(data => {
+          form.style.display = 'none';
+          success.style.display = 'block';
         })
-        .then(function(data) {
-          contactForm.style.display = 'none';
-          successState.style.display = 'block';
-        })
-        .catch(function(err) {
-          contactForm.style.display = 'none';
-          successState.style.display = 'block';
+        .catch(err => {
+          form.style.display = 'none';
+          success.style.display = 'block';
         });
-      });
-    }
-
-    // Touch swipe right to close drawer on mobile
-    let touchStartX = 0;
-    const drawer = document.getElementById('menu-drawer');
-    drawer.addEventListener('touchstart', (e) => {
-      touchStartX = e.touches[0].clientX;
-    }, { passive: true });
-    
-    drawer.addEventListener('touchend', (e) => {
-      if (e.changedTouches[0].clientX - touchStartX > 50) {
-        toggleMenu(false);
       }
-    }, { passive: true });
+    });
 
-    // Close menu with ESC key
+    // ESC key closes menu
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') toggleMenu(false);
     });
