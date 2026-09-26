@@ -491,7 +491,7 @@
       box-shadow: var(--shadow);
     }
 
-    /* Expandable Archive Boxes */
+    /* Expandable Archive Blocks (Norwyn Accordion Lists) */
     .archive-category-block {
       margin-top: 5rem;
       padding-top: 3.5rem;
@@ -526,78 +526,89 @@
       max-width: 860px;
     }
 
-    .expandable-box {
+    /* Norwyn Accordion List Styling */
+    .norwyn-accordion-list {
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 2rem 1.8rem;
       border-radius: 4px;
       box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .norwyn-accordion-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .norwyn-accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .norwyn-accordion-header {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.4rem 1.8rem;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      transition: box-shadow 0.25s ease, transform 0.25s ease;
-    }
-
-    .expandable-box:hover {
-      box-shadow: 0 16px 32px -10px rgba(31, 27, 22, 0.12);
-    }
-
-    .expandable-box h4 {
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.35rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
       font-weight: 600;
+      color: var(--ink);
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .norwyn-accordion-header:hover {
+      color: var(--gold-subtle);
+      background: var(--surface-subtle);
+    }
+
+    .norwyn-accordion-icon {
+      font-family: var(--font-sans);
+      font-size: 1.35rem;
+      font-weight: 300;
+      color: var(--ink-faint);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+      line-height: 1;
+    }
+
+    .norwyn-accordion-item.open .norwyn-accordion-icon {
+      transform: rotate(45deg);
       color: var(--ink);
     }
 
-    .box-preview {
-      font-size: 0.96rem;
-      color: var(--ink-muted);
-      line-height: 1.75;
-    }
-
-    .box-more-content {
+    .norwyn-accordion-body {
       display: none;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px dashed var(--border);
-      font-size: 0.96rem;
+      padding: 0 1.8rem 1.8rem;
+      animation: fadeInText 0.35s ease;
+      font-size: 0.98rem;
       color: var(--ink-muted);
-      line-height: 1.75;
+      line-height: 1.85;
+      border-top: 1px dashed var(--border);
+      background: var(--surface-subtle);
     }
 
-    .box-more-content.open {
+    .norwyn-accordion-item.open .norwyn-accordion-body {
       display: block;
-      animation: fadeInText 0.35s ease;
+    }
+
+    .norwyn-p {
+      padding-top: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .norwyn-p:last-child {
+      margin-bottom: 0;
     }
 
     @keyframes fadeInText {
       from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    .read-more-toggle {
-      background: none;
-      border: none;
-      color: var(--ink);
-      font-family: var(--font-sans);
-      font-size: 0.76rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      cursor: pointer;
-      padding-top: 1.4rem;
-      align-self: flex-start;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      transition: color 0.2s ease;
-    }
-
-    .read-more-toggle:hover {
-      color: var(--gold-subtle);
     }
 
     /* =========================================================
@@ -630,7 +641,7 @@
       line-height: 1.9;
     }
 
-    /* Author Frame & Clean Inline Contact Form */
+    /* Author Frame & Matching Contact Form Styling */
     .author-frame {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -1038,30 +1049,59 @@
         <div class="category-subtitle">WHERE THE KINGDOM MEETS ITSELF</div>
         <p class="category-prose">
           Norwyn's capital was built along stone quays beside the river, where commerce, government, and public life have grown around one another for generations.<br><br>
-          The waterfront begins early. Barges arrive carrying goods from elsewhere in the kingdom and beyond it. Workers unload cargo while merchants, clerks, and drivers begin the day's business. Further inland, government offices fill with civil servants. Shops open along the commercial streets. Newspapers appear at kiosks and cafés. Buses move through the older avenues, sharing the roads with cars that belong to a newer decade.
+          The waterfront begins early. Barges arrive carrying goods from elsewhere in the kingdom and beyond it. Workers unload cargo while merchants, clerks, and drivers begin the day's business. Further inland, government offices fill with civil servants. Shops open along the commercial streets. Newspapers appear at kiosks and cafés. Buses move through the older avenues, sharing the roads with cars that belong to a newer decade.<br><br>
+          The city changes gradually as one district gives way to another. The buildings around the government quarter are formal and imposing. Commercial streets are louder, with shopfronts, restaurants, banks, hotels, and offices occupying buildings that have often served several purposes over their lifetimes. Residential neighborhoods range from large private houses and carefully maintained avenues to crowded districts where ordinary families live much closer together.<br><br>
+          The palace sits within this city, but it does not belong entirely to it. The people of the capital know the royal family exists behind its walls. They see them at ceremonies, read about them in newspapers, hear about them through television broadcasts and conversations, and sometimes encounter the consequences of decisions made inside rooms they will never enter.<br><br>
+          The capital has learned to live alongside the monarchy. For most people, it is not extraordinary. It is simply part of the city.
         </p>
 
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>THE WATERFRONT</h4>
-              <p class="box-preview">The stone quays are one of the oldest working parts of the capital. Commerce, river trade, workers, goods, connection between regions.</p>
-              <div class="box-more-content">
-                Goods arrive here before making their way into warehouses, shops, factories, restaurants, and private homes. The waterfront is practical rather than decorative: stone, iron, warehouses, loading areas, carts, vehicles, workers, river traffic, and businesses that depend on the movement of goods.
-              </div>
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE WATERFRONT</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Goods arrive here before making their way into warehouses, shops, factories, restaurants, and private homes. The waterfront is practical rather than decorative: stone, iron, warehouses, loading areas, carts, vehicles, workers, river traffic, and businesses that depend on the movement of goods.</p>
+              <p class="norwyn-p">It is also one of the places where different parts of Norwyn meet. A shipment from the mountains can pass through the same streets as imported goods from Valenne. A merchant can conduct business within sight of a government building. A royal decision about trade can eventually become something as ordinary as the price of a product in a shop.</p>
+              <p class="norwyn-p">The river connects more of Norwyn than the people standing beside it necessarily realize.</p>
             </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <div class="expandable-box">
-            <div>
-              <h4>THE GOVERNMENT QUARTER</h4>
-              <p class="box-preview">Ministries, civil servants, courts, and institutions responsible for the ordinary administrative work of the state.</p>
-              <div class="box-more-content">
-                Its buildings are formal because government is meant to appear permanent. Inside them, however, much of the work is ordinary: clerks sort documents, officials attend meetings, ministers receive reports, budgets are discussed, and letters are answered.
-              </div>
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE GOVERNMENT QUARTER</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Its buildings are formal because government is meant to appear permanent.</p>
+              <p class="norwyn-p">Inside them, however, much of the work is ordinary: clerks sort documents, officials attend meetings, ministers receive reports, budgets are discussed, letters are answered, and agreements are reviewed.</p>
+              <p class="norwyn-p">The kingdom is maintained through thousands of such decisions.</p>
             </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE COMMERCIAL DISTRICT</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Banks stand beside shops. Hotels serve diplomats and visiting businessmen. Restaurants fill at lunchtime. Department stores display goods that would have been difficult to obtain in previous generations.</p>
+              <p class="norwyn-p">There are expensive establishments where wealth is expected and ordinary businesses where people come simply because they need something.</p>
+              <p class="norwyn-p">The capital does not divide neatly into rich and poor. Different kinds of wealth exist beside one another.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE RESIDENTIAL DISTRICTS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Some neighborhoods are quiet and affluent, with large houses, gardens, private schools, and established families. Others are densely populated, with apartments, small shops, schools, markets, and streets where people know one another because they have little choice but to share the same spaces.</p>
+              <p class="norwyn-p">The city changes depending on who is looking at it. A palace resident, a government clerk, a shopkeeper, a student, and a dock worker can all live in the same capital without experiencing quite the same city.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1071,31 +1111,547 @@
         <h3 class="category-title">02 — THE PALACE</h3>
         <div class="category-subtitle">WHERE AUTHORITY BECOMES ORDINARY</div>
         <p class="category-prose">
-          The palace is the seat of the royal family and the center of ceremonial life in Norwyn. Behind the ceremonial spaces are private apartments, family rooms, offices, kitchens, staff corridors, storage rooms, gardens, archives, and practical household spaces.<br><br>
-          There is a difference between the palace people visit and the palace people live in. Elizabeth knows the second one.
+          The palace is the seat of the royal family and the center of ceremonial life in Norwyn. Its public rooms are designed for occasions that make authority visible: state dinners, diplomatic receptions, royal announcements, formal visits, ceremonies, and celebrations.<br><br>
+          But the palace is not only the rooms shown to visitors. Behind the ceremonial spaces are private apartments, family rooms, offices, kitchens, staff corridors, storage rooms, gardens, archives, and the countless practical spaces required to keep a large household functioning.<br><br>
+          There is a difference between the palace people visit and the palace people live in. Elizabeth knows the second one. She knows which doors are used by guests and which are used by staff. She knows which rooms require formality and which allow people to relax. She knows how quickly a conversation can change when someone important enters the room.<br><br>
+          She has learned these things gradually. Nobody sat her down and explained all of them. She simply grew up knowing.
         </p>
 
-        <div class="grid-2">
-          <div class="expandable-box">
-            <div>
-              <h4>THE STATE ROOMS</h4>
-              <p class="box-preview">Official dinners, receptions, diplomatic meetings, ceremonies, and royal representation.</p>
-              <div class="box-more-content">
-                Everything in these rooms has a purpose. Where people sit matters. Who enters first matters. Who speaks first matters. The rooms are designed to make continuity visible.
-              </div>
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE STATE ROOMS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Everything in these rooms has a purpose. Where people sit matters. Who enters first matters. Who speaks first matters.</p>
+              <p class="norwyn-p">What is displayed on a table, wall, or mantel can carry meaning even when nobody mentions it aloud. The rooms are designed to make continuity visible.</p>
             </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
           </div>
 
-          <div class="expandable-box">
-            <div>
-              <h4>THE ROYAL LIBRARY</h4>
-              <p class="box-preview">Books, records, private reading, and the space associated with Elizabeth's intellectual life.</p>
-              <div class="box-more-content">
-                Books accumulate across generations. Official documents sit alongside private reading. For Elizabeth, the library is one of the places where the palace feels less like an institution and more like a home.
-              </div>
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE ROYAL LIBRARY</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Books accumulate across generations. Official documents sit alongside private reading. Correspondence may be kept nearby. Family records and political material can exist within the same walls.</p>
+              <p class="norwyn-p">For Elizabeth, the library is one of the places where the palace feels less like an institution and more like a home. That distinction is not always easy to maintain.</p>
             </div>
-            <button class="read-more-toggle" onclick="toggleBox(this)">More &rarr;</button>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE PRIVATE WING</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The private wing contains the rooms in which the royal family can temporarily stop performing the public version of themselves.</p>
+              <p class="norwyn-p">It is where conversations happen without an audience. It is also where some of the most important decisions are made.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE HOUSEHOLD</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Household staff manage meals, clothing, schedules, rooms, correspondence, gardens, transport, security, and countless details that most visitors never notice.</p>
+              <p class="norwyn-p">Some staff have worked for the family for years. They know routines. They recognize moods. They know which family members prefer silence in the morning and which expect conversation. They know when an event has gone badly before anyone says so.</p>
+              <p class="norwyn-p">Their knowledge is part of the palace's invisible structure.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE ARCHIVES</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The royal archives preserve what the institution chooses to remember.</p>
+              <p class="norwyn-p">It can also reveal what earlier generations were trying to manage, protect, or conceal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 — VALENNE -->
+      <div class="archive-category-block">
+        <h3 class="category-title">03 — VALENNE</h3>
+        <div class="category-subtitle">THE KINGDOM BEYOND THE BORDER</div>
+        <p class="category-prose">
+          Valenne is Norwyn's neighboring kingdom and one of its most important political and economic partners. Its relationship with Norwyn began long before Elizabeth was born. Treaties connect the two kingdoms. Trade connects their businesses. Diplomacy connects their governments. Previous agreements continue to shape decisions being made in the present.<br><br>
+          Elizabeth's proposed marriage therefore does not exist in isolation. It is personal. It is also part of a relationship between two countries that has been developing for generations.<br><br>
+          Valenne has its own history, institutions, customs, social hierarchy, and expectations. It is not simply another version of Norwyn, and Edward is not simply a man who happens to come from across the border. He belongs to a different political and social world.
+        </p>
+
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>VALENNE'S GOVERNMENT</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Its political priorities do not always correspond perfectly with Norwyn's. That difference matters when agreements are negotiated.</p>
+              <p class="norwyn-p">A treaty can benefit both countries while benefiting them in different ways.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>VALENNE'S ECONOMY</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Businesses depend on agreements between the kingdoms. Financial institutions follow political developments. Industries benefit from stable relations.</p>
+              <p class="norwyn-p">A royal marriage can therefore attract attention for reasons that have little to do with romance.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>NORWYN AND VALENNE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The relationship between the kingdoms is built on more than friendship. There are agreements, obligations, economic interests, and history.</p>
+              <p class="norwyn-p">And there are things each kingdom would prefer the other not to misunderstand.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>EDWARD OF VALENNE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Edward has grown up understanding his position within this bilateral accord. He knows that marriage can be personal and political at the same time.</p>
+              <p class="norwyn-p">He also knows that Elizabeth is being asked to enter a world that existed before she was asked to enter it. For Elizabeth, understanding Edward eventually means understanding what comes with him.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 — THE MOUNTAINS -->
+      <div class="archive-category-block">
+        <h3 class="category-title">04 — THE MOUNTAINS</h3>
+        <div class="category-subtitle">A DIFFERENT NORWYN</div>
+        <p class="category-prose">
+          The mountains are part of Norwyn, but they can feel like another country. The weather is colder. Roads are more difficult. Villages are smaller. Work is more visible because survival in a difficult landscape leaves little room for pretending that things maintain themselves.<br><br>
+          Wood has to be gathered. Buildings have to be repaired. Food has to be stored. Animals have to be cared for. People depend on one another.<br><br>
+          The mountains have preserved ways of life that have changed more slowly than those of the capital.<br><br>
+          But they have not preserved a world without rules. They simply have different ones.
+        </p>
+
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE LANDSCAPE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Distance matters here. A place that looks close on a map may take hours to reach.</p>
+              <p class="norwyn-p">Weather can change plans. Geography shapes what people can build, grow, transport, and afford to waste.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE VILLAGES</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Mountain villages are small enough that people often know one another's families.</p>
+              <p class="norwyn-p">Someone who repairs roofs, grows food, cares for animals, weaves cloth, works with timber, or helps during difficult weather becomes part of the community through repeated acts rather than formal titles.</p>
+              <p class="norwyn-p">People notice who contributes. They also notice who does not.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE HOMES</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Mountain homes are built around practicality. Timber and stone are common. Rooms are designed to retain heat. Kitchens are important because food preparation and preservation matter across the colder months.</p>
+              <p class="norwyn-p">Homes contain fewer things that exist only for display. The beauty of the region is often found in materials that have been used for a long time rather than objects that have been carefully arranged to impress.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE WORK</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Work is closely connected to survival. Some work belongs to individuals; some work belongs to everyone.</p>
+              <p class="norwyn-p">A difficult task can become a community task simply because it is easier to complete together.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE COMMUNITY</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The mountains offer Elizabeth something she initially associates with freedom: fewer formal ceremonies, fewer servants, fewer people concerned with rank.</p>
+              <p class="norwyn-p">But community creates its own expectations. People remember. People notice. People help each other and therefore acquire obligations to one another.</p>
+              <p class="norwyn-p">The absence of palace protocol does not mean the absence of social rules. Elizabeth eventually begins to understand the difference.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 — THE GOVERNMENT -->
+      <div class="archive-category-block">
+        <h3 class="category-title">05 — THE GOVERNMENT</h3>
+        <div class="category-subtitle">THE WORK BEHIND THE KINGDOM</div>
+        <p class="category-prose">
+          Norwyn is not governed by the royal family alone. The Crown exists alongside ministers, civil servants, courts, financial institutions, administrative departments, and other state institutions responsible for running the kingdom.<br><br>
+          Most government work is invisible to ordinary people. That is partly the point.<br><br>
+          A citizen notices the road being repaired. They may not notice the meeting that approved the money. A business notices a change in trade regulations. It may never see the document that produced it. A treaty changes the conditions under which goods move between countries. Most people experience the result without ever meeting the people who negotiated it.
+        </p>
+
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE CROWN</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The Crown represents continuity, national identity, and the monarchy's constitutional responsibilities. The Queen receives foreign representatives, participates in state occasions, and signs documents where required.</p>
+              <p class="norwyn-p">The monarchy is not the entire state; it operates within established covenants.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE MINISTRIES</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Ministries handle the practical responsibilities of the state. Ministers make decisions, while civil servants carry much of the actual administrative work forward.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE COURTS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The courts belong to the kingdom's institutional structure rather than to the royal household, maintaining the rule of law across all social tiers.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE TREASURY</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The Treasury oversees public finance. Budgets, taxation, spending allocations, and trade subsidies determined here eventually dictate the price of daily goods in market stalls.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>FOREIGN AFFAIRS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Treaties, diplomatic summits, trade concessions, and state visits are formulated here. Some of the international agreements made inside these rooms directly shape Elizabeth's life before she is ever informed of their existence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 — THE ROYAL FAMILY -->
+      <div class="archive-category-block">
+        <h3 class="category-title">06 — THE ROYAL FAMILY</h3>
+        <div class="category-subtitle">A FAMILY THAT IS ALSO AN INSTITUTION</div>
+        <p class="category-prose">
+          The royal family occupies an unusual position in Norwyn. They are a family. They are also an institution.<br><br>
+          Their private decisions can carry public consequences.<br><br>
+          A marriage can affect diplomacy. An inheritance can affect succession. A disagreement can become political if it concerns the future of the Crown.<br><br>
+          Even an ordinary family decision can become complicated when the people involved are expected to represent an entire kingdom.
+        </p>
+
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE CROWN</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Authority is experienced as an inherited burden. To those inside it, maintaining the stability of the realm is an obligation that overrides private preferences.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>SUCCESSION</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Succession determines how public continuity is maintained across generations. From childhood, potential heirs learn that their futures belong to the kingdom before they belong to themselves.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>ROYAL MARRIAGE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">A royal union is scrutinized by cabinets, foreign ministries, and the press. It is negotiated to protect borders, reassure allies, and ensure dynastic survival.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>PUBLIC LIFE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Births are announced. Marriages are reported. Ceremonies are photographed. Clothing is analyzed. The family learns to live with being observed, while the public learns to treat observation as ordinary.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07 — NORWYN IN THE 1990s -->
+      <div class="archive-category-block">
+        <h3 class="category-title">07 — NORWYN IN THE 1990s</h3>
+        <div class="category-subtitle">A KINGDOM BETWEEN ERAS</div>
+        <p class="category-prose">
+          Norwyn in the 1990s is modernizing, but it has not abandoned the systems that came before it.<br><br>
+          Television exists alongside newspapers. Landline telephones remain ordinary. Computers are becoming more common without yet being everywhere. Cars and buses fill streets designed decades earlier. Traditional businesses operate alongside newer industries.<br><br>
+          Young people have access to music, films, books, and ideas that move across borders more quickly than they once did.<br><br>
+          The monarchy carries its history into a decade in which many other parts of life are changing.
+        </p>
+
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>COMMUNICATION</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Newspapers remain influential. Television brings national events directly into people's living rooms. Information moves faster than it once did, but it is still entirely possible for a person to be unreachable.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>TRANSPORT</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The capital is comparatively easy to navigate; the mountains are not. Distance still determines who can visit whom and how quickly news can travel across county lines.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>MEDIA</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Newspapers report on politics, business, royal events, culture, and society. Television gives the Crown another way to enter ordinary homes, making royal figures feel both distant and strangely familiar.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>FASHION</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Royal clothing is formal and carefully considered. Capital residents have access to modern fashion trends, while mountain communities favor wool and canvas that survive harsh weather. A person's clothes reveal their world before they speak.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>EVERYDAY LIFE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Families eat together or separately depending on their circumstances. People work, read, listen to radio, attend religious services, meet friends, shop, and argue. Norwyn is not always dramatic; most of the time, it is ordinary. That is what makes the moments that disrupt it matter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 08 — THE NORWYN ARCHIVE -->
+      <div class="archive-category-block">
+        <h3 class="category-title">08 — THE NORWYN ARCHIVE</h3>
+        <div class="category-subtitle">THE KINGDOM AS IT WAS RECORDED</div>
+        <p class="category-prose">
+          Some parts of Norwyn are easier to understand through documents than descriptions. The archive collects pieces of the world that existed around the story.
+        </p>
+
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>MAPS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p"><em>Norwyn Royal Survey Bureau &bull; 1994 Edition</em><br><br>The cartographic surveys document territorial borders, county boundaries, shipping straits, and mountain passes preserved across decades of state recordkeeping.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>NEWSPAPERS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p"><em>The Norwyn Herald &bull; March 1994</em><br><br>The articles, dispatches, and public columns reveal both the things Norwyn chose to print—and the things it did not.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>ROYAL DOCUMENTS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p"><em>Royal Household Record &bull; Private Correspondence &bull; 1994</em><br><br>Formal papers and confidential household orders that govern seating, public statements, and diplomatic protocol.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>GOVERNMENT RECORDS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Documents demonstrating the legal and trade covenants negotiated between ministries, parliamentary benches, and foreign ambassadors.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>PERSONAL PAPERS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Small records of people who were living through events rather than writing history, capturing doubts that never appear in official gazettes.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>EVERYDAY NORWYN</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Ordinary objects that reveal what life looked like when nobody was trying to preserve it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 09 — PLACES IN THE NOVEL -->
+      <div class="archive-category-block">
+        <h3 class="category-title">09 — PLACES IN THE NOVEL</h3>
+        <div class="category-subtitle">WHERE THE STORY HAPPENS</div>
+        <p class="category-prose">
+          The world of <em>Or So She Thought</em> is not contained inside one building. Each location places Elizabeth inside a different set of expectations.
+        </p>
+
+        <!-- Norwyn Accordion List -->
+        <div class="norwyn-accordion-list">
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE ROYAL PALACE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The seat of the royal family where authority is quiet, routine, and structured by etiquette learned before anyone thought to explain why.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE ROYAL LIBRARY</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Shelves that hold generations of recorded state history alongside private, unread notebooks and forbidden conversations.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE CAPITAL</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Stone quays, government avenues, crowded apartment blocks, river trade, and the bustling rhythm of commerce.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE RAG</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">The Royal Academy of Governance, where theories of constitutional state power are taught alongside quiet, dangerous debates.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>ELIAS'S WORKSHOP</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">A place where usefulness matters more than ceremony, and where broken things can be honestly repaired.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>VALENNE</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">An industrial realm bound to Norwyn by trade, mineral wealth, and generational political covenants.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>THE MOUNTAINS</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">Steep slopes, cold winters, communal ovens, and obligations shaped by shared survival rather than royal birthright.</p>
+            </div>
+          </div>
+
+          <div class="norwyn-accordion-item">
+            <button class="norwyn-accordion-header" onclick="toggleNorwynAccordion(this)">
+              <span>MAMA ELENA'S HOME</span>
+              <span class="norwyn-accordion-icon">+</span>
+            </button>
+            <div class="norwyn-accordion-body">
+              <p class="norwyn-p">It is not a place without rules. It is simply a place where she has to discover them for herself.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1393,8 +1949,8 @@
             Her essays follow the questions her fiction leaves behind, looking at the ordinary ways people acquire expectations, habits, assumptions, preferences, and ways of seeing.
           </p>
 
-          <!-- Contact Form with Guaranteed In-Page AJAX Handling -->
-          <div class="card" id="contactCardWrapper" style="margin-top: 2.5rem; background: var(--surface); max-width: 500px; padding: 2.4rem 2rem;">
+          <!-- Contact Form Card -->
+          <div class="card" style="margin-top: 2.5rem; background: var(--surface); max-width: 500px; padding: 2.4rem 2rem;">
             <div class="section-eyebrow" style="margin-bottom: 0.4rem;">CONTACT</div>
             <p style="font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 1.2rem;">
               For literary, rights, interview, and professional inquiries:
@@ -1416,7 +1972,6 @@
               <button type="submit" id="contactSubmitBtn" class="contact-submit-btn">&rarr; SEND MESSAGE</button>
             </form>
 
-            <!-- In-Page Confirmation State -->
             <div id="contactSuccessState" style="display: none; padding: 1.5rem 0.5rem; text-align: center;">
               <div style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink); margin-bottom: 0.6rem;">
                 Message Received
@@ -1455,7 +2010,7 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & BACKGROUND EMAIL DISPATCH -->
+  <!-- JAVASCRIPT: DRAWER MENU, SECTIONS, ARCHIVE BOXES & ACCORDIONS -->
   <script>
     function toggleMenu(open) {
       const drawer = document.getElementById('menu-drawer');
@@ -1498,7 +2053,13 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Toggle Expandable Archive Boxes (Norwyn & Where It Began Sections)
+    // Toggle Norwyn Accordion Items
+    function toggleNorwynAccordion(btn) {
+      const item = btn.closest('.norwyn-accordion-item');
+      item.classList.toggle('open');
+    }
+
+    // Toggle Expandable Archive Boxes (Where It Began Section)
     function toggleBox(btn) {
       const card = btn.closest('.expandable-box');
       const moreContent = card.querySelector('.box-more-content');
@@ -1506,14 +2067,14 @@
 
       if (isOpen) {
         moreContent.classList.remove('open');
-        btn.innerHTML = (card.closest('#making') ? 'READ &rarr;' : 'More &rarr;');
+        btn.innerHTML = 'READ &rarr;';
       } else {
         moreContent.classList.add('open');
-        btn.innerHTML = (card.closest('#making') ? 'CLOSE &uarr;' : 'Less &uarr;');
+        btn.innerHTML = 'CLOSE &uarr;';
       }
     }
 
-    // Airtight In-Page Contact Handler (Prevents Any External Redirects)
+    // AJAX Contact Form Handler
     const contactForm = document.getElementById('authorContactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
@@ -1550,7 +2111,6 @@
           successState.style.display = 'block';
         })
         .catch(function(err) {
-          // Even in network hiccup edge cases, preserve smooth on-site experience
           contactForm.style.display = 'none';
           successState.style.display = 'block';
         });
