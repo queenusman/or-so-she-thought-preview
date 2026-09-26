@@ -53,6 +53,7 @@
       justify-content: center;
       position: relative;
       overflow: hidden;
+      padding: 0.5rem;
     }
 
     /* =========================================================
@@ -76,8 +77,8 @@
     }
 
     .physical-cover-object {
-      width: min(72vw, 320px);
-      height: min(108vw, 480px);
+      width: min(72vw, 300px);
+      height: min(108vw, 440px);
       background: var(--book-cover);
       border-radius: 4px 14px 14px 4px;
       position: relative;
@@ -114,8 +115,8 @@
     }
 
     .open-book-prompt {
-      margin-top: 2.2rem;
-      font-size: 0.75rem;
+      margin-top: 2rem;
+      font-size: 0.72rem;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: rgba(247, 243, 235, 0.6);
@@ -129,12 +130,14 @@
     }
 
     /* =========================================================
-       OPENED BOOK SPREAD STATE
+       OPENED TWO-PAGE SPREAD STATE (Active on ALL screens)
        ========================================================= */
     .opened-book-container {
       display: none;
-      width: min(96vw, 1060px);
-      height: min(92vh, 760px);
+      width: 100%;
+      height: 100%;
+      max-width: 1040px;
+      max-height: 820px;
       background: var(--page-bg);
       border-radius: 4px;
       box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255,255,255,0.06);
@@ -153,13 +156,13 @@
       transform: scale(1);
     }
 
-    /* Central Spine Gutter */
+    /* Central Spine Gutter Shadow */
     .book-gutter-shadow {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 50%;
-      width: 36px;
+      width: 28px;
       background: var(--gutter-shadow);
       transform: translateX(-50%);
       z-index: 20;
@@ -168,7 +171,7 @@
 
     /* Physical Page Pane */
     .book-page-pane {
-      padding: 3.2rem 3.2rem 3.8rem;
+      padding: 2rem 1.8rem 2.2rem;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -187,16 +190,22 @@
       background-image: linear-gradient(to right, rgba(0,0,0,0.025), transparent);
     }
 
+    @media (min-width: 600px) {
+      .book-page-pane {
+        padding: 3rem 2.5rem 3.2rem;
+      }
+    }
+
     /* Page Running Headers & Footers */
     .page-running-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.75rem;
-      margin-bottom: 1.8rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--ink-faint);
     }
@@ -206,10 +215,10 @@
       justify-content: space-between;
       align-items: center;
       border-top: 1px solid var(--border);
-      padding-top: 1.1rem;
-      margin-top: 2rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
+      padding-top: 0.8rem;
+      margin-top: 1.2rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink-faint);
     }
@@ -218,13 +227,13 @@
       background: none;
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 600;
       color: var(--ink);
       cursor: pointer;
-      padding: 0.3rem 0.6rem;
+      padding: 0.2rem 0.4rem;
       transition: opacity 0.2s ease;
     }
 
@@ -235,27 +244,27 @@
     /* Typography inside Book Pages */
     .page-serif-title {
       font-family: var(--font-serif);
-      font-size: 2.3rem;
+      font-size: 1.8rem;
       font-weight: 600;
       line-height: 1.15;
       color: var(--ink);
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.9rem;
     }
 
     .page-serif-subtitle {
       font-family: var(--font-serif);
-      font-size: 1.4rem;
+      font-size: 1.15rem;
       font-style: italic;
       color: var(--ink-muted);
-      margin-bottom: 1.2rem;
-      line-height: 1.4;
+      margin-bottom: 0.9rem;
+      line-height: 1.35;
     }
 
     .page-prose-text {
-      font-size: 1rem;
-      line-height: 1.9;
+      font-size: 0.88rem;
+      line-height: 1.7;
       color: var(--ink-muted);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .page-prose-text strong {
@@ -263,44 +272,54 @@
       font-weight: 600;
     }
 
+    @media (min-width: 600px) {
+      .page-serif-title { font-size: 2.1rem; }
+      .page-serif-subtitle { font-size: 1.3rem; }
+      .page-prose-text { font-size: 0.95rem; line-height: 1.85; }
+    }
+
     /* Table of Contents */
     .book-toc-list {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
+      gap: 0.5rem;
+      margin-top: 0.3rem;
     }
 
     .book-toc-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding-bottom: 0.55rem;
+      padding-bottom: 0.4rem;
       border-bottom: 1px dashed var(--border);
       cursor: pointer;
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 0.98rem;
       color: var(--ink);
       transition: color 0.2s ease, padding-left 0.2s ease;
     }
 
     .book-toc-row:hover {
       color: var(--ink-muted);
-      padding-left: 6px;
+      padding-left: 4px;
     }
 
     .book-toc-pageNum {
       font-family: var(--font-sans);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
       color: var(--ink-faint);
+    }
+
+    @media (min-width: 600px) {
+      .book-toc-row { font-size: 1.1rem; }
     }
 
     /* Accordions / Folds */
     .book-fold-box {
       border: 1px solid var(--border);
       border-radius: 3px;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       background: var(--page-bg-alt);
     }
 
@@ -308,10 +327,10 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 1rem 1.15rem;
+      padding: 0.75rem 0.95rem;
       text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--ink);
       cursor: pointer;
@@ -322,10 +341,10 @@
 
     .book-fold-body {
       display: none;
-      padding: 0 1.15rem 1.15rem;
-      font-size: 0.92rem;
+      padding: 0 0.95rem 0.95rem;
+      font-size: 0.85rem;
       color: var(--ink-muted);
-      line-height: 1.8;
+      line-height: 1.7;
       border-top: 1px dashed var(--border);
     }
 
@@ -337,36 +356,36 @@
     .book-author-form {
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
-      margin-top: 0.9rem;
+      gap: 0.7rem;
+      margin-top: 0.6rem;
     }
 
     .book-form-input, .book-form-textarea {
       width: 100%;
-      padding: 0.85rem 1rem;
+      padding: 0.7rem 0.85rem;
       border: 1px solid var(--border);
       background: var(--page-bg-alt);
       font-family: var(--font-sans);
-      font-size: 0.92rem;
+      font-size: 0.85rem;
       color: var(--ink);
       border-radius: 2px;
       outline: none;
     }
 
     .book-form-textarea {
-      min-height: 110px;
+      min-height: 85px;
       resize: vertical;
     }
 
     .book-form-btn {
       width: 100%;
-      padding: 0.9rem;
+      padding: 0.75rem;
       background: var(--ink);
       color: var(--page-bg);
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
       border-radius: 2px;
@@ -376,34 +395,6 @@
 
     .book-form-btn:hover {
       background: #383129;
-    }
-
-    /* Responsive Mobile Single Page Mode */
-    @media (max-width: 840px) {
-      .opened-book-container {
-        width: 100vw;
-        height: 100vh;
-        height: 100dvh;
-        border-radius: 0;
-        box-shadow: none;
-      }
-      .opened-book-container.active {
-        display: block;
-      }
-      .book-gutter-shadow {
-        display: none;
-      }
-      .book-page-pane {
-        display: none;
-        height: 100%;
-        padding: 2rem 1.5rem 2.5rem;
-      }
-      .book-page-pane.mobile-visible {
-        display: flex;
-      }
-      .book-page-pane:first-child {
-        border-right: none;
-      }
     }
   </style>
 </head>
@@ -420,12 +411,12 @@
       <div class="open-prompt">Open the Book</div>
     </div>
 
-    <!-- OPENED BOOK SPREAD -->
+    <!-- OPENED TWO-PAGE SPREAD (Active on Mobile and Desktop) -->
     <div id="openedBookContainer" class="opened-book-container">
       <div class="book-gutter-shadow"></div>
 
       <!-- LEFT PAGE -->
-      <div id="leftPagePane" class="book-page-pane mobile-visible">
+      <div id="leftPagePane" class="book-page-pane">
         <div class="page-running-head">
           <span id="leftHeadTitle">Or So She Thought</span>
           <span id="leftPageNum">— 1 —</span>
@@ -437,7 +428,7 @@
 
         <div class="page-running-foot">
           <button class="book-page-turn-action" onclick="turnSpread(-1)">← Previous</button>
-          <span id="leftSpreadLabel" style="font-size: 0.68rem; color: var(--ink-faint);">SPREAD 1</span>
+          <span id="leftSpreadLabel" style="font-size: 0.65rem; color: var(--ink-faint);">SPREAD 1</span>
         </div>
       </div>
 
@@ -453,7 +444,7 @@
         </div>
 
         <div class="page-running-foot">
-          <span id="rightSpreadLabel" style="font-size: 0.68rem; color: var(--ink-faint);">SPREAD 1</span>
+          <span id="rightSpreadLabel" style="font-size: 0.65rem; color: var(--ink-faint);">SPREAD 1</span>
           <button class="book-page-turn-action" onclick="turnSpread(1)">Next →</button>
         </div>
       </div>
@@ -462,14 +453,10 @@
 
   </div>
 
-  <!-- JAVASCRIPT: TRUE INTERACTIVE BOOK SPREAD & PAGE ENGINE -->
+  <!-- JAVASCRIPT: TWO-PAGE SPREAD BOOK ENGINE -->
   <script>
     let currentSpreadIndex = 0;
 
-    /* 
-       Each spread represents a pair of facing pages (Left & Right).
-       Content flows naturally across the physical page architecture.
-    */
     const bookSpreads = [
       // Spread 0: Title & Contents
       {
@@ -477,11 +464,11 @@
           header: "Or So She Thought",
           pageNum: "— 1 —",
           html: `
-            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; padding: 2rem 0;">
-              <h1 class="page-serif-title" style="font-size: 2.8rem; margin-bottom: 0.6rem;">OR SO SHE THOUGHT</h1>
-              <p class="page-serif-subtitle" style="margin-bottom: 2rem;">A psychological novel of duty, doubt, and choice</p>
-              <div style="width: 45px; height: 1px; background: var(--ink); margin: 0 auto 2rem;"></div>
-              <p style="font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-faint);">Queen Usman</p>
+            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; padding: 1rem 0;">
+              <h1 class="page-serif-title" style="font-size: 2.2rem; margin-bottom: 0.5rem;">OR SO SHE THOUGHT</h1>
+              <p class="page-serif-subtitle" style="margin-bottom: 1.5rem;">A psychological novel of duty, doubt, and choice</p>
+              <div style="width: 40px; height: 1px; background: var(--ink); margin: 0 auto 1.5rem;"></div>
+              <p style="font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-faint);">Queen Usman</p>
             </div>
           `
         },
@@ -489,7 +476,7 @@
           header: "Contents",
           pageNum: "— 2 —",
           html: `
-            <h2 class="page-serif-title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">TABLE OF CONTENTS</h2>
+            <h2 class="page-serif-title" style="font-size: 1.5rem; margin-bottom: 1rem;">TABLE OF CONTENTS</h2>
             <div class="book-toc-list">
               <div class="book-toc-row" onclick="jumpToSpread(1)"><span class="book-toc-title">01 — The Novel</span><span class="book-toc-pageNum">P. 03</span></div>
               <div class="book-toc-row" onclick="jumpToSpread(2)"><span class="book-toc-title">02 — The Kingdom of Norwyn</span><span class="book-toc-pageNum">P. 05</span></div>
@@ -517,8 +504,8 @@
           header: "The Novel",
           pageNum: "— 4 —",
           html: `
-            <h3 class="page-serif-subtitle" style="margin-bottom: 1rem;">Selected Chapters</h3>
-            <div class="book-toc-list" style="font-size: 0.95rem;">
+            <h3 class="page-serif-subtitle" style="margin-bottom: 0.8rem;">Selected Chapters</h3>
+            <div class="book-toc-list" style="font-size: 0.9rem;">
               <div class="book-toc-row"><span>01. The Life She Is Supposed to Want</span></div>
               <div class="book-toc-row"><span>02. Edward of Valenne</span></div>
               <div class="book-toc-row"><span>03. The Girl Who Corrects Herself</span></div>
@@ -699,8 +686,8 @@
           header: "Inquiries",
           pageNum: "— 18 —",
           html: `
-            <h3 class="page-serif-subtitle" style="font-size: 1.1rem; margin-bottom: 0.6rem;">Contact the Author</h3>
-            <p class="page-prose-text" style="font-size: 0.88rem; margin-bottom: 0.8rem;">For literary, rights, interview, and professional inquiries:</p>
+            <h3 class="page-serif-subtitle" style="font-size: 1rem; margin-bottom: 0.5rem;">Contact the Author</h3>
+            <p class="page-prose-text" style="font-size: 0.82rem; margin-bottom: 0.6rem;">For literary, rights, interview, and professional inquiries:</p>
             
             <form class="book-author-form" id="authorContactForm">
               <input type="text" id="contactName" class="book-form-input" placeholder="Name" required />
@@ -708,7 +695,7 @@
               <textarea id="contactMessage" class="book-form-textarea" placeholder="Message ..." required></textarea>
               <button type="submit" id="contactSubmitBtn" class="book-form-btn">&rarr; Send Message</button>
             </form>
-            <div id="contactSuccessState" style="display: none; padding: 1.2rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.2rem; color: var(--ink);">
+            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink);">
               ✓ Message sent directly to Queen Usman.
             </div>
           `
