@@ -39,7 +39,6 @@
       overflow: hidden;
       -webkit-font-smoothing: antialiased;
       -webkit-tap-highlight-color: transparent;
-      perspective: 1600px;
     }
 
     /* Ambient Desk Stage */
@@ -53,25 +52,27 @@
       overflow: hidden;
     }
 
-    /* Book Object Covering Mobile Screen */
+    /* Real Half-Page Book Object */
     .book-object {
       width: 100%;
       height: 100%;
-      max-width: 600px;
+      max-width: 480px;
+      max-height: 820px;
       background: var(--page-bg);
       position: relative;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.75),
+        -8px 0 20px rgba(0, 0, 0, 0.25) inset; /* Simulates the binding/gutter spine shadow on the left */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
-      transform-style: preserve-3d;
     }
 
-    @media (min-width: 601px) {
+    @media (min-width: 500px) {
       .book-object {
         height: min(92vh, 760px);
-        border-radius: 4px 8px 8px 4px;
+        border-radius: 2px 6px 6px 2px;
       }
     }
 
@@ -81,7 +82,7 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--border);
-      padding: 1.25rem 1.5rem 0.85rem;
+      padding: 1.5rem 1.75rem 0.85rem;
       flex-shrink: 0;
       background: var(--page-bg);
       z-index: 5;
@@ -89,14 +90,14 @@
 
     .page-brand {
       font-family: var(--font-serif);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--ink-faint);
     }
 
     .page-indicator {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--ink-faint);
@@ -107,7 +108,7 @@
     .page-body {
       flex: 1;
       overflow-y: auto;
-      padding: 2rem 1.5rem;
+      padding: 2rem 1.75rem;
       display: flex;
       flex-direction: column;
       -webkit-overflow-scrolling: touch;
@@ -126,43 +127,43 @@
     }
 
     .cover-image {
-      width: min(75vw, 260px);
-      height: min(112vw, 390px);
-      border-radius: 4px 10px 10px 4px;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+      width: min(72vw, 240px);
+      height: min(108vw, 360px);
+      border-radius: 3px 8px 8px 3px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
       object-fit: cover;
     }
 
     /* Typography & Layout inside Book */
     .book-title {
       font-family: var(--font-serif);
-      font-size: 2.1rem;
+      font-size: 1.95rem;
       font-weight: 600;
       line-height: 1.15;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.1rem;
       color: var(--ink);
     }
 
     .book-lead {
       font-family: var(--font-serif);
-      font-size: 1.15rem;
-      line-height: 1.8;
+      font-size: 1.1rem;
+      line-height: 1.75;
       color: var(--ink);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
 
     .book-text {
-      font-size: 0.96rem;
-      line-height: 1.85;
+      font-size: 0.94rem;
+      line-height: 1.8;
       color: var(--ink-muted);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.2rem;
     }
 
     /* Contents List */
     .contents-list {
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      gap: 0.75rem;
       margin-top: 1rem;
     }
 
@@ -170,18 +171,18 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding-bottom: 0.6rem;
+      padding-bottom: 0.55rem;
       border-bottom: 1px dashed var(--border);
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--ink);
     }
 
     /* Accordions */
     .book-accordion {
       border: 1px solid var(--border);
-      border-radius: 4px;
-      margin-bottom: 0.8rem;
+      border-radius: 3px;
+      margin-bottom: 0.75rem;
       background: var(--page-bg-alt);
     }
 
@@ -189,10 +190,10 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 1.1rem 1.2rem;
+      padding: 1rem 1.1rem;
       text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: var(--ink);
       cursor: pointer;
@@ -203,10 +204,10 @@
 
     .book-accordion-content {
       display: none;
-      padding: 0 1.2rem 1.2rem;
-      font-size: 0.92rem;
+      padding: 0 1.1rem 1.1rem;
+      font-size: 0.9rem;
       color: var(--ink-muted);
-      line-height: 1.75;
+      line-height: 1.7;
       border-top: 1px dashed var(--border);
     }
 
@@ -218,43 +219,43 @@
     .book-form {
       display: flex;
       flex-direction: column;
-      gap: 0.95rem;
-      margin-top: 1rem;
+      gap: 0.85rem;
+      margin-top: 0.9rem;
     }
 
     .book-input, .book-textarea {
       width: 100%;
-      padding: 0.85rem 1rem;
+      padding: 0.8rem 0.95rem;
       border: 1px solid var(--border);
       background: var(--page-bg-alt);
       font-family: var(--font-sans);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--ink);
-      border-radius: 3px;
+      border-radius: 2px;
       outline: none;
     }
 
     .book-textarea {
-      min-height: 120px;
+      min-height: 110px;
       resize: vertical;
     }
 
     .book-submit-btn {
       width: 100%;
-      padding: 0.95rem;
+      padding: 0.9rem;
       background: var(--ink);
       color: var(--page-bg);
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
-      border-radius: 3px;
+      border-radius: 2px;
       cursor: pointer;
     }
 
-    /* Interactive Tap Zones Overlay (Right = Next, Left = Prev) */
+    /* Interactive Tap Zones (Right = Next Page, Left = Previous Page) */
     .tap-zone-left, .tap-zone-right {
       position: absolute;
       top: 0;
@@ -265,27 +266,6 @@
     }
     .tap-zone-left { left: 0; }
     .tap-zone-right { right: 0; }
-
-    /* Realistic 3D Page Turn Flip Animation Elements */
-    .page-flipper {
-      position: absolute;
-      inset: 0;
-      z-index: 50;
-      pointer-events: none;
-      transform-style: preserve-3d;
-      transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-
-    .flipping-page {
-      position: absolute;
-      inset: 0;
-      background: var(--page-bg);
-      backface-visibility: hidden;
-      box-shadow: 0 0 20px rgba(0,0,0,0.15);
-      display: flex;
-      flex-direction: column;
-      padding: 2rem 1.5rem;
-    }
   </style>
 </head>
 <body>
@@ -313,7 +293,7 @@
 
   </div>
 
-  <!-- JAVASCRIPT: REALISTIC BOOK FLIP & CONTENT ENGINE -->
+  <!-- JAVASCRIPT: REALISTIC HALF-PAGE FLIP ENGINE -->
   <script>
     let currentPage = 1;
     const totalPages = 7;
@@ -406,18 +386,18 @@
         indicator: "About the Author",
         render: `
           <h2 class="book-title">About the Author</h2>
-          <p class="book-lead" style="font-size:1.05rem; font-style:italic;">A clinical medical student and novelist interested in how people become who they are[cite: 1].</p>
+          <p class="book-lead" style="font-size:1.02rem; font-style:italic;">A clinical medical student and novelist interested in how people become who they are[cite: 1].</p>
           <p class="book-text">Queen Usman is a Nigerian clinical medical student and novelist[cite: 1]. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition[cite: 1].</p>
           
-          <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.2rem;">
-            <div style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:0.7rem; font-weight:600;">Contact</div>
+          <div style="margin-top: 1.2rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+            <div style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:0.6rem; font-weight:600;">Contact</div>
             <form class="book-form" id="authorContactForm" onclick="event.stopPropagation()">
               <input type="text" id="contactName" class="book-input" placeholder="Name" required />
               <input type="email" id="contactEmail" class="book-input" placeholder="Email *" required />
               <textarea id="contactMessage" class="book-textarea" placeholder="Message ..." required></textarea>
               <button type="submit" id="contactSubmitBtn" class="book-submit-btn">&rarr; Send Message</button>
             </form>
-            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.2rem;">
+            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.15rem;">
               ✓ Message sent directly to Queen Usman.
             </div>
           </div>
@@ -443,13 +423,12 @@
       }
     }
 
-    // Realistic Page Flip Visual Simulation Effect
     function triggerFlipEffect(direction) {
       const bookObj = document.getElementById('bookObject');
-      bookObj.style.transform = direction === 'next' ? 'rotateY(-2deg)' : 'rotateY(2deg)';
+      bookObj.style.transform = direction === 'next' ? 'rotateY(-1.5deg)' : 'rotateY(1.5deg)';
       setTimeout(() => {
         bookObj.style.transform = 'rotateY(0deg)';
-      }, 300);
+      }, 250);
     }
 
     function toggleAccordion(event, element) {
