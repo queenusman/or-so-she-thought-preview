@@ -12,14 +12,13 @@
   <style>
     :root {
       --desk-bg: #141210;
-      --book-cover: #1b1713;
       --page-bg: #f7f3eb;
       --page-bg-alt: #f0eae1;
       --ink: #1f1b16;
       --ink-muted: #575249;
       --ink-faint: #8a8377;
       --border: #d9d1c1;
-      --gutter-shadow: linear-gradient(to right, rgba(0,0,0,0.06), rgba(0,0,0,0.22), rgba(0,0,0,0.04));
+      --gold: #bda376;
       --font-serif: "Cormorant Garamond", Georgia, serif;
       --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
     }
@@ -40,6 +39,7 @@
       overflow: hidden;
       -webkit-font-smoothing: antialiased;
       -webkit-tap-highlight-color: transparent;
+      perspective: 1600px;
     }
 
     /* Ambient Desk Stage */
@@ -50,255 +50,138 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      perspective: 1600px;
       overflow: hidden;
     }
 
-    /* =========================================================
-       1. CLOSED BOOK COVER STATE
-       ========================================================= */
-    .closed-book-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
-      z-index: 10;
-    }
-
-    .closed-book-wrapper.opening {
-      transform: scale(1.15) rotateY(-18deg) translateZ(100px);
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .physical-hardcover {
-      width: min(72vw, 320px);
-      height: min(108vw, 480px);
-      background: var(--book-cover);
-      border-radius: 4px 14px 14px 4px;
-      position: relative;
-      box-shadow: 
-        -20px 30px 60px rgba(0, 0, 0, 0.7),
-        -3px 0 10px rgba(0, 0, 0, 0.5) inset,
-        4px 0 8px rgba(255, 255, 255, 0.1) inset;
-      overflow: hidden;
-      transform: rotateY(-12deg) rotateX(4deg);
-      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
-    }
-
-    .physical-hardcover:hover {
-      transform: rotateY(0deg) rotateX(0deg) translateY(-8px);
-      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.8);
-    }
-
-    .hardcover-img {
+    /* Book Object Covering Mobile Screen */
+    .book-object {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .spine-crease {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 16px;
-      width: 3px;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 1px 0 3px rgba(0, 0, 0, 0.6);
-      pointer-events: none;
-    }
-
-    .open-prompt {
-      margin-top: 2rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: rgba(247, 243, 235, 0.55);
-      font-weight: 500;
-      animation: pulsePrompt 2.5s infinite ease-in-out;
-    }
-
-    @keyframes pulsePrompt {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.9; }
-    }
-
-    /* =========================================================
-       2. OPENED BOOK SPREAD STATE
-       ========================================================= */
-    .opened-book-spread {
-      display: none;
-      width: min(96vw, 1040px);
-      height: min(92vh, 720px);
+      max-width: 600px;
       background: var(--page-bg);
-      border-radius: 4px;
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255,255,255,0.06);
       position: relative;
-      opacity: 0;
-      transform: scale(0.94);
-      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.7s ease;
-      overflow: hidden;
-    }
-
-    .opened-book-spread.active {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* Center Book Gutter Shadow */
-    .book-center-gutter {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 32px;
-      background: var(--gutter-shadow);
-      transform: translateX(-50%);
-      z-index: 20;
-      pointer-events: none;
-    }
-
-    /* Individual Page Panels */
-    .book-page-panel {
-      padding: 3.2rem 3rem 3.8rem;
-      height: 100%;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      overflow-y: auto;
-      position: relative;
-      -webkit-overflow-scrolling: touch;
+      overflow: hidden;
+      transform-style: preserve-3d;
     }
 
-    .book-page-panel:first-child {
-      border-right: 1px solid var(--border);
-      background-image: linear-gradient(to left, rgba(0,0,0,0.02), transparent);
+    @media (min-width: 601px) {
+      .book-object {
+        height: min(92vh, 760px);
+        border-radius: 4px 8px 8px 4px;
+      }
     }
 
-    .book-page-panel:last-child {
-      background-image: linear-gradient(to right, rgba(0,0,0,0.02), transparent);
-    }
-
-    /* Page Header & Footers */
-    .page-header-row {
+    /* Page Header */
+    .page-header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.75rem;
-      margin-bottom: 1.8rem;
-      font-size: 0.72rem;
+      padding: 1.25rem 1.5rem 0.85rem;
+      flex-shrink: 0;
+      background: var(--page-bg);
+      z-index: 5;
+    }
+
+    .page-brand {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--ink-faint);
     }
 
-    .page-footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--border);
-      padding-top: 1rem;
-      margin-top: 2rem;
-      font-size: 0.75rem;
+    .page-indicator {
+      font-size: 0.72rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--ink-faint);
-    }
-
-    .page-nav-btn {
-      background: none;
-      border: none;
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
       font-weight: 600;
-      color: var(--ink);
-      cursor: pointer;
-      padding: 0.3rem 0.6rem;
-      transition: opacity 0.2s ease;
     }
 
-    .page-nav-btn:hover {
-      opacity: 0.6;
+    /* Scrollable Page Body */
+    .page-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+      z-index: 2;
     }
 
-    /* Page Typography & Content Elements */
-    .book-heading-serif {
+    /* Cover Styling */
+    .cover-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+    }
+
+    .cover-image {
+      width: min(75vw, 260px);
+      height: min(112vw, 390px);
+      border-radius: 4px 10px 10px 4px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+      object-fit: cover;
+    }
+
+    /* Typography & Layout inside Book */
+    .book-title {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 600;
       line-height: 1.15;
+      margin-bottom: 1.2rem;
       color: var(--ink);
-      margin-bottom: 1.2rem;
     }
 
-    .book-subheading-serif {
+    .book-lead {
       font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-style: italic;
-      color: var(--ink-muted);
-      margin-bottom: 1.2rem;
-      line-height: 1.4;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
     }
 
-    .book-prose {
-      font-size: 0.98rem;
+    .book-text {
+      font-size: 0.96rem;
       line-height: 1.85;
       color: var(--ink-muted);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.25rem;
     }
 
-    .book-prose strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
-
-    /* Contents Navigation List */
+    /* Contents List */
     .contents-list {
       display: flex;
       flex-direction: column;
-      gap: 0.7rem;
-      margin-top: 0.5rem;
+      gap: 0.8rem;
+      margin-top: 1rem;
     }
 
     .contents-item {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.6rem;
       border-bottom: 1px dashed var(--border);
-      cursor: pointer;
       font-family: var(--font-serif);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--ink);
-      transition: color 0.2s ease, padding-left 0.2s ease;
     }
 
-    .contents-item:hover {
-      color: var(--ink-muted);
-      padding-left: 6px;
-    }
-
-    .contents-num {
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      color: var(--ink-faint);
-    }
-
-    /* Accordions inside Book */
+    /* Accordions */
     .book-accordion {
       border: 1px solid var(--border);
-      border-radius: 3px;
-      margin-bottom: 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 0.8rem;
       background: var(--page-bg-alt);
     }
 
@@ -306,7 +189,7 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 0.95rem 1.1rem;
+      padding: 1.1rem 1.2rem;
       text-align: left;
       font-family: var(--font-serif);
       font-size: 1.15rem;
@@ -320,7 +203,7 @@
 
     .book-accordion-content {
       display: none;
-      padding: 0 1.1rem 1.1rem;
+      padding: 0 1.2rem 1.2rem;
       font-size: 0.92rem;
       color: var(--ink-muted);
       line-height: 1.75;
@@ -331,80 +214,77 @@
       display: block;
     }
 
-    /* Contact Form inside Book */
-    .book-contact-form {
+    /* Contact Form */
+    .book-form {
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
-      margin-top: 0.8rem;
+      gap: 0.95rem;
+      margin-top: 1rem;
     }
 
     .book-input, .book-textarea {
       width: 100%;
-      padding: 0.8rem 1rem;
+      padding: 0.85rem 1rem;
       border: 1px solid var(--border);
       background: var(--page-bg-alt);
       font-family: var(--font-sans);
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       color: var(--ink);
-      border-radius: 2px;
+      border-radius: 3px;
       outline: none;
     }
 
     .book-textarea {
-      min-height: 105px;
+      min-height: 120px;
       resize: vertical;
     }
 
     .book-submit-btn {
       width: 100%;
-      padding: 0.85rem;
+      padding: 0.95rem;
       background: var(--ink);
       color: var(--page-bg);
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
-      border-radius: 2px;
+      border-radius: 3px;
       cursor: pointer;
-      transition: background 0.2s ease;
     }
 
-    .book-submit-btn:hover {
-      background: #383129;
+    /* Interactive Tap Zones Overlay (Right = Next, Left = Prev) */
+    .tap-zone-left, .tap-zone-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 35%;
+      z-index: 100;
+      cursor: pointer;
+    }
+    .tap-zone-left { left: 0; }
+    .tap-zone-right { right: 0; }
+
+    /* Realistic 3D Page Turn Flip Animation Elements */
+    .page-flipper {
+      position: absolute;
+      inset: 0;
+      z-index: 50;
+      pointer-events: none;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
-    /* Responsive Adaptation for Mobile / Narrow Screens */
-    @media (max-width: 820px) {
-      .opened-book-spread {
-        width: 100vw;
-        height: 100vh;
-        height: 100dvh;
-        border-radius: 0;
-        box-shadow: none;
-      }
-      .opened-book-spread.active {
-        display: block; /* Single page view on mobile */
-      }
-      .book-center-gutter {
-        display: none;
-      }
-      .book-page-panel {
-        display: none;
-        height: 100%;
-        padding: 1.5rem 1.25rem 2rem;
-      }
-      .book-page-panel.mobile-active {
-        display: flex;
-      }
-      .book-page-panel:first-child {
-        border-right: none;
-      }
-      .book-heading-serif {
-        font-size: 1.8rem;
-      }
+    .flipping-page {
+      position: absolute;
+      inset: 0;
+      background: var(--page-bg);
+      backface-visibility: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.5rem;
     }
   </style>
 </head>
@@ -412,372 +292,168 @@
 
   <div class="desk-stage">
 
-    <!-- CLOSED BOOK COVER (Initial state) -->
-    <div id="closedBook" class="closed-book-wrapper" onclick="openBookExperience()">
-      <div class="physical-hardcover">
-        <img src="cover.jpg" alt="Or So She Thought Cover" class="hardcover-img" loading="eager" />
-        <div class="spine-crease"></div>
-      </div>
-      <div class="open-prompt">Open the Book</div>
-    </div>
+    <div class="book-object" id="bookObject">
+      
+      <!-- Invisible Tap Zones for Page Flipping -->
+      <div class="tap-zone-left" onclick="turnPage(-1)" title="Previous Page"></div>
+      <div class="tap-zone-right" onclick="turnPage(1)" title="Next Page"></div>
 
-    <!-- OPENED BOOK SPREAD -->
-    <div id="openedSpread" class="opened-book-spread">
-      <div class="book-center-gutter"></div>
+      <!-- Header -->
+      <header class="page-header">
+        <div class="page-brand" onclick="goToPage(1)" style="cursor:pointer;">Or So She Thought</div>
+        <div id="pageIndicator" class="page-indicator">Cover</div>
+      </header>
 
-      <!-- LEFT PAGE PANEL -->
-      <div id="leftPage" class="book-page-panel mobile-active">
-        <div class="page-header-row">
-          <span id="leftHeaderTitle">Or So She Thought</span>
-          <span id="leftPageNum">PAGE 01</span>
-        </div>
-
-        <div id="leftPageContent" style="flex: 1; overflow-y: auto;">
-          <!-- Dynamically injected -->
-        </div>
-
-        <div class="page-footer-row">
-          <button class="page-nav-btn" onclick="prevSpread()">← PREVIOUS</button>
-          <span id="leftSpreadNum" style="font-size: 0.7rem; color: var(--ink-faint);">SPREAD 1</span>
-        </div>
-      </div>
-
-      <!-- RIGHT PAGE PANEL -->
-      <div id="rightPage" class="book-page-panel">
-        <div class="page-header-row">
-          <span id="rightHeaderTitle">Contents</span>
-          <span id="rightPageNum">PAGE 02</span>
-        </div>
-
-        <div id="rightPageContent" style="flex: 1; overflow-y: auto;">
-          <!-- Dynamically injected -->
-        </div>
-
-        <div class="page-footer-row">
-          <span id="rightSpreadNum" style="font-size: 0.7rem; color: var(--ink-faint);">SPREAD 1</span>
-          <button class="page-nav-btn" onclick="nextSpread()">NEXT →</button>
-        </div>
-      </div>
+      <!-- Main Page Content -->
+      <main id="pageContent" class="page-body">
+        <!-- Dynamically rendered -->
+      </main>
 
     </div>
 
   </div>
 
-  <!-- JAVASCRIPT: IMMERSIVE BOOK SPREAD ENGINE -->
+  <!-- JAVASCRIPT: REALISTIC BOOK FLIP & CONTENT ENGINE -->
   <script>
-    let currentSpread = 0; // 0 = Title & Contents Spread, 1 = Novel, etc.
+    let currentPage = 1;
+    const totalPages = 7;
 
-    const spreads = [
-      // Spread 0: Title Page & Table of Contents
-      {
-        left: {
-          header: "Or So She Thought",
-          pageNum: "PAGE 01",
-          html: `
-            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; padding: 2rem 0;">
-              <h1 class="book-heading-serif" style="font-size: 2.8rem; margin-bottom: 0.5rem;">OR SO SHE THOUGHT</h1>
-              <p class="book-subheading-serif" style="margin-bottom: 2rem;">A psychological novel of duty, doubt, and choice</p>
-              <div style="width: 50px; height: 1px; background: var(--ink); margin: 0 auto 2rem;"></div>
-              <p style="font-size: 0.9rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-faint);">Queen Usman</p>
-            </div>
-          `
-        },
-        right: {
-          header: "Contents",
-          pageNum: "PAGE 02",
-          html: `
-            <h2 class="book-heading-serif" style="font-size: 1.8rem; margin-bottom: 1.5rem;">CONTENTS</h2>
-            <div class="contents-list">
-              <div class="contents-item" onclick="goToSpread(1)"><span class="contents-title">01 — The Novel</span><span class="contents-num">P. 03</span></div>
-              <div class="contents-item" onclick="goToSpread(2)"><span class="contents-title">02 — Norwyn</span><span class="contents-num">P. 05</span></div>
-              <div class="contents-item" onclick="goToSpread(3)"><span class="contents-title">03 — The People</span><span class="contents-num">P. 09</span></div>
-              <div class="contents-item" onclick="goToSpread(4)"><span class="contents-title">04 — The Archive</span><span class="contents-num">P. 11</span></div>
-              <div class="contents-item" onclick="goToSpread(5)"><span class="contents-title">05 — Where It Began</span><span class="contents-num">P. 13</span></div>
-              <div class="contents-item" onclick="goToSpread(6)"><span class="contents-title">06 — Beyond The Novel</span><span class="contents-num">P. 15</span></div>
-              <div class="contents-item" onclick="goToSpread(7)"><span class="contents-title">07 — About The Author</span><span class="contents-num">P. 17</span></div>
-            </div>
-          `
-        }
+    const bookPages = {
+      1: {
+        indicator: "Cover",
+        render: `
+          <div class="cover-layout">
+            <img src="cover.jpg" alt="Or So She Thought Cover" class="cover-image" />
+          </div>
+        `
       },
-      // Spread 1: 01 — The Novel
-      {
-        left: {
-          header: "01 — The Novel",
-          pageNum: "PAGE 03",
-          html: `
-            <h2 class="book-heading-serif">THE WEB NOVEL</h2>
-            <p class="book-prose"><em>Or So She Thought</em> is a psychological novel set in 1990s Norwyn, where duty is inherited, futures are arranged before they are questioned, and knowing what you want can become difficult when you have spent your life learning what you are supposed to want.</p>
-            <p class="book-prose">It follows Elizabeth, a young woman whose future has been carefully prepared for her, as the life she has always understood begins to become less certain.</p>
-          `
-        },
-        right: {
-          header: "Table of Contents",
-          pageNum: "PAGE 04",
-          html: `
-            <h3 class="book-subheading-serif" style="margin-bottom: 1rem;">Selected Chapters</h3>
-            <div class="contents-list" style="font-size: 0.95rem;">
+      2: {
+        indicator: "The Novel",
+        render: `
+          <h2 class="book-title">Read the Novel</h2>
+          <p class="book-lead">Or So She Thought is a psychological novel set in 1990s Norwyn, where duty is inherited and futures are arranged before they are questioned.</p>
+          <div style="margin-top: 1rem;">
+            <div style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:0.75rem; font-weight:600;">Contents (26 Chapters)</div>
+            <div class="contents-list">
               <div class="contents-item"><span>01. The Life She Is Supposed to Want</span></div>
               <div class="contents-item"><span>02. Edward of Valenne</span></div>
               <div class="contents-item"><span>03. The Girl Who Corrects Herself</span></div>
               <div class="contents-item"><span>04. The Book</span></div>
               <div class="contents-item"><span>05. The Mended Blouse</span></div>
-              <div class="contents-item"><span>06. The Woman Who Knows Before You Speak</span></div>
-              <div class="contents-item"><span>07. The Man She Might Have Married</span></div>
+              <div class="contents-item" style="color:var(--gold);"><span>... and 21 subsequent chapters</span></div>
             </div>
-          `
-        }
+          </div>
+        `
       },
-      // Spread 2: 02 — Norwyn
-      {
-        left: {
-          header: "02 — Norwyn",
-          pageNum: "PAGE 05",
-          html: `
-            <h2 class="book-heading-serif">THE KINGDOM OF NORWYN</h2>
-            <p class="book-prose">A kingdom shaped by inheritance, tradition, commerce, and the people who have learned how to live within them.</p>
-            <p class="book-prose">Norwyn is a kingdom of contrasts. The capital is busy with commerce and government. The palace operates according to rules of its own. Beyond the city, the mountains preserve ways of life shaped by colder weather and communal work.</p>
-          `
-        },
-        right: {
-          header: "Territories",
-          pageNum: "PAGE 06",
-          html: `
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>01 — The Capital</span><span>+</span></button>
-              <div class="book-accordion-content">Stone quays beside the river where commerce, government, and public life have grown around one another for generations.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>02 — The Palace</span><span>+</span></button>
-              <div class="book-accordion-content">The seat of the royal family and center of ceremonial life, featuring state rooms, the royal library, and private family apartments.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>03 — Valenne</span><span>+</span></button>
-              <div class="book-accordion-content">A neighboring kingdom whose relationship with Norwyn has been built through treaties, trade, diplomacy, and generational obligations.</div>
-            </div>
-          `
-        }
+      3: {
+        indicator: "Kingdom of Norwyn",
+        render: `
+          <h2 class="book-title">The Kingdom of Norwyn</h2>
+          <p class="book-lead">A world shaped by inheritance, tradition, commerce, and the people living within them.</p>
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
+            <button class="book-accordion-btn"><span>01 — The Capital</span><span>+</span></button>
+            <div class="book-accordion-content">Norwyn's capital was built along stone quays beside the river, where commerce, government, and public life meet.</div>
+          </div>
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
+            <button class="book-accordion-btn"><span>02 — The Palace</span><span>+</span></button>
+            <div class="book-accordion-content">The seat of the royal family featuring public state rooms, private family wings, and the royal archives.</div>
+          </div>
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
+            <button class="book-accordion-btn"><span>03 — Valenne</span><span>+</span></button>
+            <div class="book-accordion-content">Norwyn's neighboring kingdom bound by trade, mineral wealth, and generational political covenants.</div>
+          </div>
+        `
       },
-      // Spread 3: 03 — The People
-      {
-        left: {
-          header: "03 — The People",
-          pageNum: "PAGE 09",
-          html: `
-            <h2 class="book-heading-serif">DRAMATIS PERSONAE</h2>
-            <p class="book-prose">Elizabeth's life is shaped by the people around her, but none of them can be reduced to what they want from her.</p>
-            <p class="book-prose" style="font-style: italic;">They love her. They need things from her. They protect her. They misunderstand her.</p>
-          `
-        },
-        right: {
-          header: "Key Figures",
-          pageNum: "PAGE 10",
-          html: `
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Elizabeth</span><span>+</span></button>
-              <div class="book-accordion-content">A daughter, royal, student, and future bride learning how to read a room, anticipate a response, and understand what a situation requires.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Queen Anne</span><span>+</span></button>
-              <div class="book-accordion-content">Elizabeth's mother, who believes preparation is a form of protection, though she struggles to separate care from control.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Edward of Valenne</span><span>+</span></button>
-              <div class="book-accordion-content">The man Elizabeth is expected to marry—intelligent, observant, and more complicated than their arrangement suggests.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Elias</span><span>+</span></button>
-              <div class="book-accordion-content">Comes from outside the palace, bringing an independent eye into spaces Elizabeth takes for granted.</div>
-            </div>
-          `
-        }
+      4: {
+        indicator: "People of Norwyn",
+        render: `
+          <h2 class="book-title">Dramatis Personae</h2>
+          <p class="book-lead">They love her. They need things from her. They protect her. They misunderstand her.</p>
+          <p class="book-text"><strong>Elizabeth:</strong> A daughter, royal, student, and future bride learning how to read a room and anticipate what is required of her.</p>
+          <p class="book-text"><strong>Anne:</strong> Queen Anne is Elizabeth's mother, believing discipline and rigorous preparation are forms of protection.</p>
+          <p class="book-text"><strong>Edward of Valenne:</strong> Intelligent, observant, and politically aware, entering Elizabeth's life through an expected dynastic marriage.</p>
+          <p class="book-text"><strong>Elias:</strong> Independent and observant, bringing a world outside the palace into Elizabeth's orbit.</p>
+        `
       },
-      // Spread 4: 04 — The Archive
-      {
-        left: {
-          header: "04 — The Archive",
-          pageNum: "PAGE 11",
-          html: `
-            <h2 class="book-heading-serif">THE NORWYN ARCHIVE</h2>
-            <p class="book-prose">Artifacts, records, and documents from the world of the novel. These papers preserve what the institution chose to remember—and what it tried to manage.</p>
-          `
-        },
-        right: {
-          header: "Archival Records",
-          pageNum: "PAGE 12",
-          html: `
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Cartographic Survey</span><span>+</span></button>
-              <div class="book-accordion-content">Norwyn Royal Survey Bureau • 1994 Edition. Territorial borders, county divisions, and mountain passes.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>The Norwyn Herald</span><span>+</span></button>
-              <div class="book-accordion-content">Newspaper dispatches and public columns from March 1994 detailing capital society and state announcements.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Royal Household Record</span><span>+</span></button>
-              <div class="book-accordion-content">Private correspondence and protocol manuals governing state banquets and diplomatic seating arrangements.</div>
-            </div>
-          `
-        }
+      5: {
+        indicator: "Where It Began",
+        render: `
+          <h2 class="book-title">Where It Began</h2>
+          <p class="book-lead">The Making of Or So She Thought</p>
+          <p class="book-text">Novels are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.</p>
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
+            <button class="book-accordion-btn"><span>The Story Before Elizabeth</span><span>+</span></button>
+            <div class="book-accordion-content">At first, I was more interested in external events until Elizabeth emerged as a person whose quiet compliance was an exhausting form of labor.</div>
+          </div>
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
+            <button class="book-accordion-btn"><span>The Mended Blouse</span><span>+</span></button>
+            <div class="book-accordion-content">Watching someone whose clothes have always been maintained by others attempt to fix an imperfect hem became a study in clumsy self-reliance.</div>
+          </div>
+        `
       },
-      // Spread 5: 05 — Where It Began
-      {
-        left: {
-          header: "05 — Where It Began",
-          pageNum: "PAGE 13",
-          html: `
-            <h2 class="book-heading-serif">WHERE IT BEGAN</h2>
-            <p class="book-prose"><em>Or So She Thought</em> did not arrive fully formed. There was a version of the story before there was this one.</p>
-            <p class="book-prose">Novels are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.</p>
-          `
-        },
-        right: {
-          header: "Behind the Scenes",
-          pageNum: "PAGE 14",
-          html: `
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>The Story Before Elizabeth</span><span>+</span></button>
-              <div class="book-accordion-content">Initially focused on external border politics until Elizabeth emerged as a person whose quiet compliance was an exhausting form of labor.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>The Mended Hem</span><span>+</span></button>
-              <div class="book-accordion-content">A quiet study in what happens when someone whose clothes have always been maintained by others attempts self-reliance with clumsy fingers.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>The Title</span><span>+</span></button>
-              <div class="book-accordion-content">Created hesitation in the narrow space between what a person assumes to be true and what they slowly realize was incomplete.</div>
-            </div>
-          `
-        }
+      6: {
+        indicator: "Beyond the Novel",
+        render: `
+          <h2 class="book-title">Beyond the Novel</h2>
+          <p class="book-lead">Questions the novel leaves behind that appear in ordinary lives too.</p>
+          <p class="book-text"><strong>1. How do you know what you want when you were taught what to want?</strong></p>
+          <p class="book-text"><strong>2. Can a life chosen for you become genuinely yours?</strong></p>
+          <p class="book-text"><strong>3. Can love and control exist together?</strong></p>
+          <p class="book-text"><strong>4. What happens when a rule becomes ordinary?</strong></p>
+        `
       },
-      // Spread 6: 06 — Beyond The Novel
-      {
-        left: {
-          header: "06 — Beyond The Novel",
-          pageNum: "PAGE 15",
-          html: `
-            <h2 class="book-heading-serif">QUESTIONS LEFT BEHIND</h2>
-            <p class="book-prose">Some of the questions the novel raises do not belong entirely to Elizabeth, Norwyn, or the world of the novel. They appear in ordinary lives too.</p>
-            <p class="book-prose" style="font-style: italic;">How much of what we call preference was learned? How much of what feels inevitable was simply repeated?</p>
-          `
-        },
-        right: {
-          header: "Core Inquiries",
-          pageNum: "PAGE 16",
-          html: `
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>How do you know what you want?</span><span>+</span></button>
-              <div class="book-accordion-content">Family, culture, circumstance, and expectation participate in forming a person. Where does influence end and choice begin?</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Can a life chosen for you become your own?</span><span>+</span></button>
-              <div class="book-accordion-content">We inherit ideas about what a good life should look like. Sometimes we reject them; sometimes we keep them.</div>
-            </div>
-            <div class="book-accordion" onclick="toggleBookAccordion(this)">
-              <button class="book-accordion-btn"><span>Can love and control exist together?</span><span>+</span></button>
-              <div class="book-accordion-content">The person who knows you best may also feel most entitled to decide what is best for you. Where does care become something else?</div>
-            </div>
-          `
-        }
-      },
-      // Spread 7: 07 — About The Author
-      {
-        left: {
-          header: "07 — About The Author",
-          pageNum: "PAGE 17",
-          html: `
-            <h2 class="book-heading-serif">QUEEN USMAN</h2>
-            <p class="book-subheading-serif">A clinical medical student and novelist interested in how people become who they are[cite: 1].</p>
-            <p class="book-prose">Queen Usman is a Nigerian clinical medical student and novelist[cite: 1]. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition[cite: 1].</p>
-            <p class="book-prose">Her medical training has sharpened her interest in observation, human behavior, and the ways people are shaped by the worlds they inhabit[cite: 1].</p>
-          `
-        },
-        right: {
-          header: "Professional Inquiries",
-          pageNum: "PAGE 18",
-          html: `
-            <h3 class="book-subheading-serif" style="font-size: 1.1rem; margin-bottom: 0.8rem;">Contact the Author</h3>
-            <p class="book-prose" style="font-size: 0.88rem; margin-bottom: 1rem;">For literary, rights, interview, and professional inquiries:</p>
-            
-            <form class="book-contact-form" id="authorContactForm">
+      7: {
+        indicator: "About the Author",
+        render: `
+          <h2 class="book-title">About the Author</h2>
+          <p class="book-lead" style="font-size:1.05rem; font-style:italic;">A clinical medical student and novelist interested in how people become who they are[cite: 1].</p>
+          <p class="book-text">Queen Usman is a Nigerian clinical medical student and novelist[cite: 1]. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition[cite: 1].</p>
+          
+          <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.2rem;">
+            <div style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:0.7rem; font-weight:600;">Contact</div>
+            <form class="book-form" id="authorContactForm" onclick="event.stopPropagation()">
               <input type="text" id="contactName" class="book-input" placeholder="Name" required />
               <input type="email" id="contactEmail" class="book-input" placeholder="Email *" required />
               <textarea id="contactMessage" class="book-textarea" placeholder="Message ..." required></textarea>
               <button type="submit" id="contactSubmitBtn" class="book-submit-btn">&rarr; Send Message</button>
             </form>
-            <div id="contactSuccessState" style="display: none; padding: 1.2rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.2rem; color: var(--ink);">
+            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.2rem;">
               ✓ Message sent directly to Queen Usman.
             </div>
-          `
-        }
+          </div>
+        `
       }
-    ];
+    };
 
-    function openBookExperience() {
-      const closed = document.getElementById('closedBook');
-      const opened = document.getElementById('openedSpread');
-      
-      closed.classList.add('opening');
+    function goToPage(pageNum) {
+      if (pageNum < 1 || pageNum > totalPages) return;
+      currentPage = pageNum;
+      const data = bookPages[currentPage];
+
+      document.getElementById('pageContent').innerHTML = data.render;
+      document.getElementById('pageIndicator').innerText = data.indicator;
+      document.getElementById('pageContent').scrollTop = 0;
+    }
+
+    function turnPage(direction) {
+      const target = currentPage + direction;
+      if (target >= 1 && target <= totalPages) {
+        triggerFlipEffect(direction > 0 ? 'next' : 'prev');
+        goToPage(target);
+      }
+    }
+
+    // Realistic Page Flip Visual Simulation Effect
+    function triggerFlipEffect(direction) {
+      const bookObj = document.getElementById('bookObject');
+      bookObj.style.transform = direction === 'next' ? 'rotateY(-2deg)' : 'rotateY(2deg)';
       setTimeout(() => {
-        closed.style.display = 'none';
-        opened.classList.add('active');
-        renderSpread(0);
-      }, 400);
+        bookObj.style.transform = 'rotateY(0deg)';
+      }, 300);
     }
 
-    function renderSpread(index) {
-      currentSpread = index;
-      const data = spreads[currentSpread];
-
-      // Left Page
-      document.getElementById('leftHeaderTitle').innerText = data.left.header;
-      document.getElementById('leftPageNum').innerText = data.left.pageNum;
-      document.getElementById('leftPageContent').innerHTML = data.left.html;
-      document.getElementById('leftSpreadNum').innerText = `SPREAD ${currentSpread + 1} OF ${spreads.length}`;
-
-      // Right Page
-      document.getElementById('rightHeaderTitle').innerText = data.right.header;
-      document.getElementById('rightPageNum').innerText = data.right.pageNum;
-      document.getElementById('rightPageContent').innerHTML = data.right.html;
-      document.getElementById('rightSpreadNum').innerText = `SPREAD ${currentSpread + 1} OF ${spreads.length}`;
-
-      // Scroll panels back to top
-      document.getElementById('leftPage').scrollTop = 0;
-      document.getElementById('rightPage').scrollTop = 0;
-
-      // Handle mobile single-page view rotation if needed
-      if (window.innerWidth <= 820) {
-        // On mobile, show left page initially for this spread
-        showMobilePage('left');
-      }
-    }
-
-    function nextSpread() {
-      if (currentSpread < spreads.length - 1) {
-        renderSpread(currentSpread + 1);
-      }
-    }
-
-    function prevSpread() {
-      if (currentSpread > 0) {
-        renderSpread(currentSpread - 1);
-      } else {
-        // Return to cover
-        const closed = document.getElementById('closedBook');
-        const opened = document.getElementById('openedSpread');
-        opened.classList.remove('active');
-        closed.style.display = 'flex';
-        closed.classList.remove('opening');
-      }
-    }
-
-    function goToSpread(index) {
-      if (index >= 0 && index < spreads.length) {
-        renderSpread(index);
-      }
-    }
-
-    function toggleBookAccordion(element) {
+    function toggleAccordion(event, element) {
+      event.stopPropagation();
       element.classList.toggle('open');
       const icon = element.querySelector('.book-accordion-btn span:last-child');
       icon.textContent = element.classList.contains('open') ? '−' : '+';
@@ -816,20 +492,8 @@
       }
     });
 
-    // Mobile swipe / tap navigation handlers
-    function showMobilePage(side) {
-      if (window.innerWidth <= 820) {
-        const left = document.getElementById('leftPage');
-        const right = document.getElementById('rightPage');
-        if (side === 'left') {
-          left.classList.add('mobile-active');
-          right.classList.remove('mobile-active');
-        } else {
-          right.classList.add('mobile-active');
-          left.classList.remove('mobile-active');
-        }
-      }
-    }
+    // Initialize initial cover page
+    goToPage(1);
   </script>
 
 </body>
