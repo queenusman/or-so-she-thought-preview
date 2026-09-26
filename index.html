@@ -39,6 +39,7 @@
       overflow: hidden;
       -webkit-font-smoothing: antialiased;
       -webkit-tap-highlight-color: transparent;
+      perspective: 1800px;
     }
 
     /* Ambient Desk Stage */
@@ -52,27 +53,28 @@
       overflow: hidden;
     }
 
-    /* Real Half-Page Book Object */
-    .book-object {
+    /* Real Book Binding Structure */
+    .book-binder {
       width: 100%;
       height: 100%;
       max-width: 480px;
-      max-height: 820px;
+      max-height: 840px;
       background: var(--page-bg);
       position: relative;
       box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.75),
-        -8px 0 20px rgba(0, 0, 0, 0.25) inset; /* Simulates the binding/gutter spine shadow on the left */
+        0 30px 70px rgba(0, 0, 0, 0.8),
+        -12px 0 25px rgba(0, 0, 0, 0.35) inset; /* Spine gutter shadow */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
+      transform-style: preserve-3d;
     }
 
     @media (min-width: 500px) {
-      .book-object {
-        height: min(92vh, 760px);
-        border-radius: 2px 6px 6px 2px;
+      .book-binder {
+        height: min(94vh, 780px);
+        border-radius: 3px 8px 8px 3px;
       }
     }
 
@@ -85,7 +87,7 @@
       padding: 1.5rem 1.75rem 0.85rem;
       flex-shrink: 0;
       background: var(--page-bg);
-      z-index: 5;
+      z-index: 10;
     }
 
     .page-brand {
@@ -113,7 +115,7 @@
       flex-direction: column;
       -webkit-overflow-scrolling: touch;
       position: relative;
-      z-index: 2;
+      z-index: 5;
     }
 
     /* Cover Styling */
@@ -130,11 +132,11 @@
       width: min(72vw, 240px);
       height: min(108vw, 360px);
       border-radius: 3px 8px 8px 3px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
       object-fit: cover;
     }
 
-    /* Typography & Layout inside Book */
+    /* Typography inside Book */
     .book-title {
       font-family: var(--font-serif);
       font-size: 1.95rem;
@@ -260,23 +262,55 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 35%;
+      width: 40%;
       z-index: 100;
       cursor: pointer;
     }
     .tap-zone-left { left: 0; }
     .tap-zone-right { right: 0; }
+
+    /* 3D Real Page-Flip Overlay Element */
+    .page-turn-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--page-bg);
+      z-index: 80;
+      transform-origin: left center;
+      transform-style: preserve-3d;
+      box-shadow: -15px 0 30px rgba(0,0,0,0.15);
+      pointer-events: none;
+      display: none;
+    }
+
+    @keyframes pageTurnNext {
+      0% { transform: rotateY(0deg); box-shadow: -5px 0 15px rgba(0,0,0,0.1); }
+      50% { box-shadow: -25px 0 40px rgba(0,0,0,0.3); }
+      100% { transform: rotateY(-180deg); opacity: 0; }
+    }
+
+    @keyframes pageTurnPrev {
+      0% { transform: rotateY(-180deg); opacity: 0; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+
+    .flipping-next {
+      display: block;
+      animation: pageTurnNext 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+    }
   </style>
 </head>
 <body>
 
   <div class="desk-stage">
 
-    <div class="book-object" id="bookObject">
+    <div class="book-binder" id="bookBinder">
       
-      <!-- Invisible Tap Zones for Page Flipping -->
+      <!-- Interactive Tap Zones -->
       <div class="tap-zone-left" onclick="turnPage(-1)" title="Previous Page"></div>
       <div class="tap-zone-right" onclick="turnPage(1)" title="Next Page"></div>
+
+      <!-- 3D Turning Page Layer -->
+      <div class="page-turn-overlay" id="pageTurnOverlay"></div>
 
       <!-- Header -->
       <header class="page-header">
@@ -293,7 +327,7 @@
 
   </div>
 
-  <!-- JAVASCRIPT: REALISTIC HALF-PAGE FLIP ENGINE -->
+  <!-- JAVASCRIPT: TRUE 3D BOOK FLIP ENGINE -->
   <script>
     let currentPage = 1;
     const totalPages = 7;
@@ -418,17 +452,20 @@
     function turnPage(direction) {
       const target = currentPage + direction;
       if (target >= 1 && target <= totalPages) {
-        triggerFlipEffect(direction > 0 ? 'next' : 'prev');
+        playFlipAnimation(direction);
         goToPage(target);
       }
     }
 
-    function triggerFlipEffect(direction) {
-      const bookObj = document.getElementById('bookObject');
-      bookObj.style.transform = direction === 'next' ? 'rotateY(-1.5deg)' : 'rotateY(1.5deg)';
+    function playFlipAnimation(direction) {
+      const overlay = document.getElementById('pageTurnOverlay');
+      overlay.innerHTML = bookPages[currentPage].render;
+      overlay.classList.add('flipping-next');
+
       setTimeout(() => {
-        bookObj.style.transform = 'rotateY(0deg)';
-      }, 250);
+        overlay.classList.remove('flipping-next');
+        overlay.innerHTML = '';
+      }, 450);
     }
 
     function toggleAccordion(event, element) {
