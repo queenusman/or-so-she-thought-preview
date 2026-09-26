@@ -36,19 +36,21 @@
       font-family: var(--font-sans);
       overflow: hidden;
       -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    /* Full-Screen Book Spread Container */
+    /* Full-Screen Book Container */
     .book-container {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: env(safe-area-inset-top, 16px) 1.25rem env(safe-area-inset-bottom, 16px) 1.25rem;
+      padding: env(safe-area-inset-top, 16px) 1.5rem env(safe-area-inset-bottom, 16px) 1.5rem;
       background: var(--bg-page);
       position: relative;
-      box-shadow: inset 0 0 40px rgba(0,0,0,0.03);
+      cursor: pointer;
+      user-select: none;
     }
 
     /* Top Page Header */
@@ -57,17 +59,16 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.75rem;
+      padding-bottom: 0.85rem;
       flex-shrink: 0;
     }
 
     .book-title-mini {
       font-family: var(--font-serif);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--ink-faint);
-      cursor: pointer;
     }
 
     .book-page-indicator {
@@ -78,7 +79,7 @@
       font-weight: 600;
     }
 
-    /* Main Page Content Area (Scrollable single side of book) */
+    /* Main Page Content Area */
     .book-page-body {
       flex: 1;
       overflow-y: auto;
@@ -89,7 +90,7 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    /* Cover View Style inside Page */
+    /* Immersive Cover Page Layout */
     .cover-page-layout {
       display: flex;
       flex-direction: column;
@@ -97,31 +98,20 @@
       justify-content: center;
       text-align: center;
       height: 100%;
-      gap: 1.5rem;
     }
 
-    .book-cover-thumb {
-      width: 180px;
-      height: 270px;
-      border-radius: 3px 8px 8px 3px;
-      box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+    .book-cover-large {
+      width: min(80vw, 300px);
+      height: min(120vw, 450px);
+      border-radius: 4px 12px 12px 4px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
       object-fit: cover;
-      cursor: pointer;
-    }
-
-    .cover-motto {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      font-style: italic;
-      line-height: 1.4;
-      color: var(--ink);
-      max-width: 320px;
     }
 
     /* Section Typography inside Book */
     .page-chapter-title {
       font-family: var(--font-serif);
-      font-size: 1.85rem;
+      font-size: 2rem;
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 1.2rem;
@@ -130,35 +120,35 @@
 
     .page-lead {
       font-family: var(--font-serif);
-      font-size: 1.1rem;
-      line-height: 1.75;
+      font-size: 1.15rem;
+      line-height: 1.8;
       color: var(--ink);
       margin-bottom: 1.5rem;
     }
 
     .page-body-text {
-      font-size: 0.95rem;
-      line-height: 1.75;
+      font-size: 0.96rem;
+      line-height: 1.8;
       color: var(--ink-muted);
       margin-bottom: 1.2rem;
     }
 
-    /* Accordions & Cards inside Book */
+    /* Accordions inside Book */
     .book-accordion {
       border: 1px solid var(--border);
       border-radius: 4px;
       margin-bottom: 0.8rem;
-      background: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.6);
     }
 
     .book-accordion-btn {
       width: 100%;
       background: none;
       border: none;
-      padding: 1rem 1.1rem;
+      padding: 1.1rem 1.2rem;
       text-align: left;
       font-family: var(--font-serif);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: var(--ink);
       cursor: pointer;
@@ -169,10 +159,10 @@
 
     .book-accordion-content {
       display: none;
-      padding: 0 1.1rem 1.1rem;
-      font-size: 0.9rem;
+      padding: 0 1.2rem 1.2rem;
+      font-size: 0.92rem;
       color: var(--ink-muted);
-      line-height: 1.7;
+      line-height: 1.75;
       border-top: 1px dashed var(--border);
     }
 
@@ -190,29 +180,29 @@
 
     .book-input, .book-textarea {
       width: 100%;
-      padding: 0.8rem 1rem;
+      padding: 0.85rem 1rem;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.8);
       font-family: var(--font-sans);
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       color: var(--ink);
       border-radius: 3px;
       outline: none;
     }
 
     .book-textarea {
-      min-height: 110px;
+      min-height: 120px;
       resize: vertical;
     }
 
     .book-submit-btn {
       width: 100%;
-      padding: 0.9rem;
+      padding: 0.95rem;
       background: var(--ink);
       color: var(--bg-page);
       border: none;
       font-family: var(--font-sans);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
@@ -220,58 +210,41 @@
       cursor: pointer;
     }
 
-    /* Bottom Page Footer Navigation */
-    .book-footer-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--border);
-      padding-top: 0.85rem;
-      flex-shrink: 0;
-    }
-
-    .nav-page-btn {
-      background: none;
-      border: 1px solid var(--border);
-      padding: 0.5rem 1rem;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
+    .tap-edge-hint {
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      font-weight: 600;
-      color: var(--ink);
-      cursor: pointer;
-      border-radius: 2px;
-    }
-
-    .nav-page-btn:active {
-      background: var(--border);
+      color: var(--ink-faint);
+      opacity: 0.6;
+      padding-top: 0.5rem;
+      flex-shrink: 0;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
 <body>
 
-  <div class="book-container">
+  <!-- Full Screen Interactive Book Container -->
+  <div class="book-container" onclick="handleScreenTap(event)">
     <!-- Header -->
     <header class="book-header">
-      <div class="book-title-mini" onclick="goToPage(1)">Or So She Thought</div>
+      <div class="book-title-mini" onclick="goToPage(1); event.stopPropagation();" style="cursor: pointer;">Or So She Thought</div>
       <div id="page-counter" class="book-page-indicator">Cover</div>
     </header>
 
-    <!-- Page Body -->
+    <!-- Page Content -->
     <main id="book-content-area" class="book-page-body">
       <!-- Rendered dynamically -->
     </main>
 
-    <!-- Footer Navigation -->
-    <footer class="book-footer-nav">
-      <button id="prev-btn" class="nav-page-btn" onclick="changePage(-1)">← Prev</button>
-      <span id="footer-page-num" style="font-size:0.75rem; color:var(--ink-faint);">1 / 7</span>
-      <button id="next-btn" class="nav-page-btn" onclick="changePage(1)">Next →</button>
+    <!-- Subtle tap instruction footer -->
+    <footer class="tap-edge-hint">
+      Tap left side for prev • Tap right side for next
     </footer>
   </div>
 
-  <!-- JAVASCRIPT: IMMERSIVE BOOK ENGINE -->
+  <!-- JAVASCRIPT: TAP TO TURN PAGES ENGINE -->
   <script>
     let currentBookPage = 1;
 
@@ -280,9 +253,7 @@
         indicator: "Cover",
         render: `
           <div class="cover-page-layout">
-            <img src="cover.jpg" alt="Or So She Thought Cover" class="book-cover-thumb" onclick="goToPage(2)" />
-            <p class="cover-motto">"She was never forbidden to choose. She was simply taught what the right choice looked like."</p>
-            <button class="nav-page-btn" style="padding: 0.75rem 2rem; background: var(--ink); color: var(--bg-page); border: none;" onclick="goToPage(2)">Open Book →</button>
+            <img src="cover.jpg" alt="Or So She Thought Cover" class="book-cover-large" />
           </div>
         `
       },
@@ -294,11 +265,12 @@
           <div style="margin-top: 1rem;">
             <div style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:0.75rem; font-weight:600;">Contents (26 Chapters)</div>
             <div style="display:flex; flex-direction:column; gap:0.5rem;">
-              <div style="font-family:var(--font-serif); font-size:1rem; padding:0.3rem 0; border-bottom:1px dashed var(--border);">01. The Life She Is Supposed to Want</div>
-              <div style="font-family:var(--font-serif); font-size:1rem; padding:0.3rem 0; border-bottom:1px dashed var(--border);">02. Edward of Valenne</div>
-              <div style="font-family:var(--font-serif); font-size:1rem; padding:0.3rem 0; border-bottom:1px dashed var(--border);">03. The Girl Who Corrects Herself</div>
-              <div style="font-family:var(--font-serif); font-size:1.0rem; padding:0.3rem 0; border-bottom:1px dashed var(--border);">04. The Book</div>
-              <div style="font-family:var(--font-serif); font-size:1.0rem; padding:0.35rem 0; color:var(--gold);">... and 22 subsequent chapters</div>
+              <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed var(--border);">01. The Life She Is Supposed to Want</div>
+              <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed var(--border);">02. Edward of Valenne</div>
+              <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed var(--border);">03. The Girl Who Corrects Herself</div>
+              <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed var(--border);">04. The Book</div>
+              <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; border-bottom:1px dashed var(--border);">05. The Mended Blouse</div>
+              <div style="font-family:var(--font-serif); font-size:1.05rem; padding:0.35rem 0; color:var(--gold);">... and 21 subsequent chapters</div>
             </div>
           </div>
         `
@@ -308,15 +280,15 @@
         render: `
           <h2 class="page-chapter-title">The Kingdom of Norwyn</h2>
           <p class="page-lead">A world shaped by inheritance, tradition, commerce, and the people living within them.</p>
-          <div class="book-accordion" onclick="toggleAccordion(this)">
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
             <button class="book-accordion-btn"><span>01 — The Capital</span><span>+</span></button>
             <div class="book-accordion-content">Norwyn's capital was built along stone quays beside the river, where commerce, government, and public life meet.</div>
           </div>
-          <div class="book-accordion" onclick="toggleAccordion(this)">
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
             <button class="book-accordion-btn"><span>02 — The Palace</span><span>+</span></button>
             <div class="book-accordion-content">The seat of the royal family featuring public state rooms, private family wings, and the royal archives.</div>
           </div>
-          <div class="book-accordion" onclick="toggleAccordion(this)">
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
             <button class="book-accordion-btn"><span>03 — Valenne</span><span>+</span></button>
             <div class="book-accordion-content">Norwyn's neighboring kingdom bound by trade, mineral wealth, and generational political covenants.</div>
           </div>
@@ -339,11 +311,11 @@
           <h2 class="page-chapter-title">Where It Began</h2>
           <p class="page-lead">The Making of Or So She Thought</p>
           <p class="page-body-text">Novels are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.</p>
-          <div class="book-accordion" onclick="toggleAccordion(this)">
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
             <button class="book-accordion-btn"><span>The Story Before Elizabeth</span><span>+</span></button>
             <div class="book-accordion-content">At first, I was more interested in external events until Elizabeth emerged as a person whose quiet compliance was an exhausting form of labor.</div>
           </div>
-          <div class="book-accordion" onclick="toggleAccordion(this)">
+          <div class="book-accordion" onclick="toggleAccordion(event, this)">
             <button class="book-accordion-btn"><span>The Mended Blouse</span><span>+</span></button>
             <div class="book-accordion-content">Watching someone whose clothes have always been maintained by others attempt to fix an imperfect hem became a study in clumsy self-reliance.</div>
           </div>
@@ -364,18 +336,18 @@
         indicator: "About the Author",
         render: `
           <h2 class="page-chapter-title">About the Author</h2>
-          <p class="page-lead" style="font-size:1rem; font-style:italic;">A clinical medical student and novelist interested in how people become who they are.</p>
+          <p class="page-lead" style="font-size:1.05rem; font-style:italic;">A clinical medical student and novelist interested in how people become who they are.</p>
           <p class="page-body-text">Queen Usman is a Nigerian clinical medical student and novelist. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition.</p>
           
           <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.2rem;">
             <div style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:0.7rem; font-weight:600;">Contact</div>
-            <form class="book-form" id="authorContactForm">
+            <form class="book-form" id="authorContactForm" onclick="event.stopPropagation()">
               <input type="text" id="contactName" class="book-input" placeholder="Name" required />
               <input type="email" id="contactEmail" class="book-input" placeholder="Email *" required />
               <textarea id="contactMessage" class="book-textarea" placeholder="Message ..." required></textarea>
               <button type="submit" id="contactSubmitBtn" class="book-submit-btn">&rarr; Send Message</button>
             </form>
-            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.15rem;">
+            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.2rem;">
               ✓ Message sent directly to Queen Usman.
             </div>
           </div>
@@ -389,22 +361,31 @@
 
       document.getElementById('book-content-area').innerHTML = data.render;
       document.getElementById('page-counter').innerText = data.indicator;
-      document.getElementById('footer-page-num').innerText = `${currentBookPage} / 7`;
-
-      document.getElementById('prev-btn').style.visibility = (currentBookPage === 1) ? 'hidden' : 'visible';
-      document.getElementById('next-btn').style.visibility = (currentBookPage === 7) ? 'hidden' : 'visible';
-
       document.getElementById('book-content-area').scrollTop = 0;
     }
 
-    function changePage(direction) {
-      const target = currentBookPage + direction;
-      if (target >= 1 && target <= 7) {
-        goToPage(target);
+    // Tap left or right side of screen to turn pages
+    function handleScreenTap(e) {
+      if (e.target.closest('form') || e.target.closest('input') || e.target.closest('textarea') || e.target.closest('button') || e.target.closest('.book-accordion-content')) {
+        return;
+      }
+
+      const screenWidth = window.innerWidth;
+      const clickX = e.clientX;
+
+      if (clickX > screenWidth / 2) {
+        if (currentBookPage < 7) {
+          goToPage(currentBookPage + 1);
+        }
+      } else {
+        if (currentBookPage > 1) {
+          goToPage(currentBookPage - 1);
+        }
       }
     }
 
-    function toggleAccordion(element) {
+    function toggleAccordion(event, element) {
+      event.stopPropagation();
       element.classList.toggle('open');
       const icon = element.querySelector('.book-accordion-btn span:last-child');
       icon.textContent = element.classList.contains('open') ? '−' : '+';
