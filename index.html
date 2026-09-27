@@ -26,14 +26,15 @@
 
   html{
     scroll-behavior: smooth;
-    scroll-padding-top: env(safe-area-inset-top, 0px);
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
   body{
     margin: 0;
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     background: var(--ink);
     color: var(--bone);
@@ -41,19 +42,23 @@
     font-weight: 400;
     line-height: 1.6;
     overflow-wrap: break-word;
-    word-break: break-word;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    word-wrap: break-word;
+    word-break: normal;
     -webkit-font-smoothing: antialiased;
   }
 
   a{ color: inherit; text-decoration: none; }
 
+  /* Strict container padding to prevent text touching phone edges */
   .wrap{
     width: 100%;
     max-width: var(--max);
     margin: 0 auto;
-    padding: 0 clamp(16px, 5vw, 56px);
+    padding: 0 20px;
+  }
+
+  @media (min-width: 768px){
+    .wrap{ padding: 0 48px; }
   }
 
   /* ---------- header ---------- */
@@ -62,8 +67,7 @@
     top: 0;
     z-index: 50;
     width: 100%;
-    padding-top: env(safe-area-inset-top, 0px);
-    background: rgba(244,239,228,0.92);
+    background: rgba(244,239,228,0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--hair);
   }
@@ -73,9 +77,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 14px clamp(16px, 5vw, 56px);
+    padding: 14px 20px;
     max-width: var(--max);
     margin: 0 auto;
+  }
+  @media (min-width: 768px){
+    .nav-row{ padding: 16px 48px; }
   }
   .brand{
     font-family: 'Fraunces', serif;
@@ -90,21 +97,12 @@
   nav.links{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 18px;
+    gap: 10px 16px;
     font-size: 0.78rem;
     color: var(--bone-dim);
   }
   nav.links a{ position: relative; padding: 2px 0; transition: color .2s ease; }
-  nav.links a:hover, nav.links a:focus-visible{ color: var(--bone); }
-  nav.links a::after{
-    content: "";
-    position: absolute; left: 0; right: 0; bottom: -2px;
-    height: 1px; background: var(--oxblood);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform .25s ease;
-  }
-  nav.links a:hover::after, nav.links a:focus-visible::after{ transform: scaleX(1); }
-
+  nav.links a:hover{ color: var(--bone); }
   @media (max-width: 860px){
     nav.links{ display: none; }
   }
@@ -112,41 +110,43 @@
   /* ---------- hero ---------- */
   .hero{
     width: 100%;
-    padding: clamp(36px, 9vw, 110px) 0 clamp(36px, 6vw, 80px);
+    padding: 40px 0;
     border-bottom: 1px solid var(--hair);
-    position: relative;
+  }
+  @media (min-width: 768px){
+    .hero{ padding: 90px 0 70px; }
   }
   .hero-note{
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+    font-size: 0.95rem;
     color: var(--ash);
-    margin: 0 0 4px 2px;
+    margin: 0 0 6px 0;
   }
   h1.title{
     font-family: 'Fraunces', serif;
     font-weight: 500;
-    font-size: clamp(2.2rem, 8vw, 5rem);
-    line-height: 1.02;
+    font-size: clamp(2rem, 9vw, 4.8rem);
+    line-height: 1.05;
     letter-spacing: -0.01em;
     margin: 0 0 16px;
     width: 100%;
-    max-width: 100%;
+    word-break: normal;
   }
   .hero-sub{
     width: 100%;
-    max-width: 100%;
-    font-size: clamp(0.92rem, 1.5vw, 1.1rem);
+    font-size: 1rem;
     color: var(--bone-dim);
     font-weight: 300;
     margin: 0 0 4px;
+    line-height: 1.65;
   }
   .hero-meta{
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 20px;
-    margin-top: 28px;
+    gap: 8px 16px;
+    margin-top: 24px;
     font-size: 0.78rem;
     color: var(--ash);
   }
@@ -155,7 +155,10 @@
 
   /* ---------- section shell ---------- */
   section{ width: 100%; border-bottom: 1px solid var(--hair); }
-  .section-inner{ width: 100%; padding: clamp(36px, 7vw, 84px) 0; }
+  .section-inner{ width: 100%; padding: 48px 0; }
+  @media (min-width: 768px){
+    .section-inner{ padding: 80px 0; }
+  }
   .eyebrow{
     font-family: 'Fraunces', serif;
     font-style: italic;
@@ -169,16 +172,17 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
     align-items: center;
   }
   @media (min-width: 769px){
     .issue{ grid-template-columns: 1.1fr 0.9fr; gap: 56px; }
   }
+  .issue-copy{ width: 100%; min-width: 0; }
   .issue-copy h2{
     font-family: 'Fraunces', serif;
     font-weight: 500;
-    font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
     line-height: 1.15;
     margin: 0 0 14px;
     width: 100%;
@@ -187,10 +191,11 @@
     color: var(--bone-dim);
     width: 100%;
     margin: 0 0 16px;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
   .issue-copy p.credit{
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--ash);
     font-style: italic;
   }
@@ -201,12 +206,12 @@
     border-bottom: 1px solid var(--oxblood);
     color: var(--bone);
   }
-  .cta-link:hover, .cta-link:focus-visible{ color: var(--oxblood); }
+  .cta-link:hover{ color: var(--oxblood); }
 
   .issue-art{
     position: relative;
     width: 100%;
-    max-width: 280px;
+    max-width: 220px;
     margin: 0 auto;
     aspect-ratio: 2/3;
     border-radius: 4px;
@@ -228,15 +233,15 @@
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: clamp(1.2rem, 2.8vw, 2rem);
-    line-height: 1.35;
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+    line-height: 1.4;
     width: 100%;
     color: var(--bone);
   }
   blockquote span{ color: var(--oxblood); }
   .statement-attr{
     margin-top: 16px;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--ash);
   }
 
@@ -250,7 +255,7 @@
     grid-template-columns: 1fr;
     gap: 4px;
     align-items: baseline;
-    padding: 18px 0;
+    padding: 16px 0;
     border-top: 1px solid var(--hair);
   }
   @media (min-width: 650px){
@@ -265,12 +270,9 @@
   }
   .contents-list .desc{
     color: var(--bone-dim);
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     width: 100%;
-  }
-  .contents-list .desc strong{
-    color: var(--bone);
-    font-weight: 500;
+    line-height: 1.65;
   }
   .contents-list .pg{
     color: var(--ash);
@@ -306,15 +308,15 @@
   }
   .card-item p{
     color: var(--bone-dim);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   /* ---------- map frame ---------- */
   .map-frame {
     width: 100%;
-    margin-top: 28px;
+    margin-top: 24px;
     border: 1px solid var(--hair);
     border-radius: 2px;
     background: #fff;
@@ -341,15 +343,15 @@
   .band h3{
     font-family: 'Fraunces', serif;
     font-weight: 500;
-    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    font-size: clamp(1.4rem, 3vw, 2rem);
     margin: 0 0 12px;
     width: 100%;
   }
-  .band p{ color: var(--bone-dim); width: 100%; margin: 0 0 16px; font-size: 0.91rem; }
+  .band p{ color: var(--bone-dim); width: 100%; margin: 0 0 16px; font-size: 0.93rem; line-height: 1.65; }
   .band .dates{
     width: 100%;
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--ash);
   }
   @media (min-width: 720px){
@@ -373,7 +375,7 @@
     border: 1px solid var(--hair);
     background: transparent;
     font-family: 'Work Sans', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--bone);
     border-radius: 2px;
     outline: none;
@@ -388,13 +390,12 @@
     border: none;
     padding: 12px 20px;
     font-family: 'Work Sans', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
     border-radius: 2px;
-    transition: opacity .2s ease;
   }
   @media (min-width: 600px){
     .form-btn{ width: fit-content; }
@@ -402,7 +403,7 @@
   .form-btn:hover{ opacity: 0.85; }
 
   /* ---------- footer ---------- */
-  footer{ width: 100%; padding: clamp(36px, 7vw, 64px) 0 28px; }
+  footer{ width: 100%; padding: 48px 0 28px; }
   .foot-grid{
     width: 100%;
     display: grid;
@@ -421,20 +422,20 @@
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 8px;
   }
-  .foot-tag{ color: var(--ash); font-size: 0.8rem; width: 100%; }
+  .foot-tag{ color: var(--ash); font-size: 0.82rem; width: 100%; line-height: 1.6; }
   .foot-col h4{
-    font-size: 0.74rem;
+    font-size: 0.76rem;
     font-weight: 500;
     color: var(--ash);
     margin: 0 0 10px;
     letter-spacing: 0.02em;
   }
   .foot-col ul{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-  .foot-col a{ font-size: 0.84rem; color: var(--bone-dim); }
-  .foot-col a:hover, .foot-col a:focus-visible{ color: var(--bone); }
+  .foot-col a{ font-size: 0.86rem; color: var(--bone-dim); }
+  .foot-col a:hover{ color: var(--bone); }
   .foot-bottom{
     width: 100%;
     display: flex;
@@ -443,19 +444,14 @@
     flex-wrap: wrap;
     gap: 12px;
     padding-top: 20px;
-    font-size: 0.74rem;
+    font-size: 0.76rem;
     color: var(--ash);
   }
-  .foot-social{ display: flex; gap: 14px; }
+  .foot-social{ display: flex; gap: 16px; }
   .foot-social a{ color: var(--ash); }
   .foot-social a:hover{ color: var(--bone); }
 
   :focus-visible{ outline: 1px solid var(--oxblood); outline-offset: 3px; }
-
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior: auto; }
-    *{ transition: none !important; }
-  }
 </style>
 </head>
 <body>
@@ -522,8 +518,8 @@
     <div class="wrap section-inner">
       <p class="eyebrow">02 — The World</p>
       <div style="margin-bottom: 24px;">
-        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 2.8vw, 2.2rem); margin:0 0 10px;">Explore the Kingdom of Norwyn</h2>
-        <p style="color:var(--bone-dim); font-size: 0.9rem;">A kingdom shaped by inheritance, tradition, commerce, and the people who have learned how to live within them. From the busy stone quays of the capital to the quiet administrative halls of the palace and the rugged mountains beyond.</p>
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin:0 0 10px;">Explore the Kingdom of Norwyn</h2>
+        <p style="color:var(--bone-dim); font-size: 0.95rem; line-height: 1.7;">A kingdom shaped by inheritance, tradition, commerce, and the people who have learned how to live within them. From the busy stone quays of the capital to the quiet administrative halls of the palace and the rugged mountains beyond.</p>
       </div>
 
       <div class="map-frame">
@@ -564,8 +560,8 @@
     <div class="wrap section-inner">
       <p class="eyebrow">03 — Characters</p>
       <div style="margin-bottom: 24px;">
-        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 2.8vw, 2.2rem); margin:0 0 10px;">Meet the People of Norwyn</h2>
-        <p style="color:var(--bone-dim); font-size: 0.9rem;">They love her. They need things from her. They protect her. They misunderstand her. None of them can be reduced to what they want from Elizabeth.</p>
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin:0 0 10px;">Meet the People of Norwyn</h2>
+        <p style="color:var(--bone-dim); font-size: 0.95rem; line-height: 1.7;">They love her. They need things from her. They protect her. They misunderstand her. None of them can be reduced to what they want from Elizabeth.</p>
       </div>
       <div class="grid-2">
         <div class="card-item">
@@ -593,8 +589,8 @@
     <div class="wrap section-inner">
       <p class="eyebrow">04 — The Archive</p>
       <div style="margin-bottom: 24px;">
-        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 2.8vw, 2.2rem); margin:0 0 10px;">The Norwyn Archive</h2>
-        <p style="color:var(--bone-dim); font-size: 0.9rem;">Fictional artifacts and records from the world of the novel, preserving what the institution chose to remember—and what it tried to manage.</p>
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin:0 0 10px;">The Norwyn Archive</h2>
+        <p style="color:var(--bone-dim); font-size: 0.95rem; line-height: 1.7;">Fictional artifacts and records from the world of the novel, preserving what the institution chose to remember—and what it tried to manage.</p>
       </div>
       <div class="grid-2">
         <div class="card-item">
@@ -625,7 +621,7 @@
           <p class="eyebrow">05 — Behind the Scenes</p>
           <h3>Where It Began</h3>
           <p>Novels are built through accumulation, revision, and accident. <em>Or So She Thought</em> changed because I kept following Elizabeth as her inner life became more interesting than the plot originally planned.</p>
-          <p style="font-size:0.82rem; color:var(--ash); font-style:italic;">Includes reflections on The Mended Blouse, developing Norwyn, writing Anne, and the evolution of the title.</p>
+          <p style="font-size:0.85rem; color:var(--ash); font-style:italic;">Includes reflections on The Mended Blouse, developing Norwyn, writing Anne, and the evolution of the title.</p>
         </div>
         <div class="dates">
           <div><strong>Drafting</strong> — 2026</div>
@@ -641,8 +637,8 @@
     <div class="wrap section-inner">
       <p class="eyebrow">06 — Inquiries</p>
       <div style="margin-bottom: 24px;">
-        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 2.8vw, 2.2rem); margin:0 0 10px;">Beyond the Novel</h2>
-        <p style="color:var(--bone-dim); font-size: 0.9rem;">Questions the novel leaves behind that appear in ordinary lives too.</p>
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin:0 0 10px;">Beyond the Novel</h2>
+        <p style="color:var(--bone-dim); font-size: 0.95rem; line-height: 1.7;">Questions the novel leaves behind that appear in ordinary lives too.</p>
       </div>
       <ul class="contents-list">
         <li>
@@ -675,7 +671,7 @@
           <p>Her medical training has sharpened her interest in observation, human behavior, and the spaces between what happens to a person and what they eventually become[cite: 1].</p>
           
           <h3 style="font-family:'Fraunces', serif; font-size:1.15rem; font-weight:500; margin: 24px 0 8px;">Professional &amp; Literary Inquiries</h3>
-          <p style="font-size:0.85rem; margin-bottom:12px;">For rights, review copies, or correspondence:</p>
+          <p style="font-size:0.88rem; margin-bottom:12px;">For rights, review copies, or correspondence:</p>
           
           <form class="contact-form" action="https://formsubmit.co/ajax/usmanshazaan@gmail.com" method="POST" id="authorContactForm">
             <input type="text" name="name" class="form-input" placeholder="Your Name" required />
@@ -690,7 +686,7 @@
         </div>
         <div style="background: rgba(28,24,21,0.03); border: 1px solid var(--hair); padding: 20px; border-radius: 2px;">
           <h3 style="font-family:'Fraunces', serif; font-size:1.15rem; font-weight:500; margin:0 0 8px;">Edition Details</h3>
-          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; font-size:0.85rem; color:var(--bone-dim);">
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--bone-dim);">
             <li><strong>Title:</strong> Or So She Thought</li>
             <li><strong>Author:</strong> Queen Usman[cite: 1]</li>
             <li><strong>Genre:</strong> Psychological Fiction</li>
