@@ -1,809 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>OR SO SHE THOUGHT — A Novel by Queen Usman</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Or So She Thought — A Journal of Dark Fiction, Poetry & Criticism</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#F4EFE4;
+    --ink-2:#ECE4D4;
+    --bone:#1C1815;
+    --bone-dim:#5B5347;
+    --oxblood:#8C3B2E;
+    --moss:#45503A;
+    --ash:#77694F;
+    --hair: rgba(28,24,21,0.14);
+    --max: 1180px;
+    background: var(--ink);
+    color-scheme: light;
+  }
 
-  <style>
-    :root {
-      --desk-bg: #0e0d0b;
-      --book-cover: #161412;
-      --page-bg: #f5f0e6;
-      --page-bg-alt: #eae4d8;
-      --ink: #1a1714;
-      --ink-muted: #524c44;
-      --ink-faint: #827a6e;
-      --border: #d4cbbe;
-      --gold: #b39966;
-      --gutter-shadow: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0.28), rgba(0,0,0,0.06));
-      --font-serif: "Cormorant Garamond", Georgia, serif;
-      --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
-    }
+  *{ box-sizing:border-box; }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  html{
+    scroll-behavior:smooth;
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+  }
 
-    html, body {
-      width: 100%;
-      height: 100vh;
-      height: 100dvh;
-      background-color: var(--desk-bg);
-      color: var(--ink);
-      font-family: var(--font-sans);
-      overflow: hidden;
-      -webkit-font-smoothing: antialiased;
-      -webkit-tap-highlight-color: transparent;
-      perspective: 2000px;
-    }
+  body{
+    margin:0;
+    background: var(--ink);
+    color: var(--bone);
+    font-family:'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    -webkit-font-smoothing:antialiased;
+  }
 
-    /* Ambient Literary Desk Stage */
-    .desk-stage {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      padding: 0.5rem;
-    }
+  a{ color:inherit; text-decoration:none; }
 
-    /* =========================================================
-       CLOSED HARDCOVER COVER STATE (The Fifth Corner Press Vibe)
-       ========================================================= */
-    .closed-book-stage {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
-      z-index: 50;
-    }
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 64px);
+  }
 
-    .closed-book-stage.opening {
-      transform: scale(1.15) rotateY(-18deg) translateZ(100px);
-      opacity: 0;
-      pointer-events: none;
-    }
+  /* ---------- header ---------- */
+  header{
+    position: sticky;
+    top:0;
+    z-index: 50;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: rgba(244,239,228,0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--hair);
+  }
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 24px;
+    padding: 18px clamp(20px, 5vw, 64px);
+    max-width: var(--max);
+    margin:0 auto;
+  }
+  .brand{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-style:italic;
+    font-size: 1.15rem;
+    letter-spacing:0.01em;
+    white-space:nowrap;
+  }
+  nav.links{
+    display:flex;
+    gap: clamp(16px, 3vw, 34px);
+    font-size: 0.86rem;
+    color: var(--bone-dim);
+  }
+  nav.links a{ position:relative; padding: 4px 0; transition: color .2s ease; }
+  nav.links a:hover, nav.links a:focus-visible{ color: var(--bone); }
+  nav.links a::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:-2px;
+    height:1px; background: var(--oxblood);
+    transform: scaleX(0); transform-origin:left;
+    transition: transform .25s ease;
+  }
+  nav.links a:hover::after, nav.links a:focus-visible::after{ transform: scaleX(1); }
+  .nav-toggle{ display:none; }
 
-    .physical-cover-object {
-      width: min(75vw, 310px);
-      height: min(110vw, 450px);
-      background: var(--book-cover);
-      border-radius: 2px 10px 10px 2px;
-      position: relative;
-      box-shadow: 
-        -25px 40px 80px rgba(0, 0, 0, 0.85),
-        -3px 0 12px rgba(0, 0, 0, 0.7) inset,
-        3px 0 6px rgba(255, 255, 255, 0.08) inset;
-      overflow: hidden;
-      transform: rotateY(-10deg) rotateX(3deg);
-      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
-    }
+  @media (max-width: 760px){
+    nav.links{ display:none; }
+  }
 
-    .physical-cover-object:hover {
-      transform: rotateY(0deg) rotateX(0deg) translateY(-6px);
-      box-shadow: 0 45px 90px rgba(0, 0, 0, 0.9);
-    }
+  /* ---------- hero ---------- */
+  .hero{
+    padding: clamp(56px, 12vw, 130px) 0 clamp(48px, 8vw, 96px);
+    border-bottom: 1px solid var(--hair);
+    position:relative;
+  }
+  .hero-note{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    color: var(--ash);
+    text-decoration: line-through;
+    text-decoration-color: var(--oxblood);
+    text-decoration-thickness: 1.5px;
+    margin: 0 0 6px 2px;
+  }
+  h1.title{
+    font-family:'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(2.6rem, 7.4vw, 5.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0 0 28px;
+    max-width: 14ch;
+  }
+  .hero-sub{
+    max-width: 46ch;
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    color: var(--bone-dim);
+    font-weight:300;
+    margin: 0 0 4px;
+  }
+  .hero-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px 28px;
+    margin-top: 40px;
+    font-size: 0.82rem;
+    color: var(--ash);
+  }
+  .hero-meta span{ border-left: 1px solid var(--hair); padding-left: 12px; }
+  .hero-meta span:first-child{ border-left:none; padding-left:0; }
 
-    .cover-image-el {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+  /* ---------- section shell ---------- */
+  section{ border-bottom: 1px solid var(--hair); }
+  .section-inner{ padding: clamp(48px, 8vw, 96px) 0; }
+  .eyebrow{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    color: var(--moss);
+    font-size: 1rem;
+    margin: 0 0 18px;
+  }
 
-    .spine-crease-line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 14px;
-      width: 2px;
-      background: rgba(255, 255, 255, 0.12);
-      box-shadow: 1px 0 2px rgba(0, 0, 0, 0.5);
-      pointer-events: none;
-    }
+  /* ---------- issue feature ---------- */
+  .issue{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items:center;
+  }
+  .issue-copy h2{
+    font-family:'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    line-height:1.15;
+    margin: 0 0 20px;
+    max-width: 16ch;
+  }
+  .issue-copy p{
+    color: var(--bone-dim);
+    max-width: 52ch;
+    margin: 0 0 22px;
+  }
+  .issue-copy p.credit{
+    font-size:0.85rem;
+    color: var(--ash);
+    font-style: italic;
+  }
+  .cta-link{
+    display:inline-block;
+    font-size: 0.92rem;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--oxblood);
+  }
+  .cta-link:hover, .cta-link:focus-visible{ color: var(--oxblood); }
 
-    .open-book-prompt {
-      margin-top: 2rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: rgba(245, 240, 230, 0.5);
-      font-weight: 500;
-      animation: pulsePrompt 2.5s infinite ease-in-out;
-    }
+  .issue-art{
+    position:relative;
+    aspect-ratio: 4/5;
+    border-radius: 2px;
+    overflow:hidden;
+    background:
+      linear-gradient(155deg, #E5D4BA 0%, #F4EFE4 60%),
+      radial-gradient(circle at 30% 20%, rgba(140,59,46,0.22), transparent 55%);
+  }
+  .issue-art svg{ position:absolute; inset:0; width:100%; height:100%; }
 
-    @keyframes pulsePrompt {
-      0%, 100% { opacity: 0.35; }
-      50% { opacity: 0.9; }
-    }
+  /* ---------- statement / pull quote ---------- */
+  .statement{
+    text-align:left;
+  }
+  blockquote{
+    margin:0;
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    line-height: 1.4;
+    max-width: 22ch;
+    color: var(--bone);
+  }
+  blockquote span{ color: var(--oxblood); }
+  .statement-attr{
+    margin-top: 22px;
+    font-size: 0.85rem;
+    color: var(--ash);
+  }
 
-    /* =========================================================
-       OPENED TWO-PAGE SPREAD STATE (Active on Mobile and Desktop)
-       ========================================================= */
-    .opened-book-container {
-      display: none;
-      width: 100%;
-      height: 100%;
-      max-width: 1080px;
-      max-height: 840px;
-      background: var(--page-bg);
-      border-radius: 3px;
-      box-shadow: 0 40px 90px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255,255,255,0.05);
-      position: relative;
-      opacity: 0;
-      transform: scale(0.95);
-      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.7s ease;
-      overflow: hidden;
-      transform-style: preserve-3d;
-    }
+  /* ---------- contents (fiction/poetry/criticism) ---------- */
+  .contents-list{
+    list-style:none; margin:0; padding:0;
+  }
+  .contents-list li{
+    display:grid;
+    grid-template-columns: 9ch 1fr auto;
+    gap: 20px;
+    align-items:baseline;
+    padding: 24px 0;
+    border-top: 1px solid var(--hair);
+  }
+  .contents-list li:last-child{ border-bottom: 1px solid var(--hair); }
+  .contents-list .label{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    color: var(--moss);
+    font-size: 1.05rem;
+  }
+  .contents-list .desc{
+    color: var(--bone-dim);
+    font-size: 0.95rem;
+    max-width: 54ch;
+  }
+  .contents-list .desc strong{
+    color: var(--bone);
+    font-weight:500;
+  }
+  .contents-list .pg{
+    color: var(--ash);
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 640px){
+    .contents-list li{ grid-template-columns: 1fr; gap: 6px; }
+    .contents-list .pg{ order: -1; }
+  }
 
-    .opened-book-container.active {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      opacity: 1;
-      transform: scale(1);
-    }
+  /* ---------- band ctas ---------- */
+  .band{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: clamp(24px, 5vw, 60px);
+    align-items:end;
+  }
+  .band h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin:0 0 16px;
+    max-width: 18ch;
+  }
+  .band p{ color: var(--bone-dim); max-width: 48ch; margin:0 0 20px; }
+  .band .dates{
+    justify-self:end;
+    text-align:right;
+    font-size: 0.85rem;
+    color: var(--ash);
+  }
+  .band .dates div{ margin-bottom: 6px; }
+  .band .dates strong{ color: var(--bone-dim); font-weight:500; }
+  @media (max-width: 720px){
+    .band{ grid-template-columns: 1fr; }
+    .band .dates{ justify-self:start; text-align:left; }
+  }
 
-    /* Central Spine Gutter Shadow */
-    .book-gutter-shadow {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 32px;
-      background: var(--gutter-shadow);
-      transform: translateX(-50%);
-      z-index: 20;
-      pointer-events: none;
-    }
+  /* ---------- footer ---------- */
+  footer{ padding: clamp(48px, 8vw, 80px) 0 40px; }
+  .foot-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .foot-brand{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight:500;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+  }
+  .foot-tag{ color: var(--ash); font-size: 0.85rem; max-width: 32ch; }
+  .foot-col h4{
+    font-size: 0.78rem;
+    font-weight:500;
+    color: var(--ash);
+    margin: 0 0 14px;
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+  .foot-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .foot-col a{ font-size: 0.9rem; color: var(--bone-dim); }
+  .foot-col a:hover, .foot-col a:focus-visible{ color: var(--bone); }
+  @media (max-width: 760px){
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  .foot-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap: 14px;
+    padding-top: 28px;
+    font-size: 0.78rem;
+    color: var(--ash);
+  }
+  .foot-social{ display:flex; gap:18px; }
+  .foot-social a{ color: var(--ash); }
+  .foot-social a:hover{ color: var(--bone); }
 
-    /* Physical Page Pane */
-    .book-page-pane {
-      padding: 1.5rem 1.25rem 1.8rem;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow-y: auto;
-      position: relative;
-      -webkit-overflow-scrolling: touch;
-    }
+  :focus-visible{ outline: 1px solid var(--oxblood); outline-offset: 3px; }
 
-    .book-page-pane:first-child {
-      border-right: 1px solid var(--border);
-      background-image: linear-gradient(to left, rgba(0,0,0,0.03), transparent);
-    }
-
-    .book-page-pane:last-child {
-      background-image: linear-gradient(to right, rgba(0,0,0,0.03), transparent);
-    }
-
-    @media (min-width: 600px) {
-      .book-page-pane {
-        padding: 2.8rem 2.4rem 3rem;
-      }
-    }
-
-    /* Page Running Headers & Footers */
-    .page-running-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.45rem;
-      margin-bottom: 1.2rem;
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-
-    .page-running-foot {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--border);
-      padding-top: 0.75rem;
-      margin-top: 1.2rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-
-    .book-page-turn-action {
-      background: none;
-      border: none;
-      font-family: var(--font-sans);
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: var(--ink);
-      cursor: pointer;
-      padding: 0.2rem 0.4rem;
-      transition: opacity 0.2s ease;
-    }
-
-    .book-page-turn-action:hover {
-      opacity: 0.5;
-    }
-
-    /* Typography inside Book Pages */
-    .page-serif-title {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 600;
-      line-height: 1.15;
-      color: var(--ink);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
-
-    .page-serif-subtitle {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--ink-muted);
-      margin-bottom: 0.75rem;
-      line-height: 1.35;
-    }
-
-    .page-prose-text {
-      font-size: 0.84rem;
-      line-height: 1.75;
-      color: var(--ink-muted);
-      margin-bottom: 0.95rem;
-    }
-
-    .page-prose-text strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
-
-    @media (min-width: 600px) {
-      .page-serif-title { font-size: 2.15rem; }
-      .page-serif-subtitle { font-size: 1.35rem; }
-      .page-prose-text { font-size: 0.94rem; line-height: 1.9; }
-    }
-
-    /* Table of Contents */
-    .book-toc-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-      margin-top: 0.3rem;
-    }
-
-    .book-toc-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-bottom: 0.38rem;
-      border-bottom: 1px dashed var(--border);
-      cursor: pointer;
-      font-family: var(--font-serif);
-      font-size: 0.95rem;
-      color: var(--ink);
-      transition: color 0.2s ease, padding-left 0.2s ease;
-    }
-
-    .book-toc-row:hover {
-      color: var(--ink-muted);
-      padding-left: 5px;
-    }
-
-    .book-toc-pageNum {
-      font-family: var(--font-sans);
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      color: var(--ink-faint);
-    }
-
-    @media (min-width: 600px) {
-      .book-toc-row { font-size: 1.12rem; }
-    }
-
-    /* Accordions / Folds */
-    .book-fold-box {
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      margin-bottom: 0.55rem;
-      background: var(--page-bg-alt);
-    }
-
-    .book-fold-toggle {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 0.7rem 0.9rem;
-      text-align: left;
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--ink);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      letter-spacing: 0.02em;
-    }
-
-    .book-fold-body {
-      display: none;
-      padding: 0 0.9rem 0.9rem;
-      font-size: 0.82rem;
-      color: var(--ink-muted);
-      line-height: 1.75;
-      border-top: 1px dashed var(--border);
-    }
-
-    .book-fold-box.open .book-fold-body {
-      display: block;
-    }
-
-    /* Contact Form inside Book */
-    .book-author-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-      margin-top: 0.6rem;
-    }
-
-    .book-form-input, .book-form-textarea {
-      width: 100%;
-      padding: 0.65rem 0.8rem;
-      border: 1px solid var(--border);
-      background: var(--page-bg-alt);
-      font-family: var(--font-sans);
-      font-size: 0.82rem;
-      color: var(--ink);
-      border-radius: 2px;
-      outline: none;
-      transition: border-color 0.2s ease;
-    }
-
-    .book-form-input:focus, .book-form-textarea:focus {
-      border-color: var(--ink);
-    }
-
-    .book-form-textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    .book-form-btn {
-      width: 100%;
-      padding: 0.75rem;
-      background: var(--ink);
-      color: var(--page-bg);
-      border: none;
-      font-family: var(--font-sans);
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 600;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .book-form-btn:hover {
-      background: #332e29;
-    }
-  </style>
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition:none !important; }
+  }
+</style>
 </head>
 <body>
 
-  <div class="desk-stage">
-
-    <!-- CLOSED HARDCOVER BOOK -->
-    <div id="closedBookStage" class="closed-book-stage" onclick="openBookTransition()">
-      <div class="physical-cover-object">
-        <img src="cover.jpg" alt="Or So She Thought Cover" class="cover-image-el" loading="eager" />
-        <div class="spine-crease-line"></div>
-      </div>
-      <div class="open-prompt">Open the Book</div>
-    </div>
-
-    <!-- OPENED TWO-PAGE SPREAD -->
-    <div id="openedBookContainer" class="opened-book-container">
-      <div class="book-gutter-shadow"></div>
-
-      <!-- LEFT PAGE -->
-      <div id="leftPagePane" class="book-page-pane">
-        <div class="page-running-head">
-          <span id="leftHeadTitle">Or So She Thought</span>
-          <span id="leftPageNum">— 1 —</span>
-        </div>
-
-        <div id="leftPageBody" style="flex: 1; overflow-y: auto;">
-          <!-- Dynamically injected -->
-        </div>
-
-        <div class="page-running-foot">
-          <button class="book-page-turn-action" onclick="turnSpread(-1)">← Previous</button>
-          <span id="leftSpreadLabel" style="font-size: 0.62rem; color: var(--ink-faint);">SPREAD 1</span>
-        </div>
-      </div>
-
-      <!-- RIGHT PAGE -->
-      <div id="rightPagePane" class="book-page-pane">
-        <div class="page-running-head">
-          <span id="rightHeadTitle">Contents</span>
-          <span id="rightPageNum">— 2 —</span>
-        </div>
-
-        <div id="rightPageBody" style="flex: 1; overflow-y: auto;">
-          <!-- Dynamically injected -->
-        </div>
-
-        <div class="page-running-foot">
-          <span id="rightSpreadLabel" style="font-size: 0.62rem; color: var(--ink-faint);">SPREAD 1</span>
-          <button class="book-page-turn-action" onclick="turnSpread(1)">Next →</button>
-        </div>
-      </div>
-
-    </div>
-
+<header>
+  <div class="nav-row">
+    <a class="brand" href="#top">Or So She Thought</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#issue">Current Issue</a>
+      <a href="#contents">Journal</a>
+      <a href="#submissions">Submissions</a>
+      <a href="#membership">Membership</a>
+      <a href="#about">About</a>
+    </nav>
   </div>
+</header>
 
-  <!-- JAVASCRIPT: TWO-PAGE SPREAD BOOK ENGINE -->
-  <script>
-    let currentSpreadIndex = 0;
+<main id="top">
 
-    const bookSpreads = [
-      // Spread 0: Title & Contents
-      {
-        left: {
-          header: "Or So She Thought",
-          pageNum: "— 1 —",
-          html: `
-            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; padding: 1rem 0;">
-              <h1 class="page-serif-title" style="font-size: 2.1rem; margin-bottom: 0.4rem;">OR SO SHE THOUGHT</h1>
-              <p class="page-serif-subtitle" style="margin-bottom: 1.3rem;">A psychological novel of duty, doubt, and choice</p>
-              <div style="width: 35px; height: 1px; background: var(--ink); margin: 0 auto 1.3rem;"></div>
-              <p style="font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ink-faint);">Queen Usman</p>
-            </div>
-          `
-        },
-        right: {
-          header: "Contents",
-          pageNum: "— 2 —",
-          html: `
-            <h2 class="page-serif-title" style="font-size: 1.4rem; margin-bottom: 0.85rem;">TABLE OF CONTENTS</h2>
-            <div class="book-toc-list">
-              <div class="book-toc-row" onclick="jumpToSpread(1)"><span class="book-toc-title">01 — The Novel</span><span class="book-toc-pageNum">P. 03</span></div>
-              <div class="book-toc-row" onclick="jumpToSpread(2)"><span class="book-toc-title">02 — The Kingdom of Norwyn</span><span class="book-toc-pageNum">P. 05</span></div>
-              <div class="book-toc-row" onclick="jumpToSpread(3)"><span class="book-toc-title">03 — The People of Norwyn</span><span class="book-toc-pageNum">P. 09</span></div>
-              <div class="book-toc-row" onclick="jumpToSpread(4)"><span class="book-toc-title">04 — The Norwyn Archive</span><span class="book-toc-pageNum">P. 11</span></div>
-              <div class="book-toc-row" onclick="jumpToSpread(5)"><span class="book-toc-title">05 — Where It Began</span><span class="book-toc-pageNum">P. 13</span></div>
-              <div class="book-toc-row" onclick="jumpToSpread(6)"><span class="book-toc-title">06 — Beyond The Novel</span><span class="book-toc-pageNum">P. 15</span></div>
-              <div class="book-toc-row" onclick="jumpToSpread(7)"><span class="book-toc-title">07 — About The Author</span><span class="book-toc-pageNum">P. 17</span></div>
-            </div>
-          `
-        }
-      },
-      // Spread 1: The Novel (Pages 3-4)
-      {
-        left: {
-          header: "01 — The Novel",
-          pageNum: "— 3 —",
-          html: `
-            <h2 class="page-serif-title">THE WEB NOVEL</h2>
-            <p class="page-prose-text"><em>Or So She Thought</em> is a psychological novel set in 1990s Norwyn, where duty is inherited, futures are arranged before they are questioned, and knowing what you want can become difficult when you have spent your life learning what you are supposed to want.</p>
-            <p class="page-prose-text">It follows Elizabeth, a young woman whose future has been carefully prepared for her, as the life she has always understood begins to become less certain.</p>
-          `
-        },
-        right: {
-          header: "The Novel",
-          pageNum: "— 4 —",
-          html: `
-            <h3 class="page-serif-subtitle" style="margin-bottom: 0.6rem;">Selected Chapters</h3>
-            <div class="book-toc-list" style="font-size: 0.88rem;">
-              <div class="book-toc-row"><span>01. The Life She Is Supposed to Want</span></div>
-              <div class="book-toc-row"><span>02. Edward of Valenne</span></div>
-              <div class="book-toc-row"><span>03. The Girl Who Corrects Herself</span></div>
-              <div class="book-toc-row"><span>04. The Book</span></div>
-              <div class="book-toc-row"><span>05. The Mended Blouse</span></div>
-              <div class="book-toc-row"><span>06. The Woman Who Knows Before You Speak</span></div>
-              <div class="book-toc-row"><span>07. The Man She Might Have Married</span></div>
-            </div>
-          `
-        }
-      },
-      // Spread 2: Norwyn (Pages 5-6)
-      {
-        left: {
-          header: "02 — Norwyn",
-          pageNum: "— 5 —",
-          html: `
-            <h2 class="page-serif-title">THE KINGDOM OF NORWYN</h2>
-            <p class="page-prose-text">A world shaped by inheritance, tradition, commerce, and the people who have learned how to live within them.</p>
-            <p class="page-prose-text">Norwyn is a kingdom of contrasts. The capital is busy with commerce and government. The palace operates according to rules of its own. Beyond the city, the mountains preserve ways of life shaped by colder weather and communal work.</p>
-          `
-        },
-        right: {
-          header: "Norwyn Regions",
-          pageNum: "— 6 —",
-          html: `
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>01 — The Capital</span><span>+</span></button>
-              <div class="book-fold-body">Stone quays beside the river where commerce, government, and public life have grown around one another for generations.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>02 — The Palace</span><span>+</span></button>
-              <div class="book-fold-body">The seat of the royal family and center of ceremonial life, featuring state rooms, the royal library, and private family apartments.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>03 — Valenne</span><span>+</span></button>
-              <div class="book-fold-body">A neighboring kingdom whose relationship with Norwyn has been built through treaties, trade, diplomacy, and generational obligations.</div>
-            </div>
-          `
-        }
-      },
-      // Spread 3: The People (Pages 9-10)
-      {
-        left: {
-          header: "03 — The People",
-          pageNum: "— 9 —",
-          html: `
-            <h2 class="page-serif-title">DRAMATIS PERSONAE</h2>
-            <p class="page-prose-text">Elizabeth's life is shaped by the people around her, but none of them can be reduced to what they want from her.</p>
-            <p class="page-prose-text" style="font-style: italic;">They love her. They need things from her. They protect her. They misunderstand her.</p>
-          `
-        },
-        right: {
-          header: "Characters",
-          pageNum: "— 10 —",
-          html: `
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Elizabeth</span><span>+</span></button>
-              <div class="book-fold-body">A daughter, royal, student, and future bride learning how to read a room, anticipate a response, and understand what a situation requires.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Queen Anne</span><span>+</span></button>
-              <div class="book-fold-body">Elizabeth's mother, who believes preparation is a form of protection, though she struggles to separate care from control.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Edward of Valenne</span><span>+</span></button>
-              <div class="book-fold-body">The man Elizabeth is expected to marry—intelligent, observant, and more complicated than their arrangement suggests.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Elias</span><span>+</span></button>
-              <div class="book-fold-body">Comes from outside the palace, bringing an independent eye into spaces Elizabeth takes for granted.</div>
-            </div>
-          `
-        }
-      },
-      // Spread 4: The Archive (Pages 11-12)
-      {
-        left: {
-          header: "04 — The Archive",
-          pageNum: "— 11 —",
-          html: `
-            <h2 class="page-serif-title">THE NORWYN ARCHIVE</h2>
-            <p class="page-prose-text">Artifacts, records, and documents from the world of the novel. These papers preserve what the institution chose to remember—and what it tried to manage.</p>
-          `
-        },
-        right: {
-          header: "Archival Records",
-          pageNum: "— 12 —",
-          html: `
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Cartographic Survey</span><span>+</span></button>
-              <div class="book-fold-body">Norwyn Royal Survey Bureau • 1994 Edition. Territorial borders, county divisions, and mountain passes.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>The Norwyn Herald</span><span>+</span></button>
-              <div class="book-fold-body">Newspaper dispatches and public columns from March 1994 detailing capital society and state announcements.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Royal Household Record</span><span>+</span></button>
-              <div class="book-fold-body">Private correspondence and protocol manuals governing state banquets and diplomatic seating arrangements.</div>
-            </div>
-          `
-        }
-      },
-      // Spread 5: Where It Began (Pages 13-14)
-      {
-        left: {
-          header: "05 — Where It Began",
-          pageNum: "— 13 —",
-          html: `
-            <h2 class="page-serif-title">WHERE IT BEGAN</h2>
-            <p class="page-prose-text"><em>Or So She Thought</em> did not arrive fully formed. There was a version of the story before there was this one.</p>
-            <p class="page-prose-text">Novels are built through accumulation, revision, disagreement, accident, and the slow realization that the story you thought you were writing is no longer the most interesting one available.</p>
-          `
-        },
-        right: {
-          header: "Making of the Novel",
-          pageNum: "— 14 —",
-          html: `
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>The Story Before Elizabeth</span><span>+</span></button>
-              <div class="book-fold-body">Initially focused on external border politics until Elizabeth emerged as a person whose quiet compliance was an exhausting form of labor.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>The Mended Hem</span><span>+</span></button>
-              <div class="book-fold-body">A quiet study in what happens when someone whose clothes have always been maintained by others attempts self-reliance with clumsy fingers.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>The Title</span><span>+</span></button>
-              <div class="book-fold-body">Created hesitation in the narrow space between what a person assumes to be true and what they slowly realize was incomplete.</div>
-            </div>
-          `
-        }
-      },
-      // Spread 6: Beyond The Novel (Pages 15-16)
-      {
-        left: {
-          header: "06 — Beyond The Novel",
-          pageNum: "— 15 —",
-          html: `
-            <h2 class="page-serif-title">QUESTIONS LEFT BEHIND</h2>
-            <p class="page-prose-text">Some of the questions the novel raises do not belong entirely to Elizabeth, Norwyn, or the world of the novel. They appear in ordinary lives too.</p>
-            <p class="page-prose-text" style="font-style: italic;">How much of what we call preference was learned? How much of what feels inevitable was simply repeated?</p>
-          `
-        },
-        right: {
-          header: "Inquiries",
-          pageNum: "— 16 —",
-          html: `
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>How do you know what you want?</span><span>+</span></button>
-              <div class="book-fold-body">Family, culture, circumstance, and expectation participate in forming a person. Where does influence end and choice begin?</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Can a life chosen for you become your own?</span><span>+</span></button>
-              <div class="book-fold-body">We inherit ideas about what a good life should look like. Sometimes we reject them; sometimes we keep them.</div>
-            </div>
-            <div class="book-fold-box" onclick="toggleBookFold(event, this)">
-              <button class="book-fold-toggle"><span>Can love and control exist together?</span><span>+</span></button>
-              <div class="book-fold-body">The person who knows you best may also feel most entitled to decide what is best for you. Where does care become something else?</div>
-            </div>
-          `
-        }
-      },
-      // Spread 7: About The Author (Pages 17-18)
-      {
-        left: {
-          header: "07 — About The Author",
-          pageNum: "— 17 —",
-          html: `
-            <h2 class="page-serif-title">QUEEN USMAN</h2>
-            <p class="page-serif-subtitle">A clinical medical student and novelist interested in how people become who they are[cite: 1].</p>
-            <p class="page-prose-text">Queen Usman is a Nigerian clinical medical student and novelist[cite: 1]. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition[cite: 1].</p>
-            <p class="page-prose-text">Her medical training has sharpened her interest in observation, human behavior, and the ways people are shaped by the worlds they inhabit[cite: 1].</p>
-          `
-        },
-        right: {
-          header: "Inquiries",
-          pageNum: "— 18 —",
-          html: `
-            <h3 class="page-serif-subtitle" style="font-size: 1rem; margin-bottom: 0.5rem;">Contact the Author</h3>
-            <p class="page-prose-text" style="font-size: 0.8rem; margin-bottom: 0.6rem;">For literary, rights, interview, and professional inquiries:</p>
-            
-            <form class="book-author-form" id="authorContactForm">
-              <input type="text" id="contactName" class="book-form-input" placeholder="Name" required />
-              <input type="email" id="contactEmail" class="book-form-input" placeholder="Email *" required />
-              <textarea id="contactMessage" class="book-form-textarea" placeholder="Message ..." required></textarea>
-              <button type="submit" id="contactSubmitBtn" class="book-form-btn">&rarr; Send Message</button>
-            </form>
-            <div id="contactSuccessState" style="display: none; padding: 1rem 0; text-align: center; font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink);">
-              ✓ Message sent directly to Queen Usman.
-            </div>
-          `
-        }
-      }
-    ];
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-note">Or So He Said</p>
+      <h1 class="title">Or So She Thought</h1>
+      <p class="hero-sub">A journal of dark fiction, poetry, and criticism for writers who don't trust the narrator either — memory, perception, and the stories we edit as we tell them.</p>
+      <div class="hero-meta">
+        <span>Founded 2027</span>
+        <span>Based in Halifax, Canada</span>
+        <span>Print &amp; digital editions</span>
+      </div>
+    </div>
+  </section>
 
-    function openBookTransition() {
-      const closed = document.getElementById('closedBookStage');
-      const opened = document.getElementById('openedBookContainer');
-      
-      closed.classList.add('opening');
-      setTimeout(() => {
-        closed.style.display = 'none';
-        opened.classList.add('active');
-        renderSpread(0);
-      }, 400);
-    }
+  <section id="issue">
+    <div class="wrap section-inner">
+      <p class="eyebrow">Current issue</p>
+      <div class="issue">
+        <div class="issue-copy">
+          <h2>Issue No. 1 — The Unreliable Narrator</h2>
+          <p>Nine stories and a suite of poems built around the moment a narrator stops being able to vouch for their own account — the misremembered room, the corrected diary entry, the confession that changes shape halfway through. Paired with a new series of ink studies commissioned for this issue.</p>
+          <p class="credit">Commissioned artwork by Reiko Sato</p>
+          <a class="cta-link" href="#">Reserve Issue No. 1</a>
+        </div>
+        <div class="issue-art" aria-hidden="true">
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#E5D4BA"/>
+                <stop offset="1" stop-color="#F4EFE4"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="500" fill="url(#g1)"/>
+            <g stroke="#1C1815" stroke-opacity="0.3" fill="none" stroke-width="1">
+              <path d="M60 420 C 120 300, 90 220, 180 180 S 300 140, 260 60"/>
+              <path d="M40 460 C 140 400, 160 300, 120 240 S 220 160, 200 80"/>
+              <circle cx="230" cy="130" r="3" fill="#9C4130" fill-opacity="0.8" stroke="none"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    function renderSpread(index) {
-      currentSpreadIndex = index;
-      const spreadData = bookSpreads[currentSpreadIndex];
+  <section class="statement">
+    <div class="wrap section-inner">
+      <blockquote>We publish the version of the story a person tells <span>right before</span> they correct themselves.</blockquote>
+      <p class="statement-attr">— from the founding note, Issue No. 1</p>
+    </div>
+  </section>
 
-      // Populate Left Page
-      document.getElementById('leftHeadTitle').innerText = spreadData.left.header;
-      document.getElementById('leftPageNum').innerText = spreadData.left.pageNum;
-      document.getElementById('leftPageBody').innerHTML = spreadData.left.html;
+  <section id="contents">
+    <div class="wrap section-inner">
+      <p class="eyebrow">What we publish</p>
+      <ul class="contents-list">
+        <li>
+          <span class="label">Fiction</span>
+          <span class="desc">Dark literary short fiction, generally under <strong>6,000 words</strong>, with room for the occasional novella-length piece in a themed issue.</span>
+          <span class="pg">01</span>
+        </li>
+        <li>
+          <span class="label">Poetry</span>
+          <span class="desc">Poems that sit with dread, grief, and doubt rather than resolve them — <strong>up to five poems</strong> per submission.</span>
+          <span class="pg">02</span>
+        </li>
+        <li>
+          <span class="label">Criticism</span>
+          <span class="desc">Essays and reviews on dark fiction past and present, from <strong>working critics and working writers</strong> alike.</span>
+          <span class="pg">03</span>
+        </li>
+        <li>
+          <span class="label">Visual art</span>
+          <span class="desc">Each issue pairs its fiction with <strong>commissioned artwork</strong> made in direct response to the accepted pieces.</span>
+          <span class="pg">04</span>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-      // Populate Right Page
-      document.getElementById('rightHeadTitle').innerText = spreadData.right.header;
-      document.getElementById('rightPageNum').innerText = spreadData.right.pageNum;
-      document.getElementById('rightPageBody').innerHTML = spreadData.right.html;
+  <section id="submissions">
+    <div class="wrap section-inner">
+      <div class="band">
+        <div>
+          <h3>Submissions open twice a year</h3>
+          <p>We read fiction, poetry, and criticism during two windows a year. We ask for a two-week response outside of those windows, and no simultaneous withdrawal fees — just tell us if a piece is placed elsewhere.</p>
+          <a class="cta-link" href="#">Read the submission guidelines</a>
+        </div>
+        <div class="dates">
+          <div><strong>Winter window</strong> — Jan 1 – Jan 31</div>
+          <div><strong>Summer window</strong> — Jun 1 – Jun 30</div>
+          <div><strong>Response time</strong> — 8–10 weeks</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // Update Spreads Labels
-      const label = `SPREAD ${currentSpreadIndex + 1} OF ${bookSpreads.length}`;
-      document.getElementById('leftSpreadLabel').innerText = label;
-      document.getElementById('rightSpreadLabel').innerText = label;
+  <section id="membership">
+    <div class="wrap section-inner">
+      <div class="band">
+        <div>
+          <h3>Join as a member</h3>
+          <p>Members get the digital archive from Issue No. 1 forward, first access to print runs before they sell out, and a standing invitation to our quarterly reading series.</p>
+          <a class="cta-link" href="#">Become a member</a>
+        </div>
+        <div class="dates">
+          <div><strong>Digital archive</strong> — every back issue</div>
+          <div><strong>Print priority</strong> — before public sale</div>
+          <div><strong>Reading series</strong> — quarterly, Halifax &amp; online</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // Reset scroll positions
-      document.getElementById('leftPageBody').scrollTop = 0;
-      document.getElementById('rightPageBody').scrollTop = 0;
-    }
+</main>
 
-    function turnSpread(direction) {
-      const target = currentSpreadIndex + direction;
-      if (target >= 0 && target < bookSpreads.length) {
-        renderSpread(target);
-      } else if (target < 0) {
-        // Return to closed book cover if flipping back from the first spread
-        const closed = document.getElementById('closedBookStage');
-        const opened = document.getElementById('openedBookContainer');
-        opened.classList.remove('active');
-        closed.style.display = 'flex';
-        closed.classList.remove('opening');
-      }
-    }
-
-    function jumpToSpread(index) {
-      if (index >= 0 && index < bookSpreads.length) {
-        renderSpread(index);
-      }
-    }
-
-    function toggleBookFold(event, element) {
-      event.stopPropagation();
-      element.classList.toggle('open');
-    }
-
-    // Contact Form AJAX Handler
-    document.addEventListener('submit', function(e) {
-      if (e.target && e.target.id === 'authorContactForm') {
-        e.preventDefault();
-        const btn = document.getElementById('contactSubmitBtn');
-        const form = document.getElementById('authorContactForm');
-        const success = document.getElementById('contactSuccessState');
-
-        btn.innerHTML = 'Sending...';
-        btn.disabled = true;
-
-        fetch('https://formsubmit.co/ajax/usmanshazaan@gmail.com', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            name: document.getElementById('contactName').value,
-            email: document.getElementById('contactEmail').value,
-            message: document.getElementById('contactMessage').value,
-            _subject: 'New Inquiry — Or So She Thought'
-          })
-        })
-        .then(res => res.json())
-        .then(data => {
-          form.style.display = 'none';
-          success.style.display = 'block';
-        })
-        .catch(err => {
-          form.style.display = 'none';
-          success.style.display = 'block';
-        });
-      }
-    });
-  </script>
+<footer id="about">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Or So She Thought</div>
+        <p class="foot-tag">A nonprofit literary journal and small press devoted to dark fiction, poetry, criticism, and commissioned art.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Journal</h4>
+        <ul>
+          <li><a href="#issue">Current Issue</a></li>
+          <li><a href="#">Past Issues</a></li>
+          <li><a href="#submissions">Submissions</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#about">Our Team</a></li>
+          <li><a href="#">Masthead</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2027 Or So She Thought Literary Society. All rights reserved.</span>
+      <div class="foot-social">
+        <a href="#">Instagram</a>
+        <a href="#">Bluesky</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
