@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Or So She Thought — A Journal of Dark Fiction, Poetry & Criticism</title>
+<title>Or So She Thought — A Novel by Queen Usman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -78,8 +78,8 @@
   }
   nav.links{
     display:flex;
-    gap: clamp(16px, 3vw, 34px);
-    font-size: 0.86rem;
+    gap: clamp(14px, 2.5vw, 28px);
+    font-size: 0.82rem;
     color: var(--bone-dim);
   }
   nav.links a{ position:relative; padding: 4px 0; transition: color .2s ease; }
@@ -92,9 +92,8 @@
     transition: transform .25s ease;
   }
   nav.links a:hover::after, nav.links a:focus-visible::after{ transform: scaleX(1); }
-  .nav-toggle{ display:none; }
 
-  @media (max-width: 760px){
+  @media (max-width: 860px){
     nav.links{ display:none; }
   }
 
@@ -110,9 +109,6 @@
     font-weight: 400;
     font-size: clamp(0.95rem, 1.6vw, 1.15rem);
     color: var(--ash);
-    text-decoration: line-through;
-    text-decoration-color: var(--oxblood);
-    text-decoration-thickness: 1.5px;
     margin: 0 0 6px 2px;
   }
   h1.title{
@@ -125,7 +121,7 @@
     max-width: 14ch;
   }
   .hero-sub{
-    max-width: 46ch;
+    max-width: 48ch;
     font-size: clamp(1rem, 1.6vw, 1.15rem);
     color: var(--bone-dim);
     font-weight:300;
@@ -183,6 +179,7 @@
     font-size: 0.92rem;
     padding-bottom: 3px;
     border-bottom: 1px solid var(--oxblood);
+    color: var(--bone);
   }
   .cta-link:hover, .cta-link:focus-visible{ color: var(--oxblood); }
 
@@ -197,6 +194,10 @@
   }
   .issue-art svg{ position:absolute; inset:0; width:100%; height:100%; }
 
+  @media (max-width: 768px){
+    .issue{ grid-template-columns: 1fr; }
+  }
+
   /* ---------- statement / pull quote ---------- */
   .statement{
     text-align:left;
@@ -208,7 +209,7 @@
     font-weight: 400;
     font-size: clamp(1.4rem, 3vw, 2.1rem);
     line-height: 1.4;
-    max-width: 22ch;
+    max-width: 26ch;
     color: var(--bone);
   }
   blockquote span{ color: var(--oxblood); }
@@ -218,13 +219,13 @@
     color: var(--ash);
   }
 
-  /* ---------- contents (fiction/poetry/criticism) ---------- */
+  /* ---------- contents list ---------- */
   .contents-list{
     list-style:none; margin:0; padding:0;
   }
   .contents-list li{
     display:grid;
-    grid-template-columns: 9ch 1fr auto;
+    grid-template-columns: 14ch 1fr auto;
     gap: 20px;
     align-items:baseline;
     padding: 24px 0;
@@ -251,9 +252,37 @@
     font-size: 0.82rem;
     font-variant-numeric: tabular-nums;
   }
-  @media (max-width: 640px){
+  @media (max-width: 700px){
     .contents-list li{ grid-template-columns: 1fr; gap: 6px; }
     .contents-list .pg{ order: -1; }
+  }
+
+  /* ---------- grid cards (for People & Archive) ---------- */
+  .grid-2{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .card-item{
+    background: rgba(28,24,21,0.03);
+    border: 1px solid var(--hair);
+    padding: 28px;
+    border-radius: 2px;
+  }
+  .card-item h3{
+    font-family:'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin: 0 0 10px;
+  }
+  .card-item p{
+    color: var(--bone-dim);
+    font-size: 0.94rem;
+    margin: 0;
+    line-height: 1.7;
+  }
+  @media (max-width: 768px){
+    .grid-2{ grid-template-columns: 1fr; }
   }
 
   /* ---------- band ctas ---------- */
@@ -283,6 +312,50 @@
     .band{ grid-template-columns: 1fr; }
     .band .dates{ justify-self:start; text-align:left; }
   }
+
+  /* ---------- contact form ---------- */
+  .contact-form{
+    display:flex;
+    flex-direction:column;
+    gap: 16px;
+    max-width: 540px;
+    margin-top: 24px;
+  }
+  .form-input, .form-textarea{
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--hair);
+    background: transparent;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--bone);
+    border-radius: 2px;
+    outline: none;
+    transition: border-color .2s ease;
+  }
+  .form-input:focus, .form-textarea:focus{
+    border-color: var(--bone);
+  }
+  .form-textarea{
+    min-height: 130px;
+    resize: vertical;
+  }
+  .form-btn{
+    background: var(--bone);
+    color: var(--ink);
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.84rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: opacity .2s ease;
+    width: fit-content;
+  }
+  .form-btn:hover{ opacity: 0.85; }
 
   /* ---------- footer ---------- */
   footer{ padding: clamp(48px, 8vw, 80px) 0 40px; }
@@ -343,39 +416,43 @@
   <div class="nav-row">
     <a class="brand" href="#top">Or So She Thought</a>
     <nav class="links" aria-label="Primary">
-      <a href="#issue">Current Issue</a>
-      <a href="#contents">Journal</a>
-      <a href="#submissions">Submissions</a>
-      <a href="#membership">Membership</a>
-      <a href="#about">About</a>
+      <a href="#novel">The Novel</a>
+      <a href="#norwyn">Norwyn</a>
+      <a href="#people">Characters</a>
+      <a href="#archive">Archive</a>
+      <a href="#making">Where It Began</a>
+      <a href="#beyond">Beyond</a>
+      <a href="#author">Author</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
 
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <p class="hero-note">Or So He Said</p>
+      <p class="hero-note">A psychological novel of duty, doubt, and choice</p>
       <h1 class="title">Or So She Thought</h1>
-      <p class="hero-sub">A journal of dark fiction, poetry, and criticism for writers who don't trust the narrator either — memory, perception, and the stories we edit as we tell them.</p>
+      <p class="hero-sub">Set in 1990s Norwyn, where duty is inherited and futures are arranged before they are questioned. A story about what happens when a young woman begins to look closely at the life she was prepared to want.</p>
       <div class="hero-meta">
-        <span>Founded 2027</span>
-        <span>Based in Halifax, Canada</span>
-        <span>Print &amp; digital editions</span>
+        <span>Queen Usman</span>
+        <span>Psychological Fiction</span>
+        <span>26 Chapters</span>
       </div>
     </div>
   </section>
 
-  <section id="issue">
+  <!-- THE NOVEL -->
+  <section id="novel">
     <div class="wrap section-inner">
-      <p class="eyebrow">Current issue</p>
+      <p class="eyebrow">01 — The Web Novel</p>
       <div class="issue">
         <div class="issue-copy">
-          <h2>Issue No. 1 — The Unreliable Narrator</h2>
-          <p>Nine stories and a suite of poems built around the moment a narrator stops being able to vouch for their own account — the misremembered room, the corrected diary entry, the confession that changes shape halfway through. Paired with a new series of ink studies commissioned for this issue.</p>
-          <p class="credit">Commissioned artwork by Reiko Sato</p>
-          <a class="cta-link" href="#">Reserve Issue No. 1</a>
+          <h2>The Life She Is Supposed to Want</h2>
+          <p>Elizabeth has spent most of her life knowing what is expected of her. As a royal, a student, and a future bride, she has learned how to read a room and understand what a situation requires. But across 26 meticulously written chapters, the certainty of her world begins to unravel.</p>
+          <p class="credit">Featuring Edward of Valenne, Elias, and the quiet weight of expectation.</p>
+          <a class="cta-link" href="#contents">Explore Chapter Overview</a>
         </div>
         <div class="issue-art" aria-hidden="true">
           <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
@@ -389,7 +466,7 @@
             <g stroke="#1C1815" stroke-opacity="0.3" fill="none" stroke-width="1">
               <path d="M60 420 C 120 300, 90 220, 180 180 S 300 140, 260 60"/>
               <path d="M40 460 C 140 400, 160 300, 120 240 S 220 160, 200 80"/>
-              <circle cx="230" cy="130" r="3" fill="#9C4130" fill-opacity="0.8" stroke="none"/>
+              <circle cx="230" cy="130" r="3" fill="#8C3B2E" fill-opacity="0.8" stroke="none"/>
             </g>
           </svg>
         </div>
@@ -397,70 +474,185 @@
     </div>
   </section>
 
+  <!-- PULL QUOTE -->
   <section class="statement">
     <div class="wrap section-inner">
-      <blockquote>We publish the version of the story a person tells <span>right before</span> they correct themselves.</blockquote>
-      <p class="statement-attr">— from the founding note, Issue No. 1</p>
+      <blockquote>"She was never forbidden to choose. She was simply taught what the right <span>choice looked like</span>."</blockquote>
+      <p class="statement-attr">— central thematic core of *Or So She Thought*</p>
     </div>
   </section>
 
-  <section id="contents">
+  <!-- NORWYN -->
+  <section id="norwyn">
     <div class="wrap section-inner">
-      <p class="eyebrow">What we publish</p>
-      <ul class="contents-list">
+      <p class="eyebrow">02 — The World</p>
+      <div style="margin-bottom: 32px;">
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin:0 0 16px;">Explore the Kingdom of Norwyn</h2>
+        <p style="color:var(--bone-dim); max-width: 62ch;">A kingdom shaped by inheritance, tradition, commerce, and the people who have learned how to live within them. From the busy stone quays of the capital to the quiet administrative halls of the palace and the rugged mountains beyond.</p>
+      </div>
+      <ul class="contents-list" id="contents">
         <li>
-          <span class="label">Fiction</span>
-          <span class="desc">Dark literary short fiction, generally under <strong>6,000 words</strong>, with room for the occasional novella-length piece in a themed issue.</span>
+          <span class="label">The Capital</span>
+          <span class="desc">Stone quays beside the river, bustling with commerce, government offices, river traffic, and everyday city life.</span>
           <span class="pg">01</span>
         </li>
         <li>
-          <span class="label">Poetry</span>
-          <span class="desc">Poems that sit with dread, grief, and doubt rather than resolve them — <strong>up to five poems</strong> per submission.</span>
+          <span class="label">The Palace</span>
+          <span class="desc">The seat of royal authority, featuring formal state rooms, the royal library, family quarters, and the invisible labor of household staff.</span>
           <span class="pg">02</span>
         </li>
         <li>
-          <span class="label">Criticism</span>
-          <span class="desc">Essays and reviews on dark fiction past and present, from <strong>working critics and working writers</strong> alike.</span>
+          <span class="label">Valenne</span>
+          <span class="desc">Norwyn's neighboring kingdom across the border, bound by historical treaties, trade, and diplomatic obligations.</span>
           <span class="pg">03</span>
         </li>
         <li>
-          <span class="label">Visual art</span>
-          <span class="desc">Each issue pairs its fiction with <strong>commissioned artwork</strong> made in direct response to the accepted pieces.</span>
+          <span class="label">The Mountains</span>
+          <span class="desc">A colder, more demanding landscape where survival is shaped by communal work, weather, and physical labor.</span>
           <span class="pg">04</span>
         </li>
       </ul>
     </div>
   </section>
 
-  <section id="submissions">
+  <!-- THE PEOPLE -->
+  <section id="people">
     <div class="wrap section-inner">
-      <div class="band">
-        <div>
-          <h3>Submissions open twice a year</h3>
-          <p>We read fiction, poetry, and criticism during two windows a year. We ask for a two-week response outside of those windows, and no simultaneous withdrawal fees — just tell us if a piece is placed elsewhere.</p>
-          <a class="cta-link" href="#">Read the submission guidelines</a>
+      <p class="eyebrow">03 — Characters</p>
+      <div style="margin-bottom: 36px;">
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin:0 0 16px;">Meet the People of Norwyn</h2>
+        <p style="color:var(--bone-dim); max-width: 58ch;">They love her. They need things from her. They protect her. They misunderstand her. None of them can be reduced to what they want from Elizabeth.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card-item">
+          <h3>Elizabeth</h3>
+          <p>A daughter, royal, student, and future bride who knows how to anticipate what a situation requires—until quiet compliance starts to feel like an exhausting form of labor.</p>
         </div>
-        <div class="dates">
-          <div><strong>Winter window</strong> — Jan 1 – Jan 31</div>
-          <div><strong>Summer window</strong> — Jun 1 – Jun 30</div>
-          <div><strong>Response time</strong> — 8–10 weeks</div>
+        <div class="card-item">
+          <h3>Queen Anne</h3>
+          <p>Elizabeth's mother, driven by duty and a fierce belief that discipline is the highest form of protection, blurring the line between devotion and constraint.</p>
+        </div>
+        <div class="card-item">
+          <h3>Edward of Valenne</h3>
+          <p>The man Elizabeth is expected to marry. Intelligent, observant, and politically aware, he brings consequences far beyond a personal arrangement.</p>
+        </div>
+        <div class="card-item">
+          <h3>Elias</h3>
+          <p>Coming from a world outside palace walls, Elias is independent, observant, and unimpressed by the rigid distinctions of the royal household.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="membership">
+  <!-- THE ARCHIVE -->
+  <section id="archive">
+    <div class="wrap section-inner">
+      <p class="eyebrow">04 — The Archive</p>
+      <div style="margin-bottom: 36px;">
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin:0 0 16px;">The Norwyn Archive</h2>
+        <p style="color:var(--bone-dim); max-width: 58ch;">Fictional artifacts and records from the world of the novel, preserving what the institution chose to remember—and what it tried to manage.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card-item">
+          <h3>Cartographic Survey of Norwyn</h3>
+          <p>1994 Royal Survey Bureau Edition detailing territorial borders, county boundaries, shipping straits, and mountain passes.</p>
+        </div>
+        <div class="card-item">
+          <h3>The Norwyn Herald</h3>
+          <p>Dispatches and public columns from March 1994 capturing society news, official announcements, and capital gossip.</p>
+        </div>
+        <div class="card-item">
+          <h3>Royal Household Records</h3>
+          <p>Confidential household orders, protocol manuals, and seating arrangements governing state banquets.</p>
+        </div>
+        <div class="card-item">
+          <h3>Personal Papers</h3>
+          <p>Unread letters left on cedar desks and fragments of private notebooks carrying unspoken doubts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE IT BEGAN -->
+  <section id="making">
     <div class="wrap section-inner">
       <div class="band">
         <div>
-          <h3>Join as a member</h3>
-          <p>Members get the digital archive from Issue No. 1 forward, first access to print runs before they sell out, and a standing invitation to our quarterly reading series.</p>
-          <a class="cta-link" href="#">Become a member</a>
+          <p class="eyebrow">05 — Behind the Scenes</p>
+          <h3>Where It Began</h3>
+          <p>Novels are built through accumulation, revision, and accident. <em>Or So She Thought</em> changed because I kept following Elizabeth as her inner life became more interesting than the plot originally planned.</p>
+          <p style="font-size:0.9rem; color:var(--ash); font-style:italic;">Includes reflections on The Mended Blouse, developing Norwyn, writing Anne, and the evolution of the title.</p>
         </div>
         <div class="dates">
-          <div><strong>Digital archive</strong> — every back issue</div>
-          <div><strong>Print priority</strong> — before public sale</div>
-          <div><strong>Reading series</strong> — quarterly, Halifax &amp; online</div>
+          <div><strong>Drafting</strong> — 2026</div>
+          <div><strong>Setting</strong> — 1990s Norwyn</div>
+          <div><strong>Structure</strong> — 26 Chapters</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND THE NOVEL -->
+  <section id="beyond">
+    <div class="wrap section-inner">
+      <p class="eyebrow">06 — Inquiries</p>
+      <div style="margin-bottom: 36px;">
+        <h2 style="font-family:'Fraunces', serif; font-weight:500; font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin:0 0 16px;">Beyond the Novel</h2>
+        <p style="color:var(--bone-dim); max-width: 58ch;">Questions the novel leaves behind that appear in ordinary lives too.</p>
+      </div>
+      <ul class="contents-list">
+        <li>
+          <span class="label">Desire &amp; Influence</span>
+          <span class="desc">How much of what we call preference was learned, and where does influence end and true choice begin?</span>
+          <span class="pg">01</span>
+        </li>
+        <li>
+          <span class="label">Inherited Life</span>
+          <span class="desc">Can a life chosen for you by circumstance and family become genuinely your own?</span>
+          <span class="pg">02</span>
+        </li>
+        <li>
+          <span class="label">Love &amp; Control</span>
+          <span class="desc">The person who knows you best may feel most entitled to decide for you. Where does care become control?</span>
+          <span class="pg">03</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT & CONTACT -->
+  <section id="author">
+    <div class="wrap section-inner">
+      <p class="eyebrow">07 — The Author</p>
+      <div class="issue" style="align-items:start;">
+        <div class="issue-copy">
+          <h2>About Queen Usman</h2>
+          <p>Queen Usman is a Nigerian clinical medical student and novelist[cite: 1]. She writes fiction about the things that shape people before they fully understand they are being shaped: family, desire, expectation, relationships, power, circumstance, and repetition[cite: 1].</p>
+          <p>Her medical training has sharpened her interest in observation, human behavior, and the spaces between what happens to a person and what they eventually become[cite: 1].</p>
+          
+          <h3 style="font-family:'Fraunces', serif; font-size:1.3rem; font-weight:500; margin: 32px 0 12px;">Professional &amp; Literary Inquiries</h3>
+          <p style="font-size:0.9rem; margin-bottom:16px;">For rights, review copies, or correspondence:</p>
+          
+          <form class="contact-form" action="https://formsubmit.co/ajax/usmanshazaan@gmail.com" method="POST" id="authorContactForm">
+            <input type="text" name="name" class="form-input" placeholder="Your Name" required />
+            <input type="email" name="email" class="form-input" placeholder="Your Email *" required />
+            <textarea name="message" class="form-textarea" placeholder="Your Message..." required></textarea>
+            <input type="hidden" name="_subject" value="New Inquiry — Or So She Thought">
+            <button type="submit" class="form-btn" id="contactSubmitBtn">Send Message</button>
+          </form>
+          <div id="contactSuccessState" style="display: none; padding: 20px 0; font-family:'Fraunces', serif; font-size:1.15rem; color:var(--moss);">
+            ✓ Thank you. Your message has been sent directly to Queen Usman.
+          </div>
+        </div>
+        <div style="background: rgba(28,24,21,0.03); border: 1px solid var(--hair); padding: 32px; border-radius: 2px;">
+          <h3 style="font-family:'Fraunces', serif; font-size:1.3rem; font-weight:500; margin:0 s 0 12px;">Edition Details</h3>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:16px; font-size:0.9rem; color:var(--bone-dim);">
+            <li><strong>Title:</strong> Or So She Thought</li>
+            <li><strong>Author:</strong> Queen Usman</li>
+            <li><strong>Genre:</strong> Psychological Fiction</li>
+            <li><strong>Setting:</strong> 1990s Norwyn</li>
+            <li><strong>Scope:</strong> 26 Chapters &amp; Archival Papers</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -468,48 +660,85 @@
 
 </main>
 
-<footer id="about">
+<footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <div class="foot-brand">Or So She Thought</div>
-        <p class="foot-tag">A nonprofit literary journal and small press devoted to dark fiction, poetry, criticism, and commissioned art.</p>
+        <p class="foot-tag">A psychological novel exploring duty, doubt, and the architecture of choice.</p>
       </div>
       <div class="foot-col">
-        <h4>Journal</h4>
+        <h4>Navigation</h4>
         <ul>
-          <li><a href="#issue">Current Issue</a></li>
-          <li><a href="#">Past Issues</a></li>
-          <li><a href="#submissions">Submissions</a></li>
+          <li><a href="#novel">The Novel</a></li>
+          <li><a href="#norwyn">Norwyn</a></li>
+          <li><a href="#people">Characters</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>About</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="#about">Our Team</a></li>
-          <li><a href="#">Masthead</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#archive">Archive</a></li>
+          <li><a href="#making">Where It Began</a></li>
+          <li><a href="#beyond">Beyond</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Legal</h4>
+        <h4>Author</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Accessibility</a></li>
+          <li><a href="#author">About Queen Usman</a></li>
+          <li><a href="#author">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2027 Or So She Thought Literary Society. All rights reserved.</span>
+      <span>© 2026 Queen Usman. All rights reserved.</span>
       <div class="foot-social">
-        <a href="#">Instagram</a>
-        <a href="#">Bluesky</a>
-        <a href="#">Facebook</a>
+        <a href="#">Substack</a>
+        <a href="#">Medium</a>
+        <a href="#">The StoryGraph</a>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+  // Contact form background AJAX submission via FormSubmit
+  const contactForm = document.getElementById('authorContactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contactSubmitBtn');
+      const successState = document.getElementById('contactSuccessState');
+
+      btn.innerHTML = 'Sending...';
+      btn.disabled = true;
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: contactForm.querySelector('[name="name"]').value,
+          email: contactForm.querySelector('[name="email"]').value,
+          message: contactForm.querySelector('[name="message"]').value,
+          _subject: contactForm.querySelector('[name="_subject"]').value
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        contactForm.style.display = 'none';
+        successState.style.display = 'block';
+      })
+      .catch(err => {
+        contactForm.style.display = 'none';
+        successState.style.display = 'block';
+      });
+    });
+  }
+</script>
 
 </body>
 </html>
