@@ -1,10 +1,10 @@
-<!-- ═══════════════════════════════════════════════════════════════
-  HOW TO USE
-  Keep your file from <!DOCTYPE html> down to the END of
-  <style id="mapdata"> ... </style>   (that block holds your map image).
-  Delete everything after that block, and paste ALL of this file there.
-  ═══════════════════════════════════════════════════════════════ -->
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Or So She Thought, a novel by Queen Usman</title>
+<style id="mapdata">
 :root{
   --room:#0d0806;
   --gold-1:#8d7040; --gold-2:#a98a4e; --gold-3:#d9be80; --gold-hi:#f3e0a8;
@@ -12,6 +12,8 @@
   --fell:'IM Fell English','IM Fell English SC',Garamond,Georgia,serif;
   --disp:'IM Fell English SC','IM Fell English',Garamond,Georgia,serif;
   --serif:'EB Garamond',Garamond,Georgia,'Times New Roman',serif;
+  --map: url('map.jpg.jpg');
+  --R: 1.79;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
@@ -98,6 +100,8 @@ button,a,.hit{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .pg .cmp{display:block;width:2.3em;color:var(--acc);opacity:.55;margin:.7em 0}
 .pg .cmp svg{display:block;width:100%;height:auto}
 .pg .tag{font-style:italic;text-indent:0;margin:0 .4em;max-width:16em}
+.pg .begin-btn{display:inline-block;margin-top:1rem;font-family:var(--fell);font-style:italic;font-size:1.1rem;color:var(--acc);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer;transition:color .3s}
+.pg .begin-btn:hover{color:#3b2619}
 .cl{list-style:none;padding:0;margin:.2em 0 0;width:100%;max-height:36%;overflow:auto}
 .cl a{display:flex;justify-content:space-between;gap:.8em;color:inherit;text-decoration:none;padding:.2em 0;border-bottom:1px dotted rgba(36,25,14,.3);transition:color .3s}
 .cl a:hover,.cl a:focus-visible{color:var(--acc)}
@@ -227,10 +231,10 @@ button,a,.hit{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 'use strict';
 
 /* ════════════════════════════════════════════════
-   THE NOVEL. Replace the placeholder paragraphs with the real
-   chapter text. Add chapters by adding { title, body:[...] } entries.
-   Set DEMO to false once the real text is in.
-   ════════════════════════════════════════════════ */
+    THE NOVEL. Replace the placeholder paragraphs with the real
+    chapter text. Add chapters by adding { title, body:[...] } entries.
+    Set DEMO to false once the real text is in.
+    ════════════════════════════════════════════════ */
 const DEMO = true;
 const CHAPTERS = {
   founding: {
@@ -465,14 +469,14 @@ const snd = (() => {
 })();
 
 /* ════════════════════════════════════════════════
-   THE BOOK
-   Spread p (1..N) shows: left = page 2p-2, right = page 2p-1.
-   pos = number of leaves already turned (0 = closed).
-   Leaf j: front = page 2j-1, back = page 2j.
-   Page 0 = inside front cover, 1 = map, 2/3 = contents,
-   then each era divider and each chapter, set by real measurement.
-   ════════════════════════════════════════════════ */
-const stage = $('#stage'), rig = $('.rig'), tilt = $('.tilt'), book = $('#book'), lamp = $('#lamp'), probe = $('#probe');
+    THE BOOK
+    Spread p (1..N) shows: left = page 2p-2, right = page 2p-1.
+    pos = number of leaves already turned (0 = closed).
+    Leaf j: front = page 2j-1, back = page 2j.
+    Page 0 = inside front cover, 1 = map, 2/3 = selection spread,
+    then each TOC & chapter, set by real measurement.
+    ════════════════════════════════════════════════ */
+const stage = $('#stage'), rig = $('.rig'), tilt = $('.tilt'), book =$('#book'), lamp = $('#lamp'), probe = $('#probe');
 const whereEl = $('#where'), prevB = $('#prev'), nextB = $('#next'), tocB = $('#toc'), live = $('#live');
 const READ_TILT = 5, SHOW_TILT = 16;
 
@@ -516,7 +520,7 @@ function setPose(name, dur){
   let t;
   if (name === 'closed') t = `scale(${K}) translateX(${-W / 2}px)`;
   else if (introRunning) t = `scale(${Math.min(1, innerWidth * .94 / (2 * W))})`;
-  else if (narrow) t = `translateX(${focus % 2 === 0 ? W / 2 : -W / 2}px)`;   // one page at a time on phones
+  else if (narrow) t = `translateX(${focus % 2 === 0 ? W / 2 : -W / 2}px)`;
   else t = 'translateX(0px)';
   rig.style.transform = t;
   stage.dataset.pose = name;
@@ -579,35 +583,35 @@ function lastLoc(){
 }
 function locate(key, n, frac){
   const s = chStart[key] && chStart[key][n - 1];
-  if (s == null) return 2;
+  if (s == null) return 4;
   return s + Math.round(frac * ((chLen[key][n - 1] || 1) - 1));
 }
 
-function tocPage(key, right){
+function tocPage(key){
   const e = CHAPTERS[key], rl = lastLoc();
   const list = e.chapters.map((c, i) => `<li><a href="#/${key}/${i + 1}"><span>${esc(c.title)}</span><em>${chStart[key][i]}</em></a></li>`).join('');
-  const foot = right
-    ? `<div class="foot">${rl ? '<a href="#/resume">Continue reading</a>' : ''}<a href="#/">Close the book</a></div>`
-    : '';
+  const foot = `<div class="foot">${rl ? '<a href="#/resume">Continue reading</a>' : ''}<a href="#/select">Return to Eras</a><a href="#/">Close the book</a></div>`;
   return P(`<div class="pg flex e-${key}"><span class="part">${e.part}</span><h2>${e.name}</h2><span class="story">${e.story}</span><i class="cmp">${compass()}</i><ul class="cl">${list}</ul></div>${foot}`, 'Contents');
 }
 
 function paginate(){
-  pgs = [P(''), P('<div class="mapbox r"></div>'), null, null];
+  // Page 0: Inside cover, Page 1: Map, Page 2: Founding Selection, Page 3: Crowned Selection
+  pgs = [
+    P(''), 
+    P('<div class="mapbox r"></div>'), 
+    P(`<div class="pg flex e-founding"><span class="part">Part I</span><h2>THE FOUNDING ERA</h2><span class="story">Victoria’s Story</span><i class="cmp">${compass()}</i><p class="tag">The story of how Norwyn became Norwyn.</p><a class="begin-btn" href="#/founding/1">Begin reading</a></div>`),
+    P(`<div class="pg flex e-crowned"><span class="part">Part II</span><h2>THE CROWNED ERA</h2><span class="story">Elizabeth’s Story</span><i class="cmp">${compass()}</i><p class="tag">The story of what happens when a person is born into the world someone else built.</p><a class="begin-btn" href="#/crowned/1">Begin reading</a></div>`)
+  ];
   pgInfo = []; chStart = {}; chLen = {};
   const keys = Object.keys(CHAPTERS);
   keys.forEach(key => {
     const era = CHAPTERS[key]; chStart[key] = []; chLen[key] = [];
-    while (pgs.length % 2) pgs.push(blank());
-    pgs.push(P(`<div class="pg flex e-${key}"><span class="part">${era.part}</span><h2>${era.name}</h2><span class="story">${era.story}</span><i class="cmp">${compass()}</i><p class="tag">${esc(era.tag || '')}</p></div>`));
     era.chapters.forEach((ch, ci) => {
       if (pgs.length % 2 === 0) pgs.push(blank());
       flow(key, era, ci, ch);
     });
   });
   while (pgs.length % 2 === 0) pgs.push(blank());
-  pgs[2] = tocPage(keys[0], false);
-  pgs[3] = tocPage(keys[1] || keys[0], true);
 }
 
 /* ---- leaves ---- */
@@ -635,8 +639,8 @@ function makeLeaves(){
   cover = el('div', 'leaf cover'); cover._i = 0;
   cover.innerHTML =
     `<div class="face front cover-front"><div class="frame"></div>
-       <div class="titleblock"><div class="title foil"><span>Or So She</span><span>Thought</span></div></div>
-       <div class="emblem">${compass()}</div><div class="shade"></div></div>
+        <div class="titleblock"><div class="title foil"><span>Or So She</span><span>Thought</span></div></div>
+        <div class="emblem">${compass()}</div><div class="shade"></div></div>
      <div class="face back endpaper"><div class="pastedown paper back"><div class="mapbox l"></div></div><div class="shade"></div></div><div class="edge"></div>`;
   if (wasTitled) cover.classList.add('titled', 'instant');
   leaves[0] = cover;
@@ -688,13 +692,12 @@ function thud(){
   ], { duration: 340, easing: 'ease-out' });
 }
 
-/* Turn the actual pages, one after another, to reach spread q. */
 async function doTravel(q){
   const p = pos, fwd = q > p, idx = [];
   if (fwd) for (let j = p; j < q; j++) idx.push(j); else for (let j = p - 1; j >= q; j--) idx.push(j);
   const closing = !fwd && q === 0, opening = fwd && p === 0;
   for (let j = Math.max(1, q - 3); j <= Math.min(N - 1, q + 3); j++) fill(j);
-  if (closing) idx.pop();                       // the cover turns last, below
+  if (closing) idx.pop();
   const n = idx.length + (opening ? -1 : 0), many = n > 8;
   const dd = n > 1 ? Math.min(150, Math.max(18, 1600 / n)) : 0;
   const dur = n <= 1 ? 760 : Math.min(640, Math.max(280, dd * 4.5));
@@ -732,22 +735,22 @@ async function run(){
     const f = wantedFocus, q = f < 0 ? 0 : spreadOf(f);
     if (f >= 0) focus = f;
     if (q !== pos) await doTravel(q);
-    else if (f >= 0 && narrow) setPose('open', 700);   // same spread: pan to the other page
+    else if (f >= 0 && narrow) setPose('open', 700);
     updateUI();
     if (wantedFocus === f) break;
   }
   running = false;
 }
 function hashFor(f){
-  const i = pgInfo[f]; return i ? `#/${i.key}/${i.n}` : '#/contents';
+  const i = pgInfo[f]; return i ? `#/${i.key}/${i.n}` : (f === 2 || f === 3 ? '#/select' : '#/');
 }
 function updateUI(){
   const f = focus, info = pgInfo[f], open = pos > 0;
   snd.mode(open ? 'reader' : 'book');
   let label = '';
   if (open){
-    if (info) label = `${CHAPTERS[info.key].name} · ${CHAPTERS[info.key].chapters[info.n - 1].title}`;
-    else if (f === 2 || f === 3) label = 'Contents';
+    if (f === 2 || f === 3) label = 'Select Era';
+    else if (info) label = `${CHAPTERS[info.key].name} · ${CHAPTERS[info.key].chapters[info.n - 1].title}`;
   }
   whereEl.textContent = label; live.textContent = label;
   nextB.disabled = narrow ? f >= pgs.length - 1 : spreadOf(f) >= N;
@@ -769,14 +772,17 @@ function prev(){
   else { const s = spreadOf(f); if (s <= 1) location.hash = '#/'; else navigate(2 * s - 4); }
 }
 function goHash(h){ if (location.hash === h) route(); else location.hash = h; }
-function openBook(){ if (stage.dataset.state === 'closed') goHash('#/contents'); }
+function openBook(){ if (stage.dataset.state === 'closed') goHash('#/select'); }
 
 function parseHash(){
   const h = location.hash;
-  if (h === '#/contents') return { f: 2 };
+  if (h === '#/select') return { f: 2 };
   if (h === '#/resume'){ const l = lastLoc(); return { f: l ? locate(l.key, l.n, l.frac) : 2 }; }
   const m = h.match(/^#\/(founding|crowned)\/(\d+)$/);
-  if (m && chStart[m[1]] && chStart[m[1]][+m[2] - 1] != null) return { f: chStart[m[1]][+m[2] - 1] };
+  if (m){
+    if (m[2] === '0') return { f: 2 };
+    if (chStart[m[1]] && chStart[m[1]][+m[2] - 1] != null) return { f: chStart[m[1]][+m[2] - 1] };
+  }
   return null;
 }
 function route(){
@@ -887,13 +893,13 @@ $('#skip').addEventListener('click', skip);
 $('#replay').addEventListener('click', replay);
 nextB.addEventListener('click', next);
 prevB.addEventListener('click', prev);
-tocB.addEventListener('click', () => goHash('#/contents'));
+tocB.addEventListener('click', () => goHash('#/select'));
 addEventListener('keydown', e => {
   if (e.key === 'Escape') return skip();
   if (stage.dataset.state !== 'open') return;
   if (e.key === 'ArrowRight' || e.key === 'PageDown') next();
   else if (e.key === 'ArrowLeft' || e.key === 'PageUp') prev();
-  else if (e.key === 'Home') goHash('#/contents');
+  else if (e.key === 'Home') goHash('#/select');
 });
 let tx = null;
 stage.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
