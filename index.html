@@ -180,6 +180,17 @@ body[data-view="contents"] #stage,body[data-view="reader"] #stage{opacity:0;visi
 #stage.ready[data-state="closed"] #replay{opacity:.7;pointer-events:auto}
 .no3d .leaf.page,.no3d .board-back,.no3d .ground-l{display:none}
 
+button,a,.hit{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.hit{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:var(--hw,300px);height:var(--hh,450px);cursor:pointer;pointer-events:none}
+#stage[data-state="closed"] .hit,#stage[data-state="intro"] .hit{pointer-events:auto}
+/* sound toggle */
+.sndbtn{position:fixed;z-index:6;top:calc(.7rem + env(safe-area-inset-top,0px));right:max(1rem,2vw);background:none;border:0;padding:.7rem .9rem;cursor:pointer;
+  font-family:var(--fell);font-style:italic;font-size:1rem;color:#8f7d5c;opacity:.8;transition:color .3s,opacity .3s}
+.sndbtn:hover{color:#c9b58a;opacity:1}
+.sndbtn.needs,#snd2.needs{animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.4}}
+body[data-view="reader"] #snd{display:none}
+
 /* ───────── VIEWS ───────── */
 .view{position:fixed;inset:0;z-index:2;overflow-y:auto;-webkit-overflow-scrolling:touch;
   opacity:0;visibility:hidden;transition:opacity .8s ease,visibility 0s linear .8s}
@@ -278,6 +289,7 @@ body[data-view="contents"] #stage,body[data-view="reader"] #stage{opacity:0;visi
 <body data-view="book">
 <noscript><p style="position:fixed;inset:0;display:grid;place-items:center;margin:0;padding:2rem;text-align:center;color:#d9ccb2;font:1.3rem Georgia,serif">Or So She Thought needs JavaScript to open the book.</p></noscript>
 <div class="lamp" id="lamp"></div>
+<button class="sndbtn" id="snd" type="button"></button>
 
 <main id="stage" data-state="intro" data-pose="closed">
   <h1 class="sr">Or So She Thought, a novel by Queen Usman</h1>
@@ -291,6 +303,7 @@ body[data-view="contents"] #stage,body[data-view="reader"] #stage{opacity:0;visi
       </div>
     </div>
   </div>
+  <div class="hit" id="hit" aria-hidden="true"></div>
   <button class="hint" id="hint" type="button" tabindex="-1" aria-hidden="true">Open the book</button>
   <button class="ctl" id="skip" type="button">Skip</button>
   <button class="ctl" id="replay" type="button">Replay the opening</button>
@@ -330,7 +343,7 @@ body[data-view="contents"] #stage,body[data-view="reader"] #stage{opacity:0;visi
 <section class="view" id="reader" data-era="founding" tabindex="-1" aria-label="Reading" aria-hidden="true">
   <nav class="rnav" aria-label="Reading">
     <a href="#/contents">Or So She Thought</a>
-    <span class="right"><span class="era-name" id="eraName"></span><button type="button" id="theme"></button></span>
+    <span class="right"><span class="era-name" id="eraName"></span><button type="button" id="snd2"></button><button type="button" id="theme"></button></span>
   </nav>
   <article class="chapter">
     <header class="chead">
@@ -398,6 +411,201 @@ function compass(){
   return `<svg viewBox="-50 -50 100 100" fill="none" stroke="currentColor" stroke-width=".7" aria-hidden="true" focusable="false"><circle r="39"/><circle r="33.5" stroke-width=".35"/>${t}<path d="M0-32L3.2-3.2 32 0 3.2 3.2 0 32-3.2 3.2-32 0-3.2-3.2Z" stroke-width=".45"/><circle r="1.4" fill="currentColor" stroke="none"/></svg>`;
 }
 document.querySelectorAll('.compass').forEach(e => e.innerHTML = compass());
+
+/* ───────── sound (synthesised, no audio files) ───────── */
+const snd = (() => {
+  const KEY = 'ossth-sound';
+  const AC = window.AudioContext || window.webkitAudioContext;
+  let ctx = null, master, ambGain, noise, amb = false, mode = 'book', era = 'founding', crackleT = 0;
+  let enabled = store.get(KEY) !== 'off', tried = false;
+  const btns = [document.getElementById('snd'), document.getElementById('snd2')];
+
+  function buf(sec, brown){
+    const b = ctx.createBuffer(1, Math.floor(ctx.sampleRate * sec), ctx.sampleRate), d = b.getChannelData(0);
+    let last = 0;
+    for (let i = 0; i < d.length; i++){
+      const w = Math.random() * 2 - 1;
+      if (brown){ last = (last + .02 * w) / 1.02; d[i] = last * 3.5; } else d[i] = w;
+    }
+    return b;
+  }
+  function init(){
+    if (ctx || !AC) return;
+    try { ctx = new AC(); } catch(e){ ctx = null; return; }
+    master = ctx.createGain(); master.gain.value = enabled ? 1 : 0; master.connect(ctx.destination);
+    ambGain = ctx.createGain(); ambGain.gain.value = 0; ambGain.connect(master);
+    noise = buf(2, false);
+    ctx.onstatechange = () => { if (ctx.state === 'running'){ tried = false; if (enabled) startAmb(); } paint(); };
+  }
+  const live = () => !!ctx && ctx.state === 'running' && enabled;
+  const modeGain = () => mode === 'reader' ? .4 : mode === 'contents' ? .85 : .9;
+
+  /* soft ambience: a slow evolving pad in a warm room, with sparse, distant bell notes */
+  const SETS = {
+    founding: [
+      [73.42, 146.83, 220.00, 329.63, 349.23],
+      [116.54, 174.61, 220.00, 293.66, 349.23],
+      [98.00, 146.83, 233.08, 293.66, 349.23],
+      [110.00, 164.81, 220.00, 293.66, 392.00]
+    ],
+    crowned: [
+      [110.00, 220.00, 261.63, 329.63, 392.00],
+      [87.31, 220.00, 261.63, 329.63, 349.23],
+      [130.81, 196.00, 329.63, 392.00, 261.63],
+      [82.41, 246.94, 293.66, 392.00, 329.63]
+    ]
+  };
+  let padBus, verb, bellBus, ci = 0, chordT = 0, bellT = 0;
+  function impulse(sec){
+    const n = Math.floor(ctx.sampleRate * sec), b = ctx.createBuffer(2, n, ctx.sampleRate);
+    for (let c = 0; c < 2; c++){
+      const d = b.getChannelData(c);
+      for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 3);
+    }
+    return b;
+  }
+  function chord(){
+    if (!ctx || ctx.state !== 'running') return;
+    const t = ctx.currentTime, dur = 16, notes = SETS[era][ci++ % SETS[era].length];
+    const env = ctx.createGain();
+    env.gain.setValueAtTime(0, t); env.gain.linearRampToValueAtTime(1, t + 6);
+    env.gain.setValueAtTime(1, t + dur - 6); env.gain.linearRampToValueAtTime(0, t + dur);
+    env.connect(padBus);
+    notes.forEach((f, i) => {
+      [['sine', 0, 1], ['triangle', rand(-7, 7), .3]].forEach(([type, det, k]) => {
+        const o = ctx.createOscillator(); o.type = type; o.frequency.value = f; o.detune.value = det;
+        const g = ctx.createGain(); g.gain.value = (i === 0 ? .03 : .018) * k;
+        o.connect(g); g.connect(env); o.start(t); o.stop(t + dur + .2);
+      });
+    });
+  }
+  function chordLoop(){ chord(); chordT = setTimeout(chordLoop, 11000); }
+  function bell(){
+    if (live()){
+      const t = ctx.currentTime, ch = SETS[era][(ci + 3) % SETS[era].length];
+      const f = ch[1 + Math.floor(Math.random() * 4)] * 2, peak = rand(.02, .05);
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(peak, t + .02); g.gain.exponentialRampToValueAtTime(.0001, t + 4);
+      [[f, 1], [f * 2.01, .18]].forEach(([fr, k]) => {
+        const o = ctx.createOscillator(); o.type = 'sine'; o.frequency.value = fr;
+        const og = ctx.createGain(); og.gain.value = k; o.connect(og); og.connect(g); o.start(t); o.stop(t + 4.2);
+      });
+      g.connect(bellBus);
+    }
+    const slow = mode === 'reader' ? 2.2 : 1;
+    bellT = setTimeout(bell, rand(5500, 11000) * slow);
+  }
+  function startAmb(){
+    if (amb || !ctx || ctx.state !== 'running') return;
+    amb = true;
+    padBus = ctx.createGain();
+    const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1100; lp.Q.value = .3;
+    verb = ctx.createConvolver(); verb.buffer = impulse(3.6);
+    const wet = ctx.createGain(); wet.gain.value = .75; const dry = ctx.createGain(); dry.gain.value = .5;
+    padBus.connect(lp); lp.connect(dry); dry.connect(ambGain); lp.connect(verb); verb.connect(wet); wet.connect(ambGain);
+    bellBus = ctx.createGain(); const bd = ctx.createGain(); bd.gain.value = .35;
+    bellBus.connect(bd); bd.connect(ambGain); bellBus.connect(verb);
+    // very faint room air
+    const rs = ctx.createBufferSource(); rs.buffer = buf(6, true); rs.loop = true;
+    const rl = ctx.createBiquadFilter(); rl.type = 'lowpass'; rl.frequency.value = 170;
+    const rg = ctx.createGain(); rg.gain.value = .018;
+    rs.connect(rl); rl.connect(rg); rg.connect(ambGain); rs.start();
+    const t = ctx.currentTime;
+    ambGain.gain.cancelScheduledValues(t); ambGain.gain.setValueAtTime(0, t);
+    ambGain.gain.linearRampToValueAtTime(modeGain(), t + 6);
+    chordLoop(); bellT = setTimeout(bell, 3500);
+  }
+
+  function burst(t, dur, f0, f1, q, peak){
+    const s = ctx.createBufferSource(); s.buffer = noise; s.playbackRate.value = rand(.8, 1.3);
+    const bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.Q.value = q;
+    bp.frequency.setValueAtTime(f0, t); bp.frequency.exponentialRampToValueAtTime(f1, t + dur);
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(peak, t + dur * .25); g.gain.exponentialRampToValueAtTime(.001, t + dur);
+    s.connect(bp); bp.connect(g); g.connect(master); s.start(t, rand(0, 1.5), dur + .05);
+  }
+  function flip(dur = .25, vol = 1){
+    if (!live()) return;
+    const t = ctx.currentTime;
+    burst(t, dur, rand(3500, 5200), rand(900, 1600), .9, .2 * vol);
+    burst(t + dur * .72, .05, 2400, 1800, 3, .1 * vol);
+  }
+  function turn(){ flip(.38, .7); }
+  function cover(opening, dur = 1){
+    if (!live()) return;
+    const t = ctx.currentTime;
+    const o = ctx.createOscillator(); o.type = 'triangle';
+    o.frequency.setValueAtTime(opening ? 112 : 76, t); o.frequency.linearRampToValueAtTime(opening ? 76 : 112, t + dur);
+    const v = ctx.createOscillator(); v.frequency.value = 9; const vg = ctx.createGain(); vg.gain.value = 6; v.connect(vg); vg.connect(o.frequency);
+    const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 420; lp.Q.value = 5;
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.045, t + dur * .3); g.gain.linearRampToValueAtTime(0, t + dur);
+    o.connect(lp); lp.connect(g); g.connect(master); o.start(t); v.start(t); o.stop(t + dur + .1); v.stop(t + dur + .1);
+    burst(t, dur, 900, 600, 1.2, .1);
+  }
+  function thud(){
+    if (!live()) return;
+    const t = ctx.currentTime;
+    const o = ctx.createOscillator(); o.type = 'sine';
+    o.frequency.setValueAtTime(74, t); o.frequency.exponentialRampToValueAtTime(36, t + .35);
+    const g = ctx.createGain(); g.gain.setValueAtTime(.6, t); g.gain.exponentialRampToValueAtTime(.001, t + .42);
+    o.connect(g); g.connect(master); o.start(t); o.stop(t + .5);
+    const s = ctx.createBufferSource(); s.buffer = noise;
+    const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 280;
+    const ng = ctx.createGain(); ng.gain.setValueAtTime(.4, t); ng.gain.exponentialRampToValueAtTime(.001, t + .22);
+    s.connect(lp); lp.connect(ng); ng.connect(master); s.start(t, rand(0, 1.5), .3);
+  }
+
+  function setMode(v){
+    mode = v;
+    if (ctx && amb) ambGain.gain.setTargetAtTime(modeGain(), ctx.currentTime, .8);
+  }
+  function setEra(k){ era = k; }
+
+  function paint(){
+    const needs = enabled && !!AC && !live();
+    const label = !enabled ? 'Sound off' : needs ? 'Tap for sound' : 'Sound on';
+    btns.forEach(b => {
+      if (!b) return;
+      b.textContent = label;
+      b.setAttribute('aria-pressed', String(enabled && live()));
+      b.classList.toggle('needs', needs);
+      b.hidden = !AC;
+    });
+  }
+  function wake(){
+    init();
+    if (!ctx) return Promise.resolve();
+    if (ctx.state === 'suspended'){ const p = ctx.resume(); return (p && p.then ? p : Promise.resolve()).catch(() => {}); }
+    return Promise.resolve();
+  }
+  function unlock(){
+    wake().then(() => { if (ctx && ctx.state === 'running' && enabled) startAmb(); paint(); });
+  }
+  function toggle(){
+    init();
+    if (!ctx) return;
+    if (enabled && ctx.state !== 'running' && !tried){ tried = true; unlock(); return; }   // first tap wakes the audio
+    enabled = !enabled; store.set(KEY, enabled ? 'on' : 'off');
+    master.gain.setTargetAtTime(enabled ? 1 : 0, ctx.currentTime, .15);
+    if (enabled) wake().then(() => { if (ctx.state === 'running'){ startAmb(); flip(.3, .8); } paint(); });
+    paint();
+  }
+  function boot(){
+    btns.forEach(b => {
+      if (!b) return;
+      b.addEventListener('click', toggle);
+      ['pointerdown', 'keydown', 'touchend'].forEach(ev => b.addEventListener(ev, e => e.stopPropagation()));
+    });
+    ['pointerdown', 'keydown', 'touchend'].forEach(ev => addEventListener(ev, unlock, { once: true, capture: false }));
+    document.addEventListener('visibilitychange', () => {
+      if (!ctx) return;
+      if (document.hidden) ctx.suspend(); else if (enabled) { const p = ctx.resume(); if (p && p.catch) p.catch(() => {}); }
+    });
+    init(); unlock(); paint();
+  }
+  return { boot, flip, turn, cover, thud, mode: setMode, era: setEra };
+})();
 
 /* ───────── the book ───────── */
 const stage = $('#stage'), rig = $('.rig'), tilt = $('.tilt'), book = $('#book'), lamp = $('#lamp');
@@ -471,6 +679,8 @@ function layout(){
   stage.style.setProperty('--H', H + 'px');
   stage.style.setProperty('--s', S + 'px');
   stage.style.setProperty('--k', k);
+  stage.style.setProperty('--hw', (W * k) + 'px');
+  stage.style.setProperty('--hh', (H * k * .97) + 'px');
   leaves.forEach(l => {
     l.style.setProperty('--zc', (-l._i * S) + 'px');
     l.style.setProperty('--zo', (-(N - l._i) * S) + 'px');
@@ -491,6 +701,7 @@ function flip(leaf, to, o = {}){
   const am = -90 + rand(-12, 12), zm = (z0 + z1) / 2 + S * 3;
   const bend = o.bend !== undefined ? o.bend : rand(-3, 3);
   const dur = o.duration || 300, delay = o.delay || 0;
+  if (leaf._i === 0) snd.cover(to, dur / 1000); else snd.flip(dur / 1000, to ? 1 : .55);
   const a = leaf.animate([
     { transform: `translateZ(${z0}px) rotateY(${a0}deg) skewY(0deg)` },
     { transform: `translateZ(${zm}px) rotateY(${am}deg) skewY(${bend}deg)`, offset: .5 },
@@ -506,6 +717,7 @@ function flip(leaf, to, o = {}){
 }
 
 function thud(){
+  snd.thud();
   if (!can3d) return;
   tilt.animate([
     { transform: 'rotateX(16deg) translateY(0px)' },
@@ -606,6 +818,7 @@ const root = document.documentElement;
 function setView(v){
   const prev = document.body.dataset.view;
   document.body.dataset.view = v;
+  snd.mode(v);
   contentsV.classList.toggle('is-on', v === 'contents');
   readerV.classList.toggle('is-on', v === 'reader');
   contentsV.setAttribute('aria-hidden', v !== 'contents');
@@ -628,6 +841,7 @@ function showReader(key, n){
   const era = CHAPTERS[key], ch = era.chapters[n - 1];
   setView('reader');
   readerV.dataset.era = key;
+  snd.era(key); snd.turn();
   $('#eraName').textContent = era.name;
   $('#kicker').textContent = era.name;
   $('#chtitle').textContent = ch.title;
@@ -671,9 +885,11 @@ paintThemeBtn();
 build(); layout();
 addEventListener('resize', layout);
 addEventListener('hashchange', route);
+snd.boot();
 book.addEventListener('click', () => { if (stage.dataset.state === 'intro') skip(); else openBook(); });
 book.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); if (stage.dataset.state === 'intro') skip(); else openBook(); } });
 $('#hint').addEventListener('click', openBook);
+$('#hit').addEventListener('click', () => { if (stage.dataset.state === 'intro') skip(); else openBook(); });
 $('#skip').addEventListener('click', skip);
 $('#replay').addEventListener('click', replay);
 addEventListener('keydown', e => { if (e.key === 'Escape') skip(); });
