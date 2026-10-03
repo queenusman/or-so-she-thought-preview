@@ -14,7 +14,7 @@
         extend: {
           colors: {
             ink: '#11100f',
-            'ink-deep': '#0a0908',
+            'ink-deep': '#090807',
             'ink-panel': '#171614',
             'ink-muted': '#32302c',
             parchment: '#f5f1e8',
@@ -70,7 +70,7 @@
       color: #1a1816 !important;
     }
     .theme-ivory #siteHeader {
-      background-color: rgba(246, 243, 235, 0.95) !important;
+      background-color: rgba(246, 243, 235, 0.96) !important;
       border-color: #e4decb !important;
     }
     .theme-ivory .nav-button {
@@ -94,9 +94,8 @@
       border-color: #dcd3be !important;
       color: #534c41 !important;
     }
-    /* Document Marginalia Styling */
     .marginalia-box {
-      background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(168, 134, 83, 0.03) 10px, rgba(168, 134, 83, 0.03) 20px);
+      background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(168, 134, 83, 0.04) 10px, rgba(168, 134, 83, 0.04) 20px);
     }
   </style>
 </head>
@@ -106,7 +105,7 @@
   <header id="siteHeader" class="sticky top-0 z-50 backdrop-blur-md bg-ink/90 border-b border-ink-muted/50 transition-colors duration-500">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- Primary Logo / Brand -->
+      <!-- Primary Brand Link -->
       <a href="javascript:void(0)" onclick="switchView('home')" class="group flex flex-col focus:outline-none" aria-label="Or So She Thought Home">
         <span class="font-display tracking-[0.22em] text-base md:text-lg font-semibold text-parchment group-hover:text-bronze transition-colors">
           OR SO SHE THOUGHT
@@ -116,9 +115,9 @@
         </span>
       </a>
 
-      <!-- Desktop Clear Primary Navigation -->
+      <!-- Primary Navigation -->
       <nav class="hidden lg:flex items-center space-x-7 text-xs font-sans uppercase tracking-[0.18em]">
-        <button onclick="openReader('crowned')" class="px-4 py-2 bg-bronze/15 border border-bronze text-parchment hover:bg-bronze hover:text-ink font-medium tracking-[0.2em] transition-all rounded-sm flex items-center gap-2">
+        <button onclick="openReader('founding')" class="px-4 py-2 bg-bronze/15 border border-bronze text-parchment hover:bg-bronze hover:text-ink font-medium tracking-[0.2em] transition-all rounded-sm flex items-center gap-2">
           <span>Start Reading</span>
           <span class="text-[10px] opacity-70">&rarr;</span>
         </button>
@@ -136,14 +135,13 @@
         </button>
       </nav>
 
-      <!-- Quick Action Right Group -->
+      <!-- Quick Action Group -->
       <div class="flex items-center space-x-3">
-        <!-- New Reader Orientation Button -->
         <button onclick="toggleGuideModal(true)" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 border border-ink-muted text-[11px] font-sans uppercase tracking-wider text-parchment-soft/70 hover:text-parchment hover:border-bronze transition-colors">
           <svg class="w-3.5 h-3.5 text-bronze" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span>Where to Begin?</span>
+          <span>Reading Order</span>
         </button>
 
         <!-- Mobile Drawer Hamburger -->
@@ -157,8 +155,8 @@
 
     <!-- Mobile Drawer -->
     <div id="mobileNav" class="hidden lg:hidden border-b border-ink-muted bg-ink-deep/98 px-6 py-6 space-y-4 text-xs font-sans uppercase tracking-[0.2em]">
-      <button onclick="openReader('crowned'); toggleMobileNav()" class="block w-full text-left py-2.5 px-3 bg-bronze/20 text-bronze font-semibold border-l-2 border-bronze">
-        &rarr; Start Reading (Chapter One)
+      <button onclick="openReader('founding'); toggleMobileNav()" class="block w-full text-left py-2.5 px-3 bg-bronze/20 text-bronze font-semibold border-l-2 border-bronze">
+        &rarr; Start Reading (Victoria: Chapter One)
       </button>
       <button onclick="switchView('eras'); toggleMobileNav()" class="block w-full text-left py-2 text-parchment-soft hover:text-parchment">
         The Two Eras
@@ -173,37 +171,37 @@
         The Archive & Look Twice
       </button>
       <button onclick="toggleGuideModal(true); toggleMobileNav()" class="block w-full text-left py-2 text-bronze/80 hover:text-bronze">
-        &bull; New Reader Guide
+        &bull; Reading Order Guide
       </button>
     </div>
   </header>
 
-  <!-- "Where to Begin?" Quick Guide Modal -->
-  <div id="guideModal" class="fixed inset-0 z-50 bg-ink-deep/80 backdrop-blur-sm hidden items-center justify-center p-4">
+  <!-- Reading Order Guidance Modal -->
+  <div id="guideModal" class="fixed inset-0 z-50 bg-ink-deep/85 backdrop-blur-sm hidden items-center justify-center p-4">
     <div class="bg-ink-panel border border-bronze/50 max-w-xl w-full p-8 md:p-10 shadow-2xl relative text-left">
       <button onclick="toggleGuideModal(false)" class="absolute top-5 right-5 text-parchment/50 hover:text-parchment font-sans text-xl" aria-label="Close modal">&times;</button>
       
-      <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-bronze block mb-2">New Reader Guidance</span>
-      <h3 class="font-display text-2xl text-parchment mb-4">How to Read This Story</h3>
+      <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-bronze block mb-2">Reading Order Architecture</span>
+      <h3 class="font-display text-2xl text-parchment mb-4">Start with the Bedrock</h3>
       
       <div class="space-y-4 font-serif text-parchment-soft/85 text-base leading-relaxed">
         <p>
-          <strong class="text-parchment font-semibold">1. Start with The Crowned Era (Elizabeth):</strong> This is the psychological heart of the novel. You experience the palace court, the subtle weight of expectation, and the mystery of Elizabeth's inherited path.
+          <strong class="text-bronze font-semibold">1. START HERE &mdash; The Founding Era (Victoria):</strong> Victoria’s narrative is the bedrock. You begin in mud, fractured provinces, and raw emergency negotiations. This is where you see how provisional survival choices calcified into the sacred traditions of a kingdom.
         </p>
         <p>
-          <strong class="text-parchment font-semibold">2. Follow with The Founding Era (Victoria):</strong> Victoria's narrative is the bedrock. It reveals how the emergency decisions of ancestors became the rigid laws Elizabeth must live inside.
+          <strong class="text-parchment font-semibold">2. THEN &mdash; The Crowned Era (Elizabeth):</strong> You transition into the polished white galleries generations later. Having witnessed Victoria forge the precedents, you now watch Elizabeth navigate the weight of having been formed to uphold them.
         </p>
         <p class="text-sm italic text-bronze/90 border-l border-bronze/40 pl-3 py-1">
-          You can read either era first without confusion. But starting with Elizabeth lets you feel the question, while Victoria reveals where it was forged.
+          A solution can outlive the problem that created it. By seeing Victoria make the rules, Elizabeth's quiet rebellion becomes profound.
         </p>
       </div>
 
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <button onclick="toggleGuideModal(false); openReader('crowned')" class="px-5 py-3 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 text-center">
-          Begin Elizabeth's Story
+        <button onclick="toggleGuideModal(false); openReader('founding')" class="px-5 py-3 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 text-center">
+          Begin Chapter 1: Victoria
         </button>
-        <button onclick="toggleGuideModal(false); openReader('founding')" class="px-5 py-3 border border-ink-muted text-parchment hover:border-bronze font-sans text-xs uppercase tracking-[0.2em] text-center">
-          Begin Victoria's Story
+        <button onclick="toggleGuideModal(false); openReader('crowned')" class="px-5 py-3 border border-ink-muted text-parchment hover:border-bronze font-sans text-xs uppercase tracking-[0.2em] text-center">
+          Go To Elizabeth's Chapter
         </button>
       </div>
     </div>
@@ -212,14 +210,14 @@
   <main class="flex-grow">
     
     <!-- ========================================================================= -->
-    <!-- VIEW 1: HOME (Confusion-Free Entry Point) -->
+    <!-- VIEW 1: HOME -->
     <!-- ========================================================================= -->
     <section id="view-home" class="view-section view-visible">
       
       <!-- Hero Presentation -->
       <div class="max-w-4xl mx-auto px-6 pt-20 md:pt-28 pb-16 text-center">
         <p class="font-sans text-xs uppercase tracking-[0.35em] text-bronze mb-5">
-          A Psychological Novel
+          A Psychological Novel in Two Eras
         </p>
         
         <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-light text-parchment tracking-[0.14em] uppercase leading-tight mb-8">
@@ -232,10 +230,10 @@
           A story of duty, desire, choice, and the things that become part of us before we think to question them.
         </p>
 
-        <!-- Primary Action Center -->
+        <!-- Primary Action Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-sans uppercase tracking-[0.2em] mb-12">
-          <button onclick="openReader('crowned')" class="w-full sm:w-auto px-8 py-4 bg-bronze text-ink font-semibold tracking-[0.22em] hover:bg-bronze/90 transition-all rounded-sm shadow-lg flex items-center justify-center gap-2">
-            <span>Begin Reading: Chapter One</span>
+          <button onclick="openReader('founding')" class="w-full sm:w-auto px-8 py-4 bg-bronze text-ink font-semibold tracking-[0.22em] hover:bg-bronze/90 transition-all rounded-sm shadow-lg flex items-center justify-center gap-2">
+            <span>Begin the Story: The Founding Era</span>
             <span>&rarr;</span>
           </button>
           
@@ -249,40 +247,64 @@
         </p>
       </div>
 
-      <!-- Quick Guidance Banner for First-Time Readers -->
+      <!-- First Time Reader Direct Guidance Banner -->
       <div class="border-y border-ink-muted/40 py-8 bg-ink-panel/60">
         <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="text-left">
-            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-bronze font-semibold block mb-1">First Time Here?</span>
+            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-bronze font-semibold block mb-1">
+              Start Here: The Foundation
+            </span>
             <p class="font-serif text-base text-parchment/90">
-              The novel is composed of two interconnected eras across Norwyn's history.
+              The chronicle opens in Victoria's era—where the first compromises of Norwyn were signed into stone.
             </p>
           </div>
           <div class="flex items-center gap-3 self-start md:self-auto shrink-0 text-xs font-sans uppercase tracking-[0.16em]">
-            <span class="text-parchment-soft/60">Recommended starting point:</span>
-            <button onclick="openReader('crowned')" class="px-3 py-1.5 border border-bronze/70 text-bronze hover:bg-bronze hover:text-ink transition-colors font-medium">
-              Elizabeth's Era &rarr;
+            <span class="text-parchment-soft/60">Starting Point:</span>
+            <button onclick="openReader('founding')" class="px-4 py-2 border border-bronze bg-bronze/10 text-bronze hover:bg-bronze hover:text-ink transition-colors font-medium">
+              Victoria: Chapter One &rarr;
             </button>
           </div>
         </div>
       </div>
 
-      <!-- The Two Eras Side-by-Side Cards (Clear, uncluttered layout) -->
+      <!-- The Two Eras Side-by-Side Cards (Founding First, Crowned Second) -->
       <div class="max-w-6xl mx-auto px-6 py-20">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <span class="font-sans text-xs tracking-[0.25em] uppercase text-bronze block mb-2">Two Timelines, One Kingdom</span>
-          <h2 class="font-display text-2xl md:text-3xl text-parchment">Choose Your Path into Norwyn</h2>
+          <h2 class="font-display text-2xl md:text-3xl text-parchment">The Architecture of Norwyn</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           
-          <!-- Crowned Era (Recommended Primary) -->
-          <div class="content-panel border-2 border-bronze/40 bg-ink-panel p-8 md:p-10 flex flex-col justify-between relative group hover:border-bronze transition-all">
-            <div class="absolute -top-3.5 right-6 px-3 py-1 bg-burgundy border border-burgundy-dim text-[10px] font-sans uppercase tracking-[0.2em] text-parchment font-semibold">
-              Primary Starting Point
+          <!-- Founding Era (Victoria) - Primary Starting Point -->
+          <div class="content-panel border-2 border-bronze/60 bg-ink-panel p-8 md:p-10 flex flex-col justify-between relative group hover:border-bronze transition-all">
+            <div class="absolute -top-3.5 right-6 px-3 py-1 bg-bronze text-ink text-[10px] font-sans uppercase tracking-[0.2em] font-semibold">
+              Start Here &bull; The Genesis
             </div>
             <div>
-              <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-bronze block mb-2">The Crowned Era</span>
+              <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-bronze block mb-2">The Founding Era</span>
+              <h3 class="font-display text-2xl text-parchment mb-4">Victoria's Story</h3>
+              <p class="font-sans text-xs tracking-wider uppercase text-parchment/50 mb-4">How Decisions Become Traditions</p>
+              <p class="font-serif text-base text-parchment-soft/85 leading-relaxed font-light mb-6">
+                How Norwyn became Norwyn. In an age of mud and burned storehouses, every compromise was an emergency solution. 
+                Nobody planned for a temporary agreement to outlive the war that summoned it.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-ink-muted/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span class="font-sans text-[10px] tracking-[0.18em] uppercase text-parchment/40">Precedent &bull; Survival &bull; Alliances</span>
+              <button onclick="openReader('founding')" class="w-full sm:w-auto px-5 py-2.5 bg-bronze text-ink text-xs font-sans tracking-[0.18em] uppercase font-medium hover:bg-bronze/90 transition-all text-center">
+                Read Chapter One: Before Norwyn &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Crowned Era (Elizabeth) - Secondary Follow-up -->
+          <div class="content-panel border border-ink-muted/60 bg-ink-panel/70 p-8 md:p-10 flex flex-col justify-between relative group hover:border-bronze/50 transition-all">
+            <div class="absolute -top-3.5 right-6 px-3 py-1 bg-burgundy/80 border border-burgundy-dim text-[10px] font-sans uppercase tracking-[0.2em] text-parchment font-semibold">
+              The Succession
+            </div>
+            <div>
+              <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-parchment/50 block mb-2">The Crowned Era</span>
               <h3 class="font-display text-2xl text-parchment mb-4">Elizabeth's Story</h3>
               <p class="font-sans text-xs tracking-wider uppercase text-parchment/50 mb-4">The Present-Day Royal Court</p>
               <p class="font-serif text-base text-parchment-soft/85 leading-relaxed font-light mb-6">
@@ -292,27 +314,8 @@
             </div>
             <div class="pt-6 border-t border-ink-muted/50 flex flex-col sm:flex-row items-center justify-between gap-4">
               <span class="font-sans text-[10px] tracking-[0.18em] uppercase text-parchment/40">Duty &bull; Consent &bull; Selfhood</span>
-              <button onclick="openReader('crowned')" class="w-full sm:w-auto px-5 py-2.5 bg-bronze text-ink text-xs font-sans tracking-[0.18em] uppercase font-medium hover:bg-bronze/90 transition-all text-center">
-                Read Chapter One &rarr;
-              </button>
-            </div>
-          </div>
-
-          <!-- Founding Era (Historical Foundation) -->
-          <div class="content-panel border border-ink-muted/60 bg-ink-panel/70 p-8 md:p-10 flex flex-col justify-between relative group hover:border-bronze/50 transition-all">
-            <div>
-              <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-parchment/50 block mb-2">The Founding Era</span>
-              <h3 class="font-display text-2xl text-parchment mb-4">Victoria's Story</h3>
-              <p class="font-sans text-xs tracking-wider uppercase text-parchment/50 mb-4">The Genesis of the Precedents</p>
-              <p class="font-serif text-base text-parchment-soft/85 leading-relaxed font-light mb-6">
-                How Norwyn became Norwyn. In an age of fractured provinces, every compromise was practical. 
-                Nobody planned for a temporary solution to outlive the problem that summoned it.
-              </p>
-            </div>
-            <div class="pt-6 border-t border-ink-muted/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span class="font-sans text-[10px] tracking-[0.18em] uppercase text-parchment/40">Alliances &bull; Precedents &bull; War</span>
-              <button onclick="openReader('founding')" class="w-full sm:w-auto px-5 py-2.5 border border-ink-muted text-parchment text-xs font-sans tracking-[0.18em] uppercase hover:border-bronze hover:text-bronze transition-all text-center">
-                Read Chapter One &rarr;
+              <button onclick="openReader('crowned')" class="w-full sm:w-auto px-5 py-2.5 border border-ink-muted text-parchment text-xs font-sans tracking-[0.18em] uppercase hover:border-bronze hover:text-bronze transition-all text-center">
+                Read Chapter One: The Weight of Consent &rarr;
               </button>
             </div>
           </div>
@@ -320,21 +323,21 @@
         </div>
       </div>
 
-      <!-- Quick Exploration Shortcuts -->
+      <!-- Quick Exploration Grid -->
       <div class="border-t border-ink-muted/40 py-16 bg-ink-deep/60">
         <div class="max-w-5xl mx-auto px-6">
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             
+            <div onclick="switchView('eras')" class="p-6 border border-ink-muted/40 hover:border-bronze/50 transition-all cursor-pointer bg-ink-panel/40">
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-2">Structure</span>
+              <h4 class="font-display text-lg text-parchment mb-2">The Two Eras</h4>
+              <p class="font-serif text-sm text-parchment-soft/70">From Victoria's mud to Elizabeth's marble halls.</p>
+            </div>
+
             <div onclick="switchView('characters')" class="p-6 border border-ink-muted/40 hover:border-bronze/50 transition-all cursor-pointer bg-ink-panel/40">
               <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-2">Dossiers</span>
               <h4 class="font-display text-lg text-parchment mb-2">The Characters</h4>
-              <p class="font-serif text-sm text-parchment-soft/70">Elizabeth, Queen Anne, Edward, and Elias.</p>
-            </div>
-
-            <div onclick="switchView('world')" class="p-6 border border-ink-muted/40 hover:border-bronze/50 transition-all cursor-pointer bg-ink-panel/40">
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-2">Geography</span>
-              <h4 class="font-display text-lg text-parchment mb-2">The World of Norwyn</h4>
-              <p class="font-serif text-sm text-parchment-soft/70">The White Spires, Valenne, and the High Pass.</p>
+              <p class="font-serif text-sm text-parchment-soft/70">Victoria, Queen Anne, Elizabeth, Edward, and Elias.</p>
             </div>
 
             <div onclick="switchView('archive')" class="p-6 border border-ink-muted/40 hover:border-bronze/50 transition-all cursor-pointer bg-ink-panel/40">
@@ -353,7 +356,6 @@
     <!-- ========================================================================= -->
     <section id="view-eras" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       
-      <!-- Back Navigation Header -->
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-ink-muted/40">
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-parchment-soft/60 hover:text-parchment flex items-center gap-1.5">
           <span>&larr;</span> <span>Back to Home</span>
@@ -364,33 +366,82 @@
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="font-display text-3xl md:text-4xl text-parchment mb-4">Two Eras, One History</h2>
         <p class="font-serif text-parchment-soft/85 text-lg font-light leading-relaxed">
-          The two eras are not separate chronicles. Victoria made decisions in response to emergencies; 
-          generations later, Elizabeth inherits those decisions as the natural order of things.
+          The two eras are not separate chronicles. Victoria made decisions in response to immediate emergencies; 
+          generations later, Elizabeth inherits those decisions as the holy and natural order of things.
         </p>
       </div>
 
-      <!-- Segmented Era Switcher -->
+      <!-- Segmented Era Switcher (Founding First) -->
       <div class="flex justify-center mb-12">
         <div class="inline-flex p-1 bg-ink-panel border border-ink-muted/60 rounded-sm">
-          <button id="btnEraCrowned" onclick="toggleEraContent('crowned')" class="px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all bg-bronze text-ink font-semibold">
-            The Crowned Era (Elizabeth)
+          <button id="btnEraFounding" onclick="toggleEraContent('founding')" class="px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all bg-bronze text-ink font-semibold">
+            1. The Founding Era (Victoria)
           </button>
-          <button id="btnEraFounding" onclick="toggleEraContent('founding')" class="px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all text-parchment-soft/60 hover:text-parchment">
-            The Founding Era (Victoria)
+          <button id="btnEraCrowned" onclick="toggleEraContent('crowned')" class="px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all text-parchment-soft/60 hover:text-parchment">
+            2. The Crowned Era (Elizabeth)
           </button>
         </div>
       </div>
 
+      <!-- Founding Era Detailed Box (Default View) -->
+      <div id="contentEraFounding" class="space-y-8">
+        <div class="border border-bronze/50 bg-ink-panel p-8 md:p-12 relative">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-bronze font-semibold">The Starting Point &bull; The Bedrock</span>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-parchment/40">Chronological Origin</span>
+          </div>
+          <h3 class="font-display text-3xl text-parchment mb-6">The Founding Era</h3>
+          
+          <div class="space-y-4 font-serif text-lg text-parchment-soft/90 font-light leading-relaxed">
+            <p>
+              Before Norwyn had traditions, someone had to make the decisions that became them. 
+              Victoria did not rule over a polished court of protocol; she ruled over mud, disputed river basins, 
+              and four neighboring families who took treaties only as temporary pauses between skirmishes.
+            </p>
+            <p>
+              Every ceremonial rule Elizabeth assumes is ancient was once an improvised compromise signed late at night by a woman who needed three barons to stop burning each other's grain silos.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 py-6 border-y border-ink-muted/40 my-8">
+            <div>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-1">The Dilemma</span>
+              <p class="font-serif text-sm text-parchment/90">Regional fragmentation & constant defensive attrition.</p>
+            </div>
+            <div>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-1">The Pragmatic Solution</span>
+              <p class="font-serif text-sm text-parchment/90">A centralized hereditary council binding land to blood.</p>
+            </div>
+            <div>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-1">The Consequence</span>
+              <p class="font-serif text-sm text-parchment/90">A temporary crutch became an untouchable holy duty.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button onclick="openReader('founding')" class="px-6 py-3 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
+              Begin The Novel: Chapter One &rarr;
+            </button>
+            <button onclick="switchView('archive')" class="font-sans text-xs uppercase tracking-[0.16em] text-parchment-soft/70 hover:text-parchment">
+              Inspect Court Records
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Crowned Era Detailed Box -->
-      <div id="contentEraCrowned" class="space-y-8">
-        <div class="border border-bronze/40 bg-ink-panel p-8 md:p-12 relative">
-          <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-burgundy font-semibold block mb-2">The Psychological Center</span>
+      <div id="contentEraCrowned" class="space-y-8 hidden">
+        <div class="border border-ink-muted/60 bg-ink-panel p-8 md:p-12 relative">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-burgundy font-semibold">The Inheritance &bull; Present Court</span>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-parchment/40">Generations Later</span>
+          </div>
           <h3 class="font-display text-3xl text-parchment mb-6">The Crowned Era</h3>
           
           <div class="space-y-4 font-serif text-lg text-parchment-soft/90 font-light leading-relaxed">
             <p>
               Elizabeth was never starved of affection or subjected to overt brutality. Her mother, Queen Anne, did not build a prison; she built an education. 
-              Every lesson, every posture, every arranged tea with Edward of Valenne was planned with meticulous love.
+              Every lesson, every posture, every arranged tea with Edward of Valenne was planned with meticulous maternal care.
             </p>
             <p>
               The psychological tension begins when Elizabeth realizes the most dangerous cage is not the one built against your will, 
@@ -415,53 +466,10 @@
 
           <div class="flex items-center gap-4">
             <button onclick="openReader('crowned')" class="px-6 py-3 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
-              Read Chapter One: The Weight of Consent &rarr;
+              Read Elizabeth's Story: Chapter One &rarr;
             </button>
             <button onclick="switchView('characters')" class="font-sans text-xs uppercase tracking-[0.16em] text-parchment-soft/70 hover:text-parchment">
               View Characters
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Founding Era Detailed Box -->
-      <div id="contentEraFounding" class="space-y-8 hidden">
-        <div class="border border-ink-muted/60 bg-ink-panel p-8 md:p-12 relative">
-          <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-bronze font-semibold block mb-2">The Foundation</span>
-          <h3 class="font-display text-3xl text-parchment mb-6">The Founding Era</h3>
-          
-          <div class="space-y-4 font-serif text-lg text-parchment-soft/90 font-light leading-relaxed">
-            <p>
-              Before Norwyn had traditions, someone had to make the decisions that became them. 
-              Victoria did not rule over a polished court of protocol; she ruled over mud, disputed river basins, 
-              and four neighboring families who took treaties only as temporary pauses between skirmishes.
-            </p>
-            <p>
-              Every ceremonial rule Elizabeth assumes is ancient was once an improvised compromise signed late at night by a woman who needed three barons to stop burning each other's grain silos.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 py-6 border-y border-ink-muted/40 my-8">
-            <div>
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-1">Original Problem</span>
-              <p class="font-serif text-sm text-parchment/90">Regional fragmentation & constant defensive attrition.</p>
-            </div>
-            <div>
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-1">Victoria's Solution</span>
-              <p class="font-serif text-sm text-parchment/90">A centralized hereditary council binding land to blood.</p>
-            </div>
-            <div>
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block mb-1">The Long Shadow</span>
-              <p class="font-serif text-sm text-parchment/90">A temporary crutch became an untouchable holy duty.</p>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-4">
-            <button onclick="openReader('founding')" class="px-6 py-3 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
-              Read Chapter One: Before Norwyn &rarr;
-            </button>
-            <button onclick="switchView('archive')" class="font-sans text-xs uppercase tracking-[0.16em] text-parchment-soft/70 hover:text-parchment">
-              Inspect Court Records
             </button>
           </div>
         </div>
@@ -532,7 +540,7 @@
       </div>
 
       <div class="mt-14 text-center">
-        <button onclick="openReader('crowned')" class="px-6 py-3 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
+        <button onclick="openReader('founding')" class="px-6 py-3 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
           Enter The Novel &rarr;
         </button>
       </div>
@@ -540,7 +548,7 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- VIEW 4: CHARACTERS (Minimal & Nuanced) -->
+    <!-- VIEW 4: CHARACTERS -->
     <!-- ========================================================================= -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       
@@ -560,17 +568,17 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <!-- Elizabeth -->
-        <div class="content-panel border border-ink-muted/60 p-8 bg-ink-panel">
+        <!-- Victoria (Leading Character) -->
+        <div class="content-panel border border-bronze/50 p-8 bg-ink-panel md:col-span-2">
           <div class="flex items-baseline justify-between mb-3">
-            <h3 class="font-display text-2xl text-parchment">Princess Elizabeth</h3>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze">The Crowned Era</span>
+            <h3 class="font-display text-2xl text-parchment">Queen Victoria</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze">The Founding Era &bull; The Architect</span>
           </div>
           <p class="font-serif text-base text-parchment-soft/85 leading-relaxed font-light mb-4">
-            Raised not with harsh commands, but with clear, loving expectations. Her struggle is not an unbearable tyrant; it is the agonizing ambiguity between what has been carefully cultivated in her and what she actually wants.
+            The architect whose emergency pragmatism became the holy scripture of Norwyn. She made the first sacrifices so there would be a country at all, never foreseeing that the boundaries she drew in ink would harden into cages cast in iron.
           </p>
           <p class="font-serif italic text-xs text-parchment/60 pt-4 border-t border-ink-muted/30">
-            "How do you question a path when everyone who loves you walked it to keep you safe?"
+            "Generations who haven't been born don't have to carry stretchers. Bind it so hard they will think God wrote it into the limestone."
           </p>
         </div>
 
@@ -585,6 +593,20 @@
           </p>
           <p class="font-serif italic text-xs text-parchment/60 pt-4 border-t border-ink-muted/30">
             "A mother who permits illusions in this room is simply preparing her child for an execution."
+          </p>
+        </div>
+
+        <!-- Elizabeth -->
+        <div class="content-panel border border-ink-muted/60 p-8 bg-ink-panel">
+          <div class="flex items-baseline justify-between mb-3">
+            <h3 class="font-display text-2xl text-parchment">Princess Elizabeth</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze">The Crowned Era</span>
+          </div>
+          <p class="font-serif text-base text-parchment-soft/85 leading-relaxed font-light mb-4">
+            Raised not with harsh commands, but with clear, loving expectations. Her struggle is not an unbearable tyrant; it is the agonizing ambiguity between what has been carefully cultivated in her and what she actually wants.
+          </p>
+          <p class="font-serif italic text-xs text-parchment/60 pt-4 border-t border-ink-muted/30">
+            "How do you question a path when everyone who loves you walked it to keep you safe?"
           </p>
         </div>
 
@@ -616,25 +638,11 @@
           </p>
         </div>
 
-        <!-- Victoria -->
-        <div class="content-panel border border-ink-muted/60 p-8 bg-ink-panel md:col-span-2">
-          <div class="flex items-baseline justify-between mb-3">
-            <h3 class="font-display text-2xl text-parchment">Queen Victoria</h3>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze">The Founding Era</span>
-          </div>
-          <p class="font-serif text-base text-parchment-soft/85 leading-relaxed font-light mb-4">
-            The architect whose emergency pragmatism became the holy scripture of Norwyn. She made the first sacrifices so there would be a country at all, never foreseeing that the boundaries she drew in ink would harden into cages cast in iron.
-          </p>
-          <p class="font-serif italic text-xs text-parchment/60 pt-4 border-t border-ink-muted/30">
-            "Generations who haven't been born don't have to carry stretchers. Bind it so hard they will think God wrote it into the limestone."
-          </p>
-        </div>
-
       </div>
 
       <div class="mt-14 text-center">
-        <button onclick="openReader('crowned')" class="px-8 py-3.5 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
-          Begin The Novel &rarr;
+        <button onclick="openReader('founding')" class="px-8 py-3.5 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
+          Begin The Novel: Chapter One &rarr;
         </button>
       </div>
 
@@ -662,15 +670,14 @@
 
       <div class="space-y-8">
         
-        <!-- Record 1 -->
+        <!-- Record 1: The Founding Treaty -->
         <div class="border border-ink-muted/60 bg-ink-panel p-6 md:p-8 rounded-sm">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-ink-muted/40 mb-6">
             <div>
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block">Record #0012-A &bull; Treaty of the First Stones</span>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block">Record #0012-A &bull; Treaty of the First Stones (Founding Era)</span>
               <h3 class="font-display text-xl text-parchment mt-1">Edict on the Consanguine League of Valenne</h3>
             </div>
             
-            <!-- "Look Twice" Inspection Button -->
             <button onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-bronze/60 bg-bronze/10 text-bronze hover:bg-bronze hover:text-ink text-xs font-sans tracking-[0.16em] uppercase transition-all flex items-center gap-2">
               <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -680,7 +687,6 @@
             </button>
           </div>
 
-          <!-- Official Surface Text -->
           <div class="font-serif text-base text-parchment-soft/85 leading-relaxed">
             <p>
               "Let it be inscribed by witness of both High Seats: Henceforth, Norwyn and the House of Valenne shall govern under unified marital concord. 
@@ -689,7 +695,6 @@
             </p>
           </div>
 
-          <!-- The Second Look (Revealed) -->
           <div id="layer-rec1" class="hidden mt-6 pt-6 border-t border-bronze/30 bg-burgundy/15 p-5 border-l-2 border-l-burgundy marginalia-box transition-all">
             <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze font-semibold block mb-1">
               Private Diary Fragment: Queen Victoria (Founding Era)
@@ -700,11 +705,11 @@
           </div>
         </div>
 
-        <!-- Record 2 -->
+        <!-- Record 2: The Nursery Directive -->
         <div class="border border-ink-muted/60 bg-ink-panel p-6 md:p-8 rounded-sm">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-ink-muted/40 mb-6">
             <div>
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block">Record #0087-C &bull; Royal Nursery Directive</span>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-bronze block">Record #0087-C &bull; Royal Nursery Directive (Crowned Era)</span>
               <h3 class="font-display text-xl text-parchment mt-1">Memorandum on Elizabeth’s Schedule</h3>
             </div>
             
@@ -738,7 +743,7 @@
       </div>
 
       <div class="mt-14 text-center">
-        <button onclick="openReader('crowned')" class="px-8 py-3.5 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
+        <button onclick="openReader('founding')" class="px-8 py-3.5 bg-bronze text-ink font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-bronze/90 transition-all">
           Proceed to Reading &rarr;
         </button>
       </div>
@@ -753,42 +758,85 @@
       <!-- Top Reader Utility Bar -->
       <div class="max-w-3xl mx-auto px-6 mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-ink-muted/40 pb-5">
         
-        <!-- Return Button -->
         <button onclick="switchView('home')" class="text-xs font-sans uppercase tracking-[0.18em] text-parchment-soft/70 hover:text-parchment flex items-center gap-1.5">
           <span>&larr;</span> <span>Return to Overview</span>
         </button>
 
         <!-- Reading Controls: Size & Palette -->
         <div class="flex items-center space-x-3">
-          <!-- Text size adjustment -->
           <div class="flex items-center border border-ink-muted rounded-sm text-xs font-sans">
             <button onclick="changeFontSize(-1)" class="px-2.5 py-1 text-parchment-soft hover:text-parchment" title="Decrease font size">A-</button>
             <span class="text-ink-muted">|</span>
             <button onclick="changeFontSize(1)" class="px-2.5 py-1 text-parchment-soft hover:text-parchment font-semibold" title="Increase font size">A+</button>
           </div>
 
-          <!-- Ivory Paper vs Night Ink Toggle -->
           <button onclick="toggleReadingTheme()" id="btnThemeToggle" class="px-3 py-1 border border-ink-muted text-[11px] font-sans tracking-wider uppercase text-parchment-soft/80 hover:border-bronze transition-colors">
             Ivory Mode
           </button>
         </div>
       </div>
 
-      <!-- Era Switcher within Reader (Easy chapter toggling) -->
+      <!-- Era Switcher within Reader (Victoria is Default Tab 1) -->
       <div class="max-w-xl mx-auto px-6 mb-12 flex justify-center space-x-6 text-xs font-sans uppercase tracking-[0.18em]">
-        <button id="readerTabCrowned" onclick="loadChapter('crowned')" class="py-1 border-b-2 border-bronze text-parchment font-medium">
-          Elizabeth (Chapter 1)
+        <button id="readerTabFounding" onclick="loadChapter('founding')" class="py-1 border-b-2 border-bronze text-parchment font-medium">
+          1. Victoria: Chapter 1
         </button>
-        <button id="readerTabFounding" onclick="loadChapter('founding')" class="py-1 border-b-2 border-transparent text-parchment-soft/50 hover:text-parchment">
-          Victoria (Chapter 1)
+        <button id="readerTabCrowned" onclick="loadChapter('crowned')" class="py-1 border-b-2 border-transparent text-parchment-soft/50 hover:text-parchment">
+          2. Elizabeth: Chapter 1
         </button>
       </div>
 
       <!-- Reading Content Container -->
       <article id="readingBody" class="max-w-2xl mx-auto px-6 text-lg leading-relaxed font-serif transition-all duration-300">
         
+        <!-- Founding Era Chapter One (Default Loaded Chapter) -->
+        <div id="chapter-founding" class="space-y-8">
+          <div class="text-center mb-14 space-y-3">
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-bronze">The Founding Era &bull; Chapter One &bull; Starting Point</p>
+            <h1 class="font-display text-3xl sm:text-4xl text-parchment tracking-wide">Before Norwyn</h1>
+            <div class="w-10 h-px bg-bronze/40 mx-auto mt-6"></div>
+          </div>
+
+          <p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-bronze">
+            The mud had ruined Victoria's hem by noon, but she refused to let the boy brush it away.
+          </p>
+
+          <p>
+            "Leave it," she said, leaning over the raw pine table. "If Lord Valenne thinks I have dry shoes, he'll assume the crossing was easy. 
+            If he thinks the crossing was easy, he will demand the toll bridges on the east bank."
+          </p>
+
+          <p>
+            There was no throne room. There was merely an abandoned storehouse whose roof had survived the winter fire. 
+            The four families sat upon salt barrels, each keeping one hand within reach of their daggers while their clerks argued over water rights. 
+            Everyone in the province was tired of burying cousins.
+          </p>
+
+          <p>
+            "We make the marriage treaty for twenty years," Valenne’s envoy muttered. "Not thirty. Twenty."
+          </p>
+
+          <p>
+            "Make it hereditary," Victoria replied without lifting her head from the surveyor's grid. 
+            Her eyes were bloodshot from four nights without sleep.
+          </p>
+
+          <p>
+            "Hereditary?" the clerk gasped. "Your Grace, that binds generations who haven't yet been born."
+          </p>
+
+          <p>
+            "Generations who haven't been born don't have to carry stretchers," Victoria said. 
+            "Bind it so hard that by the time our grandchildren are old enough to dispute it, they will think God wrote it into the limestone."
+          </p>
+
+          <p class="italic text-parchment/85 pl-4 border-l-2 border-bronze/40 my-6">
+            That was how Norwyn began: not with holy visions or royal bloodlines, but with a tired woman signing away three centuries of freedom to buy one year of quiet bread.
+          </p>
+        </div>
+
         <!-- Crowned Era Chapter One -->
-        <div id="chapter-crowned" class="space-y-8">
+        <div id="chapter-crowned" class="space-y-8 hidden">
           <div class="text-center mb-14 space-y-3">
             <p class="font-sans text-xs tracking-[0.3em] uppercase text-bronze">The Crowned Era &bull; Chapter One</p>
             <h1 class="font-display text-3xl sm:text-4xl text-parchment tracking-wide">The Weight of Consent</h1>
@@ -851,56 +899,10 @@
           </p>
         </div>
 
-        <!-- Founding Era Chapter One -->
-        <div id="chapter-founding" class="space-y-8 hidden">
-          <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-xs tracking-[0.3em] uppercase text-bronze">The Founding Era &bull; Chapter One</p>
-            <h1 class="font-display text-3xl sm:text-4xl text-parchment tracking-wide">Before Norwyn</h1>
-            <div class="w-10 h-px bg-bronze/40 mx-auto mt-6"></div>
-          </div>
-
-          <p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-bronze">
-            The mud had ruined Victoria's hem by noon, but she refused to let the boy brush it away.
-          </p>
-
-          <p>
-            "Leave it," she said, leaning over the raw pine table. "If Lord Valenne thinks I have dry shoes, he'll assume the crossing was easy. 
-            If he thinks the crossing was easy, he will demand the toll bridges on the east bank."
-          </p>
-
-          <p>
-            There was no throne room. There was merely an abandoned storehouse whose roof had survived the winter fire. 
-            The four families sat upon salt barrels, each keeping one hand within reach of their daggers while their clerks argued over water rights. 
-            Everyone in the province was tired of burying cousins.
-          </p>
-
-          <p>
-            "We make the marriage treaty for twenty years," Valenne’s envoy muttered. "Not thirty. Twenty."
-          </p>
-
-          <p>
-            "Make it hereditary," Victoria replied without lifting her head from the surveyor's grid. 
-            Her eyes were bloodshot from four nights without sleep.
-          </p>
-
-          <p>
-            "Hereditary?" the clerk gasped. "Your Grace, that binds generations who haven't yet been born."
-          </p>
-
-          <p>
-            "Generations who haven't been born don't have to carry stretchers," Victoria said. 
-            "Bind it so hard that by the time our grandchildren are old enough to dispute it, they will think God wrote it into the limestone."
-          </p>
-
-          <p class="italic text-parchment/85 pl-4 border-l-2 border-bronze/40 my-6">
-            That was how Norwyn began: not with holy visions or royal bloodlines, but with a tired woman signing away three centuries of freedom to buy one year of quiet bread.
-          </p>
-        </div>
-
         <!-- End-of-Chapter Navigation -->
         <div class="mt-20 pt-10 border-t border-ink-muted/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-          <button id="btnReaderNextEra" onclick="loadChapter('founding')" class="text-bronze hover:underline">
-            Read The Founding Chapter &rarr;
+          <button id="btnReaderNextEra" onclick="loadChapter('crowned')" class="text-bronze hover:underline">
+            Read Elizabeth's Story: Chapter One &rarr;
           </button>
           <button onclick="switchView('archive')" class="text-parchment-soft/60 hover:text-parchment">
             Examine State Records &rarr;
@@ -922,7 +924,7 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-6 text-[11px] uppercase">
-        <a href="javascript:void(0)" onclick="openReader('crowned')" class="hover:text-bronze text-parchment/80">Start Reading</a>
+        <a href="javascript:void(0)" onclick="openReader('founding')" class="hover:text-bronze text-parchment/80">Start Reading (Victoria)</a>
         <a href="javascript:void(0)" onclick="switchView('eras')" class="hover:text-parchment">The Two Eras</a>
         <a href="javascript:void(0)" onclick="switchView('world')" class="hover:text-parchment">The World</a>
         <a href="javascript:void(0)" onclick="switchView('characters')" class="hover:text-parchment">Characters</a>
@@ -937,7 +939,7 @@
 
   <script>
     let activeView = 'home';
-    let activeChapter = 'crowned';
+    let activeChapter = 'founding';
     let baseFontSize = 18;
     let isIvoryMode = false;
 
@@ -973,13 +975,13 @@
       activeView = viewId;
     }
 
-    // Toggle Reader Directly
+    // Toggle Reader directly to specific era
     function openReader(era) {
       switchView('reader');
-      loadChapter(era);
+      loadChapter(era || 'founding');
     }
 
-    // Switch Reading Chapters
+    // Switch Reading Chapters between Victoria & Elizabeth
     function loadChapter(era) {
       const crownedChapter = document.getElementById('chapter-crowned');
       const foundingChapter = document.getElementById('chapter-founding');
@@ -989,23 +991,23 @@
 
       activeChapter = era;
 
-      if (era === 'crowned') {
-        crownedChapter.classList.remove('hidden');
-        foundingChapter.classList.add('hidden');
-        tabCrowned.className = "py-1 border-b-2 border-bronze text-parchment font-medium";
-        tabFounding.className = "py-1 border-b-2 border-transparent text-parchment-soft/50 hover:text-parchment";
-        if (nextBtn) {
-          nextBtn.textContent = "Read The Founding Chapter →";
-          nextBtn.setAttribute('onclick', "loadChapter('founding')");
-        }
-      } else {
+      if (era === 'founding') {
         foundingChapter.classList.remove('hidden');
         crownedChapter.classList.add('hidden');
         tabFounding.className = "py-1 border-b-2 border-bronze text-parchment font-medium";
         tabCrowned.className = "py-1 border-b-2 border-transparent text-parchment-soft/50 hover:text-parchment";
         if (nextBtn) {
-          nextBtn.textContent = "← Return to Elizabeth's Chapter";
+          nextBtn.textContent = "Read Elizabeth's Story: Chapter One →";
           nextBtn.setAttribute('onclick', "loadChapter('crowned')");
+        }
+      } else {
+        crownedChapter.classList.remove('hidden');
+        foundingChapter.classList.add('hidden');
+        tabCrowned.className = "py-1 border-b-2 border-bronze text-parchment font-medium";
+        tabFounding.className = "py-1 border-b-2 border-transparent text-parchment-soft/50 hover:text-parchment";
+        if (nextBtn) {
+          nextBtn.textContent = "← Return to Victoria: Chapter One";
+          nextBtn.setAttribute('onclick', "loadChapter('founding')");
         }
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1018,16 +1020,16 @@
       const contentCrowned = document.getElementById('contentEraCrowned');
       const contentFounding = document.getElementById('contentEraFounding');
 
-      if (era === 'crowned') {
-        contentCrowned.classList.remove('hidden');
-        contentFounding.classList.add('hidden');
-        btnCrowned.className = "px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all bg-bronze text-ink font-semibold";
-        btnFounding.className = "px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all text-parchment-soft/60 hover:text-parchment";
-      } else {
+      if (era === 'founding') {
         contentFounding.classList.remove('hidden');
         contentCrowned.classList.add('hidden');
         btnFounding.className = "px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all bg-bronze text-ink font-semibold";
         btnCrowned.className = "px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all text-parchment-soft/60 hover:text-parchment";
+      } else {
+        contentCrowned.classList.remove('hidden');
+        contentFounding.classList.add('hidden');
+        btnCrowned.className = "px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all bg-bronze text-ink font-semibold";
+        btnFounding.className = "px-6 py-2.5 text-xs font-sans uppercase tracking-[0.18em] transition-all text-parchment-soft/60 hover:text-parchment";
       }
     }
 
@@ -1068,7 +1070,7 @@
       }
     }
 
-    // New Reader Guide Modal Toggle
+    // Reading Order Guide Modal Toggle
     function toggleGuideModal(show) {
       const modal = document.getElementById('guideModal');
       if (show) {
@@ -1086,9 +1088,10 @@
       drawer.classList.toggle('hidden');
     }
 
-    // Initial state on document load
+    // Initialize home view and default chapter to Victoria's Founding Era
     window.addEventListener('DOMContentLoaded', () => {
       switchView('home');
+      activeChapter = 'founding';
     });
   </script>
 </body>
