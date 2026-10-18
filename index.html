@@ -1,1830 +1,758 @@
 <!DOCTYPE html>
+<html lang="en" class="scroll-smooth theme-dark" id="rootHtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OR SO SHE THOUGHT — Official Novel Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            theme: {
+              bg: 'var(--color-bg)',
+              'bg-deep': 'var(--color-bg-deep)',
+              panel: 'var(--color-panel)',
+              'panel-accent': 'var(--color-panel-accent)',
+              border: 'var(--color-border)',
+              'border-subtle': 'var(--color-border-subtle)',
+              text: 'var(--color-text)',
+              'text-muted': 'var(--color-text-muted)',
+              'text-faint': 'var(--color-text-faint)',
+              accent: 'var(--color-accent)',
+              'accent-hover': 'var(--color-accent-hover)',
+              'accent-dim': 'var(--color-accent-dim)',
+              burgundy: 'var(--color-burgundy)',
+              'burgundy-box': 'var(--color-burgundy-box)',
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            display: ['Cinzel', 'serif'],
+            body: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Default: Night Ink Mode */
+    :root, .theme-dark {
+      --color-bg: #11100f;
+      --color-bg-deep: #090807;
+      --color-panel: #181715;
+      --color-panel-accent: #211e1a;
+      --color-border: #38342e;
+      --color-border-subtle: #26231f;
+      --color-text: #f5f1e8;
+      --color-text-muted: #bab1a2;
+      --color-text-faint: #787166;
+      --color-accent: #c4a166;
+      --color-accent-hover: #dfba7c;
+      --color-accent-dim: rgba(196, 161, 102, 0.14);
+      --color-burgundy: #a1434d;
+      --color-burgundy-box: rgba(161, 67, 77, 0.14);
+      --header-bg: rgba(17, 16, 15, 0.94);
+      --footer-bg: #0c0b0a;
+      --primary-btn-bg: #c4a166;
+      --primary-btn-text: #0e0d0c;
+    }
 
-<html lang="en" class="scroll-smooth theme-dark" id="rootHtml">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>OR SO SHE THOUGHT — Official Novel Website</title>  
-  <link rel="preconnect" href="https://fonts.googleapis.com">  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">  
-  <script src="https://cdn.tailwindcss.com"></script>  
-  <script>  
-    tailwind.config = {  
-      theme: {  
-        extend: {  
-          colors: {  
-            theme: {  
-              bg: 'var(--color-bg)',  
-              'bg-deep': 'var(--color-bg-deep)',  
-              panel: 'var(--color-panel)',  
-              'panel-accent': 'var(--color-panel-accent)',  
-              border: 'var(--color-border)',  
-              'border-subtle': 'var(--color-border-subtle)',  
-              text: 'var(--color-text)',  
-              'text-muted': 'var(--color-text-muted)',  
-              'text-faint': 'var(--color-text-faint)',  
-              accent: 'var(--color-accent)',  
-              'accent-hover': 'var(--color-accent-hover)',  
-              'accent-dim': 'var(--color-accent-dim)',  
-              burgundy: 'var(--color-burgundy)',  
-              'burgundy-box': 'var(--color-burgundy-box)',  
-            }  
-          },  
-          fontFamily: {  
-            serif: ['Cormorant Garamond', 'Georgia', 'serif'],  
-            display: ['Cinzel', 'serif'],  
-            body: ['Newsreader', 'Georgia', 'serif'],  
-            sans: ['Inter', 'sans-serif'],  
-          }  
-        }  
-      }  
-    }  
-  </script>  
-  <style>  
-    /* Default: Night Ink Mode */  
-    :root, .theme-dark {  
-      --color-bg: #11100f;  
-      --color-bg-deep: #090807;  
-      --color-panel: #181715;  
-      --color-panel-accent: #211e1a;  
-      --color-border: #38342e;  
-      --color-border-subtle: #26231f;  
-      --color-text: #f5f1e8;  
-      --color-text-muted: #bab1a2;  
-      --color-text-faint: #787166;  
-      --color-accent: #c4a166;  
-      --color-accent-hover: #dfba7c;  
-      --color-accent-dim: rgba(196, 161, 102, 0.14);  
-      --color-burgundy: #a1434d;  
-      --color-burgundy-box: rgba(161, 67, 77, 0.14);  
-      --header-bg: rgba(17, 16, 15, 0.94);  
-      --footer-bg: #0c0b0a;  
-      --primary-btn-bg: #c4a166;  
-      --primary-btn-text: #0e0d0c;  
-    }/* Ivory Paper Archival Mode (WCAG AAA Contrast Compliant) */  
-.theme-ivory {  
-  --color-bg: #f8f5ee;  
-  --color-bg-deep: #ede6d8;  
-  --color-panel: #f1ebdE;  
-  --color-panel-accent: #e5ded0;  
-  --color-border: #ccbeaa;  
-  --color-border-subtle: #ded5c5;  
-  --color-text: #1c1815;  
-  --color-text-muted: #4e443a;  
-  --color-text-faint: #73675a;  
-  --color-accent: #876228;  
-  --color-accent-hover: #6d4e1d;  
-  --color-accent-dim: rgba(135, 98, 40, 0.12);  
-  --color-burgundy: #7a222a;  
-  --color-burgundy-box: rgba(122, 34, 42, 0.08);  
-  --header-bg: rgba(248, 245, 238, 0.96);  
-  --footer-bg: #eae3d5;  
-  --primary-btn-bg: #876228;  
-  --primary-btn-text: #fdfcf9;  
-}
+    /* Ivory Paper Archival Mode (WCAG AAA Contrast Compliant) */
+    .theme-ivory {
+      --color-bg: #f8f5ee;
+      --color-bg-deep: #ede6d8;
+      --color-panel: #f1ebdE;
+      --color-panel-accent: #e5ded0;
+      --color-border: #ccbeaa;
+      --color-border-subtle: #ded5c5;
+      --color-text: #1c1815;
+      --color-text-muted: #4e443a;
+      --color-text-faint: #73675a;
+      --color-accent: #876228;
+      --color-accent-hover: #6d4e1d;
+      --color-accent-dim: rgba(135, 98, 40, 0.12);
+      --color-burgundy: #7a222a;
+      --color-burgundy-box: rgba(122, 34, 42, 0.08);
+      --header-bg: rgba(248, 245, 238, 0.96);
+      --footer-bg: #eae3d5;
+      --primary-btn-bg: #876228;
+      --primary-btn-text: #fdfcf9;
+    }
 
-body {  
-  background-color: var(--color-bg);  
-  color: var(--color-text);  
-  font-family: 'Newsreader', Georgia, serif;  
-  -webkit-font-smoothing: antialiased;  
-  transition: background-color 0.3s ease, color 0.3s ease;  
-}
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Newsreader', Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-::selection {  
-  background-color: var(--color-accent);  
-  color: var(--color-bg);  
-}
+    ::selection {
+      background-color: var(--color-accent);
+      color: var(--color-bg);
+    }
 
-.view-section {  
-  transition: opacity 0.2s ease, transform 0.2s ease;  
-}  
-.view-hidden {  
-  display: none !important;  
-  opacity: 0;  
-  transform: translateY(6px);  
-}  
-.view-visible {  
-  display: block;  
-  opacity: 1;  
-  transform: translateY(0);  
-}  
-
-  </style>  
-</head>  
+    .view-section {
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .view-hidden {
+      display: none !important;
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    .view-visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
 <body class="bg-theme-bg text-theme-text min-h-screen flex flex-col justify-between selection:bg-theme-accent selection:text-theme-bg">
-  <header id="siteHeader" style="background-color: var(--header-bg); border-color: var(--color-border);" class="sticky top-0 z-50 backdrop-blur-md border-b transition-colors duration-300">  
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">  <!-- Brand Link: Always returns Home -->  
-  <a href="javascript:void(0)" onclick="switchView('home')" class="group flex flex-col focus:outline-none" aria-label="Return to Home">  
-    <span class="font-display tracking-[0.22em] text-base md:text-lg font-semibold text-theme-text group-hover:text-theme-accent transition-colors">  
-      OR SO SHE THOUGHT  
-    </span>  
-    <span class="font-sans text-[10px] tracking-[0.25em] text-theme-accent uppercase font-medium">  
-      A Novel of Norwyn  
-    </span>  
-  </a>
+  <header id="siteHeader" style="background-color: var(--header-bg); border-color: var(--color-border);" class="sticky top-0 z-50 backdrop-blur-md border-b transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Brand Link: Always returns Home -->
+      <a href="javascript:void(0)" onclick="switchView('home')" class="group flex flex-col focus:outline-none" aria-label="Return to Home">
+        <span class="font-display tracking-[0.22em] text-base md:text-lg font-semibold text-theme-text group-hover:text-theme-accent transition-colors">
+          OR SO SHE THOUGHT
+        </span>
+        <span class="font-sans text-[10px] tracking-[0.25em] text-theme-accent uppercase font-medium">
+          A Novel of Norwyn
+        </span>
+      </a>
 
-  <!-- Primary Navigation: Strictly Unique Non-Overlapping Views -->  
-  <nav class="hidden lg:flex items-center space-x-7 text-xs font-sans uppercase tracking-[0.18em]">  
-    <button onclick="switchView('home')" class="nav-button py-2 text-theme-text border-b-2 border-theme-accent transition-colors" data-page="home">  
-      Home  
-    </button>  
-    <button onclick="switchView('eras')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="eras">  
-      The Two Eras  
-    </button>  
-    <button onclick="switchView('reader')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="reader">  
-      Read  
-    </button>  
-    <button onclick="switchView('world')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="world">  
-      The World  
-    </button>  
-    <button onclick="switchView('characters')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="characters">  
-      Characters  
-    </button>  
-    <button onclick="switchView('archive')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="archive">  
-      Archive  
-    </button>  
-  </nav>
+      <!-- Primary Navigation -->
+      <nav class="hidden lg:flex items-center space-x-7 text-xs font-sans uppercase tracking-[0.18em]">
+        <button onclick="switchView('home')" class="nav-button py-2 text-theme-text border-b-2 border-theme-accent transition-colors" data-page="home">
+          Home
+        </button>
+        <button onclick="switchView('eras')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="eras">
+          The Two Eras
+        </button>
+        <button onclick="switchView('reader')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="reader">
+          Read
+        </button>
+        <button onclick="switchView('world')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="world">
+          The World
+        </button>
+        <button onclick="switchView('characters')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="characters">
+          Characters
+        </button>
+        <button onclick="switchView('archive')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="archive">
+          Archive
+        </button>
+      </nav>
 
-  <!-- Global Theme Switcher & Mobile Menu Trigger -->  
-  <div class="flex items-center space-x-3">  
-    <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle paper palette" class="px-3 py-1.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-colors flex items-center gap-1.5 bg-theme-panel">  
-      <svg id="themeIconSun" class="w-3.5 h-3.5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />  
-      </svg>  
-      <svg id="themeIconMoon" class="w-3.5 h-3.5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">  
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />  
-      </svg>  
-      <span id="themeToggleText">Ivory Mode</span>  
-    </button>
+      <!-- Global Theme Switcher & Mobile Menu Trigger -->
+      <div class="flex items-center space-x-3">
+        <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle paper palette" class="px-3 py-1.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-colors flex items-center gap-1.5 bg-theme-panel">
+          <svg id="themeIconSun" class="w-3.5 h-3.5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="themeIconMoon" class="w-3.5 h-3.5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <span id="themeToggleText">Ivory Mode</span>
+        </button>
 
-    <button onclick="toggleMobileNav()" class="p-2 lg:hidden text-theme-text hover:text-theme-accent focus:outline-none" aria-label="Open mobile menu">  
-      <svg id="hamburgerIcon" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">  
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7h16M4 12h16M4 17h16" />  
-      </svg>  
-    </button>  
-  </div>  
-</div>
+        <button onclick="toggleMobileNav()" class="p-2 lg:hidden text-theme-text hover:text-theme-accent focus:outline-none" aria-label="Open mobile menu">
+          <svg id="hamburgerIcon" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
 
-<!-- Mobile Navigation Drawer -->  
-<div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-4 text-xs font-sans uppercase tracking-[0.2em]">  
-  <button onclick="switchView('home'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text">Home</button>  
-  <button onclick="switchView('eras'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Two Eras</button>  
-  <button onclick="switchView('reader'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read</button>  
-  <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World</button>  
-  <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Characters</button>  
-  <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Archive</button>  
-</div>  
-
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-4 text-xs font-sans uppercase tracking-[0.2em]">
+      <button onclick="switchView('home'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text">Home</button>
+      <button onclick="switchView('eras'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Two Eras</button>
+      <button onclick="switchView('reader'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read</button>
+      <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World</button>
+      <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Characters</button>
+      <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Archive</button>
+    </div>
   </header>
-  <main class="flex-grow"><!-- VIEW 1: HOME -->  
-<section id="view-home" class="view-section view-visible max-w-4xl mx-auto px-6 py-24 md:py-32 text-center">  
-  <p class="font-sans text-xs uppercase tracking-[0.35em] text-theme-accent font-semibold mb-6">  
-    A Novel in Two Eras  
-  </p>
-  
-  <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-light text-theme-text tracking-[0.14em] uppercase leading-tight mb-8">  
-    Or So She<br>Thought  
-  </h1>
-  
-  <div class="w-12 h-px bg-theme-accent/40 mx-auto mb-8"></div>
-  
-  <p class="text-xl md:text-2xl font-serif italic text-theme-text-muted max-w-2xl mx-auto leading-relaxed font-light mb-12">  
-    A story of duty, desire, choice, and the things that become part of us before we think to question them.  
-  </p>
 
-  <!-- Reading Architecture Directive: Simple & Unconfused -->  
-  <div class="max-w-xl mx-auto mb-12 p-6 border border-theme-border bg-theme-panel text-left rounded-sm">  
-    <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">Reading Order Guidance</span>  
-    <p class="font-serif text-sm text-theme-text-muted leading-relaxed">  
-      The chronicle begins in <strong class="text-theme-text font-semibold">The Founding Era (Victoria)</strong>—the bedrock where wartime survival agreements were improvised into stone. Generations later, in <strong class="text-theme-text font-semibold">The Crowned Era (Elizabeth)</strong>, those emergency solutions have hardened into sacred traditions.  
-    </p>  
-  </div>
+  <main class="flex-grow">
+    <!-- VIEW 1: HOME -->
+    <section id="view-home" class="view-section view-visible max-w-4xl mx-auto px-6 py-24 md:py-32 text-center">
+      <p class="font-sans text-xs uppercase tracking-[0.35em] text-theme-accent font-semibold mb-6">
+        A Novel in Two Eras
+      </p>
+      
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-light text-theme-text tracking-[0.14em] uppercase leading-tight mb-8">
+        Or So She<br>Thought
+      </h1>
+      
+      <div class="w-12 h-px bg-theme-accent/40 mx-auto mb-8"></div>
+      
+      <p class="text-xl md:text-2xl font-serif italic text-theme-text-muted max-w-2xl mx-auto leading-relaxed font-light mb-12">
+        A story of duty, desire, choice, and the things that become part of us before we think to question them.
+      </p>
 
-  <!-- Direct Entry Actions -->  
-  <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-sans uppercase tracking-[0.2em]">  
-    <button onclick="openReader('founding')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">  
-      Begin Chapter 1: Victoria &rarr;  
-    </button>  
-    <button onclick="switchView('eras')" class="w-full sm:w-auto px-8 py-4 border border-theme-border hover:border-theme-accent text-theme-text transition-all rounded-sm">  
-      Explore The Two Eras  
-    </button>  
-  </div>  
-</section>
-
-<!-- VIEW 2: THE TWO ERAS -->  
-<section id="view-eras" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">  
-  <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">  
-    <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">  
-      <span>&larr;</span> <span>Home</span>  
-    </button>  
-    <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Chronological Architecture</span>  
-  </div>
-
-  <div class="text-center max-w-2xl mx-auto mb-14">  
-    <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The Two Eras</h2>  
-    <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">  
-      Two timelines bound by the same continuity. Victoria makes decisions to survive an emergency; generations later, Elizabeth inherits those decisions as holy scripture.  
-    </p>  
-  </div>
-
-  <!-- Side-by-side Deep Comparative Cards -->  
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    
-    <!-- Era 1: Founding -->  
-    <div class="border-2 border-theme-accent bg-theme-panel p-8 md:p-10 flex flex-col justify-between rounded-sm shadow-sm relative">  
-      <div style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="absolute -top-3.5 right-6 px-3 py-1 text-[10px] font-sans uppercase tracking-[0.2em] font-semibold rounded-sm">  
-1. The Bedrock  
-      </div>  
-      <div>  
-        <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">The Founding Era</span>  
-        <h3 class="font-display text-2xl text-theme-text mb-3">Victoria's Story</h3>  
-        <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">How Decisions Become Traditions</p>  
-        <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">  
-          In an age of mud and burned storehouses, every compromise was an emergency solution. Victoria had to bind four feuding houses before the winter killed them all. Nobody planned for a temporary agreement to outlive the war that summoned it.  
-        </p>  
-        <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">  
-          <li><strong class="text-theme-text">&bull; Core Question:</strong> When does a provisional compromise become a cage?</li>  
-          <li><strong class="text-theme-text">&bull; Setting:</strong> Fragile borders, damp stores, raw negotiation.</li>  
-        </ul>  
-      </div>  
-      <div class="pt-6 border-t border-theme-border mt-6">  
-        <button onclick="openReader('founding')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full py-3 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">  
-          Read Victoria's Chapter One &rarr;  
-        </button>  
-      </div>  
-    </div>
-
-    <!-- Era 2: Crowned -->  
-    <div class="border border-theme-border bg-theme-panel p-8 md:p-10 flex flex-col justify-between rounded-sm shadow-sm relative">  
-      <div class="absolute -top-3.5 right-6 px-3 py-1 bg-theme-burgundy text-white text-[10px] font-sans uppercase tracking-[0.2em] font-semibold rounded-sm">  
-2. The Inheritance  
-      </div>  
-      <div>  
-        <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-burgundy font-semibold block mb-2">The Crowned Era</span>  
-        <h3 class="font-display text-2xl text-theme-text mb-3">Elizabeth's Story</h3>  
-        <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">The Weight of Consent</p>  
-        <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">  
-          Raised in the polished certainty of Victoria's legacy. She was never starved of affection or subjected to brutality—her mother built an education, not a prison. The terror begins when Elizabeth discovers she cannot separate what she wants from what she was formed to want.  
-        </p>  
-        <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">  
-          <li><strong class="text-theme-text">&bull; Core Question:</strong> What if you actually want what you were taught to want?</li>  
-          <li><strong class="text-theme-text">&bull; Setting:</strong> Polished marble galleries, quiet gardens, unspoken boundaries.</li>  
-        </ul>  
-      </div>  
-      <div class="pt-6 border-t border-theme-border mt-6">  
-        <button onclick="openReader('crowned')" class="w-full py-3 border border-theme-border text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.2em] uppercase text-center rounded-sm transition-colors">  
-          Read Elizabeth's Chapter One &rarr;  
-        </button>  
-      </div>  
-    </div>
-
-  </div>  
-</section>
-
-<!-- VIEW 3: READ (Dedicated Reader Sanctuary - Excerpts live ONLY here) -->  
-<section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300">
-  
-  <!-- Reader Controls Bar -->  
-  <div class="max-w-3xl mx-auto px-6 mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">  
-    <button onclick="switchView('home')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">  
-      <span>&larr;</span> <span>Return to Overview</span>  
-    </button>
-
-    <div class="flex items-center space-x-4">  
-      <div class="flex items-center border border-theme-border rounded-sm text-xs font-sans bg-theme-panel">  
-        <button onclick="changeFontSize(-1)" class="px-3 py-1 text-theme-text-muted hover:text-theme-text" title="Decrease font size">A-</button>  
-        <span class="text-theme-border">|</span>  
-        <button onclick="changeFontSize(1)" class="px-3 py-1 text-theme-text-muted hover:text-theme-text font-semibold" title="Increase font size">A+</button>  
-      </div>  
-      <button onclick="toggleGlobalTheme()" class="px-3 py-1 border border-theme-border rounded-sm text-[11px] font-sans tracking-wider uppercase text-theme-text-muted hover:border-theme-accent hover:text-theme-text transition-colors bg-theme-panel">  
-        Toggle Palette  
-      </button>  
-    </div>  
-  </div>
-
-  <!-- Era Switcher within Reader (Victoria first) -->  
-  <div class="max-w-xl mx-auto px-6 mb-12 flex justify-center space-x-6 text-xs font-sans uppercase tracking-[0.18em]">  
-    <button id="readerTabFounding" onclick="loadChapter('founding')" class="py-1 border-b-2 border-theme-accent text-theme-text font-semibold">  
-1. Victoria: Chapter 1  
-    </button>  
-    <button id="readerTabCrowned" onclick="loadChapter('crowned')" class="py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text">  
-2. Elizabeth: Chapter 1  
-    </button>  
-  </div>
-
-  <!-- Reading Body Container -->  
-  <article id="readingBody" class="max-w-2xl mx-auto px-6 text-lg leading-relaxed font-serif transition-all duration-200">
-    
-    <!-- Chapter: Founding Era (Victoria) -->  
-    <div id="chapter-founding" class="space-y-6">  
-      <div class="text-center mb-14 space-y-3">  
-        <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">The Founding Era &bull; Chapter One</p>  
-        <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">The Divided Shore</h2>  
-        <div class="w-10 h-px bg-theme-accent/40 mx-auto mt-6"></div>  
+      <!-- Reading Architecture Directive -->
+      <div class="max-w-xl mx-auto mb-12 p-6 border border-theme-border bg-theme-panel text-left rounded-sm">
+        <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">Reading Order Guidance</span>
+        <p class="font-serif text-sm text-theme-text-muted leading-relaxed">
+          The chronicle begins in <strong class="text-theme-text font-semibold">The Founding Era (Victoria)</strong>—the bedrock where wartime survival agreements were improvised into stone. Generations later, in <strong class="text-theme-text font-semibold">The Crowned Era (Elizabeth)</strong>, those emergency solutions have hardened into sacred traditions.
+        </p>
       </div>
 
-      <p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-theme-accent first-letter:leading-none text-theme-text">  
-        The salt barrel was too light.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria knew it before the two men had finished unloading it. A full barrel of Corrow salt was heavy enough to make a man lean forward as he carried it. This one barely seemed to trouble them.  
-      </p>  
-      <p class="text-theme-text">  
-        She said nothing at first. She finished counting the herring barrels on her side of the quay. Forty-one. Each one carried the three-ring mark that Pellam burned into its lids.  
-      </p>  
-      <p class="text-theme-text">  
-        Then she walked over to Adrien Mercer, the man in charge of the Corrow quay.  
-      </p>  
-      <p class="text-theme-text">  
-        "Adrien."  
-      </p>  
-      <p class="text-theme-text">  
-        He kept his eyes on his tally board. He was a broad, tidy man who wore the same blue wool cap every year and rarely admitted when he was wrong.  
-      </p>  
-      <p class="text-theme-text">  
-        "It's the damp," he said.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked at the barrel. "What's the damp?"  
-      </p>  
-      <p class="text-theme-text">  
-        "The salt. It takes on moisture when the air is wet, then loses it in the sack."  
-      </p>  
-      <p class="text-theme-text">  
-        "Then it should weigh more now, not less."  
-      </p>  
-      <p class="text-theme-text">  
-        "Maybe it's the cart."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria turned to look at the cart.  
-      </p>  
-      <p class="text-theme-text">  
-        "The cart?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Yes."  
-      </p>  
-      <p class="text-theme-text">  
-        "It's a cart, Adrien. It brought the barrel here. It didn't eat the salt on the way."  
-      </p>  
-      <p class="text-theme-text">  
-        Someone behind her laughed.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria turned and found her daughter sitting on an overturned crate. Madeleine was nine, and the tally cords were wrapped around both her wrists.  
-      </p>  
-      <p class="text-theme-text">  
-        This was her first autumn exchange. She had been promised an exciting day. Instead, she had spent three hours carrying cords, fetching water, and being told to stay out of the way.  
-      </p>  
-      <p class="text-theme-text">  
-        She was beginning to think the adults had lied to her.  
-      </p>  
-      <p class="text-theme-text">  
-        "Is this the part where he blames the cart?" Madeleine asked.  
-      </p>  
-      <p class="text-theme-text">  
-        "Yes."  
-      </p>  
-      <p class="text-theme-text">  
-        "What happens next?"  
-      </p>  
-      <p class="text-theme-text">  
-        "We get our salt."  
-      </p>  
-      <p class="text-theme-text">  
-        "Then why doesn't he just give it to us?"  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien finally looked up.  
-      </p>  
-      <p class="text-theme-text">  
-        He didn't like being laughed at by children, but he liked Victoria, and he knew she would not let the matter go. He sighed and waved to his men.  
-      </p>  
-      <p class="text-theme-text">  
-        "Bring another sack."  
-      </p>  
-      <p class="text-theme-text">  
-        One of the men carried a seventh sack across the quay and dropped it beside the others.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria checked its weight.  
-      </p>  
-      <p class="text-theme-text">  
-        "That will do."  
-      </p>  
-      <p class="text-theme-text">  
-        She tied another knot in the long tally cord.  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine held out her hands.  
-      </p>  
-      <p class="text-theme-text">  
-        "Can I have my wrists back now?"  
-      </p>  
-      <p class="text-theme-text">  
-        "You've had your hands all afternoon."  
-      </p>  
-      <p class="text-theme-text">  
-        "Not really. Everyone keeps giving me things to hold."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria took the cords from her.  
-      </p>  
-      <p class="text-theme-text">  
-        "Then perhaps you should stop looking so helpful."  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine grinned.  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien shook his head, but he was smiling too.  
-      </p>  
-      <p class="text-theme-text">  
-        That was how the autumn exchange worked along the fjord.  
-      </p>  
-      <p class="text-theme-text">  
-        Corrow had the salt pans. During summer, its people spread seawater across long, flat stretches of shore and let the sun dry it until the salt could be collected.  
-      </p>  
-      <p class="text-theme-text">  
-        Pellam had the herring and the fishermen who knew where the fish gathered beneath the cliffs.  
-      </p>  
-      <p class="text-theme-text">  
-        Ashby Strand, three hours north by boat, had the smoking sheds where cod was dried and preserved for winter.  
-      </p>  
-      <p class="text-theme-text">  
-        Every year, when the first hard frost arrived, the three communities met at Corrow to trade what they had.  
-      </p>  
-      <p class="text-theme-text">  
-        Corrow needed fish. Pellam needed salt. Ashby Strand needed both.  
-      </p>  
-      <p class="text-theme-text">  
-        Without salt, fish spoiled quickly. Without fish, families had little to eat when winter made fishing difficult. Without the smoking sheds, Ashby Strand could not preserve enough cod to last through the cold months.  
-      </p>  
-      <p class="text-theme-text">  
-        They needed one another.  
-      </p>  
-      <p class="text-theme-text">  
-        They also spent every autumn arguing about who was getting the better deal.  
-      </p>  
-      <p class="text-theme-text">  
-        It was a familiar argument. Everyone complained, everyone counted, and everyone returned the following year.  
-      </p>  
-      <p class="text-theme-text">  
-        The quay was crowded that afternoon. Gulls fought over fish scraps, and a Corrow man was repairing a boat near the pier. Hot tar smoked in a pot beside him.  
-      </p>  
-      <p class="text-theme-text">  
-        Two boats from Ashby Strand were tied up nearby. Their crews sat on the wooden seats, eating bread and cheese while they waited for the exchange to finish.  
-      </p>  
-      <p class="text-theme-text">  
-        Their captain, Thomas Fletcher, was arguing with a Corrow woman about the price of cod.  
-      </p>  
-      <p class="text-theme-text">  
-        The woman was winning.  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas was lean, sunburned, and stubborn. His left shoulder had been injured years earlier, and he kept that arm close to his side. He did not enjoy losing an argument, but he seemed to have accepted that he was going to lose this one.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria watched him for a moment and smiled.  
-      </p>  
-      <p class="text-theme-text">  
-        It was a good day.  
-      </p>  
-      <p class="text-theme-text">  
-        She would remember that later, when remembering it became painful.  
-      </p>  
-      <p class="text-theme-text">  
-        The autumn sun cast a soft golden light across the water. The fjord was calm, and the distant rocks looked almost blue. Her herring were good, the salt had finally been corrected, and Madeleine was beside her.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria was tired, but it was the kind of tiredness that came after a job well done.  
-      </p>  
-      <p class="text-theme-text">  
-        She was thinking about supper.  
-      </p>  
-      <p class="text-theme-text">  
-        Then the horn sounded from the headland.  
-      </p>  
-      <p class="text-theme-text">  
-        Nobody turned.  
-      </p>  
-      <p class="text-theme-text">  
-        The Corrow horn was part of everyday life. It sounded when the tide changed, when a boat was late, or when bad weather was coming. Sometimes, Victoria suspected, the boy who watched the headland blew it simply because he was bored.  
-      </p>  
-      <p class="text-theme-text">  
-        The horn gave one long note.  
-      </p>  
-      <p class="text-theme-text">  
-        Then another.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria reached for her tally cord.  
-      </p>  
-      <p class="text-theme-text">  
-        A third note sounded.  
-      </p>  
-      <p class="text-theme-text">  
-        This time, everyone stopped.  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien's hand froze above his board.  
-      </p>  
-      <p class="text-theme-text">  
-        "That's not the tide," he said.  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas was already standing on the side of his boat. He raised a hand to shield his eyes from the sun and stared towards the mouth of the fjord.  
-      </p>  
-      <p class="text-theme-text">  
-        Three ships were coming around the Knuckle, a long stretch of rock that partly blocked the entrance.  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas lowered his hand.  
-      </p>  
-      <p class="text-theme-text">  
-        "Sails."  
-      </p>  
-      <p class="text-theme-text">  
-        Someone nearby called out, "Valenne traders?"  
-      </p>  
-      <p class="text-theme-text">  
-        "No."  
-      </p>  
-      <p class="text-theme-text">  
-        "How do you know?"  
-      </p>  
-      <p class="text-theme-text">  
-        "They'd fly their flag."  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas jumped from his boat onto the next, then down onto the quay. His bad shoulder struck the side of a boat, but he barely noticed.  
-      </p>  
-      <p class="text-theme-text">  
-        "They're not turning into the channel," he said. "They're coming straight towards us."  
-      </p>  
-      <p class="text-theme-text">  
-        The mood on the quay changed at once.  
-      </p>  
-      <p class="text-theme-text">  
-        A woman grabbed her baby from the top of a barrel and hurried away. Two men abandoned their work and ran towards the headland. Someone shouted for the harbour chain.  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien began giving orders.  
-      </p>  
-      <p class="text-theme-text">  
-        "Get the chain ready!"  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine stood beside Victoria, the cords still wrapped around her wrists.  
-      </p>  
-      <p class="text-theme-text">  
-        "Mama?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Stay close to me."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria kept her eyes on the ships.  
-      </p>  
-      <p class="text-theme-text">  
-        She counted them. She watched their distance from the quay and the speed of the incoming tide. She looked at the boats belonging to Pellam. One was still half unloaded. Another had its mast down. None was ready to leave quickly.  
-      </p>  
-      <p class="text-theme-text">  
-        Then she thought of what lay three hours south by water.  
-      </p>  
-      <p class="text-theme-text">  
-        Pellam.  
-      </p>  
-      <p class="text-theme-text">  
-        Forty houses above a small cove. Children, old people, and families who had spent the summer preparing for winter. The stores in the long shed above the shore.  
-      </p>  
-      <p class="text-theme-text">  
-        Her people.  
-      </p>  
-      <p class="text-theme-text">  
-        "Adrien."  
-      </p>  
-      <p class="text-theme-text">  
-        He was hurrying towards the harbour entrance.  
-      </p>  
-      <p class="text-theme-text">  
-        "Adrien, what does the chain protect? The quay or the whole fjord?"  
-      </p>  
-      <p class="text-theme-text">  
-        "The quay. We can't block the whole fjord."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked towards the entrance.  
-      </p>  
-      <p class="text-theme-text">  
-        Corrow's harbour chain was old and heavy. It stretched from the end of the pier to a stone post on the opposite side of the harbour. When raised, it blocked enemy ships from entering the inner harbour.  
-      </p>  
-      <p class="text-theme-text">  
-        The people of Corrow could then pull their boats to safety and close off the lower town.  
-      </p>  
-      <p class="text-theme-text">  
-        It was a good defence.  
-      </p>  
-      <p class="text-theme-text">  
-        But it protected only Corrow.  
-      </p>  
-      <p class="text-theme-text">  
-        "Open it for Ashby!" Thomas shouted.  
-      </p>  
-      <p class="text-theme-text">  
-        He had reached them, breathing hard.  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien turned towards him.  
-      </p>  
-      <p class="text-theme-text">  
-        "I can't."  
-      </p>  
-      <p class="text-theme-text">  
-        "My boats can reach the Strand in less than three hours. If we leave now, we might get there before the raiders."  
-      </p>  
-      <p class="text-theme-text">  
-        "Or you'll meet them in open water."  
-      </p>  
-      <p class="text-theme-text">  
-        "My winter stores are there. My whole season's work."  
-      </p>  
-      <p class="text-theme-text">  
-        "I know where your sheds are, Thomas."  
-      </p>  
-      <p class="text-theme-text">  
-        "Then you know what you're asking me to leave behind."  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien's face tightened.  
-      </p>  
-      <p class="text-theme-text">  
-        "And if I open the chain, I leave Corrow unprotected. I have children here too. I have old people who can't run up a hill. I'm not risking their lives without knowing what those ships intend to do."  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas stared at him.  
-      </p>  
-      <p class="text-theme-text">  
-        "We know what they want."  
-      </p>  
-      <p class="text-theme-text">  
-        "Do we?"  
-      </p>  
-      <p class="text-theme-text">  
-        "They want what's in the sheds."  
-      </p>  
-      <p class="text-theme-text">  
-        "Then the sheds may already be lost. Sending your boats out now might only give them more to take."  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas went quiet.  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien was not trying to hurt him. He was looking at the people behind the chain and trying to keep them alive.  
-      </p>  
-      <p class="text-theme-text">  
-        But Thomas was looking at his own people, three hours away, and wondering whether they would survive the night.  
-      </p>  
-      <p class="text-theme-text">  
-        Neither man could protect everyone.  
-      </p>  
-      <p class="text-theme-text">  
-        "Mama?"  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine had moved closer and was holding Victoria's skirt.  
-      </p>  
-      <p class="text-theme-text">  
-        "Why don't they all go together?"  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked down at her daughter.  
-      </p>  
-      <p class="text-theme-text">  
-        It was a fair question.  
-      </p>  
-      <p class="text-theme-text">  
-        If all three communities needed one another, why couldn't they help one another now?  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria opened her mouth, but she had no answer that would make sense to a nine-year-old.  
-      </p>  
-      <p class="text-theme-text">  
-        Before she could try, another voice spoke.  
-      </p>  
-      <p class="text-theme-text">  
-        "Because the channel won't let them."  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne Moreau had come up from the Pellam steps.  
-      </p>  
-      <p class="text-theme-text">  
-        She was seventy, small and thin, with pale eyes and a weathered face. Two fingers were missing from her left hand, lost in a rope accident years ago.  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne had spent most of her life steering boats through the fjord. She knew which waters were safe, which rocks hid beneath the surface, and which channels could become deadly when the tide changed.  
-      </p>  
-      <p class="text-theme-text">  
-        She was Pellam's best steerswoman, and people listened when she spoke.  
-      </p>  
-      <p class="text-theme-text">  
-        She did not look at the ships. She watched the water.  
-      </p>  
-      <p class="text-theme-text">  
-        "The tide is coming in," she said. "We've got about two hours before it turns. When it does, the west side of Skerry channel will be too shallow for those ships."  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas looked at her.  
-      </p>  
-      <p class="text-theme-text">  
-        "Could we take our boats through before then?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Not with those hulls. You'll scrape the bottoms against the rocks."  
-      </p>  
-      <p class="text-theme-text">  
-        "What about the eastern passage?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Too narrow for all three ships to pass together."  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne spat over the side of the quay.  
-      </p>  
-      <p class="text-theme-text">  
-        "They'll use the main water. It's wide enough, and the tide will carry them north."  
-      </p>  
-      <p class="text-theme-text">  
-        She turned towards Thomas.  
-      </p>  
-      <p class="text-theme-text">  
-        "I'm sorry, boy. That's the route I'd take too."  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas looked towards his boats.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria felt the problem settle into her mind.  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien was right to protect Corrow. Thomas was right to want to save Ashby Strand. Lucienne was right about the channels. The watchers had sounded the horn as soon as the ships appeared.  
-      </p>  
-      <p class="text-theme-text">  
-        Nobody had failed to do their job.  
-      </p>  
-      <p class="text-theme-text">  
-        Yet Ashby Strand was still in danger.  
-      </p>  
-      <p class="text-theme-text">  
-        Each community knew something the others did not. Corrow had its chain. Pellam had Lucienne's knowledge of the water. Ashby Strand knew what was waiting at home.  
-      </p>  
-      <p class="text-theme-text">  
-        But there was no way to bring all that information together quickly enough.  
-      </p>  
-      <p class="text-theme-text">  
-        The tide would not wait for them to agree.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked at Adrien.  
-      </p>  
-      <p class="text-theme-text">  
-        "Where is the boy who watches the headland?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Up there."  
-      </p>  
-      <p class="text-theme-text">  
-        "Bring him down. I need him to carry a message to Pellam."  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien frowned.  
-      </p>  
-      <p class="text-theme-text">  
-        "Now?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Yes. He knows the ridge path. He can reach Pellam in about two hours if he runs."  
-      </p>  
-      <p class="text-theme-text">  
-        "What do you want him to tell them?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Move the old people and children to Mill Terrace. Bar the lower shed. Tell them the raiders are heading north, but they may turn south afterwards."  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien looked towards the ships.  
-      </p>  
-      <p class="text-theme-text">  
-        "He's my only runner."  
-      </p>  
-      <p class="text-theme-text">  
-        "I know."  
-      </p>  
-      <p class="text-theme-text">  
-        "If they land on the southern side, I won't have anyone to send up the headland."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria held his gaze.  
-      </p>  
-      <p class="text-theme-text">  
-        "I know, Adrien."  
-      </p>  
-      <p class="text-theme-text">  
-        He rubbed his face.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria could see that he was trying to decide whether sending the boy away was worth the risk. If the raiders attacked Corrow from another direction, the warning could cost them valuable time.  
-      </p>  
-      <p class="text-theme-text">  
-        But if Pellam received no warning, its people might have no time to escape.  
-      </p>  
-      <p class="text-theme-text">  
-        Finally, Adrien sighed.  
-      </p>  
-      <p class="text-theme-text">  
-        "You'll owe me a runner."  
-      </p>  
-      <p class="text-theme-text">  
-        "I will."  
-      </p>  
-      <p class="text-theme-text">  
-        "And an explanation to his mother."  
-      </p>  
-      <p class="text-theme-text">  
-        "I'll owe her that too."  
-      </p>  
-      <p class="text-theme-text">  
-        He turned and shouted for the boy.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria watched him leave, then faced Thomas.  
-      </p>  
-      <p class="text-theme-text">  
-        There was still one decision to make.  
-      </p>  
-      <p class="text-theme-text">  
-        "Thomas, stay here."  
-      </p>  
-      <p class="text-theme-text">  
-        He looked at her as though she had asked him to do something impossible.  
-      </p>  
-      <p class="text-theme-text">  
-        "You want me to watch my home burn?"  
-      </p>  
-      <p class="text-theme-text">  
-        "No. I want you to stay alive long enough to return to it."  
-      </p>  
-      <p class="text-theme-text">  
-        He turned towards the water.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria followed his gaze.  
-      </p>  
-      <p class="text-theme-text">  
-        The first two ships had passed the Knuckle. The third was smaller and farther behind them.  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne noticed it too.  
-      </p>  
-      <p class="text-theme-text">  
-        "Look at that one," she said.  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas turned.  
-      </p>  
-      <p class="text-theme-text">  
-        "What about it?"  
-      </p>  
-      <p class="text-theme-text">  
-        "She's hanging back. Watching the open water behind the others."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria understood.  
-      </p>  
-      <p class="text-theme-text">  
-        "She's waiting for anyone who tries to escape."  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne nodded.  
-      </p>  
-      <p class="text-theme-text">  
-        "They've thought this through. If someone runs, that ship can follow."  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas stood still.  
-      </p>  
-      <p class="text-theme-text">  
-        For the first time, he looked less like a captain deciding what to do and more like a man who had run out of choices.  
-      </p>  
-      <p class="text-theme-text">  
-        Then he spoke.  
-      </p>  
-      <p class="text-theme-text">  
-        "My brother is at the Strand."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria waited.  
-      </p>  
-      <p class="text-theme-text">  
-        "Hugh. He couldn't come this year because of his leg. He can barely manage the stairs to the storehouse."  
-      </p>  
-      <p class="text-theme-text">  
-        Nobody answered.  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine looked up at him.  
-      </p>  
-      <p class="text-theme-text">  
-        "Is Hugh going to die?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Madeleine," Victoria said gently.  
-      </p>  
-      <p class="text-theme-text">  
-        "I'm asking."  
-      </p>  
-      <p class="text-theme-text">  
-        Her daughter was frightened, but she was also frustrated. Everyone kept speaking about ships, chains, and channels, as though the people waiting at Ashby Strand were not real.  
-      </p>  
-      <p class="text-theme-text">  
-        "Someone's going to say it," she said, her voice trembling. "Nobody else will."  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas stared at her.  
-      </p>  
-      <p class="text-theme-text">  
-        Then he let out a short, broken laugh.  
-      </p>  
-      <p class="text-theme-text">  
-        "I don't know, little one."  
-      </p>  
-      <p class="text-theme-text">  
-        He looked north.  
-      </p>  
-      <p class="text-theme-text">  
-        "I'd like to be there when it happens."  
-      </p>  
-      <p class="text-theme-text">  
-        He stayed.  
-      </p>  
-      <p class="text-theme-text">  
-        Not because he thought his brother was safe. Not because he believed the raiders would turn back.  
-      </p>  
-      <p class="text-theme-text">  
-        He stayed because he had listened to Adrien, to Lucienne, and to a little girl who had said his brother's name when everyone else was afraid to.  
-      </p>  
-      <p class="text-theme-text">  
-        He kept his two boats behind the chain with their crews.  
-      </p>  
-      <p class="text-theme-text">  
-        Then he sat on an overturned barrel and watched the three ships sail north.  
-      </p>  
-      <p class="text-theme-text">  
-        He did not cry.  
-      </p>  
-      <p class="text-theme-text">  
-        He did not look away.  
-      </p>  
-      <p class="text-theme-text">  
-        The sun sank behind the western ridge.  
-      </p>  
-      <p class="text-theme-text">  
-        For a while, nothing happened.  
-      </p>  
-      <p class="text-theme-text">  
-        People gathered along the quay, waiting for news they knew might be terrible. Some whispered to one another. Others stood alone, watching the water.  
-      </p>  
-      <p class="text-theme-text">  
-        Then smoke appeared on the northern shore.  
-      </p>  
-      <p class="text-theme-text">  
-        At first, it was only a thin black line rising into the sky. Anyone who had sailed to Ashby Strand could have recognised the place it came from.  
-      </p>  
-      <p class="text-theme-text">  
-        Then another column rose beside it.  
-      </p>  
-      <p class="text-theme-text">  
-        Then a third.  
-      </p>  
-      <p class="text-theme-text">  
-        An orange glow appeared beneath the smoke.  
-      </p>  
-      <p class="text-theme-text">  
-        The sheds were burning.  
-      </p>  
-      <p class="text-theme-text">  
-        Nobody on the quay spoke.  
-      </p>  
-      <p class="text-theme-text">  
-        Three hundred people stood watching the fire from miles away, unable to hear it or do anything to stop it.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria thought of the cod hanging inside those sheds. She thought of the barrels waiting to be filled and the families who had spent the summer gathering enough food to survive the winter.  
-      </p>  
-      <p class="text-theme-text">  
-        She thought of Hugh Fletcher, who could barely climb the stairs.  
-      </p>  
-      <p class="text-theme-text">  
-        And she thought of the harbour chain.  
-      </p>  
-      <p class="text-theme-text">  
-        It was doing exactly what it had been built to do.  
-      </p>  
-      <p class="text-theme-text">  
-        When night fell, Adrien lowered the chain enough to let Thomas's boats pass.  
-      </p>  
-      <p class="text-theme-text">  
-        There was nothing left to protect by keeping them inside.  
-      </p>  
-      <p class="text-theme-text">  
-        Thomas took the larger boat and headed north.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria watched the lantern at his masthead grow smaller until it disappeared into the darkness.  
-      </p>  
-      <p class="text-theme-text">  
-        Then she sat on the quay and pulled Madeleine close.  
-      </p>  
-      <p class="text-theme-text">  
-        Her daughter had fallen asleep with her head in Victoria's lap. The tally cords were still wrapped around her wrists.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria left them there.  
-      </p>  
-      <p class="text-theme-text">  
-        The boy runner had been gone for five hours.  
-      </p>  
-      <p class="text-theme-text">  
-        She did not know whether he had reached Pellam. She did not know whether the old people and children had reached Mill Terrace in time. She did not know whether the raiders would turn south after burning the Strand.  
-      </p>  
-      <p class="text-theme-text">  
-        There was no way to find out until morning.  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne lowered herself onto the stone beside her.  
-      </p>  
-      <p class="text-theme-text">  
-        "You did well," the old woman said.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked at her.  
-      </p>  
-      <p class="text-theme-text">  
-        "Did I?"  
-      </p>  
-      <p class="text-theme-text">  
-        "You sent the runner. You stopped Thomas from taking his boats into open water. You made the choices you could."  
-      </p>  
-      <p class="text-theme-text">  
-        "I couldn't save Ashby Strand."  
-      </p>  
-      <p class="text-theme-text">  
-        "No."  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne rubbed her injured hand.  
-      </p>  
-      <p class="text-theme-text">  
-        "Did you want to open the chain?"  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked towards the harbour entrance.  
-      </p>  
-      <p class="text-theme-text">  
-        "Yes."  
-      </p>  
-      <p class="text-theme-text">  
-        "I thought so."  
-      </p>  
-      <p class="text-theme-text">  
-        "It wouldn't have helped Thomas."  
-      </p>  
-      <p class="text-theme-text">  
-        "No. It would only have put Corrow at risk."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria said nothing.  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne looked out at the dark water.  
-      </p>  
-      <p class="text-theme-text">  
-        "I knew a woman once who couldn't do the second thing."  
-      </p>  
-      <p class="text-theme-text">  
-        "What second thing?"  
-      </p>  
-      <p class="text-theme-text">  
-        "Think past what she wanted."  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne rubbed her hand again.  
-      </p>  
-      <p class="text-theme-text">  
-        "It cost her a boat and three sons. Don't make yourself feel better by pretending you were brave tonight. You were frightened, and you counted before you acted. That's what mattered."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria wanted to tell her that counting had not saved Hugh. It had not saved the sheds or the winter stores.  
-      </p>  
-      <p class="text-theme-text">  
-        But Lucienne already knew.  
-      </p>  
-      <p class="text-theme-text">  
-        They sat quietly while the tide turned.  
-      </p>  
-      <p class="text-theme-text">  
-        Below them, the water began to drain from Skerry channel, flowing over the rocks with a soft, steady sound. Somewhere in the lower town, a baby cried. Its mother sang to it in a tired voice.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria did not recognise the song.  
-      </p>  
-      <p class="text-theme-text">  
-        She stayed until the cold became unbearable.  
-      </p>  
-      <p class="text-theme-text">  
-        At first light, the runner returned.  
-      </p>  
-      <p class="text-theme-text">  
-        His boots were covered in ash, and one sleeve had torn. He looked exhausted, but he was smiling.  
-      </p>  
-      <p class="text-theme-text">  
-        "Pellam is safe," he told Victoria.  
-      </p>  
-      <p class="text-theme-text">  
-        The warning had arrived in time. The old people and children had reached Mill Terrace, and the lower shed had been secured.  
-      </p>  
-      <p class="text-theme-text">  
-        The raiders had not turned south.  
-      </p>  
-      <p class="text-theme-text">  
-        They had burned Ashby Strand, taken what they could from the storehouses, captured one boat, and sailed away beyond the Knuckle.  
-      </p>  
-      <p class="text-theme-text">  
-        Pellam's people had spent the night shivering on the terrace for nothing.  
-      </p>  
-      <p class="text-theme-text">  
-        They had complained about the cold, argued about who had forgotten the blankets, and finally wept with relief when the sun came up.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria was grateful for the news.  
-      </p>  
-      <p class="text-theme-text">  
-        Then the runner handed her a folded piece of paper.  
-      </p>  
-      <p class="text-theme-text">  
-        "Thomas sent this."  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria opened it.  
-      </p>  
-      <p class="text-theme-text">  
-        There were only six words.  
-      </p>  
-      <p class="text-theme-text">  
-        Hugh is dead. The sheds are gone.  
-      </p>  
-      <p class="text-theme-text">  
-        She read the message twice.  
-      </p>  
-      <p class="text-theme-text">  
-        Then she folded it and slipped it into her sleeve, against her skin.  
-      </p>  
-      <p class="text-theme-text">  
-        She kept important things there, where she would not lose them.  
-      </p>  
-      <p class="text-theme-text">  
-        For a long time, she stood looking at the water.  
-      </p>  
-      <p class="text-theme-text">  
-        Corrow's salt pans were full. Its harbour chain had held. Its people were safe.  
-      </p>  
-      <p class="text-theme-text">  
-        Pellam still had its fish and salt, and its children and old people had survived the night.  
-      </p>  
-      <p class="text-theme-text">  
-        Lucienne had been right about the channel.  
-      </p>  
-      <p class="text-theme-text">  
-        Adrien had been right about the chain.  
-      </p>  
-      <p class="text-theme-text">  
-        And Thomas Fletcher had lost his brother.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria sat on a barrel and began to count.  
-      </p>  
-      <p class="text-theme-text">  
-        She did not plan to. Her hands simply reached for the tally cords, as they always did after an exchange.  
-      </p>  
-      <p class="text-theme-text">  
-        Pellam. Corrow. Ashby Strand.  
-      </p>  
-      <p class="text-theme-text">  
-        Forty-one barrels of herring. The salt needed to preserve them. The cod that had burned before it could be smoked. The food Ashby Strand would need to replace before winter grew worse.  
-      </p>  
-      <p class="text-theme-text">  
-        She counted the families on the northern shore and worked out how long Pellam's extra food might last if it were shared among them.  
-      </p>  
-      <p class="text-theme-text">  
-        She tied knots in three cords, one for each community.  
-      </p>  
-      <p class="text-theme-text">  
-        When she finished, the cords did not match.  
-      </p>  
-      <p class="text-theme-text">  
-        They were not supposed to.  
-      </p>  
-      <p class="text-theme-text">  
-        That was the problem.  
-      </p>  
-      <p class="text-theme-text">  
-        Each community had counted what it needed for winter. Corrow had kept enough salt for its people. Pellam had stored enough fish for its families. Ashby Strand had gathered enough cod to feed its own.  
-      </p>  
-      <p class="text-theme-text">  
-        But when one community lost everything, the others could not simply give away what they had planned to need.  
-      </p>  
-      <p class="text-theme-text">  
-        The numbers no longer worked.  
-      </p>  
-      <p class="text-theme-text">  
-        "Mama?"  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine stood in front of her, her hair flattened on one side and her eyes swollen from sleep.  
-      </p>  
-      <p class="text-theme-text">  
-        She looked at the cords.  
-      </p>  
-      <p class="text-theme-text">  
-        "Are you counting the people?"  
-      </p>  
-      <p class="text-theme-text">  
-        "I'm counting what they have."  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine frowned.  
-      </p>  
-      <p class="text-theme-text">  
-        "Isn't that the same thing?"  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria opened her mouth to explain the difference.  
-      </p>  
-      <p class="text-theme-text">  
-        Then she looked down at the cords.  
-      </p>  
-      <p class="text-theme-text">  
-        She had no answer.  
-      </p>  
-      <p class="text-theme-text">  
-        The sun rose higher, spreading light across the quay. Far to the north, the smoke had faded to a thin grey line.  
-      </p>  
-      <p class="text-theme-text">  
-        Soon Thomas would return with his remaining boat and the people who had lost their homes and winter stores.  
-      </p>  
-      <p class="text-theme-text">  
-        He would ask Corrow for salt.  
-      </p>  
-      <p class="text-theme-text">  
-        He would ask Pellam for fish.  
-      </p>  
-      <p class="text-theme-text">  
-        He would be asking for things those communities had already promised to their own families.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria would have to answer him. Then she would have to explain her decision to her own people.  
-      </p>  
-      <p class="text-theme-text">  
-        She had no idea what she would say.  
-      </p>  
-      <p class="text-theme-text">  
-        But she understood something now.  
-      </p>  
-      <p class="text-theme-text">  
-        The raiders had known when to attack.  
-      </p>  
-      <p class="text-theme-text">  
-        They had waited for the autumn exchange, the one day each year when all three communities gathered their goods in one place. They had chosen the moment when everyone was busy weighing barrels and checking accounts, when every person on the quay was looking at what the others had brought.  
-      </p>  
-      <p class="text-theme-text">  
-        They had taken advantage of the fact that the three communities worked together without truly planning together.  
-      </p>  
-      <p class="text-theme-text">  
-        And unless something changed, they could do it again.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked at the three cords.  
-      </p>  
-      <p class="text-theme-text">  
-        Next year, Ashby Strand would need to rebuild its stores. Pellam would have to decide how much food it could spare. Corrow would have to consider whether its chain protected more than the people standing behind it.  
-      </p>  
-      <p class="text-theme-text">  
-        Those were not decisions Victoria could make alone.  
-      </p>  
-      <p class="text-theme-text">  
-        That was the trouble.  
-      </p>  
-      <p class="text-theme-text">  
-        She tied the last knot and held the cords out of the wind.  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine watched her.  
-      </p>  
-      <p class="text-theme-text">  
-        "What happens now?"  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria looked towards the northern shore.  
-      </p>  
-      <p class="text-theme-text">  
-        "We find out what we can spare."  
-      </p>  
-      <p class="text-theme-text">  
-        "And if it isn't enough?"  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria was quiet for a moment.  
-      </p>  
-      <p class="text-theme-text">  
-        "Then we'll have to decide what matters most."  
-      </p>  
-      <p class="text-theme-text">  
-        Madeleine looked at the cords but did not ask another question.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria sat on the barrel as the morning grew brighter, holding the counts of three communities that had always believed they could manage their own winters.  
-      </p>  
-      <p class="text-theme-text">  
-        She had spent years making sure the numbers were right.  
-      </p>  
-      <p class="text-theme-text">  
-        Now she was beginning to understand that correct numbers were not enough.  
-      </p>  
-      <p class="text-theme-text">  
-        Corrow had counted its salt. Pellam had counted its fish. Ashby Strand had counted its cod.  
-      </p>  
-      <p class="text-theme-text">  
-        Every community had prepared for its own people.  
-      </p>  
-      <p class="text-theme-text">  
-        But nobody had counted what would happen if one of them lost everything.  
-      </p>  
-      <p class="text-theme-text">  
-        Victoria gathered the three cords in her hands.  
-      </p>  
-      <p class="text-theme-text">  
-        Beyond the Knuckle, the raiders were sailing away with food that should have lasted an entire community through winter.  
-      </p>  
-      <p class="text-theme-text">  
-        They would know where to return when the stores were full again.  
-      </p>  
-      <p class="text-theme-text">  
-        And this time, Victoria would have to find a way to make sure the three shores were ready together.  
-      </p>  
-    </div>
+      <!-- Direct Entry Actions -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-sans uppercase tracking-[0.2em]">
+        <button onclick="openReader('founding', 0)" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">
+          Begin Chapter 1: Victoria &rarr;
+        </button>
+        <button onclick="switchView('eras')" class="w-full sm:w-auto px-8 py-4 border border-theme-border hover:border-theme-accent text-theme-text transition-all rounded-sm">
+          Explore The Two Eras
+        </button>
+      </div>
+    </section>
 
-    <!-- Chapter: Crowned Era (Elizabeth) -->  
-    <div id="chapter-crowned" class="space-y-8 hidden">  
-      <div class="text-center mb-14 space-y-3">  
-        <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">The Crowned Era &bull; Chapter One</p>  
-        <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">The Weight of Consent</h2>  
-        <div class="w-10 h-px bg-theme-accent/40 mx-auto mt-6"></div>  
+    <!-- VIEW 2: THE TWO ERAS -->
+    <section id="view-eras" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
+      <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
+        <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>Home</span>
+        </button>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Chronological Architecture</span>
       </div>
 
-      <p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-theme-accent first-letter:leading-none text-theme-text">  
-        Nobody had ever raised a voice against Elizabeth.  
-      </p>
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The Two Eras</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
+          Two timelines bound by the same continuity. Victoria makes decisions to survive an emergency; generations later, Elizabeth inherits those decisions as holy scripture.
+        </p>
+      </div>
 
-      <p class="text-theme-text">  
-        That was the detail historians in the capital would fail to understand when they eventually gathered her private ledgers. There had been no locked chamber, no harsh words at breakfast, no severe grandfather demanding total submission under pain of exile. Tyranny, if that was what one wished to call the arrangement of her existence, had entered through warmth.  
-      </p>
-
-      <p class="text-theme-text">  
-        Her mother, Queen Anne, arrived each morning at eight with a cup of steeped chamomile and two minutes of silence. Anne did not command. She asked questions that had already been resolved seventy years before either of them took their first breath.  
-      </p>
-
-      <p class="italic text-theme-text-muted pl-4 border-l-2 border-theme-accent my-6 bg-theme-panel-accent py-2 pr-3 rounded-r-sm">  
-        "Are the eastern robes comfortable for the Valenne delegation, Elizabeth, or would you prefer the grey silk?"  
-      </p>
-
-      <p class="text-theme-text">  
-        It was always a choice between two variations of the same outcome. If Elizabeth chose the grey silk, it proved she possessed modesty. If she chose the eastern robes, it proved she possessed diplomatic instincts. There was no third option where she simply walked through the west terrace in yesterday's wool coat and let the horses eat uninspected grass.  
-      </p>
-
-      <p class="text-theme-text">  
-        "Edward arrived before noon," Anne said softly, resting one hand upon the back of Elizabeth's dressing chair. The touch was genuine. Anne did not wear rings on her left hand because she believed cold metal had no place against a daughter's skin. "He brought the trade charters from the river valley. He insisted on leaving them in the lower library so you wouldn't feel hurried."  
-      </p>
-
-      <p class="text-theme-text">  
-        "He is always thoughtful," Elizabeth said.  
-      </p>
-
-      <p class="text-theme-text">  
-        The sentence formed without friction. She had said it at twelve; she had said it at sixteen; she said it now at nineteen. It was entirely true. Edward of Valenne was thoughtful. He had memorized the names of her childhood dogs; he remembered that she disliked spiced wine; he never interrupted her when she spoke on treaty clauses.   
-      </p>
-
-      <p class="text-theme-text">  
-        That was what made her heart seize in the middle of the chest. It would have been so clean to hate him. If Edward had been insolent, if he had reeked of vanity or cruelty, refusal would have had the clear, sharp dignity of courage. Instead, he was good. He was plausible. He was everything someone who loved her would have chosen for her.  
-      </p>
-
-      <p class="text-theme-text">  
-        And because she was kind, and because she was sensible, she had slowly learned to want what everyone had decided she was meant to have.  
-      </p>
-
-      <p class="text-theme-text">  
-        Until the letter from the mountain border arrived with no royal seal at all.  
-      </p>  
-    </div>
-
-    <!-- End-of-Chapter Navigation -->  
-    <div class="mt-20 pt-10 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">  
-      <button id="btnReaderNextEra" onclick="loadChapter('crowned')" class="text-theme-accent hover:underline font-semibold">  
-        Read Elizabeth's Story: Chapter One &rarr;  
-      </button>  
-      <button onclick="switchView('archive')" class="text-theme-text-muted hover:text-theme-text">  
-        Examine State Records &rarr;  
-      </button>  
-    </div>
-
-  </article>  
-</section>
-
-<!-- VIEW 4: THE WORLD -->  
-<section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">  
-  <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">  
-    <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">  
-      <span>&larr;</span> <span>Home</span>  
-    </button>  
-    <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Territories & Governance</span>  
-  </div>
-
-  <div class="text-center max-w-2xl mx-auto mb-14">  
-    <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The World of Norwyn</h2>  
-    <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">  
-      Physical geography designed not for splendor, but for continuity, observation, and defensible survival.  
-    </p>  
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    
-    <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">  
-      <div>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block mb-2">The Capital</span>  
-        <h3 class="font-display text-xl text-theme-text mb-4">The White Spires</h3>  
-        <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">  
-          Where emergency decisions calcified into architecture. High stone galleries structured so no two ministers can converse without being observed from the balcony above.  
-        </p>  
-      </div>  
-      <div class="pt-4 border-t border-theme-border text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">  
-        Seat of Queen Anne & Elizabeth  
-      </div>  
-    </div>
-
-    <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">  
-      <div>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-semibold block mb-2">The Southern Reach</span>  
-        <h3 class="font-display text-xl text-theme-text mb-4">Valenne Dominion</h3>  
-        <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">  
-          Fertile river basins, high grain yields, and legalistic discipline. Marriage here is treated not as affection or tyranny, but as an audited balance sheet of reciprocal protection.  
-        </p>  
-      </div>  
-      <div class="pt-4 border-t border-theme-border text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">  
-        Domain of Edward  
-      </div>  
-    </div>
-
-    <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">  
-      <div>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block mb-2">The Northern Border</span>  
-        <h3 class="font-display text-xl text-theme-text mb-4">The High Ridge</h3>  
-        <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">  
-          Steep, winter-locked passes. Not a romantic refuge of lawless freedom, but a harsh mountain society governed by immediate physical necessity and unspoken alliances.  
-        </p>  
-      </div>  
-      <div class="pt-4 border-t border-theme-border text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">  
-        Origin of Elias  
-      </div>  
-    </div>
-
-  </div>  
-</section>
-
-<!-- VIEW 5: CHARACTERS -->  
-<section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">  
-  <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">  
-    <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">  
-      <span>&larr;</span> <span>Home</span>  
-    </button>  
-    <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Dramatis Personae</span>  
-  </div>
-
-  <div class="text-center max-w-2xl mx-auto mb-14">  
-    <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">Persons of Record</h2>  
-    <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">  
-      None are villains; none are symbols. Each operates within the plausible reality shaped for them.  
-    </p>  
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    
-    <!-- Victoria -->  
-    <div class="border border-theme-accent p-8 bg-theme-panel rounded-sm shadow-sm">  
-      <div class="flex items-baseline justify-between mb-2">  
-        <h3 class="font-display text-xl text-theme-text">Queen Victoria</h3>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Architect</span>  
-      </div>  
-      <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Founding Era</span>  
-      <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">  
-        The ruler whose emergency compromises hardened into sacred law. She sacrificed the autonomy of future generations to buy a single season of quiet survival.  
-      </p>  
-    </div>
-
-    <!-- Lord Raymond -->  
-    <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">  
-      <div class="flex items-baseline justify-between mb-2">  
-        <h3 class="font-display text-xl text-theme-text">Lord Raymond</h3>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Valenne Envoy</span>  
-      </div>  
-      <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Founding Era</span>  
-      <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">  
-        Caspar’s pragmatic diplomat who demanded hereditary parity to keep his cousins from rearming. A man who drafted treaties knowing ink was cheaper than blood.  
-      </p>  
-    </div>
-
-    <!-- Queen Anne -->  
-    <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">  
-      <div class="flex items-baseline justify-between mb-2">  
-        <h3 class="font-display text-xl text-theme-text">Queen Anne</h3>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Mother</span>  
-      </div>  
-      <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>  
-      <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">  
-        She does not control Elizabeth to dominate her. She prepares Elizabeth because she knows what unshielded exposure looks like in court. Preparation is her highest form of love.  
-      </p>  
-    </div>
-
-    <!-- Elizabeth -->  
-    <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">  
-      <div class="flex items-baseline justify-between mb-2">  
-        <h3 class="font-display text-xl text-theme-text">Princess Elizabeth</h3>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Heiress</span>  
-      </div>  
-      <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>  
-      <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">  
-        Formed so carefully to rule that she struggles to distinguish between what she has been educated to want and what belongs to her own desire.  
-      </p>  
-    </div>
-
-    <!-- Edward -->  
-    <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">  
-      <div class="flex items-baseline justify-between mb-2">  
-        <h3 class="font-display text-xl text-theme-text">Edward of Valenne</h3>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Intended</span>  
-      </div>  
-      <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>  
-      <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">  
-        Disciplined, respectful, and genuinely kind. His decency makes him far harder to resist than a tyrant, because accepting him feels like reason itself.  
-      </p>  
-    </div>
-
-    <!-- Elias -->  
-    <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">  
-      <div class="flex items-baseline justify-between mb-2">  
-        <h3 class="font-display text-xl text-theme-text">Elias</h3>  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Outpost</span>  
-      </div>  
-      <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>  
-      <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">  
-        He is not a storybook escape into effortless freedom. He carries his own mountain duties and prejudices, offering intellectual confrontation rather than salvation.  
-      </p>  
-    </div>
-
-  </div>  
-</section>
-
-<!-- VIEW 6: ARCHIVE -->  
-<section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">  
-  <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">  
-    <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">  
-      <span>&larr;</span> <span>Home</span>  
-    </button>  
-    <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Court Records Vault</span>  
-  </div>
-
-  <div class="text-center max-w-2xl mx-auto mb-14">  
-    <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The Norwyn Archive</h2>  
-    <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">  
-      Official history records what institutions wanted remembered. Click <strong class="text-theme-accent font-medium">"Look Twice"</strong> to uncover the private marginalia beneath the decrees.  
-    </p>  
-  </div>
-
-  <div class="space-y-8">
-    
-    <!-- Record 1 -->  
-    <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm shadow-sm">  
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border mb-6">  
-        <div>  
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block">Record #0012-A &bull; Treaty of the First Stones</span>  
-          <h3 class="font-display text-xl text-theme-text mt-1">Edict on the Consanguine League of Valenne</h3>  
+      <!-- Side-by-side Deep Comparative Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Era 1: Founding -->
+        <div class="border-2 border-theme-accent bg-theme-panel p-8 md:p-10 flex flex-col justify-between rounded-sm shadow-sm relative">
+          <div style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="absolute -top-3.5 right-6 px-3 py-1 text-[10px] font-sans uppercase tracking-[0.2em] font-semibold rounded-sm">
+            1. The Bedrock
+          </div>
+          <div>
+            <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">The Founding Era</span>
+            <h3 class="font-display text-2xl text-theme-text mb-3">Victoria's Story</h3>
+            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">How Decisions Become Traditions</p>
+            <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">
+              In an age of mud and burned storehouses, every compromise was an emergency solution. Victoria had to bind four feuding houses before the winter killed them all. Nobody planned for a temporary agreement to outlive the war that summoned it.
+            </p>
+            <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">
+              <li><strong class="text-theme-text">&bull; Core Question:</strong> When does a provisional compromise become a cage?</li>
+              <li><strong class="text-theme-text">&bull; Setting:</strong> Fragile borders, damp stores, raw negotiation.</li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-theme-border mt-6">
+            <button onclick="openReader('founding', 0)" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full py-3 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">
+              Read Victoria's Story &rarr;
+            </button>
+          </div>
         </div>
-        
-        <button onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:!text-[var(--primary-btn-text)] text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">  
-          Look Twice  
-        </button>  
-      </div>
 
-      <div class="font-serif text-base text-theme-text-muted leading-relaxed">  
-        <p>  
-          "Let it be inscribed: Henceforth, Norwyn and the House of Valenne shall govern under marital concord. The royal heir shall betroth the direct issue of Valenne at their eighteenth summer, assuring unbroken sovereignty and the defense of the northern trade gates."  
-        </p>  
-      </div>
-
-      <!-- Marginalia -->  
-      <div id="layer-rec1" style="background-color: var(--color-burgundy-box);" class="hidden mt-6 pt-5 border-t border-theme-burgundy/40 p-5 border-l-4 border-l-theme-burgundy rounded-sm">  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-bold block mb-1">  
-          Private Diary Fragment: Queen Victoria (Founding Era)  
-        </span>  
-        <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">  
-          "We wrote the eighteenth summer because Lord Caspar was ninety years old and his heir had a lung rot; we had to buy five years of quiet before Valenne's cousins could organize a siege. I never intended this calendar to govern my great-grandchildren. A crutch is meant to be discarded when the bone knits. Instead, they have gold-leafed the crutch."  
-        </p>  
-      </div>  
-    </div>
-
-    <!-- Record 2 -->  
-    <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm shadow-sm">  
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border mb-6">  
-        <div>  
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block">Record #0087-C &bull; Royal Nursery Directive</span>  
-          <h3 class="font-display text-xl text-theme-text mt-1">Memorandum on Elizabeth’s Schedule</h3>  
+        <!-- Era 2: Crowned -->
+        <div class="border border-theme-border bg-theme-panel p-8 md:p-10 flex flex-col justify-between rounded-sm shadow-sm relative">
+          <div class="absolute -top-3.5 right-6 px-3 py-1 bg-theme-burgundy text-white text-[10px] font-sans uppercase tracking-[0.2em] font-semibold rounded-sm">
+            2. The Inheritance
+          </div>
+          <div>
+            <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-burgundy font-semibold block mb-2">The Crowned Era</span>
+            <h3 class="font-display text-2xl text-theme-text mb-3">Elizabeth's Story</h3>
+            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">The Weight of Consent</p>
+            <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">
+              Raised in the polished certainty of Victoria's legacy. She was never starved of affection or subjected to brutality—her mother built an education, not a prison. The terror begins when Elizabeth discovers she cannot separate what she wants from what she was formed to want.
+            </p>
+            <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">
+              <li><strong class="text-theme-text">&bull; Core Question:</strong> What if you actually want what you were taught to want?</li>
+              <li><strong class="text-theme-text">&bull; Setting:</strong> Polished marble galleries, quiet gardens, unspoken boundaries.</li>
+            </ul>
+          </div>
+          <div class="pt-6 border-t border-theme-border mt-6">
+            <button onclick="openReader('crowned', 0)" class="w-full py-3 border border-theme-border text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.2em] uppercase text-center rounded-sm transition-colors">
+              Read Elizabeth's Story &rarr;
+            </button>
+          </div>
         </div>
-        
-        <button onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:!text-[var(--primary-btn-text)] text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">  
-          Look Twice  
-        </button>  
+      </div>
+    </section>
+
+    <!-- VIEW 3: READ (Dynamic Reader Sanctuary — Loads from chapters.js) -->
+    <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300">
+      <!-- Reader Controls Bar -->
+      <div class="max-w-3xl mx-auto px-6 mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
+        <button onclick="switchView('home')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>Return to Overview</span>
+        </button>
+
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center border border-theme-border rounded-sm text-xs font-sans bg-theme-panel">
+            <button onclick="changeFontSize(-1)" class="px-3 py-1 text-theme-text-muted hover:text-theme-text" title="Decrease font size">A-</button>
+            <span class="text-theme-border">|</span>
+            <button onclick="changeFontSize(1)" class="px-3 py-1 text-theme-text-muted hover:text-theme-text font-semibold" title="Increase font size">A+</button>
+          </div>
+          <button onclick="toggleGlobalTheme()" class="px-3 py-1 border border-theme-border rounded-sm text-[11px] font-sans tracking-wider uppercase text-theme-text-muted hover:border-theme-accent hover:text-theme-text transition-colors bg-theme-panel">
+            Toggle Palette
+          </button>
+        </div>
       </div>
 
-      <div class="font-serif text-base text-theme-text-muted leading-relaxed">  
-        <p>  
-          "The Princess should be instructed in continental cadence, state economics, and music. Under no circumstance should her schedule permit unregulated retreat. Solitude invites melancholy in future rulers; purpose is the greatest armor a daughter of Norwyn can wear."  
-        </p>  
+      <!-- Era Switcher within Reader -->
+      <div class="max-w-xl mx-auto px-6 mb-8 flex justify-center space-x-6 text-xs font-sans uppercase tracking-[0.18em]">
+        <button id="readerTabFounding" onclick="loadChapter('founding', 0)" class="py-1 border-b-2 border-theme-accent text-theme-text font-semibold">
+          1. Era One: Victoria
+        </button>
+        <button id="readerTabCrowned" onclick="loadChapter('crowned', 0)" class="py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text">
+          2. Era Two: Elizabeth
+        </button>
       </div>
 
-      <!-- Marginalia -->  
-      <div id="layer-rec2" style="background-color: var(--color-burgundy-box);" class="hidden mt-6 pt-5 border-t border-theme-burgundy/40 p-5 border-l-4 border-l-theme-burgundy rounded-sm">  
-        <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-bold block mb-1">  
-          Anne's Note to the Governess (Found in private desk)  
-        </span>  
-        <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">  
-          "Do not let her think this is punishment. I spent my eighteenth year trapped in a carriage while councilors debated whether I was sane enough to inherit. If Elizabeth knows the answer before they can frame the question, nobody will ever dare question her mind. Keep her busy so she does not bleed."  
-        </p>  
-      </div>  
-    </div>
+      <!-- Chapter Selector (Automatically shows if an Era has multiple chapters) -->
+      <div id="chapterSelectorBar" class="max-w-xl mx-auto px-6 mb-10 hidden justify-center flex-wrap gap-2 text-xs font-sans uppercase tracking-wider"></div>
 
-  </div>  
-</section>
+      <!-- Dynamic Reading Body Container -->
+      <article id="readingBody" class="max-w-2xl mx-auto px-6 text-lg leading-relaxed font-serif transition-all duration-200">
+        <div id="chapterContent" class="space-y-6"></div>
 
+        <!-- End-of-Chapter Navigation -->
+        <div class="mt-20 pt-10 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
+          <button id="btnReaderNext" onclick="loadChapter('crowned', 0)" class="text-theme-accent hover:underline font-semibold">
+            Read Elizabeth's Story: Chapter One &rarr;
+          </button>
+          <button onclick="switchView('archive')" class="text-theme-text-muted hover:text-theme-text">
+            Examine State Records &rarr;
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- VIEW 4: THE WORLD -->
+    <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
+      <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
+        <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>Home</span>
+        </button>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Territories & Governance</span>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The World of Norwyn</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
+          Physical geography designed not for splendor, but for continuity, observation, and defensible survival.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">
+          <div>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block mb-2">The Capital</span>
+            <h3 class="font-display text-xl text-theme-text mb-4">The White Spires</h3>
+            <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
+              Where emergency decisions calcified into architecture. High stone galleries structured so no two ministers can converse without being observed from the balcony above.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-theme-border text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">
+            Seat of Queen Anne & Elizabeth
+          </div>
+        </div>
+
+        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">
+          <div>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-semibold block mb-2">The Southern Reach</span>
+            <h3 class="font-display text-xl text-theme-text mb-4">Valenne Dominion</h3>
+            <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
+              Fertile river basins, high grain yields, and legalistic discipline. Marriage here is treated not as affection or tyranny, but as an audited balance sheet of reciprocal protection.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-theme-border text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">
+            Domain of Edward
+          </div>
+        </div>
+
+        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">
+          <div>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block mb-2">The Northern Border</span>
+            <h3 class="font-display text-xl text-theme-text mb-4">The High Ridge</h3>
+            <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
+              Steep, winter-locked passes. Not a romantic refuge of lawless freedom, but a harsh mountain society governed by immediate physical necessity and unspoken alliances.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-theme-border text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">
+            Origin of Elias
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: CHARACTERS -->
+    <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
+      <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
+        <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>Home</span>
+        </button>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Dramatis Personae</span>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">Persons of Record</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
+          None are villains; none are symbols. Each operates within the plausible reality shaped for them.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Victoria -->
+        <div class="border border-theme-accent p-8 bg-theme-panel rounded-sm shadow-sm">
+          <div class="flex items-baseline justify-between mb-2">
+            <h3 class="font-display text-xl text-theme-text">Queen Victoria</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Architect</span>
+          </div>
+          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Founding Era</span>
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+            The ruler whose emergency compromises hardened into sacred law. She sacrificed the autonomy of future generations to buy a single season of quiet survival.
+          </p>
+        </div>
+
+        <!-- Lord Raymond -->
+        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+          <div class="flex items-baseline justify-between mb-2">
+            <h3 class="font-display text-xl text-theme-text">Lord Raymond</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Valenne Envoy</span>
+          </div>
+          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Founding Era</span>
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+            Caspar’s pragmatic diplomat who demanded hereditary parity to keep his cousins from rearming. A man who drafted treaties knowing ink was cheaper than blood.
+          </p>
+        </div>
+
+        <!-- Queen Anne -->
+        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+          <div class="flex items-baseline justify-between mb-2">
+            <h3 class="font-display text-xl text-theme-text">Queen Anne</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Mother</span>
+          </div>
+          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+            She does not control Elizabeth to dominate her. She prepares Elizabeth because she knows what unshielded exposure looks like in court. Preparation is her highest form of love.
+          </p>
+        </div>
+
+        <!-- Elizabeth -->
+        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+          <div class="flex items-baseline justify-between mb-2">
+            <h3 class="font-display text-xl text-theme-text">Princess Elizabeth</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Heiress</span>
+          </div>
+          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+            Formed so carefully to rule that she struggles to distinguish between what she has been educated to want and what belongs to her own desire.
+          </p>
+        </div>
+
+        <!-- Edward -->
+        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+          <div class="flex items-baseline justify-between mb-2">
+            <h3 class="font-display text-xl text-theme-text">Edward of Valenne</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Intended</span>
+          </div>
+          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+            Disciplined, respectful, and genuinely kind. His decency makes him far harder to resist than a tyrant, because accepting him feels like reason itself.
+          </p>
+        </div>
+
+        <!-- Elias -->
+        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+          <div class="flex items-baseline justify-between mb-2">
+            <h3 class="font-display text-xl text-theme-text">Elias</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Outpost</span>
+          </div>
+          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+            He is not a storybook escape into effortless freedom. He carries his own mountain duties and prejudices, offering intellectual confrontation rather than salvation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 6: ARCHIVE -->
+    <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
+      <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
+        <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>Home</span>
+        </button>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Court Records Vault</span>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The Norwyn Archive</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
+          Official history records what institutions wanted remembered. Click <strong class="text-theme-accent font-medium">"Look Twice"</strong> to uncover the private marginalia beneath the decrees.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Record 1 -->
+        <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border mb-6">
+            <div>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block">Record #0012-A &bull; Treaty of the First Stones</span>
+              <h3 class="font-display text-xl text-theme-text mt-1">Edict on the Consanguine League of Valenne</h3>
+            </div>
+            
+            <button onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:!text-[var(--primary-btn-text)] text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">
+              Look Twice
+            </button>
+          </div>
+
+          <div class="font-serif text-base text-theme-text-muted leading-relaxed">
+            <p>
+              "Let it be inscribed: Henceforth, Norwyn and the House of Valenne shall govern under marital concord. The royal heir shall betroth the direct issue of Valenne at their eighteenth summer, assuring unbroken sovereignty and the defense of the northern trade gates."
+            </p>
+          </div>
+
+          <div id="layer-rec1" style="background-color: var(--color-burgundy-box);" class="hidden mt-6 pt-5 border-t border-theme-burgundy/40 p-5 border-l-4 border-l-theme-burgundy rounded-sm">
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-bold block mb-1">
+              Private Diary Fragment: Queen Victoria (Founding Era)
+            </span>
+            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">
+              "We wrote the eighteenth summer because Lord Caspar was ninety years old and his heir had a lung rot; we had to buy five years of quiet before Valenne's cousins could organize a siege. I never intended this calendar to govern my great-grandchildren. A crutch is meant to be discarded when the bone knits. Instead, they have gold-leafed the crutch."
+            </p>
+          </div>
+        </div>
+
+        <!-- Record 2 -->
+        <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border mb-6">
+            <div>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block">Record #0087-C &bull; Royal Nursery Directive</span>
+              <h3 class="font-display text-xl text-theme-text mt-1">Memorandum on Elizabeth’s Schedule</h3>
+            </div>
+            
+            <button onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:!text-[var(--primary-btn-text)] text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">
+              Look Twice
+            </button>
+          </div>
+
+          <div class="font-serif text-base text-theme-text-muted leading-relaxed">
+            <p>
+              "The Princess should be instructed in continental cadence, state economics, and music. Under no circumstance should her schedule permit unregulated retreat. Solitude invites melancholy in future rulers; purpose is the greatest armor a daughter of Norwyn can wear."
+            </p>
+          </div>
+
+          <div id="layer-rec2" style="background-color: var(--color-burgundy-box);" class="hidden mt-6 pt-5 border-t border-theme-burgundy/40 p-5 border-l-4 border-l-theme-burgundy rounded-sm">
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-bold block mb-1">
+              Anne's Note to the Governess (Found in private desk)
+            </span>
+            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">
+              "Do not let her think this is punishment. I spent my eighteenth year trapped in a carriage while councilors debated whether I was sane enough to inherit. If Elizabeth knows the answer before they can frame the question, nobody will ever dare question her mind. Keep her busy so she does not bleed."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <!-- Footer: Strictly the single required copyright notice -->  
-  <footer id="siteFooter" style="background-color: var(--footer-bg); border-color: var(--color-border);" class="border-t py-8 transition-colors duration-300">  
-    <div class="max-w-6xl mx-auto px-6 text-center text-xs font-sans tracking-[0.15em] text-theme-text-muted">  
-      &copy; 2026 Queen Usman. All rights reserved.  
-    </div>  
+
+  <!-- Footer -->
+  <footer id="siteFooter" style="background-color: var(--footer-bg); border-color: var(--color-border);" class="border-t py-8 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-6 text-center text-xs font-sans tracking-[0.15em] text-theme-text-muted">
+      &copy; 2026 Queen Usman. All rights reserved.
+    </div>
   </footer>
-  <script>  
-    let activeChapter = 'founding';  
-    let baseFontSize = 18;  
+
+  <!-- External Chapter File -->
+  <script src="chapters.js"></script>
+
+  <!-- Main Application Logic -->
+  <script>
+    let activeEra = 'founding';
+    let activeChapterIndex = 0;
+    let baseFontSize = 18;
     let isIvoryMode = false;
 
-    // View Navigation Switcher: Guarantees views are mutually exclusive  
-    function switchView(viewId) {  
+    function switchView(viewId) {
       const views = ['home', 'eras', 'reader', 'world', 'characters', 'archive'];
       
-      views.forEach(v => {  
-        const el = document.getElementById(`view-${v}`);  
-        if (el) {  
-          if (v === viewId) {  
-            el.classList.remove('view-hidden');  
-            el.classList.add('view-visible');  
-          } else {  
-            el.classList.add('view-hidden');  
-            el.classList.remove('view-visible');  
-          }  
-        }  
+      views.forEach(v => {
+        const el = document.getElementById(`view-${v}`);
+        if (el) {
+          if (v === viewId) {
+            el.classList.remove('view-hidden');
+            el.classList.add('view-visible');
+          } else {
+            el.classList.add('view-hidden');
+            el.classList.remove('view-visible');
+          }
+        }
       });
 
-      // Update Header Nav Indicators  
-      document.querySelectorAll('.nav-button').forEach(btn => {  
-        if (btn.getAttribute('data-page') === viewId) {  
-          btn.classList.add('text-theme-text', 'border-theme-accent');  
-          btn.classList.remove('text-theme-text-muted', 'border-transparent');  
-        } else {  
-          btn.classList.remove('text-theme-text', 'border-theme-accent');  
-          btn.classList.add('text-theme-text-muted', 'border-transparent');  
-        }  
+      document.querySelectorAll('.nav-button').forEach(btn => {
+        if (btn.getAttribute('data-page') === viewId) {
+          btn.classList.add('text-theme-text', 'border-theme-accent');
+          btn.classList.remove('text-theme-text-muted', 'border-transparent');
+        } else {
+          btn.classList.remove('text-theme-text', 'border-theme-accent');
+          btn.classList.add('text-theme-text-muted', 'border-transparent');
+        }
       });
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });  
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Direct entry into reader for specific era  
-    function openReader(era) {  
-      switchView('reader');  
-      loadChapter(era || 'founding');  
+    function openReader(era, index = 0) {
+      switchView('reader');
+      loadChapter(era || 'founding', index);
     }
 
-    // Switch Chapter in the Reader Sanctuary  
-    function loadChapter(era) {  
-      const crownedChapter = document.getElementById('chapter-crowned');  
-      const foundingChapter = document.getElementById('chapter-founding');  
-      const tabCrowned = document.getElementById('readerTabCrowned');  
-      const tabFounding = document.getElementById('readerTabFounding');  
-      const nextBtn = document.getElementById('btnReaderNextEra');
+    // Renders chapter text from chapters.js into the Reader
+    function loadChapter(era, chapterIndex = 0, scroll = true) {
+      const container = document.getElementById('chapterContent');
+      const selectorBar = document.getElementById('chapterSelectorBar');
+      const tabFounding = document.getElementById('readerTabFounding');
+      const tabCrowned = document.getElementById('readerTabCrowned');
+      const nextBtn = document.getElementById('btnReaderNext');
 
-      activeChapter = era;
+      if (typeof NOVEL_CHAPTERS === 'undefined' || !NOVEL_CHAPTERS[era]) {
+        container.innerHTML = `<p class="text-center text-theme-text-muted">Chapter file (chapters.js) not found. Make sure chapters.js is saved in the same folder as index.html.</p>`;
+        return;
+      }
 
-      if (era === 'founding') {  
-        foundingChapter.classList.remove('hidden');  
-        crownedChapter.classList.add('hidden');  
-        tabFounding.className = "py-1 border-b-2 border-theme-accent text-theme-text font-semibold";  
-        tabCrowned.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";  
-        if (nextBtn) {  
-          nextBtn.textContent = "Read Elizabeth's Story: Chapter One →";  
-          nextBtn.setAttribute('onclick', "loadChapter('crowned')");  
-        }  
-      } else {  
-        crownedChapter.classList.remove('hidden');  
-        foundingChapter.classList.add('hidden');  
-        tabCrowned.className = "py-1 border-b-2 border-theme-accent text-theme-text font-semibold";  
-        tabFounding.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";  
-        if (nextBtn) {  
-          nextBtn.textContent = "← Return to Victoria: Chapter One";  
-          nextBtn.setAttribute('onclick', "loadChapter('founding')");  
-        }  
-      }  
-      window.scrollTo({ top: 0, behavior: 'smooth' });  
+      activeEra = era;
+      activeChapterIndex = chapterIndex;
+
+      // Update Era Tabs
+      if (era === 'founding') {
+        tabFounding.className = "py-1 border-b-2 border-theme-accent text-theme-text font-semibold";
+        tabCrowned.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";
+      } else {
+        tabCrowned.className = "py-1 border-b-2 border-theme-accent text-theme-text font-semibold";
+        tabFounding.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";
+      }
+
+      const eraChapters = NOVEL_CHAPTERS[era];
+      const chapter = eraChapters[chapterIndex] || eraChapters[0];
+
+      // Render multi-chapter selector buttons if an era has more than 1 chapter
+      if (eraChapters.length > 1) {
+        selectorBar.classList.remove('hidden');
+        selectorBar.classList.add('flex');
+        selectorBar.innerHTML = eraChapters.map((ch, idx) => `
+          <button onclick="loadChapter('${era}', ${idx})" class="px-3 py-1 border rounded-sm transition-colors ${idx === chapterIndex ? 'border-theme-accent text-theme-accent bg-theme-panel-accent font-semibold' : 'border-theme-border text-theme-text-muted hover:text-theme-text bg-theme-panel'}">
+            ${ch.number}
+          </button>
+        `).join('');
+      } else {
+        selectorBar.classList.add('hidden');
+        selectorBar.classList.remove('flex');
+      }
+
+      // Split raw text by blank lines and build paragraphs automatically
+      const paragraphs = chapter.content
+        .trim()
+        .split(/\n\s*\n/)
+        .map(p => p.trim())
+        .filter(Boolean);
+
+      const formattedParagraphs = paragraphs.map((para, idx) => {
+        // First paragraph gets the decorative drop-cap
+        if (idx === 0) {
+          return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-theme-accent first-letter:leading-none text-theme-text">${para}</p>`;
+        }
+        // Paragraphs starting with ">" get styled as a highlighted quote
+        if (para.startsWith('>')) {
+          return `<p class="italic text-theme-text-muted pl-4 border-l-2 border-theme-accent my-6 bg-theme-panel-accent py-2 pr-3 rounded-r-sm">${para.replace(/^>\s*/, '')}</p>`;
+        }
+        return `<p class="text-theme-text">${para}</p>`;
+      }).join('\n');
+
+      container.innerHTML = `
+        <div class="text-center mb-14 space-y-3">
+          <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">${chapter.eraLabel} &bull; ${chapter.number}</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">${chapter.title}</h2>
+          <div class="w-10 h-px bg-theme-accent/40 mx-auto mt-6"></div>
+        </div>
+        ${formattedParagraphs}
+      `;
+
+      // Update Bottom Navigation Button
+      if (nextBtn) {
+        if (chapterIndex + 1 < eraChapters.length) {
+          const nextCh = eraChapters[chapterIndex + 1];
+          nextBtn.innerHTML = `Continue to ${nextCh.number}: ${nextCh.title} &rarr;`;
+          nextBtn.setAttribute('onclick', `loadChapter('${era}', ${chapterIndex + 1})`);
+        } else if (era === 'founding') {
+          nextBtn.innerHTML = `Read Elizabeth's Story: Chapter One &rarr;`;
+          nextBtn.setAttribute('onclick', `loadChapter('crowned', 0)`);
+        } else {
+          nextBtn.innerHTML = `&larr; Return to Victoria: Chapter One`;
+          nextBtn.setAttribute('onclick', `loadChapter('founding', 0)`);
+        }
+      }
+
+      if (scroll) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
 
-    // "Look Twice" Inspection Mechanism  
-    function toggleLookTwice(recId) {  
-      const layer = document.getElementById(`layer-${recId}`);  
+    function toggleLookTwice(recId) {
+      const layer = document.getElementById(`layer-${recId}`);
       const btn = document.getElementById(`btn-${recId}`);
 
-      if (layer.classList.contains('hidden')) {  
-        layer.classList.remove('hidden');  
-        btn.textContent = "Close Look";  
-      } else {  
-        layer.classList.add('hidden');  
-        btn.textContent = "Look Twice";  
-      }  
+      if (layer.classList.contains('hidden')) {
+        layer.classList.remove('hidden');
+        btn.textContent = "Close Look";
+      } else {
+        layer.classList.add('hidden');
+        btn.textContent = "Look Twice";
+      }
     }
 
-    // Reader Font Scaler  
-    function changeFontSize(delta) {  
-      baseFontSize = Math.min(26, Math.max(16, baseFontSize + (delta * 1.5)));  
-      const readingBody = document.getElementById('readingBody');  
-      if (readingBody) {  
-        readingBody.style.fontSize = `${baseFontSize}px`;  
-        readingBody.style.lineHeight = `${baseFontSize * 1.75}px`;  
-      }  
+    function changeFontSize(delta) {
+      baseFontSize = Math.min(26, Math.max(16, baseFontSize + (delta * 1.5)));
+      const readingBody = document.getElementById('readingBody');
+      if (readingBody) {
+        readingBody.style.fontSize = `${baseFontSize}px`;
+        readingBody.style.lineHeight = `${baseFontSize * 1.75}px`;
+      }
     }
 
-    // Global High-Contrast Theme Switcher  
-    function toggleGlobalTheme() {  
-      isIvoryMode = !isIvoryMode;  
-      const rootHtml = document.getElementById('rootHtml');  
-      const themeText = document.getElementById('themeToggleText');  
-      const iconSun = document.getElementById('themeIconSun');  
+    function toggleGlobalTheme() {
+      isIvoryMode = !isIvoryMode;
+      const rootHtml = document.getElementById('rootHtml');
+      const themeText = document.getElementById('themeToggleText');
+      const iconSun = document.getElementById('themeIconSun');
       const iconMoon = document.getElementById('themeIconMoon');
 
-      if (isIvoryMode) {  
-        rootHtml.classList.remove('theme-dark');  
-        rootHtml.classList.add('theme-ivory');  
-        if (themeText) themeText.textContent = "Night Ink";  
-        if (iconSun) iconSun.classList.remove('hidden');  
-        if (iconMoon) iconMoon.classList.add('hidden');  
-      } else {  
-        rootHtml.classList.remove('theme-ivory');  
-        rootHtml.classList.add('theme-dark');  
-        if (themeText) themeText.textContent = "Ivory Mode";  
-        if (iconSun) iconSun.classList.add('hidden');  
-        if (iconMoon) iconMoon.classList.remove('hidden');  
-      }  
+      if (isIvoryMode) {
+        rootHtml.classList.remove('theme-dark');
+        rootHtml.classList.add('theme-ivory');
+        if (themeText) themeText.textContent = "Night Ink";
+        if (iconSun) iconSun.classList.remove('hidden');
+        if (iconMoon) iconMoon.classList.add('hidden');
+      } else {
+        rootHtml.classList.remove('theme-ivory');
+        rootHtml.classList.add('theme-dark');
+        if (themeText) themeText.textContent = "Ivory Mode";
+        if (iconSun) iconSun.classList.add('hidden');
+        if (iconMoon) iconMoon.classList.remove('hidden');
+      }
     }
 
-    // Mobile Navigation Drawer Toggle  
-    function toggleMobileNav() {  
-      const drawer = document.getElementById('mobileNav');  
-      drawer.classList.toggle('hidden');  
+    function toggleMobileNav() {
+      const drawer = document.getElementById('mobileNav');
+      drawer.classList.toggle('hidden');
     }
 
-    // Initial view set  
-    window.addEventListener('DOMContentLoaded', () => {  
-      switchView('home');  
-      activeChapter = 'founding';  
-    });  
-  </script>  
-</body>  
+    window.addEventListener('DOMContentLoaded', () => {
+      switchView('home');
+      loadChapter('founding', 0, false);
+    });
+  </script>
+</body>
 </html>
