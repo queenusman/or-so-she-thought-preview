@@ -134,7 +134,7 @@
         <button onclick="switchView('eras')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="eras">
           The Two Eras
         </button>
-        <button onclick="switchView('reader')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="reader">
+        <button onclick="openReaderIndex('founding')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="reader">
           Read
         </button>
         <button onclick="switchView('world')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="world">
@@ -172,7 +172,7 @@
     <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-4 text-xs font-sans uppercase tracking-[0.2em]">
       <button onclick="switchView('home'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text">Home</button>
       <button onclick="switchView('eras'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Two Eras</button>
-      <button onclick="switchView('reader'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read</button>
+      <button onclick="openReaderIndex('founding'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read</button>
       <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World</button>
       <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Characters</button>
       <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Archive</button>
@@ -200,14 +200,14 @@
       <div class="max-w-xl mx-auto mb-12 p-6 border border-theme-border bg-theme-panel text-left rounded-sm">
         <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">Reading Order Guidance</span>
         <p class="font-serif text-sm text-theme-text-muted leading-relaxed">
-          The chronicle begins in <strong class="text-theme-text font-semibold">The Founding Era (Victoria)</strong>—the bedrock where wartime survival agreements were improvised into stone. Generations later, in <strong class="text-theme-text font-semibold">The Crowned Era (Elizabeth)</strong>, those emergency solutions have hardened into sacred traditions.
+          Begin with <strong class="text-theme-text font-semibold">The Founding Era (Victoria)</strong>, where the choices, struggles, and compromises that shape Norwyn first take form. Continue with <strong class="text-theme-text font-semibold">The Crowned Era (Elizabeth)</strong>, generations later, where the world those choices created has become an inheritance, and its traditions are rarely questioned.
         </p>
       </div>
 
       <!-- Direct Entry Actions -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-        <button onclick="openReader('founding', 0)" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">
-          Begin Chapter 1: Victoria &rarr;
+        <button onclick="openReaderIndex('founding')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">
+          Begin Reading &rarr;
         </button>
         <button onclick="switchView('eras')" class="w-full sm:w-auto px-8 py-4 border border-theme-border hover:border-theme-accent text-theme-text transition-all rounded-sm">
           Explore The Two Eras
@@ -227,7 +227,7 @@
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The Two Eras</h2>
         <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
-          Two timelines bound by the same continuity. Victoria makes decisions to survive an emergency; generations later, Elizabeth inherits those decisions as holy scripture.
+          Two eras, connected by the choices of those who came before. Victoria faces the uncertainties of her time, while generations later, Elizabeth grows up in a world shaped by decisions whose origins have nearly been forgotten.
         </p>
       </div>
 
@@ -240,19 +240,19 @@
           </div>
           <div>
             <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">The Founding Era</span>
-            <h3 class="font-display text-2xl text-theme-text mb-3">Victoria's Story</h3>
-            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">How Decisions Become Traditions</p>
+            <h3 class="font-display text-2xl text-theme-text mb-3">Victoria’s Story</h3>
+            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">How Choices Shape a Kingdom</p>
             <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">
-              In an age of mud and burned storehouses, every compromise was an emergency solution. Victoria had to bind four feuding houses before the winter killed them all. Nobody planned for a temporary agreement to outlive the war that summoned it.
+              Victoria lives in a time when the future of Norwyn is still uncertain. As old loyalties are tested and competing needs bring people into conflict, she must decide what is worth preserving, what must change, and what people can reasonably be asked to accept. The choices made in her time will reach further than she can imagine.
             </p>
             <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">
-              <li><strong class="text-theme-text">&bull; Core Question:</strong> When does a provisional compromise become a cage?</li>
-              <li><strong class="text-theme-text">&bull; Setting:</strong> Fragile borders, damp stores, raw negotiation.</li>
+              <li><strong class="text-theme-text">&bull; Core Question:</strong> How do choices made under pressure become the traditions that shape those who come after?</li>
+              <li><strong class="text-theme-text">&bull; Setting:</strong> A changing kingdom, fragile alliances, and communities learning what they owe one another.</li>
             </ul>
           </div>
           <div class="pt-6 border-t border-theme-border mt-6">
-            <button onclick="openReader('founding', 0)" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full py-3 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">
-              Read Victoria's Story &rarr;
+            <button onclick="openReaderIndex('founding')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full py-3 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">
+              Read Victoria's Chapters &rarr;
             </button>
           </div>
         </div>
@@ -264,19 +264,19 @@
           </div>
           <div>
             <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-burgundy font-semibold block mb-2">The Crowned Era</span>
-            <h3 class="font-display text-2xl text-theme-text mb-3">Elizabeth's Story</h3>
-            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">The Weight of Consent</p>
+            <h3 class="font-display text-2xl text-theme-text mb-3">Elizabeth’s Story</h3>
+            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">The Making of a Choice</p>
             <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">
-              Raised in the polished certainty of Victoria's legacy. She was never starved of affection or subjected to brutality—her mother built an education, not a prison. The terror begins when Elizabeth discovers she cannot separate what she wants from what she was formed to want.
+              Elizabeth has grown up surrounded by love, preparation, and the expectation that she will one day lead Norwyn. Her mother has taught her to be capable, responsible, and ready for the life ahead of her. But as her future draws closer, Elizabeth begins to question whether the life she has prepared for is also the life she would choose for herself.
             </p>
             <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">
-              <li><strong class="text-theme-text">&bull; Core Question:</strong> What if you actually want what you were taught to want?</li>
-              <li><strong class="text-theme-text">&bull; Setting:</strong> Polished marble galleries, quiet gardens, unspoken boundaries.</li>
+              <li><strong class="text-theme-text">&bull; Core Question:</strong> How do you know what you truly want when your desires have been shaped by everything you have been taught?</li>
+              <li><strong class="text-theme-text">&bull; Setting:</strong> Grand palace corridors, secluded gardens, royal ceremonies, and the quiet limits of a life already planned.</li>
             </ul>
           </div>
           <div class="pt-6 border-t border-theme-border mt-6">
-            <button onclick="openReader('crowned', 0)" class="w-full py-3 border border-theme-border text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.2em] uppercase text-center rounded-sm transition-colors">
-              Read Elizabeth's Story &rarr;
+            <button onclick="openReaderIndex('crowned')" class="w-full py-3 border border-theme-border text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.2em] uppercase text-center rounded-sm transition-colors">
+              Read Elizabeth's Chapters &rarr;
             </button>
           </div>
         </div>
@@ -286,9 +286,9 @@
     <!-- VIEW 3: READ (Dynamic Reader Sanctuary — Loads from chapters.js) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300">
       <!-- Reader Controls Bar -->
-      <div class="max-w-3xl mx-auto px-6 mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
-        <button onclick="switchView('home')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
-          <span>&larr;</span> <span>Return to Overview</span>
+      <div class="max-w-3xl mx-auto px-6 mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
+        <button onclick="openReaderIndex(activeEra)" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>Back to Chapters List</span>
         </button>
 
         <div class="flex items-center space-x-4">
@@ -303,33 +303,18 @@
         </div>
       </div>
 
-      <!-- Era Switcher within Reader -->
-      <div class="max-w-xl mx-auto px-6 mb-8 flex justify-center space-x-6 text-xs font-sans uppercase tracking-[0.18em]">
-        <button id="readerTabFounding" onclick="loadChapter('founding', 0)" class="py-1 border-b-2 border-theme-accent text-theme-text font-semibold">
+      <!-- Era Switcher within Reader / Chapter Index -->
+      <div class="max-w-2xl mx-auto px-6 mb-8 flex justify-center space-x-6 text-xs font-sans uppercase tracking-[0.18em]">
+        <button id="readerTabFounding" onclick="switchReaderEra('founding')" class="py-1 border-b-2 border-theme-accent text-theme-text font-semibold">
           1. Era One: Victoria
         </button>
-        <button id="readerTabCrowned" onclick="loadChapter('crowned', 0)" class="py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text">
+        <button id="readerTabCrowned" onclick="switchReaderEra('crowned')" class="py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text">
           2. Era Two: Elizabeth
         </button>
       </div>
 
-      <!-- Chapter Selector (Automatically shows if an Era has multiple chapters) -->
-      <div id="chapterSelectorBar" class="max-w-xl mx-auto px-6 mb-10 hidden justify-center flex-wrap gap-2 text-xs font-sans uppercase tracking-wider"></div>
-
-      <!-- Dynamic Reading Body Container -->
-      <article id="readingBody" class="max-w-2xl mx-auto px-6 text-lg leading-relaxed font-serif transition-all duration-200">
-        <div id="chapterContent" class="space-y-6"></div>
-
-        <!-- End-of-Chapter Navigation -->
-        <div class="mt-20 pt-10 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-          <button id="btnReaderNext" onclick="loadChapter('crowned', 0)" class="text-theme-accent hover:underline font-semibold">
-            Read Elizabeth's Story: Chapter One &rarr;
-          </button>
-          <button onclick="switchView('archive')" class="text-theme-text-muted hover:text-theme-text">
-            Examine State Records &rarr;
-          </button>
-        </div>
-      </article>
+      <!-- Dynamic Container: Displays either the Chapters Index List OR the active Chapter Content -->
+      <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
     <!-- VIEW 4: THE WORLD -->
@@ -572,7 +557,7 @@
   <!-- Main Application Logic -->
   <script>
     let activeEra = 'founding';
-    let activeChapterIndex = 0;
+    let activeChapterIndex = null; // null means showing the chapters list index
     let baseFontSize = 18;
     let isIvoryMode = false;
 
@@ -605,29 +590,38 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function openReader(era, index = 0) {
+    function openReaderIndex(era = 'founding') {
       switchView('reader');
-      loadChapter(era || 'founding', index);
+      activeEra = era;
+      activeChapterIndex = null; // Show index list
+      renderReaderView();
     }
 
-    // Renders chapter text from chapters.js into the Reader
-    function loadChapter(era, chapterIndex = 0, scroll = true) {
-      const container = document.getElementById('chapterContent');
-      const selectorBar = document.getElementById('chapterSelectorBar');
+    function switchReaderEra(era) {
+      activeEra = era;
+      activeChapterIndex = null; // Reset to index list when switching eras inside reader
+      renderReaderView();
+    }
+
+    function selectChapter(era, index) {
+      activeEra = era;
+      activeChapterIndex = index;
+      renderReaderView();
+    }
+
+    // Renders either the Chapters List Index or the Active Chapter Content inside the Reader view
+    function renderReaderView() {
+      const mainContainer = document.getElementById('readerMainContainer');
       const tabFounding = document.getElementById('readerTabFounding');
       const tabCrowned = document.getElementById('readerTabCrowned');
-      const nextBtn = document.getElementById('btnReaderNext');
 
-      if (typeof NOVEL_CHAPTERS === 'undefined' || !NOVEL_CHAPTERS[era]) {
-        container.innerHTML = `<p class="text-center text-theme-text-muted">Chapter file (chapters.js) not found. Make sure chapters.js is saved in the same folder as index.html.</p>`;
+      if (typeof NOVEL_CHAPTERS === 'undefined' || !NOVEL_CHAPTERS[activeEra]) {
+        mainContainer.innerHTML = `<p class="text-center text-theme-text-muted">Chapter file (chapters.js) not found.</p>`;
         return;
       }
 
-      activeEra = era;
-      activeChapterIndex = chapterIndex;
-
-      // Update Era Tabs
-      if (era === 'founding') {
+      // Update Era Tab styling
+      if (activeEra === 'founding') {
         tabFounding.className = "py-1 border-b-2 border-theme-accent text-theme-text font-semibold";
         tabCrowned.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";
       } else {
@@ -635,24 +629,39 @@
         tabFounding.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";
       }
 
-      const eraChapters = NOVEL_CHAPTERS[era];
-      const chapter = eraChapters[chapterIndex] || eraChapters[0];
+      const eraChapters = NOVEL_CHAPTERS[activeEra];
 
-      // Render multi-chapter selector buttons if an era has more than 1 chapter
-      if (eraChapters.length > 1) {
-        selectorBar.classList.remove('hidden');
-        selectorBar.classList.add('flex');
-        selectorBar.innerHTML = eraChapters.map((ch, idx) => `
-          <button onclick="loadChapter('${era}', ${idx})" class="px-3 py-1 border rounded-sm transition-colors ${idx === chapterIndex ? 'border-theme-accent text-theme-accent bg-theme-panel-accent font-semibold' : 'border-theme-border text-theme-text-muted hover:text-theme-text bg-theme-panel'}">
-            ${ch.number}
+      // STATE A: SHOW CHAPTERS LIST INDEX
+      if (activeChapterIndex === null) {
+        const eraTitle = activeEra === 'founding' ? '1. Era One: Victoria' : '2. Era Two: Elizabeth';
+        const eraSubtitle = activeEra === 'founding' ? 'The Bedrock — How Choices Shape a Kingdom' : 'The Inheritance — The Weight of Consent';
+
+        const chapterButtonsHtml = eraChapters.map((ch, idx) => `
+          <button onclick="selectChapter('${activeEra}', ${idx})" class="w-full text-left p-5 border border-theme-border bg-theme-panel hover:border-theme-accent hover:bg-theme-panel-accent transition-all rounded-sm group flex items-center justify-between">
+            <div>
+              <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-1">${ch.number}</span>
+              <h3 class="font-display text-lg text-theme-text group-hover:text-theme-accent transition-colors">${ch.title}</h3>
+            </div>
+            <span class="text-xs font-sans uppercase tracking-widest text-theme-text-muted group-hover:text-theme-text">&rarr; Open Chapter</span>
           </button>
         `).join('');
-      } else {
-        selectorBar.classList.add('hidden');
-        selectorBar.classList.remove('flex');
+
+        mainContainer.innerHTML = `
+          <div class="text-center mb-10 space-y-2">
+            <h2 class="font-display text-2xl md:text-3xl text-theme-text">${eraTitle}</h2>
+            <p class="font-serif text-sm text-theme-text-muted italic">${eraSubtitle}</p>
+          </div>
+          <div class="space-y-4">
+            ${chapterButtonsHtml}
+          </div>
+        `;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
       }
 
-      // Split raw text by blank lines and build paragraphs automatically
+      // STATE B: SHOW ACTIVE CHAPTER READING CONTENT
+      const chapter = eraChapters[activeChapterIndex];
+
       const paragraphs = chapter.content
         .trim()
         .split(/\n\s*\n/)
@@ -660,44 +669,50 @@
         .filter(Boolean);
 
       const formattedParagraphs = paragraphs.map((para, idx) => {
-        // First paragraph gets the decorative drop-cap
         if (idx === 0) {
           return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-theme-accent first-letter:leading-none text-theme-text">${para}</p>`;
         }
-        // Paragraphs starting with ">" get styled as a highlighted quote
         if (para.startsWith('>')) {
           return `<p class="italic text-theme-text-muted pl-4 border-l-2 border-theme-accent my-6 bg-theme-panel-accent py-2 pr-3 rounded-r-sm">${para.replace(/^>\s*/, '')}</p>`;
         }
         return `<p class="text-theme-text">${para}</p>`;
       }).join('\n');
 
-      container.innerHTML = `
-        <div class="text-center mb-14 space-y-3">
-          <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">${chapter.eraLabel} &bull; ${chapter.number}</p>
-          <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">${chapter.title}</h2>
-          <div class="w-10 h-px bg-theme-accent/40 mx-auto mt-6"></div>
-        </div>
-        ${formattedParagraphs}
+      // Previous / Next button logic
+      const hasPrev = activeChapterIndex > 0;
+      const hasNext = activeChapterIndex + 1 < eraChapters.length;
+
+      const prevBtnHtml = hasPrev 
+        ? `<button onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" class="px-4 py-2 border border-theme-border bg-theme-panel hover:border-theme-accent text-xs font-sans uppercase tracking-[0.15em] rounded-sm">&larr; Previous Chapter</button>` 
+        : `<div></div>`;
+
+      const nextBtnHtml = hasNext 
+        ? `<button onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" class="px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:text-[var(--primary-btn-text)] text-xs font-sans uppercase tracking-[0.15em] rounded-sm font-semibold">Next Chapter &rarr;</button>` 
+        : `<div></div>`;
+
+      mainContainer.innerHTML = `
+        <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
+          <div class="text-center mb-14 space-y-3">
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">${chapter.eraLabel} &bull; ${chapter.number}</p>
+            <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">${chapter.title}</h2>
+            <div class="w-10 h-px bg-theme-accent/40 mx-auto mt-6"></div>
+          </div>
+          <div class="space-y-6">
+            ${formattedParagraphs}
+          </div>
+
+          <!-- Bottom Navigation Controls -->
+          <div class="mt-20 pt-10 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans">
+            ${prevBtnHtml}
+            <button onclick="openReaderIndex('${activeEra}')" class="px-5 py-2.5 border border-theme-border hover:border-theme-accent bg-theme-panel text-theme-text uppercase tracking-[0.18em] rounded-sm">
+              &uarr; Chapters List
+            </button>
+            ${nextBtnHtml}
+          </div>
+        </article>
       `;
 
-      // Update Bottom Navigation Button
-      if (nextBtn) {
-        if (chapterIndex + 1 < eraChapters.length) {
-          const nextCh = eraChapters[chapterIndex + 1];
-          nextBtn.innerHTML = `Continue to ${nextCh.number}: ${nextCh.title} &rarr;`;
-          nextBtn.setAttribute('onclick', `loadChapter('${era}', ${chapterIndex + 1})`);
-        } else if (era === 'founding') {
-          nextBtn.innerHTML = `Read Elizabeth's Story: Chapter One &rarr;`;
-          nextBtn.setAttribute('onclick', `loadChapter('crowned', 0)`);
-        } else {
-          nextBtn.innerHTML = `&larr; Return to Victoria: Chapter One`;
-          nextBtn.setAttribute('onclick', `loadChapter('founding', 0)`);
-        }
-      }
-
-      if (scroll) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function toggleLookTwice(recId) {
@@ -751,7 +766,6 @@
 
     window.addEventListener('DOMContentLoaded', () => {
       switchView('home');
-      loadChapter('founding', 0, false);
     });
   </script>
 </body>
