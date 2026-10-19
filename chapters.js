@@ -5,412 +5,405 @@ const NOVEL_CHAPTERS = {
       number: "Chapter One",
       title: "The Divided Shore",
       content: `
-The honey cake had cost Victoria a fistful of salt.
-She was beginning to think she might have made a terrible bargain.
-She carried it down the Ridge road wrapped in two cloths and a cabbage leaf, holding it carefully in both hands. Unfortunately, this meant she had no free hand to chase away the gulls following her.
-There were three of them now.
-The boldest had been following her since the second stile, and it had begun to look at her as if they had an understanding.
-"Find your own breakfast," Victoria told it.
-The gull squawked.
-"I mean it."
-It followed her anyway.
-Victoria sighed and adjusted her grip on the cake. She had traded away the last good scraping of salt from the bottom of the Kessing pans, grey and coarse and precious enough to cure half a barrel of herring come January. The beekeeper had weighed it in her palm, looked at Victoria, and frowned.
-"That's too much salt for a cake."
-"It's a large cake."
-The beekeeper had looked at her.
-Victoria had looked back.
-They both knew perfectly well that the cake was for a girl's twelfth birthday, and that no cake, however large, was worth quite that much salt.
-But Madeleine only turned twelve once.
-And Victoria had decided that, for one day, her daughter ought to have something that belonged entirely to her.
-The road curved through the gorse, and the village appeared below.
-Kessing stood along the shore of a wide, shining sound, its cottages gathered around the little harbour. The water was the colour of polished pewter beneath the pale morning sky. Across it lay Skerrow, small and dark against the distant shore, while Gull Head stretched northward into the sea, its old beacon tower standing like a black finger against the horizon.
-The tide was halfway out. Mussel lines traced dark patterns across the shallows, and nine boats rested on the slip. Two more were still beyond the bar.
-That was nothing unusual.
-The Dunmore brothers had never met a tide they couldn't keep waiting.
-Victoria smiled to herself and continued down the road.
-Then she saw Madeleine.
-Her daughter sat on the low wall outside their kitchen, her heels knocking against the stones. She was counting the boats, as usual. Victoria could tell by the slight movement of her lips and the way her eyes travelled from one end of the harbour to the other.
-Madeleine liked numbers because numbers, unlike people, generally stayed where you put them.
-"Eleven out this morning," she announced. "Nine back. The Dunmores are late."
-"The Dunmores are always late."
-"They were only a little late yesterday."
-"Then they've had a very busy week."
-Madeleine finally turned.
-Her eyes dropped to Victoria's hands.
-Then to the cabbage leaf.
-Then back to her mother's face.
+The honey cake had cost Victoria a handful of salt, and she was beginning to wonder if she had made a terrible bargain. She carried it down the Ridge road, wrapped in two pieces of cloth and a cabbage leaf. She held it carefully in both hands, which meant she couldn't do much to stop the seagulls following her. They had smelled the cake almost a mile ago.
+
+"Find your own breakfast," she told them.
+
+One gull swooped closer.
+
+"I'm serious."
+
+The gull ignored her. Victoria hurried down the road.
+
+The salt she had traded for the cake was valuable. It was the last of what she had scraped from the bottom of the Kessing salt pans, grey, rough, and difficult to collect. That much salt could have preserved half a barrel of fish for the winter.
+
+The beekeeper had looked at the salt, then at the cake, and frowned. "That's too much for a cake."
+
+"It's a large cake," Victoria had replied.
+
+The beekeeper had stared at her. Victoria had stared back. They both knew the truth. The cake wasn't worth that much salt. But her daughter, Madeleine, was turning twelve, and Victoria wanted her to have something special. A birthday like that deserved more than an ordinary meal.
+
+At least, that was what Victoria had told herself when she handed over the salt. Now, with the gulls following her and the cake growing heavier in her hands, she wasn't so sure.
+
+She reached the top of the hill and looked down at Kessing. The village stood beside a wide stretch of sea. Across the water was Skerrow, a smaller settlement on the opposite shore. To the north, Gull Head stretched into the sea, ending at an old stone tower used to warn nearby villages when danger approached.
+
+The tide was going out. Boats rested on the shore, and long lines used for collecting mussels marked the shallow water. Nine boats had returned that morning. Two were still at sea. Victoria wasn't worried about the missing boats. They belonged to the Dunmore brothers, who had never been good at coming home on time.
+
+Madeleine sat on the stone wall outside their house, counting the boats.
+
+"Eleven went out this morning," she said. "Nine are back. The Dunmores are late."
+
+"They're always late."
+
+"They weren't very late yesterday."
+
+"Perhaps they're making up for it today."
+
+Madeleine smiled slightly. Victoria turned sideways, hiding the parcel behind her back as she crossed the yard. Her daughter noticed immediately.
+
 "Why are you walking like that?"
+
 "Like what?"
-"Like you've stolen something."
-Victoria straightened indignantly. "I have stolen nothing."
-"Then what are you carrying?"
-"Nothing."
-Madeleine raised an eyebrow.
-Victoria raised one back.
-They regarded each other for a moment.
-"Is it for me?" Madeleine asked.
+
+"Like you're hiding something."
+
+"I'm not hiding anything."
+
+"Then why are you holding your arms like that?"
+
+Victoria looked down at herself. "Because I'm tired."
+
+"You've only just come home."
+
+"I'm tired of questions."
+
+Madeleine's mouth twitched. "Is it for me?"
+
 "It's for the pigs."
-"The pigs?"
-"They've been looking rather thin."
-"We don't have pigs."
-"Then they'll be terribly disappointed."
-Madeleine's mouth twitched.
-She had inherited her father's habit of looking perfectly innocent while knowing very well when someone was lying. Victoria found it a particularly inconvenient quality in a child who lived under her roof.
-Madeleine hopped down from the wall and opened the kitchen door.
-"Come along, then," she said solemnly. "We mustn't keep the pigs waiting."
-Victoria swept past her sideways, protecting the cake from both the doorframe and her daughter's curiosity.
-Neither of them mentioned the pigs again.
-Their kitchen smelled of woodsmoke, damp wool, and the salty herring brine that had worked its way into the old wooden table over thirty years.
-Victoria set the cake on the top shelf of the dresser, safely behind the good bowls. Madeleine could reach it only by dragging over the stool, and Victoria had every confidence that her daughter would not climb up there without permission.
-She stepped back.
-A corner of the cloth was showing.
-She tucked it away.
-Then she checked again.
-"Are you hiding something?" Madeleine asked.
-Victoria nearly jumped.
-"Must you creep about like a cat?"
-"I walked through the door."
-"Very quietly."
-"I shall try to make more noise next time."
-"Please do."
-Madeleine grinned and settled herself at the table.
-Victoria busied herself with a pot that did not need moving and a spoon that did not need washing. She had planned the morning carefully. There would be a walk along the shore, perhaps a little exploring near the old harbour wall, and then the cake. If the weather held, they might even take the boat out after lunch.
-For once, she had left the work until later.
-For once, there was nothing urgent to be done.
-And for once, she wanted to enjoy the fact that her daughter was growing up.
-"What would you like to do today?" Victoria asked, trying to sound as though she had only just thought of it. "It's your birthday, after all."
-"The shellfish beds."
-Victoria stopped polishing the spoon.
-"The what?"
-"The shellfish beds. Bram said he'd take me out to see how many the cold has killed. You said I could go when I turned twelve."
-"I said you could go when you turned twelve and the weather was settled."
-"It is settled."
-Victoria glanced towards the window.
-The sky was clear. The wind was gentle. The sea was calm enough that even the Dunmores might manage to arrive somewhere on time.
-There was, unfortunately, no sensible objection to make.
-She imagined Madeleine sitting in the bottom of a boat with Bram Dunmore's elder brother, who could row beautifully but talked so much that he sometimes forgot where he was going.
-Then she thought of the cake.
-And the afternoon she had set aside.
-And the uncomfortable discovery that she was not quite ready to surrender even a morning of her daughter's twelfth birthday to a pile of mussels.
-"After noon," she decided. "I'll come with you."
-"Really?"
-"Yes. I have something to do first."
-"What?"
+
+Madeleine studied her mother's face. Victoria tried to look offended by the question. It didn't work.
+
+"All right," Madeleine said, opening the kitchen door. "I'll tell the pigs you brought them something special."
+
+"Very kind of you."
+
+Victoria slipped inside, and neither of them mentioned the pigs again.
+
+The kitchen smelled of smoke, damp clothes, and the fish that had been stored and prepared there for years. Victoria placed the cake on the highest shelf of the dresser, behind the good bowls. Madeleine could reach it only by dragging over a stool. Victoria stepped back to admire her hiding place. A corner of the cloth was sticking out. She tucked it away. Perfect. Now she only had to get through the morning without giving herself away.
+
+She turned to find Madeleine standing in the doorway.
+
+"What would you like to do today?" Victoria asked.
+
+"The shellfish beds." Madeleine answered so quickly that Victoria almost laughed. "Bram said he'd take me out to see how many mussels survived the cold. You said I could go when I turned twelve."
+
+"I said you could go when you turned twelve and the weather was good."
+
+"The weather is good."
+
+Victoria looked through the window. Madeleine was right. The sky was clear, and the sea was calm enough for a short trip. She had no good reason to refuse. But she had planned the day already. She wanted to spend the afternoon with her daughter, eat cake together, and enjoy the rare feeling that, for once, nothing urgent needed her attention. She knew she was being selfish. That didn't make the feeling disappear.
+
+"After noon," she said. "I have something to do first. Then I'll walk down to the shore with you."
+
+"What do you have to do?"
+
 "Something important."
-"What sort of important?"
-"The sort that requires me to finish this conversation."
-Madeleine smiled into her hands.
-She knew when she had reached the end of an argument, even when her mother had not technically won it.
-"Very well," she said, hopping up. "I'll count the boats again."
-"Why?"
-"To see if the Dunmores have remembered how to sail."
-She disappeared into the yard.
-Victoria watched her go, then rested one hand against the dresser.
-For a few quiet moments, she allowed herself to be happy.
-It was a small happiness, but a good one. She had earned it with salt, a little planning, and an argument with a beekeeper who would probably never forgive her.
-She was still smiling when she heard someone running up the road.
-Not a child's running.
-Children ran in bursts. They shouted, stumbled, laughed, and usually stopped halfway through whatever they had been running towards.
-This was different.
-These were long, uneven strides, the desperate sort that came when someone had been running for so long that stopping had become almost as frightening as continuing.
-Victoria was out of the door before the gate slammed open.
-A boy stumbled into the yard and caught himself against the gatepost.
-Ruf.
-He was fifteen, all elbows and knees, with a watch coat far too large for him. The hem flapped around his legs, and his chest rose and fell so violently that he could barely speak.
-Victoria hurried towards him.
-"Ruf? What happened?"
-He looked at her.
-For a moment, he seemed unable to remember how words worked.
-Then he managed one.
-"Skerrow."
-Victoria's stomach tightened.
-"Take a breath first."
-He shook his head.
-"Skerrow's burning."
-The yard went silent.
-Madeleine had come to stand beside her mother. Her smile vanished.
-Ruf dragged in a breath.
-"The whole east end. The smoke's going straight up, black at the bottom. I saw it from the stack. It must have started before dawn. I didn't see it happen, but it was already burning when I looked."
-Victoria stared at him.
-Across the sound, hidden from view by the headland, lay Skerrow.
-A village. Families. Fishing boats. Children who would have been eating breakfast just as Madeleine had.
-She felt a strange coldness settle inside her, sharp and sudden.
-"Did you light the beacon?" she asked.
-Ruf's face crumpled with frustration.
-"I wasn't told to."
-"Who was supposed to tell you?"
-"Master Hale. He's the one who lights it, or gives the order. But he's gone to Ostwick for his brother's funeral. He left me to watch the stack and send word if anything happened."
-"And you saw a village burning."
-"Yes."
-"And you didn't light it."
-"I couldn't!" His voice broke. He swallowed and tried again. "He told me not to touch it. Last year, when everyone thought the seals were raiders, forty men lost two days of fishing. Master Hale said we'd all look foolish if we raised the alarm over nothing again. He said a beacon was too important to get wrong."
-Victoria looked at the boy's frightened face.
-"Then why did you come here?"
-Ruf straightened as much as his shaking legs allowed.
-"Because you're the nearest person with a say."
-He hesitated.
-"People listen to you."
-It was not much of a compliment, but Victoria felt its weight.
-She had no official position in Kessing. She owned no boat, held no office, and had no place among the men who made the village's larger decisions. She was a widow who traded what she could, knew the stores better than most, and had acquired a reputation for noticing things other people overlooked.
-Apparently, that was enough to make a frightened boy run down a hill looking for her.
-Victoria glanced towards Gull Head.
-She could not see the smoke yet.
-But she knew, with a sudden and terrible certainty, what it might mean.
-Three days earlier, at the salt pans, a man from Skerrow had approached her. He had spoken quietly, with the embarrassed caution of someone who feared being laughed at.
-A strange boat had been seen off their point two nights in a row. It had no fishing lines out. No lanterns. It simply sat beyond the shore, watching.
-The headman wanted another watcher on the point. Would Kessing spare someone for a few nights?
-Victoria had promised to raise the matter at the next meeting of the pan owners.
-Wednesday, after the tide.
-There had been time.
-She had gone home and thought about other things. About the winter stores. About the price of salt. About Madeleine's birthday.
-She had told herself it was probably the Ostwick boys playing a foolish game. Or smugglers passing through. Smugglers stole things, but they did not usually burn villages.
-And Skerrow's people had been frightened before. The previous year's alarm over the seals had cost everyone dearly.
-Victoria had been so sensible about it all.
-So calm.
-So certain she could afford to wait.
-"Mama," Madeleine said.
-Her voice was quiet.
-Victoria turned towards her.
-"It wasn't fishing lanterns."
-Victoria closed her eyes for half a second.
-"No."
-"You said it was, the other night. I counted three lights beyond Gull Head. Then they all went out together."
-"I said what I thought."
-"I know."
-Madeleine did not sound angry.
-That was somehow worse.
-"I'm only saying what I saw."
-Victoria looked at her daughter properly then. Madeleine's face was pale, but she was standing straight, her hands curled at her sides. She had noticed something strange and tried to make sense of it. Just as Victoria had.
-The difference was that Madeleine had been right.
-Victoria drew a slow breath.
-She could spend the next hour explaining why she had been wrong. She could talk about the false alarm, the fishing season, the lack of proof.
-None of it would put out a fire.
-She turned back to Ruf.
-"Go to the stack."
-His eyes widened.
-"What?"
-"Go back to Gull Head. Look at Skerrow again. If it's still burning, and you can see that this is more than a small fire, light the beacon. Don't wait for Master Hale."
-"But he said—"
-"I heard what he said."
-"He's going to be furious."
-"Then he can be furious with me."
-Ruf stared at her.
-"Will you really answer for it?"
-Victoria had no right to promise that. She could already imagine the questions, the arguments, the men insisting she had no authority to interfere with the beacon.
-But the people across the sound had no time to wait for an argument.
-"Yes," she said.
-Ruf searched her face, looking for a reason to trust her.
-He found one.
-He nodded and ran.
-Victoria watched him race back up the Ridge road, his oversized coat flying behind him.
-Then she turned to Madeleine.
-"Stay here."
-"Mother—"
-"Stay here, Madeleine."
-For the first time that morning, there was no room for argument in her voice.
-Madeleine stopped.
-Victoria took one last look at the kitchen door, behind which sat a honey cake that had cost her a small fortune in salt.
-Then she went to find the men.
-Kessing's boats were in the water within fifteen minutes.
-Victoria stood on the slip as the fishermen pushed away from the shore, shouting instructions over the scrape of oars and the slap of waves against the boats.
-She could not row well enough to be useful on the crossing. She knew that, and she was not foolish enough to pretend otherwise.
-But she knew what Kessing had.
-She knew where the blankets were kept, which houses had spare beds, how much dried fish remained in the loft, and which women could turn a handful of flour into bread before the next tide.
-If the people of Skerrow were coming, someone would have to feed them.
-Someone would have to find them somewhere to sleep.
-And someone would have to keep the village from falling into confusion while everyone tried to help at once.
-Victoria took a breath and began giving orders.
-"Every spare blanket you can find. The big pot from the bake house, and Marta's two kettles. Bring all the bread that's ready. If there's not enough, take the dried fish from the loft."
-A fisherman turned back towards her.
-"How many people are we talking about?"
-"I don't know."
-"A dozen?"
-"I don't know."
-"A hundred?"
-Victoria looked at him.
-"Then we'd better find enough floors for a hundred."
-He opened his mouth, thought better of it, and hurried away.
-"Count the beds!" she called after him. "And if there aren't enough, count the floors. People can sleep on floors."
-The village sprang into motion.
-Doors opened. Blankets appeared over arms. Children were sent running between houses. The bake house fires were fed until the ovens glowed, and the smell of fresh bread began to drift through the lanes.
-Victoria moved from one group to another, correcting mistakes, answering questions, and trying not to imagine what they might find across the sound.
-She was in the bake house, rolling up her sleeves, when someone shouted from outside.
-"The beacon!"
-Victoria ran into the street.
-At the tip of Gull Head, a thick black column of smoke rose into the sky.
-For one breathless moment, she could only stare.
-Then another column appeared farther down the coast.
-And another.
-The warning was spreading.
-Somewhere inland, a bell began to ring. At first, whoever held the rope pulled too quickly, sending out a frantic clanging that seemed to stumble over itself. Then the rhythm slowed, each strike clear and deliberate.
-The alarm had reached the next settlement.
-Someone there was listening.
-Madeleine stood on the kitchen wall, her hands pressed against the stones. She was no longer counting boats.
-Victoria walked over and stood beside her.
-"He's lit it," Madeleine said.
-"Yes."
-"Master Hale will be angry."
+
+"What is it?"
+
+"It's private."
+
+Madeleine folded her arms. "Is it important enough to keep you from telling me?"
+
 "Very."
-Madeleine glanced at her mother.
-"Will you really answer for it?"
-Victoria looked towards the beacon.
-"I said I would."
-Madeleine nodded, but her gaze returned to the smoke.
-After a moment, she spoke again.
-"It looks like a thing that was already there."
+
+"Is it for the pigs?"
+
+"Madeleine."
+
+Her daughter laughed. Then the smile faded a little. "Fine. After noon."
+
+She went outside to count the boats again. Victoria watched her through the window. Madeleine had been looking forward to this day. Victoria knew that. She also knew her daughter was disappointed, even if she wasn't going to complain.
+
+Victoria considered telling her the truth about the cake. She could bring it down from the shelf, cut them each a piece, and let Madeleine have her birthday morning. But then there would be no surprise. So Victoria left the cake where it was and told herself there would be time later.
+
+She had no idea how much she would regret those words.
+
+The sound of running footsteps came from the road. Victoria looked up. These weren't the quick, playful footsteps of children running through the village. Whoever was coming had been running for a long time.
+
+She hurried outside just as Ruf stumbled through the gate. He was fifteen, thin and awkward, with long legs that never seemed to know what to do with themselves. His watch coat hung loosely around him, its hem reaching almost to his ankles. He grabbed the gatepost to keep himself upright. His face was pale.
+
+"Ruf? What happened?"
+
+He tried to speak, but he was breathing too hard.
+
+"Take a breath first," Victoria said.
+
+He shook his head. "Skerrow."
+
+Victoria's expression changed. "What about Skerrow?"
+
+"It's burning."
+
+For a moment, she didn't understand. Then Ruf continued.
+
+"The houses at the east end. There's smoke everywhere. I saw it from Gull Head. It's rising above the whole village."
+
+"When did it start?"
+
+"Before dawn, I think. It was already burning when I looked."
+
+Madeleine came out of the house and stopped beside her mother. Victoria looked towards the sea, but the headland blocked her view of Skerrow. She couldn't see the fire. She could only imagine it.
+
+"Did you light the warning beacon?" she asked.
+
+Ruf looked away. "No."
+
+"Why not?"
+
+"Master Hale told me never to light it without his permission."
+
+"Where is he?"
+
+"Ostwick. His brother died, so he went to the funeral on Tuesday."
+
+Victoria waited for him to continue.
+
+"He told me to watch the tower and send word if anything happened. But he said only he was allowed to light the beacon. Last year, everyone thought there was a fire, but it turned out to be seals on the rocks. Forty men lost two days of fishing because of the false alarm." Ruf swallowed. "Master Hale said the village couldn't afford another mistake."
+
+Victoria looked at him. "So you came here."
+
+"You were the nearest person who could make a decision." He hesitated before adding, "People listen to you."
+
+Victoria felt her stomach tighten. Three days earlier, a man from Skerrow had visited the salt pans. He had told her that an unfamiliar boat had been seen near their shore on two different nights. The people on the boat hadn't been fishing, and no lights had been visible. The headman of Skerrow wanted an extra watcher on the point. He had asked whether Kessing could spare someone to help.
+
+Victoria had promised to bring it up at the next meeting. That meeting was supposed to happen on Wednesday, after the tide. She had gone home and forgotten about it. Not completely, of course. She had thought about it. She had simply found reasons not to worry. Perhaps the boat belonged to some boys from Ostwick who enjoyed frightening people. Perhaps it was a smuggler's boat. Smugglers wanted to steal goods, not burn villages. Perhaps the people of Skerrow were still frightened by the fire that had turned out to be seals the previous year.
+
+Victoria had found one explanation after another until doing nothing had seemed like the sensible choice. Now Skerrow was burning.
+
+"Mama," Madeleine said.
+
 Victoria turned to her.
-"What does?"
-"The smoke." Madeleine watched the black column rise against the pale sky. "From here, it looks as though it's always been standing there. As though we simply hadn't noticed it before."
-Victoria followed her gaze.
-She understood.
-Some things happened long before anyone was willing to admit they were happening. By the time the truth became impossible to ignore, it could look as though it had been waiting in plain sight all along.
-She thought of the strange boat beyond Gull Head.
-Of the man at the salt pans.
-Of the warning she had postponed.
-Then she looked away from the smoke and went back to work.
-There were people to prepare for.
-The boats returned as the afternoon light began to fade.
-Victoria heard them before she saw them. Shouts carried across the water, followed by the familiar creak of oars and the dull knock of a hull against the harbour wall.
-She hurried down to the slip.
-The first boat belonged to the Dunmores.
-It sat unusually low in the water.
-For a moment, Victoria could not understand why.
-Then she saw the people.
-They were crowded together beneath blankets, leaning against one another for support. Some had soot on their faces. Some had wrapped their hands in strips of cloth. One woman clutched a kettle against her chest as though it were a living thing. A boy held a wooden cradle between his knees.
-Another child wore only one shoe.
-Two people lay across the bottom of the boat, too weak to climb out by themselves.
-Victoria's heart lurched.
-She had expected shouting. She had expected tears, perhaps even panic.
-Instead, the survivors stepped onto the slip in silence.
-They accepted the hands offered to them. They stood where they were guided. They followed instructions with the weary obedience of people who had already endured more than they could understand.
-And Kessing welcomed them.
-Marta took an old woman whose hands had been burned. The cooper gathered three boys who refused to let go of one another. Fishermen carried the injured into the nearest houses, while the women began wrapping children in blankets and leading families towards shelter.
-Victoria counted the survivors.
-Thirty-one.
-She counted again.
-Thirty-one.
-Fourteen were children.
-She remembered the cakes she had seen in Skerrow's market, the little boats tied outside the cottages, the faces of people who had come to Kessing to trade.
-She tried to imagine thirty-one people leaving home that morning and returning to find there was no home left to return to.
-She couldn't.
-By dusk, nine of them were in Victoria's kitchen.
-The fire had been built high. The big pot simmered over the hearth, and blankets covered the floor and benches. The room smelled of woodsmoke, wet wool, and something sharp and bitter that clung to the survivors' clothes.
-Burning wood.
-Burned houses.
-A smell that would not leave.
-Victoria moved between them with bowls of hot broth, trying to make sure everyone had eaten. She was carrying another bowl when a man stepped forward.
-He was tall and stooped, with soot pressed into the lines around his mouth.
-She recognised him at once.
-He was the man from the salt pans.
-The man who had warned her.
-He looked at the bowl in her hands but did not take it.
-"I sent word," he said.
-His voice was quiet enough that she almost wished he would shout.
-"Three days ago. Did it reach you?"
-Around them, the kitchen continued to move. A child cried in the corner. Someone murmured comforting words. A woman shifted closer to the fire.
-Victoria held the bowl steady.
-"Yes," she said.
-The man looked at her.
-She wanted to explain. She wanted to tell him about the meeting, the false alarm, the uncertainty, and all the sensible reasons she had given herself for waiting.
-She wanted to say that she had never imagined this.
-But he had not asked what she imagined.
-He had asked whether his warning had reached her.
-Victoria made herself meet his eyes.
-"It reached me."
-For a long moment, neither spoke.
-Then the man nodded once.
-He took the bowl from her hands and went to sit against the wall.
-Victoria watched him go.
-There were many things she could still do for him. She could find him a bed, bring him another blanket, make sure he had food in the morning.
-But she could not undo the three days that had passed.
-And she would not pretend otherwise.
-Late that evening, when the pot had been emptied twice and the kitchen had finally grown quieter, Victoria found Madeleine standing on the stool in front of the dresser.
-The honey cake sat between them.
-Its cloth had been removed, revealing a round, dark-golden cake with a crack across the top. Honey glistened along the crust.
-Madeleine had found the long kitchen knife.
-She was holding it with both hands, concentrating so hard that her tongue had slipped between her teeth.
-Victoria stopped in the doorway.
-"Madeleine?"
-Her daughter looked up.
-"I wasn't going to say anything," she explained quickly. "I knew it was there. I saw you hide it this morning."
-Victoria almost smiled.
-"Of course you did."
-"I thought you might want me to wait until tomorrow."
-Victoria looked at the cake.
-It had been meant for the two of them. A proper birthday cake, with the afternoon set aside and no work waiting at the door.
-She had imagined Madeleine laughing as she cut the first slice. She had imagined the girl declaring it the best cake in the world, which would have been a generous exaggeration but a welcome one.
-Instead, their kitchen was filled with strangers who had lost everything.
+
+"The lights I saw weren't fishing lights. I told you that."
+
+Victoria remembered. Madeleine had mentioned seeing three lights beyond Gull Head two nights earlier. Victoria had dismissed them as boats returning late.
+
+"I know," she said.
+
+"You said I was imagining things."
+
+"I said I thought they were fishing boats."
+
+"But they weren't."
+
+"No," Victoria replied. "They weren't."
+
+Madeleine looked towards the sea. She didn't sound angry. She sounded as though she were trying to understand how something so serious could have happened while everyone was busy believing there was nothing to worry about.
+
+Victoria turned back to Ruf. "Go to the beacon tower."
+
+He straightened.
+
+"Look at Skerrow again. If the fire is still burning and you can see that it's serious, light the beacon."
+
+Ruf stared at her. "But Master Hale said—"
+
+"I heard what he said."
+
+"He'll be furious."
+
+"Perhaps."
+
+"And if it's a mistake?"
+
+Victoria looked at the boy. It was a difficult question. A warning beacon could bring every village along the coast to a halt. Boats would return to shore. Workers would abandon their jobs. Food would be wasted, and people might spend hours preparing for a danger that didn't exist. But if Ruf waited and Skerrow needed help, people could die.
+
+"Then I'll take responsibility," she said.
+
+Ruf's eyes widened. "You will?"
+
+"Yes."
+
+Victoria had no official position. She wasn't a headwoman or the owner of a fleet. She had no right to order the beacon keeper's assistant to disobey his master. But someone had to make the decision. And she had made it.
+
+Ruf nodded and ran back up the road. Victoria watched him disappear. Then she turned to Madeleine.
+
+She wanted to tell her that everything would be all right. She wanted to say that the fire would be put out, that everyone would be saved, and that by evening they would be sitting together with a cake between them. But she didn't know any of those things.
+
+So she said, "I need to find the men."
+
+Madeleine caught her sleeve. For a moment, Victoria thought her daughter might ask her not to go.
+
+Instead, Madeleine said, "I know."
+
+She released her mother's sleeve. Victoria hurried towards the shore.
+
+Within fifteen minutes, the Kessing boats were leaving the harbour. Victoria stood on the shore and watched them disappear across the water. She wanted to go with them, but she couldn't row, and there was too much to do at home. If people escaped the fire, they would need somewhere to sleep. They would need food, blankets, clean water, and warm rooms. Victoria knew the village's supplies better than anyone. So she began organising what she could.
+
+"Bring every spare blanket you can find!" she called. "Get the big cooking pot from the bakehouse. And the kettles. Tell the baker to keep the ovens hot."
+
+A man carrying a coil of rope stopped beside her. "How many people are coming?"
+
+"I don't know."
+
+"Twenty? Fifty?"
+
+"I said I don't know."
+
+He looked worried. Victoria understood. Nobody wanted to prepare for a disaster without knowing how bad it was. But they couldn't wait for certainty.
+
+"Find out how many beds we have," she told him. "And count the floors in every house."
+
+"The floors?"
+
+"If we run out of beds, people can sleep on the floor."
+
+He stared at her for a moment. Then he hurried away.
+
+Victoria kept moving. She collected blankets, counted food, and sent people to open storehouses. She asked families to prepare whatever spare space they had, even if it meant moving furniture into their own kitchens.
+
+The village began to change around her. People who had spent the morning working on their boats were now carrying bedding through the streets. The baker's children ran from house to house with messages. Women filled pots with water, while older men brought wood for the fires. Everyone wanted to help. They simply needed someone to tell them where to begin. Victoria did her best.
+
+Sometime after noon, the warning beacon was lit. Victoria was in the bakehouse, helping prepare bread, when she heard people shouting outside. She hurried to the door.
+
+A thick column of black smoke rose from the top of Gull Head. Then, far along the coast, another beacon answered. Then another. One by one, the warning spread to other villages. A bell began ringing somewhere inland. At first, it rang so quickly that the sounds ran together. Then someone took control of the rope and slowed it down. The whole coast was waking up to the danger.
+
+Victoria stood in the doorway with flour covering her arms. It was after noon. She had promised Madeleine they would go to the shellfish beds. She had promised her an afternoon together. For a moment, she pictured the cake sitting on the shelf, waiting to be discovered.
+
+Then someone called for more bread. Victoria turned back to the oven. There would be no birthday afternoon today.
+
+Madeleine was sitting on the wall outside their house when Victoria returned. She wasn't counting boats anymore. She was staring at the smoke rising beyond Gull Head.
+
+Victoria sat beside her. Neither of them spoke for a while.
+
+"It looks like it was always there," Madeleine said.
+
+Victoria followed her gaze. The smoke was so thick that it seemed to belong to the landscape, as though the headland had always been covered by it.
+
+"I suppose it does," Victoria said.
+
+Madeleine rubbed her hands against her skirt. "Bram went with the boats. So I couldn't have gone to the shellfish beds anyway."
+
+She said it lightly, trying to make the situation easier for her mother. Victoria knew what she was doing. Her daughter was disappointed. She had wanted to spend her birthday doing something she loved. She had wanted a cake, an afternoon with her mother, and a day that felt different from all the others. Instead, she was sitting beside Victoria, watching smoke rise from another village.
+
+Victoria put her hand on the back of Madeleine's neck. "I'宁 sorry," she said.
+
+Madeleine leaned against her shoulder. "It's all right."
+
+Victoria wished she believed that. She stayed beside her daughter until someone called her back to the shore.
+
+The first boat returned as the afternoon began to fade. Victoria heard the voices before she saw the boat coming around the point. It was one of the Dunmores' boats. It sat unusually low in the water.
+
+Then Victoria saw why. People were packed inside, sitting shoulder to shoulder beneath blankets. Some had burns on their hands and faces. Others clutched whatever they had managed to save from their homes. A woman held a cooking pot against her chest. A man carried a small wooden box. Someone had brought a cradle. One person had only a single shoe. Two people lay at the bottom of the boat because they were too weak to sit up.
+
+Victoria hurried towards the water. "Carefully!" she called. "One at a time. We'll help you."
+
+The villagers rushed forward. Hands reached down to lift the survivors onto the shore. People offered blankets and guided the injured towards waiting houses.
+
+Victoria had expected shouting and crying. Instead, the survivors were strangely quiet. They climbed out of the boats and accepted help without saying much. Some stared at the ground. Others looked back towards Skerrow. They seemed unable to believe they had left their homes behind.
+
+Victoria helped an elderly woman onto the shore. The woman's hands were burned, and she held them close to her chest.
+
+"Come with me," Victoria said. "We'll get you warm."
+
+The woman nodded. Victoria led her towards the village.
+
+By the time the last boat arrived, thirty-one people had escaped from Skerrow. Victoria counted them. Then she counted them again. Fourteen were children.
+
+The village began taking them in. The baker welcomed an old woman with burned hands. The cooper took three boys who refused to let go of one another. A fisherman carried a sleeping child to his wife, then returned to help the others. People brought blankets, food, and water. Nobody stopped to ask who would pay for it. There was no time for that.
+
+By evening, nine survivors were inside Victoria's house. The kitchen was crowded. People sat on the benches and floor, wrapped in blankets. A large pot hung over the fire, and the smell of hot food filled the room. But underneath the familiar smell of woodsmoke and wet wool was something bitter. Smoke clung to the survivors' clothes and hair. It was the smell of the fire that had destroyed their homes.
+
+Victoria moved between them, handing out bowls of food. Then she saw a man standing near the dresser. He was tall and thin, with soot covering his face. His clothes were dirty, and his shoulders sagged with exhaustion. Victoria recognised him. He was the man who had warned her about the strange boat three days earlier.
+
+She approached him with a bowl. "Here," she said. "You should eat something."
+
+He didn't take it. "I sent word," he said.
+
+Victoria stopped.
+
+"Three days ago. I came to the salt pans and told you what we'd seen."
+
+She held the bowl between them.
+
+"Did you hear me?"
+
+Victoria looked directly at him. "Yes."
+
+The man stared at her. For a moment, she thought he might shout. He might ask why she hadn't listened or why she hadn't sent someone to help them. He might tell her that the people sitting on her kitchen floor could have been spared this suffering if she had acted sooner.
+
+Instead, he nodded once. It was a small movement, but Victoria understood it. He had wanted to believe she would take his warning seriously. Now he knew she hadn't.
+
+The man took the bowl and walked towards the wall. Victoria remained where she was. She wanted to explain herself. She wanted to tell him she hadn't meant for this to happen. But she knew that wasn't what he needed to hear. And it wouldn't change anything.
+
+Someone called for more food. Victoria turned towards the pot. There was still work to do.
+
+Late that evening, the kitchen had finally grown quieter. The survivors had eaten, and most of the children were asleep. The fire burned steadily, filling the room with warmth.
+
+Victoria looked around for Madeleine. She found her standing on a stool beside the dresser. The honey cake sat in front of her. The cloth had been removed, and Madeleine had found the long knife used for cutting bread.
+
+Victoria stopped in the doorway. Madeleine looked up.
+
+"I wasn't going to tell you I knew," she said.
+
+Victoria walked closer. "You knew about the cake?"
+
+"I saw you hide it this morning."
+
+"Then why didn't you say anything?"
+
+"Because you wanted it to be a surprise." Madeleine looked down at the cake. "I knew it was for me."
+
+Victoria felt something tighten in her throat. She had spent the morning imagining Madeleine's reaction when she saw the cake. She had pictured them sitting together, cutting the first slice, and laughing about the ridiculous amount of salt it had cost. Instead, the cake had sat untouched while the day fell apart.
+
 "It was meant for this afternoon," Victoria said.
+
 "I know."
-Madeleine looked around the room.
-There were people on the benches, people on the floor, people huddled near the hearth. A little boy slept against his mother's shoulder. The girl in the corner was awake, watching the fire.
-Madeleine counted quietly.
-"There are thirty-one of them altogether. Nine here, and the others at Marta's and the cooper's and the Dunmores' houses."
-She looked at the cake again.
-"It's quite big."
-Victoria felt a tightness rise in her throat.
-"Yes," she managed.
-"If I cut it thin, there should be enough for everyone here."
-"Madeleine, it's your birthday cake."
-"It's still a cake."
-Her daughter said it as though that settled everything.
-Then she hesitated.
-For a moment, the brave expression slipped, and Victoria saw the twelve-year-old girl beneath it.
-"I would like everyone to have a proper piece," Madeleine added. "Not just crumbs."
-Victoria crossed the kitchen.
-She placed her hand over Madeleine's on the knife.
-Neither of them moved.
-The cake was warm from the room. Beneath Victoria's palm, her daughter's fingers were small and steady.
-"I'm sorry," Victoria whispered.
-Madeleine looked at her.
-"For what?"
-Victoria had a dozen answers.
-For the morning she had wasted. For the warning she had ignored. For the birthday that had become something neither of them could have imagined.
-Instead, she squeezed Madeleine's hand.
-"Nothing."
-Madeleine leaned against her for a moment.
-Then she lifted the knife.
-"Well," she said, taking a careful breath, "someone has to cut it."
-Victoria stepped aside.
-Madeleine began.
-She cut slowly, measuring each slice against the last. Her lips moved as she counted, and every piece came out thinner than Victoria thought possible.
-"Nineteen. Twenty. Twenty-one..."
-Victoria found a wooden board and began carrying the slices around the room.
-The survivors accepted them quietly. Some thanked her. Others simply held the cake between both hands, staring at it as though they had been given something far more valuable than a piece of honey and flour.
-Perhaps they had.
-Near the hearth sat a girl of eight or nine.
-Nobody had managed to learn her name.
-She sat very straight with her knees drawn up, her clothes stiff with dried salt and soot. In one hand, she held a heel of bread so tightly that her knuckles had turned white.
-Someone had given it to her when she stepped off the boat.
-She had not eaten a bite.
-Victoria knelt in front of her and held out a slice of cake.
-"Here you are, sweetheart."
-The girl looked at the cake.
-Then she looked at Victoria.
-She did not reach for it.
-Victoria waited.
-The girl lowered her eyes to the bread in her fist.
-Perhaps she was afraid someone would take the cake away. Perhaps she did not know what to do when a stranger offered her something good.
-Victoria did not ask.
-She placed the slice on a small plate and set it beside the girl's knee.
-"You don't have to eat it now," she said gently.
-The girl said nothing.
-Victoria rose.
-Before she could move away, Madeleine appeared beside her. She crouched down, placed another slice of cake on the hearthstone, just within the girl's reach, and settled onto her heels.
-She did not ask the girl to eat.
-She did not tell her that everything would be all right.
-She simply stayed.
-For a while, the three of them watched the fire.
-Then Madeleine stood, returned to the dresser, and picked up the knife again.
-There were eleven slices left.
-There were still people to feed.
-She looked at the cake, took a careful breath, and began cutting the pieces thinner.
-Outside, the tide was turning.
-Across the sound, beyond the darkened harbour and the boats resting against the shore, Skerrow burned through the night.
-And in Kessing, beneath a roof that had survived the storm of the day, a twelve-year-old girl learned that a birthday could become something else entirely.
-Not because she had wanted it to.
-Not because she had been ready.
-But because, sometimes, the world arrived at your door carrying more sorrow than you knew how to hold, and you had to decide what you were willing to share.
+
+Madeleine looked around the kitchen. A woman was sleeping against the wall. Two children lay curled together beneath a blanket. Near the fire, a little girl sat alone with her knees pulled against her chest.
+
+Madeleine's voice grew quieter. "I did want it."
+
+Victoria reached for her hand.
+
+"I wanted to go to the shellfish beds. I wanted the cake. And I wanted you to say happy birthday." She looked up at her mother. "I'm allowed to want those things, aren't I?"
+
+"Of course you are."
+
+"Even when other people need more important things?"
+
+"Even then."
+
+Madeleine seemed relieved to hear it. "I know people need help," she continued. "I'宁 not angry that they came here. I just wanted somebody to know that I was disappointed."
+
+Victoria took her daughter's hand. "I know, sweetheart."
+
+Madeleine looked down at the cake again. Then she took a deep breath. "There are thirty-one people from Skerrow. Fourteen are children. Nine are here, and the others are staying at the baker's, the cooper's, and the Dunmores' houses."
+
+Victoria nodded.
+
+Madeleine picked up the knife. "If I cut the cake into small enough pieces, everyone here can have some."
+
+Victoria looked at her daughter. "Madeleine, it's your birthday cake."
+
+"I know."
+
+"You don't have to give it away."
+
+Madeleine hesitated. For a moment, she looked like the twelve-year-old girl she was: tired, disappointed, and still hoping for something good from a difficult day.
+
+"I want to share it," she said. "But I want everyone to have a proper piece. Not just crumbs."
+
+Victoria smiled sadly. "Then we'll make sure they do."
+
+She placed her hand over Madeleine's on the knife. Together, they began cutting the cake. Madeleine worked carefully, making each slice about the same size. She counted under her breath, occasionally stopping to check how much remained.
+
+Victoria carried the pieces around the room. The survivors accepted them with quiet thanks. One old man closed his eyes after taking his first bite. A little boy smiled for the first time since arriving at the house.
+
+For a few minutes, the kitchen felt different. The fire still burned. The smoke still clung to the survivors' clothes. Their homes were still gone. But there was cake. And for that moment, there was something worth smiling about.
+
+Victoria watched Madeleine return to the dresser. She felt proud of her daughter. But she also wished Madeleine didn't have to be so grown-up tonight.
+
+Then Victoria noticed the little girl sitting near the fire. She was perhaps eight or nine years old. Her hair was tangled, and her face was still marked with soot. Nobody had learned her name yet. She sat with her knees against her chest, holding a piece of bread so tightly that her fingers had turned white. Someone had given it to her when she arrived, but she hadn't eaten it.
+
+Victoria knelt beside her. "Would you like some cake?"
+
+The girl looked at the slice in Victoria's hand. Then she looked at Victoria. She didn't answer.
+
+Victoria held the cake out for another moment, but the girl didn't reach for it. Perhaps she was frightened. Perhaps she thought someone would take it away if she accepted it. Perhaps, after everything that had happened, she didn't know whether she could trust anything good to last. Victoria didn't know.
+
+She placed the cake on a small board beside the girl's feet. "You can have it whenever you want," she said.
+
+The girl looked down at the cake but kept hold of her bread. Victoria stood and returned to the dresser.
+
+Madeleine had been watching. Without saying anything, she picked up another slice and carried it to the girl. She placed it beside the first, then crouched down nearby. She didn't ask the girl to eat. She didn't ask her name. She simply sat beside her, resting her chin on her knees.
+
+For a while, neither girl moved. The fire crackled softly. People murmured in their sleep. Outside, the sea continued moving against the shore, as if nothing had happened.
+
+The little girl kept hold of her bread. But she began looking at the cake. Madeleine stayed beside her.
+
+Across the room, Victoria looked at the remaining slices. Eleven left. Still too many people to feed. She picked up the knife. And began cutting them smaller.
       `
     },
     {
@@ -418,446 +411,2539 @@ But because, sometimes, the world arrived at your door carrying more sorrow than
       number: "Chapter Two",
       title: "What the Water Separates",
       content: `
-Victoria woke because the house was too full to be quiet.
-Nine people were sleeping in her kitchen, and apparently none of them knew how to do it peacefully.
-A man murmured in his sleep as though he were having an argument with someone. A child ground her teeth. Near the hearth, the old woman with the burned hands kept drawing little catches of breath through her nose.
-Victoria lay on the narrow bench with her coat pulled over her shoulders and listened to them all.
-Every now and then, someone shifted. A blanket rustled. The floor creaked. The fire settled with a soft crackle.
-Eventually, Victoria gave up on sleep.
-She slipped off the bench and made her way between the sleeping bodies, carefully placing her feet wherever there was a clear patch of floor. At the door, she paused to pull on her shoes.
-The night air was cold against her face.
-And the yard wall was not empty.
-Madeleine sat there wrapped in a thick blanket from the loft, her knees drawn up beneath her chin. She was looking across the sound.
-Victoria followed her gaze.
-Skerrow had burned down to a thin red line along the distant shore. The flames were mostly gone, but something still glowed among the ruins, as though the village had become an ember too stubborn to die.
-Victoria walked over and sat beside her daughter.
-"It's after midnight," Madeleine said.
-"Is it?"
-"So it's tomorrow."
-"That does tend to happen after midnight."
-Madeleine glanced at her.
-"It isn't my birthday anymore."
-Victoria looked at her properly.
-For a moment, she had no clever answer.
-All evening, she had carried bowls and blankets, found places for strangers to sleep, and tried to make a little order out of a terrible night. She had watched Madeleine cut her birthday cake into pieces so small that Victoria would once have called them mean.
-And she had forgotten to say the simplest thing.
-"Happy birthday, Madeleine."
-Madeleine looked back towards the water.
-"Thank you."
-"You're twelve now."
-"I noticed."
-Victoria nudged her gently with one shoulder.
-"I was going to make the day rather special."
-"I know."
-"I had plans."
-"I know."
-"And then the whole coast decided to catch fire."
-Madeleine's mouth twitched, but the smile did not last.
-"Nobody said it properly," she murmured. "Everybody was busy."
-Victoria felt the words settle between them.
-"You're right," she said. "I'm sorry."
-Madeleine pulled the blanket tighter around herself.
-For a while, they sat without speaking.
-Then Madeleine asked, "Mama, what was the boat?"
-Victoria looked towards the distant glow.
+Chapter Two: What the Water Separates
+
+Victoria woke because the house was too full to be quiet. Nine people were sleeping in her kitchen, and even in sleep, they made noise. A man spoke in a low, steady voice to someone who wasn't there. A child ground her teeth. The old woman with the burned hands kept catching her breath through her nose, a small, dry sound, as if she were checking whether she was still allowed to breathe.
+
+Victoria lay on the bench with her coat pulled over her and listened. Eventually, she got up and stepped carefully between the sleepers, placing her feet wherever the floor was clear, and made her way to the door.
+
+Madeleine wasn't in her bed. Victoria had expected as much.
+
+She found her sitting on the yard wall, wrapped in the blanket from the loft and facing the water. Across the sound, Skerrow had burned down to a thin red line along the shore. It no longer lit the sky, but the fire hadn't gone out either. It lay against the black water like something that wasn't finished yet.
+
+"It's after midnight," Madeleine said before Victoria reached her. "So it's tomorrow. So it isn't my birthday anymore."
+
+"Technically."
+
+"Technically." Madeleine was quiet for a moment. "Nobody said it, you know. Not properly. Everybody was busy."
+
+Victoria sat beside her on the cold stone. Madeleine was right. Victoria had spent the evening carrying pieces of her birthday cake around a crowded room and hadn't once said the simplest thing.
+
+"Happy birthday," she said. "You're twelve. I'm sorry it had to be this birthday."
+
+"It's all right."
+
+"It isn't, particularly."
+
+"No." Madeleine pulled the blanket tighter around herself. "But I'd rather you said that than told me it was all right."
+
+She turned her face toward the distant fire. "Mama, what was the boat?"
+
 "I don't know."
+
 "Was it a raid?"
-"I don't know that either."
-"But someone set fire to Skerrow."
-"Yes."
-"On purpose?"
-Victoria hesitated.
-"Possibly."
-Madeleine turned towards her.
-"You really don't know anything, do you?"
-"Not tonight, apparently."
-That earned a small smile.
-Victoria was glad of it.
-She could have tried to make the answer sound more reassuring. She could have told Madeleine that the danger was over, that Kessing was safe, that no one would come across the sound to harm them.
-She had said such things before.
-They were easy words when you had nothing to support them.
-Tonight, she could not bring herself to say them.
-"There is a man in my kitchen who might know more," she explained. "But he hasn't slept in nearly two days. I'm not going to wake him just to ask questions he may not be able to answer."
-Madeleine considered this.
+
+"I don't know that either. Nobody has said so. There's a man in my kitchen who might know, but I'm not going to wake him to ask. He hasn't slept in a day and a half." Victoria heard how cold that sounded and tried again. "He needs to rest. We can ask him in the morning."
+
 "You keep saying you don't know."
+
 "Because it keeps being true."
-"Will they come here?"
-The question was so quiet that Victoria almost wished she had not heard it.
-She opened her mouth.
-No came readily to mind. It was the answer a mother was supposed to give. A small, comforting word that could tuck a frightening thought back into its bed.
-But Victoria looked at the red line across the water, and the word refused to come.
-"I don't know," she said again. "I think we should find out what's happening before we decide what to be afraid of."
-Madeleine rested her chin on her knees.
-"That's better than saying no."
-"Is it?"
-"It's worse to hear."
-Victoria let out a quiet breath.
-"Yes. I'm afraid it is."
-Madeleine leaned against her mother's arm.
-They sat together on the cold wall until the darkness began to thin.
-By morning, the cake had disappeared from the hearthstone.
-Victoria noticed it almost as soon as she entered the kitchen.
-The little wooden board lay where Madeleine had left it, but the slice of honey cake was gone. A few golden crumbs had been gathered into a neat little pile at the edge.
-The girl from the corner was still there.
-She sat with her knees drawn up, her face quiet and unreadable. The heel of bread remained clenched in her fist, just as it had the night before.
-Victoria glanced towards Madeleine.
-Her daughter had noticed the empty board too.
-For a moment, Madeleine looked as though she might say something. Victoria could almost see the question forming in her eyes.
-Did she like it?
-Did she eat all of it?
-Was it enough?
-Victoria gave the smallest shake of her head.
-Not now.
-Madeleine pressed her lips together, nodded once, and went to find the porridge.
-Victoria was grateful.
-She was also beginning to realise how often gratitude and sadness could occupy the same moment.
-By the time the sun rose above the Ridge, Kessing was already awake.
-People crowded into the yard, each carrying something or asking what they ought to carry. Someone had brought three blankets but no bedding. Someone else had arrived with a basket of turnips and wanted to know whether they were useful.
-Victoria had never been so pleased to see turnips.
-"Put them in the kitchen," she said. "Everything useful goes in the kitchen."
-"What about the flour?"
-"The flour goes to the bake house."
-"And the blankets?"
-"To the people who need them."
-"Which people?"
-Victoria stared at him.
-"The cold ones, Thomas."
-He looked down at the blankets in his arms.
-"Right. Of course."
-He hurried inside.
-Victoria rubbed her forehead.
-She was going to need a better system.
-Fortunately, Madeleine had already begun making one.
-She appeared beside her mother carrying a cracked slate borrowed from the schoolroom. A piece of chalk dangled from a string attached to its edge, and the slate was covered in small, tidy columns.
-Victoria peered at it.
-"What have you done?"
-"Counted."
-"Counted what?"
-"People."
-Victoria looked at the slate again.
-Of course she had.
-Madeleine had spent the morning going from house to house, asking how many Skerrow survivors were sleeping under each roof. She had recorded the numbers, crossed out mistakes, and started again whenever two people gave her different answers.
-She had also discovered that the answers did not add up.
-"It doesn't make sense," Madeleine said.
+
+Madeleine seemed to accept this. She tucked her chin against her knees and sat quietly for a while. Then she asked, in a smaller voice, "Will they come here?"
+
+Victoria opened her mouth to say no. She had said those words to children before, on other nights, about other dangers. They had always come easily. She had always been able to make them sound like a promise. This time, she couldn't. She looked across the water at the red line along Skerrow and waited for the familiar answer to come. It didn't.
+
+"I don't know," she said. "I think we should find out before we decide what to be afraid of."
+
+"That's a better thing to say than no."
+
+"It's a worse thing to hear."
+
+"Yes," Madeleine said. "But it's better."
+
+They sat in silence again. Victoria thought the conversation was over when Madeleine spoke without turning her head.
+
+"I looked at them all tonight. The children." Her voice was flat, almost as if she were reading numbers from a page. "I kept thinking about which one I'd be if it happened here." She swallowed. "I don't like that I thought it."
+
+Victoria put an arm around her. It wasn't enough, but it was what she had. Madeleine sat stiffly for a while, then slowly leaned against her mother. They stayed on the wall together, watching the distant fire until the cold finally drove them inside.
+
+In the morning, the slice of cake was gone from the hearthstone. Victoria noticed the empty board before anything else. Madeleine had left it beside the fire the night before, close enough for the frightened girl to reach without having to come near anyone. Now the cake was gone. A few golden crumbs had been brushed into a neat little pile at the edge of the board.
+
+The girl sat in the same corner, her knees drawn up. She still held the heel of bread in her fist, her knuckles white around it. Her face looked exactly as it had the night before. Only the crumbs told them something had changed.
+
+Madeleine saw them too. She looked at her mother, and Victoria gave a slight shake of her head. Madeleine wanted badly to say something. Victoria could see it in her face. But she said nothing and went to find the porridge.
+
+By the time the sun rose above the Ridge, the yard was full of people. Word had spread that Victoria had a list, though she had only a list in her head. People arrived wanting to know where they could help, and Victoria gave them jobs as quickly as she could. Fetch the blankets from the Dunmores' loft. Ask the bakehouse how much bread they could make by noon. Someone go to the cooper and find out whether the three boys who had arrived holding on to one another were ready to be separated. The work kept coming. So did the people.
+
+It was Madeleine who noticed the problem with the numbers. She had borrowed a slate from the schoolroom, a cracked grey thing with a string of chalk attached. For the past hour, she had been going from house to house, asking how many people from Skerrow each household had taken in. She returned and stood beside her mother until Victoria looked down at her.
+
+"It doesn't add up," Madeleine said.
+
 "What doesn't?"
-"Skerrow."
-Victoria glanced at the slate.
-"That's a rather large thing not to make sense."
-"Mr. Lowe says there were a hundred and forty people living there before the fire. I've counted thirty-one who came to Kessing."
-"Thirty-one we know about."
-"Exactly."
-Madeleine turned the slate towards her mother.
-"Nine are here. The rest are at Marta's, the cooper's, and the Dunmores'. But two of the Dunmores' boats went to Ostwick instead of coming here. They took people with them. And some families went north along the shore road."
-"How many?"
-"Nobody knows."
-"Then how do you intend to count them?"
-"That's what I'm trying to find out."
-Madeleine tapped the chalk against the slate.
-"Mr. Lowe says the boats went in different directions. The people from Skerrow are scattered everywhere, and nobody knows where everyone is."
-Victoria looked across the yard.
-Piers Lowe sat beside the water butt on an upturned crate, a bowl of porridge balanced in his lap. He had barely spoken since arriving. When he did, it was usually to give someone a number or correct one.
-He looked up when he heard his name.
-"Nobody told you about the Ostwick boats?" he asked Victoria.
-"No."
-"They came before the Kessing boats. Three of them. They filled up and went home."
-He turned the bowl slowly in his hands.
-"I'm not complaining. They took people who needed help. But there's no one place where everybody is."
-He paused.
-"My wife is somewhere across the water. I don't know which somewhere."
-There was no anger in his voice.
-That made it harder to hear.
-Victoria sat down on the crate beside him.
-"What's her name?"
-"Elise."
-"All right. We'll find out where she is."
-Piers nodded, though he did not look convinced.
-Madeleine had been listening.
-"I could make a list," she said.
-Piers looked at her.
+
+"Skerrow. Mr. Lowe says there were a hundred and forty people living there before the fire. I've counted thirty-one here. Nine are in our kitchen, and the rest are spread around the village."
+
+She turned the slate toward Victoria. The columns were small and tidy, each number carefully written.
+
+"The Dunmores say two of their boats went to Ostwick instead of coming here. They took people with them. And some people walked north along the shore road. Mr. Dunmore doesn't know how many." She tapped the slate. "So there are thirty-one people I can count. But I don't know where everybody else is."
+
+Piers Lowe sat on an upturned crate beside the water butt. He was a long, stooped man with soot still pressed into the lines of his face. He had spoken only twice that morning, and both times he had given someone a number. At the mention of his name, he lifted his head.
+
+"Nobody told you," he said gently to Victoria. "About the boats from Ostwick."
+
+"No. I knew they'd have seen the smoke."
+
+"They came before yours. Three boats. They filled up and went home." He turned the bowl in his hands without eating from it. "I'm not complaining. I'd have taken those three boats over nothing. I'm only saying there's no one place where everybody is." He looked down at the bowl. "My wife is somewhere across the water, and I don't know which somewhere."
+
+He said it without anger. It sounded like something he had been carrying since the night before and had finally found a place to put down.
+
+Victoria looked at her. She hadn't asked whether he was the man from the salt pans who had warned her about the suspicious boat three days earlier. He hadn't said so either. Neither of them was going to bring it up in front of a yard full of people. But the warning was still there between them.
+
+Madeleine held up her slate. "I could make a list."
+
 "Of what?"
-"Everyone. Which village they're in, who's looking after them, and who hasn't been found yet. Then we can put the lists together."
-She considered this.
-"Someone would have to take it to Ostwick."
-Victoria looked at the slate in her daughter's hands.
-The columns were small, the writing neat, and the numbers carefully checked. It was the sort of work Victoria had seen grown men avoid because they thought it too tedious to begin.
-Madeleine had simply started.
-"Do it," Victoria said.
-Madeleine brightened.
-"Really?"
-"Yes. Ask Bram for the skiff. He can take the list across."
-"Can I go with him?"
+
+"Everyone. Each village, and how many people they've taken in. Then we could put all the lists together." She considered this. "If someone took it across to Ostwick, we could find out where people are."
+
+Victoria looked at the small, neat figures on the slate. She had watched a hundred people try to organise a difficult morning. Almost none of them thought to count first.
+
+"Do it," she said. "Ask Bram for the skiff. Tell him I said he must row it himself. You're not to go with his brothers."
+
+"Can I go?"
+
 "No."
-"But I could ask the questions myself."
-"You could also fall into the sound."
-"I can swim."
-"Not across the sound, you can't."
-Madeleine frowned.
-Victoria softened her voice.
-"I need you here. You know everyone, you remember the numbers, and you notice when something doesn't add up. I need someone who can do that."
-Madeleine looked down at the slate.
-For a moment, Victoria thought she might argue again.
-Then her daughter nodded.
-"All right."
-She turned and went to find Bram.
-She did not look back.
-Victoria watched her disappear through the gate and felt an unexpected pinch of sadness.
-Madeleine was still a child. Victoria knew that. She still wanted birthday cakes and trips to the shellfish beds and afternoons that belonged to no one but herself.
-But she was also beginning to see the world differently.
-And Victoria was not entirely sure she knew how to protect her from what came next.
-Master Hale returned with the late tide.
-Victoria spotted his boat from the slip. It was a Kessing-built skiff with a small sail hanging slack in the wind. A broad-shouldered man sat at the stern, gripping the tiller with the stiff arm of someone who had been rowing for far too long.
-Before the boat had fully grounded, Hale was over the side.
-He waded through the shallows in his good black coat and strode up the beach.
-Victoria had known him for most of her adult life. He was a large, grey-haired man with a voice that could silence a room without needing to shout.
-She had never seen him move quite so quickly.
-Ruf stood at the top of the slip.
-He had been ordered back from the beacon that morning and told to wait for Hale's return. For five hours, he had stood by the quay in his oversized watch coat, his hands clasped behind his back.
-Now he straightened.
-Victoria saw him lift his chin.
-She hoped he would remember how to breathe.
-"Who lit the beacon?" Hale demanded.
-The question carried across the slip.
-Men stopped unloading their boats. Women turned from the blankets they were sorting. Even the gulls seemed to pause in their squabbling.
-Ruf stepped forward.
-"I did."
-"On whose orders?"
-Ruf swallowed.
-"Mine."
-Hale stared at him.
-Ruf's hands tightened behind his back.
-"Mistress Victoria told me to look again. She said that if it was more than seals, I should light it, and she'd answer for it. I looked, and it was more than seals."
-"She'd answer for it."
-Hale repeated the words slowly, as though they tasted unpleasant.
-"Do you know what happened last night, boy?"
+
+"I'll be careful."
+
+"You'll write down the names and give the slate to Bram. He'll carry it across, and you'll stay on this side of the water."
+
+Madeleine's expression tightened. Victoria heard the hardness in her own voice and softened it.
+
+"I need you here. I can't count the way you do."
+
+Madeleine considered this, apparently deciding that it was true. "All right."
+
+She went to find Bram without looking back. Victoria noticed. She couldn't decide how she felt about it. She had wanted Madeleine to look back at her, and the realisation embarrassed her. She had given her daughter a job because she needed help, then found herself wanting the child to prove that she still needed her mother. It was a poor thing to want from someone who had just been made useful.
+
+Master Hale arrived on the late tide. Victoria saw his boat from the slip. It was a Kessing-built skiff, its single lug sail hanging slack in the fading wind. A man sat in the stern, holding the tiller with the stiff arm of someone who had been rowing for too long.
+
+Hale didn't wait for the boat to reach the shore. He climbed out before it stopped moving, waded through the shallows in his good black coat, and came up the shingle like a storm. He was broad, grey-haired, and heavy, but he moved with surprising speed. Victoria had known him for most of her adult life. She had never seen him run.
+
+Ruf was already waiting at the top of the slip. Someone had ordered him down from the stack that morning and told him to wait for Hale. He had spent five hours standing at the edge of the quay in his watch coat, his hands clasped behind his back. As Hale approached, Ruf straightened. Victoria saw him lift his chin.
+
+"Who lit it?" Hale asked.
+
+He didn't raise his voice, but half the people on the slip heard him. Men stopped carrying their loads. A woman turned from the basket she was sorting.
+
+"I did," Ruf said.
+
+"On whose word?"
+
+"Mine." Ruf swallowed. "And Mistress Victoria said that if it was more than seals, I should light it, and she'd answer for it. I looked again, and it was more than seals."
+
+"She'd answer for it." Hale repeated the words as though they tasted bad. "Seventy men on this coast got out of bed last night because of you. Ostwick sent three boats into the water in the dark. In the dark, with the bar half-uncovered." He stepped closer. "Do you know what happened to the third boat?"
+
 Ruf said nothing.
-"Seventy men along this coast were dragged out of their beds. Ostwick put three boats into the water in the dark, with the bar half uncovered."
-He stepped closer.
-"Do you know what happened to the third boat?"
-Ruf's face had gone pale.
-"It took the bar on the way home, just before midnight. Eleven of Skerrow's people were aboard. It's lying on its side off the Cutter Rocks."
-Hale paused.
-"Tam Fetter has broken his leg in two places. A woman may lose her hand."
-He lowered his voice.
-"Nobody drowned. That is the only mercy in this business, and it was God's mercy, not yours."
-Ruf's mouth trembled.
-"There was a fire," he said.
-"Of course there was a fire!"
-"Skerrow was burning!"
-"And you think that means you can light the beacon whenever you're frightened?"
-"I wasn't frightened!"
-The words burst out of Ruf before he could stop them.
-Everyone went still.
-Ruf looked horrified at himself, but he did not take the words back.
-Hale's expression hardened.
-"I have kept that stack for nineteen years. Nineteen. I have lit it four times in all those years. Do you know why?"
-Ruf shook his head.
-"Because every time you light it, you call the entire coast to action. Men leave their beds. Boats leave their moorings. Fishing stops. And if the tide is wrong, people can die."
-He jabbed a finger towards Gull Head.
-"A beacon is not something you light because you are afraid."
-Ruf's eyes filled with tears.
-Victoria had been standing at the edge of the crowd, telling herself she ought to let Hale finish.
-He had a right to be angry. A boat had been wrecked. People had been injured. The warning had come with a cost, and pretending otherwise would help no one.
-But Ruf was shaking.
-And he was fifteen years old.
+
+"It struck the bar on the way home, a little before midnight. Eleven people from Skerrow were aboard. Now it's lying on its side off the Cutter Rocks. One man has a broken leg in two places, and a woman may lose her hand." Hale's voice dropped. Somehow, that made it worse. "Nobody drowned. That's the only mercy in it, and it was God's, not yours."
+
+"There was a fire," Ruf said. His voice shook, but he kept speaking. "Skerrow was burning."
+
+"There's always a fire somewhere. I've kept that stack for nineteen years, and I've lit it four times. Four." Hale pointed toward the headland. "Do you know why? Because when you light that beacon, you tell the whole coast to come running. And they come, whether you're right or wrong. It costs them something every time. A night's sleep. A day's catch. A boat." He looked Ruf in the eye. "A beacon isn't something you light because you're frightened."
+
+"I wasn't..."
+
 "Master Hale."
-Victoria stepped forward.
-Hale turned towards her.
-"I told him to light it."
-The words surprised even her, though they were true.
-"He came to me when he saw the smoke. He'd been ordered not to touch the beacon, and he was trying to decide what to do. I told him to look again and light it if he was certain."
-"You gave him that order?"
-"I did."
-"After I had expressly forbidden it?"
-"Yes."
-Hale's jaw tightened.
-"You have no authority over that stack."
+
+Victoria stepped forward. She hadn't planned to intervene. She had intended to let Hale finish, because she knew him well enough to understand that the lesson mattered. She also knew he wasn't wrong about the cost. But Ruf had begun to cry without making a sound. He stood perfectly straight, his shoulders trembling, and Victoria found herself moving between them.
+
+"I told him to light it," she said.
+
+Hale turned toward her.
+
+"He came to me yesterday and told me what he'd seen. I told him to look again and light the beacon if he had to. He didn't want to. He'd been ordered not to touch it."
+
+"By me."
+
+"Yes. By you. But you were gone, and the stack was his responsibility. Nobody else on this shore was going to decide for him." She kept her voice even, although she wasn't sure how much of what she said was for Ruf's sake. Since the fire, she had spent her time answering for things. Yet she still hadn't said aloud what she had failed to answer for three days earlier. "I'm not saying the boat wasn't a cost. It was. I'm saying I'd make the same decision again."
+
+"You aren't the watch."
+
 "No."
-"You're not the watch. You're not a pan owner. You're not even on the headland roll."
-"I know."
-"Then what gave you the right to interfere?"
-Victoria glanced at Ruf.
-The boy was trying very hard not to cry. He stood as straight as he could, but his shoulders had begun to shake.
-Victoria turned back to Hale.
-"Nothing gave me the right," she said. "I took it."
-For a moment, Hale looked almost surprised.
-Victoria continued before she could lose her nerve.
-"I heard the warning from Skerrow three days ago. I should have pushed harder for someone to investigate that strange boat. I didn't. I thought there was time."
-She drew a breath.
-"When Ruf came to me, I knew the danger might be real. I made the decision. If you want someone to blame, blame me."
-Hale stared at her.
-Behind him, the water moved quietly against the stones.
-"That's not how responsibility works," he said at last.
-"Then tell me how it works."
-"You can't simply take the blame for every consequence."
-"Perhaps not. But I won't leave it on a boy who was trying to do what he thought was right."
-Hale looked at Ruf again.
-Something in the boy's face seemed to unsettle him. Perhaps it was the effort Ruf was making not to fall apart. Perhaps it was the way he stood there, still waiting for an order even now.
-Before Hale could answer, Piers Lowe approached them.
-"Master Hale," he said. "May I speak?"
-Hale gave a curt nod.
-Piers folded his hands.
-"I'm from Skerrow. The stack was meant to warn people like me."
-His voice was tired but steady.
-"The boats came because of the smoke. I don't know whether they would have come without the beacon. They might have seen the glow from Ostwick. They might not."
-He paused.
-"I know one of the injured men. Tam Fetter is my neighbour. I'll sit with him tonight."
-His eyes moved to Ruf.
-"But I don't want it said that this was the lad's doing. I don't know whose doing it was. Perhaps it was nobody's."
-The crowd fell silent.
-Hale looked at Piers for a long moment.
-Then he let out a heavy breath.
-"Get your face dry, boy."
-Ruf wiped his cheeks quickly with his sleeve.
-"You're on the stack tonight," Hale continued. "There's nobody else with the legs for it."
-Ruf nodded.
-It was not forgiveness. Everyone understood that.
-But it was something he could work with.
-Hale turned away, muttering about the state of the watch and the state of the coast, and the crowd slowly began moving again.
-Victoria remained where she was.
-She had wanted to protect Ruf from the blame.
-Instead, she had reminded everyone that she had made a mistake of her own.
-She supposed that was fair.
-It was also rather uncomfortable.
-The meeting took place in the net loft after noon.
-It was the only room in Kessing large enough to hold everyone who wanted to be heard, and nobody had thought of a better place.
-Victoria had not been invited.
-She came anyway.
-She found a seat near the back beside a stack of fishing floats. No one asked her to leave, though a few people glanced at her with the particular expression reserved for someone who had arrived without being expected.
-There were about thirty people in the loft. Pan owners, fishermen, village elders, and anyone who had taken responsibility for housing the survivors. Master Hale sat near the front, his arms folded across his chest.
-A tall man in a weather-stained coat stood by the window.
-He introduced himself as the harbour reeve of Ostwick.
-Madeleine arrived shortly afterwards, carrying her slate. Bram had taken it across the sound that morning, and the two of them had spent the hours since adding names, crossing out mistakes, and trying to work out where the missing families might have gone.
-She settled onto a wooden keg beside Victoria.
-No one objected.
-The meeting began well.
-That was what Victoria would remember afterwards.
-The Ostwick reeve explained that his village had taken in ninety survivors and would keep them for as long as necessary.
-A woman from Gull Head said she could feed another twelve people.
-Piers Lowe stood at the front and described what Skerrow needed.
-Boats to search the northern shore.
-Grain and flour.
-More people to watch the headland at night.
-No one argued with him.
-Heads nodded. People murmured their agreement. One of the pan owners promised that Kessing would send salt. The reeve offered flour from Ostwick's stores.
-For a little while, Victoria felt hopeful.
-Perhaps this was how things were meant to work. A village suffered, its neighbours came together, and everyone gave what they could.
-Then Piers asked, "When can we expect the flour?"
-"As soon as the tide permits," the reeve replied. "I'll send word."
-"And the boats?"
-The reeve rubbed his jaw.
-"That's more difficult. The fishing run begins Thursday. The next fortnight pays for much of the year, Mr. Lowe. I can't ask every man to abandon his nets."
-"Could you spare a few?"
-"I'll ask them. I'll put it to the fishermen. But I can't promise what they'll say."
-The woman from Gull Head shifted in her seat.
-"We have four men who could watch the stack. Four, if you count the two who are past sixty. We'd gladly send them, but then who's going to help us with our own fishing?"
-One of the pan owners raised a hand.
-"I could spare six men after the next evaporation."
-"That's nine days away," Piers said.
-"I know."
-"And we need them now."
-"I know that too."
-The pan owner sounded genuinely sorry.
-He also sounded as though he had no intention of changing his answer.
-Victoria looked around the room.
-No one was being cruel. No one was trying to abandon Skerrow. The reeve truly intended to send the flour. The woman from Gull Head genuinely wanted to help. The pan owner would probably give the six men once his salt pans were ready.
-They meant every word.
-And yet, the boats could not leave until the fishing run was over. The flour could not cross until the tide turned. The men could not come until nine days had passed.
-Everyone had a reason.
-Everyone had a responsibility somewhere else.
-And Skerrow still needed help.
-Victoria felt a strange frustration growing inside her. It was not anger, exactly. It was the feeling of watching a door slowly close while everyone around you insisted they were trying to open it.
-Madeleine had stopped writing.
-The chalk rested between her fingers.
-She was watching the people in the room with a look Victoria recognised. It was the look Madeleine wore when she had counted something twice and discovered that the answer was still wrong.
-Eventually, the reeve stood.
-"This is a difficult time for all of us," he said. "But I am proud to see how the villages of the sound have come together. We will continue to help Skerrow in every way we can."
-People murmured their agreement.
-Piers thanked them.
-Chairs scraped. Men stretched their backs. The meeting began to dissolve into smaller conversations, and within minutes the loft was emptying.
-Victoria was gathering her shawl when Madeleine touched her arm.
-"Mama."
-"What is it?"
-"I wrote everything down."
-She turned the slate towards her.
-There were names in one column and promises in the other.
+
+"You're not a pan owner. You're not on the headland roll. I don't know that you have any standing in this matter at all."
+
+It was a fair objection. Victoria stood before forty people on the slip and understood, with sudden clarity, that she had no official authority here. She had taken responsibility anyway.
+
+"No," she said. "I haven't. So if there's a price to pay, put it on me, not on the boy."
+
+Hale studied her. Behind him, the tide moved softly against the stones.
+
+"It's not that simple," he said at last, his voice quieter now. "A price isn't something you can pick up and hand to someone else."
+
+"Then tell me what it is, and I'll find out how to pay it."
+
+For a moment, nobody spoke. Then Piers Lowe came down from the water butt.
+
+"I'd like to say something, if that's allowed." He didn't raise his voice, but people turned toward him. "I'm from Skerrow. I'm one of the people that stack was meant to protect." He folded his hands in front of him. "The Ostwick boats came because of the smoke. I don't know whether they'd have come without the beacon. I think they probably would have. The glow was visible from their houses." He paused. "But I don't know. And the man with the broken leg is one of ours. I'll sit with him tonight." His eyes moved from Hale to Ruf. "I don't want anyone saying this was the lad's doing. I don't know whose doing it was. Maybe nobody's."
+
+Hale breathed out through his nose. For a moment, Victoria thought he would argue. Instead, he looked at Ruf, at his oversized coat, his wet face, and his thin wrists. Something in his shoulders seemed to loosen.
+
+"Get your face dry," he said. "You're on the stack tonight. There's nobody else with the legs for it."
+
+It wasn't forgiveness. Ruf knew that. Victoria could see it in the way he wiped his face with his sleeve and nodded. But he was no longer standing alone before everyone on the slip.
+
+They met in the net loft after noon because it was the only room in Kessing large enough to hold them all. Nobody had invited Victoria. She came anyway, sat at the back beside a stack of floats, and waited to see whether anyone would object. No one did.
+
+About thirty people had gathered on upturned crates and coils of rope. The pan owners were there, along with Hale and a woman from Gull Head who had a bad chest. A tall man in a weather-stained coat sat by the window. He was Fenwick, the harbour reeve of Ostwick. He had been crossing the water since dawn, and it showed. The loft smelled of old tar, wet rope, and thirty people who hadn't slept.
+
+Madeleine arrived late with her slate. Bram had taken the skiff across that morning and returned. Madeleine had spent the hours since then adding names, crossing out numbers, and asking questions. She settled on a keg beside her mother without being invited, placed the slate on her knees, and began writing again. Nobody paid her much attention.
+
+The first hour went well. That was what Victoria remembered afterward. How well it went. Everyone said the right things. Fenwick explained that Ostwick had taken in ninety people and would keep them. The woman from Gull Head said she could feed twelve more and would. Piers Lowe stood at the front of the room and explained what Skerrow needed: boats to search the northern shore, grain, and another person to help keep watch on the stack at night.
+
+Nobody refused. People nodded. One of the pan owners promised that Kessing would send salt. Fenwick said Ostwick had flour to spare and would send some across.
+
+"How soon?" Piers asked.
+
+"As soon as the tide permits," Fenwick replied. "I'll send word."
+
+"And the boats? For the northern shore?"
+
+Fenwick rubbed his jaw. "That's the difficulty. The fishing run starts Thursday. Those two weeks pay for the rest of the year, Mr. Lowe. I can't ask a man to leave his nets during the run." He raised a hand before Piers could answer. "I'll ask them. I'll put it to them. But I can't promise what they'll say."
+
+The woman from Gull Head spoke next. "We have four men who could help with the stack. Four, though two are past sixty. We'd gladly send them, but then who's going to look after our own fish?"
+
+"I could spare six," said one of the pan owners, "after the next evaporation. We've got the whole summer's crust to turn."
+
+"The next evaporation is nine days away," someone pointed out.
+
+"I said if."
+
+There was no quarrelling. No raised voices, no one refusing outright. Victoria listened for an argument and couldn't find one. Every person in the room wanted to help. They said so, and they meant it. Every one of them could also explain exactly what helping would cost. They spoke kindly. They offered what they could spare without putting their own families at risk. Their reasons were real, and Victoria couldn't dismiss them.
+
+But as the promises gathered, she began to see the problem. Everyone was willing to help. Nobody was ready to be the first to give something up.
+
+She glanced at Madeleine. Her daughter's chalk had been moving quickly across the slate. Now it stopped.
+
+At the end of the meeting, Fenwick stood and said he was glad to see how the villages had come together during such a difficult time. The others murmured their agreement. Piers Lowe rose to thank them. Then the meeting ended. People stood, stretched their backs, and began talking as they made their way toward the door. The loft slowly emptied into the afternoon.
+
+"Mama," Madeleine said quietly.
+
+Victoria turned.
+
+"I wrote it down." Madeleine held out the slate. Along the left side was a column of names. Beside each name, she had written what that person had promised.
+
 Three boats, perhaps.
-Two barrels of flour, once the tide permitted.
-Six men for the stack, after nine days.
-Twelve people at Gull Head, provided someone could feed them.
+Two barrels of flour, if the tide allowed.
+Six men for the stack, but not for nine days.
+Twelve people at Gull Head, who would be fed but could not be sent elsewhere.
 A great deal of salt.
-Madeleine pointed to the first line.
-"The flour is in Ostwick. It will take two hours to cross the water if the tide is right, and it's going out at dusk. So the flour can't come until tomorrow."
-She moved her finger down.
-"The boats are on the fishing run. They can't search the northern shore until it's finished, and the run lasts a fortnight."
-Another line.
-"The six men can't come for nine days."
-She stopped and frowned.
-"And the salt isn't much use to Skerrow. They've got no food to put it on."
-Victoria sat down again.
-Madeleine looked at the slate as though it had personally disappointed her.
-"Everyone said they would help," she said. "And they meant it."
-"Yes."
-"But nobody said who would go first."
-Victoria looked at the names.
-Every promise was reasonable. Every delay had an explanation. Nobody had lied, and nobody had refused to help.
-Yet the people who needed help could not eat a promise.
-Victoria thought of Piers Lowe sitting in her kitchen, waiting to learn whether his wife was alive and where she had gone.
-She thought of the strange boat that had been seen off Skerrow.
-And she thought of the warning she had received three days too late to use properly.
-Perhaps the trouble was not that people did not care.
-Perhaps caring was easier when it did not require anyone to change their plans.
-She looked at Madeleine.
-"Keep that slate," she said.
-"What for?"
-"Because I suspect we are going to need it."
-Madeleine nodded and tucked it carefully under her arm.
-Outside, the tide was turning.
-But the help Skerrow needed was still somewhere across the water.
-At dusk, Ruf climbed back to the beacon.
-Victoria watched him from the yard as he made his way up the path, carrying a flask of tea and a heel of bread. His watch coat was buttoned to the chin, and he walked with the stiff determination of someone who had been told to do a job and intended to do it properly.
-At the top of Gull Head, the small watch fire began to glow.
-It was nothing like the great beacon that had called the coast into action the previous night. This was a modest orange light, just bright enough to be seen from the water.
-Victoria hoped Ruf would stay awake.
-She also hoped Master Hale would remember that a boy could be frightened and still be brave.
-The kitchen was quieter when she returned.
-The old woman with the burned hands had been moved to a proper bed. Someone had managed to coax the youngest children into sleep. A woman near the hearth was humming a lullaby so softly that Victoria could barely hear it.
-The girl in the corner remained awake.
-She had moved a little closer to the fire, but she still held the heel of bread in her fist.
-Piers Lowe sat on the floor nearby, his back against the wall. His long legs stretched in front of him, and he stared into the fire without speaking.
-Madeleine sat at the table with her slate.
-Victoria was about to ask whether she had eaten when Piers spoke.
-"Her name is Asta."
-Madeleine's chalk stopped moving.
-Victoria turned towards him.
-"What?"
-"The little girl." Piers nodded towards the corner. "She's called Asta."
-The girl did not react.
-"I didn't know it until this morning," he continued. "She lived in the house by the east slip. The one with the blue door. They'd taken in a shipwright's family."
-He paused.
-"I don't know what happened to the rest of them."
-The fire crackled.
-Piers rubbed a hand across his face.
-"A woman in Ostwick recognised her. She sent word with the flour boat. That's all I know."
-Victoria looked at the girl.
-Asta sat very still, her eyes fixed on the flames. She might have heard her name. She might not. There was no way to tell.
-Madeleine lowered her slate to the table.
-She had spent the day counting people, finding houses, and recording the promises made by one village to another. She had made a place for every number she could find.
-But many of the spaces beside those numbers remained empty.
-She turned to a fresh line near the bottom of the slate.
-Carefully, she wrote:
+
+"The flour is in Ostwick," Madeleine said. "It's two hours away by water if the tide is right. Their boat is leaving at dusk, so the flour can't arrive until tomorrow." She moved her finger down the list. "The boats are busy with the fishing run, so they can't search until it's finished. And the run lasts a fortnight. The men for the stack can't come for nine days." She paused at the last item. "And salt won't help Skerrow. They've got no food to put it on."
+
+Victoria looked at the slate. "They meant it," she said. "All of them."
+
+"I know." Madeleine frowned at the figures, as though they had somehow cheated her. "That's what's funny. Everybody said they would help. Nobody said who would go first."
+
+Victoria had no answer. She studied the little columns, each number carefully recorded, each promise honestly made. She thought of Piers Lowe standing at the front of the room with his hands folded. She thought of his wife, somewhere across the water. She remembered the man at the salt pans who had warned her about the suspicious boat. He had spoken carefully because he was afraid of sounding foolish. Now, in the loft, everyone had spoken carefully too. They had been kind. They had been reasonable. They had meant every word.
+
+And still, the people of Skerrow were waiting.
+
+At dusk, Ruf stood on the stack with a flask of tea, a heel of bread, and the watch coat buttoned to his chin. Victoria didn't climb up to see him. She watched from the yard as a small fire appeared at the top of the Gull Head stack. It was no more than a watch fire now, a thin orange light visible from the water and nowhere else. She thought of Ruf on the slip, lifting his chin while tears ran down his face. She hoped he would be able to stay awake.
+
+Inside, the kitchen had grown quieter. The old woman had been moved into a proper bed. Someone had started singing earlier, but the song had ended almost as soon as it began. Near the hearth, the little girl still sat with her knees drawn up and the heel of bread clutched in her fist. But she had moved a little closer to the fire.
+
+Piers Lowe sat on the floor beside her. He hadn't tried to speak to her. He simply leaned against the wall with his long legs stretched out in front of him, looking at nothing in particular. After a while, he spoke without turning his head.
+
+"She's Asta."
+
+Madeleine stopped writing at the table.
+
+"I didn't know until this morning," Piers continued. "She's from the house by the east slip. The one with the blue door. They'd taken in a shipwright's family." He didn't explain what had happened to the family. "Bram brought word back from Ostwick. A woman there recognised her. That's all I know."
+
+The girl didn't move. Her eyes remained on the fire. Victoria couldn't tell whether she had heard her name or whether it was just another sound in a room full of sounds.
+
+Madeleine looked down at her slate. She had written a number for every house in Kessing and a number for every house across the water. Beside each number, she had left space for names. Most of those spaces were empty. They had counted how many people were safe. They had counted how many could be fed, how many blankets were needed, how many boats might be sent. But they hadn't asked who those people were.
+
+Madeleine turned to a fresh line near the bottom of the slate. Holding the chalk close, she wrote slowly, checking each letter as she went.
+
 Asta.
-She checked the letters once.
-Then again.
-Beside the name was another column, one she had drawn that morning and labelled With whom?
-Madeleine looked at the little girl by the fire.
-Then she looked at Piers.
-No one knew where Asta would go next. No one knew whether the people she had lived with were safe, or whether she had anyone left to claim her.
-Madeleine set down the chalk.
-She left the space beside Asta's name empty.
-For the first time all day, she did not try to fill it in.
-Outside, the beacon kept watch over the sound.
-Between Kessing and Skerrow, the tide moved steadily in the dark, carrying things away from one shore and towards another.
-And in the kitchen, beneath the warm light of the fire, a little girl sat beside strangers who knew her name but could not yet tell her where she belonged.
+
+Then she sat with the chalk raised above the next column, the one she had drawn that morning and labelled with whom. She looked across the room at the girl by the fire.
+
+Madeleine was twelve, and one day older than she had been yesterday. She had spent her entire birthday being useful. Now she wanted to cross the room and sit beside Asta. Victoria saw the longing in her face. She also saw Madeleine decide that doing so might be another way of taking something from the girl. Asta had not asked for company. She had not asked to be comforted. She had barely allowed herself to eat.
+
+So Madeleine stayed where she was. She lowered the chalk. And she left the space beside Asta's name empty.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Three",
+      title: "The Price of a Common Wall",
+      content: `
+Chapter Three: The Price of a Common Wall
+
+Nobody had said who would go first, so Victoria went.
+
+She told herself it was simple arithmetic. The flour was in Ostwick, and Piers Lowe's wife was somewhere across the water. The fishing run began that morning, and any boat leaving Kessing after the fleet set out would arrive at an empty quay.
+
+She did not tell herself that she had been sitting on a warning for three days before Skerrow burned. That was true too, but it would not help anyone carry flour.
+
+They left before the sky had properly brightened. Bram took the oars, Piers sat at the bow, and Victoria settled between them with her hands tucked beneath her arms. The morning cold had a dampness to it that passed through wool as easily as water through a net.
+
+Madeleine had come down to the slip to see them off. She held the slate against her chest, her hair still flattened on one side from sleep. She didn't ask to come along again. She only stood at the water's edge and said, "It's two hours if the tide is with you."
+
+"Then I'll be back by noon," Victoria replied.
+
+The promise came out so easily that she almost stopped to examine it. Instead, she climbed into the skiff and pushed away from the shore. She did not look back. She was aware of that all the way through the first mile.
+
+Bram was seventeen, the younger brother of two men who spoke less than he did. He rowed well and talked almost without stopping. He talked about the tide, a gull that had stolen an entire smoked mackerel from his father's drying rack on Sunday, and the Dunmores, who had supposedly taken a cask of something out in the dark and returned without it.
+
+Victoria let his words pass over her like the water. After a while, she noticed Piers had turned his head slightly to listen.
+
+"Take the long way around the Cutter Rocks," Piers said.
+
+It was the first thing he had said since they left the slip.
+
+"I always do," Bram replied.
+
+"The third boat went over there."
+
+"I know."
+
+Bram lifted one oar, dipped it into the water, and took another stroke. "I was on the slip when they brought the people in. The man with the broken leg is Tam Fetter. He's my cousin's wife's uncle." He paused. "He told me his leg didn't hurt, then he was sick over the side." Bram adjusted his grip on the oars. "I'm taking the long way."
+
+Nobody spoke for a while after that.
+
+The Ostwick quay was already emptying when they arrived. Victoria could see it from half a mile away, a long stone arm crowded with masts. Boats were leaving one after another, their sails rising grey against the pale morning sky.
+
+The fishing run took almost the entire fleet. Every boat that could float was going out. The men left behind were the lame, the very old, and a few boys standing at the end of the quay with their hands tucked into their armpits.
+
+"We're too late," Bram said.
+
+"The flour isn't on the boats," Victoria replied.
+
+"The reeve is."
+
+He was right. Fenwick stood in the stern of the last large cutter, one hand gripping the mast. He was watching the quay and the fleet moving out beyond it. He did not appear to have noticed Kessing's skiff.
+
+Victoria stood and called his name. The wind carried most of her words away. Piers cupped his hands around his mouth.
+
+"Fenwick!"
+
+This time, the call reached him. A man near the cutter's bow said something. Fenwick turned his head, looked toward the skiff, and raised a hand. After a moment, the large boat began a slow turn. Her sail shook in the wind as she came about and drew alongside them.
+
+"I can't stop," Fenwick called down. "I've got forty men aboard and a fortnight to fill."
+
+"Where is the flour?" Victoria shouted.
+
+"In my storehouse on the east quay. My wife has the key. Tell her I said to give you what you came for." He looked directly at Victoria. "Mistress Victoria, I said I'd send word, and I meant it. I meant all of it. Do you understand?"
+
+"I do."
+
+"Then understand this too. I can't leave everything to chance. There's a year's money in the next fortnight, and every household on this shore has the same arithmetic." He glanced toward the open water. "I'm sorry for Skerrow. I'll feed Skerrow. But I won't take a boat off the water to search for people who may already have been found."
+
+He lifted his hand to signal the crew. The cutter swung back toward the fleet, leaving their skiff rocking in the water behind it.
+
+Piers watched the boat move away. "He wasn't being cruel," he said.
+
+"No."
+
+"I'd have done the same in his place."
+
+Victoria said nothing. She had the strange feeling that she had been shown a hidden seam in the world, something that had been there all along. She suspected she would see it again now that she knew where to look.
+
+Ilse Lowe was waiting in the net store on the east quay. She sat on an upturned crate with a child on either side of her. More children lay curled on the nets behind them, a loose heap of small bodies, perhaps a dozen in all. One of Ilse's arms rested in a sling made from a tablecloth.
+
+When the door opened, she looked up. Her face did not change.
+
+Piers stopped in the doorway. Victoria had seen people learn that someone they loved was dead. She knew what such news could do to a face. But she had rarely seen the opposite: the moment when someone who had spent a day and a half preparing for the worst discovered that it had not happened.
+
+Piers stood with one hand on the doorframe, his tall body bent slightly forward. It looked as though a heavy weight had been lifted from one shoulder, leaving him unbalanced.
+
+"You haven't eaten," Ilse said. She spoke from across the room, her voice flat. "I can tell from here. You've gone yellow."
+
+"There was porridge," Piers said. His voice didn't quite work. "I was going to eat."
+
+"You were going to."
+
+Ilse pushed herself to her feet, moving awkwardly with her injured arm held close. Piers crossed the room in three strides and stopped in front of her. For a moment, neither of them seemed to know what to do with their hands. Then Ilse put her good hand behind his neck and pulled his head down until his forehead rested against hers.
+
+They stayed like that for a while. Victoria looked at the nets. Beside her, Bram had been about to say something. She watched him change his mind and decided she had underestimated him.
+
+When she looked back, Ilse had stepped away. She wiped her face with her sleeve, looking rather annoyed with herself. "You'll be wanting the flour," she said. "He told me you were coming. It's behind the south door." She glanced toward the children. "There are twelve sacks. I want eleven back. I've got little ones to feed, and nobody else has asked who's feeding them."
+
+"Eleven," Victoria said. "Done."
+
+"And somebody should write down who these children are." Ilse looked at the children scattered across the nets. Her mouth tightened. "There's a girl in there I can't get a word out of. And a boy who says his name is Tolly, then says it isn't. I know the mothers of eight of them. The other four, I don't."
+
+"I have a daughter who would want to know that."
+
+They loaded the flour in the thin morning sunlight. It was hard work. Each sack weighed more than Madeleine, and the skiff sank a little lower with every one they brought aboard. By the eleventh sack, the water was uncomfortably close to the gunwale. Bram began talking about the Cutter Rocks again, but this time his voice had lost its easy rhythm.
+
+Victoria was lifting the last sack over the side when someone called her name from the quay. It was Berit, the woman from Gull Head with the bad chest.
+
+She had crossed over on a fishing boat that had cleared the harbour that morning but been forced back by the wind. She stood at the top of the steps with her hands tucked into her sleeves, coughing into her collar. She was perhaps sixty, narrow and stern, with a grey plait wound around her head like rope around a bollard.
+
+"You went," she said.
+
+Victoria lowered the sack into the skiff. "I heard about it on the slip. I said to myself, there's one who won't wait for a meeting."
+
+"I wasn't trying to make a point."
+
+"I know. That's why I'm telling you." Berit came down two steps, stopped to cough, then continued the rest of the way. "Berit," she said, as though introducing herself were a necessary correction. "I don't think I told you yesterday. I keep the Gull Head stack with my two cousins." She looked across the water at the departing fleet. "I've been thinking since yesterday afternoon. I expect you've been thinking about the same thing."
+
+"Tell me."
+
+"Everyone in that loft said yes. I counted. They said yes eleven times." She pointed toward the water. "And what did we get? A boy on the stack who wasn't allowed to light it. A boat on the Cutter Rocks. A hundred and forty people spread across four places, and nobody who knew which four." Berit coughed into her sleeve. "Every man in that room would do it all again tomorrow. That's what frightens me."
+
+"That they would help?"
+
+"That they're all so decent."
+
+Victoria waited.
+
+"Not wicked," Berit continued. "Not selfish. Decent people who mean well and still leave everyone waiting."
+
+"What would you have done instead?"
+
+"I don't know." Berit looked annoyed by her own answer. "I'd put a stack on every headland between Skerrow and Gull Head. Two men on each one, every night of the week, whether anything was burning or not. I'd keep fuel in a store so nobody had to ask permission to use it. And I'd have one agreed rule for what a fire means." She looked back at Victoria. "So nobody has to run to the wrong person and ask."
+
+"Who pays the men?"
+
+"That's the whole difficulty." Berit's grey eyes settled on her. "Gull Head has four men to spare, and two are old. We'd be the ones sitting on the point nine nights out of ten while Ostwick goes fishing. I'd do it for the sound. I wouldn't do it just to protect Ostwick's herring."
+
+"Then Ostwick pays Gull Head."
+
+"In what?"
+
+"Flour. Kessing can provide salt. If we have spare hands, we can send them to help with the pans." Victoria heard herself speaking faster as the idea began to take shape. "Everyone gives what they have most of. Ostwick has boats and flour. Kessing has salt and a few spare backs. Gull Head has the best stack on the coast and the people who know how to keep it working." She paused, looking at Berit. "If Gull Head keeps the stack for everyone, then everyone helps feed Gull Head. And the stack stays yours."
+
+Berit stood very still. Victoria had the feeling she had said something important, but Berit was weighing it against a concern she had not yet spoken aloud.
+
+"Mine," Berit said slowly. "Not Ostwick's."
+
+"Yours."
+
+"Who lights it?"
+
+Victoria had been waiting for the question without realising it. She thought of Ruf standing on the slip with his chin lifted. She thought of Hale telling him that a beacon wasn't something you lit because you were frightened.
+
+"Whoever is on the stack," she said. "If they see enough to be sure."
+
+"Hale won't like that."
+
+"No."
+
+"Fenwick will say a council ought to decide, so nobody lights it by mistake. The people from Skerrow will say whoever is closest should decide. And Gull Head will say it ought to be us." Berit gave a dry twist of her mouth. "You've managed to give me four disagreements in one breath."
+
+"I haven't given you any. They were there before I said anything."
+
+"True enough." Berit coughed for a long time. When she finished, she wiped her mouth and looked out across the water again. "Here's what I'll do. I'll agree to it for a month. A month of men on every stack and fuel kept ready. Then we'll see what it costs." She turned back to Victoria. "I'll say it in front of whoever you like. If it doesn't work, we admit it and stop. But I'宁 not doing it on a handshake."
+
+"What would you do it on?"
+
+"Someone writing it down." Berit nodded toward the skiff, where Madeleine's slate lay on the thwart beneath a fold of sacking. "Someone I trust to write down what we actually agreed to, not what they wished we'd agreed to."
+
+Victoria followed her gaze. Madeleine had insisted Bram take the slate with him that morning.
+
+"How do you know about the girl?" Victoria asked.
+
+Berit looked at her. "I know about everyone," she said. "I keep a stack."
+
+They returned to Kessing on the evening tide. The skiff rode so low in the water that the sound seemed to be climbing over its sides. As they rowed toward the slip, Victoria could see the beacon burning at Gull Head, a small orange light against the darkening shore. She watched it for a long time.
+
+She had promised Madeleine she would be back by noon. It was nearly dark, and she had not once during the long day thought to send word across the water.
+
+Madeleine was waiting at the slip. Someone told Victoria she had been there since the middle of the afternoon. She stood with her arms wrapped around herself and the slate held against her chest. As the skiff approached, she came down to the water's edge before the keel had touched the shore.
+
+"You came back," she said.
+
+"I told you I would."
+
+"You said noon."
+
+There was a thin, hard note in her voice that Victoria had never heard before. Madeleine looked at her mother's face, then at the sacks in the boat, as though she needed to make sure both were real.
+
+"I counted the tide. You should have been back by two. Then I counted it again."
+
+"The flour was heavy."
+
+"I know."
+
+Madeleine turned her face away for a moment. When she looked back, she had composed herself. "Mr. Dunmore said you'd be fine. He said it three times." She swallowed. "He doesn't say things three times."
+
+Victoria stepped out of the skiff and onto the shingle. Then she put her arms around Madeleine, flour sacks and wet coat and all. For a moment, the girl stood stiffly, as though she had decided beforehand that she would not let herself be comforted.
+
+Then she gave way all at once. Her face pressed into her mother's shoulder. She said something into the wool that Victoria couldn't hear.
+
+Victoria didn't ask her to repeat it. "I'm sorry," she said. "I should have sent word."
+
+"There wasn't anyone to send."
+
+"I should have found someone."
+
+"Yes," Madeleine said into her coat. "You should have."
+
+She was quiet for a moment. "But you came back, so..."
+
+She straightened and wiped her eyes briskly with the heel of her hand, as though clearing a slate. "Did you find Mr. Lowe's wife?"
+
+"Yes. She's well. Her arm is hurt."
+
+Victoria had so much to tell her, but she couldn't find the right order for any of it. "She asked for a list of the children in Ostwick. She says there are four whose mothers she doesn't know."
+
+"Four."
+
+Madeleine was already writing. She held the chalk close to the slate, moving slowly and carefully, shaping the letters with her lips as she wrote.
+
+"What about Asta's mother? Did she say anything?"
+
+"Nobody knows."
+
+"Then I'll leave it open." She finished the line and looked up. "What did they say in Ostwick? Is anything going to change?"
+
+Victoria told her. She explained the conversation with Fenwick, the flour, and Berit's proposal. She told the story in the wrong order, explaining the disagreements before the offer that had prompted them. Madeleine listened without interrupting, her head tilted slightly to one side.
+
+When Victoria finished, she turned the slate around and ran her finger down a column of numbers. "It's eleven men," she said.
+
+"What is?"
+
+"For the stacks. If you want two men on each of the five headlands every night, that's ten men at a time. You'll need another one to cover when somebody can't go." She looked up. "Where are they coming from, Mama?"
+
+Victoria waited.
+
+"Today, all the men are on the fishing run. You said the arrangement would last a month, but the run lasts a fortnight. So who watches the stacks for the first two weeks?"
+
+Victoria opened her mouth. Across the shore, the little orange light burned steadily on Gull Head. A boy of fifteen sat beside it with a flask of cold tea.
+
+She had no answer.
+
+"I don't know," she said.
+
+Madeleine studied her for a moment. There was no triumph in her expression, no satisfaction at having found a flaw in her mother's plan. She simply turned the slate around and wrote a number at the top of the empty column.
+
+It wasn't a large number. It was considerably larger than anyone else's.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Four",
+      title: "The Local Promise",
+      content: `
+Chapter Four: The Local Promise
+
+Madeleine had slept for three hours with her cheek pressed against the slate.
+
+In the morning, a faint grey pattern of chalk marked her face. Victoria noticed it but said nothing. She put a bowl of porridge in front of her and watched her daughter study the column of figures again, as though the numbers might have changed overnight.
+
+"Ten men and a spare," Madeleine said. "Every night, for a month. I've worked it out three different ways."
+
+"I believe you."
+
+"But I don't know where we're going to find them." She pushed the slate across the table. "I keep thinking I've made a mistake. I haven't. There just aren't enough men."
+
+Piers Lowe sat on the bench beside the cold hearth, his long hands hanging between his knees. He had returned with the flour the previous evening, slept in his coat, and risen before everyone else to carry water without being asked.
+
+He looked at the slate from across the room. Victoria saw him decide to speak. She also saw how much the words cost him.
+
+"There are nineteen men from Skerrow in this village," he said. "Between fifteen and sixty. I counted them on the slip this morning while the rest of you were still eating."
+
+Madeleine looked up.
+
+"I counted them too. Nineteen. I wrote it down." She frowned at the slate. "I didn't think of asking them."
+
+"There's no reason you should have." Piers rested his hands on his knees. "They're sitting in other people's kitchens with nothing to do. They've lost their houses. Some have lost their families. They're waiting for someone to tell them what happens next." He paused. "The point at Gull Head faces straight toward the east slip. You can see it from the stack. I thought about that, and I'm still asking."
+
+He finally looked up. "It's the first thing in two days anyone has asked of us. I've been watching those men. A man sitting with a bowl in his lap isn't much use to himself. A man with a watch to keep might be."
+
+Victoria considered this. She had been so busy trying to find men for the stacks that she hadn't thought about the men already standing in her yard.
+
+"Ask them," she said. "Don't tell them what to do. Ask."
+
+"I wouldn't know how to tell them anything," Piers replied. For the first time since they had met him, something close to a smile crossed his face. "They wouldn't take it from me."
+
+Maren Cole kept the pan owners' tally book in Kessing. She had also looked after the schoolroom for twenty years, and her ink-stained hands had the appearance of tools that were always in use. She was a small, spare woman of about forty, with a habit of tilting her head as she listened, like a bird that had noticed something beneath a leaf.
+
+When Victoria explained what they needed, Maren didn't exclaim or ask questions about the beacon. She asked one thing.
+
+"What sort of paper?"
+
+"Good paper," Victoria said. "Something that will last."
+
+"Then I'll bring the tally book. The pan owners' pages are made from good rag paper. They'll outlive us all."
+
+She stood in the schoolroom doorway, wiping her fingers on a cloth. Madeleine had followed Victoria inside, carrying the slate beneath her arm. Maren looked at her.
+
+"I'd need somebody to hold the page. The wind up there will carry it straight into the sea."
+
+"I can hold it," Madeleine said.
+
+"I thought you might."
+
+That afternoon, the three of them walked up to Gull Head with Piers a little ahead. Maren carried the tally book wrapped in oilcloth. Victoria brought a flask of tea, and Madeleine took the slate.
+
+The path followed the shore before climbing through bracken and low flowering shrubs toward the long arm of the headland. The wind grew stronger as they climbed. It smelled of wet stone and tar.
+
+At the top stood the stack, a squat tower of tarred timbers and flat stones, with a wooden platform above it. Beneath the tower was a low turf hut with a door secured by a loop of rope. Berit was waiting outside.
+
+Two people stood behind her. Both were lean and weathered, and both had her grey eyes. One was visibly older than Berit and leaned on a walking stick. The other was a woman of about fifty who looked at Victoria with open dislike.
+
+"My cousins," Berit said. "Osric and Gunnhild."
+
+"We've met," Gunnhild said.
+
+"Have we?"
+
+"At the salt pans, three summers ago. You wouldn't remember. You were discussing a price." She didn't smile. "I remembered you."
+
+Victoria couldn't think of a useful reply, so she asked to see the hut. Inside, the walls were lined with fuel. Most of it was driftwood, split and stacked with the bark still attached, along with several barrels of pitch.
+
+Berit showed them where the dry wood was kept and where the damp wood went. She explained how the stack was built so that a torch pushed into its base would catch quickly. Osric took over the explanation of why the wood had to be arranged in a particular way. He went into considerable detail, and Victoria listened patiently, asking questions whenever something wasn't clear.
+
+Madeleine asked questions too, speaking quietly with Piers, who answered every one as seriously as if she were an adult.
+
+"Is this everything?" Victoria asked when they had finished.
+
+"The whole store," Berit said. "We put aside what we can. It would last a fortnight if nothing happened."
+
+"And less if five stacks were burning every night," Madeleine said.
+
+Berit looked at her. "Who's this?"
+
+"My daughter."
+
+"She counts."
+
+"She does."
+
+"Good," Berit said. "Someone should."
+
+The wind had strengthened by the time they went outside. Maren chose a flat slab of stone beside the stack and laid out the tally book. Madeleine knelt on one side, Piers on the other, holding down the corners of the page while Maren prepared her pen.
+
+Below them, the sound stretched across the land like beaten pewter. Far away, the eastern end of Skerrow was still visible as a low brown mark against the shore. Thin smoke rose from it.
+
+Victoria saw Piers notice it. He turned his shoulders so the wind struck his face and concentrated on the page instead.
+
+Madeleine noticed too. Without saying anything, she shifted on her knees until her small, straight back stood between Piers and the water. Then she placed a flat stone over the corner of the paper, as though that had been her intention all along.
+
+Piers glanced at her, then looked away. Victoria saw his mouth move once, but no words came out.
+
+"Say it plainly," Maren said. "Whatever you want written. I won't write something I don't understand."
+
+Victoria was ready. She had been arranging the words in her head since leaving Ostwick.
+
+"Five stacks. Two men at each, every night, for a month. Fuel kept in one store, available to the men on watch. One agreed rule for what the beacon means, and one agreed rule for who may light it. Men from every village will take turns."
+
+She had more to say. She wanted to establish a council of the villages, something that would oversee the arrangement and make sure everyone kept their promises. The idea had been forming in her mind since the conversation with Berit.
+
+She began to explain it. Maren looked up from the page.
+
+"What council?"
+
+"The villages together. Someone who can make decisions."
+
+"Who?"
+
+Victoria hesitated. "I don't know yet."
+
+"Then I won't write it." Maren put down her pen. "I'll write what we've actually agreed to. Five stacks, two men at each, fuel in one store, and one rule. If you want a council, somebody needs to say who sits on it, what it can do, and what it can't." She picked up the pen again but didn't begin writing. "I've kept the pan owners' book for fourteen years. I've seen what happens when a council is formed without anyone writing down what it's meant to do."
+
+"What happens?" Victoria asked.
+
+"It becomes whatever the loudest man in the room needs." Maren said it gently. "I don't mean that every man is wicked. It's simply what happens."
+
+"Then write that there's no council," Gunnhild said.
+
+They all turned toward her. She had approached the slab and now stood with her arms folded.
+
+"Write down the stacks, the men, and the wood. Nothing else. No one to order us about. No one to summon us whenever they please." She jerked her chin toward the hut. "That store belongs to Gull Head. The flour that feeds us comes from Ostwick. So Ostwick can stop sending flour, and we starve. Or we lock that door, and the whole sound is left without a working beacon." She looked directly at Victoria. "Whichever of us is stronger when the time comes. That's what your common arrangement amounts to. Everyone needs something, but someone else holds the door."
+
+Victoria felt the truth of it settle over her. She had said that Gull Head would keep the stack for everyone, and everyone would help feed Gull Head. She had thought of it as a fair exchange. She hadn't thought about the rope connecting the two sides. Either could pull until the other gave way.
+
+"Then one person mustn't be able to close the door alone," Maren said.
+
+"Meaning?" Victoria asked.
+
+"Two locks." Maren tapped the end of her pen against her teeth. "I saw them on the salt cellar at the Kessing pan shed years ago. Two locks, two keys. The owner holds one key, and the carter holds the other. Neither can get inside without the other." She looked at Gunnhild. "Gull Head keeps one key. Whoever supplies the food holds the other."
+
+"Ostwick," Gunnhild said.
+
+"Or Skerrow. Or whichever village everyone agrees on." Maren shrugged. "It doesn't solve every problem. It just means nobody can close the door without speaking to someone else first."
+
+"That's a good arrangement," Piers said quietly.
+
+Gunnhild's arms remained folded, but her expression changed. "Skerrow should hold the second key."
+
+Osric, who had been standing in the doorway of the hut, looked at her. "Skerrow?"
+
+"They have the least to gain from closing the store."
+
+"They've lost nearly everything," Osric said.
+
+"Exactly."
+
+Nobody objected. Victoria looked toward Piers, who was watching the water. She understood that something important had happened. People other than her had found a better answer than the one she had brought to the headland.
+
+She felt relief, clean and immediate, like setting down a heavy pail. Then came another feeling, smaller and less generous. She had arrived with a plan. Now the plan belonged to everyone else.
+
+She picked up the flask of tea because her hands needed something to do.
+
+They worked until the light began to fade. Maren wrote, crossed out, and wrote again. Madeleine held the page steady with flat stones at the corners and one hand pressed against the middle. When Maren's pen ran dry, Madeleine dipped the nib into the ink without being asked.
+
+She didn't look bored or pleased with herself. Victoria thought she looked like a child who had been entrusted with something precious and was afraid the wind might take it away.
+
+Master Hale arrived during the third hour. He came up the path alone, his heavy boots making a steady sound through the bracken. He stopped at the edge of the slab and listened while Maren explained what they had agreed.
+
+He remained silent until they reached the question of who could light the beacon.
+
+"Whoever is on the stack," Victoria said. "If they see enough to be sure."
+
+"No."
+
+Victoria turned toward him. "Master Hale..."
+
+"I said no." He didn't raise his voice. "I'm not having one man with a torch decide what the whole coast does. A frightened boy, a drunk, someone who mistakes shadows for smoke. I've kept this stack for nineteen years. You light it when you're certain, and you're never certain alone."
+
+"The boy was right," Piers said.
+
+"This time."
+
+"That's all I' saying. He was right."
+
+"I know what you're saying." Hale looked at Piers, then toward the distant shore. His face remained stern, but his shoulders lowered slightly. "Two men," he said. "Two at each stack, and both must agree before the beacon is lit."
+
+"Both?" Victoria asked.
+
+"If one thinks there's a fire and the other doesn't, they look again. If both see it, they light the beacon." He paused. "It may take a few minutes longer. But there'll be someone beside you who has looked too. If you're wrong, at least you're wrong together."
+
+Maren had already begun writing. "Both men must agree before the beacon is lit," she read aloud. "And no man will be punished for lighting it in good faith, even if the warning proves unnecessary."
+
+"I didn't say that," Hale replied.
+
+"I did." Maren looked up. "I heard what happened on the slip. If you're going to put men on a headland and tell them to light a beacon only when they're sure, you need to promise them they won't be punished for making an honest mistake. Otherwise, they'll be too frightened to light it at all."
+
+Hale held her gaze. For a moment, Victoria thought he would refuse. Then his jaw relaxed slightly. "Write it," he said.
+
+There was one more condition Victoria had been saving. She hadn't planned to say it when she arrived. The words had come to her while she watched Gunnhild standing with her arms folded.
+
+"Write that every village keeps what belongs to it," Victoria said. "Its boats, nets, stores, its own watch, and its own decisions at home. This agreement doesn't change any of that."
+
+Maren paused. "Why?"
+
+"Because that's all we need." Victoria looked around at them. "We need the stacks, the shared store, and an agreed rule. Nothing more. If I ask for more than that, they'll be right to refuse."
+
+"Will they?" Maren asked.
+
+"They would be right," Victoria said again. "Anyone who signs this should be able to point to the page and say, 'That's all I agreed to.' No one should find out later that they've given away something they never meant to give."
+
+Maren wrote it down carefully, speaking each sentence aloud as she went. When she finished, she put the pen aside and flexed her fingers. "And if someone breaks the agreement?"
+
+Victoria opened her mouth, then stopped. She had no answer.
+
+"I'll tell you what I think," Maren said. "I've kept this book for fourteen years. Nobody has ever kept a promise just because it was written down. They keep it because they want to, or because they're afraid someone will be angry if they don't." She glanced at the page. "The writing doesn't stop a man from walking away. What it does is make it harder for him to claim he never agreed in the first place." She paused. "That's all. But I don't think it's nothing."
+
+"It's only shame, then," Gunnhild said.
+
+"It's a good deal of shame," Hale replied unexpectedly. "Out here."
+
+Nobody answered. The wind caught the edge of the paper. Madeleine pressed it flat.
+
+She had been quiet for almost an hour, but now she frowned at the heading. "Mama. It says the villages."
+
+Victoria leaned closer. "What does?"
+
+"The top. It says, 'The villages of the sound agree.' But villages don't agree. People do." Madeleine traced the words with one finger. "Skerrow can't agree to anything. It's burned down. Who's signing for it?"
+
+Everyone looked at Piers. He had been standing very still. He drew a long breath, let it out, and stepped closer to the page.
+
+"The headman is under the eastern end with his wife. I won't take his name." He looked at Maren. "I'll sign for what I can speak for. Put down that I sign for the nineteen men of Skerrow who are staying in Kessing, and for no one else. The rest of Skerrow can say yes or no when there's a Skerrow left to ask."
+
+"That's honest," Maren said.
+
+"It's what's true."
+
+She wrote it down. When the page was finished, she turned it around and passed the pen to the first person.
+
+One by one, they signed. Berit's handwriting was cramped and slanted. Gunnhild signed without looking up. Osric needed help holding the pen. Victoria wrote Victoria of Kessing and paused to look at her name. It was the first time she had written it as though it meant something.
+
+Hale signed last. He wrote slowly, with the careful attention of a man drawing up a bill. When he finished, he stood looking at the page for a long moment. Then he turned toward the stack.
+
+A thin figure in an oversized coat had been standing at the foot of the steps throughout the meeting, holding a flask in both hands.
+
+"You," Hale said.
+
+Ruf straightened so quickly that tea spilled over his knuckles.
+
+"Two men to a stack. You heard the agreement."
+
+"Yes, Master Hale."
+
+"You won't be first on that stack again. You'll be second. There'll be another man beside you, and you'll both have to agree before the beacon is lit."
+
+"Yes, Master Hale."
+
+"It'll slow you down."
+
+"Yes."
+
+"Good."
+
+Hale shoved his hands into his coat pockets and started down the path. At the top of the bracken, he stopped without turning around.
+
+"You'll have someone to be wrong with, boy. That's more than I had."
+
+Then he continued down the hill.
+
+Ruf stood beneath the stack, holding the dripping flask. The whole sound stretched below him, flat and grey, with the sun hanging behind the Ridge like a dull coin. For a moment, he didn't move.
+
+Then he laughed. It was a short, startled sound, as though it had escaped before he could stop it.
+
+Madeleine heard him from beside the slab and looked up from the page. She didn't say anything. She only smiled.
+
+It was the first time Victoria had seen her smile in four days.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Five",
+      title: "A Threat with a Human Face",
+      content: `
+Chapter Five: A Threat with a Human Face
+
+For nineteen days, the stacks held. Victoria began to understand how easily people could mistake that for safety.
+
+The arrangement had settled into the shore like a new boat finding its place in the water. Two men stood watch on each headland every night, carrying a lamp, a flask, and a slate to record what they saw. Maren had copied the rota onto the schoolroom wall in her neat, square handwriting, leaving a space beside each name for a tick.
+
+Nineteen men from Skerrow had volunteered for the first month of night watches. Piers had walked the length of the coast to find them. They sat on the headlands in borrowed coats, watching the water, and seemed to sleep better during the day than they had in weeks.
+
+There had been two alarms.
+
+The first was a fire in a drifting fish-house off Ostwick. The two men on the Gull Head stack had watched it for nearly fifteen minutes, one believing it was a danger and the other insisting it wasn't. Then a boat passed through the glow, and they realized what they were seeing.
+
+They had lit nothing. Nobody had been punished or shamed.
+
+Ruf, who had been the second man that night and had argued against lighting the beacon, came down in the morning looking like someone who had finally set down a heavy bowl without spilling it.
+
+The second alarm had been a real fire near the seal sheds. Bram was so pleased that he told the story at the pan sheds for three days.
+
+"They both said yes, and they were both wrong, and nobody's skinned them," he said. "That's the whole of it, you see. That's it working."
+
+"It's not working until it's been right once," Madeleine said.
+
+She sat at the kitchen table with her slate and a bowl of porridge. At the far end of the bench, Asta sat a little apart from everyone else.
+
+She had been with them for twenty-three days.
+
+On the fourth day, she had begun eating the bread she kept in her fist, taking one small corner at a time. On the ninth, she had taken a fresh heel from the loaf and slipped it into her pocket. Victoria had said nothing. She simply left the bread where Asta could reach it.
+
+The girl still hadn't spoken.
+
+But she now sat where she could see Madeleine's slate. When Madeleine rubbed out a figure, Asta watched the chalk dust fall.
+
+"The fuel is down by a third," Madeleine said. "I've worked it out twice. At this rate, we've got eleven days left. And the next load from Ostwick is only promised."
+
+"Promised," Victoria repeated.
+
+"That's what Mr. Fenwick said."
+
+"Then we'll go and ask him again."
+
+"You've asked him twice."
+
+"I'll ask him a third time."
+
+Victoria stood and carried her bowl to the bucket.
+
+"It's a long way to be right about the fuel and have nobody agree with you."
+
+That night, a sound woke her that she had never heard before.
+
+She lay still for a moment, trying to understand it.
+
+A bell.
+
+Three slow strokes. A pause. Then three more.
+
+Maren's signal. The one she had devised for the village: the second answering fire had been seen, and the first was real.
+
+Someone had taken the rope and followed the rule.
+
+Victoria was in the yard before she realized she had moved.
+
+Across the black water, she could see the line of lights. Gull Head first, its stack burning steadily against the darkness. Then, far to the south, Ostwick answered.
+
+She counted the minutes in her head.
+
+Less than five between the first spark and the second. The men on the headland had looked, agreed, and lit the beacon. It had taken less time than a man needed to find his boots.
+
+"That's the rule," someone said behind her.
+
+Hale stood in his shirt and trousers, his boots still unlaced. He folded his arms and tilted his heavy face toward the light.
+
+"It's the rule," he said again. "Look at that. That's the rule working."
+
+"Where is it?"
+
+Hale turned to her. "Where's what?"
+
+"The fire."
+
+Victoria heard the thinness in her own voice.
+
+"The beacon tells everyone to come. Come where?"
+
+Hale said nothing.
+
+Down the shore, doors began opening. Victoria heard boots on stone and men calling to one another as they came out of their houses, carrying whatever they had managed to grab.
+
+The agreement was clear. When a beacon was lit, every village would send whoever could reach the stack that had raised it.
+
+That was where everyone was going now.
+
+Boats were being pushed into the water, a dozen at first, then more. Men and women climbed aboard and set off through the darkness toward Gull Head, shouting across the water as they went.
+
+"It's there," Hale said at last. "They'll see it from the point. Then they'll know."
+
+"They'll see it in an hour," Madeleine said.
+
+She had come outside in her nightshirt, a blanket wrapped around her shoulders. Her bare feet rested on the cold stone. She wasn't looking at her mother. She was watching the thin line of fire, her lips moving as she counted.
+
+"It's an hour by water to Gull Head at night," she said. "Then they have to find out where the fire is. And after that, however far it is from there."
+
+"Go inside," Victoria said. "You'll freeze."
+
+"I want to count."
+
+"Madeleine."
+
+"I want to count."
+
+Victoria heard what lay beneath the words. It wasn't stubbornness. It was the need of a child who had discovered that numbers stayed still when everything else could change.
+
+She didn't send her daughter inside.
+
+Instead, she took off her own coat and wrapped it around Madeleine, blanket and all.
+
+Together, they stood in the yard and watched the boats disappear into the dark.
+
+It took nearly four hours.
+
+By the time they reached Gull Head, the boats had gathered below the headland in a confusion of shouting and questions. Forty men and women crowded the shore, trying to make themselves heard over one another.
+
+Above them, Gunnhild stood with a torch in her hand.
+
+She had seen the fire three miles north, at a place called Sedge Landing. At first, it had been no more than a red flicker in the distance. As she and Osric watched, it had grown into a broad, low smear of light.
+
+They had been on the stack together. Osric had agreed with her, and he had lit the beacon.
+
+Sedge Landing was a hamlet of nine houses built along a narrow strip of shingle. Its fishing families kept mostly to themselves.
+
+Berit had asked in the loft whether they wanted a stack of their own. The people of Sedge Landing had refused. They would keep their own watch, they said. They had always managed.
+
+Victoria remembered the meeting. She remembered the pride in the refusal, and the reluctance to have nine houses' worth of men counted as part of someone else's arrangement.
+
+She had heard them say no.
+
+And she had let them.
+
+It had seemed reasonable at the time. There had been so much else to do.
+
+Now she remembered a man standing at the salt pans with his arms folded, and the same cold feeling returned, sharp and immediate.
+
+She had stood before that closed door twice.
+
+By the time the first Kessing boat rounded the point, the fire at Sedge Landing had burned down to a long bed of red embers.
+
+Four of the five boats that had been drawn up on the shingle were gone.
+
+The fifth lay on its side, its planking split down the middle.
+
+A few figures stood along the shore with lanterns.
+
+The place was very quiet.
+
+Victoria had expected shouting. She had expected the confusion and desperate movement she remembered from Skerrow.
+
+Instead, she found people standing outside their houses with their hands hanging uselessly at their sides.
+
+A woman sat on an overturned bucket, a baby asleep against her chest. Two men's bodies lay on the shingle, their faces covered with their coats. Beside them, a third man knelt in the wet sand, holding the hand of someone who could no longer hold his back.
+
+Gunnhild had already come down from the headland.
+
+She stood at the edge of the lantern light, her arms hanging straight at her sides. She had not run. Victoria had never seen her run, and she did not run now.
+
+She walked past the woman with the baby and the two bodies on the shingle. Then she knelt beside the man who was still holding the dead man's hand.
+
+"Edmund," she said.
+
+He didn't look up.
+
+"Edmund. Where's Joss?"
+
+He answered, but Victoria couldn't hear the words.
+
+She saw Gunnhild's shoulders change, and she understood.
+
+Joss was nineteen.
+
+The summer before, he had worked at the pan sheds. Victoria remembered him laughing with his sleeves rolled to his elbows. At midsummer, he had walked through the village with a salted cod balanced on his shoulder like a lamb.
+
+Gunnhild placed her hand on top of Edmund's head and left it there.
+
+After a while, she stood. With strange, careful movements, she lifted the coat covering the nearest body, looked at the face beneath it, then lowered the coat again.
+
+"We didn't sign," Edmund said.
+
+He spoke to the shingle, his voice high and broken.
+
+"We said we'd keep our own. I said it. In the loft. I said we'd never need your stack."
+
+"No," Gunnhild said.
+
+"I said it."
+
+"I know you did."
+
+Her voice was flat, almost empty.
+
+"And I stood on that headland and told them the stack was a rope with two ends. I said it to people who had already agreed. I never said it to you."
+
+She stopped. A muscle moved in her jaw.
+
+"I don't know what either of us was right about, Edmund. Not tonight."
+
+They found the boy just before dawn.
+
+Piers was the one who spotted him. He had been searching along the tide line with a lantern, moving methodically from one stretch of shore to the next, as though searching was something his body knew how to do even when his mind had gone elsewhere.
+
+He later said he had first seen a pair of boots beneath an overturned hull. Then a leg. Then the rest of the body, tangled in a coil of net, lying half in the water and half out.
+
+The lantern light fell across the boy's face.
+
+Victoria knew he wasn't from Sedge Landing before she was close enough to see him properly.
+
+He looked eighteen or nineteen. His fair hair had been cut short, and his broad grey wool coat was soaked black along one side. Someone had tried to bind a deep wound across his ribs with a strip torn from his own sleeve.
+
+His eyes were open.
+
+He stared up at the people gathering around him with an expression Victoria couldn't read. It wasn't defiance, and it wasn't the blankness of someone who had given up.
+
+He looked terrified.
+
+And determined not to let them see it.
+
+"Don't," Piers said.
+
+Nobody had moved yet, but Piers stepped between the boy and the nearest fisherman. The man from Sedge Landing held a boathook in his fist.
+
+"Don't. Not yet."
+
+"He's one of them," the fisherman said.
+
+"I know."
+
+"They killed Joss. They killed Anders Pell."
+
+"I know what they did. I was at Skerrow."
+
+Piers didn't raise his voice. He held his empty hands out at his sides.
+
+"If you kill him now, we'll never learn who he is. Where they came from. How many there are. When they'll come back."
+
+"He won't tell you."
+
+"We don't know that."
+
+"Look at him," the fisherman said. "Look at the state of him. He'll be dead by noon."
+
+"Then he'll be dead by noon. He won't be dead because of us."
+
+It wasn't much of an argument. Victoria knew that. It wasn't even a particularly good one.
+
+But the boathook began to lower, an inch at a time.
+
+She didn't think the fisherman had been persuaded by the promise of information. She thought it was because Piers had said, I was at Skerrow, while standing between the boy and the men who wanted him dead.
+
+He had made himself part of the argument.
+
+Gunnhild pushed through the gathering crowd.
+
+She carried a gaff, the long iron-tipped pole they used to haul fish from the water. She stood over the boy for a long moment, looking down at him.
+
+He looked back.
+
+Then he spoke.
+
+The words came out in a short, broken string of sounds. Victoria had never heard a language like it.
+
+The boy tried again. This time, she thought she heard a question in his voice.
+
+"What did he say?" someone asked.
+
+"I don't know," Gunnhild answered.
+
+She didn't take her eyes from his face.
+
+"He's asking for something. I don't know what. Water, perhaps. Or his mother."
+
+Her mouth twisted.
+
+"They always ask for their mothers, don't they? I've heard it in the pan sheds when a man gets hurt."
+
+She lowered the gaff and laid it on the shingle beside him.
+
+"Bind him. Properly. Then give him water."
+
+Her voice shook once before she steadied it.
+
+"If he dies, I want it to be because he was hurt, not because I was too proud to put out a hand."
+
+Nobody answered.
+
+After a moment, the fisherman lowered his boathook. He walked away along the shore and sat at the edge of the slipway with his back to the others.
+
+They carried the boy to the hut at Gull Head on a wooden hurdle, four men holding the corners. Inside, they laid him on the dry boards beside the fuel store.
+
+Berit stayed with him.
+
+She had a bad chest and a worse temper. She said nothing to the people coming and going, only wrung out a cloth and worked over the boy with the grim concentration she usually gave to keeping the stack supplied.
+
+The sun was well up when Victoria finally stepped outside.
+
+She stood on the headland with the wind against her face and every part of her body aching. Below her, the sound lay flat and bright, the water catching the morning light as though nothing had happened.
+
+Ostwick was a distant smudge of masts to the south.
+
+On the quay, a small red-and-white flag had been raised on Fenwick's cutter.
+
+Madeleine came up behind her.
+
+She had walked the entire way from Kessing, three miles along the shore path, carrying the slate under one arm and a loaf of bread in the other hand. She had followed Victoria up the headland without being asked and now stood a little behind her, saying nothing.
+
+Her face was very pale.
+
+The hand holding the slate trembled slightly. She gripped it harder, as though she could force it to be still.
+
+"You shouldn't be here," Victoria said.
+
+"I know."
+
+"You've no business seeing this."
+
+"I counted," Madeleine said.
+
+Victoria turned toward her.
+
+"From the slip. Before I came. It was four hours. I'd said an hour, and it was four."
+
+There was no triumph in her voice, no accusation. She was simply laying a fact on the table.
+
+"The stack worked," she continued. "That wasn't the problem. The problem was that it only said come. Nobody knew where."
+
+"No," Victoria said quietly. "Nobody knew."
+
+"Not even Gull Head, until they'd seen the fire for themselves. They had to go and look."
+
+Madeleine shifted the slate to her other arm.
+
+"I saw the men on the shingle. I didn't mean to. I looked, and then I looked at the slate."
+
+Her voice thinned. She stopped until she could speak again.
+
+"Is that what the numbers are for? So you've got somewhere else to look?"
+
+Victoria had no answer.
+
+She reached out and placed her hand on the back of her daughter's head. Madeleine stood stiffly beneath it, like a post driven into the ground, but she didn't move away.
+
+Victoria left her hand there until Madeleine had taken a full breath.
+
+"And it's the dark moon in six days, Mama," Madeleine said when she was ready to speak again. "It's in the almanac. And Mr. Fenwick has raised a flag."
+
+Victoria had already seen it.
+
+The small red-and-white flag was the signal the reeves had used for years when they wanted to call a meeting of the shore. No one had agreed to summon one.
+
+Fenwick had done it himself, on his own authority, before dawn.
+
+"A council," Madeleine said. "In ten days. At Ostwick. To decide what the stacks are for."
+
+"Ten days."
+
+"I thought you'd want to know."
+
+Victoria looked out across the water.
+
+She thought of the boy lying on a pallet, unable to speak to anyone on the shore. She thought of Joss Tarn, who had carried a cod on his shoulder like a lamb, now lying beneath his own coat. She thought of the rope with two ends.
+
+"Six days until the dark moon," she said. "Ten until the meeting."
+
+"Yes."
+
+"And the next fire?"
+
+"I don't know when that will be."
+
+Madeleine gripped the slate until her knuckles turned white.
+
+She looked north, toward the long red scar left by the fire at Sedge Landing. Then she turned deliberately back toward her mother.
+
+"Nobody knows," she said. "That's what I mean. That's the whole thing."
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Six",
+      title: "The First Shared Burden",
+      content: `
+Chapter Six: The First Shared Burden
+
+They buried Joss Tarn and Anders Pell above the tide line at Sedge Landing.
+
+The ground was so full of shingle that the men digging the graves had to pull stones out by hand. Victoria stood at the back with her arms folded against the wind. Madeleine stood beside her, despite having been told to remain in Kessing. She had decided, apparently, that the instruction was a general one.
+
+Nobody said much.
+
+A woman began singing in the dialect of the bar. She managed three lines before her voice broke, and then she stopped.
+
+Edmund Tarn stood at the head of his son's grave with a shovel still in his hand. When the last stones had been laid, he did not put it down. He walked across the shingle toward Victoria and stopped a few paces away, with the careful distance of a man approaching a counter to settle an account.
+
+"I'm told you set up the stacks," he said.
+
+"I didn't set them up alone. Many people did."
+
+"I'm told your name's on the page."
+
+"It is."
+
+He nodded slowly. His face had turned the stiff grey of cloth left out in the rain.
+
+"I'll have one here. At the landing, on the bar. Nine houses, and I'll have a man on it every night. My own people, whoever's left."
+
+His eyes moved toward the boats. Of the five that had been drawn up on the shingle a week earlier, only one remained. It was the one with the split planking.
+
+"I'll need timber and pitch. And I'll need someone to see that two houses are fed. The Penrys and the widow Hobb. They've no boats now, and no sons old enough to work them."
+
+He paused.
+
+"I'm not asking for myself. I want it written down who'll feed them. I'll not have them going to Ostwick with a bowl in their hands."
+
+"I'll put it to the others," Victoria said.
+
+"Don't put it to them. Say it."
+
+He looked down at the shovel, as though he had only just noticed he was carrying it.
+
+"I'd have taken that stack in the loft, you know. If you'd asked me hard enough. I'd have said no, and then I'd have said it again. But I'd have been glad someone asked hard enough."
+
+He stopped.
+
+"Never mind. It's done."
+
+He turned and walked back toward the grave.
+
+Victoria remained where she was, the words asked hard enough lodged inside her like a splinter.
+
+Beside her, Madeleine lowered her eyes to the slate. Without saying anything, she wrote two names.
+
+Penry.
+
+Hobb.
+
+Then she drew a circle around them.
+
+When she looked at her mother, Victoria understood that she had heard every word. Madeleine wasn't going to make her explain what she had heard.
+
+The captive woke on the third day.
+
+He did not wake well.
+
+Berit had sat with him through the fever, changing the cloths on his forehead and swearing at the smoke from the pitch lamps. She said afterward that he had spent the whole night speaking in that strange, broken language, addressing someone who wasn't there.
+
+By morning, he was lying still, staring at the roof beams with his lips pressed tightly together. When Berit held a cup to his mouth, he drank without looking at her.
+
+Victoria arrived with bread and found Gunnhild sitting against the hut wall in a patch of weak sunlight, her gaff resting across her knees.
+
+Nobody had asked her to guard the prisoner. She had simply come and stayed.
+
+When Victoria glanced at her, Gunnhild lifted her chin.
+
+"He's nothing to me," she said. "I only want to see what he does."
+
+"What does he do?"
+
+"He drinks when he's given water. He doesn't thank anyone."
+
+She turned the gaff a quarter turn across her knees.
+
+"I'd like to know what that's worth. I stood over him, and I couldn't put a hook in him. I'd have said I could. But I couldn't."
+
+"Is that so bad?"
+
+"I'll tell you when I know."
+
+Gunnhild didn't smile.
+
+"Edmund hasn't spoken to me since the burial. I don't blame him. If I'd held my tongue in the loft, he might have agreed to the stack. If I'd explained it better, he might have understood. I've gone over it forty different ways."
+
+She stared at the ground.
+
+"I've a notion it doesn't matter which. He lost his boy, and I'm still here."
+
+"I could tell you it wasn't your doing," Victoria said.
+
+"You could."
+
+Gunnhild looked at her with those grey, unsparing eyes.
+
+"Would you believe it if you were me?"
+
+Victoria had no answer.
+
+Gunnhild nodded once, as though that was all she had wanted to know.
+
+Osric solved the problem of the stacks, though it took two days and most of Berit's temper before anyone realized he had the answer.
+
+The problem seemed simple enough once Madeleine had written it on her slate.
+
+A fire on a headland told people to come. It did not tell them where to come. The next fire could be anywhere along twenty miles of shore, and Gull Head had spent four hours trying to find out where the danger lay.
+
+Hale proposed sending riders along the cliff path. Piers pointed out that no rider could cover that distance in the dark.
+
+The people from Ostwick suggested lighting a second fire beside the first. Nobody could agree on what a second fire would mean.
+
+By the evening of the fourth day, they were sitting in the net loft again, arguing around an oil lamp that had begun to gutter. Every suggestion led them back to the same problem.
+
+Osric had not spoken once.
+
+He sat on a stack of floats in the corner, his stick between his knees and his thin hands resting over its handle.
+
+Madeleine noticed his fingers moving.
+
+They lifted and fell against the wood in a repeating rhythm. One long movement, then two short ones.
+
+"Mr. Osric," she said. "What are you doing?"
+
+The old man looked down at his hands as though he had caught them doing something without his permission.
+
+"Nothing, girl. An old habit."
+
+"It's a pattern. Long, short, short."
+
+"Is it?"
+
+He frowned at his fingers.
+
+"My father used to do it. And his father before him. For the shoals."
+
+The loft grew quiet.
+
+"You won't know this," Osric continued. "It was before the trade, before boats went out in fleets. A man standing on a point would see the herring turn in the water, a dark patch moving beneath the surface. He'd want to tell the boats which way to go."
+
+He shifted his stick between his knees.
+
+"So he'd build a fire on the headland and hold a hide in front of it. Open the hide, shut it, open it again. Long and short. The boats counted the flashes."
+
+He looked around the room, mildly surprised by everyone's attention.
+
+"It's nothing. Just fishing."
+
+Berit set down her cup.
+
+"How many flashes?"
+
+"One for north, I suppose. Two for south." Osric paused to think. "There was a signal for out to sea, too. And a long one that meant come in, there's weather."
+
+"Could it tell us which place was in danger?" Victoria asked.
+
+"It could tell you anything, if you'd already agreed beforehand what the flashes meant."
+
+Osric lifted his head.
+
+For the first time, Victoria saw the realization cross his face. He was an old man who had spent four days in a room full of younger people arguing, never realizing that the answer they needed was something he already knew.
+
+"Is that what you want?" he asked. "You never said."
+
+"That's exactly what we want," Berit said.
+
+She had begun coughing, and the words came out between coughs.
+
+"You old fool. Why didn't you say so?"
+
+Osric looked at her.
+
+"You never asked me. You asked Hale."
+
+By the fifth day, the whole shore was working.
+
+Victoria had thought she understood what that meant. She had seen villages gather for a boat launch or turn out together for the winter harvest at the pans.
+
+This was different.
+
+She would walk over a rise and find four carpenters from Ostwick on the Sedge Landing bar, sleeves rolled up, building a stack from salvaged beams while the Penry boys carried buckets of pitch to them.
+
+She would enter the Kessing bakehouse and find it crowded with cooling loaves. The pan owners had pooled their grain, and the baker had announced she would bake until she dropped.
+
+Along the Gull Head path, men carried driftwood on their backs to the shared store. Some were from Skerrow, others from Kessing. Nobody seemed to have ordered them there.
+
+They had simply come.
+
+Fenwick brought the Ostwick fleet home on the fifth day, in the middle of the late shoal.
+
+He made no announcement. The first cutter rounded the point in the grey afternoon, its sail furled and its oars working. Then another appeared, and another, until the quay filled with astonished people.
+
+There had been no signal. Victoria never learned exactly when Fenwick had made his decision.
+
+He stood on his own quay in front of three hundred men, their coats still wet with fish, and said something she couldn't hear.
+
+Then the men hauled their boats onto the hard and went to work on the stacks.
+
+It must have cost them a third of their catch. Perhaps more.
+
+That night, Madeleine worked out the loss on her slate and showed Victoria the figure without comment.
+
+"The late shoal pays nearly as well as the run," she said. "They'd have caught it all before the new moon."
+
+"Yes."
+
+"And they didn't wait."
+
+Madeleine studied the number.
+
+"That was kind."
+
+"It was."
+
+"I'm just saying," Madeleine added, in the voice she used when she meant something larger, "it's the first thing anyone's done that wasn't all right, for a month."
+
+The night of the dark moon arrived without a cloud in the sky.
+
+The whole shore was awake.
+
+Every stack was manned. Along twenty miles of shingle and rock, pairs of watchers waited at intervals, two to a mile, with their lanterns shuttered and their eyes fixed on the black water.
+
+Victoria did not sleep.
+
+She sat on the Kessing slip with a blanket over her shoulders and Madeleine's head resting against her arm. Together, they listened to the water.
+
+Nothing came.
+
+It took Victoria a long time to understand what that meant.
+
+She waited for hours, expecting a sound, a glow, a bell. The sky began to lighten in the east. Birds stirred in the gorse.
+
+Then, one by one, voices carried along the shore.
+
+The watchers were passing messages from stack to stack using Osric's flashes, long and short, the signals moving steadily through the darkness like a breath passed from one person to another.
+
+All well. All well.
+
+Madeleine woke with the first light. For a moment, she didn't know where she was. Then she sat up and looked toward the water.
+
+"Did they come?"
+
+"No."
+
+"Not at all?"
+
+"Not at all."
+
+Madeleine watched the sound. The water was smooth and grey, like pewter, with a thin line of gold along the eastern horizon.
+
+She rubbed her eyes with the heel of her hand.
+
+"How do you know it was the stacks?"
+
+Victoria opened her mouth, but Madeleine continued.
+
+"I mean it. If they didn't come, maybe they saw the fires. Or maybe they weren't going to come tonight at all. I can't tell. It looks the same."
+
+She frowned at the water.
+
+"Nobody can tell. A thing that works looks like nothing happened."
+
+Victoria looked at her daughter, unsure what to say.
+
+Then the first cheer rose from somewhere along the shore.
+
+It spread from one village to the next until the whole sound seemed to be celebrating.
+
+They held a feast because nobody could think of anything else to do.
+
+It began on the Kessing quay with a few loaves and a cask someone had been saving. By noon, half the shore had gathered. Ostwick sent six barrels. Gull Head brought smoked fish. Even the people of Sedge Landing arrived, walking in a loose procession along the shore path.
+
+Edmund led them, his hands hanging empty at his sides.
+
+There was music, though not much of it was played well. People laughed too loudly, their relief coming out in bursts that sometimes sounded close to tears.
+
+Fenwick was lifted onto a barrel and asked to speak. He tried to refuse.
+
+The fleet, he said, had done what any fleet would have done. The carpenters and the watchers deserved the real thanks. He hoped the shore would never need the stacks again.
+
+They cheered anyway.
+
+Hale was thanked for the signal rule. He growled at the attention, so they thanked him again.
+
+Victoria was thanked by four different people for organizing the rota and helping establish the stacks. Each time, she explained that the work had belonged to many people.
+
+Each time, they smiled as though she were being modest.
+
+For a while, the children took over the quay.
+
+Someone found a rope, and a skipping game spread along the slip. Bram turned one end and shouted the count while the children jumped in and out.
+
+Victoria watched Madeleine get pulled into the game by two girls from Skerrow.
+
+She jumped badly, stumbled, and was caught before she fell.
+
+Then she laughed.
+
+It was a real laugh, loud and startled, a little too high. The first Victoria had heard from her since the fire.
+
+Victoria stood with a cup in her hand and didn't dare move. She was afraid that if she did, the sound might vanish, like a bird startled from a branch.
+
+Then Madeleine's turn came around again.
+
+She looked across the quay and stopped, the rope still swinging beside her.
+
+Victoria followed her gaze.
+
+Edmund Tarn stood at the edge of the crowd, holding a cup he hadn't touched.
+
+Madeleine stepped out of the game without explaining why. She walked to the far end of a bench, where Asta sat with the slate Madeleine had left beside her, and sat down.
+
+After a moment, she picked up the slate.
+
+"They've left out Mr. Osric," she said.
+
+Victoria came to stand behind her.
+
+"Have they?"
+
+"Nobody's mentioned him. Not once. Those were his signals."
+
+Madeleine frowned at the slate.
+
+"They thanked Hale for the rule, Mama, and you for the rota, and the carpenters for the stacks. But nobody thanked Mr. Osric. Or Mrs. Lowe, for looking after the twelve children. Or the nineteen men who sat on the headlands every night."
+
+She nodded toward the far end of the quay.
+
+The men from Skerrow were sitting on a stack of lobster pots, sharing a single jug. They had not quite joined the celebration.
+
+"They're right there," Madeleine said. "And nobody's thanked Mr. Tarn."
+
+"Mr. Tarn has lost the most," Victoria said quietly.
+
+"I know. That's what I mean."
+
+Victoria looked across the quay.
+
+Edmund stood in the place of someone who had been invited but didn't know how to enter. People moved around him, laughing and passing food, without noticing that he was there.
+
+Beyond him, Gunnhild stood apart from the others, arms folded, watching the feast with the same fixed attention she had given the captive.
+
+Victoria started toward Edmund.
+
+She had taken perhaps ten steps when Fenwick called her name from the barrel. The crowd turned toward her and broke into cheers.
+
+By the time she looked back, Edmund had disappeared.
+
+Berit found Victoria late that afternoon, sitting alone at the end of the slip with her feet hanging over the water.
+
+She lowered herself onto the stone beside her with a grunt and a cough. For a while, she said nothing.
+
+"They want to make it permanent," she said at last.
+
+"The stacks?"
+
+"All of it. The rota, the fuel, the signals, the second key."
+
+She waved a hand toward the distant celebration.
+
+"Fenwick's been saying it since noon. Not a month, he says. A year. A lifetime. Write it down so it can't be forgotten."
+
+She coughed again.
+
+"He's not wrong. It worked."
+
+"It did."
+
+"Aye."
+
+Berit stared out across the sound.
+
+"That's the trouble, isn't it? It worked. Nobody's going to ask whether it was the right thing, or whether there was another way. It worked, and Joss Tarn is dead, and a man who never signed the agreement is sitting somewhere with a cup he couldn't drink from."
+
+She fell quiet.
+
+"Gunnhild says it was always going to happen like this. Once something works, everyone stops seeing what it cost. She won't say it in public, but she says it to me."
+
+"Do you think she's right?"
+
+"I think she's been right twice this month," Berit said. "I don't enjoy it."
+
+Down the shore, a fiddle began to play, its notes thin and bright against the noise of the feast.
+
+Victoria listened. Beneath the music, she could still hear the rhythm of the stacks, the signal passing from headland to headland, long and short, steady as a pulse.
+
+At the far end of the quay, in the long shadow of the pan sheds, Madeleine sat with her back against a bollard and the slate across her lap.
+
+Asta sat beside her.
+
+Victoria watched Madeleine rub out a line. Then, slowly, she wrote another.
+
+Victoria didn't need to read the words.
+
+From the way Madeleine held herself, she knew what the girl was making: another list of names.
+
+And this time, she was writing down the people nobody had thanked.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Seven",
+      title: "The Keeper of Terms",
+      content: `
+Chapter Seven: The Keeper of Terms
+
+The circle was still on the slate.
+
+Madeleine had drawn it around Penry and Hobb on the day of the burial. She had looked at it every day since, the way someone might keep touching a tooth that had begun to ache.
+
+The slate sat in the corner of the kitchen table, covered in nine days' worth of chalk dust. Beside the names was an empty column headed Who feeds them?
+
+"I didn't write anything in it," Madeleine said. "Because nobody said."
+
+Victoria stood at the stove, holding a spoon over the porridge pot.
+
+"I said I'd put it to the others."
+
+"Did you?"
+
+Victoria couldn't say yes.
+
+She remembered the dark-moon watch, the feast, and Fenwick calling her name from the barrel while the crowd cheered. She remembered being thanked four times for work she hadn't done alone.
+
+She did not remember saying a single word to anyone about two households on a shingle bar.
+
+"I'll go this morning," she said.
+
+"It's three miles."
+
+"Then I'll start early."
+
+Madeleine nodded and returned to her bowl.
+
+She didn't say, You promised.
+
+She hadn't said it in nine days, and her silence had begun to feel like another person sitting at the table.
+
+At the end of the bench, Asta had stopped eating. She was watching the circle on the slate. Victoria noticed her eyes move over the two names and remain there.
+
+Sedge Landing had been rebuilt in some places and left broken in others.
+
+The new stack stood at the head of the bar, its raw timber already turning grey. Three new roofs shone pale against the older thatch. Between them lay a black patch of shingle where nothing had been rebuilt.
+
+A girl of about ten sat in the gap, shelling mussels into a bucket with intense concentration.
+
+Victoria asked for Edmund and was directed to the last house on the bar.
+
+The door stood open. A thin, tired woman answered her. She was polite, but she did not invite Victoria inside.
+
+Through the doorway, Victoria could see a table with four bowls on it, a pot over the hearth, and a thin broth in which a mackerel head floated.
+
+"We're managing," the woman said. "Edmund's at the stack."
+
+"I wanted to ask about the Penrys and the widow Hobb."
+
+"They're managing too."
+
+"Who's feeding them?"
+
+The woman gave Victoria a level look. Her eyes took in the clean boots, the coat, and the basket of loaves Victoria had carried all the way from Kessing. She was holding it against her chest now, almost like a shield.
+
+"Edmund said you'd put it to the others."
+
+"I didn't." Victoria tightened her grip on the basket. "I'm sorry."
+
+"He said you would. He told the Penrys. He told Mistress Hobb."
+
+The woman didn't raise his voice.
+
+"Then nothing came. So he went to the winter store and brought up two sacks. Then another. He said it was only until the arrangement started. He didn't want them going to Ostwick with a bowl."
+
+Victoria looked down at the basket.
+
+"How much is left?"
+
+"Ask him."
+
+Edmund came down from the stack around noon.
+
+He saw the basket before he saw Victoria's face, and his expression closed.
+
+"I don't need that," he said.
+
+"It isn't for you. It's what the arrangement should have provided nine days ago. It didn't, because I failed to ask."
+
+"I'm not owed anything. It was my decision. I said I'd see them fed."
+
+"You also said you wanted it written down who would feed them. You asked me to make sure it was said. That was the whole of your request, and I let it fall."
+
+Edmund looked at the loaves but didn't touch them.
+
+"It'll happen again, won't it? Somebody says they'll see to something. They mean it, and then it belongs to nobody."
+
+"Yes."
+
+"Then it needs fixing."
+
+"I think so."
+
+"Not by you telling me you're sorry."
+
+He raised his head.
+
+"Someone needs to write it down. So when the next person forgets, it's there on a page. And the page has to be somewhere I can go and look at it. It can't be in your kitchen."
+
+Victoria looked at him, then at the basket between them.
+
+"You're right."
+
+Edmund turned back toward the stack.
+
+"Then do something about it."
+
+Fenwick called the meeting for the third morning after the feast.
+
+This time, he didn't send a flag. He sent a boy to every village carrying a written notice with the meeting place and time.
+
+The hall at Ostwick stood above the harbour reeve's office. It was a long timber room with a floor that sloped toward the water. Victoria counted forty-one people inside and wondered whether the room had ever been built for forty-one people who all needed to speak.
+
+The pan owners sat in a row. Hale had chosen a chair near the door, where he could leave without disturbing anyone. Berit and Gunnhild had come, along with Piers.
+
+A thin, quiet woman from Sedge Landing said she was speaking for the Penrys, the Hobbs, and Edmund Tarn, who couldn't leave the stack.
+
+Maren sat at the end of the long table with her tally book closed beneath her folded hands.
+
+Madeleine sat on the floor beside Maren's chair, her slate resting on her knees. There weren't enough chairs for everyone.
+
+Fenwick's clerk stood beside him with a pen and a stack of clean paper.
+
+His name was Tobin. He was young, with quick handwriting, and seemed able to record a sentence half a second before the person speaking had finished it.
+
+The meeting went well for about as long as it takes to boil an egg.
+
+Fenwick opened with a short thank-you to everyone who had helped. He was good at that sort of thing: a sentence for each group, then straight on to business.
+
+The arrangement, he said, had now lasted thirty-eight days and survived its first real test. He proposed making it permanent, subject to a vote by the villages.
+
+Several people agreed.
+
+Then a pan owner named Corby spoke. He was a heavy man who had said very little in the weeks since the fire.
+
+"Kessing is happy to continue, of course, provided the fuel is shared fairly."
+
+"It's shared," Hale said. "A third each."
+
+"A third each of what?"
+
+"The cost of the store. I wrote it down." Hale leaned back in his chair. "Gull Head contributes labour, Ostwick provides flour, and we provide salt and timber."
+
+"It was a third each of the first month's wood," Fenwick said pleasantly. "I understood the month to begin on the day the beacon was lit. After that, I understood each village would cover its own costs."
+
+"Each village covers its own? Then who feeds Gull Head?"
+
+"We've been feeding Gull Head."
+
+"For a month. You said a month."
+
+"From the day the beacon was lit. Which was four days before your page was signed." Fenwick looked down the table. "I counted those four days of flour as part of the month."
+
+"From the day we signed," Corby said. "The agreement was signed on the headland. That's the page that counts. Anything before that was your flour and your own affair."
+
+"Then Ostwick has fed Gull Head for four days for nothing."
+
+"I never said for nothing."
+
+"You said it was my affair."
+
+Victoria watched the disagreement take shape.
+
+She had seen it before, back in the loft, when a conversation about helping one another had turned into a discussion of numbers. Now the numbers were turning into something else.
+
+Nobody was lying.
+
+Fenwick remembered the beacon because the fire was what had frightened him into action. Corby remembered the signed page because he was a man who paid attention to what he had agreed to.
+
+Each man was holding on to the beginning that mattered to him.
+
+Each was telling the truth as he understood it.
+
+And fifteen minutes into the meeting, forty-one people could no longer agree on what they had agreed to do.
+
+"Maren," Hale said. "You were there."
+
+"I was."
+
+"Tell us what it said."
+
+Maren rested her hands on the closed book. She didn't open it immediately.
+
+Victoria watched her take a breath. She seemed to know exactly what she was about to do, and to wish she didn't have to do it.
+
+At last, she opened the book to a page near the front and placed one finger on the writing.
+
+The room fell quiet.
+
+She read in her usual flat, clear voice. Five stacks. Two men at each. Fuel held in one common store with two keys, one kept at Gull Head and the other at Skerrow.
+
+Then she read the final line.
+
+"For one month from the day of signing, and the villages to meet before its end to say whether it shall go on."
+
+"There," Corby said, satisfied.
+
+"Wait," Fenwick replied. "That's what you wrote. Is it what we agreed?"
+
+"It's what we agreed," Maren said. "I read it back on the headland. Everyone heard it."
+
+"Did anyone object to the wording?"
+
+Nobody had.
+
+Victoria remembered the wind blowing across the headland, the stones placed on the corners of the page, and Hale scowling beside the stack. She remembered everyone listening. She didn't remember anyone objecting.
+
+"Then it's the page," Fenwick said slowly. "The agreement begins with the signing."
+
+"It's the page," Hale agreed.
+
+The quarrel was settled. They moved on to the next item.
+
+But Victoria watched the faces around the table, and she saw something change.
+
+Nobody announced it. Nobody voted on it. Yet in the space of a few breaths, the room had stopped asking what people remembered and begun asking what had been written down.
+
+Corby looked at Maren's book with the pleased expression of a man who had discovered a useful dog.
+
+Maren, meanwhile, turned her head slightly toward the window.
+
+The villages to meet before its end.
+
+They were already more than a week past that deadline.
+
+Nobody had mentioned it.
+
+Victoria saw Maren recognize the problem, then decide this wasn't the moment to raise it. She saw what the decision cost her.
+
+And she stayed silent too.
+
+Madeleine had stopped writing. From her place on the floor, she was watching Maren's hands.
+
+"There's a gap in it," Maren said.
+
+Nobody had asked her to speak again.
+
+She stood up, one hand resting on the open book, and the whole room turned toward her.
+
+"Edmund Tarn of Sedge Landing asked, on the day of the burial, who would feed the Penry and Hobb households. Mistress Victoria said she'd put it to the villages."
+
+She spoke without accusation.
+
+"It wasn't put to them. It wasn't written down, because nobody told me. Mr. Tarn fed both households from his own winter store for nine days. I've been up there. He doesn't have much left."
+
+Nobody spoke.
+
+A pan owner near the window began studying his hands. Victoria felt Madeleine looking at her, but she kept her eyes on Maren.
+
+"I'm not making a charge," Maren continued. "I'm telling you what happened. Everyone in this room meant well, and there's a household on that bar living on thin broth because meaning well isn't something you can look up."
+
+She paused.
+
+"It would have been on the page if I'd been asked. I wasn't asked, because I wasn't anybody. I was the woman who keeps the pan tally and happened to be standing there."
+
+Fenwick leaned forward.
+
+"What are you asking us to do?"
+
+"Nothing. I'd rather go home."
+
+A faint smile crossed her face.
+
+"I'm saying that if you want this arrangement to continue, somebody must be responsible for recording what people promise. Not whoever happens to be standing nearest. Someone everyone knows to ask."
+
+"A clerk," Corby suggested.
+
+"A keeper," Berit said from the back of the room. "Someone who keeps track of what's been promised."
+
+"A keeper of terms," Gunnhild said.
+
+She had been silent throughout the argument. Now she sat with her arms folded and her chin lowered, speaking in the same quiet voice she used when she had something difficult to say.
+
+"That's what you want, isn't it? Someone to keep the terms. A person who remembers for us because we can't be trusted to remember for ourselves."
+
+She looked toward Maren.
+
+"And if there's a person to do that, and a room for her, someone had better decide who pays her. Who tells her what to write. Who decides when she's wrong."
+
+"I won't be told what to write," Maren said.
+
+"I'm sure you won't." Gunnhild turned toward her. "I'm saying someone will try."
+
+The room fell quiet again.
+
+Then Fenwick spoke, and this time his voice carried genuine feeling.
+
+"Mistress Cole, would you do it?"
+
+Maren took an hour to decide.
+
+When she finally agreed, she laid out her conditions.
+
+She would keep two books, with the second stored in a different village from the first. Whenever something was to be recorded, the person concerned would stand before her while she wrote it. They would have the chance to read it back and say if it was wrong.
+
+Anyone could come and read any page.
+
+She would not record something she had not heard, and she would not leave out something she had.
+
+She would also be paid. She could not teach in the schoolroom and maintain the books at the same time, and the payment had to be equal from each village. No village would be able to claim her as its own because it contributed more.
+
+"Who can read?" Gunnhild asked.
+
+"Not enough people," Maren said plainly. "I'll teach them. That's part of the schoolroom's work. Anyone who comes can learn."
+
+"That's a fair answer," Berit said.
+
+"It's an honest one," Maren replied. "I don't know whether it's fair."
+
+They gave her a small room at the end of the hall, above the water. It had a table, a shelf, and a window overlooking the quay.
+
+Corby brought a lock for the door.
+
+Victoria watched Fenwick pass the key to Maren. It was such a small thing, a piece of metal that fitted neatly in the palm of her hand.
+
+Yet everyone had been willing to give it a meaning.
+
+As the meeting broke up, Tobin began writing the minutes at the corner of the table. He had a confident hand and read the words aloud as he went.
+
+"The villages of the sound agree to keep the stacks, the store, and the rule of the second key, for the safety of the whole, until the villages agree otherwise."
+
+Madeleine was reading over his shoulder.
+
+She read the sentence twice before turning toward her mother.
+
+"It doesn't say a month," she whispered.
+
+"No."
+
+"It says until."
+
+Victoria moved behind Tobin and read the sentence herself.
+
+Across the room, Hale had stopped in the doorway. Gunnhild lifted her head.
+
+Neither spoke.
+
+Tobin's pen was already moving to the next line.
+
+"Until the villages agree otherwise," Gunnhild said from across the room. Her voice remained calm. "All of them. Every village. So if one wants to leave, it can't. It has to persuade the rest."
+
+"It's what we've been saying," Tobin replied, looking puzzled. "It's the same thing."
+
+"Is it?"
+
+He glanced around the room.
+
+Nobody answered.
+
+Nobody wanted to be the first to ask for the old wording back. Winter was coming. Sedge Landing was still half broken, and the stack at Gull Head burned steadily against the dark.
+
+Victoria found that she didn't want to be the one either.
+
+She stood with her hands at her sides, thinking, Somebody should.
+
+She said nothing.
+
+Tobin finished the minutes, blotted the ink, and passed the page around for signatures.
+
+The next morning, Maren walked to Sedge Landing with the book under her arm.
+
+Victoria went with her. She couldn't think of anywhere else she ought to be.
+
+They found Edmund at the foot of the stack, mending a net. He stood when he saw them and wiped his hands on his coat.
+
+He said nothing about the book.
+
+Maren placed it on an overturned bucket and opened it to a clean page.
+
+"I'll write it in front of you," she said. "Tell me what you want recorded."
+
+Edmund explained what the two households needed.
+
+The Penrys, three people. The widow Hobb, one.
+
+They were to be fed from the common store, with the pan owners of Kessing and Ostwick taking turns providing what was needed. The arrangement would continue until the Penry boys were old enough to work or the household had a boat of its own.
+
+Maren wrote it slowly.
+
+Then she read it back to him and asked whether anything had been left out.
+
+Edmund was silent for a long moment, looking at the page.
+
+"My son," he said.
+
+Maren raised her eyes.
+
+"What about him?"
+
+"Is he in the book?"
+
+She looked down at the page. It had never occurred to her that the book might need to hold such a thing. It was a record of pan tallies, tolls, and weights of salt.
+
+She glanced at Victoria, then turned to a fresh page.
+
+At the top, in her small, square handwriting, she wrote:
+
+Joss Tarn, of Sedge Landing, aged nineteen. Died on the night of the fire at the landing.
+
+She turned the book so Edmund could read it.
+
+He bent forward, keeping his hands behind his back.
+
+He read the line slowly, his lips moving. Then he read it again.
+
+He lifted one finger and traced the air an inch above the writing, careful not to touch the paper, as though the words might still be warm.
+
+"There's no E on the end," he said at last.
+
+"No," Maren replied. "I wrote it correctly."
+
+"They put one on it at the pans. His mother always said they had no business doing that."
+
+He straightened.
+
+"Aye. So you did."
+
+Then he returned to his net.
+
+Maren closed the book and stood with one hand flat against its cover.
+
+Down on the bar, the girl with the mussels had begun singing to herself. The tune wandered without much direction, and nobody seemed to mind.
+
+The sun had come out over the water.
+
+The book lay closed between Maren's palm and her hip, holding the boy's name.
+
+And somewhere between the page that recorded a promise for one month and the page that had just recorded a death, the month had disappeared.
+
+It was no longer written anywhere anyone would think to look.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Eight",
+      title: "The Exception",
+      content: `
+Chapter Eight: The Exception
+
+Seventeen boats had gone out on the late lines. By three in the afternoon, Madeleine had counted six of them home.
+
+She sat on the Kessing slip with the slate across her knees and a heel of bread going stale beside her. Asta sat at her elbow.
+
+Since the feast, Asta had moved from the end of the bench to the next place along, then from the bench to the slip. Now she watched the water with the same fixed attention Madeleine gave the slate. Neither girl had said anything about the change.
+
+Victoria came down from the bakehouse with a basket on her hip. When she saw the two small figures sitting side by side, she slowed, careful not to draw their attention.
+
+“Six,” Madeleine said without turning. “Those are the Kessing boats that fish close to shore. The long-liners are the rest. Eleven. They should have been back by now.”
+
+“The wind has changed. That will slow them.”
+
+“It isn't the wind.” Madeleine pointed with her chalk. “Look at the swell.”
+
+Victoria looked.
+
+The sound was grey and ordinary, with small waves moving across its surface. At first, she saw nothing unusual. Then she noticed the movement beneath the chop. The water was rising and falling in a long, slow heave, the whole surface lifting and settling like a sleeper's chest. It was coming from the west.
+
+The wrong direction.
+
+Above the Ridge, the sky was clear. Somehow, that made the sight more unsettling.
+
+“Mr. Osric says this is how it starts,” Madeleine said. “The long swell comes first. Then the weather, about five hours later. He told me last week when he was explaining the hides.”
+
+She rubbed a figure off the slate with her sleeve.
+
+“It's three now. So the weather should reach us around eight.”
+
+“You asked him about that last week?”
+
+“I wanted to know what to count.”
+
+Victoria set down her basket.
+
+Beyond the bar, a brown sail was making its way towards the harbour. The boat was still small in the distance, but she recognised its shape. The Dunmores had never been good at coming home on time. Bram would be at the oars, probably talking to his brothers about a gull.
+
+“Stay here,” she said. “Both of you. If the light starts to go, head up to the house.”
+
+“Where are you going?” Madeleine asked.
+
+“Gull Head.”
+
+“Why?”
+
+“Because if I were Berit, that's where I'd be.”
+
+Victoria left the basket on the ground and hurried up the shore path.
+
+Gunnhild was sitting against the hut wall, her gaff across her knees. She was in the same place Victoria had last seen her, but she was no longer watching the sound. She was looking over her shoulder at the open doorway.
+
+“He's been standing there since noon,” she said.
+
+Victoria followed her gaze.
+
+The captive stood in the doorway with one hand braced against the frame and the other pressed to his ribs beneath the binding. He had grown thin over the past month. His fair hair had grown out, and he stood bareheaded in the wind, facing west with his eyes narrowed against the light.
+
+He did not look at Victoria.
+
+Instead, he raised his free hand, held it flat with the palm facing down, then slowly lifted it and let it fall. He repeated the movement. Then he spoke a short string of syllables and looked at Gunnhild.
+
+“I don't know what he wants,” she said. “He did it at noon, so I thought he wanted water. I gave him some. Then he did it again.”
+
+She turned the gaff a quarter turn in her hands.
+
+“Osric came up and saw him doing it. Went the colour of tallow. So I suspect it wasn't water he wanted.”
+
+“It's the swell,” Victoria said.
+
+“Aye. Seems he knew what was coming before we did.”
+
+Gunnhild's mouth tightened.
+
+“I'd rather not make anything of that. I don't like owing him.”
+
+“You don't owe him.”
+
+“I know what I owe and what I don't.”
+
+She rose stiffly and leaned the gaff against the wall.
+
+“Come and see what Berit's found.”
+
+What Berit had found was a problem of arithmetic.
+
+She stood at the foot of the stack, her grey plait wound tightly around her head. Osric stood beside her, leaning on his stick. Above them, Ruf and another man from Skerrow waited on the platform with a torch ready.
+
+The stack had been laid for a night's burn. On a clear night, Berit explained, the fuel would last. In the storm coming towards them, it would be gone within an hour. After that, the sound would be black.
+
+“They won't see a single fire in that rain,” Osric said. “It'll be a smear of light. You could be a quarter of a mile away and mistake it for a star.”
+
+He had grown quiet, as he did when something old was stirring in his memory.
+
+“When I was a boy, we had another way. For the reef.”
+
+“Which reef?” Victoria asked.
+
+“The Teeth.”
+
+He nodded towards the headland, where a long ridge of dark rock ran out beneath the water.
+
+“There's a channel through it, on the inside. You can't see the channel from the surface. If a boat doesn't know where to go, a westerly will drive it onto the rocks. Every boat lost on this stretch of shore has gone there.”
+
+He tapped his stick against the ground.
+
+“So they used two fires. One high, one low. You sail in with one directly above the other. As long as the fires stay in line, you're in the channel. If the lower light slips to one side, you're off course. You turn until it comes back into line.”
+
+“Two fires,” Victoria repeated.
+
+“Aye. Both large enough to see through the rain. Both burning all night.”
+
+His fingers began tapping against the stick.
+
+“I did it once. I was nine. My father tended the high fire, and I fed the lower one. I thought my arms would fall off.”
+
+“How much wood would we need?”
+
+“All of it,” Berit said.
+
+She did not look at anyone.
+
+“Ruf and I worked it out. Ten hours of westerly weather, two fires burning hard. The store would be empty by morning.”
+
+“That's the winter's fuel for five stacks,” Victoria said.
+
+“A month's worth,” Berit replied. “It was meant to last the winter.”
+
+“And the store has two keys,” Gunnhild said.
+
+She had come up behind them. Now she stood with her arms folded, looking at the fuel store built into the rock beside the hut. The oak door had a heavy iron hasp, fitted with two locks according to Maren's written terms. One key hung around Berit's neck. The other was in Ostwick, two hours away by water in daylight.
+
+“Where's Piers?” Victoria asked.
+
+“At Ostwick with Ilse. He went on the morning tide.” Berit coughed. “He's holding the second key. There isn't a boat on this shore that could cross the sound tonight.”
+
+Victoria looked at the door.
+
+“Then we can't open it?”
+
+“Not according to the rule,” Berit said. “I can turn my key, but the other lock will hold. That's what we agreed, Gunnhild. That's what you asked for.”
+
+“I did.”
+
+Gunnhild looked down at the hasp.
+
+“I stood right here and said the arrangement needed a rope with two ends. I wanted to make sure nobody could close the store alone.”
+
+She raised her head.
+
+“I won't tell you to break it. I wouldn't know how to explain that. I asked for the second lock because I thought one person shouldn't have that power. Tonight, we're asking for the opposite. I don't know which choice is right. I'd rather someone else had to make it.”
+
+She looked at Victoria.
+
+“I'm sorry.”
+
+Nobody answered.
+
+Above them, the torch had begun to gutter in the wind. Ruf cupped it with his body to keep the flame alive.
+
+Victoria turned towards the sound. The swell was heavier now. White water rose against the Teeth and slid back over the black rock. Beyond the reef, the sky had darkened to the colour of a bruise.
+
+Eleven boats were still out there, trying to find a harbour entrance they might soon be unable to see.
+
+Bram was in one of them.
+
+Victoria thought of her son and felt ashamed. She forced herself to think of the others: the Ostwick long-liners, the Kessing men, the boys of fifteen and the men of sixty who had gone out because the late shoal paid nearly as well as the fishing run.
+
+She counted.
+
+Seventeen boats, minus the six she had seen return.
+
+She tried to weigh the winter's fuel against the lives at sea. A month of functioning stacks against eleven boats in a storm. She could not make the numbers settle into a clear answer.
+
+It was not a fair question. Nobody had designed the rule to answer it.
+
+“Would the fires definitely be visible in the rain?” she asked.
+
+“I don't know,” Osric said. “Nobody does. It might not help.”
+
+“It might not.”
+
+“And if it fails, you'll have burned the winter's fuel and lost them anyway.”
+
+He said it without cruelty. He wanted her to understand the risk.
+
+“I know.”
+
+“Then why—”
+
+“Because if I do nothing, and those boats are lost on the Teeth, I'll have stood here beside a woman with a key around her neck, three feet from the door, and said it wasn't the proper time to open it.”
+
+Victoria heard how steady her voice sounded.
+
+“Berit, is there an axe?”
+
+“There's a splitting axe in the hut.”
+
+“Fetch it.”
+
+Berit did not move.
+
+Her hand rested against the cord around her neck. Victoria could see her weighing something, but it was not the weather.
+
+“You have no authority to do this,” Berit said. “I'm telling you kindly. If you break that lock, you won't be acting as keeper of anything. If it goes wrong, nobody can claim we agreed to it. It'll be on you.”
+
+“Yes.”
+
+“They'll blame you.”
+
+“I've told Hale that before.”
+
+Victoria turned towards the hut.
+
+“Is there an axe, or should I look for a stone?”
+
+Ruf came down from the platform carrying it in both hands. He must have slipped into the hut while the others were talking. He placed the axe in Victoria's palm without a word.
+
+Then he stepped back as she approached the oak door.
+
+When she raised the axe, he covered his ears.
+
+Later, Victoria would think that was the most sensible thing anyone had done that night.
+
+The first blow struck the iron with a sharp ring that travelled up her arms and numbed them to the shoulders.
+
+It took four more blows to break the staple.
+
+When it finally gave way, the hasp fell open with a small, flat clank. The two locks hung from it, still shut and suddenly useless.
+
+Nobody cheered.
+
+Gunnhild turned to face the sea. Osric stepped forward, gripped the door with both hands, and hauled it open.
+
+The dark store smelled of seasoned driftwood.
+
+“Right,” he said. “Hands.”
+
+They carried wood until the rain came.
+
+It arrived at ten minutes past eight, just as Madeleine had predicted, with a sound like a crowd drawing breath.
+
+Victoria had never worked so hard. She carried split timber between the store and the stack, with Berit coughing behind her and the fires growing brighter as the fuel went on.
+
+The high fire blazed on the platform, where Ruf and the Skerrow man kept it fed. The low fire burned on a bed of stones in the shelter of the headland. Osric stood between them on the shingle, directing the work with his stick. He raised one hand, then the other, and ordered the lower fire moved a yard this way or that until the two flames lined up.
+
+Gunnhild fed the lower fire without speaking.
+
+So did the captive.
+
+Victoria did not see him approach. She looked up from a load of timber and found him standing beside the flames, a heavy piece of wood in his arms and pain written across his grey face.
+
+He fed the fire.
+
+He did not look at anyone.
+
+Gunnhild stood opposite him with another load. For a while, they worked on either side of the flames without speaking. Their silence was so complete that it almost resembled good manners.
+
+The storm struck at nine.
+
+It came out of the west like a wall. For the next hour, the world held nothing but wind, noise, and the roar of the fires.
+
+Victoria's eyes streamed. Her hands were black with pitch. She could neither see the sound nor hear her own breathing.
+
+She fed the flames again and again.
+
+Let them see it.
+
+Another load.
+
+Let them see it.
+
+Madeleine counted them in.
+
+She did it from the slip, sheltered against the bakehouse wall. Hale had found him there and tried to send her home, but she had refused to go.
+
+Asta held the lantern.
+
+It was a small horn lantern with a shutter. She gripped it in both hands, her elbows tucked against her ribs. Through the long night, she never let the light waver.
+
+Madeleine had wrapped her slate in oilcloth. She wrote by touch when the rain made it impossible to see the chalk.
+
+The fires were visible from the slip.
+
+That was the first thing she recorded, because she thought somebody ought to remember it. Through the rain, she could see two red lights, one above the other. As the hours passed, they held their line.
+
+Someone at the foot of Gull Head was keeping them aligned.
+
+The first boat came through at ten minutes to midnight.
+
+It was an Ostwick long-liner, dark and low in the water. Madeleine saw it as a deeper shadow moving beneath the fires.
+
+The boat followed the line towards the harbour. For a moment, it slipped off course, and the lower light shifted a hand's breadth to the left of the upper one. Then it corrected, and the two fires came back into line.
+
+She heard men shouting over the water.
+
+Someone cheered.
+
+Seven, she wrote.
+
+She had counted six boats in daylight and carried that number in her head throughout the dark. Now she added the new arrival.
+
+They continued to come in.
+
+Hale stood on the slip with a coil of rope, hauling each boat towards shore. Neither he nor Madeleine spoke.
+
+Eight.
+
+Nine.
+
+Ten.
+
+At half past two, the Dunmores arrived. They were the last of the Kessing boats. Their sail hung in ribbons, and Bram's voice carried across the water, high and cheerful above the wind.
+
+He was talking.
+
+Madeleine couldn't hear what he was saying, but she didn't need to.
+
+Thirteen, she wrote.
+
+Then, because she was twelve years old and had been holding herself together for hours, she set the slate down and covered her face with both hands.
+
+A minute later, the signal went up the headland through shuttered lamps, long and short.
+
+Victoria was on her knees beside the lower fire, holding another billet of wood. She saw Osric's hands move through the flickering light and understood the message before she had consciously read it.
+
+Dunmores in.
+
+She did not stop feeding the flames.
+
+She discovered that she was crying. Rain ran down her face, carrying pitch and ash with it. She kept stacking the wood.
+
+Asta did not move.
+
+The lantern remained steady in her hands.
+
+The sixteenth boat came in at ten past three.
+
+One more was still missing.
+
+At four, it had not arrived.
+
+They found it at first light, stranded on the Teeth.
+
+The boat lay on its side across the black rocks, its mast gone and its long lines trailing from the stern into the swell. A wave rolled over it as the searchers watched.
+
+There was nobody aboard.
+
+They could not tell whether the crew had been rescued, washed away, or lost before they ever saw the fires.
+
+Fenwick's cutter went out at dawn and searched the surrounding water until noon. The crew found a cap and a bailing scoop.
+
+Nothing else.
+
+Madeleine heard the news from the slip and wrote the number on her slate. Then she crossed out seventeen and wrote sixteen beneath it.
+
+Below that, in a separate column, she drew a line.
+
+She left the space empty.
+
+Piers arrived on foot at the end of the morning. He had crossed the sound during the first calm hour and had not slept.
+
+The fuel-store door stood open. The hasp lay on the ground, both locks still shut. The fires had burned down to a long bed of ash.
+
+Victoria sat on the platform steps with her blackened hands hanging between her knees.
+
+She did not get up when she saw him.
+
+Piers said nothing at first. He looked into the empty store, then bent to pick up the hasp. He turned it over in his long fingers and laid the two halves side by side across his palm.
+
+“I'd have said yes,” he said.
+
+“I know.”
+
+“I want you to understand that. If I'd been here, if anyone had asked me, I'd have agreed before they finished the sentence. I'd have said yes and turned the key.”
+
+“I know you would.”
+
+“But you didn't know that.”
+
+He lifted his head. His eyes were red-rimmed, but his gaze was steady.
+
+“That's what I keep thinking about. I'm trying to be glad it's done. I am glad the sixteen boats came in. But somebody broke the lock, and she didn't know what I'd say.”
+
+He looked down at the broken hasp.
+
+“And I would have said yes. So no harm done, you might think. But I don't think that's the right way to be pleased about it.”
+
+Victoria said nothing.
+
+Anything she could say seemed likely to sound like either an excuse or a boast.
+
+“What will you tell Maren?” Piers asked.
+
+Victoria crossed to Ostwick that afternoon.
+
+Maren was in her room above the water. She had been awake since dawn and sat at the table with both books open: the one for Ostwick and the one that stayed in Kessing.
+
+She did not look up until Victoria sat across from her.
+
+“I'll write it in front of you,” Maren said. “If you want it recorded.”
+
+“Write that I did it.”
+
+“What did you do?”
+
+“I broke the hasp on the fuel store at Gull Head with an axe. I opened it without the second key and burned the entire store.”
+
+Victoria heard her own voice flatten.
+
+“Sixteen boats came in. One was lost. It was my decision. Don't write that Berit or Gunnhild stood by.”
+
+Maren wrote slowly, then read the entry aloud.
+
+She set down her pen and studied the page.
+
+“What is it?” Victoria asked.
+
+“I have to call it something.”
+
+“Call it what it was.”
+
+“I don't know what to call it.”
+
+Maren flexed her fingers.
+
+“The book has agreed, kept, and broken. I know what to do when someone breaks a rule. I record it, and the villages decide what happens next.”
+
+She looked up.
+
+“But you didn't break the rule, did you? Not in the way I mean. The rule is still there. Everyone would say it's still there. You went around it for one night because the night demanded something else.”
+
+“Then write that.”
+
+“What word should I use?”
+
+“I don't know. Any word.”
+
+Maren was silent for a long moment.
+
+Then she bent over the page and added a single line at the end of the entry. Victoria could not read it upside down, so she waited until Maren turned the book towards her.
+
+Taken by exception, for the boats at sea.
+
+“Exception to what?”
+
+Gunnhild stood in the doorway. She had followed Victoria across the sound and entered without making a sound of her own.
+
+Her arms were folded, her chin lowered. She was wet to the skin, with ash caught in her hair.
+
+She leaned forward to read the page.
+
+“To the rule of the second key,” Maren said.
+
+“That's not what it says.”
+
+“It says what it says.”
+
+“It says exception.”
+
+Gunnhild did not raise her voice.
+
+“That's a good word. A kind word. It means something happened once, for a reason. It doesn't say what the reason was.”
+
+She studied the page for a moment longer.
+
+“You'll have to take my word that I'm not angry. I'm not. I stood on that rock last night and couldn't make myself do what Victoria did.”
+
+She looked at Maren.
+
+“I'm only asking what this word means the next time somebody else needs it.”
+
+“Then ask the next time,” Maren said.
+
+“Aye.”
+
+Gunnhild's expression did not change.
+
+“That's what I'm afraid of.”
+
+She left.
+
+Maren blotted the page and closed the book.
+
+Victoria sat with her blackened hands in her lap, staring at the cover. She could not tell whether she had been forgiven or merely recorded.
+
+By dusk, she was back in Kessing.
+
+Two small figures sat on the slip where she had left them the day before. Madeleine had the slate on her knees. Asta sat beside her with the horn lantern resting in her lap, its flame long since extinguished.
+
+Neither girl was speaking.
+
+Madeleine was looking at the empty column she had ruled in the dark. She ran her thumb along its edge, then wrote a single word at the top.
+
+She left everything beneath it blank.
+
+Victoria could read the word from the path.
+
+Who.
       `
     }
   ],
@@ -876,7 +2962,7 @@ It was always a choice between two variations of the same outcome. If Elizabeth 
 "Edward arrived before noon," Anne said softly, resting one hand upon the back of Elizabeth's dressing chair. The touch was genuine. Anne did not wear rings on her left hand because she believed cold metal had no place against a daughter's skin. "He brought the trade charters from the river valley. He insisted on leaving them in the lower library so you wouldn't feel hurried."
 "He is always thoughtful," Elizabeth said.
 The sentence formed without friction. She had said it at twelve; she had said it at sixteen; she said it now at nineteen. It was entirely true. Edward of Valenne was thoughtful. He had memorized the names of her childhood dogs; he remembered that she disliked spiced wine; he never interrupted her when she spoke on treaty clauses.
-That was what made her heart seize in the middle of the chest. It would have been so clean to hate him. If Edward had been insolent, if he had reeked of vanity or cruelty, refusal would have had the clear, sharp dignity of courage. Instead, he was good. He was plausible. He was everything someone who loved her would have chosen for her.
+That was what made her heart seize in the middle of the chest. It would have been so clean to hate him. If Edward of Valenne, if he had been insolent, if he had reeked of vanity or cruelty, refusal would have had the clear, sharp dignity of courage. Instead, he was good. He was plausible. He was everything someone who loved her would have chosen for her.
 And because she was kind, and because she was sensible, she had slowly learned to want what everyone had decided she was meant to have.
 Until the letter from the mountain border arrived with no royal seal at all.
       `
