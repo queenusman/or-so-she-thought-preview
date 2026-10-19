@@ -662,13 +662,18 @@
       // STATE B: SHOW ACTIVE CHAPTER READING CONTENT
       const chapter = eraChapters[activeChapterIndex];
 
-      const paragraphs = chapter.content
-        .trim()
+      // Clean up raw content by stripping any leading duplicate Chapter titles (e.g., "Chapter Seven: The Keeper of Terms")
+      let cleanContent = chapter.content.trim();
+      const titlePatternRegex = new RegExp(`^(?:Chapter\\s+[A-Za-z]+\\s*:\\s*${chapter.title}|${chapter.number}\\s*:\\s*${chapter.title}|${chapter.title})\\s*`, 'i');
+      cleanContent = cleanContent.replace(titlePatternRegex, '').trim();
+
+      const paragraphs = cleanContent
         .split(/\n\s*\n/)
         .map(p => p.trim())
         .filter(Boolean);
 
       const formattedParagraphs = paragraphs.map((para, idx) => {
+        // First paragraph gets the decorative drop-cap on its very first letter
         if (idx === 0) {
           return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-theme-accent first-letter:leading-none text-theme-text">${para}</p>`;
         }
