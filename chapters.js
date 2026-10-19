@@ -267,7 +267,7 @@ Madeleine rubbed her hands against her skirt. "Bram went with the boats. So I co
 
 She said it lightly, trying to make the situation easier for her mother. Victoria knew what she was doing. Her daughter was disappointed. She had wanted to spend her birthday doing something she loved. She had wanted a cake, an afternoon with her mother, and a day that felt different from all the others. Instead, she was sitting beside Victoria, watching smoke rise from another village.
 
-Victoria put her hand on the back of Madeleine's neck. "I'宁 sorry," she said.
+Victoria put her hand on the back of Madeleine's neck. "I'm sorry," she said.
 
 Madeleine leaned against her shoulder. "It's all right."
 
@@ -355,7 +355,7 @@ Victoria reached for her hand.
 
 "Even then."
 
-Madeleine seemed relieved to hear it. "I know people need help," she continued. "I'宁 not angry that they came here. I just wanted somebody to know that I was disappointed."
+Madeleine seemed relieved to hear it. "I know people need help," she continued. "I'm not angry that they came here. I just wanted somebody to know that I was disappointed."
 
 Victoria took her daughter's hand. "I know, sweetheart."
 
@@ -653,7 +653,7 @@ At dusk, Ruf stood on the stack with a flask of tea, a heel of bread, and the wa
 
 Inside, the kitchen had grown quieter. The old woman had been moved into a proper bed. Someone had started singing earlier, but the song had ended almost as soon as it began. Near the hearth, the little girl still sat with her knees drawn up and the heel of bread clutched in her fist. But she had moved a little closer to the fire.
 
-Piers Lowe sat on the floor beside her. He hadn't tried to speak to her. He simply leaned against the wall with his long legs stretched out in front of him, looking at nothing in particular. After a while, he spoke without turning his head.
+Piers Lowe sat on the floor beside her. He hadn't tried to speak to her. He simply leaned against the wall with his long legs stretched out in front of him, looking at nothing in particular. After a while, she spoke without turning his head.
 
 "She's Asta."
 
@@ -839,7 +839,7 @@ Victoria had been waiting for the question without realising it. She thought of 
 
 "I haven't given you any. They were there before I said anything."
 
-"True enough." Berit coughed for a long time. When she finished, she wiped her mouth and looked out across the water again. "Here's what I'll do. I'll agree to it for a month. A month of men on every stack and fuel kept ready. Then we'll see what it costs." She turned back to Victoria. "I'll say it in front of whoever you like. If it doesn't work, we admit it and stop. But I'宁 not doing it on a handshake."
+"True enough." Berit coughed for a long time. When she finished, she wiped her mouth and looked out across the water again. "Here's what I'll do. I'll agree to it for a month. A month of men on every stack and fuel kept ready. Then we'll see what it costs." She turned back to Victoria. "I'll say it in front of whoever you like. If it doesn't work, we admit it and stop. But I'm not doing it on a handshake."
 
 "What would you do it on?"
 
@@ -955,7 +955,7 @@ Madeleine looked up.
 
 "There's no reason you should have." Piers rested his hands on his knees. "They're sitting in other people's kitchens with nothing to do. They've lost their houses. Some have lost their families. They're waiting for someone to tell them what happens next." He paused. "The point at Gull Head faces straight toward the east slip. You can see it from the stack. I thought about that, and I'm still asking."
 
-He finally looked up. "It's the first thing in two days anyone has asked of us. I've been watching those men. A man sitting with a bowl in his lap isn't much use to himself. A man with a watch to keep might be."
+He finally looked up. "It's the first thing in two days anyone has asked of us. I'I've been watching those men. A man sitting with a bowl in his lap isn't much use to himself. A man with a watch to keep might be."
 
 Victoria considered this. She had been so busy trying to find men for the stacks that she hadn't thought about the men already standing in her yard.
 
@@ -975,7 +975,7 @@ When Victoria explained what they needed, Maren didn't exclaim or ask questions 
 
 She stood in the schoolroom doorway, wiping her fingers on a cloth. Madeleine had followed Victoria inside, carrying the slate beneath her arm. Maren looked at her.
 
-"I'd need somebody to hold the page. The wind up there will carry it straight into the sea."
+"I'll need somebody to hold the page. The wind up there will carry it straight into the sea."
 
 "I can hold it," Madeleine said.
 
@@ -2945,6 +2945,1950 @@ Victoria could read the word from the path.
 
 Who.
       `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Nine",
+      title: "Madeleine's Objection",
+      content: `
+Chapter Nine: Madeleine's Objection
+
+By the fourth week of the cold, Victoria had learned how much a winter's fuel weighed.
+
+She knew because she had been carrying it.
+
+Since the night at the Teeth, the whole shore had been short of wood. The store at Gull Head had burned through its last stick, and every village was left with its own woodpile and little to spare. Fenwick's carpenters had gone along the Ridge with their saws, cutting what they could. Victoria went with them. Someone had to count the trees, and she knew a woman who would do it.
+
+Each night she returned after dark, resin on her sleeves and cracks in the skin across her knuckles. Each night she found the kitchen warm, the fire banked, and Madeleine awake at the table.
+
+“You're late,” Madeleine said on the fifth night, without looking up.
+
+“The cart lost a wheel.”
+
+“I know. Mr. Dunmore came by. He said it was the left one, and Bram had told him it would happen.”
+
+She turned a page in the old almanac she had been using for scrap paper.
+
+“Bram says a lot of things. Some of them are right.”
+
+Victoria hung her coat.
+
+“What have you got there?”
+
+“Nothing.”
+
+Madeleine slid the slate beneath the almanac, then brought it out again. Victoria was still standing there, watching her, and hiding it was pointless.
+
+“It's what Mistress Cole let me read.”
+
+“Mistress Cole's book?”
+
+“Anyone can read it. That's in the rules. You have to stand in front of her and ask, and she watches you, and you can't take it out of the room.”
+
+She sounded faintly annoyed by the arrangement.
+
+“I asked on Tuesday. I asked again today. I was only looking for the word.”
+
+“What word?”
+
+“Exception.”
+
+Victoria had been unlacing her boots. She stopped.
+
+Maren had not objected to Madeleine's request. On the first afternoon, she had explained the rule quite firmly when the twelve-year-old appeared at her table and asked to read every page since the agreement had been signed.
+
+Anyone could read the book. That was the point.
+
+Maren had sat opposite Madeleine with her hands folded and watched as the girl worked her way through the entries, following the lines with one finger. She had not interrupted, even when Madeleine began murmuring numbers under her breath.
+
+Now Madeleine laid the slate flat on the table and turned it towards her mother.
+
+She had divided it into three columns, the writing neat and square.
+
+“It's in the book three times,” she said. “Since the night at the Teeth. I counted twice.”
+
+“Three?”
+
+“Yours is the first.”
+
+She touched the top line.
+
+“Then there's the Ridge. Mr. Fenwick and Mr. Corby wrote that the Ridge commons could be cut for winter fuel, even though the agreement says every village keeps control of its own woods. They called it taken by exception, for the winter fuel.”
+
+Victoria sat down slowly.
+
+“Mistress Cole didn't like it,” Madeleine continued. “She said so. But she wrote it because both men stood there and said it was necessary.”
+
+“It was necessary.”
+
+“I know.”
+
+Madeleine moved her finger to the third entry.
+
+“And the third is the man.”
+
+Victoria looked down.
+
+In Madeleine's careful hand, the slate read: Man from the hut. Ostwick storehouse. Locked.
+
+“Master Hale asked for that two days ago,” Madeleine explained. “He said someone had to be responsible for the prisoner. Gull Head can't manage it now that the store is gone and Berit's ill. So they moved him to the storehouse in Ostwick and barred the door.”
+
+She looked at her mother.
+
+“That's another exception. Mistress Cole wrote for the keeping of the stranger. She said she chose that wording because she didn't want to call him a prisoner when she didn't know what he was.”
+
+Madeleine paused.
+
+“Do you?”
+
+“No.”
+
+“Neither does anyone else. Gunnhild went to see him the first day, but they wouldn't let her in. She wanted to check that he'd been fed. She stood outside for an hour.”
+
+Her brow furrowed as she studied the slate.
+
+“Three times in twenty-six days. And I don't think anyone has thought much about it because every one of them was necessary.”
+
+“Then what's the trouble?”
+
+“I don't know.”
+
+Madeleine looked up.
+
+“That's the trouble. I can't tell you exactly what it is. It's just the same word every time. And every time, it seems to get a little easier to write.”
+
+Victoria lowered herself into the chair opposite her daughter.
+
+She was exhausted. She had walked eleven miles that day, eaten nothing since dawn, and spent the last hour carrying wood. The fire was warm, and the room was quiet, and she wanted nothing more than a meal and a chance to put her feet up.
+
+For once, she had wanted a daughter who counted fewer things.
+
+“Madeleine, Maren recorded what happened. That's what the book is for. Nothing has been hidden. If people think the word is being used too often, they can say so at the next meeting.”
+
+“At the meeting.”
+
+“Yes.”
+
+“With the villages.”
+
+“Yes.”
+
+“But somebody would have to ask.”
+
+Madeleine's voice quickened.
+
+“Someone would have to stand up and ask who says something is an exception. The Ridge was Mr. Fenwick and Mr. Corby. They said it, and Mistress Cole wrote it down. But who gave them the right to decide? Who decides when an exception is allowed?”
+
+She touched the first line again.
+
+“When you broke the lock, it was you. I know you were right, and everyone knows it, and I'm glad you did it. But what if the next person isn't you?”
+
+“Then someone else will have to decide.”
+
+“What if they're wrong?”
+
+“Then they'll be wrong.”
+
+Victoria heard the impatience in her own voice.
+
+“People will say so, and they'll have to answer for it. Just as I would have.”
+
+“But you'd already done it. And it would have been too late.”
+
+Madeleine's hands moved quickly across the table, her palms flat against the wood.
+
+“That's what I keep thinking about. When the boats were out, if you'd been wrong, the fuel would have been gone and the boats might have been lost anyway. And nobody could have done anything. All you could have said was that you were sorry.”
+
+“Yes.”
+
+“And you would have been sorry.”
+
+“I would have said so, and I would have meant it.”
+
+“But that doesn't mend anything.”
+
+“No. Nothing does.”
+
+Victoria set down her cup harder than she intended.
+
+“Do you think I don't know that? I stood on that headland with an axe in my hands. I wasn't feeling clever, Madeleine. I was frightened. I would do it again.”
+
+“I know you would.”
+
+“Then what do you want me to say?”
+
+“I want you to say who decides!”
+
+The words came out much louder than Madeleine intended.
+
+Asta's spoon stopped halfway to her mouth.
+
+Madeleine pulled her hands away from the slate and stared at them, as though they had spoken without her permission. Colour rose to the roots of her hair. She pressed her lips together.
+
+Victoria saw the small muscle twitch at the corner of her mouth, the one that moved when Madeleine was keeping a tally she did not want to lose.
+
+She should have stopped there.
+
+Victoria understood that later, lying awake with her hands behind her head. She was tired, sore, and angry. It was the particular anger of someone who had done something necessary and discovered that being right did not make the consequences any easier to carry.
+
+Instead, she said the first thing that came to mind.
+
+“You weren't there.”
+
+Madeleine looked up.
+
+“You were on the slip. You were warm, and you had a lantern, and you wrote down the numbers. That was your part. I'm not saying it wasn't useful.”
+
+She heard the unkindness gathering in her voice, but she could not seem to stop it.
+
+“But I was at the foot of the stack at midnight, with the sea going over the Teeth. Counting doesn't bring a boat home.”
+
+The kitchen fell silent.
+
+A log shifted in the grate.
+
+Asta lowered her bowl to her knees.
+
+Madeleine did not move or look away. Victoria watched her face become perfectly still, the way it had twice before: once while Skerrow burned, and once at the quay.
+
+“Bram was out,” Madeleine said.
+
+“I know.”
+
+“I counted him in. It was half past two. I wrote thirteen, and then I couldn't see the slate for a minute.”
+
+Her voice was level, as though she were reading from the book.
+
+“I was on the slip because Master Hale couldn't make me go home. Asta held the light the whole night. She didn't move once, and nobody has said anything about that.”
+
+She swallowed.
+
+“Mama, was it because of Bram?”
+
+Victoria opened her mouth to say no.
+
+She had answered a hundred small questions with that word. She had used it to protect Madeleine from things she could not yet explain, to keep an ordinary day ordinary, to make an uncertain situation feel settled.
+
+The word was ready now, clean and familiar. It would make the evening easier.
+
+She looked at her daughter's face and could not say it.
+
+“Partly.”
+
+Madeleine said nothing.
+
+“I thought of him before I went up to Gull Head. I won't pretend I didn't. I told myself I was thinking of everyone, and I was. I counted the whole fleet. But Bram's sail was the first one I saw.”
+
+Victoria looked down at her hands.
+
+“I don't know how much that mattered. I can't separate it out now. I'd like to say it made no difference, but I can't.”
+
+“Does anyone know?”
+
+“Piers guessed.”
+
+“Mistress Cole didn't write it down.”
+
+“No. I didn't tell her.”
+
+“Then it's not in the book that you were frightened for Bram.”
+
+“No.”
+
+Madeleine studied the slate.
+
+“So it's not in the book at all.”
+
+She spoke slowly, working through the thought as she went.
+
+“What's in the book is Taken by exception, for the boats at sea. And that's true. All of it is true. It's just missing the part that made you do it.”
+
+She frowned, struggling to find the right words.
+
+“I don't mean you lied. I mean the page says one thing, but what happened was a little different. And nobody reading it would know.”
+
+She looked at Victoria.
+
+“Next time, someone might want something different. The wood for himself, perhaps. But the page could still say it was for the boats.”
+
+“That's a great many possibilities.”
+
+“I know. I'm sorry.”
+
+Madeleine was sorry. Her chin had begun to tremble.
+
+“I don't have the proper words. I just keep thinking about it. What if somebody wanted the wood for himself?”
+
+“Then it would be a different case.”
+
+“How would you tell?”
+
+“I would…”
+
+Victoria stopped.
+
+“We'd find a way. We'd have written something better by then. There's nine more weeks until the spring meeting, and Maren is already keeping a list of things people want to change. We'll fix it.”
+
+“Will we?”
+
+“Yes.”
+
+“Do you promise?”
+
+It was an odd question, but Victoria did not dismiss it.
+
+She looked at the slate with its three careful entries, then at Asta sitting quietly at the far end of the bench.
+
+She felt a deep weariness settle over her. Beneath it, however, was a certainty she could not explain.
+
+The boats had come in. Sixteen out of seventeen. There had been a night when the right thing was also the difficult thing, and someone had done it. The shore was still full of people who had made it home.
+
+She could not believe that was the wrong lesson.
+
+“I think it's better to have a lock and be willing to break it than to have no lock at all,” she said carefully. “And I think that if the lock must be broken, someone has to be willing to stand where I stood.”
+
+She paused.
+
+“I don't know who that person should be. But it had to be someone.”
+
+She took a breath.
+
+“I would rather be wrong that way than the other.”
+
+“I know you would,” Madeleine said.
+
+She stood, tucked the slate beneath her arm, and walked to the door. She lifted the latch, went into the yard, and closed it behind her with a care that somehow hurt more than a slam.
+
+Victoria stayed at the table.
+
+It took her fifteen minutes to go after her, partly because her legs refused to cooperate. When she could finally stand, she took the grey blanket from its peg. There was a small burn in one corner.
+
+The night outside was clear and bitter. Frost had gathered over the stones, and her breath rose in front of her in pale clouds. Across the sound, the darkness lay unbroken. The stacks stood at their posts, one small red light at Gull Head and another farther south.
+
+Between them was nothing.
+
+Madeleine sat on the wall.
+
+Victoria approached from behind and laid the blanket across her shoulders. After a moment, Madeleine raised one hand and pulled it closed around her throat.
+
+“I shouldn't have said that about counting,” Victoria said.
+
+“It's true. It doesn't bring a boat home.”
+
+“It's true, and it was unkind.”
+
+She sat on the stone beside her daughter, leaving a little space between them.
+
+“You counted them in. Without you, I might not have known how many had returned. I could have gone on thinking there were seventeen when there were sixteen, or the other way round. That's not a small thing. It's why you could tell Hale the number.”
+
+“I know.”
+
+“I'm only saying it.”
+
+“All right.”
+
+They sat in silence.
+
+Behind them, the kitchen door opened and closed. Victoria knew without looking that Asta had come out as far as the step and stopped there.
+
+“I wasn't going to let you off,” Madeleine said at last. “About the next time. I wanted you to know that.”
+
+“I'm listening.”
+
+“I'm not cross. Well, I am, but not about the axe.”
+
+She pulled the blanket closer.
+
+“You can't know the next person will be like you. And it makes me feel strange that everything is all right because you were the one who did it.”
+
+“That's fair.”
+
+“Is it?”
+
+“Very fair.”
+
+Victoria looked across the sound.
+
+“I haven't an answer for you. I'm saying that plainly. I think I was right about that night, and I think you're right about what might happen next time. I don't know how both things can be true.”
+
+“That's not very comforting.”
+
+“No.”
+
+“It's better than saying it's all right, though.”
+
+“You've said that before.”
+
+“It's still true.”
+
+The corner of Madeleine's mouth moved, barely.
+
+Then she turned towards her mother. In the starlight, her face seemed older than it had that morning and younger than Victoria remembered it being a moment ago.
+
+“Mama, are you going to take me to the shellfish beds?”
+
+Victoria stared at her.
+
+“You said I could go when I was twelve and the weather was settled,” Madeleine reminded her. “You said it before the fire. Bram was going to take me out and show me how many shellfish the cold had killed.”
+
+She looked down at her hands.
+
+“Then you said after noon. And then there was the fire.”
+
+Her voice wavered. She stopped, gathered herself, and began again.
+
+“I told you I couldn't have gone anyway because Bram was out with the boats. I said it nicely because I wanted you to feel better.”
+
+She took a breath.
+
+“I know it couldn't be helped. I know that. But I thought about it at the Teeth while I was counting. I thought, I've never seen them. Then I thought it was a stupid thing to be thinking about.”
+
+“It isn't stupid.”
+
+“It's a bit stupid.”
+
+“Madeleine.”
+
+Victoria's throat tightened. She waited until she could speak.
+
+“When the cold breaks, on the first calm day, I'll take you myself. We'll go out together, and you can count every shellfish bed on the sound.”
+
+“That's another one of your whens.”
+
+“It is.”
+
+“They keep not happening.”
+
+“I know.”
+
+Victoria reached towards her, hesitated, then rested a hand on her daughter's head.
+
+Madeleine did not pull away.
+
+Instead, she leaned just slightly until the weight of her head rested against Victoria's palm. It was a small gesture, lasting perhaps three breaths.
+
+Then she straightened.
+
+“I'm cold,” she announced briskly, and slid down from the wall.
+
+Victoria watched her return to the house.
+
+She stayed outside a little longer before following.
+
+The kitchen had been tidied. The fire was banked, and the almanac sat squarely on the dresser. On the table, where Madeleine's slate had been, a clean ring showed in the dust.
+
+Victoria went upstairs quietly.
+
+Madeleine's door was closed, with a thin line of candlelight beneath it.
+
+On the landing, Asta was kneeling against the wall with a stub of chalk in her hand.
+
+She did not look around.
+
+She was studying the underside of the bottom stair, where the wood was bare and nobody usually looked.
+
+Three short marks had been scratched into it, neatly arranged in a row.
+
+They were Madeleine's. Victoria recognised the slight lean to the left in each one.
+
+Asta raised the chalk to the wood.
+
+She hesitated for a long time before adding a fourth mark. It was crooked, thick at one end. She studied it as though she wasn't certain it belonged there.
+
+Then she wiped the chalk on her skirt, placed the stub carefully in the corner of the stair, and slipped into Madeleine's room without a sound.
+
+The line of candlelight widened.
+
+Then it narrowed.
+
+And went out.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Ten",
+      title: "The Settlement",
+      content: `
+Chapter Ten: The Settlement
+
+The ice went out of the sound in the last week of the cold. With it went the last excuse for putting off decisions.
+
+Maren had pinned her list to the schoolroom wall at midwinter. By the thaw, it had grown to two sheets, the writing getting smaller as the questions became harder to answer.
+
+Who could cut wood on the Ridge?
+Who paid for a stack that burned down?
+Was a man who spent a night on the headland giving less than a man who gave a barrel of flour?
+What happened if a village wanted to leave?
+Who was responsible for the stranger?
+
+Victoria had read the list so often that she could recite it. Still, each morning seemed to bring a new question, usually one she had hoped nobody would think to ask.
+
+They settled the first matters in kitchens, before anyone gathered in the hall.
+
+Hale and Corby argued over salt weights for an entire evening at the Dunmores' table, while Bram's mother poured tea between them as though she were keeping order. Berit, who had been unwell since the autumn and refused to admit it, sent word from Gull Head that Gunnhild would speak for the stack and that she would hear no argument about it.
+
+Piers spent three weeks walking between the villages with the second key around his neck, carrying messages nobody had asked him to carry.
+
+By the time forty-six people climbed the stairs to Ostwick hall, much had been agreed, though few could remember exactly when.
+
+The question of contributions took two days and nearly brought everything to a halt.
+
+The problem was simple enough to understand and difficult to solve. A man's night on the headland and a sack of flour could not be weighed against each other. Every village had a reason to believe its own contribution was the more valuable.
+
+Corby wanted everything counted in salt.
+
+Fenwick pointed out that salt was what Kessing had and the other villages did not. If they used it as the measure, Kessing would end up holding the ruler.
+
+Ostwick wanted to count in fish. Gull Head wanted to count in nights spent on watch. Skerrow, which had almost nothing left to give, would contribute whatever the others allowed it to.
+
+By the second afternoon, the room had grown quiet.
+
+Victoria had learned to distrust that kind of silence. People had stopped arguing and started being polite, which often meant they had reached the point where nobody wanted to be the first to admit that the discussion had failed.
+
+Then Ilse Lowe spoke.
+
+She had attended at Piers's request, her injured arm still stiff from the winter and her mouth set against the entire business. She had said almost nothing for two days.
+
+Now, sitting on the bench beside the wall, she said in the patient voice of a woman explaining something to a child who refused to eat, "You're counting the wrong end."
+
+Fenwick turned towards her.
+
+"Which end, Mistress Lowe?"
+
+"What a thing is worth to the person giving it. Salt, fish, flour. Everybody's contribution is worth a great deal to them. Nobody's going to say otherwise."
+
+She shifted her injured arm.
+
+"I've fed twelve children since the fire. I'll tell you how I counted it. I never asked what the bread was worth. I asked what the house had to go without."
+
+"Go without?" Fenwick repeated.
+
+"A night on the headland is a night a man doesn't fish. A barrel of flour is a barrel his household doesn't eat. So each village counts what it gives up by its own measure. The villages that can bear the loss most easily give more."
+
+She looked around the room, plainly unimpressed by the difficulty everyone had made of it.
+
+"That's all. It's what any mother does. I thought it was plain enough."
+
+Nobody told her it was plain.
+
+Corby opened his mouth, then closed it again. At the end of the table, Maren was already pulling a clean sheet towards her.
+
+"Who decides what a household can go without?" Hale asked.
+
+"The household."
+
+"And if it lies?"
+
+"Then the next village will know," Ilse said. "It will be sitting at the next table, and it will see what's on the board."
+
+She folded her good hand over her injured one.
+
+"Nobody lies for long about what's in their own kitchen."
+
+It was not a perfect answer. Victoria could think of several ways a village might exaggerate its hardship or conceal what it had in reserve.
+
+But she watched the room begin to relax, and understood why Ilse's suggestion had worked. The answer had come from someone who knew what it meant to feed people with less than she needed herself.
+
+Maren wrote it down.
+
+Corby asked her to keep the contribution record, and she agreed. He nodded with the satisfaction of a man who had finally found something he had misplaced.
+
+On the third morning, Gunnhild stood and asked what the villages were allowed to keep.
+
+She had been waiting for her turn. Victoria could tell from the way she kept her arms folded and spoke so evenly, as though she had practised the words on the headland with only the wind to hear them.
+
+She wanted it written in the same book as the stacks and the store, she said, that Gull Head's boats belonged to Gull Head. So did its nets, its own watch, and its people's right to make decisions about their own homes.
+
+And she wanted the same protection written down for every village in the room.
+
+She did not trust the word until.
+
+"We agreed to keep the arrangement until the villages agree otherwise," Fenwick said. "It's in the minutes."
+
+"It is. I'd like to know what that means for the village that wants otherwise."
+
+Gunnhild's grey eyes moved around the table.
+
+"Suppose Sedge Landing grows tired of the stack in ten years. Or Gull Head does. Or Skerrow, if there is still a Skerrow. Must it persuade four other villages before it can leave? Or is it simply held here because the others want it to stay?"
+
+"It would never be held," Fenwick said.
+
+"Then write that down how it leaves."
+
+Nobody wanted to answer.
+
+Victoria saw Fenwick glance at Corby. Corby looked down at his hands.
+
+Much of what they had built depended on the belief that the others would remain. To discuss leaving was to admit that they might not.
+
+Edmund Tarn answered at last.
+
+He had not attended the earlier meetings. That morning, he had walked up the shore path with a bundle beneath his arm and a face pale from the cold. He stood near the door without taking a seat.
+
+"A season's notice," he said.
+
+He spoke so quietly that the room had to lean towards him.
+
+"Give the others a full season to replace the watch. And whatever the village has taken from the common store, it leaves behind."
+
+He paused.
+
+"I wouldn't leave. I'm saying what's fair. A man should know the door is there, or he'll start to feel he's standing against a wall."
+
+The room considered this.
+
+To Victoria's surprise, Hale was the first to agree.
+
+"That's fair."
+
+"More than fair," Corby added. "It's generous."
+
+"Is it?" Gunnhild asked. "I'd call it a door."
+
+But she nodded to Edmund, and he nodded back. It was the first exchange between them since Joss's burial.
+
+Maren recorded the terms.
+
+A season's notice. Whatever had been taken from the common store must be left behind.
+
+She added another sentence: Each village shall retain its own boats, nets, stores, watch and houses, and no part of this agreement shall be understood to take those things from it.
+
+She read the passage aloud.
+
+Gunnhild asked her to read it again, then once more. Each time, she listened for something the others might have missed.
+
+When Maren finished the third reading, Gunnhild said, "Aye," and sat down.
+
+They came to the exception on the afternoon of the third day.
+
+Victoria had been dreading it for twelve weeks.
+
+She had imagined raising the matter with a clever argument, something that would make the problem clear without making her look foolish. In the end, she stood in front of forty-six people and said what Madeleine had said to her in the kitchen, leaving out only the parts that would have made it kinder.
+
+"There have been three exceptions recorded since the night at the Teeth," she began. "I made the first. The Ridge was the second. The stranger was the third."
+
+She looked towards Maren.
+
+"Is that still the count?"
+
+"It's six," Maren said. "If you include the ones recorded since midwinter."
+
+Victoria had not known that.
+
+She stood still for a moment, the number settling in her mind.
+
+"Six," she repeated. "In twelve weeks."
+
+She looked around the room.
+
+"Every one was needed. Every one was recorded. But I don't think any of us stood in a hall and asked whether it should be allowed. We said it was necessary, and then we did it."
+
+She took a breath.
+
+"I'm not saying we were wrong. I'm saying the next person might not be right. And the page will use the same words. It will say for the boats. Nobody reading it will know whether it really was for the boats."
+
+She did not look towards the floor, where Madeleine sat with her slate across her knees. She could feel her daughter's attention as clearly as a draught against her skin.
+
+"I broke the lock on the store because I was afraid for the fleet," Victoria continued. "I was also afraid for one boat in particular. Bram's. I didn't tell anyone that."
+
+Her hands tightened at her sides.
+
+"That part isn't in the book, and it should have been. I'm telling you now because whatever rule we make ought to be one that would have caught me."
+
+Nobody spoke.
+
+Berit's chair at the end of the Gull Head bench stood empty.
+
+Victoria sat down. Her knees were unsteady.
+
+Beside Maren's chair, the chalk had stopped moving. A moment later, it began again, quietly, and Victoria let out a breath she had not realised she was holding.
+
+"Then someone must be responsible for it," Hale said slowly. "Someone who can decide when an exception is necessary. We can't stop the whole shore and call a meeting every time the wind changes."
+
+"No," Gunnhild said. "We can't."
+
+"Then you agree."
+
+"I agree that somebody will act. I've seen what happens when someone does. I'm asking what we put around that person."
+
+The discussion lasted the rest of the day.
+
+Victoria watched the arrangement take shape among people who did not entirely trust one another and were beginning to understand that they could not always trust themselves, either.
+
+There would be a steward.
+
+When there was no time to ask the villages, the steward could make an exception. No other circumstance would permit it. The steward had to record the decision within a day, in front of the person it affected, just as Maren did. The entry must explain whom the decision served and why.
+
+At the next meeting, the steward would have to answer for it.
+
+Any three of the five villages could remove the steward from office.
+
+The term would last one year, with no automatic renewal.
+
+"Five villages?" Corby asked.
+
+"Kessing, Ostwick, Gull Head, Sedge Landing," Maren said, counting on her fingers. "And Skerrow."
+
+"Skerrow is nineteen men and the remains of a burned village."
+
+"Skerrow signed first," Piers said from the back of the room.
+
+He spoke gently. Nobody argued.
+
+When the clause had been copied out, Fenwick looked down the table.
+
+"There is only one question left," he said, with genuine feeling. "And I think we all know the answer."
+
+Victoria felt the room turn towards her.
+
+No one moved. No one needed to.
+
+She had expected this moment, and she was still not ready for it.
+
+"I have no standing," she said.
+
+"You said that on the slip," Hale replied. His heavy face gave nothing away. "I was there. You said it to my face. Then you did the thing anyway, and today you stood in this room and told us why you might have been wrong."
+
+He shifted in his chair.
+
+"I don't know anyone I'd sooner trust with the office than someone who understands that."
+
+"That's not a reason to give someone power."
+
+"It's the only reason I've got."
+
+Victoria looked towards Gunnhild.
+
+She was already watching, her grey eyes steady, her arms still folded. She lifted her chin a fraction. Victoria could not tell whether it was a warning or a sign of agreement.
+
+"I'll say it so it's written," Gunnhild announced. "I vote against her."
+
+The room grew still.
+
+"Not because I think she's wrong. Because whoever sits in that chair will be right for a year, then perhaps another, and another. I've seen how hard it is to stand up and tell someone who is usually right that they've stayed too long."
+
+She did not smile.
+
+"Write that, Maren. Put my name beside it. I'll sign the page anyway because the clause is better than having none. And I'd rather Victoria held the office than the first person who asked for it."
+
+Maren recorded her words exactly, placing Gunnhild's name in the margin beside the clause. Nobody would be able to turn the page without seeing it.
+
+Victoria watched the pen move and thought that this, at least, ought to be preserved.
+
+Four hands went up in favour of appointing her.
+
+Not five.
+
+She counted them, then counted again. A second count was worth more than a first.
+
+When she looked down, Madeleine was watching her rather than the slate. For once, she did not look away.
+
+The moment lasted about as long as a breath.
+
+Then Madeleine lowered her head and wrote something down.
+
+They signed the agreement on the fourth morning, with the windows open to a thin, warm wind coming off the water.
+
+It was a better document than the one they had made on the headland. Maren's square handwriting filled three pages, covering the stacks, the signals, the second key, the contributions each household could bear, the terms for leaving, the rights every village kept, and the steward's powers and limits.
+
+Only the heading remained blank.
+
+"It needs a name," Maren said. "Something people can call it. Otherwise, they'll keep saying the thing from the headland."
+
+"The Sound," Corby suggested.
+
+"That's a place. Not what we've done."
+
+"The Agreement of the Shore."
+
+"Gull Head is a rock, not a shore."
+
+In the corner, Osric tapped his stick against the floor.
+
+"There was a name before," he said.
+
+His voice had taken on the distant quality it sometimes acquired when he was reaching into an old memory.
+
+"My father's father used it. For the water, I mean, not the villages. He called it Norwyn."
+
+"What does it mean?" Maren asked.
+
+"I don't know. It's simply what it was called."
+
+He looked around the room.
+
+"Before it was the Sound. Before there were stacks. Before there was anything here but the water and a man standing on a point looking at it."
+
+Maren held her pen over the blank space.
+
+Then she wrote the name slowly.
+
+The Settlement of Norwyn.
+
+On the page, it looked like any other collection of words. Something a schoolmistress might copy out to test her ink.
+
+The villages signed in turn.
+
+Fenwick signed for Ostwick, adding a flourish he had plainly not intended. Corby signed for Kessing. Victoria signed beneath the line appointing her steward, directly below the clause allowing the villages to remove her.
+
+Piers signed for Skerrow.
+
+After him came the nineteen men who had spent the winter on the headlands, one by one, each writing his own name.
+
+Hale was the last of the Kessing men to sign. He held the pen for a moment, looking down at the page, before adding his name.
+
+Edmund Tarn was last of all.
+
+He approached from the doorway and stood beside the table without immediately taking the pen. He looked at the heading, then at the blank line reserved for Sedge Landing.
+
+"I didn't sign the first agreement," he said. "I said we'd keep our own."
+
+"You did," Maren replied.
+
+"I was wrong."
+
+He picked up the pen.
+
+"I'm not saying I was wrong about everything. I'm saying I was wrong about that."
+
+He signed slowly, writing the whole of his name: Edmund Tarn of Sedge Landing.
+
+When he handed back the pen, his hand did not shake.
+
+He stepped away from the table.
+
+Victoria looked around and realised that everyone in the room was standing. No one appeared to have decided that they should.
+
+Gunnhild raised the question of the stranger while Maren was sanding the page.
+
+She spoke quietly, as the meeting began to break up.
+
+"Where is he recorded?"
+
+Maren turned back through the book until she found the three exceptions. She showed Gunnhild the entry beside the last one.
+
+For the keeping of the stranger.
+
+"It's not in the settlement," Gunnhild said.
+
+"No."
+
+"He's in an Ostwick storehouse with a bar across the door, and he's not in the agreement."
+
+"There was no clause for him."
+
+Maren said it without defensiveness.
+
+"I couldn't find one. He isn't a village. He isn't one of the men who signed. He hasn't done anything we've agreed how to answer, and nobody in the hall could tell us what he was. So I recorded him as an exception. The exceptions belong to the steward."
+
+"So he's Victoria's responsibility."
+
+"Yes."
+
+Gunnhild looked across the hall.
+
+Victoria was standing with a cup someone had put into her hand. She saw Gunnhild consider crossing the room, then decide against it.
+
+Instead, Gunnhild picked up the gaff she carried every day, though there was no need for it now, and settled it across her shoulder.
+
+"I'll speak to Victoria myself," she said. "One day, when I know what I want to say."
+
+She went out into the bright morning.
+
+Maren closed the book.
+
+The agreement was complete. Everyone in the hall knew it, and most of what they felt was relief.
+
+Victoria allowed herself to feel it, too. She had earned a moment of rest.
+
+Nobody had been entirely wrong, she thought. They had built something from what they had, and it would hold.
+
+For a little while, she let herself believe that the thing she had feared was finished.
+
+A week later, the first calm day arrived, and Victoria took Madeleine to the shellfish beds.
+
+She had not forgotten her promise. Since the thaw, she had watched the sky with a vigilance she would have been embarrassed to explain to anyone.
+
+The day arrived without ceremony. The morning was still and grey, the water lay flat as a plate, and the cold had finally loosened its hold on the air.
+
+Victoria woke before dawn and went down to the slip.
+
+Bram was already there with the skiff, talking to himself about a gull.
+
+"Mistress Victoria," he said. "She asked me in the autumn. I've had it in mind ever since."
+
+"I know. Thank you."
+
+"I'll do the rowing. You can't manage it yourself. You'll go around in circles."
+
+He considered the boat.
+
+"Is the cat coming?"
+
+"There is no cat."
+
+"There ought to be. Boats are better with one."
+
+Madeleine came down the path carrying her slate and a loaf of bread. Her hair was plaited in a hurry, and she said nothing as she approached the water.
+
+She looked at the skiff, then at her mother.
+
+Victoria saw her deciding to believe the promise only when she was actually aboard.
+
+A few paces behind her, Asta stood at the edge of the slip, her hands tucked into her sleeves.
+
+"There's room," Victoria said.
+
+Asta looked at her for a long moment.
+
+Then she stepped into the bow and sat down, her knees together and her back straight.
+
+They passed beyond the bar in the pale morning light.
+
+The water was clear and cold. Victoria sat in the middle of the skiff with her hands in her lap while Bram rowed and talked. One by one, the long, dark lines of the mussel beds appeared beneath the shallows, their floats bobbing in neat rows.
+
+Madeleine began to count.
+
+She knelt on the thwart, the slate pressed against her chest, and counted aloud in a small, clear voice. When she found a bare line, she said so and marked it down.
+
+Eleven beds.
+Nineteen.
+Twenty-six, with three bare and two missing their floats.
+
+The cold had taken a good many. Not as many as it might have.
+
+"Thirty-one," Madeleine said at last.
+
+She looked up.
+
+"Out of forty. That's not as bad as Bram said."
+
+"I said it might be bad," Bram replied. "I never said it was."
+
+"You said a lot of things."
+
+"Some of them were right."
+
+Madeleine almost smiled.
+
+Then, because she was Madeleine, she turned on the thwart and looked back towards the shore.
+
+Victoria looked with her.
+
+The sound stretched behind them, silver and grey beneath the morning sky. The Ridge rose to the east. Skerrow was a low shadow to the north, with a few new roofs pale against the damaged village.
+
+At Gull Head, the main stack stood black and square against the brightening sky. The smaller fire platform stood beneath it. Farther down the coast, Victoria could make out the other stacks, at Ostwick and Sedge Landing, each standing at its post.
+
+No one was lighting anything.
+
+They were simply there.
+
+They looked as though they had always been there, waiting for someone to notice.
+
+"Mama," Madeleine said quietly. "It looks like something that was already there."
+
+"Yes."
+
+"I said that before. On the day of the fire. But I didn't mean it the same way."
+
+"What did you mean?"
+
+"I don't know yet."
+
+She turned the slate over in her hands.
+
+"I'll tell you when I do."
+
+Asta had not moved. She sat in the bow with her hands tucked into her sleeves, looking towards the shore.
+
+After a while, she lifted one hand and held it out over the water, palm flat and facing down. She raised it slowly, then let it fall.
+
+It was the same gesture the stranger had made on the headland, warning them of the swell and the coming weather.
+
+Victoria had not known Asta was watching that night.
+
+Nobody said anything.
+
+Bram took a long stroke and let the skiff glide forward. Clear green water passed beneath them, and Madeleine bent her head and began counting the beds again, carefully, from the beginning.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Eleven",
+      title: "What the Record Leaves Out",
+      content: `
+Chapter Eleven: What the Record Leaves Out
+
+The preface was kind to everyone. That was what Victoria found hardest to forgive.
+
+Tobin brought it to the Kessing kitchen on a wet afternoon, two months after the Settlement had been signed. He had wrapped it in a clean cloth to protect it from the rain. As Fenwick’s clerk, he was used to putting things in order. He was the young man with the quick, rounded handwriting who had written until into the meeting minutes without noticing what it meant.
+
+Now he stood dripping on the mat, holding out the cloth with both hands. He looked like someone who had written the best thing of his life and was afraid someone might tell him otherwise.
+
+“The reeve asked me to put it together,” he said. “For the Reading. He thinks that every spring, at the full meeting, someone should stand up and tell how it began. So the children know. And so it’s told the same way each time.”
+
+He swallowed.
+
+“He asked me to bring it to you first. It isn’t a rule. You don’t have to say anything. He only thought you’d want to hear it.”
+
+“Then I’ll hear it,” Victoria said.
+
+Tobin remained standing while he read. Nobody thought to offer him a chair.
+
+The reading took about as long as a kettle took to boil. Victoria stood by the dresser, a cup cooling in her hand. Madeleine sat at the table with her slate, and Asta sat at the end of the bench with her knees drawn up. For the entire reading, none of them moved.
+
+In the year of the burning, the villages of the sound, seeing that each stood alone against a danger none could meet alone, put aside their old quarrels and came together. They raised the beacons. They laid by fuel against the dark. A woman of Kessing, who held no office, went out to the headland on a night of storm, and the stores were opened for the boats at sea, and the boats came home by the light of two fires. And when the winter was done the villages sat down together at Ostwick and made a promise to one another, and called it Norwyn, and the promise has held.
+
+There was more. A passage explained the second key, and another described Ilse Lowe’s rule for contributions. Victoria smiled at that part. Tobin had made it sound as though she had thought of the rule in a moment of calm wisdom, rather than in the middle of an argument.
+
+When he finished, he folded the page and held it loosely between his hands.
+
+It was a good piece of writing. The sentences moved easily. A child could probably learn it by heart after hearing it twice.
+
+“It’s very fine,” Victoria said.
+
+She meant it.
+
+“Is there anything wrong with it?”
+
+She opened her mouth to say no, then stopped.
+
+She was waiting for Madeleine to speak.
+
+The realization surprised her. She had begun to depend on her daughter to notice what she herself had missed.
+
+Madeleine said nothing until Tobin had left. She waited for the door to close and his boots to fade down the path. Then she turned her slate over, laid it on the table, and drew a line down the middle with the edge of her thumb.
+
+“I’m not saying it’s untrue,” she said.
+
+“Nobody said it was.”
+
+“It isn’t.” She rubbed away a smear of chalk. “I went through it twice while he was reading. I checked it against the book in my head. I couldn’t find anything that wasn’t true.”
+
+She sounded almost annoyed by the discovery.
+
+“It’s only that it doesn’t say what happened. It says what’s left after you take out the difficult parts.”
+
+“What difficult parts?”
+
+“The lock.”
+
+She wrote the word on the left side of the slate.
+
+“It says the stores were opened. Opened by whom? It makes it sound like a door that swung open by itself.”
+
+She added another word beneath it.
+
+AXE.
+
+“And it says a woman of Kessing, who held no office. That’s you. It’s a nice way to put it, but it doesn’t say you took an axe to the lock.”
+
+Victoria watched the chalk move across the slate.
+
+“It doesn’t say what it cost. Or that you broke the rule. Or that Piers would have agreed if you’d been able to ask him. It just says the store was opened, and then everything worked out.”
+
+“Go on.”
+
+“The stranger isn’t in it.”
+
+Madeleine wrote that down too.
+
+“It says the burning, but not who burned Skerrow. It doesn’t say there’s a man in a storehouse who might know. It doesn’t say Sedge Landing refused to sign, or that Sedge Landing was the place that got hit. It says the villages came together, but that isn’t how it happened. Some of them came together afterward.”
+
+She stopped to study the slate, then looked up.
+
+“And it doesn’t say sixteen.”
+
+“Sixteen what?”
+
+“Boats.”
+
+Her voice grew quieter.
+
+“It says the boats came home. It doesn’t say which ones. I thought perhaps it would say sixteen, but it doesn’t. It doesn’t say seventeen either. It says the boats, as if every single one came back.”
+
+Victoria set down her cup.
+
+“It isn’t true,” Madeleine said. “But you can’t point to the exact place where it becomes untrue, because he never wrote a number.”
+
+Victoria realized she was gripping the edge of the dresser.
+
+She remembered standing on the platform steps at dawn, her hands blackened from the fire. She remembered watching Fenwick’s cutter search the water until noon. She remembered the cap and the bailing scoop.
+
+She had not thought about them since the Settlement.
+
+She had been so busy being thanked for the boats that returned that she had allowed the one that did not to disappear from the story.
+
+“Madeleine,” she said, “nobody did this on purpose.”
+
+“I know. That’s what’s so strange.”
+
+Madeleine frowned at the slate as if it had given her a sum she could not solve.
+
+“If someone had lied, I’d know what to do. I’d say, that’s wrong, and I’d show them where. But he didn’t lie. Every single thing he picked is true. And when you put them all together, you can’t find the place where they stopped being true.”
+
+Maren did not argue with her.
+
+They found her the next morning in the room above the water, the window open and the Ostwick book lying flat before her. Her pen rested across the page.
+
+She listened to Madeleine with her head tilted, as she often did when she noticed something other people had overlooked.
+
+When Madeleine finished, Maren remained quiet for a moment.
+
+“I’ve read it,” she said. “Tobin showed it to me on Tuesday. I thought it was good.”
+
+“It is good,” Madeleine said.
+
+“Yes. That’s the difficulty.”
+
+Maren touched the edge of the book.
+
+“This has everything. The axe. The three exceptions, then the six. The names of the dead at the landing, spelled correctly. Every page since the signing. Anyone can read it. Eleven people have come through that door since midwinter, and nine of them were you.”
+
+She almost smiled.
+
+“The preface is a different thing. It’s what people will say aloud. Nobody stands up and reads a whole book. They learn twelve lines that a child can remember.”
+
+“Then the twelve lines are what people believe.”
+
+“The twelve lines are what people remember.”
+
+Maren drew a breath.
+
+“I can’t promise they won’t become the only version anyone knows. I’d like to. I’ve kept this book for fourteen years, and I’ve watched what people hold on to. It’s never the page with everything on it. It’s the one that’s easy to carry.”
+
+“Can’t you make it say the rest?”
+
+“It isn’t mine to change. It belongs to Fenwick. To the hall.”
+
+For a moment, Maren looked very tired.
+
+“And there’s something else I should tell you. I approved the wording. When Tobin asked whether there was anything in it I couldn’t swear was true, I said no. Which was true. I couldn’t find a false word either.”
+
+She folded her hands.
+
+“I never thought to ask what was missing.”
+
+“Why not?”
+
+“Because it isn’t the question people think to ask. You hold a page up and look for what’s wrong with it.”
+
+She gave a small shrug.
+
+“I’ve done this for fourteen years, and in one week you’ve shown me that I was checking only half.”
+
+Madeleine looked down at her hands.
+
+Victoria, standing in the doorway, saw her decide not to apologize. Maren did not seem to expect one.
+
+Nell Rudd came to the steward’s table on a Thursday because the Settlement said anyone could, and Nell was the sort of woman who did what had been written down.
+
+She was perhaps thirty-five, broad-shouldered and fair, with a plain, freckled face. Two children stood beside her, each holding on to her skirt.
+
+She did not curtsey. She stood in the middle of Victoria’s kitchen with her hands folded over her apron and explained why she had come.
+
+“My husband was Col Rudd,” she said. “He was aboard the Haskells’ long-liner. The one that went onto the Teeth. There were two men aboard, Col and Ned Haskell. They found a scoop. That’s what I’ve been told.”
+
+She did not raise her voice.
+
+“I’m told the contribution covers us. Ilse Lowe came to explain it. The house goes without something, and the house is fed. I want to say thank you. I mean it. They’ve brought us bread twice.”
+
+“I’’m glad.”
+
+“But I didn’t come for that.”
+
+Nell shifted her weight.
+
+“It’s the Reading. Tobin read it to me. He was kind about it. He sat in my kitchen and read it twice.”
+
+Something in Victoria went still.
+
+“What did you think?”
+
+“I thought it was very nicely done.”
+
+Nell’s mouth tightened, then relaxed.
+
+“It says the boats came home. And I hear your girl has been going around with her slate, counting things. So I thought I’d ask her. Is it true? Did they?”
+
+Madeleine sat at the table. Her face had gone pale.
+
+“Sixteen did,” she said.
+
+“Out of how many?”
+
+“Seventeen.”
+
+The answer came out very small.
+
+“I wrote it down at the slip. Then I crossed it out.”
+
+Nell nodded slowly.
+
+“I thought so.”
+
+She glanced at the children beside her. The younger one, a boy of five or six, stared up at Victoria with wide, round eyes and sucked the corner of his sleeve.
+
+“I’m not asking for anything else to change,” Nell continued. “I don't want the axe left out. I'm glad she broke the lock. If it had been Col’s cousin out there, I’d have broken the door myself.”
+
+She said it plainly, without trying to make it sound better.
+
+“I’m only saying that every spring, they’ll stand in the hall and repeat those words. The children will say them after Tobin. The boats came home. And mine will say them too.”
+
+Nobody spoke.
+
+Asta had set down her spoon.
+
+“What would you want?” Victoria asked. “Tell me, and I’ll put it to Fenwick.”
+
+“His name.”
+
+Nell’s voice did not shake.
+
+“Col’s name. And Ned’s, for his mother’s sake. I’d like them said once a year. Not a speech. Just a mention that there were two men who didn’t come home.”
+
+She lifted her chin.
+
+“It isn’t much to ask of a hall.”
+
+“No,” Victoria said. “It isn’t.”
+
+“Will they do it?”
+
+“I don't know.”
+
+The words came out before Victoria could soften them.
+
+She heard herself saying them to Nell, and remembered saying the same thing to a frightened child in the autumn, to a village in the winter, and to people waiting for promises that had not yet been kept.
+
+It had never become easier.
+
+“I’ll ask,” she said. “But I can’t promise what they’ll answer. The steward doesn’t control the Reading.”
+
+“That’s what Ilse said you’d say.”
+
+Nell almost smiled.
+
+“She said you were honest. She didn’t say it would be any use.”
+
+When Nell had gone, taking both children with her, the kitchen fell quiet.
+
+Madeleine sat with her hands flat on either side of the slate.
+
+“Are you angry that I said it?” she asked. “In front of her?”
+
+“No.”
+
+“I didn’t know what else to do.”
+
+“You told the truth to someone who asked you for it.” Victoria knelt beside her chair. “That isn’t something to be angry about. It may be the bravest thing anyone has done in this house all winter.”
+
+“It didn’t feel brave.”
+
+Madeleine’s mouth trembled.
+
+“It felt like I’d been carrying the number around by myself. Then I put it down in front of her, and now she has it too.”
+
+She drew a shaky breath.
+
+“I wish I hadn’t been the one who had to know it first.”
+
+Victoria put her arms around her, holding her close with the chair and the slate between them.
+
+She did not say everything would be all right.
+
+“I know,” she said, and held on.
+
+Over Madeleine’s shoulder, she saw Asta watching them from the end of the bench. The girl still had her spoon in her hand, and her expression was one Victoria could not quite understand.
+
+Fenwick received them in the long, timbered room above the harbour. Beneath the sloping floor, grey water moved against the quay.
+
+Corby sat beside him. Tobin hovered at the end of the table, holding the preface.
+
+Fenwick listened to the whole account without interrupting. Victoria had expected him to object somewhere along the way. She had not expected him to look so thoughtful.
+
+When she finished, he nodded.
+
+“It’s a fair request.”
+
+“Then you’ll add the names.”
+
+“I’d like to.” He rubbed his jaw. “Very much, in fact.”
+
+He glanced down at the page.
+
+“Mistress Victoria, I stood on that quay and watched the boat go over. I put my own cutter into the water and searched until noon. I knew Col Rudd. He mended my sail twice.”
+
+For a moment, his eyes stayed on the words.
+
+“But let me tell you what I think the Reading is for. Then you can tell me where I’m wrong.”
+
+“Go on.”
+
+“It’s for the people who weren’t there. The children carried out of Skerrow who can’t remember their mothers’ faces. The boys growing up at Sedge Landing, who may one day bury their fathers and their fathers’ fathers if we fail to do what we’ve promised.”
+
+His voice lowered.
+
+“They have to stand in that hall once a year and hear that it was worth it. That the villages came together. That the arrangement held.”
+
+He paused.
+
+“If I read out every name, every spring, the whole Reading becomes a list of the dead. It becomes a funeral. It turns the worst night of their lives into the worst day of every year. People will dread coming. Then they’ll stop coming. And eventually, nobody will say the words at all.”
+
+“That’s not nothing,” Corby said quietly.
+
+“No,” Victoria agreed. “It isn’t.”
+
+“And the axe.”
+
+Fenwick looked directly at her.
+
+“I’d leave that out of the Reading too. If we teach the children that the steward broke the lock, then after fifty years they may come to believe that breaking the lock is part of the job. They may think it’s what a steward is for.”
+
+He rested a hand on the page.
+
+“I’d rather they thought of it as a door that opened.”
+
+Victoria stood very still.
+
+“You’ve thought this through.”
+
+“I’ve had a week.”
+
+“Then you’ve thought further than I did.”
+
+“I don’t think so. I think I’ve had longer to be afraid of what might happen if we tell it the wrong way.”
+
+He looked at her with a tired kind of kindness.
+
+“You’re angry. You have a right to be. But I don’t believe the preface is a lie. And I don’t think you do either.”
+
+“No,” Victoria said. “I don’t.”
+
+That was the hardest part.
+
+She stood in the long room with the water moving beneath her feet, trying to find the flaw in her reasoning. She could not. He had explained exactly what he meant. Every argument was reasonable.
+
+Madeleine stood beside her, gripping the slate so tightly that her knuckles had gone pale.
+
+Victoria could feel her attention, steady and cold as a draft beneath a door.
+
+“The names,” Victoria said at last. “At least the names.”
+
+Fenwick fell silent. After a while, he nodded to Tobin, who bent over the page.
+
+“In the book,” Fenwick said. “Not in the preface. At the end of the Reading, after the children have gone outside, Maren can read the names of everyone we lost. The landing, the Teeth, and the rest. Once, in an ordinary voice. Anyone who wants to stay can hear it.”
+
+He looked up.
+
+“I won’t make it part of what the children recite. I’d rather the names were spoken properly than forced into a rhythm. Will that do?”
+
+Victoria wanted to say no.
+
+She wanted to tell him that the list at the end was the part people would leave early to avoid. That some would never hear the names at all.
+
+Then she thought of Nell Rudd standing in her kitchen with her hands folded over her apron.
+
+“I’’ll ask her,” Victoria said.
+
+Gunnhild was waiting at the bottom of the stairs when they came down. Her gaff rested on her shoulder, and her chin was tucked into her collar. She had walked all the way from the headland, and her boots were wet to the knees.
+
+“He isn’t in it,” she said.
+
+“No.”
+
+“The man in the storehouse. I asked Tobin to read me the whole thing.”
+
+She did not move.
+
+“It says the burning. It doesn’t say anyone burned Skerrow. I stood over that man on the shingle with a hook in my hand, Victoria. And now he’s missing from the account of what we became. I’ll be dead before the children start asking what happened to him.”
+
+“There’s a line in Maren’s book. The keeping of the stranger.”
+
+“A line nobody reads.”
+
+Gunnhild adjusted the gaff on her shoulder.
+
+“I told you I’d say something when I knew what to say. Now I do. I don’t want him freed. I don't know whether he should be. I want him in the story.”
+
+She paused.
+
+“I want someone standing in that hall forty years from now to know there was a man. That we took him alive. That we kept him. That we never knew what to do with him.”
+
+She took a breath.
+
+“That’s the one thing I’d put in, if the writing were mine.”
+
+“Fenwick won’t agree.”
+
+“I thought not.”
+
+Her expression did not change.
+
+“But I wanted to say it to you. To the steward. So somewhere, at least, it’s written down that I asked.”
+
+“I’ll tell Maren.”
+
+“Aye.”
+
+Gunnhild nodded and walked out into the rain.
+
+Victoria watched her cross the quay, water running from the brim of her hat. She thought of what Madeleine had said in the kitchen.
+
+It was all true.
+
+And each person, it seemed, had been given some version of what they asked for. A name in a book. A promise recorded. A place to speak.
+
+But none of them had been given it where it would be heard by everyone.
+
+The first Reading was held in Ostwick hall on the last day of the thaw. Every window stood open.
+
+Victoria stayed near the back. Nobody had asked her to stand anywhere else.
+
+The hall was crowded from wall to wall. The children sat cross-legged in the front rows, scrubbed clean and solemn, wearing the clothes their families had saved for the occasion.
+
+Tobin stood at the front and began to read.
+
+He had a good voice. He read more slowly than he had in the Kessing kitchen, pausing at the right places and looking up at the right moments.
+
+When he reached the line about the boats, he hesitated for the briefest moment.
+
+And the boats came home by the light of two fires.
+
+The children repeated it after him.
+
+They spoke in the loud, flat voice children use when they have been taught to say something together. A hundred small mouths formed the same words at almost exactly the same moment.
+
+Victoria looked at the nearest faces.
+
+They were so certain.
+
+She did not search the room for Nell Rudd. She knew where Nell was sitting, on the far end of the back bench, wearing a clean apron with her two children between her knees.
+
+The little boy was repeating the words too. He held his chin high, shut his eyes, and recited the line clearly, with the serious concentration of a child determined to do something right.
+
+Madeleine did not speak.
+
+She sat on the floor at the end of the front row, her slate resting in her lap, her lips pressed together. Asta sat beside her, very straight, her mouth closed as well.
+
+Neither girl looked at the other.
+
+By the time the Reading ended, most of the hall had emptied into the afternoon. The doors stood open, and voices drifted away along the quay.
+
+Maren rose to read the names.
+
+Perhaps thirty people remained. They stood in the half-empty hall with their hands at their sides.
+
+Victoria counted them without thinking.
+
+Nell Rudd was still there. So was Edmund Tarn, who had come down from the landing. Piers stood by the wall with Ilse, her good hand resting in the crook of his arm. Gunnhild waited alone near the door.
+
+Maren began.
+
+Her voice was the same flat, steady voice she used in the schoolroom. She gave no name more weight than another.
+
+“Joss Tarn, of Sedge Landing. Anders Pell, of Sedge Landing.”
+
+She read the names from Skerrow. There were many. Some belonged to people whose identities had been confirmed. Others could only be recorded as a child of the house by the east slip, name not known.
+
+Then came the names from the Teeth.
+
+“Col Rudd, of Ostwick. Ned Haskell, of Ostwick.”
+
+Maren read them as she might have read a tally of salt.
+
+Nell did not move.
+
+When the reading was finished, she took her children by the hands and walked out without looking at anyone.
+
+At the door, the little boy turned around and stared back into the hall.
+
+Victoria could not tell whom he was looking at.
+
+She stayed in the empty room for a moment, then stepped outside into the grey light.
+
+Madeleine was already on the side stairs, the ones that led up to the loft. She was kneeling on the third step, her slate beside her.
+
+She had a stub of chalk in her fist. It was the same grey piece that had lain in the corner of the stairs at home all winter.
+
+She was writing on the wood beneath the step above, working carefully, with her tongue caught between her teeth.
+
+Two names appeared in her small, square handwriting, leaning slightly to the left.
+
+Col Rudd.
+
+Ned Haskell.
+
+She drew a line beneath them.
+
+Then she wrote a number.
+
+It was not sixteen.
+
+Asta knelt beside her. Madeleine offered her the chalk.
+
+For a long moment, Asta held it over the bare wood. Then she lowered her hand and wrote a third name in thick, uneven letters, as if each one had cost her something.
+
+Joss.
+
+Neither girl looked up.
+
+From the quay, the children's voices carried across the water. They were shouting the line to one another, laughing when they got it wrong and trying again until they got it right.
+
+The boats came home. The boats came home.
+
+Somewhere along the harbour wall, a girl began to sing the words. Another joined her.
+
+The song rose and fell above the water, passing from one child to the next, until it sounded like something that had always been there.
+      `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Twelve",
+      title: "The Future Inherits",
+      content: `
+Chapter Twelve: The Future Inherits
+
+By the ninth spring, nobody asked whether Victoria would remain steward. They asked when she would finally be allowed to stop.
+
+The question had become a habit of the hall. Every year, four or five hands went up in favour of keeping her in the office, and Maren recorded the count beside the clause. Each year, the vote came a little more easily.
+
+This year, Tobin arrived at the Kessing kitchen a week before the meeting with a proposal folded inside his sleeve. He was the reeve’s secretary now, and on feast days he wore the chain Fenwick had eventually passed on to him. He did not offer Victoria the paper. He kept it behind his back, like a boy hiding a bird’s egg.
+
+“It’s only a matter of keeping things tidy,” he said. “A vote every year, with the weather and the herring, means everyone has to leave the water to attend. The hall thought it might be simpler if the arrangement continued until the steward asked to be released. The rule that three of the five villages can remove her would remain, of course.”
+
+“Of course,” Victoria said.
+
+“And there’s the other matter. The writing takes time.”
+
+He looked at the floor.
+
+“If another boat appears off the point, and the steward has to make an exception, she must write it down and answer for it afterward. Mistress Cole’s clause. Some people think it puts too much weight on whoever holds the office. That in a real emergency, she ought to be trusted to act first. The record could come later.”
+
+“Or not at all.”
+
+“I only carry the proposal,” Tobin said miserably.
+
+Victoria thanked him and gave him tea.
+
+After he left, she stood with one hand against the dresser and examined her first reaction.
+
+Relief.
+
+She was forty-eight. The cold brought on a cough that could last for weeks, and her knee complained whenever she climbed stairs. Nine years of recording every exception in front of the person affected had left her with a memory that worked like a ledger. She was tired of being the person who had to stand up and explain herself.
+
+She was tired of being watched.
+
+That was the part she liked least about the proposal. It offered her a way out of the work, but she could not pretend she wanted it only because the work was too heavy.
+
+“You think he’s being reasonable,” Madeleine said from the table.
+
+She was twenty-one now, tall and spare, with her mother’s jaw and a habit of placing one hand flat on whatever stood nearest, as if checking that it was real. She still carried a slate, though it was a different one from the slate she had used as a child.
+
+Beside her sat Asta, with a bowl and spoon. She had occupied that same place for years. She was seventeen or eighteen, perhaps, though nobody had ever been certain of her age.
+
+“I think he’s not wrong about the delay,” Victoria said.
+
+“It’s meant to be slow.”
+
+“Madeleine.”
+
+“I know what you’re going to say.”
+
+She did not raise her voice. Victoria had spent years hoping for that change, and now that it had come, she found herself missing the sharper sound of her daughter’s anger.
+
+“You’ll say nothing has happened in four years. The stacks have been quiet. Nobody has tested the arrangement since the Teeth. So what is all this for?”
+
+“I wasn't going to say that.”
+
+“You were thinking it.”
+
+Victoria said nothing.
+
+A log shifted in the grate.
+
+“There’s a boat off Skerrow Point,” Asta said.
+
+It was the first thing she had said aloud in nine years.
+
+Her voice was quiet and rough with disuse. She did not look up from her bowl.
+
+For a moment, nobody moved.
+
+Victoria had imagined Asta speaking again countless times. She had pictured a name, a cry, perhaps a few words whispered to Madeleine in the dark. She had never imagined a report delivered over breakfast.
+
+“Since when?” Madeleine asked.
+
+Her voice had become very steady.
+
+“Two nights ago. A boat with no lines out. There might have been a lantern.”
+
+Asta set down her spoon.
+
+“I wrote it for Ruf on the stack. He said he would write it down too.”
+
+“Did he?”
+
+“He said he would.”
+
+Madeleine stood. She did not look at her mother. She looked at Asta, her whole face open, suddenly young in a way Victoria had not seen for years.
+
+It seemed to Victoria that the two girls had been having this conversation for nine years in a language she had never learned.
+
+“Why didn't you tell us?” Madeleine asked.
+
+“Nobody asked who.”
+
+“Why not me?”
+
+Asta considered the question.
+
+“Nobody asked who.”
+
+There was no accusation in her voice. She spoke as if she were describing the direction of the wind.
+
+Madeleine sat down slowly.
+
+After a moment, she said, “Ruf is on the stack tonight with a boy of sixteen. I’ll go up there. Will you come with me?”
+
+“Yes.”
+
+Madeleine turned toward the door.
+
+“Mama.”
+
+Victoria looked at her.
+
+“That’s what the clause is for. Not the Teeth. It’s for the day somebody has a good reason and no time, and everyone else is so relieved that it worked that nobody thinks to ask what happened.”
+
+They left before dawn.
+
+They found nothing.
+
+Ruf had written the report down. That was the first thing Madeleine checked.
+
+He was twenty-four now, broad through the shoulders, his watch coat finally fitting him properly. He stood on the platform at Gull Head with the tally slate in his hand and explained what he had seen, what the boy beside him had seen, and what the two of them had disagreed about.
+
+For two nights, they had watched the water and said no to each other twice.
+
+Once, they had agreed that a light on the water might be a boat. They had waited before lighting the beacon. By morning, the vessel had turned out to be a seal-hunter from the north, sheltering from the weather before moving on.
+
+“We didn’t light it,” Ruf said. “We both had to agree.”
+
+“I know,” Madeleine said.
+
+“I’d have liked to say yes on my own, just once. It would have been quicker.”
+
+He turned the slate over in his hands.
+
+“But then you’d have wanted to know why.”
+
+“Yes.”
+
+“That's what I thought.”
+
+He almost smiled.
+
+“It’s an odd thing, Madeleine. I’d forgotten the clause was there. I’d only got used to being slow.”
+
+Madeleine looked at the slate for a moment before handing it back.
+
+“Keep it somewhere people can find it.”
+
+“I will.”
+
+This time, he wrote that down too.
+
+The hall was full on the day of the meeting.
+
+Maren read the proposal in her steady schoolroom voice. She had grown older over the nine years, and the hand holding the paper trembled slightly. She steadied it with her other hand and continued.
+
+When she finished, the hall remained quiet until Corby’s son stood.
+
+He spoke with genuine feeling.
+
+“The steward has served us faithfully for nine years. She has done what we asked of her. It seems unfair to keep making her prove herself every spring.”
+
+Several people murmured their agreement.
+
+Victoria sat at the long table without looking down. She knew where Madeleine was. Her daughter had asked permission to speak, and Maren had entered her name on the list.
+
+Madeleine sat at the end of the front bench, one hand flat against her knee.
+
+The hall had changed over the years. Some people who had once crowded the room were gone; others had grown into their places. Victoria counted them out of habit.
+
+Fenwick sat in a chair by the wall, very old now, a blanket across his legs. Hale remained near the door, as he always had, though it had been years since he had needed to leave a meeting early.
+
+Piers and Ilse sat together near the front, her good hand resting in the crook of his arm. Edmund Tarn stood at the back. Nell Rudd had come with her fourteen-year-old son, who had inherited her freckles and listened to everything with solemn attention.
+
+Osric, whose age nobody dared guess, tapped his stick against his stool in the old pattern of long and short beats. He seemed to be doing it for no one in particular.
+
+Berit’s seat was empty. She had died in the second winter, and Gunnhild had taken over the stack. At sixty, Gunnhild was grey-haired and weathered. She stood against the back wall with her arms folded and her chin lowered.
+
+When Madeleine rose, the hall did not fall silent. It became politely attentive, the way a room did when the steward’s daughter asked to speak.
+
+“I won’t say the proposal is unfair,” she began. “It isn’t. My mother has done this work for nine years, and she has done it well. She’s tired. I can see that.”
+
+Someone murmured agreement.
+
+“But I’m asking you to keep the year, the writing, and the requirement to stand here afterward.”
+
+She did not look at Victoria.
+
+“I’ve read the book. I know I’m the only person who has read all of it, apart from Mistress Cole. She would probably tell you that reading it is just a habit of mine.”
+
+A faint smile passed through the room, but Madeleine did not return it.
+
+“I counted the exceptions. There were six in the first winter. There have been eleven since. Every one was needed. I can say that honestly. I was there for most of them.”
+
+She stopped and took a breath. Victoria saw her hand close against her knee.
+
+“But I can also say that I don’t remember any of those eleven being difficult to write down. Each one was easier than the last.”
+
+She waited until the room had settled again.
+
+“That isn’t because we became worse people. It’s because we got good at making exceptions. And when you become good at something difficult, it stops feeling difficult. After a while, it stops feeling like anything at all.”
+
+Her voice caught. She paused until she could continue.
+
+“My mother had forgotten the seventeenth boat until a woman came into our kitchen and asked her about it. My mother was the person who counted the boats. She had forgotten.”
+
+Madeleine looked across the room.
+
+“I’m not saying that to blame her. I’m saying that this is what happens to anyone.”
+
+“The clause isn’t an insult, Madeleine,” Corby’s son said gently.
+
+“No. It’s an inconvenience. It’s supposed to be.”
+
+She turned to face him.
+
+“If you remove the writing requirement during an emergency, then the steward can do whatever she thinks necessary in an emergency. And an emergency becomes whatever the steward says it is.”
+
+She shook her head.
+
+“I don’t think my mother would misuse that freedom. I think she would make the right decision. But the clause isn’t there for her. It’s there for the person who comes after her, when none of us is alive to explain what happened on the first night.”
+
+She glanced toward the open windows.
+
+“I know it costs something. I don’t know how to make a rule that protects people without costing anyone anything. I’ve tried.”
+
+They did not vote immediately.
+
+The discussion continued through the afternoon, with arguments repeated and new ones added. By the time the light began to fade, Victoria understood that she would have to speak.
+
+She had not planned to. She had expected the hall to decide, and she had been prepared to accept the result and go home.
+
+But Madeleine sat very still, her face turned toward the window, and Victoria understood that the question between them was not only about the clause.
+
+It was about nine years of kitchens.
+
+She stood. Her knee hurt, and she waited a moment for the pain to settle.
+
+“I’d like to say something about Gunnhild’s vote.”
+
+Heads turned.
+
+Gunnhild did not move.
+
+“In the first year, she voted against me. Not because she thought I was wrong. She said that whoever sat in the office would probably do a good job for a year, then another year, and that eventually it would become difficult to stand up and say a good person had stayed too long.”
+
+Victoria let the words settle.
+
+“She was right.”
+
+She looked around the hall.
+
+“I’ve stayed too long. I didn’t see it. Madeleine saw it. Asta, I think, saw it too. Perhaps Maren did.”
+
+Her hands rested on the table.
+
+“I’ve been so comfortable being right that I’ve stopped asking who was checking.”
+
+She turned toward Tobin.
+
+“I would like to be released from the office at the end of this year. Not the next. This one. I want the three-of-five rule to remain. I want the annual vote and the written record to remain.”
+
+She paused.
+
+“And I want to propose one more line.”
+
+Maren had already begun writing.
+
+“No exception recorded under this clause may be used as the reason for another.”
+
+Victoria heard the steadiness in her own voice and surprised herself.
+
+“Each exception must stand on its own, for its own night. A steward who says as before has said nothing.”
+
+She looked down at the table.
+
+“If I had known to ask for that in the first winter, I would have wanted someone to say it to me. It’s the thing the Reading leaves out.”
+
+She had told the hall about the axe. She had told them about being afraid for the boats and about being particularly afraid for Bram.
+
+She had never told them about the three days at the salt pans, or the man who had stood there with his arms folded while she tried to explain why she had waited.
+
+She did not tell them now.
+
+Perhaps that was a rule for another steward, she thought. Someone braver than she was, or more foolish.
+
+She sat down, her heart beating hard.
+
+She did not know whether she had spoken well. She knew only that it was the first time in nine years she had said something in that hall that she could not have said without her daughter first saying it to her.
+
+The hands went up.
+
+Victoria counted them once, then counted again.
+
+Five.
+
+They built the record house that summer, with the Ostwick carpenters, above the quay.
+
+It was not grand. It was a long stone room with a slate roof and two doors. One of the doors had two locks.
+
+Maren was no longer strong enough to climb the steps easily. She sat in a chair at the sunny end of the room and directed the placement of the shelves. Until the last nail was in, she kept both books on her knees.
+
+The Ostwick book went into the cupboard on the left. The Kessing book went into the cupboard on the right.
+
+Anyone could read either one, standing before the keeper. The keeper was a young woman who had learned her letters at Maren’s table and whose uncle’s name was read aloud in the hall every spring.
+
+By then, the stranger had a name.
+
+He had given it to Gunnhild one evening at Gull Head, after a long silence. He had been released from the storehouse in the fourth year. Nobody had ever explained exactly why. Afterward, he walked up to the headland, sat beside the stack, and began reading the swell without anyone asking him to.
+
+His name was Teodor, or something close enough that Gunnhild had settled on that spelling.
+
+She walked down to Ostwick on her own two legs and asked Maren to record it.
+
+Maren wrote the name in the Ostwick book in a clear, small hand.
+
+Teodor.
+
+Beside it, she added a line.
+
+Taken alive at Sedge Landing, in the year of the burning. Kept. Not understood.
+
+Gunnhild read it twice.
+
+“Aye,” she said.
+
+Then she went back up the hill.
+
+On the last day, Madeleine marked the page herself with a ribbon. Nobody saw her do it.
+
+She found the place where the exception clause ran down the margin, with Gunnhild’s dissent beside it in Maren’s small, square handwriting. Beneath it sat the new line, requiring every exception to stand alone.
+
+Madeleine laid the ribbon into the fold.
+
+It was only grey wool, cut from a scrap left over from the winter. It would fray with use. Still, it held the place when she closed the book, and an inch of it remained visible at the spine, like a tongue.
+
+Then she went outside and found her mother in the garden of the record house, digging with a spade.
+
+The saplings were ash, sent from the Ridge in a bundle of thin whips. Each was no thicker than Victoria’s finger, with a small knot of root wrapped in sacking.
+
+The westerlies came straight across the quay and over the new roof. A building this long would catch the wind like a sail.
+
+Victoria had thought of that in the spring. Ash grew quickly, stood straight, and could tolerate the salt. A line of trees might one day protect the building.
+
+“They’ll bend,” Madeleine said. “In a gale. Before they’re thick enough.”
+
+“I know. I've had Bram cut stakes.”
+
+They planted eleven saplings along the seaward wall, fastening each to a stake and linking them with wire.
+
+It was slow, awkward work. The wire bit into their hands, and the ground was harder than Victoria had expected.
+
+The point was to keep the saplings upright until they grew strong enough to stand without help.
+
+Victoria bent one against its stake, twisted the wire twice, and let go.
+
+It held.
+
+The tree would not be a tree for another twenty years.
+
+“Will the wire come off?” Madeleine asked.
+
+“When they’re grown.”
+
+She looked at the line of saplings.
+
+“If someone remembers.”
+
+“They’ll forget.”
+
+“Then someone will have to be told.”
+
+Victoria sat back on her heels. Her knee ached.
+
+Above them, the new roof caught the afternoon light. Along the wall, the eleven saplings stood in their stakes, each one a little crooked, each one held in place while it learned to stand.
+
+“Will you tell them?” Victoria asked.
+
+“I can’t tell people who haven’t been born.”
+
+“No.”
+
+Madeleine studied the red marks the wire had left on her hands.
+
+“I’ll write it on the stair.”
+
+“What stair?”
+
+“The one at the hall. Under the third step.”
+
+She glanced toward the quay.
+
+“Asta and I have been adding to the list. The number is right now. Someone might find it one day.”
+
+She paused.
+
+“I told you I’d explain what I meant about things that look as though they were already there.”
+
+“You did.”
+
+“I think I only meant that things look as if they were never made once they’ve been around long enough.”
+
+She spoke slowly, as though she were setting down something heavy.
+
+“Someone sees the stacks and thinks they’ve always stood there. They see the record house and think we’ve always had one. They hear the Reading and think the boats came home. They won’t know there was a night when none of it existed.”
+
+She looked at the saplings.
+
+“I don’t know what to do about that. I thought the book would solve it, but the book can’t. It can only be there.”
+
+A short breath escaped her, almost a laugh.
+
+“That’s all I have. It isn’t much.”
+
+Victoria wanted to tell her that it was enough.
+
+She wanted to say she had been proud of her in the hall. That she had also been afraid of her, because Madeleine had seen something Victoria could not bear to see in herself. Both were true.
+
+She wanted to admit that she still did not know what the shore would become after they were gone.
+
+For nine years, she had believed that a promise, if written carefully enough, would stand without her. She still believed it might.
+
+She no longer believed it would stand without someone asking whether it was being kept.
+
+But she said none of this.
+
+Instead, she placed her hand on the top of Madeleine’s head, as she had on a cold night on the wall years ago.
+
+Madeleine leaned slightly into her palm, letting the weight of her head rest there.
+
+Down the quay, a bell began to ring. Three slow strokes, followed by a pause. The evening watch was going up.
+
+Along the coast, the stacks stood at their posts, dark and square against the clear sky. Nothing was burning.
+
+Beside the record house, the eleven saplings stood in their wire, each held a little straighter than it might have grown on its own.
+
+Madeleine picked up the spade and carried it to the last stake. She pressed the earth down with her foot, then stood for a moment looking along the row.
+
+At last, she bent and tightened the final loop of wire.
+
+She worked carefully, with her tongue between her teeth, making it just tight enough to hold.
+      `
     }
   ],
 
@@ -2965,6 +4909,258 @@ The sentence formed without friction. She had said it at twelve; she had said it
 That was what made her heart seize in the middle of the chest. It would have been so clean to hate him. If Edward of Valenne, if he had been insolent, if he had reeked of vanity or cruelty, refusal would have had the clear, sharp dignity of courage. Instead, he was good. He was plausible. He was everything someone who loved her would have chosen for her.
 And because she was kind, and because she was sensible, she had slowly learned to want what everyone had decided she was meant to have.
 Until the letter from the mountain border arrived with no royal seal at all.
+      `
+    },
+    {
+      eraLabel: "Era Two: Elizabeth",
+      number: "Chapter Two",
+      title: "The Alignment Doctrine",
+      content: `
+Rain had been falling since before dawn.
+The seminar hall smelled of wet wool drying on the radiators, chalk dust, and the cold mineral scent of walls that had been damp every winter since the Academy was built. Elizabeth sat in her usual place in the second row, her collar still wet from the short journey between the car and the door. Her attendant waited in the corridor outside, as he did every Thursday. The door never quite closed on him.
+Professor Calloway stood at the lectern with a folder in his hands. He never opened it. It gave his hands something to do while he spoke.
+“Alignment,” he said, “is what remains when obedience is no longer needed.”
+Twenty-six voices repeated the sentence together.
+The words landed at the same moment, so smoothly that nobody had to think about them. Elizabeth's mouth moved with the others. She had learned the sentence at fourteen from a tutor who used the same measured rhythm, then again at eighteen from the Queen, who had said it without ceremony, as though it were something they already understood.
+“A well-formed mind does not need to be told what serves the whole. It arrives there unprompted and takes the arrival for its own conclusion. We have a model for this, one you will encounter in the Academy panels and in every office you will one day occupy. The Timber Inspection Schedule.”
+A few students began writing.
+It was an ordinary example, which was precisely why Calloway had chosen it. He preferred illustrations that seemed too practical to argue with. They proved, he believed, that the doctrine worked beyond the classroom.
+“Every lot of timber entering the kingdom's trade, whether from the coast, the river districts, or the high forests, is inspected on one of four fixed days each year. The same four days, the same standard, the same inspectors' seals, regardless of whose timber it is or how urgently the owner requests an inspection. Before the schedule, inspections went to whoever had the most influence. Now no district is favored. Every owner knows when his wood will be examined, and knows that every other owner knows it too. One calendar. One standard.”
+He looked toward Elizabeth.
+“Princess Elizabeth, why does this serve stability?”
+He always called on her first when a question involved the Crown. She understood it as a courtesy and as a demonstration of her place in the room. She had never found it easy to separate the two.
+“Because it removes discretion,” she said. “An inspection granted early can be bought or begged for. Once one owner receives that advantage, everyone else learns that the same advantage is available to them. The fixed dates remove the question altogether. People stop petitioning for exceptions because there are none to petition for, and the trade can plan around a reliable calendar. It is fair because the same rules apply to everyone.”
+“Fair because the same rules apply.” Calloway nodded. “Precisely. Now, who finds fault?”
+It was the final part of the exercise. Nobody ever answered it.
+The room settled into the polite silence of people who had already agreed that the question was rhetorical. Calloway let the pause continue before turning toward the windows, where a young man in a grey jumper was arranging a stack of photocopied critiques on the corner of a desk.
+“Elias. You know something about timber, I believe.”
+Nobody else turned to look at him. That, too, was a way of looking.
+Elizabeth remained facing forward. She knew where Elias was, just as she had known since the first day of term, just as she knew where the clock stood in every room she entered.
+He finished aligning the papers before straightening.
+He was broad through the shoulders and slightly stooped, with the posture of someone accustomed to working beneath low ceilings. His jumper had been mended at both elbows with thread almost the same colour as the original wool. His hands were large, the knuckles marked, and he held them carefully at his sides, as though he knew they were being examined.
+“My father's a joiner,” he said. “That's the extent of it.”
+“And does the schedule trouble him?”
+Elizabeth could see Elias weighing his answer. He was not struggling to find the words. He was deciding whether saying them would be worth the cost and, she suspected, whether the invitation was genuine.
+“Green timber needs time to dry before it can be worked,” he said. “The high-forest lots come down after the thaw, so they reach the rail yard in spring. The next inspection day might be eleven weeks away. Until then, the timber sits under tarpaulin because nobody can legally move it before inspection.”
+He paused briefly, then continued.
+“Eleven weeks of rain and sun on the end grain. Some boards split. Others warp. Then the inspectors arrive on the appointed day, apply the standard, and reject a good part of the timber for damage it picked up while waiting.”
+He stopped, as though the point required nothing more.
+“So the schedule is inspecting for a fault the schedule puts in the wood.”
+Nobody wrote anything down.
+Elizabeth looked at her notebook and realized her pen had stopped moving.
+“It is certainly an inconvenience,” Calloway said mildly. “But have you considered the alternative? Allow one owner an early inspection, and the next will ask for one, followed by the next. Within a decade, the schedule becomes a courtesy extended to those with the right connections. What you describe is the cost of equity. Every structure has one.”
+“I'm not asking for early inspections for friends,” Elias said. “I'm saying the yard is wet, and a board doesn't know what a rule is for.”
+“No,” Calloway agreed, with the gentle satisfaction of a man who had found a way to close an argument. “Nor should it. That is why we have the rule.”
+A small sound moved through the room. Not quite laughter, but something close to relief.
+Elias watched the professor for another moment. Then he glanced at the stack of critiques and said, “Yes, sir,” in a voice that offered nothing further to argue with. He returned to the desk and picked up the next page.
+“Recite,” Calloway said.
+They recited.
+Elizabeth moved her mouth with theirs, but something had shifted.
+She knew she had answered correctly. She had defended the schedule exactly as she had been taught to defend it. Every sentence was sound. The room had accepted her reasoning, and Calloway had confirmed it.
+Yet Elias's account had passed through the same discussion and left her answer standing untouched, perfectly intact, with nothing in it about wet timber.
+She thought of the gardener on his ladder, adjusting the branches with wire and cutting away whatever grew in the wrong direction.
+She stopped herself before the thought could go any further.
+
+The seminar hall emptied into the corridor in the orderly flow the Academy had trained into its students long before they were old enough to question it.
+Elizabeth held her books against her chest and let the crowd carry her toward the covered walk. At the side stair, where the light was poor and fewer students passed, she stepped out of the current.
+Her attendant followed several paces behind, close enough to be useful and far enough to remain outside any photograph.
+Elias stood beside the noticeboard with a bundle of graded essays under his arm. His jacket collar was turned up against the damp. He was reading a notice about a lecture on the Succession Act, apparently trying to remember the room number.
+He did not look up when she stopped.
+That made her wait a little longer than she had intended.
+“These are yours,” he said.
+He pulled a sheet from the bundle and held it out, still looking at the notice. Elizabeth recognized her handwriting through the back of the paper.
+“Seven comments,” he added. “Six of them say the same thing.”
+“Which?”
+“You keep answering the question you'd prefer they'd asked.”
+He turned the page and pointed to a line in the margin.
+“Here. They asked what the clause costs. You explained what it protects.”
+“Both can be true.”
+“They can. I only said you answered one.”
+She took the paper from him.
+His fingers were rough around the knuckles, his nails cut short and square. A thin line of dark remained beneath two of them, where soap had failed to reach.
+Everyone at the Academy knew where his father's workshop was. Some knew that parts of the east wing had been built there, in a yard that smelled of cedar shavings and linseed oil, before Elizabeth was born.
+She had walked through that wing every day of her life without ever thinking about the hands that had made it.
+“You were fair in there,” she said. “To the schedule.”
+“It is fair.” He spoke without hesitation. “Everyone's wood warps on the same day.”
+She expected him to smile. He did not.
+There was no bitterness in his expression, nor any satisfaction at having unsettled her. He had said something true and seemed content to leave it there.
+“You think it should be changed.”
+“I think the yard is wet.”
+He shifted the bundle against his hip.
+“I don't know what should change. I don't know the first thing about the Inspectorate or what would happen to the trade if the dates moved. You'd have to ask someone who does. I only know what happens to the boards.”
+“Professor Calloway's objection was reasonable.”
+“It was.”
+For the first time, Elias looked directly at her.
+“That's what I didn't like about it. If he'd been wrong, I could have said so, and we'd have been finished. But he wasn't wrong. He was answering a different question.”
+He glanced down at the paper in her hand.
+“I find those harder.”
+It was what Elizabeth had thought in the seminar hall, put into fewer words.
+She could not look away from the noticeboard. More troubling still, she did not want to admit that he had given a name to something she had already noticed.
+“You'll miss the walk,” she said instead.
+“I'm not on the walk. I've got a lot sitting in the yard since Monday.”
+He nodded toward the rain.
+“Father's order for the chapel at Saint Aldric's. The oak is meant to be inspected on the twentieth. He's hoping the end grain has held. I said I'd be there by four to look at it.”
+“And if it hasn't?”
+“He'll plane off the damaged two inches and charge less for the pews.”
+Elias shrugged.
+“That's what he did last time. He doesn't write to anyone about it. There'd be no one to write to.”
+He gave a small, precise nod.
+“Your Highness.”
+The title was correct. His tone was not disrespectful.
+Still, it was the least deferential thing anyone had said to her all week, and the only thing that day that felt entirely accurate.
+He went down the stairs without waiting to be dismissed, carrying the essays close to his chest to protect them from the rain.
+Elizabeth remained where she was, holding her seventh comment, and listened to the street door open and shut.
+
+She did not take the covered walk.
+Her attendant said nothing when she turned into the east gallery instead, though it added several minutes to the journey to the car.
+She had walked this corridor ten thousand times.
+The walls were paneled in oak, the grain dark and close, polished with beeswax to a deep brown. Tall rectangular panels sat within their frames, each lit by a narrow window at intervals along the gallery. The light fell on the wood in separate patches, leaving the spaces between them dim.
+At the far end stood a double door that always stuck in winter. Whoever opened it had to lift slightly at the lower corner, a small, practiced movement Elizabeth had watched pages perform since childhood without ever wondering why.
+She stopped beside the third panel from the nearest window.
+For the first time, she looked at its edge.
+A narrow seam ran along one side, where the panel met the upright of its frame. In dry weather, the gap would have been barely visible. Now, with the rain, it had closed almost completely.
+Elizabeth bent closer and pressed her thumb against the opposite edge.
+There was a slight depth beneath the surface. Inside it, where the paint had not reached, ran a thin line of raw wood, paler than the rest.
+The panel was not fixed tightly into its frame.
+It had been left room to move.
+“Your Highness.”
+Her attendant had come a few steps closer.
+“The car is waiting.”
+“One moment.”
+She kept her thumb against the seam.
+The wood was cool beneath her glove. She thought of the timber in the yard, left to absorb the weather while it waited for permission to be examined. She thought of the gardener's wire, the pale shoot cut from the ash tree, and the sentence she had repeated so often that she had stopped hearing what it asked of her.
+Then she straightened, brushed the faint dust from her glove, and followed her attendant down the gallery toward the door that stuck.
+      `
+    },
+    {
+      eraLabel: "Era Two: Elizabeth",
+      number: "Chapter Three",
+      title: "The Cost of Want",
+      content: `
+Chapter Three: The Cost of Want
+
+The tear was a finger's width long, running down the left side seam of Elizabeth's blouse.
+She had found it herself.
+It was a plain cotton blouse, worn beneath her gowns where no one would see it. On Tuesday, while searching the lower stacks of the Academy library, she had caught it on an iron bracket. She felt the fabric give slightly against her ribs but said nothing. That evening, when she undressed, she found the damage: two inches of seam had opened, exposing the lining, though the stitching on either side remained intact.
+The next morning, the maid arrived for the laundry at seven, as she did every day. She knocked softly, a familiar sound that announced her presence without requiring permission to enter.
+Elizabeth slipped the blouse inside her sleeve before the door opened.
+She stood by the window while the maid collected the basket, holding her arm a little stiffly against her side. She watched the courtyard rather than the girl, and she had no idea why her heart was beating so hard.
+She knew what would happen if she handed over the blouse.
+It would go down with the rest of the laundry. By the end of the week, an identical one would be folded in her drawer, clean and whole, with no seam to mend and no mark to show that anything had ever gone wrong.
+It was done kindly. No one complained, and no one expected her to notice. Her clothes had been cared for this way for as long as she could remember. She could not recall ever owning a garment that someone had repaired.
+But she wanted to be the one to mend it.
+That was all.
+She wanted a needle in her own fingers and a small, finished task at the end of the evening, something she had done for herself without anyone arranging it for her.
+The sewing tin was hidden at the back of the third drawer, beneath a shawl no one had reason to lift. It was dented at one corner, and the painted roses on its lid had worn away until only a few red smudges remained.
+Inside were six needles, a spool of white thread, and a piece of tailor's chalk.
+She had bought it on Friday during a visit to the almshouse at Saint Aldric's. The street had been closed for market day, and the car had waited at the tradesmen's gate while her attendant went to settle a dispute with the driver.
+Elizabeth had been carrying the alms purse, with one coin for each resident, counted out by the almoner and placed in her hand. Beside the car, a haberdasher had set up a small table, with a boy standing behind it to mind the goods.
+She had approached the table as though she were simply looking through a window.
+The tin had cost two coins.
+She had given the last two residents their alms from her own cuff, where she had slipped the coins earlier from the dish in the vestibule. She was certain no one had counted.
+She had counted it herself eleven times since.
+Now she sat on the floor of her bedroom, wearing only her slip, with her back against the foot of the bed. A green-shaded lamp cast a circle of light around her. Sapphire slept on the coverlet above, one paw dangling over the edge.
+Elizabeth threaded the needle on her third attempt.
+She tied the thread the way she had once watched a seamstress do it through the half-open door of the sewing room, then began.
+The first stitches were too large and uneven. When she pulled the thread tight, the fabric gathered into a pucker. She picked the stitches out and tried again.
+The second attempt was better.
+By the third, she had stopped trying to make the work resemble anyone else's. She concentrated on the cloth beneath her thumb, the slight resistance of the needle, and the quiet sound of thread passing through fabric.
+At the far end of the room lay the gold silk gown she had worn on Thursday. She had left it in a heap after undressing.
+She did not look at it.
+The repair took forty minutes.
+When she finished, she bit through the thread as she had seen others do. A raised line marked the place where the stitches doubled back. She held the blouse beneath the lamp and turned it from side to side.
+The repair was visible.
+It would always be visible.
+She found that she did not mind.
+For a while, she sat on the floor with the blouse in her lap and nothing she was expected to do. The room was quiet in a way she could not remember experiencing for months.
+It was not that nobody else was there.
+It was that, for once, nothing in the room was asking anything of her.
+
+“Arms up, Your Highness.”
+Mrs. Hale spoke around the pins held between her lips, making every instruction sound like a decision that had already been made.
+Elizabeth raised her arms.
+The silk was the shade of blue Edward's mother had approved. It fitted closely through the bodice and waist, and its weight held Elizabeth's shoulders back. In the long mirror, she could see herself standing rigidly while Mrs. Hale knelt beside her hip.
+Behind them, Queen Anne sat in a chair by the window.
+She had arrived during the first fifteen minutes of the fitting and announced that she would not interrupt. Since then, she had been reading a dispatch, turning each page with one gloved finger.
+“A little more at the waist,” Mrs. Hale said.
+“Not too much,” Anne replied without looking up. “She must be able to sit through dinner.”
+“Yes, Your Majesty.”
+Elizabeth lowered her eyes to her raised hands.
+There it was.
+On the pad of her left middle finger sat a small, dark mark where the needle had entered the night before. She had not noticed it until Mrs. Hale's pin brushed the same spot and she drew a sharp breath.
+Mrs. Hale continued working without looking up.
+Anne did not.
+“You've hurt your hand.”
+“It's a pin,” Elizabeth said, lowering one arm slightly. “Mrs. Hale's. It's nothing.”
+“Mrs. Hale doesn't prick her fittings.”
+Anne placed the dispatch face down on the arm of her chair and crossed the room.
+She took Elizabeth's hand between both of hers and turned it toward the window. It was such an ordinary gesture that Elizabeth could not refuse it without making something of it, so she let her mother examine the mark.
+Anne's hands were warm.
+They were always warmer than Elizabeth expected, dry and steady against her own.
+Her thumb rested beside the tiny puncture.
+“It's a needle,” Anne said gently. “A small one. Fine, not a pin.”
+Elizabeth said nothing.
+Mrs. Hale went quiet at the hem.
+“Mrs. Hale tells me your lamp has been burning past midnight twice this week,” Anne continued. Her tone had not changed. “She mentioned it because she worries you're not sleeping. I told her you read.”
+“I do read.”
+“I know.”
+Anne lifted Elizabeth's hand a little higher, studying the mark. Then she drew a small folded handkerchief from her sleeve and pressed it lightly against the fingertip, as though the wound might still be bleeding.
+It had not bled since the night before.
+She held the handkerchief there anyway.
+“I won't ask what you've been making,” she said. “A person ought to have an occupation that belongs only to them. I had one myself at your age. Pressed flowers. It was a great comfort to me.”
+She folded the handkerchief again.
+“But you must understand how your hand will look, Elizabeth. It will be photographed. At the cathedral, a hundred people will watch you receive the ring, and the cameras will be closer than they are now. A small mark invites a question, and the person asking it may have no interest in the answer.”
+“It will have healed by then.”
+“Of course.”
+Anne smiled, as though Elizabeth had settled the matter.
+“I'm only telling you how I think about these things. Much of my day is spent anticipating what people will notice and what they will make of it. I'd rather you learned that from me than the hard way.”
+It was entirely reasonable.
+Elizabeth searched for something unreasonable in it and found nothing.
+“If you want to learn something,” Anne continued, her voice becoming lighter, “you only have to tell me. Needlework is a charming idea. There's a woman at the Royal School of Needlework who could come to the palace twice a week. The Women's Institute would be delighted to hear about it, too.”
+Elizabeth watched her mother's face.
+“A princess taking up a craft in the months before her wedding would make a gentle story. The papers have had very little gentle to say about us lately. We could arrange everything by Friday.”
+For a moment, Elizabeth could not answer.
+She could already see it.
+The teacher arriving at the palace. A chair positioned beside a window. A photograph of Elizabeth bent over a piece of embroidery, with someone standing just behind her shoulder to correct her work. A schedule, a finished piece, perhaps an exhibition at the spring fair.
+Her crooked stitches would be taken from her and placed under glass.
+The story would be kind. Everything would be arranged properly, and everyone would be pleased.
+And somehow, the thing she had wanted would no longer belong to her.
+“That's very generous,” she said. “But I'd rather not make anything of it. It's only something to do with my hands.”
+“Then it can wait.”
+Anne released her fingers and stepped back.
+The warmth went with her.
+“After the fourteenth, you'll have more time. I'd only be sorry to see you exhaust yourself now, of all weeks. There is so much to get through, and you've always managed it so well. I'd rather you saved your strength for what matters.”
+“Yes, Mother.”
+“Mrs. Hale, half an inch at the shoulder, I think. She's holding it too high.”
+“Yes, Your Majesty.”
+Anne returned to her chair and picked up the dispatch.
+The handkerchief remained in her hand for a moment before she put it away.
+Mrs. Hale removed a pin from her mouth, resumed working at the hem, and avoided Elizabeth's eyes in the mirror.
+Elizabeth lowered her shoulder by half an inch.
+In the glass, a young woman in blue stood with her chin at the angle she had been taught to hold it. A small dark mark showed on one finger. Her face revealed nothing.
+
+That night, Elizabeth did not take out the tin.
+She sat on the edge of her bed with the lamp burning and her hands resting in her lap. For a long time, she did nothing.
+The mended blouse lay folded in the second drawer, beneath the winter stockings. She knew exactly how she had placed it.
+She thought about putting it on, just to feel the repaired seam against her ribs.
+Instead, she found herself listening to the corridor.
+A pair of boots passed her door, slow and even. They did not stop.
+She had heard those same footsteps at the same hour every night for a week without giving them a second thought. Now she counted the seconds until they disappeared.
+There was no lock on her door.
+There never had been.
+Her mother entered without knocking. A maid knocked only to announce that she was coming in. A page moved the candlesticks whenever someone decided they were too close to a book.
+Elizabeth had always understood this as part of living in a house filled with people who cares for her.
+She had never thought of it as something she might want to close herself away from.
+She rose and crossed to the third drawer. After lifting the shawl, she returned the tin to its hiding place and laid her hand flat against the wood.
+She had lived in this room for twenty-two years and had never once needed to hide anything in it.
+The realization left her standing there longer than she expected.
+At last, she went to the door and tried the handle.
+It was a foolish thing to do. She knew perfectly well that it did not lock.
+She tried it again.
+Then she returned to the lamp and reached for the small brass chain.
+When she pulled it, the room went dark all at once.
+Elizabeth stood without moving.
+She had not realized how much she had wanted that.
       `
     }
   ]
