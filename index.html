@@ -303,7 +303,7 @@
         </div>
       </div>
 
-      <!-- Era Switcher within Reader / Chapter Index -->
+      <!-- Era Switcher within Reader -->
       <div class="max-w-2xl mx-auto px-6 mb-8 flex justify-center space-x-6 text-xs font-sans uppercase tracking-[0.18em]">
         <button id="readerTabFounding" onclick="switchReaderEra('founding')" class="py-1 border-b-2 border-theme-accent text-theme-text font-semibold">
           1. Era One: Victoria
@@ -313,7 +313,7 @@
         </button>
       </div>
 
-      <!-- Dynamic Container: Displays either the Chapters Index List OR the active Chapter Content -->
+      <!-- Dynamic Container: Displays either the Chapters List Index OR the active Chapter Content -->
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
@@ -678,17 +678,17 @@
         return `<p class="text-theme-text">${para}</p>`;
       }).join('\n');
 
-      // Previous / Next button logic
+      // Previous / Next button logic (Highlighted Text Style)
       const hasPrev = activeChapterIndex > 0;
       const hasNext = activeChapterIndex + 1 < eraChapters.length;
 
-      const prevBtnHtml = hasPrev 
-        ? `<button onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" class="px-4 py-2 border border-theme-border bg-theme-panel hover:border-theme-accent text-xs font-sans uppercase tracking-[0.15em] rounded-sm">&larr; Previous Chapter</button>` 
-        : `<div></div>`;
+      const prevLinkHtml = hasPrev 
+        ? `<button onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" class="text-theme-text-muted hover:text-theme-accent transition-colors">&larr; Previous Chapter</button>` 
+        : `<span></span>`;
 
-      const nextBtnHtml = hasNext 
-        ? `<button onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" class="px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:text-[var(--primary-btn-text)] text-xs font-sans uppercase tracking-[0.15em] rounded-sm font-semibold">Next Chapter &rarr;</button>` 
-        : `<div></div>`;
+      const nextLinkHtml = hasNext 
+        ? `<button onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" class="text-theme-text-muted hover:text-theme-accent transition-colors">Next Chapter &rarr;</button>` 
+        : `<span></span>`;
 
       mainContainer.innerHTML = `
         <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
@@ -701,13 +701,11 @@
             ${formattedParagraphs}
           </div>
 
-          <!-- Bottom Navigation Controls -->
-          <div class="mt-20 pt-10 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans">
-            ${prevBtnHtml}
-            <button onclick="openReaderIndex('${activeEra}')" class="px-5 py-2.5 border border-theme-border hover:border-theme-accent bg-theme-panel text-theme-text uppercase tracking-[0.18em] rounded-sm">
-              &uarr; Chapters List
-            </button>
-            ${nextBtnHtml}
+          <!-- Bottom Navigation Controls as Highlighted Texts -->
+          <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
+            ${prevLinkHtml}
+            <button onclick="openReaderIndex('${activeEra}')" class="text-theme-accent hover:underline font-semibold">&uarr; Chapters List</button>
+            ${nextLinkHtml}
           </div>
         </article>
       `;
