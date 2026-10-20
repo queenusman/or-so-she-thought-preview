@@ -405,8 +405,73 @@ The little girl kept hold of her bread. But she began looking at the cake. Madel
 
 Across the room, Victoria looked at the remaining slices. Eleven left. Still too many people to feed. She picked up the knife. And began cutting them smaller.
       `
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Two",
+      title: "What the Water Separates",
+      content: `...` // (Chapter Two content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Three",
+      title: "The Price of a Common Wall",
+      content: `...` // (Chapter Three content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Four",
+      title: "The Local Promise",
+      content: `...` // (Chapter Four content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Five",
+      title: "A Threat with a Human Face",
+      content: `...` // (Chapter Five content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Six",
+      title: "The First Shared Burden",
+      content: `...` // (Chapter Six content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Seven",
+      title: "The Keeper of Terms",
+      content: `...` // (Chapter Seven content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Eight",
+      title: "The Exception",
+      content: `...` // (Chapter Eight content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Nine",
+      title: "Madeleine's Objection",
+      content: `...` // (Chapter Nine content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Ten",
+      title: "The Settlement",
+      content: `...` // (Chapter Ten content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Eleven",
+      title: "What the Record Leaves Out",
+      content: `...` // (Chapter Eleven content)
+    },
+    {
+      eraLabel: "Era One: Victoria",
+      number: "Chapter Twelve",
+      title: "The Future Inherits",
+      content: `...` // (Chapter Twelve content)
     }
-    // ... (rest of Era One chapters 2 through 12 go here)
   ],
 
   crowned: [
@@ -733,7 +798,7 @@ She repeated the words silently, in her own voice, while taking a piece of fish 
 
 She did not say them aloud.
 
-But she noticed that she no longer wanted the answer to be a good one. She wanted it to be true.
+But she noticed that she no longer wanted the answer to be a good one. Wants it to be true.
 
 She could not remember exactly when the difference had begun to matter.
 
@@ -746,7 +811,37 @@ Elizabeth moved her foot two inches to the left.
     eraLabel: "Era Two: Elizabeth",
     number: "Chapter Five",
     title: "The Photographic Erasure",
-    content: `...` // (Chapters 5 through 10 continue here)
+    content: `...` // (Chapter Five content)
+  },
+  {
+    eraLabel: "Era Two: Elizabeth",
+    number: "Chapter Six",
+    title: "The Cold Air of Reality",
+    content: `...` // (Chapter Six content)
+  },
+  {
+    eraLabel: "Era Two: Elizabeth",
+    number: "Chapter Seven",
+    title: "Testing Edward",
+    content: `...` // (Chapter Seven content)
+  },
+  {
+    eraLabel: "Era Two: Elizabeth",
+    number: "Chapter Eight",
+    title: "The Gala Ledger",
+    content: `...` // (Chapter Eight content)
+  },
+  {
+    eraLabel: "Era Two: Elizabeth",
+    number: "Chapter Nine",
+    title: "The Price of Blue",
+    content: `...` // (Chapter Nine content)
+  },
+  {
+    eraLabel: "Era Two: Elizabeth",
+    number: "Chapter Ten",
+    title: "The Margin for Error",
+    content: `...` // (Chapter Ten content)
   }
 ]
 };
