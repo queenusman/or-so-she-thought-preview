@@ -283,7 +283,7 @@
       </div>
     </section>
 
-    <!-- VIEW 3: READ (Dynamic Reader Sanctuary — Loads from chapters.js) -->
+    <!-- VIEW 3: READ (Dynamic Reader Sanctuary — Loads from chapters.js & chapter-4.js) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300">
       <!-- Reader Controls Bar -->
       <div class="max-w-3xl mx-auto px-6 mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
@@ -551,8 +551,9 @@
     </div>
   </footer>
 
-  <!-- External Chapter File -->
+  <!-- External Chapter Files -->
   <script src="chapters.js"></script>
+  <script src="chapter-4.js"></script>
 
   <!-- Main Application Logic -->
   <script>
@@ -616,7 +617,7 @@
       const tabCrowned = document.getElementById('readerTabCrowned');
 
       if (typeof NOVEL_CHAPTERS === 'undefined' || !NOVEL_CHAPTERS[activeEra]) {
-        mainContainer.innerHTML = `<p class="text-center text-theme-text-muted">Chapter file (chapters.js) not found.</p>`;
+        mainContainer.innerHTML = `<p class="text-center text-theme-text-muted">Chapter files (chapters.js and chapter-4.js) not loaded properly.</p>`;
         return;
       }
 
