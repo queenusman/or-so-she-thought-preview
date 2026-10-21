@@ -1,12 +1,15 @@
-// Era Two: Elizabeth - Chapters 4 through 23
-// Save this file as 'era-two-chapters.js' in your repository.
+// chapters2.js — Continuation of NOVEL_CHAPTERS
 
-const ERA_TWO_CHAPTERS = [
-  {
-    eraLabel: "Era Two: Elizabeth",
-    number: "Chapter Four",
-    title: "The Study Sessions",
-    content: `
+if (typeof NOVEL_CHAPTERS !== 'undefined') {
+
+  // 1. Add more chapters to Era Two: Elizabeth (Crowned Era)
+  if (Array.isArray(NOVEL_CHAPTERS.crowned)) {
+    NOVEL_CHAPTERS.crowned.push(
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Four",
+        title: "The Study Sessions",
+        content: `
 Elizabeth had submitted the request in writing, because writing was how things were done in her life.
 
 She had proposed a joint study of the Timber Inspection Schedule for the Academy panel, with Elias Fletcher as her co-reader. His knowledge of the trade had already been noted during Professor Calloway’s seminar, which made him a reasonable choice. Calloway approved the request within the hour. On the Monday after that seminar he had asked her, mildly, whether the discussion had given her anything to think about, and she had had an answer ready. She had not said where the answer came from. He seemed pleased to have the Crown’s heir examine the arguments of the student who had challenged him.
@@ -231,13 +234,13 @@ Halfway through, he stopped with a book still in his hands.
 
 Elizabeth looked up. “Say what?”
 
-“I don’t know.”
+“I don’ᱜ know.”
 
 He slid the volume into its place.
 
 “I’ve been listening for it for a month. In the seminar. Here. You say I would expect, and it may be, and the records cannot tell us. You never just say it.”
 
-“It isn’t…”
+“It isn’…”
 
 She stopped.
 
@@ -314,13 +317,13 @@ She could not remember exactly when the difference had begun to matter.
 Under the table, Sapphire settled against her shoe, warm and familiar.
 
 Elizabeth moved her foot two inches to the left.
-    `
-  },
-  {
-    eraLabel: "Era Two: Elizabeth",
-    number: "Chapter Five",
-    title: "The Photographic Erasure",
-    content: `
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Five",
+        title: "The Photographic Erasure",
+        content: `
 The modelling lamps had been on for forty minutes, and the Blue Drawing Room no longer smelled like itself.
 
 The furniture had been removed the day before. In its place stood a camera on a tripod as tall as a man, a gilt chair nobody was allowed to sit in, and a length of dark blue paper stretched behind them. The room smelled of hot dust, hairspray, and the faint burnt sweetness left behind by the strobes each time they flashed.
@@ -564,13 +567,13 @@ She could feel the hidden photograph with every careful breath: the grey sleeve,
 The camera could not see any of it.
 
 Elizabeth kept her eyes open until the next flash.
-    `
-  },
-  {
-    eraLabel: "Era Two: Elizabeth",
-    number: "Chapter Six",
-    title: "The Cold Air of Reality",
-    content: `
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Six",
+        title: "The Cold Air of Reality",
+        content: `
 Elizabeth woke at ten to five with a corner of card pressed against her cheek.
 
 The photograph had slipped out from beneath her pillow during the night. She lay still, listening, because something else had woken her. After a moment, the sound came again from inside the wall: iron dragged against iron, followed by a long, dry pour, like gravel emptied from a sack.
@@ -777,7 +780,7 @@ Steam rose from Mrs. Hale’s mug, drifting into the colder air near the door.
 
 “It’s the warm room.”
 
-Mrs. Hale made a short sound that was almost a laugh.
+Mrs. Hale made a small sound that was almost a laugh.
 
 “I asked for that stove for nine years. Eleven men said yes. One found the money.”
 
@@ -821,7 +824,7 @@ Then she returned to her work.
 
 “Now go upstairs, Your Highness, before the six bell. The under-steward comes through at ten past.”
 
-The gallery felt warmer than Elizabeth remembered.
+The gallery felt warmer than initializer remembered.
 
 She stood briefly beside the stubborn door, feeling the radiator’s heat through her slippers. By the time she reached the library, warmth had settled around her again.
 
@@ -863,7 +866,7 @@ He tilted his head.
 
 “No.”
 
-There was no surprise in his voice and no reproach.
+テントThere was no surprise in his voice and no reproach.
 
 “Why would you?”
 
@@ -897,7 +900,7 @@ His eyes flicked towards her hands, then returned to the page. He seemed to rega
 
 She said it plainly.
 
-The words settled between them, and she did not try to take them back.
+The words settled between them, and she did not take them back.
 
 Elias picked up his pencil again, but the point stopped above the page. He gave her the same careful look he sometimes gave a piece of wood when he discovered that a joint was sound in an unexpected place.
 
@@ -968,13 +971,301 @@ She did not get up.
 She lay in the warmth and listened until the footsteps stopped.
 
 Then she kept listening.
-    `
-  },
-  {
-    eraLabel: "Era Two: Elizabeth",
-    number: "Chapter Eight",
-    title: "The Gala Ledger",
-    content: `
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Seven",
+        title: "Testing Edward",
+        content: `
+The Amberleigh Room had been chosen for its private entrance and thick carpets. Elizabeth understood both reasons as soon as she entered. Nobody passing in the corridor would hear what was said inside, and nobody in the room would hear anyone passing outside.
+
+The tea had already been laid twice.
+
+The maid explained this when Elizabeth asked whether the pot was fresh. She had the anxious expression of someone hoping not to be questioned further. The first pot had developed a hairline crack in its glaze while the water was heating. It had been removed and replaced within a minute.
+
+The cracked pot was gone. The replacement matched the cups so perfectly that nothing remained to suggest anything had gone wrong.
+
+Rain tapped against the window behind Elizabeth’s chair. In the corner, a cassette recorder concealed inside a lacquered box played orchestral music at a volume intended to cover conversation. The disguise fooled no one. Between movements, the tape hissed softly.
+
+Damp coats hung beside the door above a tray for dripping water. The room smelled of wet wool, beeswax, and steaming tea.
+
+Edward arrived eleven minutes after the hour, which, for him, counted as early.
+
+He had a way of entering a room as though it had been arranged in anticipation of him and he was pleased to find that it had. Tall and fair, with his hair slightly disordered from crossing the colonnade in the rain, he stopped a few paces inside the door and bowed to her, not deeply, but with real warmth.
+
+“Elizabeth. Thank you for making time for me. I know your week must be a nightmare.”
+
+“It’s only a cup of tea.”
+
+“Not to me. I’ve spent a fortnight trying to find fifteen minutes without a photographer in them.”
+
+He settled into the chair opposite, crossing one ankle over the other. He looked entirely at ease.
+
+Elizabeth poured the tea.
+
+She watched his hand move towards the sugar bowl, hesitate, and then turn towards the cream before stopping again.
+
+“I’m sorry,” he said. “That’s presumptuous. You take it with a slice of lemon, I think, and no sugar. Or is it the reverse? I can never remember which one you disliked.”
+
+A small dish of lemon slices sat beside Elizabeth’s elbow. She had not noticed it.
+
+She looked at the dish, then at Edward. She could not decide whether he had offered her a kindness or shown her a file.
+
+“Neither,” she said. “I take it plain.”
+
+“Ah. Then I had it nearly right.”
+
+He smiled, openly and with genuine amusement at himself.
+
+“You’ll find I get most things nearly right. It’s one of the reasons I think we’ll manage.”
+
+Elizabeth found the sincerity of his smile irritating, though she could not have explained why.
+
+She had expected to have to work harder to understand him.
+
+“May I ask you something?”
+
+“You may ask me anything.” He offered the words as though they were a gift. Perhaps, to him, they were. “That’s the only rule I’ve made for today.”
+
+“What happens when the thing you’re supposed to protect stops making sense to you?”
+
+Edward lifted his cup, considered it, then set it down.
+
+She watched him choose between several possible responses before settling, with apparent care, on the most honest one.
+
+“You mean the alliance.”
+
+“I mean anything. A rule. A reason someone gave you for why things must be the way they are.” She kept her hands around her saucer. “Suppose it stopped making sense to you one day, but everyone else carried on as before. Would you continue to uphold it?”
+
+“Oh, that’s a proper question.”
+
+He leaned back, looking pleased.
+
+“I thought you’d ask about my horses.”
+
+“I might still.”
+
+“I’d prefer that, eventually. They’re better company than I am.”
+
+He laughed. Then his expression changed, becoming thoughtful in a way that suited him better than the joke.
+
+“I’ll answer you properly. Yes, I think I’d carry it for a while.”
+
+He turned his saucer a quarter turn.
+
+“I’m a younger son who became the heir at nineteen because my brother is buried at Sallowmere. I didn’t make the rules I inherited, or most of the others. I didn’t ask to become the sort of man a treaty could be built around.”
+
+He paused before continuing.
+
+“But I’ve looked at what the alliance holds together. Eleven thousand people work in the southern ports. Half of them have no other trade. If I put the whole arrangement down because it stopped making sense to me, I know what would fall, and I know the names of some of the people who would be caught beneath it.”
+
+He glanced at her.
+
+“So I carry it. I hope that doesn’t sound like a speech.”
+
+“It doesn’.”
+
+“Good. I hate speeches. My father makes enough of them for both of us.”
+
+Elizabeth had come prepared to dislike a position. Instead, she found herself listening to a man explaining what it cost him to hold it.
+
+“I didn’t choose you either,” Edward said, his voice softening. “I’ve thought about that. I was introduced to you across a very large table when you were eighteen, and my first thought was that I was lucky.”
+
+He smiled faintly.
+
+“I know that’s not the same as being asked. But people who marry for love have to learn each other afterwards, too. They simply do it with fewer witnesses.”
+
+It was a good line. It was also true.
+
+She could think of a hundred possible replies, but none was ready.
+
+“May I ask a harder question?”
+
+“Please.”
+
+“If I told you today that I didn’t want to marry you, what would happen?”
+
+The cassette hissed between musical movements. Rain continued against the window.
+
+Edward looked at her without surprise.
+
+It took Elizabeth a moment to understand that he had anticipated the question and considered his answer. That troubled her more than a startled reaction would have.
+
+“First, I’d want to know what I’d done wrong,” he said.
+
+“You haven’t done anything wrong.”
+
+“Then I’d want to know what I could change.”
+
+He spoke with warmth and without hesitation. Elizabeth could see that he meant it.
+
+“If it’s the household, or where we’d live, we can discuss that. If you want to continue at the Academy, I’ll put it in writing. I’ve already spoken to my father about the constitutional law faculty at Valenne’s university. There’s a place for you if you want it.”
+
+He opened one hand.
+
+“I’d rather you had a life of your own within the life we’d share. I’d think very carefully about anything that made you feel you couldn’t.”
+
+“And if it weren’t any of those things?”
+
+“Then we’d talk. Just as we’re doing now.”
+
+He tilted his head.
+
+“You know I wouldn’t tell you that you couldn’t refuse. Of course you can. Nobody could stop you. I’d hate you to think I believed otherwise.”
+
+“But.”
+
+“There isn’t a but.”
+
+He smiled a little.
+
+“I only think you won’t. And I think you know why.”
+
+Elizabeth said nothing.
+
+“It’s not a question of whether you’re permitted to refuse,” he continued. “It’s a question of what refusal would mean. Two hundred guests from three countries. A ceremony planned a year in advance. The people whose livelihoods depend on the ports.”
+
+He spread his hands.
+
+“You’ve spent four years learning how much rests on this marriage. I don’t think you’re someone who would let all of it fall apart over a passing wish. Or, if you were, I think you’d want to be certain it was only a wish.”
+
+Elizabeth had the strange sensation of watching someone pass through a door with perfect courtesy and close it from the other side.
+
+“I didn’t say it was a wish.”
+
+“No, you didn’t. But I wondered.”
+
+He said it kindly, without the slightest trace of accusation.
+
+“You’ve been quiet at dinners lately, and you ask questions in the middle of the soup. It’s one of the things I like about you. I only thought the quiet might be nerves.”
+
+He smiled again.
+
+“My mother says all brides have them in the last fortnight. Then the day arrives, and the nerves disappear.”
+
+“Does?”
+
+“She has never been wrong about a wedding.”
+
+He reached for the teapot and refilled Elizabeth’s cup without asking, then set a slice of lemon on the saucer’s rim with the tip of a spoon.
+
+She watched his hand.
+
+The gesture was attentive and generous. It was also the same hand that had just closed the door on her question.
+
+She did not think he was lying. He believed she could refuse him. He meant what he said about wanting her to have a life of her own. He would probably make every reasonable effort to accommodate her wishes.
+
+But with each kindness, he had turned her question into something already settled between them. There was room for her to express a feeling, provided the feeling did not change the answer.
+
+“I’d like to be certain I could say it,” she said. “Before the fourteenth. And that it would count.”
+
+“It would count.”
+
+He answered immediately.
+
+“I give you my word.”
+
+Then, more gently, he added, “Though I don’t think you’ll need to use it.”
+
+He lifted his cup. Window light caught its rim, and he looked at her over it with unmistakable affection.
+
+“That’s what I meant about not choosing. I don’t know that I would have chosen better.”
+
+He set the cup down.
+
+“May I ask you one in return? It’s only fair.”
+
+“Yes.”
+
+“If none of this existed, no treaty and no ports, and you woke tomorrow with the day entirely your own, what would you do with it?”
+
+It was a generous question. He asked it as though he truly wanted to know, and as though he would be glad of the answer whatever it was.
+
+Elizabeth opened her mouth, and an answer arrived at once. She would read. She would visit the Academy library. She would walk in the gardens, and perhaps ride, and see her sister more often.
+
+It was a good answer. It was well shaped. She listened to herself deliver it and heard how little of it she had ever tested against a morning.
+
+“Those sound like very pleasant days,” Edward said, smiling.
+
+“Yes,” she said. “They do.”
+
+He did not see that she had not answered him. She could not blame him for that, because for the length of a sentence she had not seen it either.
+
+Edward stayed for another twenty minutes, and they talked about horses.
+
+He had a grey called Marrow who refused to cross water. His story about the horse and a ferry was genuinely funny, and he told it well. Elizabeth laughed at the right moments. A few times she laughed at the wrong ones, which seemed to please him even more.
+
+Nothing in the room had changed. She could not have said exactly when their quarter of an hour had ended and the afternoon had begun.
+
+At the door, he turned back to her.
+
+“I feel I know you better now,” he said. “Thank you for asking those questions. Most people only ask me what I think about the weather.”
+
+“I’m glad.”
+
+“Saturday, then. The walk-through of the ceremony.”
+
+He hesitated, as if deciding whether to share something personal.
+
+“I’ll tell you something I haven’t told anyone. I was a little frightened of you at first. I thought you’d be impossible to please.”
+
+His smile warmed.
+
+“But you’re not. You only ask for the truth.”
+
+He inclined his head to her.
+
+“I’m very hopeful.”
+
+He stepped into the corridor. The carpet swallowed his footsteps.
+
+Elizabeth left the door open.
+
+Behind her, the cassette continued to hiss between movements. From several yards away, she heard Edward speaking to the secretary who had waited around the corner.
+
+“She’s been thinking it through. That’s a good sign, not a bad one. She only needed to ask.”
+
+The secretary murmured a reply.
+
+Edward laughed, light and relieved, his voice carrying farther than he seemed to realise. It was not unkind. That was the difficulty. He sounded like a man who had been afraid of something and found that it had not happened, and who was glad on her behalf as well as his own.
+
+Then footsteps receded down the corridor. A door opened and closed at the far end.
+
+The rain was all that remained.
+
+Elizabeth returned to the room.
+
+The maid had come in while she stood at the door. She was gathering the cups, stacking them carefully on a tray, mindful of the sounds they might make.
+
+Edward’s cup was already gone.
+
+The maid reached for Elizabeth’s, and Elizabeth said, “That one’s still warm.”
+
+The girl stopped with her hand an inch from the handle. She looked up, startled.
+
+“Of course, Your Highness. I’s sorry.”
+
+“There’s no need.”
+
+The maid stepped back.
+
+Elizabeth picked up the cup. The tea had cooled while they talked. The slice of lemon lay untouched on the saucer’s rim, where Edward had put it. She moved it aside with the spoon and drank standing beside the table, plain and slightly bitter, without sugar, cream, or lemon.
+
+It was perfectly good tea.
+
+It was exactly what she liked.
+
+She placed the cup in its saucer and set it on the lacquered tray.
+
+It made no sound at all.
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Eight",
+        title: "The Gala Ledger",
+        content: `
 By the time the orchestra finished its second set, Elizabeth had counted thirty-one tables and could have drawn the ballroom from memory.
 
 The Founders’ Trust gala occupied the long hall in the west wing, beneath a painted ceiling that had been illuminated to make the clouds appear to move. Two hundred guests stood beneath it in silk and black wool. Champagne glasses chimed every few seconds, their thin notes swallowed by the overlapping conversations. Near the entrance, a photographer’s flash went off, then another, bleaching the edge of Elizabeth’s vision before the room returned in colour.
@@ -1027,7 +1318,7 @@ Not one of them had a place card.
 
 There were two hundred names in the room. Elizabeth knew perhaps a hundred and eighty of them. She knew where each person belonged and, in most cases, why.
 
-Then she realised she did not know the name of a single person carrying a glass.
+Then she realised she did not name a single person carrying a glass.
 
 It was, she thought, exactly as it should be.
 
@@ -1165,7 +1456,7 @@ Between a retired general and a countess, Edward bent his head towards her.
 
 “You’ve been somewhere else for the last fifteen minutes.”
 
-“I’m sorry. I was counting.”
+“I’宁 sorry. I was counting.”
 
 “Counting what?”
 
@@ -1239,7 +1530,7 @@ Elizabeth nearly asked her name.
 
 It was such a simple question. The name was there, just beyond her reach, as close as the clipboard had been. She could ask, and the woman would answer.
 
-But she could already imagine what would follow.
+But Elizabeth could already imagine what would follow.
 
 A pause. A polite reply. A memory the woman would carry through the rest of her shift, wondering what the question had meant. Perhaps she would mention it to someone in the corridor.
 
@@ -1253,7 +1544,7 @@ Two hundred names. A painted sky. Thirty white candles along the north wall.
 
 She counted the people whose names she knew, standing in the doorway with her chin at the angle she had been taught. There were a hundred and eighty, give or take.
 
-Then, because she wants to be honest, she began counting the other column.
+Then, because she wanted to be honest, she began counting the other column.
 
 She reached two.
 
@@ -1266,6 +1557,1798 @@ Not the boy with the scuttle. Not the girl with the red knuckle. Not the woman w
 The last photographer’s flash went off.
 
 Elizabeth stepped into the room.
-    `
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Nine",
+        title: "The Price of Blue",
+        content: `
+The gown returned to the sewing room at eleven the next morning, carried between two people as carefully as though it had been injured.
+
+Elizabeth had asked to be present. It was an unusual request, and the under-steward had written it down.
+
+Now she stood beside the paraffin stove while Mrs. Hale and a younger seamstress lowered the silk onto the long table. They began undoing the hooks one by one, with the careful patience of people helping someone out of a heavy coat.
+
+The hall’s lights had left no marks. The hem was dry. Someone had stepped on the train near the eastern doors, and Mrs. Hale found the damage immediately, laying two fingers against the fabric.
+
+“A heel,” she said. “Three threads lifted. Nothing serious.”
+
+“May I see?”
+
+“If you like.” Mrs. Hale kept her eyes on the gown. “Mind the dust on that table, though.”
+
+The silk was a deep blue, almost black where the folds overlapped and bright as the inside of a mussel shell where the light caught it.
+
+Elizabeth had worn the gown three times. She could have drawn it from memory, down to the smallest detail.
+
+She could not have said what the fabric was made of, who had made it, or how long the work had taken.
+
+On the corner of the table lay a thin sheet of paper, held down by a tin of pins. It had been ruled into two columns. The dresser kept one for every gown in the royal household, recording when each garment entered the wardrobe and updating the sheet whenever it was worn or repaired.
+
+Elizabeth saw her name at the top.
+
+She did not ask permission. She picked it up.
+
+Mrs. Hale’s pencil paused, then resumed its work.
+
+The entries ran down the page in a small, upright hand.
+
+Silk, woven in Valenne, nineteen yards, from a mill there. A figure beside it.
+
+Dye, indigo, six vats, over-dyed twice for depth. Another figure.
+
+Lining, interfacing, hooks, silver wire.
+
+Then came a line marked Hand work.
+
+Those entries were not measured in money.
+
+Bodice beading, four women, eleven weeks.
+Hem and train, two women, five weeks.
+Fittings, nine, at three hours.
+
+At the bottom, enclosed in a box and underlined once, was the total.
+
+Elizabeth read it. Then she read it again.
+
+By the third reading, she had memorised it.
+
+She had learned the third proposition of Norwyn Structural Ideology in much the same way, without effort and without needing to understand what the words might leave out.
+
+“Does anyone else see this?”
+
+“The steward, for insurance purposes. The Queen’s secretary, once a year.” Mrs. Hale took a spool from her apron and held it up to the window, comparing the thread with the blue silk. “It’s a good gown. It’s cost what it’s cost.”
+
+“The four women. Who were they?”
+
+“From the Whitlow workroom in the lower town. They do all the beading for the court.”
+
+Mrs. Hale bit through a length of thread.
+
+“One of them lost the sight in her left eye over the winter. The doctor said it had nothing to do with the work, and I wouldn’t claim otherwise. But she’d finished the bodice by then. They let her go in March.”
+
+The younger seamstress, smoothing the lining at the far end of the table, did not look up. Her hands had stopped moving, though.
+
+“What was her name?” Elizabeth asked.
+
+Mrs. Hale considered the thread against the silk.
+
+“I could tell you what I think it was,” she said. “And you’d carry my guess about with you as though it were a fact. Ask the workroom.”
+
+Elizabeth placed the paper back on the table, aligning its edge with the wood.
+
+“Thank you for explaining it.”
+
+“I didn’t explain anything,” Mrs. Hale said mildly. “You picked up a sheet of paper.”
+
+Elizabeth looked at her.
+
+Mrs. Hale returned to the gown.
+
+The conservatory was empty when Elizabeth arrived, and cold.
+
+A pale sky showed through the glass roof. Along the walls, ferns stood in wet pots, their leaves still dotted with rain from the previous two days.
+
+Elizabeth sat on a stone bench with a cup of tea she had carried down from the sewing room. She did not drink it. Her fingers remained cold around the cup.
+
+She heard the service door before she saw Elias.
+
+A latch clicked. Something scraped against the frame, followed by the slap of boots on wet tiles.
+
+He came through backwards, hauling a crate of empty champagne flutes through the narrow opening. He set it against the wall before noticing her.
+
+The glasses touched with a faint clatter, then settled.
+
+He had not shaved. He was wearing his own grey jumper again, its elbows freshly darned over the old repairs. The new thread did not match the original fabric.
+
+“They’re clearing the hall,” he said. “I was told to take these to the scullery, but the scullery’s locked.”
+
+He did not approach her.
+
+“You’re not supposed to be in here at this hour.”
+
+“Neither are you.”
+
+“I’寧 not supposed to be anywhere in particular. That’s what the agency pays for.”
+
+He glanced at the crate, then at her untouched cup, and then, briefly, at her face. He seemed to find in it what he had expected.
+
+“You didn’t sleep.”
+
+“I couldn’t.”
+
+The word came out more flatly than she intended.
+
+“I didn’t know you worked for the agency.”
+
+“Eleven shifts this month.” He spoke as though giving her a weather report. “The library pays by the hour, and it’s a short hour. Palace work pays three times as much for the same amount of sleep.”
+
+“The tuition.”
+
+“Due in six weeks.” He wiped his palms down his trousers. “I did the sums in October. It wasn’t complicated.”
+
+Elizabeth had a response ready. She could feel the shape of it before she spoke.
+
+You could have told me.
+
+It would have sounded like a reproach, and she had no right to make one. She let the words go and looked down at her tea.
+
+“I read the inventory for the gown this morning,” she said. “The sheet they keep in the sewing room. It lists everything. The fabric, the materials, the hours.”
+
+Elias waited.
+
+“I wanted to know what it cost. I’ve worn it three times, and I never knew that any of it could be known.”
+
+He said nothing.
+
+“Nine thousand four hundred,” she continued. “Including the hand work. Four women spent eleven weeks beading the bodice. One of them lost her sight over the winter. It wasn’t caused by the work, apparently. They let her go in March.”
+
+“That’s a lot of money,” Elias said at last.
+
+“Your fees for the year are less than a tenth of it.”
+
+“I know what my fees are.”
+
+There was no anger in his voice. He looked towards the glass roof, where daylight filtered through the rain, and Elizabeth watched him make the calculation despite himself.
+
+“That’s about a year’s income for the yard, give or take. It would keep us supplied with oak and keep my father’s apprentices in coal until spring. I could give you a long list of things it would pay for.”
+
+“I know. I’m sorry. I’宁 not explaining myself properly.”
+
+“What are you trying to say?”
+
+“I could pay your fees.”
+
+The offer surprised her as soon as she heard it. She had not planned to make it.
+
+“I have a private allowance. It’s separate from the household accounts. I don’t use it, and nobody would miss the money. I could arrange it in an afternoon.”
+
+The ferns dripped onto the stone floor.
+
+Somewhere above them, a pane of glass clicked in the cold.
+
+“No,” Elias said.
+
+“It would cost me nothing.”
+
+“That’s the trouble with it.”
+
+He spoke gently, which made the answer harder to receive.
+
+“You’d arrange it. Someone would enter it in a book. A bursar, your secretary, whoever keeps your private accounts. They’d see a payment for a student named Fletcher and ask why.”
+
+He shook his head.
+
+“Everyone you pay ends up in a column somewhere. I’d be on the sheet. Fees, E. Fletcher. Then someone could look at it, and sooner or later someone would.”
+
+“I hadn’t thought of that.”
+
+“I know.”
+
+He took a breath.
+
+“That’s why it was kind of you to offer. You weren’t thinking about what it might mean for me.”
+
+Elizabeth lowered her eyes.
+
+“I’d like to tell you I’d refuse for the other reason, too,” he said. “And I would. But that isn’t the whole truth.” He looked at her again. “If it were safe, I don’t know what I’d say. I’d want the money. I’m not above wanting it.”
+
+His mouth shifted, almost into a smile, but did not quite get there.
+
+“I’d rather not find out how much I wanted it with you standing there.”
+
+Heat rose into Elizabeth’s face.
+
+It was an ordinary shame, without dignity or ceremony, and she knew she had earned it. She had offered him something that would cost her almost nothing and mistaken the offer for generosity. He had considered its consequences more honestly than she had.
+
+“I’m sorry.”
+
+“Don’t be. It was a good thought. It just doesn’t have anywhere to go.”
+
+He picked up the crate. The glasses chimed against one another.
+
+“I have to get these to the cart before the agency counts them.”
+
+Elias reached the door and stopped.
+
+He did not turn immediately. Elizabeth watched the line of his back beneath the damp jumper, then the pale scar along his jaw as he glanced over his shoulder.
+
+“Last night,” she said, before she could decide not to. “In the greeting line. Somebody left a glass of water at my elbow.”
+
+“Did they?”
+
+“It was the right temperature.”
+
+“Then whoever it was had been carrying glasses all evening,” Elias said. “You learn what a glass feels like at a given hour.” He shifted the crate against his hip. “It’s a useful thing to know about a hall.”
+
+It was not an answer. It was not quite a denial, either. She waited, her hands wrapped around a cup that had grown cold, for him to say something that mattered.
+
+“The blue held the light well,” he said, to the door. “Under those lamps it went nearly black in the folds, and then it didn’t. I noticed it while I was holding the tray. I kept thinking it was the silk.”
+
+He stopped.
+
+It was the only sentence she had ever heard him fail to finish. He looked at the latch as though it had said something, and when he spoke again it was in his working voice.
+
+“It’s a good piece of work. Whoever dyed it knew what they were doing.”
+
+“Yes,” Elizabeth said. “I’ve read what it cost.”
+
+“I know you have.” He opened the door with his shoulder. “That’s why I said whoever dyed it.”
+
+He left.
+
+The door swung shut behind him, and the latch caught with a small, final click.
+
+Elizabeth remained on the bench in the cold, holding her tea until it began to lose what little warmth it had left.
+
+She thought of the four women working at their frames in the lower town. The lamps they must have used through those eleven weeks. The hours spent bending over blue silk while the rest of the kingdom went about its business.
+
+Then she thought of the afternoon when the gown had first been fitted around her ribs.
+
+She remembered standing before the mirror as the silk settled into place, looking at her reflection and feeling a simple, physical pleasure at the sight of herself.
+
+She had looked beautiful.
+
+She had not been pretending. She had not been fooled. The pleasure had been real, and it would still have been real if she had known the figure on the inventory sheet.
+
+That was the part she could not put away.
+
+She had wanted to be seen in the gown. She had wanted Elias to see her in it, and she did not know how to say that to herself without the word wanted getting in the way.
+
+Both were true. The second did not make the first less real, and neither made the four women’s winter any easier.
+
+She set the cup on the stone beside her.
+
+A drop of water fell from a fern onto the back of her hand. She let it run down to her wrist.
+
+Then she went upstairs by the long staircase.
+
+In her room, she sat at the desk without turning on the lamp. The dark window reflected the faint outline of her face.
+
+Without meaning to, she spoke the total aloud.
+
+Once. Evenly. In the same voice she used when reciting the propositions.
+
+The number came as easily as anything she had ever learned.
+
+Then she took a sheet of paper, wrote Whitlow workroom at the top, and underneath it, her name.
+
+She sat looking at the two lines, listening to the quiet beyond her door, and thought how long it had been since anyone had asked her to memorise something she was less glad to know.
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Ten",
+        title: "The Margin for Error",
+        content: `
+The ribbon was Norwyn blue, dyed to match the royal crest and cut from silk worth a carpenter’s wages for a month.
+
+Elizabeth held the ceremonial scissors in both hands and resisted the urge to calculate its cost.
+
+Lately, she had developed a habit of finishing sums nobody had asked her to do. She was trying, for the length of one morning, to let the numbers remain where they were.
+
+Behind the ribbon stood the new wing of the Founders’ Archive, pale and square, its doors propped open to reveal a hall that still smelled of lime plaster. A velvet rope separated the crowd from the platform. Cameras lined the other side, their flashbulbs testing the light.
+
+Along the left wall, behind a second rope, stood the people who had built the wing. Masons, plasterers, joiners, glaziers. They wore clean overalls that appeared to have been issued that morning, their creases still sharp.
+
+Elizabeth counted thirty-four.
+
+“Smile towards the left camera,” Edward murmured. His own smile was already in place. “They get the better angle from that side.”
+
+She smiled towards the left camera.
+
+“Wait three seconds after the cut, then turn towards the doors. If you turn too soon, they’ll ask you to do it again, and it’s tiresome to be asked.”
+
+It sounded like stage direction, but Elizabeth had learned that Edward’s attention to these details was also a kind of kindness.
+
+He stood half a pace ahead of her, on the side that would attract the crowd’s attention. She understood that he was drawing the room towards himself so less of it would fall on her.
+
+He would never have described it that way.
+
+The scissors closed. The ribbon fell in two clean lengths, and applause rose around them.
+
+Elizabeth counted one.
+
+Then two.
+
+On three, she did not turn towards the doors.
+
+She stepped down from the platform and walked towards the second rope.
+
+It took about four seconds for the crowd to understand that something had changed.
+
+The applause faltered at the edges. A photographer swung his camera towards Elizabeth, then hesitated and turned it back towards the doors, where nothing was happening.
+
+Someone behind her said her title softly, the way one might call to a person walking in her sleep.
+
+The first man in the line had grey hair and thick wrists. Dried plaster remained in the creases of his knuckles. As Elizabeth approached, he straightened as though preparing for an inspection. His eyes moved briefly towards the foreman at the end of the rope, then returned to her.
+
+“Good morning,” Elizabeth said. “What work did you do on the wing?”
+
+“Floors, Your Highness. The reading room and the south passage.”
+
+“And your name?”
+
+He paused.
+
+It was only a moment, but Elizabeth understood that he had been briefed for this occasion. He would have been told what might happen, what questions might be asked, and how to answer them.
+
+This question had not been included.
+
+“Ned Tolliver, Your Highness.”
+
+“Thank you, Mr. Tolliver. Did you lay the floors during the winter?”
+
+“October through January.”
+
+He looked at her, then down at his hands, as though the sight of them had reminded him of something he had not expected to discuss.
+
+“We kept the stoves burning under tarpaulin, Your Highness. The flooring needs warmth to set properly.”
+
+“Who tended them overnight?”
+
+“We took turns. Whoever was youngest, mostly.” A corner of his mouth moved. “I was youngest once.”
+
+“I see.”
+
+For a moment, Elizabeth imagined a stove burning beneath a sheet of canvas in an unfinished building, a man feeding it before dawn while the rest of the household slept.
+
+She moved to the next person.
+
+She asked eleven of them.
+
+A plasterer who had worked on the cornice. A glazier who had fitted the upper windows. An eighteen-year-old girl, the daughter of a stonemason, who had been allowed to carry water to the men on the scaffolding.
+
+At the sixth person, the foreman approached with a prepared presentation. He began explaining, with careful courtesy, that the Trust had arranged a short account of the construction.
+
+“I would be glad to hear it afterwards,” Elizabeth said.
+
+The foreman stopped.
+
+There was no polite way to prevent her from continuing without making the attempt more noticeable than the interruption would have been.
+
+Along the rope, the photographers lowered their cameras. Nobody seemed certain which angle they were supposed to capture now.
+
+Elizabeth felt Edward arrive beside her before she saw him.
+
+He wore the delighted expression of a man who had been pleasantly surprised. She knew it was genuine. Edward was so practised at appearing at ease that she could usually tell when he was making an effort, and he was not making one now.
+
+“Forgive us,” he said to the workers, smiling. “The Princess is thorough. At this rate, she’ll have your entire histories before lunch.”
+
+A ripple of relieved laughter passed along the line.
+
+Edward turned to Elizabeth.
+
+“The doors.”
+
+“One moment more.”
+
+“Of course.”
+
+He stayed beside her through the last three names, warm and patient, and she could not have explained what he was doing except that he was doing it well. He had found a way to support her without making her seem to need support.
+
+When she finally turned towards the building, the cameras rose again.
+
+At the doors, under cover of the applause, Edward spoke without moving his lips.
+
+“That was well done. I mean it.” He paused. “By tomorrow someone will have made it a tradition. I’d rather you knew that now, so it doesn’t surprise you.”
+
+“Will it?”
+
+“It always does. The kindest thing in a house like this is also the easiest to schedule.”
+
+He said it lightly, and with a faint rueful look, like a man naming a fault of his own family. She wondered how many times he had watched it happen.
+
+The cameras captured her at the entrance, the severed ribbon at her feet, her expression composed.
+
+Elizabeth knew what the photographs would show.
+
+She had learned a great deal about photographs.
+
+Two attendants rode with her in the car.
+
+This was not unusual, but she noticed them differently now.
+
+One was the man who always accompanied her. The other was a woman in a grey coat, perhaps forty, with a soft voice and a habit of watching people’s hands.
+
+Elizabeth had seen her in the corridors throughout the previous week. Someone had introduced her as working in Edward’s household, in the office that arranged his schedule, although her attention always seemed to return to Elizabeth whenever they occupied the same room.
+
+“The Archive Trust will be pleased,” the woman said, looking towards the window. “It was a very warm gesture.”
+
+“Thank you.”
+
+“The foreman said you spoke to eleven of the workers.”
+
+“I’m sorry. Was that too many?”
+
+“Not at all, Your Highness.”
+
+The woman turned and smiled.
+
+“It was kind of you. It’s only that they had been told not to expect it.”
+
+Elizabeth looked at her.
+
+“Not to expect what?”
+
+“Personal questions, I suppose. They were told there would be photographs and a presentation.”
+
+The woman returned her attention to the window.
+
+At the east gate, an unfamiliar guard checked the underside of the car with a mirror attached to a long pole.
+
+“Routine,” the driver said when Elizabeth looked towards him.
+
+She watched the mirror travel beneath the car and emerge on the other side.
+
+She did not ask when the procedure had begun.
+
+The under-steward arrived at her room at four o’clock carrying a card on a small silver tray.
+
+He was the man who had counted the Polaroids after the portrait session. Elizabeth knew he understood that she remembered.
+
+He bowed. His expression was perfectly civil, neither cold nor warm enough to invite interpretation.
+
+“Your Highness. The Archive Trust has asked me to convey its thanks for this morning.”
+
+He held out the tray.
+
+“They have also prepared this. A list of the workers who built the wing, including their names and trades, should Her Highness wish to refer to it at future engagements. I understand such a card may be useful.”
+
+Elizabeth took it.
+
+The card was stiff and handsomely printed. Thirty-four names appeared in two columns, each with a trade beside it.
+
+Tolliver, N. Flooring.
+
+She read down to the stonemason’s daughter.
+
+Marsh, A. Water and carrying.
+
+Someone had taken the trouble to find out what each person had done.
+
+“That’s thoughtful.”
+
+“The Trust is always anxious to be of service.”
+
+He hesitated. It was a small pause, the kind made by someone deciding how much of a matter needed to be mentioned.
+
+“I should also tell Your Highness that the door at the end of the east gallery has been repaired. It was a longstanding problem. The joiners have planed the bottom and rehung it, and it now closes without difficulty.”
+
+Elizabeth looked up.
+
+“The steward’s office keeps the key to the service side, in accordance with the fire rules. The pages and the stokers will be issued keys for their hours of duty. They will no longer need to lift the door to open it.”
+
+“I see. When was this done?”
+
+“This morning, while Your Highness was at the Archive. It was thought the door might cause inconvenience during the winter.”
+
+“It was never an inconvenience.”
+
+“No, Your Highness. I’m sure it was not.”
+
+He bowed and left.
+
+Elizabeth remained standing with the card in her hand.
+
+A man had meant to plane that door for thirty years. She had said so aloud, in the lower stacks, on Thursday, with her attendant at the end of the bay. She did not know whether the two things were connected. She could not tell whether she had been answered or managed, and the longer she looked at the names, the less difference she could find between the two.
+
+She had asked thirty-four people what they had done. The household had answered by giving her a card.
+
+Next time, she would not need to ask. The names would already be in her hand. She could read them aloud, pronounce them correctly, give each person the appropriate warmth of attention, and be thanked for remembering them.
+
+Nobody would have done anything wrong.
+
+She tried again on Wednesday because she wanted to understand how it worked.
+
+“I would like to visit the almshouse tomorrow,” she told the Queen’s secretary, who had come to her room for the week’s signatures. “A short visit, and a private one.”
+
+“Of course, Your Highness.”
+
+He continued looking through his book.
+
+“The household’s rules ask for a day’s notice for private engagements. We will be happy to make the arrangements. Shall I say two o’clock?”
+
+“I would prefer not to have it arranged.”
+
+“Certainly. The notice is simply to allow the security office to assist you.”
+
+He smiled kindly and made a note.
+
+“Two attendants would be usual. I’ll ask them to keep a little distance.”
+
+“Thank you.”
+
+“Not at all.”
+
+There had been no refusal.
+
+Elizabeth turned the conversation over after he left, searching for the point at which the rule had appeared. Every part of the exchange had been courteous. She had asked to visit the almshouse, and the visit had been granted. She had asked for privacy, and she had been offered attendants who would keep their distance.
+
+Nothing had been forbidden.
+
+It had simply required that someone know where she was going, when she would arrive, whom she might meet, and how long she intended to stay.
+
+She thought of Elias’s words in the conservatory.
+
+Everyone you pay ends up in a column somewhere.
+
+Then she remembered the timber records, with their careful figures and no heading for the weeks the wood had spent waiting.
+
+Before supper, Elizabeth went down to the east gallery in her felt slippers.
+
+She went alone.
+
+The radiator ticked beneath the third window. Oak panels stood in tall, dim rectangles along the wall, the fading light passing over one after another and leaving the spaces between them in shadow.
+
+The door at the far end looked almost exactly as it always had.
+
+Almost.
+
+It hung a little straighter.
+
+Elizabeth crouched and placed both hands against its lower edge. Out of habit, she lifted.
+
+Nothing happened.
+
+The bottom had been planed clean. A narrow strip of fresh oak showed where the door now cleared the stone floor. It moved easily on its hinges and closed without a sound.
+
+She tried the handle.
+
+The door was locked.
+
+Elizabeth stayed where she was, crouched beside the new wood, one palm flat against its smooth edge. She thought of a joiner who had hung it in August and let it swell, and had never quite got round to fixing it. She wondered whether anyone had told him it was done, and whether he would have wanted to do it himself.
+
+She began to count.
+
+Eleven names. Thirty-four names on a card. One door. Two attendants.
+
+She did not know what the numbers added up to.
+
+She knew only that the space she had occupied for twenty-two years, the small margin between what she was permitted to do and what she might choose for herself, had always been exactly as wide as the household allowed.
+
+Until this week, she had never put out a hand to find its edge.
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Eleven",
+        title: "The Rendezvous",
+        content: `
+She had said it aloud in the lower stacks, with her attendant standing eleven feet away.
+
+“I’m thinking of visiting the almshouse on Thursday,” Elizabeth had told the returns, without looking up. “I believe your father’s benches have gone into the meeting hall there.”
+
+Elias kept his pencil moving down the column.
+
+“They went in last week. He’s still finishing the ends.”
+
+“I thought I might look at them.”
+
+“They’d bear looking at.”
+
+He turned a page.
+
+“He’ll be there Thursday morning. There’s a fit to check on the back row, and he doesn’t trust anyone else’s eye.”
+
+That was the entire arrangement.
+
+Her attendant had heard every word and entered nothing in his book. There was nothing to record. A princess had mentioned a charity visit she was thinking of making, and a student had mentioned his father’s work.
+
+On Wednesday, she made the request formally. It was granted in the usual way, with a day’s notice and two attendants at a distance.
+
+That evening, and again on Wednesday night, Elizabeth sat with the lamp on, her heart beating like something in a cage. She had said nothing that anyone could repeat as anything more than ordinary conversation.
+
+She had not once been able to say to herself why she had said it.
+
+The almshouse had eleven residents.
+
+This time, Elizabeth gave each one a coin from the purse, the correct amount counted out by the clerk and placed in her hand. She stayed a little longer than necessary with an elderly woman named Mrs. Pell, who wanted to tell her about her late husband’s cough.
+
+The clerk stood nearby with the look of a man whose morning had been honoured. The woman in the grey coat waited beside the door.
+
+“Perhaps Your Highness would like to see the meeting hall,” the clerk suggested. “The new benches are very fine.”
+
+“I’d like that.”
+
+The hall was cold and smelled of beeswax and new oak. The fresh wood had a sweet, raw scent beneath the older smell of stone. Light fell through a narrow window high in the wall, across rows of pale benches whose ends had not yet been oiled.
+
+At the back, a man in a leather apron knelt beside the last row, a ruler in one hand. Elias sat on an upturned bucket nearby, holding the other end of a length of string.
+
+The man rose as Elizabeth approached.
+
+He was broad and grey-haired, with a slight bend in his back. When he wiped his hands on his apron, she saw that they were larger than any she had seen, the knuckles split and the skin stained almost to the wrists.
+
+“Your Highness.”
+
+He bowed from the shoulders, in the practical manner of a man accustomed to working with his hands.
+
+“Tobias Fletcher. It’s an honour.”
+
+“The honour is mine, Mr. Fletcher. I believe the east wing is partly your work.”
+
+“Part of it.” He looked at her with straightforward interest. “You wouldn’t know which part. The floating panels are mine. They’re meant to go unnoticed.”
+
+“And the door at the end of the gallery?”
+
+“Ah.” Something dry crossed his face. “Heard that’s been seen to. Good. About time.” He did not look at her as he said it. He looked at his son, briefly, and then at his ruler. “I’ll leave the fitting to Elias, if that’s all right with Your Highness. I’ve the side door to see to.”
+
+He left through a door at the back of the hall, and the latch clicked behind him.
+
+The clerk withdrew to the far end to attend to the lamps. The woman in grey took up a position by the main door, about thirty feet away, her hands folded and her gaze directed along the hall.
+
+The man who always accompanied Elizabeth stood beside her.
+
+Neither appeared to be watching anything in particular.
+
+The hall was large and quiet. Every word spoken inside it would carry.
+
+“Your Highness,” Elias said.
+
+He rose from the bucket. The title sounded as it had during their first week at the Academy: correct, level, and carefully separate from anything else he might have wanted to say.
+
+“The back row is the important one. That’s where the oak was worst.”
+
+He stood on one side of the last bench, and Elizabeth took the other. The long board lay between them, at the height of her hip.
+
+“Here,” Elias said.
+
+He did not reach for her. He ran his own thumb along the underside of the seat, where a long board joined an upright, and then stepped back to let her look.
+
+“It’s a pegged tenon. The board fits into a slot, and the peg holds it in place. You can see the ends of the pegs from underneath.”
+
+She bent and looked. Through her glove, her fingertips found the rounded end of a peg, set flush with the grain. The wood was cool and faintly oily.
+
+“The seat was supposed to be longer,” he said. His voice remained level, as though he were explaining the joint. “Twenty-four feet by the drawing. It came to twenty-three feet ten inches.”
+
+He kept his eyes on the board.
+
+“The oak came from the high-forest lot at the yard. The one I told you about in the seminar. It wasn’t inspected until it had waited eleven weeks, and by then the ends had warped. Father planed off the worst two inches and lowered the price.”
+
+“And the seat is two inches shorter.”
+
+“No one’s measured it.”
+
+He turned the string over in his fingers.
+
+“You said Thursday out loud, with him standing there.”
+
+“It seemed the least untrue way to say it.”
+
+“It was a careful way to do it.” He glanced up, once, and away. “I noticed.”
+
+It was all he said about it. She could not tell whether it was approval or a warning, and she suspected he could not either.
+
+“I wanted to see the benches,” she said.
+
+“That’s what the book will say.”
+
+“And what would you say?”
+
+“I’d say the left end sits proud and needs another pass with the plane.” He picked up the ruler his father had left. “I’d say it’s an unusual thing to cross a city to look at.”
+
+“I didn’t cross the city. I was already coming here.”
+
+“You were,” Elias said. “That’s what made it easy.”
+
+She thought she understood him. She was not sure she was allowed to.
+
+“I should tell you something else,” he said.
+
+He had begun to measure along the bench, and she followed on her own side, so that they seemed to be two people comparing the same board.
+
+“So you know.”
+
+“Please.”
+
+“My father’s yard has the palace contract for the Archive’s reading-room furniture. The whole order, this year and next. It’s most of our business.” He kept his eyes on the ruler. “I don’t think you’ve seen that column.”
+
+“I’ve seen part of one.”
+
+“Then you know what a palace can do without lifting a hand.”
+
+He marked a point on the board with his thumbnail.
+
+“Nothing as obvious as shutting us out. A shipment held for inspection. A payment delayed by a quarter. Everything would have a reasonable explanation, and someone would be able to justify it.”
+
+“You think my mother would do that?”
+
+It came out sharper than she meant it to. Elias looked up.
+
+“No,” he said. “I think she’d never need to. I think someone who wanted to please her might, and she’d never know, and they would never think of it as doing anything.”
+
+“She isn’t like that.”
+
+“I didn’t say she was.”
+
+“You said it as though she were.”
+
+“I said it as though a pen were.” He set the ruler down. “You’d know better than I would. I’ve seen her once, in a photograph.”
+
+Elizabeth was quiet. It was a fair correction, and she took it as one.
+
+“The ports,” she said at last.
+
+She had thought of the use of the term since the Amberleigh Room, without knowing when she would speak it aloud.
+
+“Edward told me eleven thousand people depend on the alliance. I believe him. I don’t think he was lying.”
+
+“I don’t think he was either.”
+
+“If I do something, the consequences could reach them, too. And you. And your father’s yard.” She looked at the board between them. “I keep adding everything together, and I can’t make it come to anything I’m entitled to.”
+
+“I’d argue with that.”
+
+She looked up.
+
+“Entitled,” Elias said. “You keep putting it into the sum as though it were a figure. It isn’t one. It’s the thing the sum is being used to decide, and it’s not yours to subtract from.” His mouth moved, nearly a smile, and stopped. “That’s all. It’s only arithmetic.”
+
+“That isn’t what arithmetic is for.”
+
+“Then it’s a poor tool, and you should find another.”
+
+It was the nearest he had come to telling her what to do. She turned the sentence over, and found that it was less like an instruction than like the chair with the new rail. He had put it where she could use it, and had not said so.
+
+“You don’t have to be so reasonable about it,” she said.
+
+“I’m not being reasonable.” His voice dropped. “I’m being careful. There’s a woman by the door who is paid to remember what we say, and it isn’t Mr. Fletcher’s hearing I’m worried about.”
+
+She did not turn her head. She did not need to.
+
+“I know,” she said.
+
+“I thought you did.”
+
+He picked up the string again.
+
+“Left end,” he said, in his working voice. “Come and see how far it sits proud.”
+
+She came and saw. It was a quarter of an inch, which was nothing, and which he measured with great attention.
+
+At the far end of the hall, a lamp was lit. Someone coughed, and the clerk’s footsteps receded across the stone floor.
+
+There were so many things the room could hear, Elizabeth realised, and so few she would ever be able to say in it.
+
+The side door opened.
+
+Mr. Fletcher returned carrying a sack over one shoulder. He stopped when he saw them, taking in the length of the bench between them and the two of them bent over it with a ruler and a string.
+
+Elizabeth could not read his expression.
+
+His face was plain and watchful, shaped by a lifetime of examining things to see whether they would hold.
+
+“Is the fit good?” he asked.
+
+“It’s good, Father.”
+
+Elias stepped back from the bench.
+
+“The back row sits a little proud at the left end. It needs another pass with the plane.”
+
+“I’ll see to it.”
+
+Mr. Fletcher walked down the aisle and set the sack on the bench. From inside, he drew out a small bundle of oak pegs, each about the length of a finger, pale from the lathe.
+
+He turned one over in his palm, then held it out to Elizabeth.
+
+“A spare, Your Highness. We always make a few more than we need.”
+
+His voice was slow and unhurried.
+
+“If you’d like to see how they’re made, that one came from the high-forest lot. It’’s checked at the end, as you can see.”
+
+Elizabeth took it.
+
+The peg weighed almost nothing. At the flat end, a fine line ran in from the edge, scarcely thicker than a thread.
+
+She turned it towards the light.
+
+The line caught the brightness.
+
+“Thank you, Mr. Fletcher.”
+
+“It’s nothing.”
+
+He looked at her once more. She could not tell whether his expression held welcome or warning. Perhaps it held neither.
+
+“Mind it doesn’t split,” he said.
+
+“I will.”
+
+She closed her gloved hand around the peg.
+
+The clerk thanked her warmly at the gate.
+
+Mrs. Pell had come out onto the step to wave goodbye, and Elizabeth waved back.
+
+Elias had gone ahead, carrying a bundle of plane shavings beneath one arm. He had bowed from the shoulders and addressed her by her title before walking down the lane towards the yard.
+
+He did not look back.
+
+Elizabeth did not watch him go.
+
+The woman in grey fell into step as the car door was opened.
+
+“A pleasant hall,” she said. “And such good, solid work.”
+
+“Yes.”
+
+“The carpenter’s son is a credit to him. I understand he has a place at the Academy.”
+
+“He does.”
+
+“So I understand.”
+
+The woman smiled.
+
+“It must mean a great deal to a family like that, having a scholar.”
+
+Elizabeth said nothing.
+
+Her gloved hand rested in her lap, its fingers loosely folded around the small, hard shape of the peg. If she pressed her thumb against it, she could feel the fine crack through the leather.
+
+She did not press.
+
+At the east gate, the guard bent to inspect the underside of the car. The mirror slid beneath it and emerged again.
+
+There was nothing to lock.
+
+Elizabeth sat on the edge of her bed with the lamp on and removed her glove. The peg rolled into her palm.
+
+It was an ordinary thing, the sort of object a thousand carpenters might turn out in an afternoon. She held it up and studied the fine line at the end.
+
+She was looking at eleven weeks of rain.
+
+A fault created by the conditions in which the wood had been kept, then discovered by the rule that had required it to wait. There was no column for the wait.
+
+She still did not know what the thing between her and Elias was called. She knew what it might cost, because he had told her plainly, across a length of oak, in a room with an echo.
+
+He had said it so she would not be surprised later.
+
+She had come away without a single sentence she could have repeated to anyone as more than carpentry. She was nearly certain that was how he had meant it. She was not certain of anything else.
+
+Under the lamp, with the household moving quietly beyond her door, she slipped the peg into the toe of a winter stocking. She placed it in the second drawer beside the folded blouse.
+
+Then she closed the drawer gently and rested her hand on it.
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Twelve",
+        title: "The Countdown Ledger",
+        content: `
+The number came with the breakfast tray, written in the corner of the steward’s card in a different ink.
+
+Eleven.
+
+Elizabeth read it once. She had known it for days, the way you know where a bruise is without touching it. But written in someone else’s hand, the number seemed to belong to the room, like the furniture or the curtains. She turned the card facedown beside her plate and ate her egg.
+
+The ceremony hall held its cold much as the library did, but there was dampness beneath it, rising from the old stone floor in every season.
+
+At ten, a clerk from the steward’s office had the floor to himself. A plan lay pinned to a drawing board, and he walked Elizabeth through it as though showing a visitor around a house about to be sold.
+
+“From the west door to the steps of the dais is sixty-three paces at the processional tempo.” He wore a stopwatch on a cord around his neck. “Her Highness will pause on the brass plate. The register will be placed on a stand, with a witness on either side. Her Highness signs first, then Edward of Valenne, then the witnesses. The register is lodged with the state records, with a copy for Valenne.”
+
+“Who holds the pen?”
+
+“It will be on the stand. It is an old pen.” He smiled. “It has been used for every signing of its kind.”
+
+She walked the route.
+
+Light fell through the high windows in long, pale bars. She stepped from one into the next, keeping her eyes on the far window whenever the clerk reminded her to look up. At the brass plate, she stopped.
+
+Behind her, to the right, past the end of the dais rail, stood a small oak door beside the service passage. It had an iron ring for a handle.
+
+Her mind, trained all her life to notice what a room was doing, had already measured the distance.
+
+Twenty-two paces from the plate.
+
+The door opened inward, she could tell from the way the hinges sat. A bolt at the top was high enough for a steward’s man to reach but not for her. There was a smaller bolt near the floor.
+
+She had not decided to look. It was the same thing that happened beneath the library table, when her foot moved before she thought about it. Her body had arrived ahead of her mind again.
+
+Only this time, it seemed to be working for her.
+
+She did not yet know whether she was glad.
+
+“Eleven days,” Edward said, appearing beside her a little out of breath, his coat still open. “My mother has the number on a calendar in the kitchen at Valenne. The cook strikes off each day in red pencil. I think she invented the custom herself.”
+
+“You’re late.”
+
+“I’m told I’m always late and always early. It’s a difficult combination.”
+
+He turned to the clerk. “I walked it three times yesterday. Was I too quick?”
+
+“A little eager, sir.”
+
+“Early,” Edward said. “It’s a different failing.”
+
+She laughed.
+
+He looked so pleased that she felt it in her chest, like a small stone.
+
+At the west door, he fell into step a yard to her left and matched her pace for all sixty-three steps without comment or a glance at his feet. He did not hurry her. He did not lag. It was the gentlest thing anyone had done for her that week.
+
+She counted the whole way.
+
+She did not know whether she was counting the steps or something else.
+
+At the brass plate, he stopped half a pace behind her, as the clerk had asked, and spoke very low, without turning his head.
+
+“Everyone looks at the small door. I did, on my second walk. It’s an ugly thing to want on a day like this.” He smiled at the clerk, who was writing. “I put it down to nerves.”
+
+“Was it?”
+
+“Mostly.” His voice stayed light. “Don’t tell my mother.”
+
+Elizabeth said she wouldn’t. Her pulse had gone up into her throat, and she kept her eyes on the far window until it came down again.
+
+She had no paper, because paper had columns, and a column was a place someone could look.
+
+That night, she lay in the dark with her hands folded over the coverlet and made herself think through the problem in the way she had learned to think through the propositions.
+
+What can be done.
+
+She had a mended blouse, a tin of needles, and a wooden peg with a check in the end. She had an allowance that a bursar recorded, and jewellery catalogued and counted by the steward every March. She had a name recognised in every room she entered.
+
+She had once taken two coins from a dish, and she had counted that dish over and over since.
+
+Elias had said it in the conservatory, and he had been right.
+
+Everything she owned had a line beside it.
+
+What is noticed.
+
+Boots at midnight. Boots at half past four. A guard at the east gate holding a mirror on a pole. A woman in a grey coat who watched people’s hands.
+
+Under the household’s rules, she was required to give notice of travel beyond the capital county. A copy of that notice went to the security office.
+
+Who pays.
+
+She said the names slowly, taking care with each one, as she had when she recited the cost of the blue gown.
+
+Edward, who would stand before two hundred people and carry the weight of an alliance on which eleven thousand port workers depended. He had told her honestly that he did not know what he would be without it.
+
+Isabel, who would be left to account for whatever Elizabeth did, and would do it in perfect order.
+
+Mrs. Hale, who had waited nine years for a stove and carried a callus from her sewing clamps.
+
+Elias’s father and his yard, whose reading-room contract accounted for most of their business.
+
+It was a short list.
+
+She had expected it to be longer. Then she understood that it was not short at all. Every name belonged to someone she had looked at, someone whose face she could remember.
+
+She noticed that she had not included herself.
+
+After a moment, she added her name at the bottom, where the total would go.
+
+The household’s rules were printed. Everything done by procedure existed somewhere in print, and the Academy’s law shelf held them in a grey pamphlet of ninety-two pages with a broken spine.
+
+Nine days remained when Elizabeth read it at a public table in the reading room. Her attendant sat three tables away. Between them, a law student slept over the Succession Act.
+
+The document was plain enough.
+
+Clause fourteen required notice of private engagements and of any travel beyond the capital county. Clause fourteen (c) specified that notice should be given to the steward, who would inform the security office for the convenience of the person concerned.
+
+Elizabeth read the phrase twice.
+
+Then she turned back through the pages, searching for the sentence that explained what happened if someone failed to comply.
+
+There was none.
+
+She read the pamphlet from the first page to the last. It contained obligations, courtesies, and an appendix of forms. Nowhere did it state what would happen to anyone who ignored the requirements.
+
+She thought of the card listing thirty-four workers. The east gallery door that had been rehung. The notice that had been presented as a kindness.
+
+A rule without a penalty might be harmless.
+
+Or perhaps it had never needed one because the penalties were not written into the rule. They existed somewhere else, in a contract, a shipment, or a payment delayed by a quarter.
+
+She closed the pamphlet and returned it to its place.
+
+Elias was in the lower stacks that afternoon, sitting on his crate with a sheet of paper on his knee. He had missed Tuesday’s session because he had taken an agency shift. The skin around his eyes was red with tiredness.
+
+He held the paper out to her without greeting.
+
+“It’s our yard’s book,” he said, to the page. “Father keeps it in a drawer. Every lot, the day it arrived and the day it was inspected. I’ve ruled the column.” He turned a pencil over in his fingers. “It took the better part of Tuesday night. I’d have been awake anyway.”
+
+The page was handwritten in pencil, in a hand she recognised from the margins of the Inspectorate returns.
+
+Three years of timber lots. Thirty-one entries. A column headed weeks standing. The final column recorded the inspection result, and Elias had marked every failed lot with a small circle.
+
+She ran her finger down the page.
+
+The circles gathered toward the bottom, where the waiting times were longest. Near the top, the lots inspected within a fortnight had passed.
+
+“It’s only our yard,” he said. “Thirty-one lots. It doesn’t tell us anything about all the oak.”
+
+“It tells us something about the wait.”
+
+“It tells us something about thirty-one boards.”
+
+He took the sheet back, folded it once, and slipped it into his jacket.
+
+“I wanted to see it. Now I have.”
+
+“What will you do with it?”
+
+“I don’t know. Keep it.” He shrugged. “It’s not much. But it’s a column that wasn’t there.”
+
+Elizabeth had a clear, unwelcome sense of her own ledger lying in the dark behind her face, with its short list of names.
+
+His was on paper, written in pencil, folded into a pocket. It could be taken out and read. He had made something that another person could examine.
+
+She could not tell which of them had the braver habit.
+
+“You were in the reading room this morning,” Elias said, still turning the pencil. “At the law shelf.”
+
+“Was I?”
+
+“The pamphlet with the broken spine. Nobody gets to the end of that one.” He did not look up. “Did you?”
+
+“Yes.”
+
+“And?”
+
+“There’s no penalty in it.”
+
+He nodded slowly, the way he nodded at a joint he had already suspected.
+
+“Then isn’t the pamphlet doing the work,” he said.
+
+At the mouth of the bay, her attendant shifted position.
+
+Elizabeth sat on the broken chair, which no longer rocked, with her hands folded. Elias returned to the Inspectorate returns and read until six.
+
+Six days remained when the blouse came back.
+
+It lay on top of the folded cottons when the maid set down the basket at seven. The plain grey one, with the small ridge along its left side seam.
+
+Elizabeth had put it in the second drawer after the almshouse, beneath her winter stockings. She had not touched it since.
+
+She waited until the maid had gone, then opened the drawer.
+
+The stockings were where she had left them. Inside the toe of the left one, the wooden peg lay hard, small, and cool. The tin of needles remained undisturbed in the third drawer, beneath its shawl.
+
+Only the blouse had been moved.
+
+Someone with a key to her drawers had taken it out, washed it with the ordinary cottons, and returned it to the pile.
+
+She held it up to the window.
+
+Her stitches remained visible on the outside, uneven and slightly raised. The original ridge was still there. But on the inside, a finger’s width away, someone had added a second line of stitching, running exactly parallel to hers.
+
+The stitches were tiny and even, made with white thread so fine it was almost invisible.
+
+At the final fitting that afternoon, Elizabeth stood in the blue silk with her arms raised. Mrs. Hale knelt beside her hip, a mouthful of pins held between her lips. The younger seamstress handed them across one at a time and placed them in Mrs. Hale’s palm without looking up.
+
+“Someone washed a blouse of mine,” Elizabeth said.
+
+“It would have gone at the seam.” Mrs. Hale’s voice was flat and mild. “A bare seam needs a backing stitch, or it opens at the second wash. Yours would have opened by Sunday.”
+
+“Did you tell anyone?”
+
+“There’s nothing to tell. A seam was mended.”
+
+A pin went into the hem.
+
+“I wouldn’t have taken your stitches out. They weren’t mine to remove.”
+
+“Thank you.”
+
+“The cottons don’t get looked at. The under-steward checks the silks and linens. The cottons go to the laundry and come back.” Mrs. Hale pulled the thread through. “That’s all I know about the cottons.”
+
+It was a simple statement of fact.
+
+It was also a map.
+
+Elizabeth could see the whole arrangement laid out before her. Mrs. Hale carried things to the under-steward, who carried things onward. Somewhere along the way, Mrs. Hale had decided, without announcing it to anyone, to carry nothing she did not have to.
+
+Elizabeth did not ask whose hands had held the needle. She thought of a maid with a red knuckle, and of how little she knew about that hand.
+
+Three days remained when she opened the atlas.
+
+It lay on the long table in the library beneath the green lamp, in plain view of anyone who passed, with her Academy notes beside it. Nobody had ever seen her read a map there, but nobody would think it strange. The panel gave her a reason, and the lamp gave her light.
+
+She traced the river with one finger, past the border of the capital county and along the single railway line that ran into the high forests.
+
+She did not let her finger stop anywhere.
+
+When she had finished, she closed the atlas and returned it to the shelf.
+
+Not to its usual place on the third shelf, but to the second, between two volumes of the Succession Act.
+
+She did it before she understood why.
+
+Then she stood with one hand on the spine and realised what she had done.
+
+A book put back in the wrong place once was an accident. Nobody counted accidents. She did not like how quickly she had thought it.
+
+“You’ve been reading maps.”
+
+Isabel stood in the library doorway with a ledger held against her chest, as she held them all, like a woman carrying flowers. Her hair was still pinned from the afternoon’s audience.
+
+She did not seem to have just arrived.
+
+She seemed to have been there for some time.
+
+“The Academy panel wants us to know the districts.”
+
+“Of course.”
+
+Isabel crossed the room and placed her ledger squarely on the table beside Elizabeth’s notes.
+
+Then, without looking at the shelf, she reached for the second row and drew out the atlas from between the volumes of the Succession Act.
+
+She carried it across the room and slid it into the gap on the third shelf. Her fingertip touched the spine, and the space closed around the book without a sound.
+
+“It lives there,” Isabel said.
+
+“I know. I’m sorry.”
+
+“Don’t be.”
+
+Isabel looked at her. It was a level, tired, administrative look. It lasted exactly as long as it needed to, then a little longer.
+
+“Someone has to keep the books,” she said. “It’s only that someone would have noticed.”
+
+She gathered her ledger and left.
+
+The door closed as quietly as it had opened.
+
+Elizabeth remained beneath the green lamp, her hand still raised to the place where the atlas had been. She could not tell whether she had been warned or covered for. She suspected that Isabel could not have said either, if asked.
+
+That night, she went through the ledger again, evenly, in the dark.
+
+What can be done.
+
+A blouse, a peg, a tin of needles.
+
+A route that had no name yet.
+
+A way out of a building whose door had been planed shut, and a ceremony hall with a small oak door twenty-two paces from a brass plate.
+
+A name everyone knew, and no money that anyone had not counted.
+
+What is noticed.
+
+Boots. A mirror. A woman in grey. Rules with no penalty in them. A dresser who carried nothing she did not have to. An Isabel who knew where things belonged.
+
+Who pays.
+
+She said the names. Then she said them again.
+
+For several days, she had thought the ledger might show her a way forward. Now she understood that she had shown her only the gaps, and that each gap had a person standing inside it.
+
+She had no route. No coin. No plan.
+
+She had a list of everyone she would have to ask, and everyone she would have to leave.
+
+Down the corridor, the boots passed, slow and even. She counted until they reached the end of the hall.
+
+Beside her bed was the connecting door to her sister’s room. It had never had a lock.
+
+Beneath it, on every night she could remember, lay a narrow line of yellow light.
+
+It was later than usual for the light to be there.
+
+Elizabeth watched it for a long time.
+
+It did not move. Nobody knocked.
+
+At last, very gently, the light went out.
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Thirteen",
+        title: "Isabel’s Audit",
+        content: `
+Isabel noticed what was missing.
+
+It had never occurred to her to call this a gift. It was simply where her eyes went: to a gap on a shelf, a blank at the bottom of a column, a drawer that closed half a second faster than the drawers beside it.
+
+When she was nine, she had told a clerk in the steward’s office that the candle count for the long hall was one short. She had been right. He had looked at her as though she had picked his pocket.
+
+She kept her list on half a sheet of paper folded inside the household’s laundry returns, because nobody audited laundry. It had no heading, only four lines written in the shorthand used in the linen room. Anyone who found it would have taken it for a complaint about sheets.
+
+Vestibule dish, tradesmen’s change: two coins short, the almshouse Friday. Entered as the maid’s miscount.
+
+Test prints, Blue Drawing Room: five in tray, six in assistant’s book, six again by morning.
+
+Atlas, third shelf. Found on the second.
+
+Cotton blouse, returned mended twice over. A dresser’s backing stitch. Cottons are not mended.
+
+The fifth line she had not written down.
+
+It was a light beneath a connecting door, and she had been the one to put it out.
+
+Alone, none of the entries meant anything. A maid’s miscount. A tray of photographs. A misplaced book. A dresser being kind to a garment.
+
+For weeks, Isabel had told herself they were separate things.
+
+Then she had stood in the library with a ledger against her chest and watched her sister’s hand remain suspended in the air where the atlas had been.
+
+The four lines had stopped being separate.
+
+The previous night, Isabel had sat on her side of the connecting door and watched the thin line of Elizabeth’s lamp for an hour. She had not knocked. She had not decided whether she ought to.
+
+Tonight, she left the ledger on her desk.
+
+For the first time in years, her arms had nothing to hold. She crossed the room with the half sheet in one hand, uncertain what to do with the other, until she slipped it into her pocket.
+
+At the connecting door, she stopped.
+
+It had never had a lock. In all the years she had lived beside it, she had never knocked.
+
+She raised two knuckles and did so once.
+
+“Come in,” Elizabeth said after a while.
+
+She was dressed. A lamp with a green shade illuminated the desk, and Sapphire lay asleep along the foot of the coverlet, one paw hanging over the edge.
+
+Elizabeth stood at the window with her back to the glass and her hands folded in front of her, as though she had been waiting to receive a visitor.
+
+“You knocked.”
+
+“I thought I should.”
+
+Isabel crossed to the desk and placed the half sheet beneath the lamp, aligning it with the edge.
+
+“I’ve come to read you something.”
+
+“Is it from Mother?”
+
+“It’s from me.”
+
+She read the list aloud in the same voice she used for household returns, flat and precise, putting the commas where they belonged.
+
+When she reached the vestibule dish, Elizabeth looked down at the floor. When Isabel read the entry about the blouse, her sister looked up again.
+
+“I think Mrs. Hale did that,” Isabel said. “She has never said so, and I haven’t asked. I have no complaint about it. I only noticed.”
+
+“I was preparing for the panel.”
+
+“That’s what you said about the atlas.” Isabel kept her eyes on the paper. “You have one answer for things. It’s a good one. It’s usually enough.”
+
+“It’s always been enough.”
+
+“Yes,” Isabel said. “That’s rather what I noticed.”
+
+Sapphire’s tail moved once against the coverlet, then went still.
+
+Somewhere in the corridor, boots passed at their usual slow, even pace. Neither sister spoke until the sound had faded.
+
+“What do you want, Isabel?”
+
+“To know whether this is a mood or a plan.” She folded the sheet in half. “I can manage a mood. Moods end. A plan would mean I had to decide something.”
+
+“It isn’t a plan.”
+
+“I know.”
+
+There was no unkindness in her voice.
+
+“You have no money. You have no route, and no name that isn’t your own. You put an atlas back on the wrong shelf. You would have reached the east gate.” She paused. “It’s a very good gate. It’s also the most observed door in the house.”
+
+Elizabeth said nothing. Her mouth tightened, and Isabel recognised the expression. She had seen it across a hundred tables: her sister assembling the beginning of an argument.
+
+“Don’t,” Isabel said. “I haven’t come to catch you.”
+
+“Then why?”
+
+“Because of the tape.”
+
+The words came out before Isabel had decided to say them.
+
+“In the Blue Drawing Room. There was a corner of card beneath the silk.”
+
+“You pressed it flat.”
+
+“It would have shown in the photograph.”
+
+“That isn’t why you did it.”
+
+“No.”
+
+Isabel turned the half sheet over, then back again, and placed it on the desk.
+
+“I don’t know why I did it. I’ve been trying to find out for weeks.”
+
+“I didn’t take it for myself,” Elizabeth said. “It was Mrs. Hale. They cut her out.”
+
+“I know. I counted the tray.” Isabel looked at the lamp. “I counted it before you took it, and I counted it after. I expect that’s the other reason I didn’t ask.”
+
+They did not sit.
+
+Isabel stood beside the desk, Elizabeth by the window, with the lamp between them and the cat asleep on the coverlet. Isabel found she could speak more easily while looking at the lampshade.
+
+“I think you’re wrong about Edward.”
+
+“I haven’t said anything about Edward.”
+
+“You’ve said it by what you haven’t said. I’ve watched him with the staff. He remembers how you take your tea. He got it half wrong, I know, and I know you noticed, but most people remember nothing at all.”
+
+She paused, hearing how her next words sounded, but did not take them back.
+
+“He would be kind to you for forty years.”
+
+“I’m not saying that to make you stay,” she added. “I’m saying it because I would rather you left knowing it. If you left thinking he’s a monster, you’ll have left for the wrong reason. I don’t think you can afford a wrong reason.”
+
+“I don’t think he’s a monster.”
+
+“Good.”
+
+“I think he has already decided.”
+
+“Yes,” Isabel said. “I think so too.”
+
+It was not the answer she had come prepared to give. She had expected to hold her ground, but instead she had agreed with her sister. The two things sat together between them without cancelling each other out.
+
+“I think the house is mostly good,” she said. “The steward’s office, the ports, the alliance. People depend on them. I’ve read the figures. If the whole thing came down tomorrow, people I will never meet would go hungry in the spring. I won’t pretend otherwise just because you’ve found a door.”
+
+She drew a breath.
+
+“But you should have been asked. Once. By someone who would have listened to the answer. I think that’s true, and I don’t think it has anything to do with whether the house is good.”
+
+Elizabeth looked at her as she had not looked at her since they were children. Her face was open, unarranged.
+
+“You were on my list,” Elizabeth said.
+
+“Which list?”
+
+“I haven’t written it down. I’ve said it in the dark, a few nights now. There are three headings.” She kept her voice level. “You were under the last one. Who pays.”
+
+Isabel took a moment to answer.
+
+“Yes,” she said. “I thought I might be.”
+
+“I didn’t know what to do about it.”
+
+“Nor did I. I’m not sure it was the sort of thing one does something about.” She straightened the half sheet that did not need straightening. “Don’t make me noble. I won’t have it.”
+
+“I wasn’t going to.”
+
+“After the fourteenth, they’ll move the half pace. They’ve already had the chair measured.”
+
+She directed the words at the lamp.
+
+“I’ve thought about that a great deal. I’m not entirely sorry.”
+
+She waited a moment.
+
+“There. Now you know what kind of sister you have.”
+
+The silence stretched.
+
+“You’d be good at it,” Elizabeth said.
+
+“I know,” Isabel said. “That’s the unfortunate part.”
+
+Elizabeth did not look away. She did not flinch, and she did not tell Isabel that everything would be all right.
+
+When she finally spoke again, her voice was quiet.
+
+“Thank you for telling me.”
+
+“It isn’t a kindness.”
+
+“I know. That’s why.”
+
+The practical part took four minutes.
+
+It was the part Isabel was good at. As she began to explain, her voice steadied, like a hand finding a rail.
+
+“Tomorrow is the thirteenth. The Valennian party dines at the embassy that evening, and the woman in the grey coat goes with them, because she works on Edward’s schedule.”
+
+“How do you know that?”
+
+“I prepare the Queen’s afternoon papers. Everything that needs her signature passes me first. I read it all. It’s a dull habit, and it has turned out to be useful.”
+
+She laid the next fact down as carefully as she would have laid a card.
+
+“The security rotation changes at eleven. For about forty minutes, the east corridor has one attendant instead of two.”
+
+“The thirteenth is also the monthly fire-door inspection. The steward lends the household’s inspecting officer a key to the service side of every fire door in the east wing. The officer inspects each one, signs the forms, and returns the key on the fifteenth.”
+
+She paused.
+
+“The officer is me. I’ve held the duty since I was nineteen. No one has ever thought there was anything remarkable about it.”
+
+Elizabeth did not move.
+
+“It goes in the ledger under my name,” Isabel said. “Lent, east gallery, fire egress. If you’re gone on the fourteenth, the steward will check the ledger before he checks anything else. I’ll be asked first. I’ll have an answer.”
+
+She smoothed the half sheet against the desk.
+
+“It will be a lie. I’m very good at them, and I should like it noted that I’m good at them.”
+
+“Isabel.”
+
+“I’m not finished. Two more things.”
+
+She raised one finger.
+
+“Don’t tell me where. If I know, I’ll have to decide what to say about it, and I would rather not discover what I might decide. And you don’t need to tell me about the carpenter’s son. I already know. I read the attendant’s log, because nobody audits that either, and you asked to visit the almshouse. You never ask for anything. I looked at what you did ask for.”
+
+She raised a second finger.
+
+“And I can’t promise anything about the yard. The Archive’s reading-room contract will come across my desk for renewal after the ceremony. I’ll sign what I’m given. Whether I’ll be allowed to do otherwise, I can’t say. You mustn’t leave thinking I’ve made that safe. I haven’t.”
+
+“I haven’t said I’m going.”
+
+“No,” Isabel said. “You haven’t.”
+
+She waited.
+
+She had given Elizabeth the space to say it, but her sister made no use of it. She stood with her hands folded and her eyes on Isabel’s face.
+
+Then, very slowly, she looked down at the bed.
+
+“Sapphire,” she said.
+
+“She comes through to my radiator most nights after you’re asleep. Did you know?”
+
+“I thought she went to the kitchen.”
+
+“She goes to the kitchen for the first hour. Then she comes to me.” Isabel had intended to say it evenly. Instead, she found herself looking at the paw hanging over the edge of the coverlet, and her voice changed in a way she had not planned. “She won’t notice. Or she will notice, and she’ll be a cat about it.”
+
+Elizabeth put her hand over her mouth.
+
+It stayed there for a count of three.
+
+Then she lowered it. Her face was composed again, almost entirely, and Isabel looked at the lamp.
+
+“I don’t know what I’m going to do,” Elizabeth said.
+
+“I know.” Isabel picked up the folded sheet. “I only wanted you to have the times.”
+
+She returned through the connecting door and drew it to behind her, without letting the latch catch.
+
+It did not lock, because it could not.
+
+At her desk, Isabel took out the half sheet and read it once more. Then she folded it into the laundry returns, between a column of pillowcases and a note about a torn tablecloth. On Friday, it would go to the linen room and be filed with years of other people’s sheets.
+
+She sat for a while with her hands flat on the blotter.
+
+She could feel her own pulse. She was aware of the empty space where the ledger should have been, and of the weight of a sum she had not yet written down.
+
+She could have calculated it. The figure was small and exact.
+
+She had given away forty minutes and a key.
+
+In return, she would be asked first.
+
+She did not put out the lamp.
+
+Its light would show beneath her corridor door, a thin yellow line at an hour when the Queen’s second daughter had no reason to be awake. Anyone passing would see it.
+
+She could account for that.
+
+A late audit. A household returns report. The Queen’s second daughter, who was always working.
+
+She had always been able to account for things.
+
+Beside her, the radiator ticked and breathed.
+
+After a while, she heard a small sound behind her: a paw against the edge of the connecting door, a faint scrape, the door moving the width of a cat. Sapphire came through without hurry and settled against the warm pipe.
+
+Isabel did not look down.
+        `
+      },
+      {
+        eraLabel: "Era Two: Elizabeth",
+        number: "Chapter Fourteen",
+        title: "The Letter of Severance",
+        content: `
+By old custom, the bride was left alone on the eve of the ceremony, from the end of supper until morning, with a candle and an evening of her own.
+
+The custom was older than the household’s printed rules. Nobody enforced it. It simply was not done to knock.
+
+Elizabeth had eaten a little soup at seven. By eight, the household had withdrawn in good order, Mrs. Hale last, offering a nod at the door that told Elizabeth nothing.
+
+By nine, the Valennian party had left for dinner at the embassy, and the woman in the grey coat had gone with them.
+
+The house settled around Elizabeth as it settled around a sleeping person. A candle burned on the desk. Beneath the green-shaded lamp lay a brass key attached to a luggage tag.
+
+She had not heard it arrive.
+
+The tag was marked in Isabel’s small, upright handwriting, in the exact wording of the egress ledger.
+
+Lent, east gallery, fire egress. Return the fifteenth.
+
+The key was warm. Someone had held it for a long time before putting it down.
+
+Elizabeth did not touch it yet.
+
+She sat at the desk, took a sheet of heavy household paper from the drawer, and uncapped her pen.
+
+She had expected the letter to be difficult to write.
+
+It was not.
+
+That was the first thing that frightened her.
+
+To the Steward of the Household, for the information of Her Majesty the Queen and of Edward of Valenne.
+
+Notice is given under Clause 14 of the household’s rules that the undersigned will travel beyond the capital county from the evening of the thirteenth, for a period not yet determined. She further gives notice that she withdraws her consent to the ceremony appointed for the fourteenth, and requests that the register not be laid.
+
+No fault attaches to any member of the household, the security office, or any person named in the undersigned’s calendar. The undersigned has acted alone and of her own judgment.
+
+It is requested that this notice be received as given in good time, and in the interest of all parties concerned.
+
+She read it back.
+
+Every clause sat where a clause belonged. Each sentence closed neatly against the next, like a row of drawers.
+
+She could almost hear the steward’s office approving it.
+
+In four years of Wednesdays, she had learned how to make a refusal sound like a procedure. Now she was doing it at her own desk, without a single word crossed out. The phrase in the interest of all parties had come from her pen as easily as her own name.
+
+It was a good letter.
+
+That was the second thing that frightened her.
+
+The third paragraph placed the blame on her alone. It kept Isabel’s name out of the ledger and Elias’s family out of the consequences. It did so in the household’s own language, the only language the household would readily accept as true.
+
+She stopped at the words any person named in the undersigned’s calendar.
+
+The calendar was her attendant’s log. Study, Academy library, Tuesdays and Thursdays, four to six. Somewhere on that page, in a clerk’s hand, was the name Fletcher.
+
+She could not take it out. It had been written there on the first Tuesday, in good faith, as an ordinary thing.
+
+She read the sentence again. It protected everyone whose name she could control. She added nothing to it. There was nothing she could add that would not point at him.
+
+Elizabeth had spent twenty-two years learning how to be believed by that office.
+
+Tonight, she was using everything she had learned, and she knew exactly where it ran out.
+
+She was, she thought, the first person to give notice under Clause 14 on time.
+
+She folded the letter into thirds and held the wax over the candle until it softened. The signet ring felt heavy on her right hand. She pressed it into the wax with the flat of her thumb and held it there while the crest cooled.
+
+When she lifted the ring, the impression was dark and perfect in the seal.
+
+She worked the ring over her knuckle. It left a pale band on her skin.
+
+Then she placed it on the blotter beside the letter, carefully aligned with the edge.
+
+Without her hand inside it, the ring looked like a small gold object that had never belonged to anyone.
+
+The second note took five lines.
+
+This time, she wrote in her own hand, the round handwriting she had used before she was taught the other.
+
+Edward,
+
+You told me I could say no, and that it would count. I am saying it. It was not a wish. I wanted to be certain, and I am.
+
+Nothing you did caused this, and nothing you offered could have changed it. I am sorry you will read this in a corridor.
+
+Elizabeth
+
+She did not seal it.
+
+Someone would read the letter before it reached him. Someone read everything written in this house, and there was no reason to pretend otherwise.
+
+She placed it beneath the signet ring, which held down one corner.
+
+Then she took a third sheet and wrote a single word at the top.
+
+Mother,
+
+The nib remained on the paper.
+
+She watched the ink gather beneath it and spread into a small black pool. A full stop appeared at the end of the word, though she had not intended to make one.
+
+Elizabeth had a form for every correspondent she had ever written to. She knew how to address a minister, a general, a dowager cousin, the wife of a Valennian ambassador.
+
+She did not know the form for this.
+
+No one had taught it to her.
+
+She supposed that was not an oversight.
+
+She waited for the next word.
+
+The candle burned down a quarter of an inch.
+
+Somewhere in the corridor, the boots passed, slow and even. Then she heard them moving in the opposite direction. After that, they did not return.
+
+It was eleven.
+
+The rota had changed.
+
+Elizabeth looked at the single word. She thought of her mother reading it in the morning, and of how long Anne would stand with the sheet in her hand, and how very exactly she would understand what it did not say.
+
+She folded the sheet with its one word and placed it beside the others.
+
+Since the morning after Isabel’s knock, she had been taking coins from the dish in the vestibule, a few at a time, in three visits.
+
+Tradesmen’s change. The household left it there for the men who delivered the milk and the coal. Every Monday the steward’s page emptied it with a glance.
+
+Each time, Elizabeth had told herself she was only borrowing.
+
+By evening she had twenty-three coins. She wrapped them in a cloth and hid them in the toe of a winter stocking.
+
+She had counted them eleven times.
+
+Twenty-three coins amounted to less than the Founders’ Trust had spent on the candles along the north wall.
+
+She had taken them from the men who brought the coal in order to leave the people who burned it.
+
+She did not know which part was worse.
+
+She added the amount to the column in her mind, beneath the line for herself.
+
+She was wearing the blouse she had put on that afternoon, beneath a grey cardigan. Its two lines of stitching rested against her ribs. When she turned back the cuff of the cardigan to free her wrist, she found it already turned, and knew whose two-fingered gesture she had made.
+
+She wore the plain walking boots she kept for the gardens. They would not remain plain for long.
+
+She took the small key from the pocket of her skirt and unlocked the drawer where her notebook lay. The first three pages were still feathered with ink where she had written over the same sentence again and again.
+
+She read none of it. She put the notebook inside her cardigan.
+
+She took the wooden peg from the toe of the other stocking. She held it for a moment, feeling the hard, familiar check at its end, then slipped it into her pocket.
+
+The tin of needles remained in the third drawer beneath its shawl.
+
+Elizabeth stood looking into the open drawer.
+
+Then she took out one needle and a short length of thread and tucked them into the cuff of her sleeve.
+
+She left the lamp burning.
+
+From where she stood, she could see the thin yellow line beneath the connecting door. A small, private jolt went through her as she realised that Isabel had known she would look for it.
+
+Sapphire had not moved. She lay along the foot of the coverlet with one paw hanging over the edge, breathing slowly.
+
+Elizabeth knelt beside the bed and rested her face against the cat’s side.
+
+The fur was warm. It smelled faintly of the radiator.
+
+Sapphire made a low sound without waking.
+
+For a moment, Elizabeth stayed there, her eyes closed, holding on to something that asked nothing of her.
+
+Then she lifted the cat, carefully, as one lifts something precious and heavy, and carried her to the connecting door.
+
+It had never had a lock.
+
+Elizabeth pushed it open with her knee.
+
+Beyond it, Isabel’s room was lit by a desk lamp. A ledger lay open on the desk, and Isabel sat with her back turned.
+
+She did not look around.
+
+Elizabeth lowered Sapphire onto the carpet just inside the room.
+
+The cat stood uncertainly, tail raised, then walked to the radiator and settled beside it.
+
+Isabel’s pen stopped. It stayed above the page for the length of a breath, and Elizabeth watched the ink gather at the nib. Then it moved on, and the line it made was as straight as the ones before it.
+
+Elizabeth drew the door closed, gently.
+
+It made no more sound than it had when she opened it.
+
+The east gallery was warm.
+
+Elizabeth had known it would be, but she still noticed the heat. The radiator ticked beneath the third window. The oak panels held the warmth in their tall, dim rectangles.
+
+She walked the length of the gallery in felt slippers, carrying her boots. She passed the panel that sat loose in its frame and continued to the last window.
+
+There, she stopped and put on her boots.
+
+She crouched to tie the laces, looped them twice, and made a poor knot. She did not undo it.
+
+The door at the end of the gallery hung straighter than it ever had before.
+
+She had lifted its lower corner two hundred times, or watched someone else lift it.
+
+She put Isabel’s key into the lock and turned it.
+
+The mechanism moved smoothly. The brass had been oiled.
+
+She pushed.
+
+The door swung inward without a sound, without the weight she had expected.
+
+Cold air rushed through the opening like water.
+
+Elizabeth stepped across the threshold onto the stone flags of the landing. A single bulb, enclosed in a metal cage, swung slightly in the draught.
+
+She pulled the door shut behind her and turned the key again from the landing side. It locked with a small, final sound.
+
+Then she crouched. The door cleared the floor by the width of a strip of fresh oak, planed clean that week. She laid the key flat on the flags and pushed it, with two fingers, across the stone and under the door.
+
+She heard it slide into the gallery, and stop.
+
+Return the fifteenth. Isabel would find it there, where anyone might have dropped it.
+
+On this side, the door had only a plain latch and a worn patch where countless hands had rubbed the paint away.
+
+She went downstairs.
+
+A strip of yellow light showed beneath the door of the warm room. From inside came the small, ordinary sound of a kettle being lifted off a stove.
+
+Elizabeth did not slow down or knock.
+
+Mrs. Hale carried what she had to carry.
+
+Elizabeth would not make her carry this.
+
+The boot room stood at the bottom of the stairs, a low, whitewashed space with a row of iron pegs along one wall. Gardeners’ coats hung there, heavy waxed garments stiff with weather. Each had a tin tag fixed to its collar.
+
+Elizabeth took the nearest coat.
+
+It smelled of rain and cut hemp. The hem fell past her knees.
+
+She sat on the bench and used the needle from her cuff to unpick the tag, working thread by thread. Her hands did not shake because she would not let them.
+
+On a nail by the door hung a spool, hooked on by its wire. She knew the coat then. Last winter she had watched its owner from the library window, a man on a short ladder with a coil of wire on one shoulder, moving a branch to a healthier place on the frame. She had never asked his name.
+
+She slipped one of the twenty-three coins into the pocket.
+
+Then another.
+
+She stood and looked at the empty peg.
+
+This was the arithmetic she kept doing, the calculation she could never make come out right.
+
+Someone would reach for that coat in the morning.
+
+Someone would be cold.
+
+A pair of wire cutters hung from a nail beside the spool. A long coil of garden wire lay beside them, bright where it had recently been cut.
+
+Elizabeth looked at the tools for a while.
+
+Somewhere above her, the ash trees stood in their rows, every limb held at a right angle.
+
+She slid back the bolt on the yard door.
+
+The wicket in the coal-yard wall stood a few paces away, a small door cut into a larger gate. Its latch had been worn bright by years of passing thumbs.
+
+Rain had begun while she was inside.
+
+Under the single yard lamp, it crossed the ground in thin needles and ran down the coal heaps in black threads. It did not care who she was.
+
+Elizabeth stood in the doorway until she was sure of her breathing.
+
+Then she raised the collar of a coat belonging to a man whose name she did not know, crossed the yard, and lifted the latch with her thumb...
+        `
+      }
+    );
   }
-];
+
+  // 2. Optional: If you ever want to add more chapters or an epilogue to Era One (Victoria)
+  if (Array.isArray(NOVEL_CHAPTERS.founding)) {
+    NOVEL_CHAPTERS.founding.push(
+      // You can leave this empty, or add extra Victoria chapters here in the same format
+    );
+  }
+
+}
