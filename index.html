@@ -131,10 +131,10 @@
         <button onclick="switchView('home')" class="nav-button py-2 text-theme-text border-b-2 border-theme-accent transition-colors" data-page="home">
           Home
         </button>
-        <button onclick="switchView('eras')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="eras">
-          The Two Eras
+        <button onclick="switchView('story')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="story">
+          The Story
         </button>
-        <button onclick="openReaderIndex('founding')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="reader">
+        <button onclick="openReaderIndex('crowned')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="reader">
           Read
         </button>
         <button onclick="switchView('world')" class="nav-button py-2 text-theme-text-muted hover:text-theme-text border-b-2 border-transparent transition-colors" data-page="world">
@@ -171,8 +171,8 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-4 text-xs font-sans uppercase tracking-[0.2em]">
       <button onclick="switchView('home'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text">Home</button>
-      <button onclick="switchView('eras'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Two Eras</button>
-      <button onclick="openReaderIndex('founding'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read</button>
+      <button onclick="switchView('story'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Story</button>
+      <button onclick="openReaderIndex('crowned'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read</button>
       <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World</button>
       <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Characters</button>
       <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Archive</button>
@@ -183,7 +183,7 @@
     <!-- VIEW 1: HOME -->
     <section id="view-home" class="view-section view-visible max-w-4xl mx-auto px-6 py-24 md:py-32 text-center">
       <p class="font-sans text-xs uppercase tracking-[0.35em] text-theme-accent font-semibold mb-6">
-        A Novel in Two Eras
+        A Novel of Norwyn
       </p>
       
       <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-light text-theme-text tracking-[0.14em] uppercase leading-tight mb-8">
@@ -196,86 +196,61 @@
         A story of duty, desire, choice, and the things that become part of us before we think to question them.
       </p>
 
-      <!-- Reading Architecture Directive -->
+      <!-- Story Premise Directive -->
       <div class="max-w-xl mx-auto mb-12 p-6 border border-theme-border bg-theme-panel text-left rounded-sm">
-        <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">Reading Order Guidance</span>
+        <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">The Crowned Era &bull; Elizabeth’s Story</span>
         <p class="font-serif text-sm text-theme-text-muted leading-relaxed">
-          Begin with <strong class="text-theme-text font-semibold">The Founding Era (Victoria)</strong>, where the choices, struggles, and compromises that shape Norwyn first take form. Continue with <strong class="text-theme-text font-semibold">The Crowned Era (Elizabeth)</strong>, generations later, where the world those choices created has become an inheritance, and its traditions are rarely questioned.
+          Raised within the grand administrative walls of Norwyn, <strong class="text-theme-text font-semibold">Princess Elizabeth</strong> has been shaped from childhood to inherit a kingdom governed by ancient compacts. As her eighteenth summer approaches, she must reckon with whether the life she has been educated to want is truly her own choice.
         </p>
       </div>
 
       <!-- Direct Entry Actions -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-        <button onclick="openReaderIndex('founding')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">
+        <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">
           Begin Reading &rarr;
         </button>
-        <button onclick="switchView('eras')" class="w-full sm:w-auto px-8 py-4 border border-theme-border hover:border-theme-accent text-theme-text transition-all rounded-sm">
-          Explore The Two Eras
+        <button onclick="switchView('story')" class="w-full sm:w-auto px-8 py-4 border border-theme-border hover:border-theme-accent text-theme-text transition-all rounded-sm">
+          Explore The Story
         </button>
       </div>
     </section>
 
-    <!-- VIEW 2: THE TWO ERAS -->
-    <section id="view-eras" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
+    <!-- VIEW 2: THE STORY (Focused exclusively on Elizabeth's Era) -->
+    <section id="view-story" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
           <span>&larr;</span> <span>Home</span>
         </button>
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Chronological Architecture</span>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Narrative Architecture</span>
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The Two Eras</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4">The Inheritance</h2>
         <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
-          Two eras, connected by the choices of those who came before. Victoria faces the uncertainties of her time, while generations later, Elizabeth grows up in a world shaped by decisions whose origins have nearly been forgotten.
+          Generations after the founding treaties of Norwyn were struck, Elizabeth grows up in a world shaped by decisions whose origins have hardened into unquestioned law.
         </p>
       </div>
 
-      <!-- Side-by-side Deep Comparative Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Era 1: Founding -->
-        <div class="border-2 border-theme-accent bg-theme-panel p-8 md:p-10 flex flex-col justify-between rounded-sm shadow-sm relative">
+      <!-- Single Feature Story Card: Elizabeth -->
+      <div class="max-w-2xl mx-auto">
+        <div class="border-2 border-theme-accent bg-theme-panel p-8 md:p-12 flex flex-col justify-between rounded-sm shadow-sm relative">
           <div style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="absolute -top-3.5 right-6 px-3 py-1 text-[10px] font-sans uppercase tracking-[0.2em] font-semibold rounded-sm">
-            1. The Bedrock
+            The Crowned Era
           </div>
           <div>
-            <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">The Founding Era</span>
-            <h3 class="font-display text-2xl text-theme-text mb-3">Victoria’s Story</h3>
-            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">How Choices Shape a Kingdom</p>
+            <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">Princess of Norwyn</span>
+            <h3 class="font-display text-2xl md:text-3xl text-theme-text mb-3">Elizabeth’s Story</h3>
+            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-6">The Making of a Choice</p>
             <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">
-              Victoria lives in a time when the future of Norwyn is still uncertain. As old loyalties are tested and competing needs bring people into conflict, she must decide what is worth preserving, what must change, and what people can reasonably be asked to accept. The choices made in her time will reach further than she can imagine.
+              Elizabeth has grown up surrounded by love, preparation, and the expectation that she will one day lead Norwyn. Her mother, Queen Anne, has taught her to be capable, responsible, and ready for the life ahead of her. But as her future draws closer, Elizabeth begins to question whether the life she has prepared for is also the life she would choose for herself.
             </p>
-            <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">
-              <li><strong class="text-theme-text">&bull; Core Question:</strong> How do choices made under pressure become the traditions that shape those who come after?</li>
-              <li><strong class="text-theme-text">&bull; Setting:</strong> A changing kingdom, fragile alliances, and communities learning what they owe one another.</li>
-            </ul>
-          </div>
-          <div class="pt-6 border-t border-theme-border mt-6">
-            <button onclick="openReaderIndex('founding')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full py-3 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">
-              Read Victoria's Chapters &rarr;
-            </button>
-          </div>
-        </div>
-
-        <!-- Era 2: Crowned -->
-        <div class="border border-theme-border bg-theme-panel p-8 md:p-10 flex flex-col justify-between rounded-sm shadow-sm relative">
-          <div class="absolute -top-3.5 right-6 px-3 py-1 bg-theme-burgundy text-white text-[10px] font-sans uppercase tracking-[0.2em] font-semibold rounded-sm">
-            2. The Inheritance
-          </div>
-          <div>
-            <span class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-burgundy font-semibold block mb-2">The Crowned Era</span>
-            <h3 class="font-display text-2xl text-theme-text mb-3">Elizabeth’s Story</h3>
-            <p class="font-sans text-xs tracking-wider uppercase text-theme-text-faint mb-5">The Making of a Choice</p>
-            <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light mb-6">
-              Elizabeth has grown up surrounded by love, preparation, and the expectation that she will one day lead Norwyn. Her mother has taught her to be capable, responsible, and ready for the life ahead of her. But as her future draws closer, Elizabeth begins to question whether the life she has prepared for is also the life she would choose for herself.
-            </p>
-            <ul class="text-sm font-serif text-theme-text-muted space-y-2 border-t border-theme-border pt-4">
+            <ul class="text-sm font-serif text-theme-text-muted space-y-3 border-t border-theme-border pt-5">
               <li><strong class="text-theme-text">&bull; Core Question:</strong> How do you know what you truly want when your desires have been shaped by everything you have been taught?</li>
-              <li><strong class="text-theme-text">&bull; Setting:</strong> Grand palace corridors, secluded gardens, royal ceremonies, and the quiet limits of a life already planned.</li>
+              <li><strong class="text-theme-text">&bull; Setting:</strong> Grand palace corridors, secluded gardens, northern border outposts, and the quiet limits of a life already planned.</li>
             </ul>
           </div>
-          <div class="pt-6 border-t border-theme-border mt-6">
-            <button onclick="openReaderIndex('crowned')" class="w-full py-3 border border-theme-border text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.2em] uppercase text-center rounded-sm transition-colors">
+          <div class="pt-8 border-t border-theme-border mt-8">
+            <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full py-3.5 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">
               Read Elizabeth's Chapters &rarr;
             </button>
           </div>
@@ -283,11 +258,11 @@
       </div>
     </section>
 
-    <!-- VIEW 3: READ (Dynamic Reader Sanctuary — Loads from chapters.js & chapter-4.js) -->
+    <!-- VIEW 3: READ (Dynamic Reader Sanctuary — Elizabeth's Chapters) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300">
       <!-- Reader Controls Bar -->
-      <div class="max-w-3xl mx-auto px-6 mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
-        <button onclick="openReaderIndex(activeEra)" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+      <div class="max-w-3xl mx-auto px-6 mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
+        <button onclick="openReaderIndex('crowned')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
           <span>&larr;</span> <span>Back to Chapters List</span>
         </button>
 
@@ -303,21 +278,11 @@
         </div>
       </div>
 
-      <!-- Era Switcher within Reader -->
-      <div class="max-w-2xl mx-auto px-6 mb-8 flex justify-center space-x-6 text-xs font-sans uppercase tracking-[0.18em]">
-        <button id="readerTabFounding" onclick="switchReaderEra('founding')" class="py-1 border-b-2 border-theme-accent text-theme-text font-semibold">
-          1. Era One: Victoria
-        </button>
-        <button id="readerTabCrowned" onclick="switchReaderEra('crowned')" class="py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text">
-          2. Era Two: Elizabeth
-        </button>
-      </div>
-
       <!-- Dynamic Container: Displays either the Chapters List Index OR the active Chapter Content -->
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
-    <!-- VIEW 4: THE WORLD (Updated from Norwyn Guide Front Matter) -->
+    <!-- VIEW 4: THE WORLD -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
@@ -375,7 +340,7 @@
       </div>
     </section>
 
-    <!-- VIEW 5: CHARACTERS -->
+    <!-- VIEW 5: CHARACTERS (Crowned Era Cast Only) -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
@@ -392,27 +357,15 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Victoria -->
+        <!-- Elizabeth -->
         <div class="border border-theme-accent p-8 bg-theme-panel rounded-sm shadow-sm">
           <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text">Queen Victoria</h3>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Architect</span>
+            <h3 class="font-display text-xl text-theme-text">Princess Elizabeth</h3>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Heiress</span>
           </div>
-          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Founding Era</span>
+          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
           <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
-            The ruler whose emergency compromises hardened into sacred law. She sacrificed the autonomy of future generations to buy a single season of quiet survival.
-          </p>
-        </div>
-
-        <!-- Lord Raymond -->
-        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
-          <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text">Lord Raymond</h3>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Valenne Envoy</span>
-          </div>
-          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Founding Era</span>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
-            Caspar’s pragmatic diplomat who demanded hereditary parity to keep his cousins from rearming. A man who drafted treaties knowing ink was cheaper than blood.
+            Formed so carefully to rule that she struggles to distinguish between what she has been educated to want and what belongs to her own desire.
           </p>
         </div>
 
@@ -425,18 +378,6 @@
           <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
           <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
             She does not control Elizabeth to dominate her. She prepares Elizabeth because she knows what unshielded exposure looks like in court. Preparation is her highest form of love.
-          </p>
-        </div>
-
-        <!-- Elizabeth -->
-        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
-          <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text">Princess Elizabeth</h3>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Heiress</span>
-          </div>
-          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
-            Formed so carefully to rule that she struggles to distinguish between what she has been educated to want and what belongs to her own desire.
           </p>
         </div>
 
@@ -504,10 +445,10 @@
 
           <div id="layer-rec1" style="background-color: var(--color-burgundy-box);" class="hidden mt-6 pt-5 border-t border-theme-burgundy/40 p-5 border-l-4 border-l-theme-burgundy rounded-sm">
             <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-bold block mb-1">
-              Private Diary Fragment: Queen Victoria (Founding Era)
+              Penciled Marginalia: Princess Elizabeth (Royal Archives Folio)
             </span>
             <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">
-              "We wrote the eighteenth summer because Lord Caspar was ninety years old and his heir had a lung rot; we had to buy five years of quiet before Valenne's cousins could organize a siege. I never intended this calendar to govern my great-grandchildren. A crutch is meant to be discarded when the bone knits. Instead, they have gold-leafed the crutch."
+              "They recite this clause to me as though the ink were mixed with mortar. Every tutor speaks of unbroken sovereignty, yet none can tell me why an emergency bargain struck generations ago requires my own hands to seal it anew."
             </p>
           </div>
         </div>
@@ -557,13 +498,13 @@
 
   <!-- Main Application Logic -->
   <script>
-    let activeEra = 'founding';
+    let activeEra = 'crowned';
     let activeChapterIndex = null; // null means showing the chapters list index
     let baseFontSize = 18;
     let isIvoryMode = false;
 
     function switchView(viewId) {
-      const views = ['home', 'eras', 'reader', 'world', 'characters', 'archive'];
+      const views = ['home', 'story', 'reader', 'world', 'characters', 'archive'];
       
       views.forEach(v => {
         const el = document.getElementById(`view-${v}`);
@@ -591,21 +532,15 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function openReaderIndex(era = 'founding') {
+    function openReaderIndex(era = 'crowned') {
       switchView('reader');
-      activeEra = era;
+      activeEra = 'crowned';
       activeChapterIndex = null; // Show index list
       renderReaderView();
     }
 
-    function switchReaderEra(era) {
-      activeEra = era;
-      activeChapterIndex = null; // Reset to index list when switching eras inside reader
-      renderReaderView();
-    }
-
     function selectChapter(era, index) {
-      activeEra = era;
+      activeEra = 'crowned';
       activeChapterIndex = index;
       renderReaderView();
     }
@@ -613,29 +548,18 @@
     // Renders either the Chapters List Index or the Active Chapter Content inside the Reader view
     function renderReaderView() {
       const mainContainer = document.getElementById('readerMainContainer');
-      const tabFounding = document.getElementById('readerTabFounding');
-      const tabCrowned = document.getElementById('readerTabCrowned');
 
       if (typeof NOVEL_CHAPTERS === 'undefined' || !NOVEL_CHAPTERS[activeEra]) {
         mainContainer.innerHTML = `<p class="text-center text-theme-text-muted">Chapter files (chapters.js and chapter-4.js) not loaded properly.</p>`;
         return;
       }
 
-      // Update Era Tab styling
-      if (activeEra === 'founding') {
-        tabFounding.className = "py-1 border-b-2 border-theme-accent text-theme-text font-semibold";
-        tabCrowned.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";
-      } else {
-        tabCrowned.className = "py-1 border-b-2 border-theme-accent text-theme-text font-semibold";
-        tabFounding.className = "py-1 border-b-2 border-transparent text-theme-text-muted hover:text-theme-text";
-      }
-
       const eraChapters = NOVEL_CHAPTERS[activeEra];
 
       // STATE A: SHOW CHAPTERS LIST INDEX
       if (activeChapterIndex === null) {
-        const eraTitle = activeEra === 'founding' ? '1. Era One: Victoria' : '2. Era Two: Elizabeth';
-        const eraSubtitle = activeEra === 'founding' ? 'The Bedrock — How Choices Shape a Kingdom' : 'The Inheritance — The Weight of Consent';
+        const eraTitle = "Elizabeth’s Story";
+        const eraSubtitle = "The Crowned Era — The Weight of Inheritance";
 
         const chapterButtonsHtml = eraChapters.map((ch, idx) => `
           <button onclick="selectChapter('${activeEra}', ${idx})" class="w-full text-left p-5 border border-theme-border bg-theme-panel hover:border-theme-accent hover:bg-theme-panel-accent transition-all rounded-sm group flex items-center justify-between">
@@ -663,7 +587,7 @@
       // STATE B: SHOW ACTIVE CHAPTER READING CONTENT
       const chapter = eraChapters[activeChapterIndex];
 
-      // Clean up raw content by stripping any leading duplicate Chapter titles (e.g., "Chapter Seven: The Keeper of Terms")
+      // Clean up raw content by stripping any leading duplicate Chapter titles
       let cleanContent = chapter.content.trim();
       const titlePatternRegex = new RegExp(`^(?:Chapter\\s+[A-Za-z]+\\s*:\\s*${chapter.title}|${chapter.number}\\s*:\\s*${chapter.title}|${chapter.title})\\s*`, 'i');
       cleanContent = cleanContent.replace(titlePatternRegex, '').trim();
@@ -699,7 +623,7 @@
       mainContainer.innerHTML = `
         <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
           <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">${chapter.eraLabel} &bull; ${chapter.number}</p>
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">The Crowned Era &bull; ${chapter.number}</p>
             <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">${chapter.title}</h2>
             <div class="w-10 h-px bg-theme-accent/40 mx-auto mt-6"></div>
           </div>
