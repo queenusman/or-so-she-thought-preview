@@ -198,30 +198,30 @@
 
       <!-- Story Premise Directive -->
       <div class="max-w-xl mx-auto mb-12 p-6 border border-theme-border bg-theme-panel text-left rounded-sm">
-        <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">The Crowned Era &bull; Elizabeth’s Story</span>
+        <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">The Inherited World &bull; Elisabeta’s Story</span>
         <p class="font-serif text-sm text-theme-text-muted leading-relaxed">
-          Raised within the grand administrative walls of Norwyn, <strong class="text-theme-text font-semibold">Princess Elizabeth</strong> has been shaped from childhood to inherit a kingdom governed by ancient compacts. As her eighteenth summer approaches, she must reckon with whether the life she has been educated to want is truly her own choice.
+          Born into a world where duty has the weight of tradition and every part of life has its proper place, <strong class="text-theme-text font-semibold">Princess Elisabeta</strong> has been taught to understand her future long before she is old enough to choose it. As marriage, family, and the expectations of the crown begin to shape the course of her life, she must confront a difficult question: how much of what she believes is truly her own?
         </p>
       </div>
 
-      <!-- Direct Entry Actions -->
+      <!-- Direct Entry Actions: Begin Story leads to The Story -> World -> Characters -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-        <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">
-          Begin Reading &rarr;
+        <button onclick="switchView('story')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.22em] hover:opacity-90 transition-all rounded-sm shadow-sm">
+          Begin Story &rarr;
         </button>
-        <button onclick="switchView('story')" class="w-full sm:w-auto px-8 py-4 border border-theme-border hover:border-theme-accent text-theme-text transition-all rounded-sm">
-          Explore The Story
+        <button onclick="openReaderIndex('crowned')" class="w-full sm:w-auto px-8 py-4 border border-theme-border hover:border-theme-accent text-theme-text transition-all rounded-sm">
+          Read Chapters
         </button>
       </div>
     </section>
 
-    <!-- VIEW 2: THE STORY (Focused exclusively on Elizabeth's Era) -->
+    <!-- VIEW 2: THE STORY (Step 1 of Guided Journey: Leads to The World) -->
     <section id="view-story" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
           <span>&larr;</span> <span>Home</span>
         </button>
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Narrative Architecture</span>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">I &bull; Narrative Architecture</span>
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -249,12 +249,25 @@
               <li><strong class="text-theme-text">&bull; Setting:</strong> Grand palace corridors, secluded gardens, northern border outposts, and the quiet limits of a life already planned.</li>
             </ul>
           </div>
-          <div class="pt-8 border-t border-theme-border mt-8">
-            <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full py-3.5 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">
-              Read Elizabeth's Chapters &rarr;
+          <div class="pt-8 border-t border-theme-border mt-8 flex flex-col sm:flex-row gap-4">
+            <button onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="flex-1 py-3.5 px-6 text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm hover:opacity-90 transition-opacity">
+              Continue: The World &rarr;
+            </button>
+            <button onclick="openReaderIndex('crowned')" class="flex-1 py-3.5 px-6 border border-theme-border hover:border-theme-accent text-theme-text text-xs font-sans tracking-[0.2em] uppercase font-semibold text-center rounded-sm transition-colors">
+              Read Chapters
             </button>
           </div>
         </div>
+      </div>
+
+      <!-- Bottom Guided Progression Bar -->
+      <div class="max-w-2xl mx-auto mt-12 pt-8 border-t border-theme-border flex items-center justify-between text-xs font-sans uppercase tracking-[0.2em]">
+        <button onclick="switchView('home')" class="text-theme-text-muted hover:text-theme-text transition-colors">
+          &larr; Back to Home
+        </button>
+        <button onclick="switchView('world')" class="text-theme-accent hover:underline font-semibold">
+          Next: The World of Norwyn &rarr;
+        </button>
       </div>
     </section>
 
@@ -282,13 +295,13 @@
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
-    <!-- VIEW 4: THE WORLD -->
+    <!-- VIEW 4: THE WORLD (Step 2 of Guided Journey: Leads to Characters) -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
-          <span>&larr;</span> <span>Home</span>
+        <button onclick="switchView('story')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>The Story</span>
         </button>
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Territories & Governance</span>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">II &bull; Territories & Governance</span>
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -338,15 +351,25 @@
           </div>
         </div>
       </div>
+
+      <!-- Bottom Guided Progression Bar: World -> Characters -->
+      <div class="mt-14 pt-8 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
+        <button onclick="switchView('story')" class="text-theme-text-muted hover:text-theme-text transition-colors">
+          &larr; Back to The Story
+        </button>
+        <button onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity">
+          Continue: Characters &rarr;
+        </button>
+      </div>
     </section>
 
-    <!-- VIEW 5: CHARACTERS (Crowned Era Cast Only) -->
+    <!-- VIEW 5: CHARACTERS (Step 3 of Guided Journey: Leads to Read or Archive) -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
-          <span>&larr;</span> <span>Home</span>
+        <button onclick="switchView('world')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>The World</span>
         </button>
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Dramatis Personae</span>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">III &bull; Dramatis Personae</span>
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -405,15 +428,30 @@
           </p>
         </div>
       </div>
+
+      <!-- Bottom Guided Progression Bar: Characters -> Read / Archive -->
+      <div class="mt-14 pt-8 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
+        <button onclick="switchView('world')" class="text-theme-text-muted hover:text-theme-text transition-colors">
+          &larr; Back to The World
+        </button>
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <button onclick="switchView('archive')" class="w-full sm:w-auto px-6 py-4 border border-theme-border hover:border-theme-accent text-theme-text rounded-sm transition-colors">
+            Explore Archive
+          </button>
+          <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity">
+            Read Chapters &rarr;
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- VIEW 6: ARCHIVE -->
     <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
-          <span>&larr;</span> <span>Home</span>
+        <button onclick="switchView('characters')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
+          <span>&larr;</span> <span>Characters</span>
         </button>
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">Court Records Vault</span>
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">IV &bull; Court Records Vault</span>
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -481,6 +519,16 @@
             </p>
           </div>
         </div>
+      </div>
+
+      <!-- Bottom Guided Progression Bar: Archive -> Read Chapters -->
+      <div class="mt-14 pt-8 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
+        <button onclick="switchView('characters')" class="text-theme-text-muted hover:text-theme-text transition-colors">
+          &larr; Back to Characters
+        </button>
+        <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity">
+          Enter Reader Sanctuary &rarr;
+        </button>
       </div>
     </section>
   </main>
