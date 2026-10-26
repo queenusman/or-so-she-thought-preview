@@ -4898,221 +4898,394 @@ She worked carefully, with her tongue between her teeth, making it just tight en
       number: "Chapter One",
       title: "The Architecture of Thought",
       content: `
-The library held the cold the way old stone did in winter. It was less a bite than a weight, something that settled into the room and stayed there.
 
-Elizabeth had been awake since five. In that time a servant had built the fire in the marble hearth behind her, and another had come to feed it twice more. The room had barely noticed.
+The palace library was so cold that even the fire seemed reluctant to be there.
 
-She sat with her back straight and Norwyn Structural Ideology, Volume III open beneath her folded hands. The book’s spine had darkened to the colour of honey after a century of passing through palace hands. Beeswax candles burned in a silver stand beside her, though the window gave enough light to read by. Someone had decided long ago that a person studying order should be seen doing so by candlelight, and no one had thought to question it.
+Three logs burned in the marble hearth, sending little golden sparks up the chimney. The servants had fed them twice already, but the warmth never seemed to travel much farther than the fireplace itself. The rest of the room belonged to winter.
 
-Beneath the table, Sapphire shifted.
+Elisabeta had been awake since five.
 
-Without looking down, Elizabeth moved her left foot two inches to the side. The cat settled into the space as though it had been made for her.
+By now, the candles beside her had burned low enough to leave little pools of wax in their silver holders. They were unnecessary in the growing daylight, but palace traditions had a way of surviving long after anyone remembered why they had begun.
 
-Elizabeth noticed what she had done only afterward. She noticed most things that way.
+Apparently, even studying required a certain amount of ceremony.
 
-“Begin with the third proposition,” said Mr. Corrow from the other side of the table. “Take your time.”
+She sat perfectly straight at the long oak table, her hands folded over *Norwyn Structural Ideology, Volume III*. The book was nearly a hundred years old, its leather spine worn smooth and golden-brown from generations of royal hands.
 
-He meant the opposite, and she knew it.
+Beneath the table, Safira was having a much more comfortable morning.
 
-The Wednesday exercise was not a conversation. Elizabeth was expected to explain the chapter’s argument in her own words, defend it against the objections her tutor raised, and show that she understood the reasoning well enough to withstand scrutiny. Mr. Corrow was pleased in proportion to how little his objections unsettled her.
+The grey cat shifted, stretched one paw, and gave a small, dissatisfied sound.
 
-In four years of Wednesday lessons, she had never given him a reason to be displeased.
+Without looking down, Elisabeta moved her left foot two inches to the side.
 
-“Stability does not mean the absence of difference,” she began. “It means arranging differences so that no part of the whole works against another. The third proposition says a structure is stable when each element’s position follows from its function, and each function serves the needs of the whole. If an element resists its position, the fault lies in how that position has been described, or in the element’s understanding of it. Not in the structure itself.”
+Safira immediately settled into the newly available space.
 
-“Good. Why not in the structure?”
+Elisabeta continued reading.
+
+Only a moment later did she realize what she had done.
+
+She glanced beneath the table. Safira was already asleep.
+
+“Of course,” Elisabeta murmured.
+
+“Did you say something, Your Highness?”
+
+Mr. Corrow looked up from his notes.
+
+“No, sir.”
+
+“Very well. Begin with the third proposition. Take your time.”
+
+His pocket watch sat open beside his notebook.
+
+Elisabeta looked at it.
+
+Mr. Corrow followed her gaze and quietly turned the watch face down.
+
+“Whenever you're ready.”
+
+The Wednesday exercise was not a conversation. It was an examination disguised as one. Elisabeta was expected to explain the chapter in her own words, defend its arguments against every objection Mr. Corrow could invent, and remain composed enough that no one could tell when he had found a weakness.
+
+In four years of Wednesday mornings, he had never managed to surprise her.
+
+She had never disappointed him either.
+
+Sometimes she wondered whether he knew anything about her beyond that.
+
+“Stability does not mean the absence of difference,” she began. “It means arranging differences so that no part works against another. A structure is stable when each element occupies the position suited to its function, and each function contributes to the whole.”
+
+Mr. Corrow nodded.
+
+“If an element resists its position, the fault lies in how that position was described, or in the element's understanding of it. The fault does not lie in the structure.”
+
+“Good. And why not?”
 
 “Because a structure that can be questioned by the parts it holds has no authority to hold them.”
 
-Mr. Corrow smiled and made a note in his book.
+Mr. Corrow smiled and made a note.
 
-Beyond the tall window, the courtyard lay under a flat winter green. The grass had been clipped short, the hedges trimmed into neat lines, and the ash trees planted in rows along the far wall. Every branch had been bent to a right angle and tied to a wire frame.
+Elisabeta had always found that particular smile reassuring. It meant she had given the answer he expected, in precisely the way he expected it.
 
-A gardener worked his way down the second row on a short ladder, a coil of wire over one shoulder and a spool hooked to his belt. He moved from branch to branch with the quiet efficiency of a man who had done the same job for years.
+Outside the tall windows, the courtyard stretched beneath a pale winter sky.
+
+The grass had been clipped to an even green carpet. The hedges stood in neat rows, their edges so straight that a ruler would have found little to improve. Along the far wall, the ash trees had been trained into matching shapes, their branches tied to wire frames.
+
+A gardener was working on the second row.
+
+He had climbed a short ladder and was reaching toward one of the higher branches. A coil of wire hung over his shoulder. His shears rested at his belt.
 
 “Suppose the element is not mistaken,” Mr. Corrow said. “Suppose its position is simply a poor one. What then?”
 
-“Then the description was poor, and it should be rewritten.”
+Elisabeta turned her attention back to him.
+
+“Then the description was poor and should be rewritten.”
 
 “By whom?”
 
-Elizabeth paused. She knew the answer the text wanted, and she knew he knew she knew it.
+“By those who designed the structure. Not by the element itself.”
 
-“By those who drew up the structure,” she said. “Not by the element.”
+“Quite right.” He turned a page. “An element that rewrites its own position has ceased to be an element. It has become a rival structure.”
 
-“Quite right. An element that rewrites its own position has stopped being an element and become a rival structure.” He turned a page. “Now the objection from the critics of imposed order. They argue that a structure imposed from outside produces compliance, not stability. Answer it.”
+He seemed pleased with that.
 
-Elizabeth knew the objection well. The textbook distinguished between imposed order and cultivated order, explaining that a system could shape behaviour until the desired response became natural to the people within it.
+“Now, the critics of imposed order argue that it produces compliance rather than stability. How would you answer them?”
 
-She could have delivered the answer in her sleep.
+Elisabeta knew this part almost by heart.
 
-She heard her own voice carrying the distinction across the table, measured and unhurried, while her attention drifted toward the gardener.
+She began explaining the difference between imposed order and cultivated order, her voice steady and precise. She spoke of habit, understanding, and the gradual acceptance of one's place.
 
-He had stopped near the top of the ladder.
+But halfway through her answer, she looked out the window again.
 
-Taking hold of the wire that crossed one branch, he gave it a tug. The wire slipped.
+The gardener had stopped near the top of the ladder.
 
-The branch had been pushing against its assigned angle for months. The bark around the old fastening had swollen into a pale ridge, grown thick around the place where the wire had cut into it.
+He was examining a branch that bent sharply away from the others. A thin wire had been wrapped around it, pulling it into the same obedient angle as its neighbours.
 
-The gardener unwound the wire, moved it lower, and tied it around a healthier section of wood. Then he took a pair of shears from his belt and cut away a small shoot growing above the fastening, a shoot that had pointed in a different direction.
+The gardener tugged at the wire.
 
-He had moved the wire to suit the branch, Elizabeth noticed, and then removed the shoot that would not suit the frame. She could not have said which of the two she was watching.
+It slipped.
 
-“...and so cultivated order does not require the element’s agreement at every moment,” she heard herself conclude. “It requires only that, over time, the element comes to regard its position as natural.”
+For one brief moment, Elisabeta felt an unexpected lightness in her chest.
 
-“Excellent.”
+Perhaps he had noticed the problem. Perhaps he intended to free the branch and let it grow as it pleased.
 
-Mr. Corrow wrote another note.
+She leaned forward slightly.
 
-“That is almost the text’s own phrasing, and better expressed. Remember that formulation for the Academy panel.”
+The gardener unwound the wire, revealing a pale ridge in the bark where the metal had pressed into it over the years. The branch had grown around the fastening, swallowing part of the wire into its own wood.
 
-Elizabeth looked at him, then back at the courtyard.
+He studied the damage.
 
-She had meant what she said. That was the troubling part.
+Then he took the wire and tied it lower, around a healthier section of the branch.
 
-The argument was sound, and she had delivered it well. Yet outside, a man was spending his morning forcing branches into position and cutting away whatever grew beyond it. The trees did not appear to have found their assigned shapes natural. Someone had to make them hold those shapes, and someone would have to return next year to do it again.
+The angle remained unchanged.
 
-The textbook said nothing about that work.
+A small shoot had grown above the old fastening, reaching away from the others. The gardener lifted his shears and snipped it off.
 
-She did not raise the point. It was not part of the exercise, and she was not yet sure how to explain what bothered her. A flaw in the argument would have been easy to name. She could have pointed to a contradiction, a weak assumption, or a conclusion that did not follow from the evidence.
+The shoot fell into the grass.
 
-But the argument held, at least as far as it went.
+He tucked the wire into place, tested the branch with one hand, and moved on to the next tree.
 
-What she had seen was something it left out.
+Elisabeta stared at the little green shape lying beneath the ladder.
+
+She had thought he was going to set the branch free.
+
+She wasn't sure what she had expected instead.
 
 “Your Highness?”
 
-Elizabeth turned back to the table.
+Mr. Corrow's voice brought her back to the table.
 
-“I’m sorry. The fourth proposition.”
+She straightened.
 
-“The fourth is on Friday. We are finished for today.”
+“Cultivated order,” she continued, “does not require the element's agreement at every moment. It requires only that, over time, the element comes to regard its position as its own.”
 
-He closed his book carefully.
+Mr. Corrow's face brightened.
 
-“You’re ahead, as always. I’ll tell the Queen the Academy panel need not concern you.”
+“Excellent. That is almost the text's exact argument, though I believe you've expressed it rather better. Keep that answer for the Academy panel.”
 
-Before Elizabeth could answer, the door opened.
+“Of course.”
 
-It did not need a knock, and none came.
+She looked toward the window once more.
 
-Queen Anne entered as though the room had been waiting for her. She wore dark plum, the hem weighted with silver thread, and carried a single card in her gloved hand.
+The gardener was climbing down the ladder. He had spent the better part of the morning correcting a branch, and someone would have to return next year to make sure it stayed corrected.
 
-Mr. Corrow rose and bowed. His departure was as precise as his lessons, taking exactly as long as courtesy required.
+The book had said nothing about that.
 
-Under the table, Sapphire went still. Her ears lowered slightly, as they did whenever footsteps entered the room that mattered.
+Elisabeta lowered her eyes to the page.
 
-“You’ve finished early,” Anne said.
+She could have asked why the tree needed so much help becoming something it clearly did not wish to be. She could have asked whether the gardener was protecting the branch or merely teaching it to obey.
 
-“Mr. Corrow says I’m ahead.”
+But those were not objections to the argument.
 
-“I’m sure he does.”
+She knew how to identify a weak premise. She knew how to expose a contradiction. If a conclusion did not follow from its evidence, she could explain precisely where the reasoning failed.
 
-Her mother crossed to the hearth and held her hands toward the fire, though she had not been out in the cold long enough to need it. She did not sit.
+This was different.
 
-“The date has been confirmed with Valenne. Edward’s father sent word this morning, and he is pleased with the arrangements for the ceremony.” She looked at Elizabeth. “I wanted you to hear it from me before the household began discussing it.”
+The argument held together perfectly.
 
-“Thank you.”
+That was what troubled her.
 
-“The fitting is at two. Mrs. Hale will need your arms raised for most of it, so wear the cotton beneath the gown, not the wool. And eat something first. Last time you fainted a little at the third pin and told no one.”
+“Your Highness?” Mr. Corrow repeated.
 
-“I didn’t faint.”
+She blinked.
 
-“You went the colour of milk and held the curtain.”
+“I beg your pardon.”
 
-Elizabeth said nothing. Her mother had been in another room that day, and she had noticed anyway.
+“The fourth proposition?”
 
-Anne crossed to the reading table and placed the card beside Elizabeth’s book, aligning it carefully with the edge.
+“On Friday, sir.”
 
-The steward’s handwriting covered the card: the fourteenth, the ceremony. Beneath it, in a different ink, someone had written a small number of days.
+“Indeed.” He closed his book with both hands. “Then we are finished. You are ahead of schedule, as always. I shall inform the Queen that the panel need not concern her.”
 
-Elizabeth did not read it twice. She had already counted them.
+Before Elisabeta could reply, the library door opened.
 
-Her mother’s gaze settled on the open volume.
+No knock preceded it.
 
-“Still on the third?”
+None was necessary.
 
-“I’ve finished it. I'm reviewing the objections.”
+Queen Ecaterina entered in a gown of dark plum, silver thread glimmering along its hem. She carried a single card between her gloved fingers, and the room seemed to arrange itself around her.
 
-“Why?”
+Mr. Corrow rose at once.
 
-It was not quite a question, and Elizabeth let a moment pass before answering.
+“Your Majesty.”
 
-Between them, silence had always been a way of finding out what the other person would say when given enough time. Anne never hurried to fill it. She stood with her hands folded at her waist and her head tilted slightly, entirely at ease in a quiet she had no need to interrupt.
+“Mr. Corrow.”
 
-“I’d like to defend it better,” Elizabeth said. “If the panel presses me.”
+He bowed, gathered his books, and departed with the swift efficiency of a man who understood exactly how long a royal courtesy should last.
 
-“They won’t press you.”
+Beneath the table, Safira opened one eye.
 
-“Then I’d like to understand it better.”
+When the Queen's footsteps crossed the room, the cat lowered her ears and became very still.
 
-“That’s different.”
+“Finished early,” Ecaterina observed.
 
-Something shifted in her mother’s expression, so briefly that Elizabeth could not be certain she had seen it.
+“Mr. Corrow says I'm ahead.”
 
-Anne stepped closer and straightened the turned-back cuff of Elizabeth’s sleeve. It was a small, practiced gesture, completed with two fingers and no wasted movement.
+“I'm sure he does.”
 
-Over twenty-two years, that hand had meant a hundred things. It had held a coat open against the rain, rested against Elizabeth’s forehead during a fever, and steadied her shoulders before a speech when she had been too nervous to stop shaking.
+Her mother crossed to the fireplace and held her hands toward the flames. She had not been outside, but she did it anyway, as though warming her fingers gave her time to arrange her thoughts.
 
-All of that care was real.
+“The date has been confirmed with Valenne,” she said. “Alexandru's father sent word this morning. He is pleased with the arrangements.”
 
-Elizabeth allowed herself to feel it.
+Elisabeta folded her hands.
 
-“You’ve always understood things quickly,” Anne said. “It is one of your gifts, and I have never worried about it. I would only say that understanding something is not the same as needing to examine it. A person can carry a great deal without taking it apart to see how it works.”
+“I wanted you to hear it from me before the household began discussing it.”
+
+“Thank you, Mother.”
+
+“The fitting is at two. Mrs. Hale will need your arms raised for much of it, so wear the cotton under the gown rather than the wool.”
 
 “Yes, Mother.”
 
-“Edward is pleased with you. He told his father so.”
+“And eat something beforehand. Last time, you went pale at the third pin and held on to the curtain without telling anyone.”
 
-“That’s kind of him.”
+“I did not faint.”
 
-“It is.”
+“I didn't say you fainted.”
 
-Anne paused, giving the words room to settle.
+“You made it sound as though I nearly died.”
 
-“I would like you to be kind in return, in whatever way comes naturally. It will not cost you anything you aren’t already prepared to give.”
+Ecaterina turned to her, one eyebrow slightly raised.
 
-She said it warmly. Elizabeth could not tell where the warmth ended and the expectation began.
+“You looked as though the dressmaker had discovered a new and particularly effective method of execution.”
 
-Her mother moved toward the door, then stopped and glanced back at the candles.
+Elisabeta pressed her lips together.
 
-“Those are burning too close to the book,” she remarked.
+Her mother smiled.
 
-She left before anyone could answer.
+It was a small smile, but a real one, and Elisabeta felt her own expression soften despite herself.
 
-A page appeared a moment later and moved the candlestick six inches to the left. Elizabeth watched him do it. He did not look at her. She understood that he had been waiting outside until the Queen left, and that someone had noticed the candles before Anne ever mentioned them.
+For a moment, the library was simply a library. The fire crackled. Safira shifted beneath the table. Her mother stood beside the hearth, looking at her with the familiar mixture of affection and mild amusement that had followed Elisabeta through childhood.
 
-Sapphire emerged from beneath the table and pressed her head against Elizabeth’s ankle.
+Then Ecaterina placed the card on the table.
 
-For a moment, Elizabeth remained still.
+She adjusted it until its edges aligned perfectly with the edge of the book.
 
-Then she looked at the card, and after it the open book.
+The steward's handwriting was unmistakable.
 
-She had read the third proposition so many times that she could have found her way through it in the dark.
+*The fourteenth. The ceremony.*
 
-Where an element resists its position, the fault lies in the description.
+Elisabeta did not need to read the smaller line beneath it.
 
-In her private notebook, locked in the drawer upstairs, she had copied the sentence onto three separate pages. The ink had begun to spread where her nib had passed over the words again and again.
+She already knew how many days remained.
 
-She had always taken that repetition as diligence.
+“Still on the third proposition?” her mother asked.
 
-Outside, the gardener reached the end of the second row. He climbed down, folded his ladder against the wall, and stood for a moment looking at his work.
+“I've finished it. I'm reviewing the objections.”
 
-The newly tightened wire caught the weak daylight.
+“Why?”
+
+The word was gentle, but it was not an ordinary question.
+
+Ecaterina had never been afraid of silence. She could leave a question between them and wait patiently for the answer, however long it took. Elisabeta had learned early that her mother rarely needed to raise her voice to make herself heard.
+
+“I'd like to defend the argument better,” she said. “In case the panel presses me.”
+
+“They won't press you.”
+
+“Then I'd like to understand it better.”
+
+“That is different.”
+
+Her mother studied her.
+
+Something shifted in Ecaterina's expression, a brief flicker that disappeared before Elisabeta could decide what it meant.
+
+Then the Queen stepped closer and straightened the turned-back cuff of her daughter's sleeve.
+
+It was such a familiar gesture that Elisabeta almost smiled.
+
+Those hands had buttoned her coat when she was too young to manage the task herself. They had rested against her forehead during childhood fevers, guided her through crowded rooms, and steadied her shoulders before her first formal speech.
+
+Her mother had always known when she was frightened, even when Elisabeta had done her best to hide it.
+
+The care had never been imaginary.
+
+That was what made everything else so difficult to understand.
+
+“You have always understood things quickly,” Ecaterina said. “I've never worried about that.”
+
+Elisabeta waited.
+
+“I would only remind you that understanding something is not the same as needing to take it apart. A person can carry a great deal without examining how it was made.”
+
+“Yes, Mother.”
+
+“Alexandru is pleased with you. He told his father so.”
+
+Elisabeta glanced at the card.
+
+“That's kind of him.”
+
+“It is. And I would like you to be kind in return, in whatever way comes naturally to you. It will cost you nothing you are not already prepared to give.”
+
+Ecaterina said it warmly.
+
+There was no threat in her voice, no sharpness in her expression. She sounded like a mother advising her daughter on how to make a good marriage, which was precisely what she was.
+
+Elisabeta could not tell where the warmth ended and the expectation began.
+
+Perhaps, she thought, there was no line between them.
+
+Her mother gave her sleeve one final adjustment.
+
+“There. Much better.”
+
+She turned toward the door, then paused and looked back at the candles.
+
+“Those are burning rather close to your book.”
+
+Before Elisabeta could answer, Ecaterina was gone.
+
+A moment later, a young page entered the library. He approached the table, moved the silver candle stand six inches to the left, and departed without a word.
+
+Elisabeta watched him go.
+
+He had been waiting outside, she realized.
+
+Someone had noticed the candles before her mother ever mentioned them.
+
+Perhaps her mother had noticed too.
+
+Perhaps that was why she had mentioned them.
+
+Elisabeta looked down at the book.
+
+For a long moment, she did nothing.
+
+Then Safira emerged from beneath the table, stretched luxuriously, and pressed her head against Elisabeta's ankle.
+
+Elisabeta bent to scratch behind her ears.
+
+“You're the only one in this palace who seems to know exactly where she wants to be.”
+
+Safira purred.
+
+“Don't look so pleased with yourself. You spend most of your day asleep.”
+
+The cat purred louder.
+
+Elisabeta almost laughed.
+
+Almost.
+
+She straightened and looked at the third proposition again.
+
+*Where an element resists its position, the fault lies in the description.*
+
+She knew the sentence so well that she could hear it in Mr. Corrow's voice, complete with his careful pauses and approving little nods.
+
+In the locked drawer upstairs, her private notebook contained the same sentence on three separate pages. The ink had darkened where she had gone over certain words more than once, pressing her nib into the paper as though repetition might reveal something the first reading had missed.
+
+She had always considered that diligence.
+
+She had never asked what else it might be.
+
+Outside, the gardener folded his ladder and carried it toward the far wall.
+
+The wire around the branch caught a weak shaft of sunlight. Where the shoot had been cut away, the wood showed almost white against the dark bark.
 
 The branch held its angle.
 
-Where he had cut away the shoot, the exposed wood was almost white against the dark bark.
+Elisabeta watched until the gardener disappeared beyond the hedges.
 
-Elizabeth realized she had been holding her breath.
+Then she looked at the card beside her book.
 
-She let it go.
+The fourteenth.
 
-Then she returned to the page.
+At two, she would stand on a fitting platform while Mrs. Hale adjusted the gown she would wear when she married Alexandru of Valenne. On Friday, she would defend the fourth proposition. At the Academy panel, she would give every answer correctly.
 
-The fourth proposition was on Friday. The fitting was at two. There were still many hours left in the day, and there was no reason to fall behind.
+Nothing had gone wrong.
 
-Under the table, without thinking, she moved her foot two inches to the left.
+She was exactly where she was expected to be.
+
+There was no reason to fall behind.
+
+Elisabeta lowered her eyes to the page and began reading again.
+
+Beneath the table, Safira shifted in her sleep.
+
+Without thinking, Elisabeta moved her foot two inches to the left.
+
+And made room.
       `
     },
     {
@@ -5120,245 +5293,560 @@ Under the table, without thinking, she moved her foot two inches to the left.
       number: "Chapter Two",
       title: "The Alignment Doctrine",
       content: `
-Rain had been falling since before dawn.
 
-The seminar hall smelled of wet wool drying on the radiators, chalk dust, and the cold mineral scent of walls that had been damp every winter since the Academy was built. Elizabeth sat in her usual place in the second row, her collar still wet from the short journey between the car and the door. Her attendant waited in the corridor outside, as he did every Thursday. The door never quite closed on him.
+Rain had been falling over the Academy since before dawn, and by the time Elisabeta arrived, the windows had turned the courtyard into a blur of grey stone and silver water.
 
-Professor Calloway stood at the lectern with a folder in his hands. He never opened it. It gave his hands something to do while he spoke.
+She hurried through the entrance, gathering her skirts just enough to keep them from the puddles. Behind her, her attendant struggled to close an umbrella that had turned inside out in the wind.
 
-“Alignment,” he said, “is what remains when obedience is no longer needed.”
+“An excellent morning for a walk,” she remarked.
+
+The attendant looked at the rain, then at the umbrella.
+
+“Perhaps, Your Highness.”
+
+“Perhaps not.”
+
+She continued down the corridor before he could decide whether she had been joking.
+
+The seminar hall was already warm with the smell of wet wool, chalk dust, and the faint mineral scent of old stone. Students sat in neat rows beneath portraits of former scholars, all of whom appeared to have been painted while contemplating something terribly important.
+
+Elisabeta took her usual seat in the second row.
+
+Her collar was still damp. She tugged it straight and placed her notebook on the desk, aligning its edges with the edge of the table.
+
+Then she noticed what she was doing.
+
+She moved the notebook half an inch to the left.
+
+It looked better there.
+
+At the front of the room, Professor Mihai stood behind the lectern with a folder tucked beneath one arm. He never opened it. Elisabeta suspected he carried it simply because he disliked leaving his hands empty.
+
+“Good morning.”
+
+“Good morning, Professor.”
+
+“Let us begin.”
+
+He placed the folder on the lectern.
+
+“Alignment,” he announced, “is what remains when obedience is no longer needed.”
 
 Twenty-six voices repeated the sentence together.
 
-The words landed at the same moment, so smoothly that nobody had to think about them. Elizabeth’s mouth moved with the others. She had learned the sentence at fourteen from a tutor who used the same measured rhythm, then again at eighteen from the Queen, who had said it without ceremony, as though it were something they already understood.
+Elisabeta joined them.
 
-“A well-formed mind does not need to be told what serves the whole. It arrives there unprompted and takes the arrival for its own conclusion. We have a model for this, one you will meet in the Academy panels and in every office you will one day occupy. The Timber Inspection Schedule.”
+She had first learned those words at fourteen, from a tutor who spoke as though every sentence had been carved into stone before he was born. At eighteen, she had heard her mother use the same phrase at the breakfast table, between a discussion of diplomatic correspondence and a reminder that Elisabeta's riding boots needed replacing.
 
-A few students began writing.
+Her mother had not even looked up from her tea.
 
-It was an ordinary example, and that was why Calloway had chosen it. He preferred illustrations that seemed too practical to argue with. They proved, he believed, that the doctrine worked beyond the classroom.
+*Alignment is what remains when obedience is no longer needed.*
 
-“Every lot of timber entering the kingdom’s trade, whether from the coast, the river districts, or the high forests, is inspected on one of four fixed days each year. The same four days, the same standard, the same inspectors’ seals, regardless of whose timber it is or how urgently the owner requests an inspection. Before the schedule, inspections went to whoever had the most influence. Now no district is favoured. Every owner knows when his wood will be examined, and knows that every other owner knows it too. One calendar. One standard.”
+At the time, it had sounded like an observation about good manners.
 
-He looked toward Elizabeth.
+Now Professor Mihai was explaining why it was the foundation of a well-governed kingdom.
 
-“Princess Elizabeth, why does this serve stability?”
+“A well-formed mind,” he continued, “does not need to be told what serves the whole. It reaches the correct conclusion independently and recognises that conclusion as its own.”
 
-He always called on her first when a question involved the Crown. She understood it as a courtesy and as a reminder of her place in the room. She had never found it easy to separate the two.
+He paused.
 
-“Because it removes discretion,” she said. “An inspection granted early can be bought or begged for. Once one owner receives that advantage, everyone else learns that the same advantage might be available to them. The fixed dates remove the question altogether. People stop petitioning for exceptions because there are none to petition for, and the trade can plan around a reliable calendar. It is fair because the same rules apply to everyone.”
+“Today, we shall examine the Timber Inspection Schedule.”
 
-“Fair because the same rules apply.” Calloway nodded. “Precisely. Now, who finds fault?”
+Several students began writing immediately.
 
-It was the final part of the exercise. Nobody ever answered it.
+Elisabeta did too.
 
-The room settled into the polite silence of people who had already agreed the question was rhetorical. Calloway let the pause run on before turning toward the windows, where a young man in a grey jumper was arranging a stack of photocopied critiques on the corner of a desk.
+Professor Mihai smiled faintly. He preferred examples that were so practical nobody thought to question them.
 
-“Elias. You know something about timber, I believe.”
+“Every lot of timber entering Norwyn's trade, whether from the coast, the river districts, or the high forests, must be inspected on one of four fixed days each year. The same dates. The same standards. The same official seals.”
 
-Nobody else turned to look at him. That, too, was a way of looking.
+He turned towards the class.
 
-Elizabeth kept her eyes forward. She knew where Elias was, just as she had known since the first day of term, just as she knew where the clock stood in every room she entered.
+“Before the schedule was introduced, inspections depended too heavily on influence. A wealthy merchant could persuade an inspector to examine his timber early. A well-connected landowner could move ahead of everyone else. Those without influence waited.”
 
-He finished squaring the papers before he straightened.
+He tapped the lectern.
 
-He was broad through the shoulders and slightly stooped, with the posture of someone accustomed to working beneath low ceilings. His jumper had been mended at both elbows with thread almost the colour of the wool. His hands were large, the knuckles marked, and he held them carefully at his sides, as though he knew they were being examined.
+“Now, everyone waits according to the same calendar. No owner receives special treatment, and every owner knows the same rules apply to his competitors. The result is a fairer system and a more stable trade.”
 
-“My father’s a joiner,” he said. “That’s the extent of it.”
+He looked directly at Elisabeta.
 
-“And does the schedule trouble him?”
+“Princess Elisabeta. Why does this serve stability?”
 
-Elizabeth could see Elias weighing his answer. He was not searching for words. He was deciding whether saying them would be worth the cost and, she suspected, whether the invitation was genuine.
+She had expected the question.
 
-“Green timber needs time to dry before it can be worked,” he said. “The high-forest lots come down after the thaw, so they reach the rail yard in spring. The next inspection day might be eleven weeks away. Until then the timber sits under tarpaulin, because nobody can legally move it before it’s inspected.”
+Professor Mihai often called on her first whenever a subject touched the Crown. She had always understood it as a courtesy, though she sometimes wondered whether it was also a reminder to the other students that the Crown was sitting among them.
 
-He paused, then went on.
+“Because it removes discretion,” she answered. “An early inspection can be bought or begged for. Once one owner receives an exception, others begin to believe the same advantage should be available to them. Fixed dates remove that uncertainty. Everyone can plan around a reliable calendar.”
 
-“Eleven weeks of rain and sun on the end grain. Some boards split. Others warp. Then the inspectors arrive on the appointed day, apply the standard, and reject a good part of the timber for damage it picked up while it waited.”
+“And the question of fairness?”
 
-He stopped, as though the point needed nothing more.
+“The same rules apply to everyone.”
+
+“Precisely.”
+
+Professor Mihai nodded with the satisfaction of a man watching a well-built machine perform exactly as intended.
+
+“Now, who finds fault with the system?”
+
+The room fell silent.
+
+It was a familiar silence. The students had learned that some questions were invitations to demonstrate understanding, while others were invitations to discover how much trouble understanding could cause.
+
+This was usually the second kind.
+
+Professor Mihai allowed the silence to stretch.
+
+Then he turned towards the windows.
+
+“Lucian. You know something about timber, I believe.”
+
+A young man near the back was arranging a stack of photocopied essays on the corner of his desk. He finished squaring the pages before he stood.
+
+“My father is a joiner, sir.”
+
+“Then perhaps you can tell us whether the schedule troubles him.”
+
+Lucian glanced at the professor.
+
+He was broad-shouldered, with slightly untidy hair and a grey jumper patched at both elbows. His hands were large, the knuckles marked by small scars. He held them at his sides with the careful stillness of someone who had spent enough time around expensive objects to know that people sometimes judged the hands before they listened to the person attached to them.
+
+“My father doesn't much like it,” he said.
+
+“Why not?”
+
+“Green timber needs time to dry before it can be worked. The high-forest lots come down after the thaw, so they reach the rail yard in spring. The next inspection might be eleven weeks away.”
+
+He paused.
+
+“Until then, the timber sits under tarpaulin. Nobody can legally move it before it's inspected.”
+
+“And?”
+
+“Rain gets in. Sun gets in. The ends begin to split. Some boards warp.”
+
+Lucian looked towards the window, where rain ran down the glass in crooked lines.
+
+“Then the inspectors arrive on the appointed day, apply the standard, and reject timber that has been damaged while waiting for permission to be examined.”
+
+The room had grown very quiet.
 
 “So the schedule is inspecting for a fault the schedule puts in the wood.”
 
-Nobody wrote anything down.
+Elisabeta's pen stopped moving.
 
-Elizabeth looked at her notebook and realised her pen had stopped moving.
+For a moment, she forgot that she was sitting in a classroom full of people who were supposed to know how to answer questions like this.
 
-“It is certainly an inconvenience,” Calloway said mildly. “But consider the alternative. Allow one owner an early inspection, and the next will ask for one, and the next after him. Within a decade the schedule becomes a courtesy extended to those with the right connections. What you describe is the cost of equity. Every structure has one.”
+She pictured a stack of timber beneath a wet tarpaulin. Water collecting in the folds. The ends of the boards turning dark. A man returning each morning to discover that something useful had become less useful while he waited for someone else to decide it was ready.
 
-“I’m not asking for early inspections for friends,” Elias said. “I’m saying the yard is wet, and a board doesn’t know what a rule is for.”
+She had never thought about timber before.
 
-“No,” Calloway agreed, with the gentle satisfaction of a man who had found a way to close an argument. “Nor should it. That is why we have the rule.”
+She was beginning to suspect that she had never thought about a great many things.
 
-A small sound moved through the room. It was not quite laughter, but it was close to relief.
+Professor Mihai folded his hands.
 
-Elias watched the professor a moment longer. Then he glanced at the stack of critiques and said, “Yes, sir,” in a voice that offered nothing further to argue with. He returned to the desk and picked up the next page.
+“It is certainly an inconvenience. But consider the alternative. Allow one owner an early inspection, and another will request the same privilege. Soon the schedule becomes a favour extended to those with the right connections. What you describe is the cost of equity. Every system has one.”
 
-Across the room, a girl two seats from Elizabeth leaned toward her neighbour and whispered, “He’s never going to pass the panel talking like that.” Her neighbour only shrugged. Neither of them had written down a word of what he had said.
+“I'm not asking for early inspections for friends,” Lucian replied. “I'm saying the yard is wet, and a board doesn't know what a rule is for.”
 
-“Recite,” Calloway said.
+Professor Mihai regarded him for a moment.
 
-They recited.
+“No,” he said pleasantly. “Nor should it. That is why we have the rule.”
 
-Elizabeth moved her mouth with theirs, but something had shifted.
+A small ripple of laughter passed through the room.
 
-She knew she had answered correctly. She had defended the schedule exactly as she had been taught to defend it. Every sentence was sound. The room had accepted her reasoning, and Calloway had confirmed it.
+It was the sort of laughter that came when a difficult moment had been neatly put away.
 
-Yet Elias’s account had passed through the same discussion and left her answer standing untouched, perfectly intact, with nothing in it about wet timber.
+Lucian looked at the professor, then at the papers on his desk.
 
-She thought of the gardener on his ladder, moving wire along a branch and cutting away whatever grew in the wrong direction.
+“Yes, sir.”
 
-She stopped herself before the thought could go any further.
+He sat down.
 
-The seminar hall emptied into the corridor in the orderly flow the Academy had trained into its students long before they were old enough to question it.
+Two seats away, a girl leaned towards her neighbour.
 
-Elizabeth held her books against her chest and let the crowd carry her toward the covered walk. At the side stair, where the light was poor and fewer students passed, she stepped out of the current.
+“He'll never pass the panel talking like that,” she whispered.
 
-Her attendant followed several paces behind, close enough to be useful and far enough to stay outside any photograph.
+Her neighbour nodded and returned to her notes.
 
-Elias stood beside the noticeboard with a bundle of graded essays under his arm, his collar turned up against the damp. He was reading a notice about a lecture on the Succession Act, apparently trying to remember the room number. He had not been there when the seminar began to empty. She had not seen him leave the hall first.
+Neither had written down a word Lucian said.
 
-He did not look up when she stopped.
+“Let us recite the central principles,” Professor Mihai announced.
 
-That made her wait a little longer than she had intended.
+The class began.
 
-“These are yours,” he said.
+Elisabeta recited with them. She knew every sentence, every qualification, every carefully placed distinction between fairness and favouritism.
 
-He drew a sheet from the bundle and held it out, still looking at the notice. Elizabeth recognised her own handwriting through the back of the paper. She took it by the corner he offered.
+She could have delivered the entire lesson while half asleep.
 
-“Seven comments,” he added. “Six of them say the same thing.”
+Yet her mind kept returning to the timber.
 
-“Which?”
+Lucian had not disproved the schedule. Professor Mihai had not been wrong. The system really was fairer than one in which wealthy men could buy their way to the front of a queue.
 
-“You keep answering the question you’d prefer they’d asked.”
+Both things could be true.
 
-He turned the page over and pointed, from a careful distance, to a line in the margin.
+That was the difficulty.
+
+A weak argument could be corrected. A dishonest one could be exposed. But what was she supposed to do with an argument that was perfectly sound and still left something important out?
+
+She thought of the gardener in the palace courtyard, standing on his ladder with a coil of wire over his shoulder.
+
+For the first time, the memory seemed less like a passing distraction and more like the beginning of a question.
+
+She looked down at her notebook.
+
+Beneath the last line of the lecture, she had written three words without realising it.
+
+*And what else?*
+
+She stared at them until Professor Mihai dismissed the class.
+
+***
+
+The seminar hall emptied into the corridor.
+
+Students gathered their books, shook rain from their coats, and hurried towards the covered walk. Elisabeta allowed the crowd to carry her along until she reached the side staircase.
+
+Then she stepped out of the flow.
+
+Her attendant followed several paces behind, holding the umbrella and maintaining the careful distance expected of someone whose presence was meant to be useful without being noticed.
+
+Lucian stood beside the noticeboard.
+
+He had left by the other door and was studying a notice about an upcoming lecture on the Succession Act. A bundle of graded essays rested under his arm.
+
+Elisabeta approached.
+
+He did not turn.
+
+She stopped beside him.
+
+He continued reading.
+
+She waited.
+
+Finally, he glanced at her.
+
+“Your essay,” he said.
+
+He drew a sheet from his bundle and offered it to her.
+
+She recognised her own handwriting through the back of the paper.
+
+“Thank you.”
+
+“Seven comments. Six say the same thing.”
+
+Elisabeta examined the page.
+
+“What do they say?”
+
+“You keep answering the question you'd prefer they had asked.”
+
+She looked up.
+
+“That seems rather unkind.”
+
+“It's not meant to be.”
+
+“You could have fooled me.”
+
+For the first time, the corner of his mouth moved.
+
+Not quite a smile, but close enough to suggest that he was capable of one.
+
+He turned the paper over and pointed to a line in the margin.
 
 “Here. They asked what the clause costs. You explained what it protects.”
 
 “Both can be true.”
 
-“They can. I only said you answered one.”
+“They can.” He returned his attention to the noticeboard. “I only said you answered one.”
 
-She looked down at the page. The comments were small and square and unhurried. He had read her argument to the end, and more than once, to find the sentence she had been avoiding.
+Elisabeta looked at the comments again.
 
-“You stopped writing, in there,” he said. “After I finished. Calloway noticed. He’ll likely ask you about it on Monday.”
+They were small, neat, and unhurried. Lucian had read her argument carefully enough to notice what she had avoided. He had even taken the trouble to explain it.
 
-“I wasn’t aware that anyone was watching my pen.”
+“You stopped writing during the seminar,” he said.
 
-“Everyone’s watching your pen.” He shifted the bundle against his hip. “I’d just have an answer ready.”
+She glanced at him.
 
-It was the kind of advice a person gave about the weather. She could not tell why she felt it all the way down.
+“I beg your pardon?”
 
-“You were fair in there,” she said. “To the schedule.”
+“After I finished speaking. Your pen stopped.”
 
-“It is fair.” He answered without hesitation. “Everyone’s wood warps on the same day.”
+“I wasn't aware you were watching my pen.”
 
-She expected him to smile. He did not.
+“Everyone watches your pen.”
 
-There was no bitterness in his expression, and no satisfaction at having unsettled her. He had said something true and seemed content to leave it there.
+He said it so matter-of-factly that she couldn't tell whether he was joking.
+
+“Professor Mihai noticed too,” he added. “He'll probably ask you about it on Monday. I'd have an answer ready.”
+
+“You offer advice rather freely.”
+
+“Only when it seems useful.”
+
+“And you decided this was useful?”
+
+“I decided you looked as though you'd swallowed a question and were trying to work out whether it was safe to digest.”
+
+Elisabeta stared at him.
+
+This time, he did smile.
+
+It was brief, almost reluctant, but it transformed his face enough to make him look younger.
+
+“You should be careful,” she said. “That is a rather undignified description of a princess.”
+
+“I'll try to think of a more dignified one next time.”
+
+“There won't be a next time.”
+
+“Then I'll have to get it right the first time.”
+
+She ought to have been offended.
+
+Instead, she found herself fighting the urge to laugh.
+
+It was an unfamiliar feeling, being spoken to as though she were simply another person standing in a damp corridor with a piece of paper in her hand.
+
+She looked down at the essay.
+
+“You were fair to the schedule,” she said.
+
+“I think it is fair.”
+
+“You do?”
+
+“Everyone's wood warps on the same day.”
+
+He said it without bitterness.
+
+That was what surprised her most.
+
+She had expected resentment, perhaps a little pride in having challenged the professor. Instead, Lucian seemed perfectly willing to admit that the system had a purpose.
 
 “You think it should be changed.”
 
 “I think the yard is wet.”
 
-“That isn’t an answer.”
+“That isn't an answer.”
 
-“No,” he said. “It isn’t.” He considered her, plainly, as though the objection deserved the same attention he had given the schedule. “I don’t know what should change. I don’t know the first thing about the Inspectorate, or what would happen to the trade if the dates moved. You’d have to ask someone who does. I only know what happens to the boards.”
+“No. It isn't.”
 
-“Professor Calloway’s objection was reasonable.”
+He considered her, giving the question the same attention he had given the professor's argument.
+
+“I don't know what should change. I don't know enough about the Inspectorate or what would happen to the trade if the dates moved. You'd have to ask someone who does.”
+
+He adjusted the bundle beneath his arm.
+
+“I only know what happens to the boards.”
+
+Elisabeta looked at him for a long moment.
+
+“Professor Mihai's objection was reasonable.”
 
 “It was.”
 
-For the first time, Elias looked directly at her.
+“You don't sound pleased about that.”
 
-“That’s what I didn’t like about it. If he’d been wrong, I could have said so, and we’d have been finished. But he wasn’t wrong. He was answering a different question.”
+“I'm not.”
 
-He glanced at the paper in her hand.
+“Why?”
+
+“Because if he'd been wrong, I could have proved it and we would have been finished.” He glanced towards the seminar hall. “But he wasn't wrong. He was answering a different question.”
+
+He looked at the essay in her hand.
 
 “I find those harder.”
 
-Elizabeth kept her eyes on the noticeboard. She did not want him to see that he had given a name to something she had already noticed.
+The rain pattered against the windows.
 
-“Why did you say yes, sir?” she asked. “At the end. You hadn’t agreed with him.”
+Elisabeta wanted to tell him that she understood. She wanted to explain that she had felt something shift during the lecture, that for a few seconds the argument she had known for years had seemed to open a door onto a room she had never entered.
 
-“He’d finished answering,” Elias said. “There wasn’t anything left to say that he could hear.”
+But she did not know how to say any of that without making it sound foolish.
 
-It was an odd answer. It had no complaint in it, and she thought it was truer than most she had heard that term.
+So she asked the question she could manage.
 
-“You’ll miss the walk,” she said instead.
+“Why did you agree with him at the end?”
 
-“I’m not on the walk. I’ve got a lot sitting in the yard since Monday.”
+“Because he'd finished answering.”
 
-He nodded toward the rain.
+“But you hadn't agreed.”
 
-“Father’s order for a meeting hall in the river district. The oak is meant to be inspected on the twentieth. He’s hoping the end grain has held. I said I’d be there by four to look at it.”
+“There wasn't anything left to say that he could hear.”
 
-“And if it hasn’s?”
+He said it without anger.
 
-“He’ll plane off the damaged two inches and charge less for the benches.”
+That made the answer harder to dismiss.
 
-Elias shrugged.
+Elisabeta folded the essay carefully.
 
-“That’s what he did last time. He doesn’t write to anyone about it. There’d be no one to write to.”
+“You could try again.”
 
-He gave a small, precise nod.
+“I could.”
+
+“But you won't?”
+
+“Not today.”
+
+He glanced at the rain.
+
+“My father has timber sitting in the yard. There's a meeting hall to build in the river district, and the oak is meant to be inspected on the twentieth. I'm supposed to look at it before four.”
+
+“And if it's damaged?”
+
+“He'll plane off the bad part and charge less for the benches.”
+
+“That's all?”
+
+“That's all.”
+
+He shrugged.
+
+“He did the same thing last time. He doesn't write letters to the Inspectorate. There'd be no one to write to.”
+
+For a moment, Elisabeta could almost see it: a man in a cold workshop, measuring a damaged board, working out how much could be salvaged and how much would have to be lost.
+
+No petitions. No speeches. No debate about the principles of the system.
+
+Just a board that had warped and a man who had to decide what to do with it.
+
+Lucian shifted his papers.
+
+“I should go.”
+
+“Of course.”
+
+He nodded politely.
 
 “Your Highness.”
 
-The title was correct. His tone was not disrespectful.
+Then he went down the stairs.
 
-Still, it was the least deferential thing anyone had said to her all week, and the only thing that day that felt entirely accurate.
+He did not wait for permission to leave.
 
-He went down the stairs without waiting to be dismissed, carrying the essays close to his chest to keep them dry.
+Elisabeta watched him disappear through the street door, carrying his essays close to his chest to protect them from the rain.
 
-Elizabeth remained where she was, holding her seventh comment, and listened to the street door open and shut.
+She remained beside the noticeboard.
 
-She read it. It was the shortest of the seven. This is the right question. Ask it of the clause, not the reader.
+The title at the top of her essay caught her attention.
 
-She folded the page once and put it inside her book.
+*The Proper Limits of Legislative Discretion.*
 
-She did not take the covered walk.
+She had spent three days writing it. She had revised every paragraph, checked every reference, and removed two sentences that she thought might be misunderstood.
 
-Her attendant said nothing when she turned into the east gallery instead, though it added several minutes to the journey to the car.
+The essay was good.
 
-She had walked this corridor ten thousand times.
+She knew it was good.
 
-The walls were panelled in oak, the grain dark and close, polished with beeswax to a deep brown. Tall rectangular panels sat within their frames, each lit by a narrow window at intervals along the gallery. The light fell on the wood in separate patches and left the spaces between them dim.
+She was beginning to wonder whether that was enough.
 
-At the far end stood a double door that always stuck in winter. Whoever opened it had to lift slightly at the lower corner, a small, practised movement Elizabeth had watched pages perform since childhood without ever wondering why.
+She read Lucian's seventh comment again.
 
-She had heard that the east wing’s woodwork had been made in the joiner’s yard where Elias’s father worked, long before she was born. She had never had cause to think about the hands behind it.
+*This is the right question. Ask it of the clause, not the reader.*
+
+She folded the paper and slipped it inside her book.
+
+Then, instead of taking the covered walk to the car, she turned towards the east gallery.
+
+Her attendant followed without comment.
+
+***
+
+The east gallery was one of Elisabeta's favourite corridors, though she had never given much thought to why.
+
+It was quieter than the main hall, with tall windows that let in narrow strips of winter light. Dark oak panels lined the walls, their surfaces polished until they reflected the passing figures like shadows moving beneath water.
+
+She had walked this corridor thousands of times.
+
+She knew which floorboard creaked near the entrance. She knew which window rattled when the wind came from the north. She knew that the double door at the far end stuck in winter and had to be lifted slightly before it would open.
+
+She had watched pages perform that small manoeuvre since childhood.
+
+She had never wondered why the door needed help.
+
+Today, however, she was thinking about timber.
+
+She remembered hearing that the woodwork in the east wing had come from the joiner's yard where Lucian's father worked. The panels had been installed long before Elisabeta was born, when the palace had undergone its last major renovation.
 
 She stopped beside the third panel from the nearest window.
 
-For the first time, she looked at its edge.
+At first, she could see nothing unusual.
 
-A narrow seam ran along one side, where the panel met the upright of its frame. In dry weather the gap would have been barely visible. Now, with the rain, it had closed almost completely.
+Then she noticed a thin seam running along one side, where the panel met its frame.
 
-She slipped off her glove, bent closer, and pressed her thumb against the opposite edge.
+She leaned closer.
 
-There was a slight depth beneath the surface. Inside it, where the paint had not reached, ran a thin line of raw wood, paler than the rest.
+In the dry months, the gap might have been almost invisible. Today, with the rain pressing against the windows, the seam had nearly closed.
 
-The panel was not fixed tightly into its frame.
+She removed one glove and touched the opposite edge.
 
-It had been left room to move.
+The wood felt cool beneath her thumb. Near the bottom, where the paint had worn away, a narrow line of pale timber showed through.
 
-“Your Highness.”
+Elisabeta pressed gently.
 
-Her attendant had come a few steps closer.
+The panel shifted.
+
+Only slightly, but enough for her to feel it.
+
+She withdrew her hand.
+
+A small, unexpected thrill passed through her.
+
+The panel had not been fitted tightly into its frame.
+
+Was that a mistake?
+
+Or had someone allowed the wood room to move?
+
+She pressed it again, more carefully this time.
+
+The panel settled back into place.
+
+She thought of the timber waiting in the yard, changing with the weather while the calendar remained fixed. She thought of the branch in the palace courtyard, held at the same angle year after year. She thought of Lucian standing before a room full of students, explaining that a board did not know what a rule was for.
+
+Perhaps the woodwork had been made to accommodate the wood.
+
+Perhaps the space was not a flaw.
+
+Perhaps she was looking at something that had been designed to change without breaking.
+
+“Your Highness?”
+
+Her attendant had approached.
 
 “The car is waiting.”
 
+Elisabeta kept her eyes on the panel.
+
 “One moment.”
 
-She kept her thumb against the seam.
+She traced the seam with her thumb, following it to the corner where the wood met the frame.
 
-The wood was cool and faintly damp. She thought of the timber in the yard, left to take the weather while it waited for permission to be examined. She thought of the gardener’s wire, the pale shoot cut from the ash tree, and the sentence she had repeated so often that she had stopped hearing what it asked of her.
+There was so much she did not know.
 
-Someone had known, once, that wood must be given room to move. Someone had built the room in before it was needed, and no lesson had ever mentioned it.
+She had spent her life learning how structures were supposed to work. She knew their rules, their purposes, and the arguments used to defend them. She could explain why a system needed consistency, why exceptions could become privileges, and why order sometimes demanded sacrifice.
 
-Then she straightened, pulled her glove back on, and followed her attendant down the gallery toward the door that stuck.
+But she had never considered that a structure might need room for the very things it was built to contain.
+
+The thought frightened her a little.
+
+It also made her want to know more.
+
+She put her glove back on and straightened.
+
+“I'm ready.”
+
+Her attendant led the way towards the double door.
+
+As always, he lifted it slightly at the lower corner before opening it.
+
+This time, Elisabeta noticed.
+
+She watched the door move, the wood shifting within its frame, and wondered how many things in the palace had been quietly making room for her all along.
+
+Then she followed him into the rain.
       `
     },
     {
@@ -5366,257 +5854,600 @@ Then she straightened, pulled her glove back on, and followed her attendant down
       number: "Chapter Three",
       title: "The Cost of Want",
       content: `
-The tear was a finger’s width long, running down the left side seam of Elizabeth’s blouse.
 
-She had found it herself.
+The blouse had a hole in it.
 
-It was a plain cotton blouse, worn beneath her gowns where no one would see it. On Tuesday, while searching the lower stacks of the Academy library, she had caught it on an iron bracket. She felt the fabric give slightly against her ribs but said nothing. That evening, when she undressed, she found the damage: two inches of seam had opened, exposing the lining, though the stitching on either side remained intact.
+Not a particularly impressive hole. It was barely two inches long, tucked along the left side seam where nobody would ever see it beneath one of Elisabeta's gowns. A small tear, really. The sort of thing that could be repaired in an evening by anyone who knew what they were doing.
 
-The next morning, the maid arrived for the laundry at seven, as she did every day. She knocked softly, a familiar sound that announced her presence without requiring permission to enter. She was a quiet girl with a red knuckle on one hand, and she never looked directly at anything in the room that was not the basket.
+Unfortunately, Elisabeta did not know what she was doing.
 
-Elizabeth slipped the blouse inside her sleeve before the door opened.
+She had discovered the tear on Tuesday, while searching the lower shelves of the Academy library. An iron bracket had caught her blouse as she reached for a book, and she had felt the fabric pull against her ribs.
 
-She stood by the window while the maid collected the basket, holding her arm a little stiffly against her side. She watched the courtyard rather than the girl, and she had no idea why her heart was beating so hard.
+She had looked down, confirmed the damage, and continued searching for her book.
 
-She knew what would happen if she handed over the blouse.
+It was only later, when she undressed for bed, that she examined it properly.
 
-It would go down with the rest of the laundry. By the end of the week, an identical one would be folded in her drawer, clean and whole, with no seam to mend and no mark to show that anything had ever gone wrong.
+The seam had opened. The lining showed through the gap, though the stitches on either side remained intact.
 
-It was done kindly. No one complained, and no one expected her to notice. Her clothes had been cared for this way for as long as she could remember. She could not recall ever owning a garment that someone had repaired.
+She held the blouse up to the lamplight.
 
-But she wanted to be the one to mend it.
+Then she did something rather unusual.
 
-That was all.
+She decided not to tell anyone.
 
-She wanted a needle in her own fingers and a small, finished task at the end of the evening, something she had done for herself without anyone arranging it for her.
+The following morning, her maid arrived at seven to collect the laundry. She always knocked softly, waited precisely long enough to announce herself, and entered with her eyes fixed on the basket.
 
-The difficulty was that she did not own a needle.
+Elisabeta stood by the window, watching the courtyard.
 
-For three days the blouse lay folded at the back of the third drawer, beneath a shawl no one had reason to lift. Each morning the maid took the basket, and each morning Elizabeth checked the drawer before she dressed, as though the blouse might have been quietly taken and replaced after all.
+The blouse lay folded inside the third drawer of her dressing table.
 
-On Friday she found what she needed.
+She could have taken it out. She could have handed it to the maid and explained what had happened. By the end of the week, another blouse would have appeared in its place, clean, whole, and folded so neatly that it might have come straight from a shop.
 
-The household’s charity visit that week was to the almshouse, and the street outside it had been closed for market day. The car waited at the tradesmen’s gate while her attendant went to settle a dispute with the driver. A clerk had counted out one coin for each resident and placed the purse in Elizabeth’s hand. The purse was heavy and entirely accounted for.
+That was how things worked in the palace.
 
-Beside the car, a haberdasher had set up a small table, with a boy standing behind it to mind the goods.
+When something broke, someone repaired it.
 
-Elizabeth approached the table as though she were simply looking through a window.
+When something became worn, someone replaced it.
 
-She had nothing to pay with. Nothing she carried was hers to spend.
+When Elisabeta needed anything, it appeared.
 
-But that morning, in the vestibule, she had slipped two coins from the dish where the household left small change for tradesmen. She had told herself she was only seeing whether she could. No one counted the dish. She had checked, in a way she did not want to examine, whether anyone ever did.
+It was a comfortable way to live, and she had never been ungrateful for it. Her clothes were cared for, her meals arrived on time, and her rooms were kept warm through the winter. There was always someone ready to help.
 
-The tin cost two coins.
+Yet she could not remember a single occasion on which she had repaired one of her own belongings.
 
-She had counted the dish in her mind eleven times since.
+The maid lifted the laundry basket.
 
-It was dented at one corner, and the painted roses on its lid had worn away until only a few red smudges remained. Inside were six needles, a spool of white thread, and a piece of tailor’s chalk.
+Elisabeta slipped her hands behind her back.
 
-The boy wrapped it in a twist of brown paper and did not ask her name. She walked back to the car with the parcel in her sleeve, and for the first time in her life felt like a person who had got away with something.
+“Anything else, Your Highness?”
 
-That night, she sat on the floor of her bedroom, wearing only her slip, with her back against the foot of the bed. A green-shaded lamp cast a circle of light around her. Sapphire slept on the coverlet above, one paw dangling over the edge.
+“No. Thank you.”
 
-Elizabeth threaded the needle on her third attempt.
+The maid left.
 
-She tied the thread the way she had once watched a seamstress do it through the half-open door of the sewing room, then began.
+Elisabeta waited until the door closed before crossing to the dressing table.
 
-The first stitches were too large and uneven. When she pulled the thread tight, the fabric gathered into a pucker. She picked the stitches out and tried again.
+She opened the drawer.
 
-The second attempt was better.
+The blouse was still there.
 
-By the third, she had stopped trying to make the work resemble anyone else’s. She concentrated on the cloth beneath her thumb, the slight resistance of the needle, and the quiet sound of thread passing through fabric.
+She touched the torn seam with one finger.
 
-At the far end of the room lay the gold silk gown she had worn on Thursday. She had left it in a heap after undressing.
+“I could mend you,” she whispered.
 
-She did not look at it.
+The blouse, being a blouse, offered no objection.
 
-The repair took forty minutes, and it was past midnight when she bit through the thread as she had seen others do. A raised line marked the place where the stitches doubled back. She held the blouse beneath the lamp and turned it from side to side.
+Elisabeta considered this a promising beginning.
 
-The repair was visible.
+There was only one small problem.
 
-It would always be visible.
+She did not own a needle.
 
-She found that she did not mind.
+For three days, the blouse remained hidden beneath a shawl in the third drawer. Every morning, Elisabeta checked that it was still there. Every evening, she considered asking someone for a needle, then imagined the questions that might follow.
 
-For a while, she sat on the floor with the blouse in her lap and nothing she was expected to do. The room was quiet in a way she could not remember experiencing for months.
+Why did she need one?
 
-It was not that nobody else was there.
+What had she been making?
 
-It was that, for once, nothing in the room was asking anything of her.
+Would she like a seamstress to come?
+
+Perhaps Mrs. Hale could recommend someone. Perhaps a maid could bring a sewing basket. Perhaps the entire household would somehow become involved in the repair of a blouse that nobody else had even seen.
+
+By Thursday evening, she had developed a strong suspicion that acquiring a needle might be more difficult than learning to use one.
+
+On Friday morning, she found a solution.
+
+It was not a particularly noble solution.
+
+The household was visiting the almshouse that week, and the streets outside had been closed for market day. Their car waited at the tradesmen's gate while her attendant argued with the driver about the best route through the crowded streets.
+
+A clerk had placed a purse in Elisabeta's hand before they left the palace. It contained the coins intended for the residents of the almshouse, carefully counted and accounted for.
+
+She held the purse in one hand and looked across the street.
+
+A haberdasher had set up a small table beneath a striped awning. Buttons, ribbons, thread, and little tins of sewing supplies covered its surface. A boy stood behind the table, trying unsuccessfully to keep the rain from blowing onto his merchandise.
+
+Elisabeta approached.
+
+She had no money of her own.
+
+Everything she carried had been purchased for her, given to her, or entrusted to her for a specific purpose. She had never needed to wonder whether she could afford a small pleasure.
+
+That morning, however, she had taken two coins from the dish in the palace vestibule where the household kept loose change for tradesmen.
+
+She had told herself she was only testing something.
+
+No one counted the coins individually. She had checked.
+
+That was the part she preferred not to think about.
+
+She examined the little tins on the table.
+
+The boy looked up.
+
+“Looking for anything in particular?”
+
+“A sewing kit.”
+
+He pointed to a dented tin near the corner.
+
+“That's the cheapest. Six needles, white thread, and chalk. Two coins.”
+
+Elisabeta picked it up.
+
+The painted roses on the lid had faded until only a few red smudges remained. One corner was dented, and the metal felt cold against her palm.
+
+It was perfect.
+
+She placed the two coins on the table.
+
+The boy wrapped the tin in brown paper.
+
+“Anything else?”
+
+“No, thank you.”
+
+She slipped the parcel into her sleeve and returned to the car.
+
+Her attendant had finished arguing with the driver.
+
+“Everything settled, Your Highness?”
+
+“Everything.”
+
+He opened the car door for her.
+
+Elisabeta climbed inside, keeping her sleeve carefully against her side.
+
+For the first time in her life, she had bought something without anyone arranging it for her.
+
+It was a sewing kit worth two coins.
+
+She felt like a criminal mastermind.
+
+***
+
+That evening, Elisabeta sat on the floor beside her bed.
+
+She had changed into her slip, and her hair fell loosely over her shoulders. A green-shaded lamp cast a circle of warm light across the carpet. Above her, Safira occupied the centre of the bed as though the room had been designed around her.
+
+The little tin sat open beside Elisabeta's knee.
+
+She selected a needle.
+
+Then she selected a second one, because the first looked too large.
+
+Then she returned to the first.
+
+Threading it took three attempts.
+
+On the first, the thread frayed at the end.
+
+On the second, she missed the eye entirely.
+
+On the third, she held her breath, pushed the thread through, and stared at the tiny loop as though it had performed a particularly impressive trick.
+
+“There,” she whispered.
+
+Safira opened one eye.
+
+“I know. It wasn't very difficult.”
+
+The cat closed her eye again.
+
+Elisabeta examined the torn seam.
+
+She had once watched a seamstress working in the palace sewing room through a half-open door. She remembered the small movements of her hands, the way she held the cloth, and how she pulled the thread through without appearing to think about it.
+
+At the time, Elisabeta had been waiting for a gown to be altered.
+
+She had never imagined she would be sitting on her bedroom floor trying to imitate the woman.
+
+Her first stitches were enormous.
+
+When she pulled the thread tight, the fabric gathered into a lumpy little fold.
+
+She frowned.
+
+“That cannot be right.”
+
+She pulled out the stitches.
+
+The second attempt was better, though one stitch wandered away from the seam as if it had somewhere else to be.
+
+The third was better still.
+
+Eventually, she stopped trying to make the work resemble the seamstress's and began paying attention to the cloth beneath her fingers.
+
+The needle resisted when she pushed it through a thicker section. The thread tightened when she drew it through. If she pulled too hard, the fabric puckered. If she left it too loose, the seam gaped.
+
+There was no tutor beside her. No one corrected her hand or adjusted her posture. When she made a mistake, she had to discover it herself.
+
+It was frustrating.
+
+It was also strangely satisfying.
+
+Across the room, her gold silk gown lay in a heap on the chair where she had left it after dinner. Usually, a maid would have collected it by now.
+
+Elisabeta did not look at it.
+
+She was too busy trying to keep the stitches straight.
+
+The repair took forty minutes.
+
+By the time she finished, the palace corridors had grown quiet, and the fire in her grate had burned down to a soft red glow.
+
+She bit the thread as she had seen the seamstress do, tied off the end, and held the blouse beneath the lamp.
+
+The repair was not beautiful.
+
+A raised line marked the seam where she had doubled back to correct her first attempt. One stitch sat slightly higher than the others. The thread was visible if she turned the fabric towards the light.
+
+She examined it from every angle.
+
+Then she smiled.
+
+It was hers.
+
+Not the blouse. The blouse had always been hers.
+
+The repair.
+
+She had done that herself.
+
+Elisabeta laid the blouse across her lap and sat quietly for a while.
+
+Nothing in the room required her attention. No lesson needed preparing. No letter needed answering. No one was waiting for her to decide what she would wear, what she would say, or how she ought to behave.
+
+The silence felt different from the silence she knew in the palace.
+
+It was not the absence of conversation.
+
+It was the absence of expectation.
+
+Safira climbed down from the bed, crossed the carpet, and settled against Elisabeta's side.
+
+Elisabeta rested her hand on the cat's back.
+
+For once, she did not wonder what she ought to do next.
+
+***
 
 “Arms up, Your Highness.”
 
-Mrs. Hale spoke around the pins held between her lips, making every instruction sound like a decision that had already been made.
+Mrs. Hale had a mouthful of pins and the expression of a woman who had long ago accepted that clothing was a serious matter.
 
-Elizabeth raised her arms.
+Elisabeta raised her arms.
 
-The silk was the shade of blue Edward’s mother had approved. It fitted closely through the bodice and waist, and its weight held Elizabeth’s shoulders back. In the long mirror, she could see herself standing rigidly while Mrs. Hale knelt beside her hip.
+The blue silk gown settled around her shoulders. Its colour had been approved by Alexandru's mother, its cut agreed upon by two households, and its fitting scheduled to the minute.
 
-She had slept for four hours, and her fingers still felt the thread.
+It was a lovely gown.
 
-Behind them, Queen Anne sat in a chair by the window.
+It was also surprisingly difficult to breathe in.
 
-She had arrived during the first fifteen minutes of the fitting and announced that she would not interrupt. Since then, she had been reading a dispatch, turning each page with one gloved finger.
-
-“A little more at the waist,” Mrs. Hale said.
-
-“Not too much,” Anne replied without looking up. “She must be able to sit through dinner.”
+“Not quite so tightly at the waist,” Queen Ecaterina said from her chair by the window. “She must be able to sit through dinner.”
 
 “Yes, Your Majesty.”
 
-Elizabeth lowered her eyes to her raised hands.
+Mrs. Hale loosened the fabric by a fraction.
 
-There it was.
+Elisabeta stood before the mirror, her arms still raised. She had slept for four hours, and her fingers remembered every stitch she had made the night before.
 
-On the pad of her left middle finger sat a small, dark mark where the needle had entered the night before. She had not noticed it until Mrs. Hale’s pin brushed the same spot and she drew a sharp breath.
+On the pad of her left middle finger was a tiny dark mark.
 
-Mrs. Hale continued working without looking up. Her hands slowed, though. Elizabeth saw that, in the glass.
+She had forgotten it was there.
 
-Anne did not look up either, but she had stopped turning the page.
+When Mrs. Hale's pin brushed the spot, Elisabeta drew in a sharp breath.
 
-“You’ve hurt your hand.”
+The dressmaker stopped.
 
-“It’s a pin,” Elizabeth said, lowering one arm slightly. “Mrs. Hale’s. It’s nothing.”
+In the mirror, their eyes met.
 
-“Mrs. Hale doesn’t prick her fittings.”
+Mrs. Hale looked down at the gown again, but her hands had slowed.
 
-Anne placed the dispatch face down on the arm of her chair and crossed the room.
+Across the room, Ecaterina stopped turning the pages of her dispatch.
 
-She took Elizabeth’s hand between both of hers and turned it toward the window. It was such an ordinary gesture that Elizabeth could not refuse it without making something of it, so she let her mother examine the mark.
+“You've hurt your hand,” she said.
 
-Anne’s hands were warm.
+“It's nothing.”
 
-They were always warmer than Elizabeth expected, dry and steady against her own.
+“Let me see.”
 
-“It’s a needle,” Anne said gently. “A small one. Fine, not a pin.”
+“Mother, it's only a pin.”
 
-Elizabeth said nothing.
+“Mrs. Hale does not prick her fittings.”
 
-Mrs. Hale went quiet at the hem, and Elizabeth understood, from the angle of her bent head, that she had known the whole time what the Queen would see.
+Elisabeta lowered her arms.
 
-“Mrs. Hale tells me your lamp has been burning past midnight twice this week,” Anne continued. Her tone had not changed. “She mentioned it because she worries you’re not sleeping. I told her you read.”
+Her mother crossed the room and took her hand.
 
-“I do read.”
+It was an ordinary gesture. Ecaterina had done it countless times before, when Elisabeta was a child with scraped knees or a fever or a splinter that had somehow become the most terrible thing in the world.
+
+Elisabeta let her turn her fingers towards the light.
+
+The Queen's hands were warm.
+
+“They are very small,” Ecaterina murmured.
+
+“It's hardly a tragedy.”
+
+“No, darling. But it is a needle mark.”
+
+Elisabeta said nothing.
+
+Ecaterina examined the fingertip, then drew a folded handkerchief from her sleeve and pressed it gently against the spot.
+
+There was no blood left to wipe away.
+
+Her mother held it there anyway.
+
+“Mrs. Hale tells me your lamp has been burning late,” she said.
+
+Elisabeta's eyes moved towards the mirror.
+
+“Does she?”
+
+“Twice this week, apparently. She was concerned you weren't sleeping.”
+
+“I was reading.”
 
 “I know.”
 
-Anne lifted Elizabeth’s hand a little higher. Then she drew a small folded handkerchief from her sleeve and pressed it lightly against the fingertip, as though the wound might still be bleeding.
+Ecaterina folded the handkerchief.
 
-It had not bled since the night before.
+“I won't ask what you've been making.”
 
-She held the handkerchief there anyway.
+The words were so gentle that Elisabeta almost relaxed.
 
-“I won't ask what you’ve been making,” she said. “A person ought to have an occupation that belongs only to them. I had one myself at your age. Pressed flowers. It was a great comfort to me.”
+“A person ought to have something that belongs to no one else,” her mother continued. “I had a little occupation of my own at your age. Pressed flowers.”
 
-She folded the handkerchief again.
+Elisabeta looked at her.
 
-“I kept them in a book I did not show anyone. Your grandmother found it, of course. She was very kind about it.” She said this lightly, and Elizabeth could not tell what was under it. “But you must understand how your hand will look, Elizabeth. It will be photographed. At the ceremony, a hundred people will be watching you, and the cameras will be closer than they are now. A small mark invites a question, and the person asking it may have no interest in the answer.”
+“Pressed flowers?”
+
+“Your grandmother thought it was a ridiculous hobby. I thought she was being rather unfair, so I kept collecting them.”
+
+“Did you ever show her?”
+
+“Eventually. She was very kind about it.”
+
+Her mother smiled at the memory.
+
+“I kept them in a book. There were roses, little blue flowers from the garden, and one rather unfortunate specimen that had turned brown before I could press it properly.”
+
+“What happened to it?”
+
+“I imagine it is still somewhere in the palace archives, unless someone mistook it for a very old receipt.”
+
+Elisabeta laughed.
+
+It escaped before she could stop it.
+
+For a moment, she was simply a daughter listening to a story about her mother's childhood.
+
+Then Ecaterina glanced at the mark on her finger.
+
+“But you must be careful. Your hand will be photographed at the ceremony. There will be a hundred people watching, and the cameras will be closer than you imagine. A little mark invites a question, and the person asking may have no interest in the answer.”
 
 “It will have healed by then.”
 
 “Of course.”
 
-Anne smiled, as though Elizabeth had settled the matter.
+Her mother said it as though that settled everything.
 
-“I’m only telling you how I think about these things. Much of my day is spent anticipating what people will notice and what they will make of it. I’d rather you learned that from me than the hard way.”
+“I only want you to understand how these things work. Much of my day is spent anticipating what people will notice and what they will make of it. I would rather you learn from me than discover it the hard way.”
 
-It was entirely reasonable.
+It was sensible advice.
 
-“If you want to learn something,” Anne continued, her voice becoming lighter, “you only have to tell me. Needlework is a charming idea. I know a teacher who could come to the palace twice a week. A princess taking up a craft in the months before her wedding would make a gentle story, and the papers have had very little gentle to say about us lately. We could arrange everything by Friday.”
+Elisabeta knew it was sensible advice.
 
-For a moment, Elizabeth could not answer.
+That was the trouble with her mother. She rarely asked for anything unreasonable. She did not need to forbid a thing when she could explain, quite convincingly, why another choice would be wiser.
 
-She could already see it.
+Ecaterina released her hand and stepped back.
 
-The teacher arriving at the palace. A chair positioned beside a window. A photograph of Elizabeth bent over a piece of embroidery, with someone standing just behind her shoulder to correct her work. A schedule, a finished piece, perhaps an exhibition at the spring fair.
+“If you want to learn needlework, you need only tell me. I know a charming teacher who could come twice a week. A princess taking up embroidery before her wedding would make a lovely little story.”
 
-Her crooked stitches would be taken from her and placed under glass.
+She picked up her dispatch.
 
-The story would be kind. Everything would be arranged properly, and everyone would be pleased.
+“The newspapers have had very little pleasant to say about us lately. Something gentle would do everyone good.”
 
-And somehow, the thing she had wanted would no longer belong to her.
+Elisabeta stared at her reflection.
 
-“You said a person ought to have an occupation that belongs only to them,” she said.
+She could already picture it.
+
+A teacher arriving at the palace.
+
+A chair placed beside the window.
+
+A little basket of coloured thread.
+
+Someone standing behind her, correcting the angle of her fingers.
+
+A photograph of her bent over a piece of embroidery, looking thoughtful and accomplished.
+
+Perhaps a newspaper would print it beneath a charming headline. Perhaps people would praise her patience. Perhaps the little repair she had made on her bedroom floor would become the beginning of a royal charity project.
+
+There would be schedules, arrangements, finished pieces, and someone to decide what she ought to make next.
+
+Everything would be lovely.
+
+Everything would be properly organised.
+
+And the thing she had wanted most about the whole experience would disappear.
+
+“You said a person ought to have an occupation that belongs to no one else,” Elisabeta said.
+
+Ecaterina looked up.
 
 “I did.”
 
 “Then why does this one need a teacher?”
 
-Anne considered her. For an instant, Elizabeth thought she had said something that would be heard.
+For a moment, neither of them spoke.
 
-“Because I would like you to have it for longer than a week,” Anne said, quite simply. “And things that are well supported last longer.”
+Elisabeta watched her mother's expression carefully. She had asked a simple question, but she was beginning to understand that simple questions could lead to complicated places.
 
-Elizabeth had no answer to that. She suspected it was true.
+Ecaterina considered her.
 
-“That’s very generous,” she said. “But I’d rather not make anything of it. It’s only something to do with my hands.”
+“Because I would like you to have it for longer than a week,” she said at last. “And things that are well supported tend to last.”
+
+Elisabeta looked down.
+
+She could not argue with that.
+
+Her mother was right about the teacher. She was right about the newspapers. She was right that learning a skill properly would take more than one evening on the bedroom floor.
+
+And yet.
+
+“Thank you,” Elisabeta said. “But I'd rather not make anything of it. It's only something to do with my hands.”
 
 “Then it can wait.”
 
-Anne released her fingers and stepped back.
+Ecaterina smiled and brushed a loose strand of hair away from her daughter's face.
 
-The warmth went with her.
+“After the fourteenth, you will have more time. I only worry that you will exhaust yourself now, of all weeks. There is so much to arrange, and you have always managed everything so well.”
 
-“After the fourteenth, you’ll have more time. I’d only be sorry to see you exhaust yourself now, of all weeks. There is so much to get through, and you’ve always managed it so well. I’d rather you saved your strength for what matters.”
+She rested a hand briefly on Elisabeta's shoulder.
+
+“I would rather you save your strength for what matters.”
 
 “Yes, Mother.”
 
-“Mrs. Hale, half an inch at the shoulder, I think. She’s holding it too high.”
+“Mrs. Hale, half an inch at the shoulder, I think. She's holding it too high.”
 
 “Yes, Your Majesty.”
 
-Anne returned to her chair and picked up the dispatch.
+Ecaterina returned to her chair.
 
-The handkerchief remained in her hand for a moment before she put it away.
+The conversation was over.
 
-Mrs. Hale removed a pin from her mouth, resumed working at the hem, and avoided Elizabeth’s eyes in the mirror.
+Mrs. Hale resumed her work, and the silk shifted around Elisabeta's waist as the dressmaker adjusted the seams.
 
-Elizabeth lowered her shoulder by half an inch.
+In the mirror, a young woman in blue stood with her chin held at the proper angle.
 
-In the glass, a young woman in blue stood with her chin at the angle she had been taught to hold it. A small dark mark showed on one finger. Her face revealed nothing.
+One finger bore a tiny dark mark.
 
-That night, Elizabeth did not take out the tin.
+Her face gave nothing away.
 
-She sat on the edge of her bed with the lamp burning and her hands resting in her lap. For a long time, she did nothing.
+***
 
-The mended blouse lay folded in the second drawer, beneath the winter stockings. She knew exactly how she had placed it.
+That night, Elisabeta did not take out the sewing kit.
 
-She thought about putting it on, just to feel the repaired seam against her ribs.
+She sat on the edge of her bed with the lamp burning beside her, her hands folded in her lap.
 
-Instead, she found herself listening to the corridor.
+The mended blouse lay in the second drawer beneath her winter stockings. She could have put it on. She could have run her fingers along the repaired seam and remembered how it had felt to finish something without anyone watching.
 
-A pair of boots passed her door, slow and even. They did not stop.
+Instead, she listened to the corridor.
 
-She had heard those same footsteps at the same hour every night for a week without giving them a second thought. Now she counted the seconds until they disappeared.
+A pair of boots passed her door.
 
-There was no lock on her door.
+Slow. Even. Familiar.
+
+She had heard those footsteps at the same hour every night for the past week, but she had never bothered to count them. Now she listened until they faded.
+
+The palace was full of people who cared for her.
+
+They brought her meals, arranged her clothes, prepared her lessons, and made sure she was never left wanting for anything important.
+
+Her mother came into her rooms without knocking.
+
+The maids knocked only to announce that they were coming in.
+
+Pages moved the candles when someone decided they were too close to a book.
+
+Elisabeta had always understood this as part of being loved.
+
+She had never asked whether love could leave a person too little room to close a door.
+
+She rose and crossed to the dressing table.
+
+The third drawer slid open with a soft wooden whisper.
+
+She lifted the shawl and looked at the little tin.
+
+Its painted roses were almost gone. A few needles remained inside, their silver points catching the lamplight.
+
+She picked it up and turned it over in her hands.
+
+Two coins.
+
+That was all it had cost.
+
+She had spent more than that on ribbons she had never worn, on sweets she had forgotten to eat, on little things that had appeared in her rooms and disappeared again without leaving any memory behind.
+
+But she remembered the boy wrapping the tin in brown paper.
+
+She remembered slipping it into her sleeve.
+
+She remembered the first stitch, the second, the third.
+
+She remembered the moment she had held the finished blouse beneath the lamp and realised that, for once, the result belonged entirely to her.
+
+Elisabeta placed the tin back in the drawer.
+
+Then she closed it.
+
+She had lived in this room for twenty-two years and had never owned anything she needed to hide.
+
+The thought made her feel both foolish and strangely brave.
+
+She crossed to the door.
+
+There was no lock.
 
 There never had been.
 
-Her mother entered without knocking. A maid knocked only to announce that she was coming in. A page moved the candlesticks whenever someone decided they were too close to a book.
+She knew this perfectly well, but she tried the handle anyway.
 
-Elizabeth had always understood this as part of living in a house filled with people who cared for her.
+It turned easily.
 
-She had never thought of it as something she might want to close herself away from.
+She released it and tried again, pressing a little harder, as though a different answer might appear if she asked the question twice.
 
-She rose and crossed to the third drawer. After lifting the shawl, she returned the tin to its hiding place and laid her hand flat against the wood.
+Nothing changed.
 
-She had lived in this room for twenty-two years and had never once needed to hide anything in it.
+Elisabeta stood with her hand on the handle.
 
-The realisation left her standing there longer than she expected.
+She could call for someone to install a lock. She could ask her mother, and Ecaterina would probably agree that privacy was reasonable. She might even arrange for a carpenter to arrive the following morning.
 
-At last, she went to the door and tried the handle.
+By lunchtime, the door would have a lock.
 
-It was a foolish thing to do. She knew perfectly well that it did not lock.
+By evening, someone would have a key.
 
-She tried it again.
+The thought was so absurd that she almost laughed.
 
-Then she returned to the lamp and reached for the small brass chain.
+Instead, she returned to the bed.
 
-When she pulled it, the room went dark all at once.
+The lamp cast a warm circle across the room, catching the edges of her books, the polished brass handles of the drawers, and the little tin hidden beneath the shawl.
 
-Elizabeth stood without moving.
+Everything was exactly where it belonged.
 
-She had not realised how much she had wanted that.
+Elisabeta reached for the brass chain beside the bed.
+
+She had pulled it a thousand times before, always at the end of the day, always when she was ready to sleep.
+
+Tonight, she hesitated.
+
+Then she pulled.
+
+The lamp went dark.
+
+For a moment, Elisabeta could see nothing.
+
+She stood very still, listening to the rain against the windows and the faint crackle of the dying fire.
+
+The darkness did not change the room.
+
+The bed was still there. The books were still there. The blouse was still in the drawer, and the sewing tin was still beneath the shawl.
+
+Tomorrow, the servants would come. The Academy would expect her. Her mother would ask whether she had slept well, and Mrs. Hale would return to the gown.
+
+Nothing had changed.
+
+And yet, for the first time, Elisabeta found herself wondering whether wanting something for herself always had to come at a cost.
+
+She did not know the answer.
+
+She only knew that she had begun to ask.
       `
     }
   ]
