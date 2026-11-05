@@ -476,599 +476,258 @@ const NOVEL_CHAPTERS = {
       number: "Chapter Three",
       title: "The Cost of Want",
       content: `
-The blouse had a hole in it.
 
-Not a particularly impressive hole. It was barely two inches long, tucked along the left side seam where nobody would ever see it beneath one of Elisabeta's gowns. A small tear, really. The sort of thing that could be repaired in an evening by anyone who knew what they were doing.
+<p>The tear was a finger's width long, running down the left side seam of Elisabeta's blouse.</p>
 
-Unfortunately, Elisabeta did not know what she was doing.
+<p>She had found it herself.</p>
 
-She had discovered the tear on Tuesday, while searching the lower shelves of the Academy library. An iron bracket had caught her blouse as she reached for a book, and she had felt the fabric pull against her ribs.
+<p>It was a plain cotton blouse, worn beneath her gowns where no one would see it. On Tuesday, while searching the lower stacks of the Academy library, she had caught it on an iron bracket. She felt the fabric give against her ribs but said nothing. That evening, when she undressed, she found the damage: two inches of seam had opened, exposing the lining, though the stitching on either side remained intact.</p>
 
-She had looked down, confirmed the damage, and continued searching for her book.
+<p>The next morning, the maid arrived for the laundry at seven, as she did every day. She knocked softly, a familiar sound that announced her presence without requiring permission to enter. She was a quiet girl with a red knuckle on one hand, and she never looked directly at anything in the room that was not the basket.</p>
 
-It was only later, when she undressed for bed, that she examined it properly.
+<p>Elisabeta slipped the blouse inside her sleeve before the door opened.</p>
 
-The seam had opened. The lining showed through the gap, though the stitches on either side remained intact.
+<p>She stood by the window while the maid collected the basket, holding her arm a little stiffly against her side. She watched the courtyard rather than the girl, and she had no idea why her heart was beating so hard.</p>
 
-She held the blouse up to the lamplight.
+<p>She knew what would happen if she handed over the blouse.</p>
 
-Then she did something rather unusual.
+<p>It would go down with the rest of the laundry. By the end of the week, an identical one would be folded in her drawer, clean and whole, with no seam to mend and no mark to show that anything had ever gone wrong.</p>
 
-She decided not to tell anyone.
+<p>It was done kindly. No one complained, and no one expected her to notice. Her clothes had been cared for this way for as long as she could remember. She could not recall ever owning a garment that someone had repaired.</p>
 
-The following morning, her maid arrived at seven to collect the laundry. She always knocked softly, waited precisely long enough to announce herself, and entered with her eyes fixed on the basket.
+<p>But she wanted to be the one to mend it.</p>
 
-Elisabeta stood by the window, watching the courtyard.
+<p>That was all.</p>
 
-The blouse lay folded inside the third drawer of her dressing table.
+<p>She wanted a needle in her own fingers and a small, finished task at the end of the evening, something she had done for herself without anyone arranging it for her.</p>
 
-She could have taken it out. She could have handed it to the maid and explained what had happened. By the end of the week, another blouse would have appeared in its place, clean, whole, and folded so neatly that it might have come straight from a shop.
+<p>The difficulty was that she did not own a needle.</p>
 
-That was how things worked in the palace.
+<p>For three days the blouse lay folded at the back of the third drawer, beneath a shawl no one had reason to lift. Each morning the maid took the basket, and each morning Elisabeta checked the drawer before she dressed, as though the blouse might have been quietly taken and replaced after all.</p>
 
-When something broke, someone repaired it.
+<p>On Friday she found what she needed.</p>
 
-When something became worn, someone replaced it.
+<p>The household's charity visit that week was to the almshouse, and the street outside it had been closed for market day. The car waited at the tradesmen's gate while her attendant went to settle a dispute with the driver. A clerk had counted out one coin for each resident and placed the purse in Elisabeta's hand. The purse was heavy and entirely accounted for.</p>
 
-When Elisabeta needed anything, it appeared.
+<p>Beside the car, a haberdasher had set up a small table, with a boy standing behind it to mind the goods.</p>
 
-It was a comfortable way to live, and she had never been ungrateful for it. Her clothes were cared for, her meals arrived on time, and her rooms were kept warm through the winter. There was always someone ready to help.
+<p>Elisabeta approached the table as though she were simply looking through a window.</p>
 
-Yet she could not remember a single occasion on which she had repaired one of her own belongings.
+<p>She had nothing to pay with. Nothing she carried was hers to spend.</p>
 
-The maid lifted the laundry basket.
+<p>But that morning, in the vestibule, she had slipped two coins from the dish where the household left small change for tradesmen. She had told herself she was only seeing whether she could. No one counted the dish. She had checked, in a way she did not want to examine, whether anyone ever did.</p>
 
-Elisabeta slipped her hands behind her back.
+<p>The tin cost two coins.</p>
 
-“Anything else, Your Highness?”
+<p>She had counted the dish in her mind eleven times since.</p>
 
-“No. Thank you.”
+<p>It was dented at one corner, and the painted roses on its lid had worn away until only a few red smudges remained. Inside were six needles, a spool of white thread, and a piece of tailor's chalk.</p>
 
-The maid left.
+<p>The boy wrapped it in a twist of brown paper and did not ask her name. She walked back to the car with the parcel in her sleeve, and for the first time in her life felt like a person who had got away with something.</p>
 
-Elisabeta waited until the door closed before crossing to the dressing table.
+<p>That night, she sat on the floor of her bedroom, wearing only her slip, with her back against the foot of the bed. A green-shaded lamp cast a circle of light around her. Safira slept on the coverlet above, one paw dangling over the edge.</p>
 
-She opened the drawer.
+<p>Elisabeta threaded the needle on her third attempt.</p>
 
-The blouse was still there.
+<p>She tied the thread the way she had once watched a seamstress do it through the half-open door of the sewing room, then began.</p>
 
-She touched the torn seam with one finger.
+<p>The first stitches were too large and uneven. When she pulled the thread tight, the fabric gathered into a pucker. She picked the stitches out and tried again.</p>
 
-“I could mend you,” she whispered.
+<p>The second attempt was better.</p>
 
-The blouse, being a blouse, offered no objection.
+<p>By the third, she had stopped trying to make the work resemble anyone else's. She concentrated on the cloth beneath her thumb, the slight resistance of the needle, and the quiet sound of thread passing through fabric.</p>
 
-Elisabeta considered this a promising beginning.
+<p>At the far end of the room lay the gold silk gown she had worn on Thursday. She had left it in a heap after undressing.</p>
 
-There was only one small problem.
+<p>She did not look at it.</p>
 
-She did not own a needle.
+<p>The repair took forty minutes, and it was past midnight when she bit through the thread as she had seen others do. A raised line marked the place where the stitches doubled back. She held the blouse beneath the lamp and turned it from side to side.</p>
 
-For three days, the blouse remained hidden beneath a shawl in the third drawer. Every morning, Elisabeta checked that it was still there. Every evening, she considered asking someone for a needle, then imagined the questions that might follow.
+<p>The repair was visible.</p>
 
-Why did she need one?
+<p>It would always be visible.</p>
 
-What had she been making?
+<p>She found that she did not mind.</p>
 
-Would she like a seamstress to come?
+<p>For a while, she sat on the floor with the blouse in her lap and nothing she was expected to do. The room was quiet in a way she could not remember experiencing for months.</p>
 
-Perhaps Mrs. Hale could recommend someone. Perhaps a maid could bring a sewing basket. Perhaps the entire household would somehow become involved in the repair of a blouse that nobody else had even seen.
+<p>It was not that nobody else was there.</p>
 
-By Thursday evening, she had developed a strong suspicion that acquiring a needle might be more difficult than learning to use one.
+<p>It was that, for once, nothing in the room was asking anything of her.</p>
 
-On Friday morning, she found a solution.
+<p>&ldquo;Arms up, Your Highness.&rdquo;</p>
 
-It was not a particularly noble solution.
+<p>Mrs. Hale spoke around the pins held between her lips, making every instruction sound like a decision that had already been made.</p>
 
-The household was visiting the almshouse that week, and the streets outside had been closed for market day. Their car waited at the tradesmen's gate while her attendant argued with the driver about the best route through the crowded streets.
+<p>Elisabeta raised her arms.</p>
 
-A clerk had placed a purse in Elisabeta's hand before they left the palace. It contained the coins intended for the residents of the almshouse, carefully counted and accounted for.
+<p>The silk was the shade of blue Alexandru's mother had approved. It fitted closely through the bodice and waist, and its weight held Elisabeta's shoulders back. In the long mirror, she could see herself standing rigidly while Mrs. Hale knelt beside her hip.</p>
 
-She held the purse in one hand and looked across the street.
+<p>She had slept for four hours, and her fingers still felt the thread.</p>
 
-A haberdasher had set up a small table beneath a striped awning. Buttons, ribbons, thread, and little tins of sewing supplies covered its surface. A boy stood behind the table, trying unsuccessfully to keep the rain from blowing onto his merchandise.
+<p>Behind them, Queen Ecaterina sat in a chair by the window.</p>
 
-Elisabeta approached.
+<p>She had arrived during the first fifteen minutes of the fitting and announced that she would not interrupt. Since then, she had been reading a dispatch, turning each page with one gloved finger.</p>
 
-She had no money of her own.
+<p>&ldquo;A little more at the waist,&rdquo; Mrs. Hale said.</p>
 
-Everything she carried had been purchased for her, given to her, or entrusted to her for a specific purpose. She had never needed to wonder whether she could afford a small pleasure.
+<p>&ldquo;Not too much,&rdquo; Ecaterina replied without looking up. &ldquo;She must be able to sit through dinner.&rdquo;</p>
 
-That morning, however, she had taken two coins from the dish in the palace vestibule where the household kept loose change for tradesmen.
+<p>&ldquo;Yes, Your Majesty.&rdquo;</p>
 
-She had told herself she was only testing something.
+<p>Elisabeta lowered her eyes to her raised hands.</p>
 
-No one counted the coins individually. She had checked.
+<p>There it was.</p>
 
-That was the part she preferred not to think about.
+<p>On the pad of her left middle finger sat a small, dark mark where the needle had entered the night before. She had not noticed it until Mrs. Hale's pin brushed the same spot and she drew a sharp breath.</p>
 
-She examined the little tins on the table.
+<p>Mrs. Hale continued working without looking up. Her hands slowed, though. Elisabeta saw that, in the glass.</p>
 
-The boy looked up.
+<p>Ecaterina did not look up either, but she had stopped turning the page.</p>
 
-“Looking for anything in particular?”
+<p>&ldquo;You've hurt your hand.&rdquo;</p>
 
-“A sewing kit.”
+<p>&ldquo;It's a pin,&rdquo; Elisabeta said, lowering one arm slightly. &ldquo;Mrs. Hale's. It's nothing.&rdquo;</p>
 
-He pointed to a dented tin near the corner.
+<p>&ldquo;Mrs. Hale doesn't prick her fittings.&rdquo;</p>
 
-“That's the cheapest. Six needles, white thread, and chalk. Two coins.”
+<p>Ecaterina placed the dispatch face down on the arm of her chair and crossed the room.</p>
 
-Elisabeta picked it up.
+<p>She took Elisabeta's hand between both of hers and turned it toward the window. It was such an ordinary gesture that Elisabeta could not refuse it without making something of it, so she let her mother examine the mark.</p>
 
-The painted roses on the lid had faded until only a few red smudges remained. One corner was dented, and the metal felt cold against her palm.
+<p>Ecaterina's hands were warm.</p>
 
-It was perfect.
+<p>They were always warmer than Elisabeta expected, dry and steady against her own.</p>
 
-She placed the two coins on the table.
+<p>&ldquo;It's a needle,&rdquo; Ecaterina said gently. &ldquo;A small one. Fine, not a pin.&rdquo;</p>
 
-The boy wrapped the tin in brown paper.
+<p>Elisabeta said nothing.</p>
 
-“Anything else?”
+<p>Mrs. Hale went quiet at the hem, and Elisabeta understood, from the angle of her bent head, that she had known the whole time what the Queen would see.</p>
 
-“No, thank you.”
+<p>&ldquo;Mrs. Hale tells me your lamp has been burning past midnight twice this week,&rdquo; Ecaterina continued. Her tone had not changed. &ldquo;She mentioned it because she worries you're not sleeping. I told her you read.&rdquo;</p>
 
-She slipped the parcel into her sleeve and returned to the car.
+<p>&ldquo;I do read.&rdquo;</p>
 
-Her attendant had finished arguing with the driver.
+<p>&ldquo;I know.&rdquo;</p>
 
-“Everything settled, Your Highness?”
+<p>Ecaterina lifted Elisabeta's hand a little higher. Then she drew a small folded handkerchief from her sleeve and pressed it lightly against the fingertip, as though the wound might still be bleeding.</p>
 
-“Everything.”
+<p>It had not bled since the night before.</p>
 
-He opened the car door for her.
+<p>She held the handkerchief there anyway.</p>
 
-Elisabeta climbed inside, keeping her sleeve carefully against her side.
+<p>&ldquo;I won't ask what you've been making,&rdquo; she said. &ldquo;A person ought to have an occupation that belongs only to them. I had one myself at your age. Pressed flowers. It was a great comfort to me.&rdquo;</p>
 
-For the first time in her life, she had bought something without anyone arranging it for her.
+<p>She folded the handkerchief again.</p>
 
-It was a sewing kit worth two coins.
+<p>&ldquo;I kept them in a book I did not show anyone. Your grandmother found it, of course. She was very kind about it.&rdquo; She said this lightly, and Elisabeta could not tell what was under it. &ldquo;But you must understand how your hand will look, Elisabeta. It will be photographed. At the ceremony, a hundred people will be watching you, and the cameras will be closer than they are now. A small mark invites a question, and the person asking it may have no interest in the answer.&rdquo;</p>
 
-She felt like a criminal mastermind.
+<p>&ldquo;It will have healed by then.&rdquo;</p>
 
-***
+<p>&ldquo;Of course.&rdquo;</p>
 
-That evening, Elisabeta sat on the floor beside her bed.
+<p>Ecaterina smiled, as though Elisabeta had settled the matter.</p>
 
-She had changed into her slip, and her hair fell loosely over her shoulders. A green-shaded lamp cast a circle of warm light across the carpet. Above her, Safira occupied the centre of the bed as though the room had been designed around her.
+<p>&ldquo;I'm only telling you how I think about these things. Much of my day is spent anticipating what people will notice and what they will make of it. I'd rather you learned that from me than the hard way.&rdquo;</p>
 
-The little tin sat open beside Elisabeta's knee.
+<p>It was entirely reasonable.</p>
 
-She selected a needle.
+<p>&ldquo;If you want to learn something,&rdquo; Ecaterina continued, her voice becoming lighter, &ldquo;you only have to tell me. Needlework is a charming idea. I know a teacher who could come to the palace twice a week. A princess taking up a craft in the months before her wedding would make a gentle story, and the papers have had very little gentle to say about us lately. We could arrange everything by Friday.&rdquo;</p>
 
-Then she selected a second one, because the first looked too large.
+<p>For a moment, Elisabeta could not answer.</p>
 
-Then she returned to the first.
+<p>She could already see it.</p>
 
-Threading it took three attempts.
+<p>The teacher arriving at the palace. A chair positioned beside a window. A photograph of Elisabeta bent over a piece of embroidery, with someone standing just behind her shoulder to correct her work. A schedule, a finished piece, perhaps an exhibition at the spring fair.</p>
 
-On the first, the thread frayed at the end.
+<p>Her crooked stitches would be taken from her and placed under glass.</p>
 
-On the second, she missed the eye entirely.
+<p>The story would be kind. Everything would be arranged properly, and everyone would be pleased.</p>
 
-On the third, she held her breath, pushed the thread through, and stared at the tiny loop as though it had performed a particularly impressive trick.
+<p>And somehow, the thing she had wanted would no longer belong to her.</p>
 
-“There,” she whispered.
+<p>&ldquo;You said a person ought to have an occupation that belongs only to them,&rdquo; she said.</p>
 
-Safira opened one eye.
+<p>&ldquo;I did.&rdquo;</p>
 
-“I know. It wasn't very difficult.”
+<p>&ldquo;Then why does this one need a teacher?&rdquo;</p>
 
-The cat closed her eye again.
+<p>Ecaterina considered her. For an instant, Elisabeta thought she had said something that would be heard.</p>
 
-Elisabeta examined the torn seam.
+<p>&ldquo;Because I would like you to have it for longer than a week,&rdquo; Ecaterina said, quite simply. &ldquo;And things that are well supported last longer.&rdquo;</p>
 
-She had once watched a seamstress working in the palace sewing room through a half-open door. She remembered the small movements of her hands, the way she held the cloth, and how she pulled the thread through without appearing to think about it.
+<p>Elisabeta had no answer to that. She suspected it was true.</p>
 
-At the time, Elisabeta had been waiting for a gown to be altered.
+<p>&ldquo;That's very generous,&rdquo; she said. &ldquo;But I'd rather not make anything of it. It's only something to do with my hands.&rdquo;</p>
 
-She had never imagined she would be sitting on her bedroom floor trying to imitate the woman.
+<p>&ldquo;Then it can wait.&rdquo;</p>
 
-Her first stitches were enormous.
+<p>Ecaterina released her fingers and stepped back.</p>
 
-When she pulled the thread tight, the fabric gathered into a lumpy little fold.
+<p>The warmth went with her.</p>
 
-She frowned.
+<p>&ldquo;After the fourteenth, you'll have more time. I'd only be sorry to see you exhaust yourself now, of all weeks. There is so much to get through, and you've always managed it so well. I'd rather you saved your strength for what matters.&rdquo;</p>
 
-“That cannot be right.”
+<p>&ldquo;Yes, Mother.&rdquo;</p>
 
-She pulled out the stitches.
+<p>&ldquo;Mrs. Hale, half an inch at the shoulder, I think. She's holding it too high.&rdquo;</p>
 
-The second attempt was better, though one stitch wandered away from the seam as if it had somewhere else to be.
+<p>&ldquo;Yes, Your Majesty.&rdquo;</p>
 
-The third was better still.
+<p>Ecaterina returned to her chair and picked up the dispatch.</p>
 
-Eventually, she stopped trying to make the work resemble the seamstress's and began paying attention to the cloth beneath her fingers.
+<p>The handkerchief remained in her hand for a moment before she put it away.</p>
 
-The needle resisted when she pushed it through a thicker section. The thread tightened when she drew it through. If she pulled too hard, the fabric puckered. If she left it too loose, the seam gaped.
+<p>Mrs. Hale removed a pin from her mouth, resumed working at the hem, and avoided Elisabeta's eyes in the mirror.</p>
 
-There was no tutor beside her. No one corrected her hand or adjusted her posture. When she made a mistake, she had to discover it herself.
+<p>Elisabeta lowered her shoulder by half an inch.</p>
 
-It was frustrating.
+<p>In the glass, a young woman in blue stood with her chin at the angle she had been taught to hold it. A small dark mark showed on one finger. Her face revealed nothing.</p>
 
-It was also strangely satisfying.
+<p>That night, Elisabeta did not take out the tin.</p>
 
-Across the room, her gold silk gown lay in a heap on the chair where she had left it after dinner. Usually, a maid would have collected it by now.
+<p>She sat on the edge of her bed with the lamp burning and her hands resting in her lap. For a long time, she did nothing.</p>
 
-Elisabeta did not look at it.
+<p>The mended blouse lay folded in the second drawer, beneath the winter stockings. She knew exactly how she had placed it.</p>
 
-She was too busy trying to keep the stitches straight.
+<p>She thought about putting it on, just to feel the repaired seam against her ribs.</p>
 
-The repair took forty minutes.
+<p>Instead, she found herself listening to the corridor.</p>
 
-By the time she finished, the palace corridors had grown quiet, and the fire in her grate had burned down to a soft red glow.
+<p>A pair of boots passed her door, slow and even. They did not stop.</p>
 
-She bit the thread as she had seen the seamstress do, tied off the end, and held the blouse beneath the lamp.
+<p>She had heard those same footsteps at the same hour every night for a week without giving them a second thought. Now she counted the seconds until they disappeared.</p>
 
-The repair was not beautiful.
+<p>There was no lock on her door.</p>
 
-A raised line marked the seam where she had doubled back to correct her first attempt. One stitch sat slightly higher than the others. The thread was visible if she turned the fabric towards the light.
+<p>There never had been.</p>
 
-She examined it from every angle.
+<p>Her mother entered without knocking. A maid knocked only to announce that she was coming in. A page moved the candlesticks whenever someone decided they were too close to a book.</p>
 
-Then she smiled.
+<p>Elisabeta had always understood this as part of living in a house filled with people who cared for her.</p>
 
-It was hers.
+<p>She had never thought of it as something she might want to close herself away from.</p>
 
-Not the blouse. The blouse had always been hers.
+<p>She rose and crossed to the third drawer. After lifting the shawl, she returned the tin to its hiding place and laid her hand flat against the wood.</p>
 
-The repair.
+<p>She had lived in this room for twenty-two years and had never once needed to hide anything in it.</p>
 
-She had done that herself.
+<p>The realisation left her standing there longer than she expected.</p>
 
-Elisabeta laid the blouse across her lap and sat quietly for a while.
+<p>At last, she went to the door and tried the handle.</p>
 
-Nothing in the room required her attention. No lesson needed preparing. No letter needed answering. No one was waiting for her to decide what she would wear, what she would say, or how she ought to behave.
+<p>It was a foolish thing to do. She knew perfectly well that it did not lock.</p>
 
-The silence felt different from the silence she knew in the palace.
+<p>She tried it again.</p>
 
-It was not the absence of conversation.
+<p>Then she returned to the lamp and reached for the small brass chain.</p>
 
-It was the absence of expectation.
+<p>When she pulled it, the room went dark all at once.</p>
 
-Safira climbed down from the bed, crossed the carpet, and settled against Elisabeta's side.
+<p>Elisabeta stood without moving.</p>
 
-Elisabeta rested her hand on the cat's back.
-
-For once, she did not wonder what she ought to do next.
-
-***
-
-“Arms up, Your Highness.”
-
-Mrs. Hale had a mouthful of pins and the expression of a woman who had long ago accepted that clothing was a serious matter.
-
-Elisabeta raised her arms.
-
-The blue silk gown settled around her shoulders. Its colour had been approved by Alexandru's mother, its cut agreed upon by two households, and its fitting scheduled to the minute.
-
-It was a lovely gown.
-
-It was also surprisingly difficult to breathe in.
-
-“Not quite so tightly at the waist,” Queen Ecaterina said from her chair by the window. “She must be able to sit through dinner.”
-
-“Yes, Your Majesty.”
-
-Mrs. Hale loosened the fabric by a fraction.
-
-Elisabeta stood before the mirror, her arms still raised. She had slept for four hours, and her fingers remembered every stitch she had made the night before.
-
-On the pad of her left middle finger was a tiny dark mark.
-
-She had forgotten it was there.
-
-When Mrs. Hale's pin brushed the spot, Elisabeta drew in a sharp breath.
-
-The dressmaker stopped.
-
-In the mirror, their eyes met.
-
-Mrs. Hale looked down at the gown again, but her hands had slowed.
-
-Across the room, Ecaterina stopped turning the pages of her dispatch.
-
-“You've hurt your hand,” she said.
-
-“It's nothing.”
-
-“Let me see.”
-
-“Mother, it's only a pin.”
-
-“Mrs. Hale does not prick her fittings.”
-
-Elisabeta lowered her arms.
-
-Her mother crossed the room and took her hand.
-
-It was an ordinary gesture. Ecaterina had done it countless times before, when Elisabeta was a child with scraped knees or a fever or a splinter that had somehow become the most terrible thing in the world.
-
-Elisabeta let her turn her fingers towards the light.
-
-The Queen's hands were warm.
-
-“They are very small,” Ecaterina murmured.
-
-“It's hardly a tragedy.”
-
-“No, darling. But it is a needle mark.”
-
-Elisabeta said nothing.
-
-Ecaterina examined the fingertip, then drew a folded handkerchief from her sleeve and pressed it gently against the spot.
-
-There was no blood left to wipe away.
-
-Her mother held it there anyway.
-
-“Mrs. Hale tells me your lamp has been burning late,” she said.
-
-Elisabeta's eyes moved towards the mirror.
-
-“Does she?”
-
-“Twice this week, apparently. She was concerned you weren't sleeping.”
-
-“I was reading.”
-
-“I know.”
-
-Ecaterina folded the handkerchief.
-
-“I won't ask what you've been making.”
-
-The words were so gentle that Elisabeta almost relaxed.
-
-“A person ought to have something that belongs to no one else,” her mother continued. “I had a little occupation of my own at your age. Pressed flowers.”
-
-Elisabeta looked at her.
-
-“Pressed flowers?”
-
-“Your grandmother thought it was a ridiculous hobby. I thought she was being rather unfair, so I kept collecting them.”
-
-“Did you ever show her?”
-
-“Eventually. She was very kind about it.”
-
-Her mother smiled at the memory.
-
-“I kept them in a book. There were roses, little blue flowers from the garden, and one rather unfortunate specimen that had turned brown before I could press it properly.”
-
-“What happened to it?”
-
-“I imagine it is still somewhere in the palace archives, unless someone mistook it for a very old receipt.”
-
-Elisabeta laughed.
-
-It escaped before she could stop it.
-
-For a moment, she was simply a daughter listening to a story about her mother's childhood.
-
-Then Ecaterina glanced at the mark on her finger.
-
-“But you must be careful. Your hand will be photographed at the ceremony. There will be a hundred people watching, and the cameras will be closer than you imagine. A little mark invites a question, and the person asking may have no interest in the answer.”
-
-“It will have healed by then.”
-
-“Of course.”
-
-Her mother said it as though that settled everything.
-
-“I only want you to understand how these things work. Much of my day is spent anticipating what people will notice and what they will make of it. I would rather you learn from me than discover it the hard way.”
-
-It was sensible advice.
-
-Elisabeta knew it was sensible advice.
-
-That was the trouble with her mother. She rarely asked for anything unreasonable. She did not need to forbid a thing when she could explain, quite convincingly, why another choice would be wiser.
-
-Ecaterina released her hand and stepped back.
-
-“If you want to learn needlework, you need only tell me. I know a charming teacher who could come twice a week. A princess taking up embroidery before her wedding would make a lovely little story.”
-
-She picked up her dispatch.
-
-“The newspapers have had very little pleasant to say about us lately. Something gentle would do everyone good.”
-
-Elisabeta stared at her reflection.
-
-She could already picture it.
-
-A teacher arriving at the palace.
-
-A chair placed beside the window.
-
-A little basket of coloured thread.
-
-Someone standing behind her, correcting the angle of her fingers.
-
-A photograph of her bent over a piece of embroidery, looking thoughtful and accomplished.
-
-Perhaps a newspaper would print it beneath a charming headline. Perhaps people would praise her patience. Perhaps the little repair she had made on her bedroom floor would become the beginning of a royal charity project.
-
-There would be schedules, arrangements, finished pieces, and someone to decide what she ought to make next.
-
-Everything would be lovely.
-
-Everything would be properly organised.
-
-And the thing she had wanted most about the whole experience would disappear.
-
-“You said a person ought to have an occupation that belongs to no one else,” Elisabeta said.
-
-Ecaterina looked up.
-
-“I did.”
-
-“Then why does this one need a teacher?”
-
-For a moment, neither of them spoke.
-
-Elisabeta watched her mother's expression carefully. She had asked a simple question, but she was beginning to understand that simple questions could lead to complicated places.
-
-Ecaterina considered her.
-
-“Because I would like you to have it for longer than a week,” she said at last. “And things that are well supported tend to last.”
-
-Elisabeta looked down.
-
-She could not argue with that.
-
-Her mother was right about the teacher. She was right about the newspapers. She was right that learning a skill properly would take more than one evening on the bedroom floor.
-
-And yet.
-
-“Thank you,” Elisabeta said. “But I'd rather not make anything of it. It's only something to do with my hands.”
-
-“Then it can wait.”
-
-Ecaterina smiled and brushed a loose strand of hair away from her daughter's face.
-
-“After the fourteenth, you will have more time. I only worry that you will exhaust yourself now, of all weeks. There is so much to arrange, and you have always managed everything so well.”
-
-She rested a hand briefly on Elisabeta's shoulder.
-
-“I would rather you save your strength for what matters.”
-
-“Yes, Mother.”
-
-“Mrs. Hale, half an inch at the shoulder, I think. She's holding it too high.”
-
-“Yes, Your Majesty.”
-
-Ecaterina returned to her chair.
-
-The conversation was over.
-
-Mrs. Hale resumed her work, and the silk shifted around Elisabeta's waist as the dressmaker adjusted the seams.
-
-In the mirror, a young woman in blue stood with her chin held at the proper angle.
-
-One finger bore a tiny dark mark.
-
-Her face gave nothing away.
-
-***
-
-That night, Elisabeta did not take out the sewing kit.
-
-She sat on the edge of her bed with the lamp burning beside her, her hands folded in her lap.
-
-The mended blouse lay in the second drawer beneath her winter stockings. She could have put it on. She could have run her fingers along the repaired seam and remembered how it had felt to finish something without anyone watching.
-
-Instead, she listened to the corridor.
-
-A pair of boots passed her door.
-
-Slow. Even. Familiar.
-
-She had heard those footsteps at the same hour every night for the past week, but she had never bothered to count them. Now she listened until they faded.
-
-The palace was full of people who cared for her.
-
-They brought her meals, arranged her clothes, prepared her lessons, and made sure she was never left wanting for anything important.
-
-Her mother came into her rooms without knocking.
-
-The maids knocked only to announce that they were coming in.
-
-Pages moved the candles when someone decided they were too close to a book.
-
-Elisabeta had always understood this as part of being loved.
-
-She had never asked whether love could leave a person too little room to close a door.
-
-She rose and crossed to the dressing table.
-
-The third drawer slid open with a soft wooden whisper.
-
-She lifted the shawl and looked at the little tin.
-
-Its painted roses were almost gone. A few needles remained inside, their silver points catching the lamplight.
-
-She picked it up and turned it over in her hands.
-
-Two coins.
-
-That was all it had cost.
-
-She had spent more than that on ribbons she had never worn, on sweets she had forgotten to eat, on little things that had appeared in her rooms and disappeared again without leaving any memory behind.
-
-But she remembered the boy wrapping the tin in brown paper.
-
-She remembered slipping it into her sleeve.
-
-She remembered the first stitch, the second, the third.
-
-She remembered the moment she had held the finished blouse beneath the lamp and realised that, for once, the result belonged entirely to her.
-
-Elisabeta placed the tin back in the drawer.
-
-Then she closed it.
-
-She had lived in this room for twenty-two years and had never owned anything she needed to hide.
-
-The thought made her feel both foolish and strangely brave.
-
-She crossed to the door.
-
-There was no lock.
-
-There never had been.
-
-She knew this perfectly well, but she tried the handle anyway.
-
-It turned easily.
-
-She released it and tried again, pressing a little harder, as though a different answer might appear if she asked the question twice.
-
-Nothing changed.
-
-Elisabeta stood with her hand on the handle.
-
-She could call for someone to install a lock. She could ask her mother, and Ecaterina would probably agree that privacy was reasonable. She might even arrange for a carpenter to arrive the following morning.
-
-By lunchtime, the door would have a lock.
-
-By evening, someone would have a key.
-
-The thought was so absurd that she almost laughed.
-
-Instead, she returned to the bed.
-
-The lamp cast a warm circle across the room, catching the edges of her books, the polished brass handles of the drawers, and the little tin hidden beneath the shawl.
-
-Everything was exactly where it belonged.
-
-Elisabeta reached for the brass chain beside the bed.
-
-She had pulled it a thousand times before, always at the end of the day, always when she was ready to sleep.
-
-Tonight, she hesitated.
-
-Then she pulled.
-
-The lamp went dark.
-
-For a moment, Elisabeta could see nothing.
-
-She stood very still, listening to the rain against the windows and the faint crackle of the dying fire.
-
-The darkness did not change the room.
-
-The bed was still there. The books were still there. The blouse was still in the drawer, and the sewing tin was still beneath the shawl.
-
-Tomorrow, the servants would come. The Academy would expect her. Her mother would ask whether she had slept well, and Mrs. Hale would return to the gown.
-
-Nothing had changed.
-
-And yet, for the first time, Elisabeta found herself wondering whether wanting something for herself always had to come at a cost.
-
-She did not know the answer.
-
-She only knew that she had begun to ask.
+<p>She had not realised how much she had wanted that.</p>
       `
     }
   ]
