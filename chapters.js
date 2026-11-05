@@ -228,559 +228,247 @@ const NOVEL_CHAPTERS = {
       number: "Chapter Two",
       title: "The Alignment Doctrine",
       content: `
-Rain had been falling over the Academy since before dawn, and by the time Elisabeta arrived, the windows had turned the courtyard into a blur of grey stone and silver water.
+<p>Rain had been falling since before dawn.</p>
 
-She hurried through the entrance, gathering her skirts just enough to keep them from the puddles. Behind her, her attendant struggled to close an umbrella that had turned inside out in the wind.
+<p>The seminar hall smelled of wet wool drying on the radiators, chalk dust, and the cold mineral scent of walls that had been damp every winter since the Academy was built. Elisabeta sat in her usual place in the second row, her collar still wet from the short journey between the car and the door. Her attendant waited in the corridor outside, as he did every Thursday. The door never quite closed on him.</p>
 
-“An excellent morning for a walk,” she remarked.
+<p>Professor Calloway stood at the lectern with a folder in his hands. He never opened it. It gave his hands something to do while he spoke.</p>
 
-The attendant looked at the rain, then at the umbrella.
+<p>&ldquo;<strong>Alignment,</strong>&rdquo; he said, &ldquo;<strong>is what remains when obedience is no longer needed.</strong>&rdquo;</p>
 
-“Perhaps, Your Highness.”
+<p>Twenty-six voices repeated the sentence together.</p>
 
-“Perhaps not.”
+<p>The words landed at the same moment, so smoothly that nobody had to think about them. Elisabeta's mouth moved with the others. She had learned the sentence at fourteen from a tutor who used the same measured rhythm, then again at eighteen from the Queen, who had said it without ceremony, as though it were something they already understood.</p>
 
-She continued down the corridor before he could decide whether she had been joking.
+<p>&ldquo;A well-formed mind does not need to be told what serves the whole. It arrives there unprompted and takes the arrival for its own conclusion. We have a model for this, one you will meet in the Academy panels and in every office you will one day occupy. The <strong>Timber Inspection Schedule</strong>.&rdquo;</p>
 
-The seminar hall was already warm with the smell of wet wool, chalk dust, and the faint mineral scent of old stone. Students sat in neat rows beneath portraits of former scholars, all of whom appeared to have been painted while contemplating something terribly important.
+<p>A few students began writing.</p>
 
-Elisabeta took her usual seat in the second row.
+<p>It was an ordinary example, and that was why Calloway had chosen it. He preferred illustrations that seemed too practical to argue with. They proved, he believed, that the doctrine worked beyond the classroom.</p>
 
-Her collar was still damp. She tugged it straight and placed her notebook on the desk, aligning its edges with the edge of the table.
+<p>&ldquo;Every lot of timber entering the kingdom's trade, whether from the coast, the river districts, or the high forests, is inspected on one of four fixed days each year. The same four days, the same standard, the same inspectors' seals, regardless of whose timber it is or how urgently the owner requests an inspection. Before the schedule, inspections went to whoever had the most influence. Now no district is favoured. Every owner knows when his wood will be examined, and knows that every other owner knows it too. One calendar. One standard.&rdquo;</p>
 
-Then she noticed what she was doing.
+<p>He looked toward Elisabeta.</p>
 
-She moved the notebook half an inch to the left.
+<p>&ldquo;Princess Elisabeta, why does this serve stability?&rdquo;</p>
 
-It looked better there.
+<p>He always called on her first when a question involved the Crown. She understood it as a courtesy and as a reminder of her place in the room. She had never found it easy to separate the two.</p>
 
-At the front of the room, Professor Mihai stood behind the lectern with a folder tucked beneath one arm. He never opened it. Elisabeta suspected he carried it simply because he disliked leaving his hands empty.
+<p>&ldquo;Because it removes discretion,&rdquo; she said. &ldquo;An inspection granted early can be bought or begged for. Once one owner receives that advantage, everyone else learns that the same advantage might be available to them. The fixed dates remove the question altogether. People stop petitioning for exceptions because there are none to petition for, and the trade can plan around a reliable calendar. It is fair because the same rules apply to everyone.&rdquo;</p>
 
-“Good morning.”
+<p>&ldquo;Fair because the same rules apply.&rdquo; Calloway nodded. &ldquo;Precisely. Now, who finds fault?&rdquo;</p>
 
-“Good morning, Professor.”
+<p>It was the final part of the exercise. Nobody ever answered it.</p>
 
-“Let us begin.”
+<p>The room settled into the polite silence of people who had already agreed the question was rhetorical. Calloway let the pause run on before turning toward the windows, where a young man in a grey jumper was arranging a stack of photocopied critiques on the corner of a desk.</p>
 
-He placed the folder on the lectern.
+<p>&ldquo;Lucian. You know something about timber, I believe.&rdquo;</p>
 
-“Alignment,” he announced, “is what remains when obedience is no longer needed.”
+<p>Nobody else turned to look at him. That, too, was a way of looking.</p>
 
-Twenty-six voices repeated the sentence together.
+<p>Elisabeta kept her eyes forward. She knew where Lucian was, just as she had known since the first day of term, just as she knew where the clock stood in every room she entered.</p>
 
-Elisabeta joined them.
+<p>He finished squaring the papers before he straightened.</p>
 
-She had first learned those words at fourteen, from a tutor who spoke as though every sentence had been carved into stone before he was born. At eighteen, she had heard her mother use the same phrase at the breakfast table, between a discussion of diplomatic correspondence and a reminder that Elisabeta's riding boots needed replacing.
+<p>He was broad through the shoulders and slightly stooped, with the posture of someone accustomed to working beneath low ceilings. His jumper had been mended at both elbows with thread almost the colour of the wool. His hands were large, the knuckles marked, and he held them carefully at his sides, as though he knew they were being examined.</p>
 
-Her mother had not even looked up from her tea.
+<p>&ldquo;My father's a joiner,&rdquo; he said. &ldquo;That's the extent of it.&rdquo;</p>
 
-*Alignment is what remains when obedience is no longer needed.*
+<p>&ldquo;And does the schedule trouble him?&rdquo;</p>
 
-At the time, it had sounded like an observation about good manners.
+<p>Elisabeta could see Lucian weighing his answer. He was not searching for words. He was deciding whether saying them would be worth the cost and, she suspected, whether the invitation was genuine.</p>
 
-Now Professor Mihai was explaining why it was the foundation of a well-governed kingdom.
+<p>&ldquo;Green timber needs time to dry before it can be worked,&rdquo; he said. &ldquo;The high-forest lots come down after the thaw, so they reach the rail yard in spring. The next inspection day might be eleven weeks away. Until then the timber sits under tarpaulin, because nobody can legally move it before it's inspected.&rdquo;</p>
 
-“A well-formed mind,” he continued, “does not need to be told what serves the whole. It reaches the correct conclusion independently and recognises that conclusion as its own.”
+<p>He paused, then went on.</p>
 
-He paused.
+<p>&ldquo;Eleven weeks of rain and sun on the end grain. Some boards split. Others warp. Then the inspectors arrive on the appointed day, apply the standard, and reject a good part of the timber for damage it picked up while it waited.&rdquo;</p>
 
-“Today, we shall examine the Timber Inspection Schedule.”
+<p>He stopped, as though the point needed nothing more.</p>
 
-Several students began writing immediately.
+<p>&ldquo;So the schedule is inspecting for a fault the schedule puts in the wood.&rdquo;</p>
 
-Elisabeta did too.
+<p>Nobody wrote anything down.</p>
 
-Professor Mihai smiled faintly. He preferred examples that were so practical nobody thought to question them.
+<p>Elisabeta looked at her notebook and realised her pen had stopped moving.</p>
 
-“Every lot of timber entering Norwyn's trade, whether from the coast, the river districts, or the high forests, must be inspected on one of four fixed days each year. The same dates. The same standards. The same official seals.”
+<p>&ldquo;It is certainly an inconvenience,&rdquo; Calloway said mildly. &ldquo;But consider the alternative. Allow one owner an early inspection, and the next will ask for one, and the next after him. Within a decade the schedule becomes a courtesy extended to those with the right connections. What you describe is the cost of equity. Every structure has one.&rdquo;</p>
 
-He turned towards the class.
+<p>&ldquo;I'm not asking for early inspections for friends,&rdquo; Lucian said. &ldquo;I'm saying the yard is wet, and a board doesn't know what a rule is for.&rdquo;</p>
 
-“Before the schedule was introduced, inspections depended too heavily on influence. A wealthy merchant could persuade an inspector to examine his timber early. A well-connected landowner could move ahead of everyone else. Those without influence waited.”
+<p>&ldquo;No,&rdquo; Calloway agreed, with the gentle satisfaction of a man who had found a way to close an argument. &ldquo;Nor should it. That is why we have the rule.&rdquo;</p>
 
-He tapped the lectern.
+<p>A small sound moved through the room. It was not quite laughter, but it was close to relief.</p>
 
-“Now, everyone waits according to the same calendar. No owner receives special treatment, and every owner knows the same rules apply to his competitors. The result is a fairer system and a more stable trade.”
+<p>Lucian watched the professor a moment longer. Then he glanced at the stack of critiques and said, &ldquo;Yes, sir,&rdquo; in a voice that offered nothing further to argue with. He returned to the desk and picked up the next page.</p>
 
-He looked directly at Elisabeta.
+<p>Across the room, a girl two seats from Elisabeta leaned toward her neighbour and whispered, &ldquo;He's never going to pass the panel talking like that.&rdquo; Her neighbour only shrugged. Neither of them had written down a word of what he had said.</p>
 
-“Princess Elisabeta. Why does this serve stability?”
+<p>&ldquo;Recite,&rdquo; Calloway said.</p>
 
-She had expected the question.
+<p>They recited.</p>
 
-Professor Mihai often called on her first whenever a subject touched the Crown. She had always understood it as a courtesy, though she sometimes wondered whether it was also a reminder to the other students that the Crown was sitting among them.
+<p>Elisabeta moved her mouth with theirs, but something had shifted.</p>
 
-“Because it removes discretion,” she answered. “An early inspection can be bought or begged for. Once one owner receives an exception, others begin to believe the same advantage should be available to them. Fixed dates remove that uncertainty. Everyone can plan around a reliable calendar.”
+<p>She knew she had answered correctly. She had defended the schedule exactly as she had been taught to defend it. Every sentence was sound. The room had accepted her reasoning, and Calloway had confirmed it.</p>
 
-“And the question of fairness?”
+<p>Yet Lucian's account had passed through the same discussion and left her answer standing untouched, perfectly intact, with nothing in it about wet timber.</p>
 
-“The same rules apply to everyone.”
+<p>She thought of the gardener on his ladder, moving wire along a branch and cutting away whatever grew in the wrong direction.</p>
 
-“Precisely.”
+<p>She stopped herself before the thought could go any further.</p>
 
-Professor Mihai nodded with the satisfaction of a man watching a well-built machine perform exactly as intended.
+<p>The seminar hall emptied into the corridor in the orderly flow the Academy had trained into its students long before they were old enough to question it.</p>
 
-“Now, who finds fault with the system?”
+<p>Elisabeta held her books against her chest and let the crowd carry her toward the covered walk. At the side stair, where the light was poor and fewer students passed, she stepped out of the current.</p>
 
-The room fell silent.
+<p>Her attendant followed several paces behind, close enough to be useful and far enough to stay outside any photograph.</p>
 
-It was a familiar silence. The students had learned that some questions were invitations to demonstrate understanding, while others were invitations to discover how much trouble understanding could cause.
+<p>Lucian stood beside the noticeboard with a bundle of graded essays under his arm, his collar turned up against the damp. He was reading a notice about a lecture on the <em>Succession Act</em>, apparently trying to remember the room number. He had not been there when the seminar began to empty. She had not seen him leave the hall first.</p>
 
-This was usually the second kind.
+<p>He did not look up when she stopped.</p>
 
-Professor Mihai allowed the silence to stretch.
+<p>That made her wait a little longer than she had intended.</p>
 
-Then he turned towards the windows.
+<p>&ldquo;These are yours,&rdquo; he said.</p>
 
-“Lucian. You know something about timber, I believe.”
+<p>He drew a sheet from the bundle and held it out, still looking at the notice. Elisabeta recognised her own handwriting through the back of the paper. She took it by the corner he offered.</p>
 
-A young man near the back was arranging a stack of photocopied essays on the corner of his desk. He finished squaring the pages before he stood.
+<p>&ldquo;Seven comments,&rdquo; he added. &ldquo;Six of them say the same thing.&rdquo;</p>
 
-“My father is a joiner, sir.”
+<p>&ldquo;Which?&rdquo;</p>
 
-“Then perhaps you can tell us whether the schedule troubles him.”
+<p>&ldquo;You keep answering the question you'd prefer they'd asked.&rdquo;</p>
 
-Lucian glanced at the professor.
+<p>He turned the page over and pointed, from a careful distance, to a line in the margin.</p>
 
-He was broad-shouldered, with slightly untidy hair and a grey jumper patched at both elbows. His hands were large, the knuckles marked by small scars. He held them at his sides with the careful stillness of someone who had spent enough time around expensive objects to know that people sometimes judged the hands before they listened to the person attached to them.
+<p>&ldquo;Here. They asked what the clause costs. You explained what it protects.&rdquo;</p>
 
-“My father doesn't much like it,” he said.
+<p>&ldquo;Both can be true.&rdquo;</p>
 
-“Why not?”
+<p>&ldquo;They can. I only said you answered one.&rdquo;</p>
 
-“Green timber needs time to dry before it can be worked. The high-forest lots come down after the thaw, so they reach the rail yard in spring. The next inspection might be eleven weeks away.”
+<p>She looked down at the page. The comments were small and square and unhurried. He had read her argument to the end, and more than once, to find the sentence she had been avoiding.</p>
 
-He paused.
+<p>&ldquo;You stopped writing, in there,&rdquo; he said. &ldquo;After I finished. Calloway noticed. He'll likely ask you about it on Monday.&rdquo;</p>
 
-“Until then, the timber sits under tarpaulin. Nobody can legally move it before it's inspected.”
+<p>&ldquo;I wasn't aware that anyone was watching my pen.&rdquo;</p>
 
-“And?”
+<p>&ldquo;Everyone's watching your pen.&rdquo; He shifted the bundle against his hip. &ldquo;I'd just have an answer ready.&rdquo;</p>
 
-“Rain gets in. Sun gets in. The ends begin to split. Some boards warp.”
+<p>It was the kind of advice a person gave about the weather. She could not tell why she felt it all the way down.</p>
 
-Lucian looked towards the window, where rain ran down the glass in crooked lines.
+<p>&ldquo;You were fair in there,&rdquo; she said. &ldquo;To the schedule.&rdquo;</p>
 
-“Then the inspectors arrive on the appointed day, apply the standard, and reject timber that has been damaged while waiting for permission to be examined.”
+<p>&ldquo;It <em>is</em> fair.&rdquo; He answered without hesitation. &ldquo;Everyone's wood warps on the same day.&rdquo;</p>
 
-The room had grown very quiet.
+<p>She expected him to smile. He did not.</p>
 
-“So the schedule is inspecting for a fault the schedule puts in the wood.”
+<p>There was no bitterness in his expression, and no satisfaction at having unsettled her. He had said something true and seemed content to leave it there.</p>
 
-Elisabeta's pen stopped moving.
+<p>&ldquo;You think it should be changed.&rdquo;</p>
 
-For a moment, she forgot that she was sitting in a classroom full of people who were supposed to know how to answer questions like this.
+<p>&ldquo;I think the yard is wet.&rdquo;</p>
 
-She pictured a stack of timber beneath a wet tarpaulin. Water collecting in the folds. The ends of the boards turning dark. A man returning each morning to discover that something useful had become less useful while he waited for someone else to decide it was ready.
+<p>&ldquo;That isn't an answer.&rdquo;</p>
 
-She had never thought about timber before.
+<p>&ldquo;No,&rdquo; he said. &ldquo;It isn't.&rdquo; He considered her, plainly, as though the objection deserved the same attention he had given the schedule. &ldquo;I don't know what should change. I don't know the first thing about the Inspectorate, or what would happen to the trade if the dates moved. You'd have to ask someone who does. I only know what happens to the boards.&rdquo;</p>
 
-She was beginning to suspect that she had never thought about a great many things.
+<p>&ldquo;Professor Calloway's objection was reasonable.&rdquo;</p>
 
-Professor Mihai folded his hands.
+<p>&ldquo;It was.&rdquo;</p>
 
-“It is certainly an inconvenience. But consider the alternative. Allow one owner an early inspection, and another will request the same privilege. Soon the schedule becomes a favour extended to those with the right connections. What you describe is the cost of equity. Every system has one.”
+<p>For the first time, Lucian looked directly at her.</p>
 
-“I'm not asking for early inspections for friends,” Lucian replied. “I'm saying the yard is wet, and a board doesn't know what a rule is for.”
+<p>&ldquo;That's what I didn't like about it. If he'd been wrong, I could have said so, and we'd have been finished. But he wasn't wrong. He was answering a different question.&rdquo;</p>
 
-Professor Mihai regarded him for a moment.
+<p>He glanced at the paper in her hand.</p>
 
-“No,” he said pleasantly. “Nor should it. That is why we have the rule.”
+<p>&ldquo;I find those harder.&rdquo;</p>
 
-A small ripple of laughter passed through the room.
+<p>Elisabeta kept her eyes on the noticeboard. She did not want him to see that he had given a name to something she had already noticed.</p>
 
-It was the sort of laughter that came when a difficult moment had been neatly put away.
+<p>&ldquo;Why did you say <em>yes, sir</em>?&rdquo; she asked. &ldquo;At the end. You hadn't agreed with him.&rdquo;</p>
 
-Lucian looked at the professor, then at the papers on his desk.
+<p>&ldquo;He'd finished answering,&rdquo; Lucian said. &ldquo;There wasn't anything left to say that he could hear.&rdquo;</p>
 
-“Yes, sir.”
+<p>It was an odd answer. It had no complaint in it, and she thought it was truer than most she had heard that term.</p>
 
-He sat down.
+<p>&ldquo;You'll miss the walk,&rdquo; she said instead.</p>
 
-Two seats away, a girl leaned towards her neighbour.
+<p>&ldquo;I'm not on the walk. I've got a lot sitting in the yard since Monday.&rdquo;</p>
 
-“He'll never pass the panel talking like that,” she whispered.
+<p>He nodded toward the rain.</p>
 
-Her neighbour nodded and returned to her notes.
+<p>&ldquo;Father's order for a meeting hall in the river district. The oak is meant to be inspected on the twentieth. He's hoping the end grain has held. I said I'd be there by four to look at it.&rdquo;</p>
 
-Neither had written down a word Lucian said.
+<p>&ldquo;And if it hasn't?&rdquo;</p>
 
-“Let us recite the central principles,” Professor Mihai announced.
+<p>&ldquo;He'll plane off the damaged two inches and charge less for the benches.&rdquo;</p>
 
-The class began.
+<p>Lucian shrugged.</p>
 
-Elisabeta recited with them. She knew every sentence, every qualification, every carefully placed distinction between fairness and favouritism.
+<p>&ldquo;That's what he did last time. He doesn't write to anyone about it. There'd be no one to write to.&rdquo;</p>
 
-She could have delivered the entire lesson while half asleep.
+<p>He gave her a small, precise nod.</p>
 
-Yet her mind kept returning to the timber.
+<p>&ldquo;Your Highness.&rdquo;</p>
 
-Lucian had not disproved the schedule. Professor Mihai had not been wrong. The system really was fairer than one in which wealthy men could buy their way to the front of a queue.
+<p>The title was correct. His tone was not disrespectful.</p>
 
-Both things could be true.
+<p>Still, it was the least deferential thing anyone had said to her all week, and the only thing that day that felt entirely accurate.</p>
 
-That was the difficulty.
+<p>He went down the stairs without waiting to be dismissed, carrying the essays close to his chest to keep them dry.</p>
 
-A weak argument could be corrected. A dishonest one could be exposed. But what was she supposed to do with an argument that was perfectly sound and still left something important out?
+<p>Elisabeta remained where she was, holding her seventh comment, and listened to the street door open and shut.</p>
 
-She thought of the gardener in the palace courtyard, standing on his ladder with a coil of wire over his shoulder.
+<p>She read it. It was the shortest of the seven.</p>
 
-For the first time, the memory seemed less like a passing distraction and more like the beginning of a question.
+<p><em>This is the right question. Ask it of the clause, not the reader.</em></p>
 
-She looked down at her notebook.
+<p>She folded the page once and put it inside her book.</p>
 
-Beneath the last line of the lecture, she had written three words without realising it.
+<p>She did not take the covered walk.</p>
 
-*And what else?*
+<p>Her attendant said nothing when she turned into the east gallery instead, though it added several minutes to the journey to the car.</p>
 
-She stared at them until Professor Mihai dismissed the class.
+<p>She had walked this corridor ten thousand times.</p>
 
-***
+<p>The walls were panelled in oak, the grain dark and close, polished with beeswax to a deep brown. Tall rectangular panels sat within their frames, each lit by a narrow window at intervals along the gallery. The light fell on the wood in separate patches and left the spaces between them dim.</p>
 
-The seminar hall emptied into the corridor.
+<p>At the far end stood a double door that always stuck in winter. Whoever opened it had to lift slightly at the lower corner, a small, practised movement Elisabeta had watched pages perform since childhood without ever wondering why.</p>
 
-Students gathered their books, shook rain from their coats, and hurried towards the covered walk. Elisabeta allowed the crowd to carry her along until she reached the side staircase.
+<p>She had heard that the east wing's woodwork had been made in the joiner's yard where Lucian's father worked, long before she was born. She had never had cause to think about the hands behind it.</p>
 
-Then she stepped out of the flow.
+<p>She stopped beside the third panel from the nearest window.</p>
 
-Her attendant followed several paces behind, holding the umbrella and maintaining the careful distance expected of someone whose presence was meant to be useful without being noticed.
+<p>For the first time, she looked at its edge.</p>
 
-Lucian stood beside the noticeboard.
+<p>A narrow seam ran along one side, where the panel met the upright of its frame. In dry weather the gap would have been barely visible. Now, with the rain, it had closed almost completely.</p>
 
-He had left by the other door and was studying a notice about an upcoming lecture on the Succession Act. A bundle of graded essays rested under his arm.
+<p>She slipped off her glove, bent closer, and pressed her thumb against the opposite edge.</p>
 
-Elisabeta approached.
+<p>There was a slight depth beneath the surface. Inside it, where the paint had not reached, ran a thin line of raw wood, paler than the rest.</p>
 
-He did not turn.
+<p>The panel was not fixed tightly into its frame.</p>
 
-She stopped beside him.
+<p>It had been left room to move.</p>
 
-He continued reading.
+<p>&ldquo;Your Highness.&rdquo;</p>
 
-She waited.
+<p>Her attendant had come a few steps closer.</p>
 
-Finally, he glanced at her.
+<p>&ldquo;The car is waiting.&rdquo;</p>
 
-“Your essay,” he said.
+<p>&ldquo;One moment.&rdquo;</p>
 
-He drew a sheet from his bundle and offered it to her.
+<p>She kept her thumb against the seam.</p>
 
-She recognised her own handwriting through the back of the paper.
+<p>The wood was cool and faintly damp. She thought of the timber in the yard, left to take the weather while it waited for permission to be examined. She thought of the gardener's wire, the pale shoot cut from the ash tree, and the sentence she had repeated so often that she had stopped hearing what it asked of her.</p>
 
-“Thank you.”
+<p>Someone had known, once, that wood must be given room to move. Someone had built the room in before it was needed, and no lesson had ever mentioned it.</p>
 
-“Seven comments. Six say the same thing.”
-
-Elisabeta examined the page.
-
-“What do they say?”
-
-“You keep answering the question you'd prefer they had asked.”
-
-She looked up.
-
-“That seems rather unkind.”
-
-“It's not meant to be.”
-
-“You could have fooled me.”
-
-For the first time, the corner of his mouth moved.
-
-Not quite a smile, but close enough to suggest that he was capable of one.
-
-He turned the paper over and pointed to a line in the margin.
-
-“Here. They asked what the clause costs. You explained what it protects.”
-
-“Both can be true.”
-
-“They can.” He returned his attention to the noticeboard. “I only said you answered one.”
-
-Elisabeta looked at the comments again.
-
-They were small, neat, and unhurried. Lucian had read her argument carefully enough to notice what she had avoided. He had even taken the trouble to explain it.
-
-“You stopped writing during the seminar,” he said.
-
-She glanced at him.
-
-“I beg your pardon?”
-
-“After I finished speaking. Your pen stopped.”
-
-“I wasn't aware you were watching my pen.”
-
-“Everyone watches your pen.”
-
-He said it so matter-of-factly that she couldn't tell whether he was joking.
-
-“Professor Mihai noticed too,” he added. “He'll probably ask you about it on Monday. I'd have an answer ready.”
-
-“You offer advice rather freely.”
-
-“Only when it seems useful.”
-
-“And you decided this was useful?”
-
-“I decided you looked as though you'd swallowed a question and were trying to work out whether it was safe to digest.”
-
-Elisabeta stared at him.
-
-This time, he did smile.
-
-It was brief, almost reluctant, but it transformed his face enough to make him look younger.
-
-“You should be careful,” she said. “That is a rather undignified description of a princess.”
-
-“I'll try to think of a more dignified one next time.”
-
-“There won't be a next time.”
-
-“Then I'll have to get it right the first time.”
-
-She ought to have been offended.
-
-Instead, she found herself fighting the urge to laugh.
-
-It was an unfamiliar feeling, being spoken to as though she were simply another person standing in a damp corridor with a piece of paper in her hand.
-
-She looked down at the essay.
-
-“You were fair to the schedule,” she said.
-
-“I think it is fair.”
-
-“You do?”
-
-“Everyone's wood warps on the same day.”
-
-He said it without bitterness.
-
-That was what surprised her most.
-
-She had expected resentment, perhaps a little pride in having challenged the professor. Instead, Lucian seemed perfectly willing to admit that the system had a purpose.
-
-“You think it should be changed.”
-
-“I think the yard is wet.”
-
-“That isn't an answer.”
-
-“No. It isn't.”
-
-He considered her, giving the question the same attention he had given the professor's argument.
-
-“I don't know what should change. I don't know enough about the Inspectorate or what would happen to the trade if the dates moved. You'd have to ask someone who does.”
-
-He adjusted the bundle beneath his arm.
-
-“I only know what happens to the boards.”
-
-Elisabeta looked at him for a long moment.
-
-“Professor Mihai's objection was reasonable.”
-
-“It was.”
-
-“You don't sound pleased about that.”
-
-“I'm not.”
-
-“Why?”
-
-“Because if he'd been wrong, I could have proved it and we would have been finished.” He glanced towards the seminar hall. “But he wasn't wrong. He was answering a different question.”
-
-He looked at the essay in her hand.
-
-“I find those harder.”
-
-The rain pattered against the windows.
-
-Elisabeta wanted to tell him that she understood. She wanted to explain that she had felt something shift during the lecture, that for a few seconds the argument she had known for years had seemed to open a door onto a room she had never entered.
-
-But she did not know how to say any of that without making it sound foolish.
-
-So she asked the question she could manage.
-
-“Why did you agree with him at the end?”
-
-“Because he'd finished answering.”
-
-“But you hadn't agreed.”
-
-“There wasn't anything left to say that he could hear.”
-
-He said it without anger.
-
-That made the answer harder to dismiss.
-
-Elisabeta folded the essay carefully.
-
-“You could try again.”
-
-“I could.”
-
-“But you won't?”
-
-“Not today.”
-
-He glanced at the rain.
-
-“My father has timber sitting in the yard. There's a meeting hall to build in the river district, and the oak is meant to be inspected on the twentieth. I'm supposed to look at it before four.”
-
-“And if it's damaged?”
-
-“He'll plane off the bad part and charge less for the benches.”
-
-“That's all?”
-
-“That's all.”
-
-He shrugged.
-
-“He did the same thing last time. He doesn't write letters to the Inspectorate. There'd be no one to write to.”
-
-For a moment, Elisabeta could almost see it: a man in a cold workshop, measuring a damaged board, working out how much could be salvaged and how much would have to be lost.
-
-No petitions. No speeches. No debate about the principles of the system.
-
-Just a board that had warped and a man who had to decide what to do with it.
-
-Lucian shifted his papers.
-
-“I should go.”
-
-“Of course.”
-
-He nodded politely.
-
-“Your Highness.”
-
-Then he went down the stairs.
-
-He did not wait for permission to leave.
-
-Elisabeta watched him disappear through the street door, carrying his essays close to his chest to protect them from the rain.
-
-She remained beside the noticeboard.
-
-The title at the top of her essay caught her attention.
-
-*The Proper Limits of Legislative Discretion.*
-
-She had spent three days writing it. She had revised every paragraph, checked every reference, and removed two sentences that she thought might be misunderstood.
-
-The essay was good.
-
-She knew it was good.
-
-She was beginning to wonder whether that was enough.
-
-She read Lucian's seventh comment again.
-
-*This is the right question. Ask it of the clause, not the reader.*
-
-She folded the paper and slipped it inside her book.
-
-Then, instead of taking the covered walk to the car, she turned towards the east gallery.
-
-Her attendant followed without comment.
-
-***
-
-The east gallery was one of Elisabeta's favourite corridors, though she had never given much thought to why.
-
-It was quieter than the main hall, with tall windows that let in narrow strips of winter light. Dark oak panels lined the walls, their surfaces polished until they reflected the passing figures like shadows moving beneath water.
-
-She had walked this corridor thousands of times.
-
-She knew which floorboard creaked near the entrance. She knew which window rattled when the wind came from the north. She knew that the double door at the far end stuck in winter and had to be lifted slightly before it would open.
-
-She had watched pages perform that small manoeuvre since childhood.
-
-She had never wondered why the door needed help.
-
-Today, however, she was thinking about timber.
-
-She remembered hearing that the woodwork in the east wing had come from the joiner's yard where Lucian's father worked. The panels had been installed long before Elisabeta was born, when the palace had undergone its last major renovation.
-
-She stopped beside the third panel from the nearest window.
-
-At first, she could see nothing unusual.
-
-Then she noticed a thin seam running along one side, where the panel met its frame.
-
-She leaned closer.
-
-In the dry months, the gap might have been almost invisible. Today, with the rain pressing against the windows, the seam had nearly closed.
-
-She removed one glove and touched the opposite edge.
-
-The wood felt cool beneath her thumb. Near the bottom, where the paint had worn away, a narrow line of pale timber showed through.
-
-Elisabeta pressed gently.
-
-The panel shifted.
-
-Only slightly, but enough for her to feel it.
-
-She withdrew her hand.
-
-A small, unexpected thrill passed through her.
-
-The panel had not been fitted tightly into its frame.
-
-Was that a mistake?
-
-Or had someone allowed the wood room to move?
-
-She pressed it again, more carefully this time.
-
-The panel settled back into place.
-
-She thought of the timber waiting in the yard, changing with the weather while the calendar remained fixed. She thought of the branch in the palace courtyard, held at the same angle year after year. She thought of Lucian standing before a room full of students, explaining that a board did not know what a rule was for.
-
-Perhaps the woodwork had been made to accommodate the wood.
-
-Perhaps the space was not a flaw.
-
-Perhaps she was looking at something that had been designed to change without breaking.
-
-“Your Highness?”
-
-Her attendant had approached.
-
-“The car is waiting.”
-
-Elisabeta kept her eyes on the panel.
-
-“One moment.”
-
-She traced the seam with her thumb, following it to the corner where the wood met the frame.
-
-There was so much she did not know.
-
-She had spent her life learning how structures were supposed to work. She knew their rules, their purposes, and the arguments used to defend them. She could explain why a system needed consistency, why exceptions could become privileges, and why order sometimes demanded sacrifice.
-
-But she had never considered that a structure might need room for the very things it was built to contain.
-
-The thought frightened her a little.
-
-It also made her want to know more.
-
-She put her glove back on and straightened.
-
-“I'm ready.”
-
-Her attendant led the way towards the double door.
-
-As always, he lifted it slightly at the lower corner before opening it.
-
-This time, Elisabeta noticed.
-
-She watched the door move, the wood shifting within its frame, and wondered how many things in the palace had been quietly making room for her all along.
-
-Then she followed him into the rain.
+<p>Then she straightened, pulled her glove back on, and followed her attendant down the gallery toward the door that stuck.</p>
       `
     },
     {
