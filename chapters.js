@@ -5,393 +5,222 @@ const NOVEL_CHAPTERS = {
       number: "Chapter One",
       title: "The Architecture of Thought",
       content: `
-The palace library was so cold that even the fire seemed reluctant to be there.
 
-Three logs burned in the marble hearth, sending little golden sparks up the chimney. The servants had fed them twice already, but the warmth never seemed to travel much farther than the fireplace itself. The rest of the room belonged to winter.
+<p>The library held the cold the way old stone did in winter. It was less a bite than a weight, something that settled into the room and stayed there.</p>
 
-Elisabeta had been awake since five.
+<p>Elisabeta had been awake since five. In that time a servant had built the fire in the marble hearth behind her, and another had come to feed it twice more. The room had barely noticed.</p>
 
-By now, the candles beside her had burned low enough to leave little pools of wax in their silver holders. They were unnecessary in the growing daylight, but palace traditions had a way of surviving long after anyone remembered why they had begun.
+<p>She sat with her back straight and <em>Norwyn Structural Ideology, Volume III</em> open beneath her folded hands. The book's spine had darkened to the colour of honey after a century of passing through palace hands. Beeswax candles burned in a silver stand beside her, though the window gave enough light to read by. Someone had decided long ago that a person studying order should be seen doing so by candlelight, and no one had thought to question it.</p>
 
-Apparently, even studying required a certain amount of ceremony.
+<p>Beneath the table, Safira shifted.</p>
 
-She sat perfectly straight at the long oak table, her hands folded over *Norwyn Structural Ideology, Volume III*. The book was nearly a hundred years old, its leather spine worn smooth and golden-brown from generations of royal hands.
+<p>Without looking down, Elisabeta moved her left foot two inches to the side. The cat settled into the space as though it had been made for her.</p>
 
-Beneath the table, Safira was having a much more comfortable morning.
+<p>Elisabeta noticed what she had done only afterward. She noticed <em>most</em> things that way.</p>
 
-The grey cat shifted, stretched one paw, and gave a small, dissatisfied sound.
+<p>&ldquo;Begin with the third proposition,&rdquo; said Mr. Corrow from the other side of the table. &ldquo;Take your time.&rdquo;</p>
 
-Without looking down, Elisabeta moved her left foot two inches to the side.
+<p>He meant the opposite, and she knew it.</p>
 
-Safira immediately settled into the newly available space.
+<p>The Wednesday exercise was not a conversation. Elisabeta was expected to explain the chapter's argument in her own words, defend it against the objections her tutor raised, and show that she understood the reasoning well enough to withstand scrutiny. Mr. Corrow was pleased in proportion to how little his objections unsettled her.</p>
 
-Elisabeta continued reading.
+<p>In four years of Wednesday lessons, she had never given him a reason to be displeased.</p>
 
-Only a moment later did she realize what she had done.
+<p>&ldquo;<strong>Stability does not mean the absence of difference,</strong>&rdquo; she began. &ldquo;It means arranging differences so that no part of the whole works against another. The third proposition says a structure is stable when each element's position follows from its function, and each function serves the needs of the whole. If an element resists its position, the fault lies in how that position has been described, or in the element's understanding of it. <em>Not</em> in the structure itself.&rdquo;</p>
 
-She glanced beneath the table. Safira was already asleep.
+<p>&ldquo;Good. Why not in the structure?&rdquo;</p>
 
-“Of course,” Elisabeta murmured.
+<p>&ldquo;Because a structure that can be questioned by the parts it holds has no authority to hold them.&rdquo;</p>
 
-“Did you say something, Your Highness?”
+<p>Mr. Corrow smiled and made a note in his book.</p>
 
-Mr. Corrow looked up from his notes.
+<p>Beyond the tall window, the courtyard lay under a flat winter green. The grass had been clipped short, the hedges trimmed into neat lines, and the ash trees planted in rows along the far wall. Every branch had been bent to a right angle and tied to a wire frame.</p>
 
-“No, sir.”
+<p>A gardener worked his way down the second row on a short ladder, a coil of wire over one shoulder and a spool hooked to his belt. He moved from branch to branch with the quiet efficiency of a man who had done the same job for years.</p>
 
-“Very well. Begin with the third proposition. Take your time.”
+<p>&ldquo;Suppose the element is <em>not</em> mistaken,&rdquo; Mr. Corrow said. &ldquo;Suppose its position is simply a poor one. What then?&rdquo;</p>
 
-His pocket watch sat open beside his notebook.
+<p>&ldquo;Then the description was poor, and it should be rewritten.&rdquo;</p>
 
-Elisabeta looked at it.
+<p>&ldquo;By whom?&rdquo;</p>
 
-Mr. Corrow followed her gaze and quietly turned the watch face down.
+<p>Elisabeta paused. She knew the answer the text wanted, and she knew he knew she knew it.</p>
 
-“Whenever you're ready.”
+<p>&ldquo;By those who drew up the structure,&rdquo; she said. &ldquo;<em>Not</em> by the element.&rdquo;</p>
 
-The Wednesday exercise was not a conversation. It was an examination disguised as one. Elisabeta was expected to explain the chapter in her own words, defend its arguments against every objection Mr. Corrow could invent, and remain composed enough that no one could tell when he had found a weakness.
+<p>&ldquo;Quite right. An element that rewrites its own position has stopped being an element and become a rival structure.&rdquo; He turned a page. &ldquo;Now the objection from the critics of imposed order. They argue that a structure imposed from outside produces <em>compliance</em>, not <em>stability</em>. Answer it.&rdquo;</p>
 
-In four years of Wednesday mornings, he had never managed to surprise her.
+<p>Elisabeta knew the objection well. The textbook distinguished between <strong>imposed order</strong> and <strong>cultivated order</strong>, explaining that a system could shape behaviour until the desired response became natural to the people within it.</p>
 
-She had never disappointed him either.
+<p>She could have delivered the answer in her sleep.</p>
 
-Sometimes she wondered whether he knew anything about her beyond that.
+<p>She heard her own voice carrying the distinction across the table, measured and unhurried, while her attention drifted toward the gardener.</p>
 
-“Stability does not mean the absence of difference,” she began. “It means arranging differences so that no part works against another. A structure is stable when each element occupies the position suited to its function, and each function contributes to the whole.”
+<p>He had stopped near the top of the ladder.</p>
 
-Mr. Corrow nodded.
+<p>Taking hold of the wire that crossed one branch, he gave it a tug. The wire slipped.</p>
 
-“If an element resists its position, the fault lies in how that position was described, or in the element's understanding of it. The fault does not lie in the structure.”
+<p>The branch had been pushing against its assigned angle for months. The bark around the old fastening had swollen into a pale ridge, grown thick around the place where the wire had cut into it.</p>
 
-“Good. And why not?”
+<p>The gardener unwound the wire, moved it lower, and tied it around a healthier section of wood. Then he took a pair of shears from his belt and cut away a small shoot growing above the fastening, a shoot that had pointed in a different direction.</p>
 
-“Because a structure that can be questioned by the parts it holds has no authority to hold them.”
+<p>He had moved the wire to suit the branch, Elisabeta noticed, and then removed the shoot that would not suit the frame. She could not have said which of the two she was watching.</p>
 
-Mr. Corrow smiled and made a note.
+<p>&ldquo;...and so cultivated order does not require the element's agreement at every moment,&rdquo; she heard herself conclude. &ldquo;It requires only that, over time, the element comes to regard its position as <em>natural</em>.&rdquo;</p>
 
-Elisabeta had always found that particular smile reassuring. It meant she had given the answer he expected, in precisely the way he expected it.
+<p>&ldquo;<strong>Excellent.</strong>&rdquo;</p>
 
-Outside the tall windows, the courtyard stretched beneath a pale winter sky.
+<p>Mr. Corrow wrote another note.</p>
 
-The grass had been clipped to an even green carpet. The hedges stood in neat rows, their edges so straight that a ruler would have found little to improve. Along the far wall, the ash trees had been trained into matching shapes, their branches tied to wire frames.
+<p>&ldquo;That is almost the text's own phrasing, and better expressed. Remember that formulation for the Academy panel.&rdquo;</p>
 
-A gardener was working on the second row.
+<p>Elisabeta looked at him, then back at the courtyard.</p>
 
-He had climbed a short ladder and was reaching toward one of the higher branches. A coil of wire hung over his shoulder. His shears rested at his belt.
+<p>She had meant what she said. That was the troubling part.</p>
 
-“Suppose the element is not mistaken,” Mr. Corrow said. “Suppose its position is simply a poor one. What then?”
+<p>The argument was sound, and she had delivered it well. Yet outside, a man was spending his morning forcing branches into position and cutting away whatever grew beyond it. The trees did not appear to have found their assigned shapes natural. Someone had to make them hold those shapes, and someone would have to return next year to do it again.</p>
 
-Elisabeta turned her attention back to him.
+<p>The textbook said <em>nothing</em> about that work.</p>
 
-“Then the description was poor and should be rewritten.”
+<p>She did not raise the point. It was not part of the exercise, and she was not yet sure how to explain what bothered her. A flaw in the argument would have been easy to name. She could have pointed to a contradiction, a weak assumption, or a conclusion that did not follow from the evidence.</p>
 
-“By whom?”
+<p>But the argument held, at least as far as it went.</p>
 
-“By those who designed the structure. Not by the element itself.”
+<p>What she had seen was something it left out.</p>
 
-“Quite right.” He turned a page. “An element that rewrites its own position has ceased to be an element. It has become a rival structure.”
+<p>&ldquo;Your Highness?&rdquo;</p>
 
-He seemed pleased with that.
+<p>Elisabeta turned back to the table.</p>
 
-“Now, the critics of imposed order argue that it produces compliance rather than stability. How would you answer them?”
+<p>&ldquo;I'm sorry. The fourth proposition.&rdquo;</p>
 
-Elisabeta knew this part almost by heart.
+<p>&ldquo;The fourth is on Friday. We are finished for today.&rdquo;</p>
 
-She began explaining the difference between imposed order and cultivated order, her voice steady and precise. She spoke of habit, understanding, and the gradual acceptance of one's place.
+<p>He closed his book carefully.</p>
 
-But halfway through her answer, she looked out the window again.
+<p>&ldquo;You're ahead, as always. I'll tell the Queen the Academy panel need not concern you.&rdquo;</p>
 
-The gardener had stopped near the top of the ladder.
+<p>Before Elisabeta could answer, the door opened.</p>
 
-He was examining a branch that bent sharply away from the others. A thin wire had been wrapped around it, pulling it into the same obedient angle as its neighbours.
+<p>It did not need a knock, and none came.</p>
 
-The gardener tugged at the wire.
+<p>Queen Ecaterina entered as though the room had been waiting for her. She wore dark plum, the hem weighted with silver thread, and carried a single card in her gloved hand.</p>
 
-It slipped.
+<p>Mr. Corrow rose and bowed. His departure was as precise as his lessons, taking exactly as long as courtesy required.</p>
 
-For one brief moment, Elisabeta felt an unexpected lightness in her chest.
+<p>Under the table, Safira went still. Her ears lowered slightly, as they did whenever footsteps entered the room that <em>mattered</em>.</p>
 
-Perhaps he had noticed the problem. Perhaps he intended to free the branch and let it grow as it pleased.
+<p>&ldquo;You've finished early,&rdquo; Ecaterina said.</p>
 
-She leaned forward slightly.
+<p>&ldquo;Mr. Corrow says I'm ahead.&rdquo;</p>
 
-The gardener unwound the wire, revealing a pale ridge in the bark where the metal had pressed into it over the years. The branch had grown around the fastening, swallowing part of the wire into its own wood.
+<p>&ldquo;I'm sure he does.&rdquo;</p>
 
-He studied the damage.
+<p>Her mother crossed to the hearth and held her hands toward the fire, though she had not been out in the cold long enough to need it. She did not sit.</p>
 
-Then he took the wire and tied it lower, around a healthier section of the branch.
+<p>&ldquo;The date has been confirmed with Valenne. Alexandru's father sent word this morning, and he is pleased with the arrangements for the ceremony.&rdquo; She looked at Elisabeta. &ldquo;I wanted you to hear it from me before the household began discussing it.&rdquo;</p>
 
-The angle remained unchanged.
+<p>&ldquo;Thank you.&rdquo;</p>
 
-A small shoot had grown above the old fastening, reaching away from the others. The gardener lifted his shears and snipped it off.
+<p>&ldquo;The fitting is at two. Mrs. Hale will need your arms raised for most of it, so wear the cotton beneath the gown, not the wool. And eat something first. Last time you fainted a little at the third pin and told no one.&rdquo;</p>
 
-The shoot fell into the grass.
+<p>&ldquo;I didn't faint.&rdquo;</p>
 
-He tucked the wire into place, tested the branch with one hand, and moved on to the next tree.
+<p>&ldquo;You went the colour of milk and held the curtain.&rdquo;</p>
 
-Elisabeta stared at the little green shape lying beneath the ladder.
+<p>Elisabeta said nothing. Her mother had been in another room that day, and she had noticed anyway.</p>
 
-She had thought he was going to set the branch free.
+<p>Ecaterina crossed to the reading table and placed the card beside Elisabeta's book, aligning it carefully with the edge.</p>
 
-She wasn't sure what she had expected instead.
+<p>The steward's handwriting covered the card: <em>the fourteenth, the ceremony.</em> Beneath it, in a different ink, someone had written a small number of days.</p>
 
-“Your Highness?”
+<p>Elisabeta did not read it twice. She had already counted them.</p>
 
-Mr. Corrow's voice brought her back to the table.
+<p>Her mother's gaze settled on the open volume.</p>
 
-She straightened.
+<p>&ldquo;Still on the third?&rdquo;</p>
 
-“Cultivated order,” she continued, “does not require the element's agreement at every moment. It requires only that, over time, the element comes to regard its position as its own.”
+<p>&ldquo;I've finished it. I'm reviewing the objections.&rdquo;</p>
 
-Mr. Corrow's face brightened.
+<p>&ldquo;Why?&rdquo;</p>
 
-“Excellent. That is almost the text's exact argument, though I believe you've expressed it rather better. Keep that answer for the Academy panel.”
+<p>It was not quite a question, and Elisabeta let a moment pass before answering.</p>
 
-“Of course.”
+<p>Between them, silence had always been a way of finding out what the other person would say when given enough time. Ecaterina never hurried to fill it. She stood with her hands folded at her waist and her head tilted slightly, entirely at ease in a quiet she had no need to interrupt.</p>
 
-She looked toward the window once more.
+<p>&ldquo;I'd like to defend it better,&rdquo; Elisabeta said. &ldquo;If the panel presses me.&rdquo;</p>
 
-The gardener was climbing down the ladder. He had spent the better part of the morning correcting a branch, and someone would have to return next year to make sure it stayed corrected.
+<p>&ldquo;They won't press you.&rdquo;</p>
 
-The book had said nothing about that.
+<p>&ldquo;Then I'd like to <em>understand</em> it better.&rdquo;</p>
 
-Elisabeta lowered her eyes to the page.
+<p>&ldquo;That's different.&rdquo;</p>
 
-She could have asked why the tree needed so much help becoming something it clearly did not wish to be. She could have asked whether the gardener was protecting the branch or merely teaching it to obey.
+<p>Something shifted in her mother's expression, so briefly that Elisabeta could not be certain she had seen it.</p>
 
-But those were not objections to the argument.
+<p>Ecaterina stepped closer and straightened the turned-back cuff of Elisabeta's sleeve. It was a small, practised gesture, completed with two fingers and no wasted movement.</p>
 
-She knew how to identify a weak premise. She knew how to expose a contradiction. If a conclusion did not follow from its evidence, she could explain precisely where the reasoning failed.
+<p>Over twenty-two years, that hand had meant a hundred things. It had held a coat open against the rain, rested against Elisabeta's forehead during a fever, and steadied her shoulders before a speech when she had been too nervous to stop shaking.</p>
 
-This was different.
+<p>All of that care was real.</p>
 
-The argument held together perfectly.
+<p>Elisabeta allowed herself to feel it.</p>
 
-That was what troubled her.
+<p>&ldquo;You've always understood things quickly,&rdquo; Ecaterina said. &ldquo;It is one of your gifts, and I have never worried about it. I would only say that understanding something is not the same as needing to examine it. A person can carry a great deal without taking it apart to see how it works.&rdquo;</p>
 
-“Your Highness?” Mr. Corrow repeated.
+<p>&ldquo;Yes, Mother.&rdquo;</p>
 
-She blinked.
+<p>&ldquo;Alexandru is pleased with you. He told his father so.&rdquo;</p>
 
-“I beg your pardon.”
+<p>&ldquo;That's kind of him.&rdquo;</p>
 
-“The fourth proposition?”
+<p>&ldquo;It is.&rdquo;</p>
 
-“On Friday, sir.”
+<p>Ecaterina paused, giving the words room to settle.</p>
 
-“Indeed.” He closed his book with both hands. “Then we are finished. You are ahead of schedule, as always. I shall inform the Queen that the panel need not concern her.”
+<p>&ldquo;I would like you to be kind in return, in whatever way comes naturally. It will not cost you anything you aren't already prepared to give.&rdquo;</p>
 
-Before Elisabeta could reply, the library door opened.
+<p>She said it warmly. Elisabeta could not tell where the warmth ended and the expectation began.</p>
 
-No knock preceded it.
+<p>Her mother moved toward the door, then stopped and glanced back at the candles.</p>
 
-None was necessary.
+<p>&ldquo;Those are burning too close to the book,&rdquo; she remarked.</p>
 
-Queen Ecaterina entered in a gown of dark plum, silver thread glimmering along its hem. She carried a single card between her gloved fingers, and the room seemed to arrange itself around her.
+<p>She left before anyone could answer.</p>
 
-Mr. Corrow rose at once.
+<p>A page appeared a moment later and moved the candlestick six inches to the left. Elisabeta watched him do it. He did not look at her. She understood that he had been waiting outside until the Queen left, and that someone had noticed the candles before Ecaterina ever mentioned them.</p>
 
-“Your Majesty.”
+<p>Safira emerged from beneath the table and pressed her head against Elisabeta's ankle.</p>
 
-“Mr. Corrow.”
+<p>For a moment, Elisabeta remained still.</p>
 
-He bowed, gathered his books, and departed with the swift efficiency of a man who understood exactly how long a royal courtesy should last.
+<p>Then she looked at the card, and after it the open book.</p>
 
-Beneath the table, Safira opened one eye.
+<p>She had read the third proposition so many times that she could have found her way through it in the dark.</p>
 
-When the Queen's footsteps crossed the room, the cat lowered her ears and became very still.
+<p><em>Where an element resists its position, the fault lies in the description.</em></p>
 
-“Finished early,” Ecaterina observed.
+<p>In her private notebook, locked in the drawer upstairs, she had copied the sentence onto three separate pages. The ink had begun to spread where her nib had passed over the words again and again.</p>
 
-“Mr. Corrow says I'm ahead.”
+<p>She had always taken that repetition as diligence.</p>
 
-“I'm sure he does.”
+<p>Outside, the gardener reached the end of the second row. He climbed down, folded his ladder against the wall, and stood for a moment looking at his work.</p>
 
-Her mother crossed to the fireplace and held her hands toward the flames. She had not been outside, but she did it anyway, as though warming her fingers gave her time to arrange her thoughts.
+<p>The newly tightened wire caught the weak daylight.</p>
 
-“The date has been confirmed with Valenne,” she said. “Alexandru's father sent word this morning. He is pleased with the arrangements.”
+<p>The branch held its angle.</p>
 
-Elisabeta folded her hands.
+<p>Where he had cut away the shoot, the exposed wood was almost white against the dark bark.</p>
 
-“I wanted you to hear it from me before the household began discussing it.”
+<p>Elisabeta realised she had been holding her breath.</p>
 
-“Thank you, Mother.”
+<p>She let it go.</p>
 
-“The fitting is at two. Mrs. Hale will need your arms raised for much of it, so wear the cotton under the gown rather than the wool.”
+<p>Then she returned to the page.</p>
 
-“Yes, Mother.”
+<p>The fourth proposition was on Friday. The fitting was at two. There were still many hours left in the day, and there was no reason to fall behind.</p>
 
-“And eat something beforehand. Last time, you went pale at the third pin and held on to the curtain without telling anyone.”
-
-“I did not faint.”
-
-“I didn't say you fainted.”
-
-“You made it sound as though I nearly died.”
-
-Ecaterina turned to her, one eyebrow slightly raised.
-
-“You looked as though the dressmaker had discovered a new and particularly effective method of execution.”
-
-Elisabeta pressed her lips together.
-
-Her mother smiled.
-
-It was a small smile, but a real one, and Elisabeta felt her own expression soften despite herself.
-
-For a moment, the library was simply a library. The fire crackled. Safira shifted beneath the table. Her mother stood beside the hearth, looking at her with the familiar mixture of affection and mild amusement that had followed Elisabeta through childhood.
-
-Then Ecaterina placed the card on the table.
-
-She adjusted it until its edges aligned perfectly with the edge of the book.
-
-The steward's handwriting was unmistakable.
-
-*The fourteenth. The ceremony.*
-
-Elisabeta did not need to read the smaller line beneath it.
-
-She already knew how many days remained.
-
-“Still on the third proposition?” her mother asked.
-
-“I've finished it. I'm reviewing the objections.”
-
-“Why?”
-
-The word was gentle, but it was not an ordinary question.
-
-Ecaterina had never been afraid of silence. She could leave a question between them and wait patiently for the answer, however long it took. Elisabeta had learned early that her mother rarely needed to raise her voice to make herself heard.
-
-“I'd like to defend the argument better,” she said. “In case the panel presses me.”
-
-“They won't press you.”
-
-“Then I'd like to understand it better.”
-
-“That is different.”
-
-Her mother studied her.
-
-Something shifted in Ecaterina's expression, a brief flicker that disappeared before Elisabeta could decide what it meant.
-
-Then the Queen stepped closer and straightened the turned-back cuff of her daughter's sleeve.
-
-It was such a familiar gesture that Elisabeta almost smiled.
-
-Those hands had buttoned her coat when she was too young to manage the task herself. They had rested against her forehead during childhood fevers, guided her through crowded rooms, and steadied her shoulders before her first formal speech.
-
-Her mother had always known when she was frightened, even when Elisabeta had done her best to hide it.
-
-The care had never been imaginary.
-
-That was what made everything else so difficult to understand.
-
-“You have always understood things quickly,” Ecaterina said. “I've never worried about that.”
-
-Elisabeta waited.
-
-“I would only remind you that understanding something is not the same as needing to take it apart. A person can carry a great deal without examining how it was made.”
-
-“Yes, Mother.”
-
-“Alexandru is pleased with you. He told his father so.”
-
-Elisabeta glanced at the card.
-
-“That's kind of him.”
-
-“It is. And I would like you to be kind in return, in whatever way comes naturally to you. It will cost you nothing you are not already prepared to give.”
-
-Ecaterina said it warmly.
-
-There was no threat in her voice, no sharpness in her expression. She sounded like a mother advising her daughter on how to make a good marriage, which was precisely what she was.
-
-Elisabeta could not tell where the warmth ended and the expectation began.
-
-Perhaps, she thought, there was no line between them.
-
-Her mother gave her sleeve one final adjustment.
-
-“There. Much better.”
-
-She turned toward the door, then paused and looked back at the candles.
-
-“Those are burning rather close to your book.”
-
-Before Elisabeta could answer, Ecaterina was gone.
-
-A moment later, a young page entered the library. He approached the table, moved the silver candle stand six inches to the left, and departed without a word.
-
-Elisabeta watched him go.
-
-He had been waiting outside, she realized.
-
-Someone had noticed the candles before her mother ever mentioned them.
-
-Perhaps her mother had noticed too.
-
-Perhaps that was why she had mentioned them.
-
-Elisabeta looked down at the book.
-
-For a long moment, she did nothing.
-
-Then Safira emerged from beneath the table, stretched luxuriously, and pressed her head against Elisabeta's ankle.
-
-Elisabeta bent to scratch behind her ears.
-
-“You're the only one in this palace who seems to know exactly where she wants to be.”
-
-Safira purred.
-
-“Don't look so pleased with yourself. You spend most of your day asleep.”
-
-The cat purred louder.
-
-Elisabeta almost laughed.
-
-Almost.
-
-She straightened and looked at the third proposition again.
-
-*Where an element resists its position, the fault lies in the description.*
-
-She knew the sentence so well that she could hear it in Mr. Corrow's voice, complete with his careful pauses and approving little nods.
-
-In the locked drawer upstairs, her private notebook contained the same sentence on three separate pages. The ink had darkened where she had gone over certain words more than once, pressing her nib into the paper as though repetition might reveal something the first reading had missed.
-
-She had always considered that diligence.
-
-She had never asked what else it might be.
-
-Outside, the gardener folded his ladder and carried it toward the far wall.
-
-The wire around the branch caught a weak shaft of sunlight. Where the shoot had been cut away, the wood showed almost white against the dark bark.
-
-The branch held its angle.
-
-Elisabeta watched until the gardener disappeared beyond the hedges.
-
-Then she looked at the card beside her book.
-
-The fourteenth.
-
-At two, she would stand on a fitting platform while Mrs. Hale adjusted the gown she would wear when she married Alexandru of Valenne. On Friday, she would defend the fourth proposition. At the Academy panel, she would give every answer correctly.
-
-Nothing had gone wrong.
-
-She was exactly where she was expected to be.
-
-There was no reason to fall behind.
-
-Elisabeta lowered her eyes to the page and began reading again.
-
-Beneath the table, Safira shifted in her sleep.
-
-Without thinking, Elisabeta moved her foot two inches to the left.
-
-And made room.
+<p>Under the table, without thinking, she moved her foot two inches to the left.</p>
       `
     },
     {
