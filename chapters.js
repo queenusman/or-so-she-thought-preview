@@ -270,11 +270,14 @@ const NOVEL_CHAPTERS = {
       number: "Chapter Two",
       title: "The Alignment Doctrine",
       content: `
+
 <p>Rain had been falling since before dawn.</p>
 
-<p>The seminar hall smelled of wet wool drying on the radiators, chalk dust, and the cold mineral scent of walls that had been damp every winter since the Academy was built. Elisabeta sat in her usual place in the second row, her collar still wet from the short journey between the car and the door. Her attendant waited in the corridor outside, as he did every Thursday. The door never quite closed on him.</p>
+<p>By nine it had found every weakness in the Academy's roofline. A porter in a canvas apron was setting a bucket beneath the leak above the east door, and a second, older porter stood watching him do it with the air of a man who had placed that same bucket in that same spot for thirty winters and saw no reason to say so. Students came up the steps in twos and threes, shaking umbrellas, stamping, laughing at nothing in particular. Somebody's scarf had been dropped on the stairs and trodden into the mat.</p>
 
-<p>Professor Calloway stood at the lectern with a folder in his hands. He never opened it. It gave his hands something to do while he spoke.</p>
+<p>The seminar hall smelled of wet wool drying on the radiators, chalk dust, and the cold mineral scent of walls that had been damp every winter since the Academy was built. One of the radiators knocked twice, then went quiet. Elisabeta sat in her usual place in the second row, her collar still wet from the short journey between the car and the door. Her attendant waited in the corridor outside, as he did every Thursday. The door never quite closed on him. Through the gap she could hear him exchanging a few flat sentences with the porter about the leak, and about whether it was better to put the bucket on the left or the right.</p>
+
+<p>Professor Calloway came in at the last moment, shaking out his umbrella over the threshold and handing it, without looking, to the nearest student. He stood at the lectern with a folder in his hands. He never opened it. It gave his hands something to do while he spoke. His watch was visible below his cuff, and twice before he began he turned his wrist to check it. There was a committee at eleven, and it was known that he did not like to arrive at them damp.</p>
 
 <p>&ldquo;<strong>Alignment,</strong>&rdquo; he said, &ldquo;<strong>is what remains when obedience is no longer needed.</strong>&rdquo;</p>
 
@@ -284,7 +287,7 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;A well-formed mind does not need to be told what serves the whole. It arrives there unprompted and takes the arrival for its own conclusion. We have a model for this, one you will meet in the Academy panels and in every office you will one day occupy. The <strong>Timber Inspection Schedule</strong>.&rdquo;</p>
 
-<p>A few students began writing.</p>
+<p>A few students began writing. At the back, someone sneezed and apologised. By the window, a young man in a grey jumper was setting a stack of photocopied critiques on the corner of a desk, squaring the edges, and not writing anything at all.</p>
 
 <p>It was an ordinary example, and that was why Calloway had chosen it. He preferred illustrations that seemed too practical to argue with. They proved, he believed, that the doctrine worked beyond the classroom.</p>
 
@@ -302,7 +305,7 @@ const NOVEL_CHAPTERS = {
 
 <p>It was the final part of the exercise. Nobody ever answered it.</p>
 
-<p>The room settled into the polite silence of people who had already agreed the question was rhetorical. Calloway let the pause run on before turning toward the windows, where a young man in a grey jumper was arranging a stack of photocopied critiques on the corner of a desk.</p>
+<p>The room settled into the polite silence of people who had already agreed the question was rhetorical. In the second row a pen was set down. Someone shifted a chair. Calloway let the pause run on, turned his wrist, and looked toward the windows.</p>
 
 <p>&ldquo;Lucian. You know something about timber, I believe.&rdquo;</p>
 
@@ -340,7 +343,7 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;No,&rdquo; Calloway agreed, with the gentle satisfaction of a man who had found a way to close an argument. &ldquo;Nor should it. That is why we have the rule.&rdquo;</p>
 
-<p>A small sound moved through the room. It was not quite laughter, but it was close to relief.</p>
+<p>A small sound moved through the room. It was not quite laughter, but it was close to relief. The radiator knocked again, as if it too had been asked for an opinion.</p>
 
 <p>Lucian watched the professor a moment longer. Then he glanced at the stack of critiques and said, &ldquo;Yes, sir,&rdquo; in a voice that offered nothing further to argue with. He returned to the desk and picked up the next page.</p>
 
@@ -352,9 +355,7 @@ const NOVEL_CHAPTERS = {
 
 <p>Elisabeta moved her mouth with theirs, but something had shifted.</p>
 
-<p>She knew she had answered correctly. She had defended the schedule exactly as she had been taught to defend it. Every sentence was sound. The room had accepted her reasoning, and Calloway had confirmed it.</p>
-
-<p>Yet Lucian's account had passed through the same discussion and left her answer standing untouched, perfectly intact, with nothing in it about wet timber.</p>
+<p>She knew she had answered correctly. She had defended the schedule exactly as she had been taught to, and the room had accepted it. Yet Lucian's account had passed through the same discussion and left her answer standing untouched, perfectly intact, with nothing in it about wet timber.</p>
 
 <p>She thought of the gardener on his ladder, moving wire along a branch and cutting away whatever grew in the wrong direction.</p>
 
@@ -362,11 +363,13 @@ const NOVEL_CHAPTERS = {
 
 <p>The seminar hall emptied into the corridor in the orderly flow the Academy had trained into its students long before they were old enough to question it.</p>
 
+<p>Calloway was the first out, umbrella retrieved, already speaking to a colleague about the committee. A student with a trolley of folded chairs waited for the crowd to thin before he tried the door. Someone near the stairs was laughing about the porter's bucket, which had by now filled and been emptied once.</p>
+
 <p>Elisabeta held her books against her chest and let the crowd carry her toward the covered walk. At the side stair, where the light was poor and fewer students passed, she stepped out of the current.</p>
 
 <p>Her attendant followed several paces behind, close enough to be useful and far enough to stay outside any photograph.</p>
 
-<p>Lucian stood beside the noticeboard with a bundle of graded essays under his arm, his collar turned up against the damp. He was reading a notice about a lecture on the <em>Succession Act</em>, apparently trying to remember the room number. He had not been there when the seminar began to empty. She had not seen him leave the hall first.</p>
+<p>Lucian stood beside the noticeboard with a bundle of graded essays under his arm, his collar turned up against the damp. He was reading a notice about a lecture on the <em>Succession Act</em>, apparently trying to remember the room number.</p>
 
 <p>He did not look up when she stopped.</p>
 
@@ -390,7 +393,9 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;They can. I only said you answered one.&rdquo;</p>
 
-<p>She looked down at the page. The comments were small and square and unhurried. He had read her argument to the end, and more than once, to find the sentence she had been avoiding.</p>
+<p>A girl hurried past them with a dripping umbrella and murmured an apology to nobody in particular. Lucian shifted the bundle to keep it clear of the drops.</p>
+
+<p>Elisabeta looked down at the page. The comments were small and square and unhurried. He had read her argument to the end, and more than once, to find the sentence she had been avoiding.</p>
 
 <p>&ldquo;You stopped writing, in there,&rdquo; he said. &ldquo;After I finished. Calloway noticed. He'll likely ask you about it on Monday.&rdquo;</p>
 
@@ -398,7 +403,7 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;Everyone's watching your pen.&rdquo; He shifted the bundle against his hip. &ldquo;I'd just have an answer ready.&rdquo;</p>
 
-<p>It was the kind of advice a person gave about the weather. She could not tell why she felt it all the way down.</p>
+<p>It was the kind of advice a person gave about the weather, and it unsettled her more than it should have.</p>
 
 <p>&ldquo;You were fair in there,&rdquo; she said. &ldquo;To the schedule.&rdquo;</p>
 
@@ -430,11 +435,11 @@ const NOVEL_CHAPTERS = {
 
 <p>Elisabeta kept her eyes on the noticeboard. She did not want him to see that he had given a name to something she had already noticed.</p>
 
-<p>&ldquo;Why did you say <em>yes, sir</em>?&rdquo; she asked. &ldquo;At the end. You hadn't agreed with him.&rdquo;</p>
+<p>&ldquo;Why did you say <em>yes</em>?&rdquo; she asked. &ldquo;At the end. You hadn't agreed with him.&rdquo;</p>
 
 <p>&ldquo;He'd finished answering,&rdquo; Lucian said. &ldquo;There wasn't anything left to say that he could hear.&rdquo;</p>
 
-<p>It was an odd answer. It had no complaint in it, and she thought it was truer than most she had heard that term.</p>
+<p>It was an odd answer. It had no complaint in it.</p>
 
 <p>&ldquo;You'll miss the walk,&rdquo; she said instead.</p>
 
@@ -458,15 +463,31 @@ const NOVEL_CHAPTERS = {
 
 <p>The title was correct. His tone was not disrespectful.</p>
 
-<p>Still, it was the least deferential thing anyone had said to her all week, and the only thing that day that felt entirely accurate.</p>
+<p>Still, it was the least deferential thing anyone had said to her all week.</p>
 
 <p>He went down the stairs without waiting to be dismissed, carrying the essays close to his chest to keep them dry.</p>
 
+<p>At the street door, the older porter held it open against the wind without being asked, and Lucian thanked him with a nod.</p>
+
+<p>&ldquo;Wet one,&rdquo; said the porter.</p>
+
+<p>&ldquo;It is.&rdquo;</p>
+
+<p>&ldquo;Your father's yard under tarpaulin?&rdquo;</p>
+
+<p>&ldquo;Since Monday.&rdquo;</p>
+
+<p>&ldquo;Ah.&rdquo; The porter looked at the sky as though it were a creditor. &ldquo;Mine's lot would have the roof off by now.&rdquo;</p>
+
+<p>Lucian stopped beneath the arch, where the rain came down in a clean line a foot from his shoes, and checked the time. Ten past eleven. He would have to run for the half-past tram or wait for the one after, which would put him in the yard past four. He shifted the essays higher and weighed the wait against the walk.</p>
+
+<p>He had written <em>Ask it of the clause, not the reader</em> in the margin of her page without much thought, in the same pencil as the other six. He had not thought, until the porter's door swung shut behind him, about what it might mean to hand a princess a note like that, in the corridor, in front of her attendant.</p>
+
+<p>The tram bell sounded at the corner. He decided on the walk after all, and went out into the rain with his collar up.</p>
+
 <p>Elisabeta remained where she was, holding her seventh comment, and listened to the street door open and shut.</p>
 
-<p>She read it. It was the shortest of the seven.</p>
-
-<p><em>This is the right question. Ask it of the clause, not the reader.</em></p>
+<p>She read it. It was the shortest of the seven. <em>This is the right question. Ask it of the clause, not the reader.</em></p>
 
 <p>She folded the page once and put it inside her book.</p>
 
@@ -476,7 +497,7 @@ const NOVEL_CHAPTERS = {
 
 <p>She had walked this corridor ten thousand times.</p>
 
-<p>The walls were panelled in oak, the grain dark and close, polished with beeswax to a deep brown. Tall rectangular panels sat within their frames, each lit by a narrow window at intervals along the gallery. The light fell on the wood in separate patches and left the spaces between them dim.</p>
+<p>The walls were panelled in oak, the grain dark and close, polished with beeswax to a deep brown. Tall rectangular panels sat within their frames, each lit by a narrow window at intervals along the gallery. The light fell on the wood in separate patches and left the spaces between them dim. Halfway along, a maid knelt with a cloth and a tin, working wax into the skirting. She sat back on her heels as Elisabeta passed, then bent to the work again. Somewhere beyond the far door, a bell rang for the end of a class.</p>
 
 <p>At the far end stood a double door that always stuck in winter. Whoever opened it had to lift slightly at the lower corner, a small, practised movement Elisabeta had watched pages perform since childhood without ever wondering why.</p>
 
@@ -486,11 +507,11 @@ const NOVEL_CHAPTERS = {
 
 <p>For the first time, she looked at its edge.</p>
 
-<p>A narrow seam ran along one side, where the panel met the upright of its frame. In dry weather the gap would have been barely visible. Now, with the rain, it had closed almost completely.</p>
+<p>A narrow seam ran along one side, where the panel met the upright of its frame. In dry weather the gap would have opened to a line a pen could slip into. Now, with the rain, it had closed almost completely.</p>
 
 <p>She slipped off her glove, bent closer, and pressed her thumb against the opposite edge.</p>
 
-<p>There was a slight depth beneath the surface. Inside it, where the paint had not reached, ran a thin line of raw wood, paler than the rest.</p>
+<p>There was a slight give beneath her thumb. Where the seam parted under the pressure, a thin line of raw wood showed, paler than the rest, in a place the paint had never reached.</p>
 
 <p>The panel was not fixed tightly into its frame.</p>
 
@@ -506,9 +527,9 @@ const NOVEL_CHAPTERS = {
 
 <p>She kept her thumb against the seam.</p>
 
-<p>The wood was cool and faintly damp. She thought of the timber in the yard, left to take the weather while it waited for permission to be examined. She thought of the gardener's wire, the pale shoot cut from the ash tree, and the sentence she had repeated so often that she had stopped hearing what it asked of her.</p>
+<p>The wood was cool and faintly damp. Behind her, the maid's cloth went on moving in its slow circles.</p>
 
-<p>Someone had known, once, that wood must be given room to move. Someone had built the room in before it was needed, and no lesson had ever mentioned it.</p>
+<p>Someone had known, once, that wood must be given room to move. Someone had built the room in before it was needed.</p>
 
 <p>Then she straightened, pulled her glove back on, and followed her attendant down the gallery toward the door that stuck.</p>
       `
