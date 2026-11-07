@@ -8,9 +8,11 @@ const NOVEL_CHAPTERS = {
 
 <p>The library held the cold the way old stone did in winter. It was less a bite than a weight, something that settled into the room and stayed there.</p>
 
-<p>Elisabeta had been awake since five. In that time a servant had built the fire in the marble hearth behind her, and another had come to feed it twice more. The room had barely noticed.</p>
+<p>By half past seven the room had been prepared for it twice. A maid had come in with a scuttle and a cloth tied over her hair, and built the fire in the marble hearth while Elisabeta sat reading with her back to her. A second maid, younger, carried in a tray of candlesticks and went round the long table setting one at each place, though only one place was ever used. The two of them spoke in low voices about a laundress who had been sent home with a fever, and whether the linen would come back in time for the week. Neither looked at the princess. Neither was meant to.</p>
 
-<p>She sat with her back straight and <em>Norwyn Structural Ideology, Volume III</em> open beneath her folded hands. The book's spine had darkened to the colour of honey after a century of passing through palace hands. Beeswax candles burned in a silver stand beside her, though the window gave enough light to read by. Someone had decided long ago that a person studying order should be seen doing so by candlelight, and no one had thought to question it.</p>
+<p>At the door, a guard shifted his weight from one boot to the other and resumed looking at nothing.</p>
+
+<p>Elisabeta had been awake since five. She sat with <em>Norwyn Structural Ideology, Volume III</em> open beneath her folded hands. The book's spine had darkened to the colour of honey after a century of passing through palace hands. Beeswax candles burned in a silver stand beside her, though the window gave enough light to read by. Someone had decided long ago that a person studying order should be seen doing so by candlelight, and no one had thought to question it.</p>
 
 <p>Beneath the table, Safira shifted.</p>
 
@@ -18,7 +20,15 @@ const NOVEL_CHAPTERS = {
 
 <p>Elisabeta noticed what she had done only afterward. She noticed <em>most</em> things that way.</p>
 
-<p>&ldquo;Begin with the third proposition,&rdquo; said Mr. Corrow from the other side of the table. &ldquo;Take your time.&rdquo;</p>
+<p>The maids finished, curtsied to the room in general, and left. The fire caught and began to talk to itself. The room barely noticed.</p>
+
+<p>Mr. Corrow arrived at eight exactly, which was a quarter of an hour after he had meant to. He came in rubbing his hands, with a leather satchel clamped under one arm and a scarf still wound twice about his neck.</p>
+
+<p>&ldquo;Your Highness. Forgive me. The east stair is being scrubbed and I was routed through the kitchens.&rdquo; He unwound the scarf and looked at it as though it had been the cause. &ldquo;I now know a great deal about the price of eggs.&rdquo;</p>
+
+<p>&ldquo;Is it high?&rdquo;</p>
+
+<p>&ldquo;Scandalous. Apparently it is the fault of the weather.&rdquo; He sat, opened his book, and found the place with the ease of long practice. &ldquo;Shall we? Begin with the third proposition. Take your time.&rdquo;</p>
 
 <p>He meant the opposite, and she knew it.</p>
 
@@ -36,7 +46,7 @@ const NOVEL_CHAPTERS = {
 
 <p>Beyond the tall window, the courtyard lay under a flat winter green. The grass had been clipped short, the hedges trimmed into neat lines, and the ash trees planted in rows along the far wall. Every branch had been bent to a right angle and tied to a wire frame.</p>
 
-<p>A gardener worked his way down the second row on a short ladder, a coil of wire over one shoulder and a spool hooked to his belt. He moved from branch to branch with the quiet efficiency of a man who had done the same job for years.</p>
+<p>A gardener was working his way down the second row on a short ladder, a coil of wire over one shoulder and a spool hooked to his belt. A boy of about twelve stood at the foot of it holding a bucket of ties, and from the set of his shoulders he had been told to stand still and was finding it difficult. Twice he said something up the ladder. Twice the gardener answered without turning his head. The boy shifted the bucket to his other hand.</p>
 
 <p>&ldquo;Suppose the element is <em>not</em> mistaken,&rdquo; Mr. Corrow said. &ldquo;Suppose its position is simply a poor one. What then?&rdquo;</p>
 
@@ -50,6 +60,8 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;Quite right. An element that rewrites its own position has stopped being an element and become a rival structure.&rdquo; He turned a page. &ldquo;Now the objection from the critics of imposed order. They argue that a structure imposed from outside produces <em>compliance</em>, not <em>stability</em>. Answer it.&rdquo;</p>
 
+<p>The door opened, and the younger maid slipped in with a small tray: a jug, a cup, a plate with a single roll cut open and buttered. She set it at Elisabeta's elbow, collected a candle snuffer from the mantel that no one had asked her to collect, and withdrew. Mr. Corrow did not look up. He had decided, apparently, that interruptions by servants were weather.</p>
+
 <p>Elisabeta knew the objection well. The textbook distinguished between <strong>imposed order</strong> and <strong>cultivated order</strong>, explaining that a system could shape behaviour until the desired response became natural to the people within it.</p>
 
 <p>She could have delivered the answer in her sleep.</p>
@@ -62,7 +74,7 @@ const NOVEL_CHAPTERS = {
 
 <p>The branch had been pushing against its assigned angle for months. The bark around the old fastening had swollen into a pale ridge, grown thick around the place where the wire had cut into it.</p>
 
-<p>The gardener unwound the wire, moved it lower, and tied it around a healthier section of wood. Then he took a pair of shears from his belt and cut away a small shoot growing above the fastening, a shoot that had pointed in a different direction.</p>
+<p>The gardener unwound the wire, moved it lower, and tied it around a healthier section of wood. Then he took a pair of shears from his belt and cut away a small shoot growing above the fastening, a shoot that had pointed in a different direction. He dropped it. The boy below caught it in the bucket, looked pleased with himself, and was told something.</p>
 
 <p>He had moved the wire to suit the branch, Elisabeta noticed, and then removed the shoot that would not suit the frame. She could not have said which of the two she was watching.</p>
 
@@ -74,19 +86,43 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;That is almost the text's own phrasing, and better expressed. Remember that formulation for the Academy panel.&rdquo;</p>
 
+<p>Something in her warmed at <em>better expressed</em>, quickly, the way it always had.</p>
+
 <p>Elisabeta looked at him, then back at the courtyard.</p>
 
 <p>She had meant what she said. That was the troubling part.</p>
 
-<p>The argument was sound, and she had delivered it well. Yet outside, a man was spending his morning forcing branches into position and cutting away whatever grew beyond it. The trees did not appear to have found their assigned shapes natural. Someone had to make them hold those shapes, and someone would have to return next year to do it again.</p>
+<p>In the east corridor, Queen Ecaterina stopped walking because the steward had stepped into her path with a card in his hand and a look of rehearsed apology.</p>
 
-<p>The textbook said <em>nothing</em> about that work.</p>
+<p>Two footmen with a rolled carpet between them flattened themselves against the wall to let her pass, found that she had not passed, and remained flattened. Down the corridor, someone was beating a rug somewhere out of sight, with the steady, unhurried thud of a task that would be done by noon.</p>
 
-<p>She did not raise the point. It was not part of the exercise, and she was not yet sure how to explain what bothered her. A flaw in the argument would have been easy to name. She could have pointed to a contradiction, a weak assumption, or a conclusion that did not follow from the evidence.</p>
+<p>&ldquo;Majesty. The courier from Valenne is asking where his horses are to be kept. I have told him the lower stable. He says the lower stable floods.&rdquo;</p>
 
-<p>But the argument held, at least as far as it went.</p>
+<p>&ldquo;Does it?&rdquo;</p>
 
-<p>What she had seen was something it left out.</p>
+<p>&ldquo;Only in spring, Majesty.&rdquo;</p>
+
+<p>&ldquo;It is February.&rdquo;</p>
+
+<p>&ldquo;Yes, Majesty. I said so. He has asked me to put it in writing.&rdquo;</p>
+
+<p>&ldquo;Then put it in writing, and put the horses in the upper stable.&rdquo; She took the card from him and read it once. <em>The fourteenth. The ceremony.</em> Beneath it, in a different ink, the number of days. She had not asked for that. She looked at him.</p>
+
+<p>&ldquo;I thought,&rdquo; he said, and stopped. &ldquo;I thought the Princess might wish to have it.&rdquo;</p>
+
+<p>&ldquo;Did you.&rdquo;</p>
+
+<p>It was not unkind. He was unable to tell whether it was approval, and went on holding the edge of his sleeve.</p>
+
+<p>&ldquo;Mrs. Hale will want the fitting room kept warm,&rdquo; Ecaterina said. &ldquo;And have bread sent to the library. Not a tray. A roll.&rdquo;</p>
+
+<p>&ldquo;It has already gone, Majesty.&rdquo;</p>
+
+<p>She considered him a moment longer, then handed back nothing and kept the card. The footmen, still against the wall, watched her go. One of them whispered something. The other shook his head.</p>
+
+<p>The guard at the library door straightened as she approached. She did not need him to open it, and he did not try.</p>
+
+<p>In the library, Mr. Corrow had barely closed his book.</p>
 
 <p>&ldquo;Your Highness?&rdquo;</p>
 
@@ -96,7 +132,7 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;The fourth is on Friday. We are finished for today.&rdquo;</p>
 
-<p>He closed his book carefully.</p>
+<p>He began to collect his papers, tapping their edges square against the table, one at a time.</p>
 
 <p>&ldquo;You're ahead, as always. I'll tell the Queen the Academy panel need not concern you.&rdquo;</p>
 
@@ -106,7 +142,7 @@ const NOVEL_CHAPTERS = {
 
 <p>Queen Ecaterina entered as though the room had been waiting for her. She wore dark plum, the hem weighted with silver thread, and carried a single card in her gloved hand.</p>
 
-<p>Mr. Corrow rose and bowed. His departure was as precise as his lessons, taking exactly as long as courtesy required.</p>
+<p>Mr. Corrow rose and bowed. His departure was as precise as his lessons, taking exactly as long as courtesy required. In the doorway he and the guard did their small wordless exchange of nods, and then he was gone, scarf already coming out of the satchel.</p>
 
 <p>Under the table, Safira went still. Her ears lowered slightly, as they did whenever footsteps entered the room that <em>mattered</em>.</p>
 
@@ -116,9 +152,9 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;I'm sure he does.&rdquo;</p>
 
-<p>Her mother crossed to the hearth and held her hands toward the fire, though she had not been out in the cold long enough to need it. She did not sit.</p>
+<p>Her mother crossed to the hearth and held her hands toward the fire, though she had not been out in the cold long enough to need it. She did not sit. Her eyes went once to the plate at Elisabeta's elbow and the roll that had not been touched.</p>
 
-<p>&ldquo;The date has been confirmed with Valenne. Alexandru's father sent word this morning, and he is pleased with the arrangements for the ceremony.&rdquo; She looked at Elisabeta. &ldquo;I wanted you to hear it from me before the household began discussing it.&rdquo;</p>
+<p>&ldquo;The date has been confirmed with Valenne. Alexandru's father sent word this morning, and he is pleased with the arrangements for the ceremony. His courier is currently arguing with the steward about horses.&rdquo; She looked at Elisabeta. &ldquo;I wanted you to hear it from me before the household began discussing it.&rdquo;</p>
 
 <p>&ldquo;Thank you.&rdquo;</p>
 
@@ -132,7 +168,7 @@ const NOVEL_CHAPTERS = {
 
 <p>Ecaterina crossed to the reading table and placed the card beside Elisabeta's book, aligning it carefully with the edge.</p>
 
-<p>The steward's handwriting covered the card: <em>the fourteenth, the ceremony.</em> Beneath it, in a different ink, someone had written a small number of days.</p>
+<p>The steward's handwriting covered the card: <em>the fourteenth, the ceremony.</em> Beneath it, in a different ink, someone had written the number of days.</p>
 
 <p>Elisabeta did not read it twice. She had already counted them.</p>
 
@@ -148,6 +184,8 @@ const NOVEL_CHAPTERS = {
 
 <p>Between them, silence had always been a way of finding out what the other person would say when given enough time. Ecaterina never hurried to fill it. She stood with her hands folded at her waist and her head tilted slightly, entirely at ease in a quiet she had no need to interrupt.</p>
 
+<p>Outside the window, a spool of wire rolled off the ladder's lowest rung and the boy went after it.</p>
+
 <p>&ldquo;I'd like to defend it better,&rdquo; Elisabeta said. &ldquo;If the panel presses me.&rdquo;</p>
 
 <p>&ldquo;They won't press you.&rdquo;</p>
@@ -156,7 +194,7 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;That's different.&rdquo;</p>
 
-<p>Something shifted in her mother's expression, so briefly that Elisabeta could not be certain she had seen it.</p>
+<p>Something shifted in her mother's expression and was gone.</p>
 
 <p>Ecaterina stepped closer and straightened the turned-back cuff of Elisabeta's sleeve. It was a small, practised gesture, completed with two fingers and no wasted movement.</p>
 
@@ -180,15 +218,19 @@ const NOVEL_CHAPTERS = {
 
 <p>&ldquo;I would like you to be kind in return, in whatever way comes naturally. It will not cost you anything you aren't already prepared to give.&rdquo;</p>
 
-<p>She said it warmly. Elisabeta could not tell where the warmth ended and the expectation began.</p>
+<p>She said it warmly. Her fingers stayed on the cuff until Elisabeta answered.</p>
 
-<p>Her mother moved toward the door, then stopped and glanced back at the candles.</p>
+<p>&ldquo;Of course.&rdquo;</p>
+
+<p>The hand lifted. Her mother moved toward the door, then stopped and glanced back at the candles.</p>
 
 <p>&ldquo;Those are burning too close to the book,&rdquo; she remarked.</p>
 
 <p>She left before anyone could answer.</p>
 
-<p>A page appeared a moment later and moved the candlestick six inches to the left. Elisabeta watched him do it. He did not look at her. She understood that he had been waiting outside until the Queen left, and that someone had noticed the candles before Ecaterina ever mentioned them.</p>
+<p>A page appeared a moment later and moved the candlestick six inches to the left. Elisabeta watched him do it. He did not look at her. She assumed that he had been waiting outside until the Queen left, and that someone had noticed the candles before Ecaterina ever mentioned them.</p>
+
+<p>He took the plate with the untouched roll as well, then paused, and set it back down again, a little closer to her hand.</p>
 
 <p>Safira emerged from beneath the table and pressed her head against Elisabeta's ankle.</p>
 
@@ -204,7 +246,7 @@ const NOVEL_CHAPTERS = {
 
 <p>She had always taken that repetition as diligence.</p>
 
-<p>Outside, the gardener reached the end of the second row. He climbed down, folded his ladder against the wall, and stood for a moment looking at his work.</p>
+<p>Outside, the gardener reached the end of the second row. He climbed down, folded his ladder against the wall, and stood for a moment looking at his work. The boy lifted the bucket, and the two of them went off toward the gate without looking back.</p>
 
 <p>The newly tightened wire caught the weak daylight.</p>
 
@@ -220,7 +262,7 @@ const NOVEL_CHAPTERS = {
 
 <p>The fourth proposition was on Friday. The fitting was at two. There were still many hours left in the day, and there was no reason to fall behind.</p>
 
-<p>Under the table, without thinking, she moved her foot two inches to the left.</p>
+<p>Safira went back under the table. Elisabeta felt her turn once against the chair leg and settle, and, without thinking, moved her foot two inches to the left.</p>
       `
     },
     {
