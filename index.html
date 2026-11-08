@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OR SO SHE THOUGHT — Official Novel Website</title>
+  
+  <!-- Browser Favicon: The Sovereign Coronet -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%233E3D43'/><path d='M6 21L4 10l6 4.5L16 6l6 8.5 6-4.5-2 11H6z' stroke='%23D9C1C6' stroke-width='1.8' fill='none' stroke-linejoin='round'/><path d='M6 24h20' stroke='%23D9C1C6' stroke-width='1.8'/><circle cx='16' cy='17' r='1.5' fill='%23D9C1C6'/></svg>">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -149,18 +153,29 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text">
 
-  <!-- ==================== SITE HEADER WITH DUAL ARCHITECTURE ==================== -->
+  <!-- ==================== SITE HEADER WITH CORONET ICON & DUAL ARCHITECTURE ==================== -->
   <header id="siteHeader" style="background-color: var(--header-bg); border-color: var(--color-border);" class="sticky top-0 z-50 backdrop-blur-md border-b transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- Brand Link: Always returns Home -->
-      <a href="javascript:void(0)" onclick="switchView('home')" class="group flex flex-col focus:outline-none" aria-label="Return to Home">
-        <span class="font-display tracking-[0.24em] text-base md:text-lg font-semibold text-theme-text group-hover:text-theme-accent transition-colors">
-          OR SO SHE THOUGHT
-        </span>
-        <span class="font-sans text-[9px] tracking-[0.3em] text-theme-accent uppercase font-semibold mt-0.5">
-          A Royal Psychological Novel
-        </span>
+      <!-- Brand Link with Sovereign Coronet Emblem -->
+      <a href="javascript:void(0)" onclick="switchView('home')" class="group flex items-center gap-3.5 focus:outline-none" aria-label="Return to Home">
+        <!-- Option 1: The Sovereign Coronet Icon Box -->
+        <div class="w-9 h-9 rounded-sm border border-theme-border flex items-center justify-center bg-theme-panel group-hover:border-theme-accent transition-all shadow-sm shrink-0">
+          <svg class="w-5 h-5 text-theme-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 17L2 8l5 3.5 5-6.5 5 6.5 5-3.5-2 9H4z" />
+            <path d="M4 19h16" stroke-width="1.25" />
+            <circle cx="12" cy="14" r="1" fill="currentColor" />
+          </svg>
+        </div>
+
+        <div class="flex flex-col">
+          <span class="font-display tracking-[0.24em] text-base md:text-lg font-semibold text-theme-text group-hover:text-theme-accent transition-colors">
+            OR SO SHE THOUGHT
+          </span>
+          <span class="font-sans text-[9px] tracking-[0.3em] text-theme-accent uppercase font-semibold mt-0.5">
+            A Royal Psychological Novel
+          </span>
+        </div>
       </a>
 
       <!-- Primary Navigation: Two Distinct Wings -->
