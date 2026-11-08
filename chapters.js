@@ -837,3 +837,589 @@ const NOVEL_CHAPTERS = {
     }
   ]
 };
+{
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Four",
+      title: "The Study Sessions",
+      content: `
+
+<p>Elisabeta had submitted the request in writing, because writing was how things were done in her life.</p>
+
+<p>She had proposed a joint study of the <strong>Timber Inspection Schedule</strong> for the Academy panel, with Lucian Fletcher as her co-reader. His knowledge of the trade had already been noted during Professor Calloway's seminar, which made him a reasonable choice.</p>
+
+<p>The request reached the Academy office at ten past nine, in a cream envelope with the palace seal, and was carried through three hands before it reached the person who mattered. The first was a clerk, who looked at the seal and stood a little straighter. The second was the registrar, who read it standing up and then sat down to read it again. The third was Calloway, who was in the common room with a cup of tea going cold at his elbow and a colleague talking at him about the roof.</p>
+
+<p>&ldquo;Fletcher?&rdquo; said the colleague, glancing over his shoulder. &ldquo;The joiner's boy? Is he wise to be paired with her?&rdquo;</p>
+
+<p>&ldquo;He's competent,&rdquo; Calloway said. &ldquo;And she's asked for him by name.&rdquo; He folded the page along its crease, with some satisfaction. On the Monday after the seminar he had asked her, mildly, whether the discussion had given her anything to think about, and she had had an answer ready. She had not said where the answer came from. It pleased him to have the Crown's heir examine the arguments of the student who had challenged him. It would do the young man no harm to see how the thing looked from the other side of the table.</p>
+
+<p>He approved the request within the hour.</p>
+
+<p>The palace approved it by evening.</p>
+
+<p>Her attendant entered the arrangement in his log, in his small clear hand: <em>Study, Academy library, Tuesdays and Thursdays, four to six.</em> The sessions would take place in a public room, with a public door. By the household's own rules for such engagements, there was nothing private about it.</p>
+
+<p>On the first Tuesday, Elisabeta read the entry over his shoulder.</p>
+
+<p>She found nothing to object to.</p>
+
+<p>That was what troubled her afterward.</p>
+
+<p>The lower stacks smelled of damp paper and radiators that never quite managed to warm the room. The Inspectorate's annual returns occupied a bay at the far end, where a single caged bulb cast a weak circle of light over forty-one volumes. Each was bound in black cloth, faded to grey at the corners. One volume for every year since the Schedule had been established.</p>
+
+<p>Few people had consulted them recently. The borrowing slip tucked inside the first volume was three years old, signed by an economics student.</p>
+
+<p>The library above them kept its own habits. At the desk, the assistant librarian was stamping returns with the rhythm of a metronome. A student with a trolley of periodicals was arguing with a locked case. On the stair, two girls whispered about an examiner and were hushed by a third. Down here, the noise arrived softened, as though it had come through a wall.</p>
+
+<p>Lucian was already waiting when Elisabeta arrived. He sat on an overturned crate because the only chair had a broken rail. A pencil rested behind his ear, another was in his hand, and several volumes lay open around him on the floor. Half a heel of bread was wrapped in paper beside his bag, with a note folded under it in a hand that was clearly not his own: <em>Planks to river, Thurs. Don't forget.</em></p>
+
+<p>He stood as she approached.</p>
+
+<p>His eyes moved briefly to her attendant, who had stopped a respectable distance away at the entrance to the bay and was now reading the spine of the nearest book with the stiff, courteous interest of a man who did not intend to be asked about it. Then Lucian looked back at Elisabeta. Whatever he thought of the arrangement, he kept it to himself.</p>
+
+<p>&ldquo;Good afternoon,&rdquo; she said. &ldquo;I should say that I did not ask you first. The request went to Professor Calloway.&rdquo;</p>
+
+<p>&ldquo;I know. He told me I'd been volunteered.&rdquo;</p>
+
+<p>&ldquo;I'm sorry.&rdquo;</p>
+
+<p>&ldquo;Would I have been allowed to say no?&rdquo;</p>
+
+<p>&ldquo;Yes.&rdquo;</p>
+
+<p>&ldquo;Then it's as well I didn't have to find out.&rdquo; He glanced at the volumes around him. &ldquo;The returns list failures by district and cause. Cause gets three words. <em>Checks, warp or rot.</em> That's all.&rdquo;</p>
+
+<p>He looked up at the bulb.</p>
+
+<p>&ldquo;I was told you'd have your own copies made.&rdquo;</p>
+
+<p>&ldquo;I thought it would be better to read the originals.&rdquo;</p>
+
+<p>&ldquo;Good. Copies leave the building.&rdquo;</p>
+
+<p>He said it as though that settled the matter, then returned to his notes.</p>
+
+<p>&ldquo;I've pulled the last ten years. We could go further back, but the pattern should show up here.&rdquo;</p>
+
+<p>Elisabeta lowered herself carefully onto the broken chair, keeping her weight on the sound side.</p>
+
+<p>The iron bracket that had torn her blouse was less than four feet from her shoulder. She recognised its bent corner immediately. She did not look at it, but she felt her face grow warm all the same.</p>
+
+<p>It annoyed her that she could still be embarrassed by a piece of metal.</p>
+
+<p>For the next hour, they read.</p>
+
+<p>Lucian turned the pages quickly, following the columns with his pencil without marking them. Elisabeta worked more slowly, keeping her thumb at the margin as she had been taught to do when she was a child.</p>
+
+<p>After a while, she noticed him watching her hand.</p>
+
+<p>&ldquo;What?&rdquo;</p>
+
+<p>&ldquo;You read like someone who was told not to lose her place.&rdquo;</p>
+
+<p>&ldquo;I was.&rdquo;</p>
+
+<p>&ldquo;Mm.&rdquo;</p>
+
+<p>He bent over his book again.</p>
+
+<p>He had not meant it unkindly. Elisabeta could not decide whether the observation was amusing or merely accurate.</p>
+
+<p>At six, the librarian's bell rang overhead, and the attendant straightened as though it had been meant for him.</p>
+
+<p>When she came on Thursday, the chair had been mended. A new rail of pale oak had been fitted where the broken one had been, joined so cleanly that only the colour showed it. A fine drift of shavings lay swept into the corner of the bay, and a small boy with a broom stood looking at it as though he had been told to deal with it and was waiting for the instruction to become clearer.</p>
+
+<p>&ldquo;It was in the way,&rdquo; Lucian said, without looking up from the returns.</p>
+
+<p>She sat on it, and it did not rock.</p>
+
+<p>By the second week, they had begun to see a pattern.</p>
+
+<p>By the third, they disagreed about what it meant.</p>
+
+<p>The high-forest districts had the highest rejection rates. In the previous ten years, nearly a third of their timber lots had failed inspection. Along the coast, the figure was less than one in ten.</p>
+
+<p>Lucian had circled the difference in his notes, in pencil, on their first afternoon. Since then, he had returned to it repeatedly, as though the number might reveal something new if he looked at it long enough.</p>
+
+<p>He came to each session with sawdust in the seams of his jumper. When she asked about it, he said he went to the yard when he left the Academy and worked until the light went. The study had cost him two evenings a week of the oak's attention since it began.</p>
+
+<p>&ldquo;Does your father mind?&rdquo;</p>
+
+<p>&ldquo;The oak doesn't mind waiting.&rdquo; He turned a page. &ldquo;It's had practice.&rdquo;</p>
+
+<p>She was not sure whether it was a joke. She did not ask again whether the hours were a trouble to him, and he never raised it.</p>
+
+<p>&ldquo;It's the yard,&rdquo; he said one afternoon. &ldquo;The timber comes down after the thaw, then sits for eleven weeks waiting for inspection. That's when the damage happens. Coastal timber is cut in autumn and dried in the sheds before anyone examines it. Nobody waits on those lots.&rdquo;</p>
+
+<p>&ldquo;Or the timber itself is different.&rdquo;</p>
+
+<p>Elisabeta had the Inspectorate's founding Act open on her lap. She kept one finger between its pages while she spoke.</p>
+
+<p>&ldquo;High-forest oak grows slowly in poor soil. It is denser, and its growth is less uniform. I would expect more faults, even under the same conditions.&rdquo;</p>
+
+<p>&ldquo;It's denser. But it isn't less uniform. It's tighter-grained. My father would tell you it's the best oak there is.&rdquo;</p>
+
+<p>&ldquo;Your father also tells you that the waiting period damages it.&rdquo;</p>
+
+<p>&ldquo;Because it does.&rdquo;</p>
+
+<p>&ldquo;Then show me that the waiting period is responsible, rather than the wood.&rdquo;</p>
+
+<p>She heard the sharpness in her own voice but did not soften it.</p>
+
+<p>&ldquo;The returns cannot establish that. They record each failure and name its cause as checks, warp or rot, but they do not record <em>how long</em> a lot waited before inspection. Look.&rdquo;</p>
+
+<p>She turned the volume towards him.</p>
+
+<p>&ldquo;There's no column for it.&rdquo;</p>
+
+<p>Lucian lowered his eyes to the page. She watched his pencil travel down the entries he had already examined, then move back to the headings.</p>
+
+<p>For a moment, he said nothing. Overhead, a trolley rattled across the floor and was shushed.</p>
+
+<p>&ldquo;No,&rdquo; he admitted. &ldquo;There isn't.&rdquo;</p>
+
+<p>&ldquo;So you may be right about the yard, and I may be right about the wood. But the records cannot tell us which explanation is correct.&rdquo;</p>
+
+<p>&ldquo;Or both.&rdquo;</p>
+
+<p>He put down his pencil.</p>
+
+<p>&ldquo;Some of each. I can't say how much.&rdquo;</p>
+
+<p>Elisabeta had expected him to defend his argument. She had also expected to feel the small, clean satisfaction of having found a weakness in it.</p>
+
+<p>The satisfaction came, but it did not last.</p>
+
+<p>Lucian was not trying to rescue his original claim. He was looking at the space where a column might have been, his attention fixed on it with the quiet concentration of someone examining a joint he had not noticed before.</p>
+
+<p>&ldquo;You'd admit that even though it weakens your argument?&rdquo; she asked.</p>
+
+<p>&ldquo;It isn't much of an argument yet. <strong>I don't know.</strong>&rdquo;</p>
+
+<p>He said it simply, without embarrassment or an attempt to make the admission sound clever.</p>
+
+<p>&ldquo;I thought I did. Now I need to find out.&rdquo;</p>
+
+<p>Elisabeta looked down at the Act in her lap.</p>
+
+<p>For some reason, she could not look at him.</p>
+
+<p>On the fourth Thursday, she brought a bound volume she had borrowed from the reading room, the printed record of the debates before the Act was passed. She had read the body of the Act weeks ago. The preamble she had saved until she knew what it was pointing at.</p>
+
+<p>She opened the Act to the first page and set it on the crate between them.</p>
+
+<p>&ldquo;Read the preamble.&rdquo;</p>
+
+<p>Lucian read slowly and carefully, as he read everything that mattered to him. Elisabeta had read the passage three times already, but she listened anyway.</p>
+
+<p>The language belonged to another century. It referred to <em>the late irregularities in the allotment of days of inspection and the injury sustained by the lesser owners</em>. It also named a man called Hollin, an assistant to the Inspector at the time, who had been dismissed in the autumn before the Act was passed.</p>
+
+<p>&ldquo;Hollin,&rdquo; Lucian said.</p>
+
+<p>&ldquo;He sold early inspection dates to the larger yards. They paid, and the smaller owners had to wait. By the time their timber was examined, some lots had been standing for an entire season. Half failed inspection.&rdquo;</p>
+
+<p>She heard her voice becoming measured and certain. This was familiar ground, and she knew it.</p>
+
+<p>&ldquo;Four joiners' families along the river lost their businesses. The details are in the debate record, including their names. The fixed calendar was introduced to prevent the same thing from happening again.&rdquo;</p>
+
+<p>She closed the Act halfway, keeping one finger between its pages.</p>
+
+<p>&ldquo;It was meant to protect people like your father.&rdquo;</p>
+
+<p>Lucian did not answer.</p>
+
+<p>He read the preamble again. His thumb moved along the margin until it reached Hollin's name.</p>
+
+<p>&ldquo;I didn't know that.&rdquo;</p>
+
+<p>&ldquo;I would have thought your family knew.&rdquo;</p>
+
+<p>&ldquo;No.&rdquo; He shook his head slowly. &ldquo;My grandfather had the yard before my father. He never mentioned it. Maybe it happened before his time, or maybe he didn't want to talk about it.&rdquo;</p>
+
+<p>He paused.</p>
+
+<p>&ldquo;It might be true, and nobody ever told us.&rdquo;</p>
+
+<p>Elisabeta had been right. She had found the history that gave the Schedule its purpose, the reason the fixed calendar existed at all. It strengthened the argument she had been making from the beginning.</p>
+
+<p>But the book between them seemed to have become something else.</p>
+
+<p>Lucian had gone quiet. He was no longer looking at the page.</p>
+
+<p>&ldquo;I'm sorry,&rdquo; she said. &ldquo;I didn't mean to use it against you.&rdquo;</p>
+
+<p>&ldquo;You did, a little.&rdquo;</p>
+
+<p>&ldquo;A little.&rdquo;</p>
+
+<p>&ldquo;It's all right.&rdquo;</p>
+
+<p>He rubbed a hand across his jaw. Elisabeta noticed a pale scar running along it, a thin line that looked as though it had healed only recently. She wondered how he had got it.</p>
+
+<p>&ldquo;It's a good argument,&rdquo; he continued. &ldquo;It matters that the Schedule stopped people buying their way ahead.&rdquo;</p>
+
+<p>&ldquo;Yes.&rdquo;</p>
+
+<p>&ldquo;It's only that it doesn't make the boards any drier.&rdquo;</p>
+
+<p>&ldquo;No.&rdquo;</p>
+
+<p>He nodded, thinking.</p>
+
+<p>It was nearly six. At the entrance to the bay, her attendant shifted his weight. The small sound carried through the quiet stacks. Overhead, someone was putting out chairs, and the scrape of them moved slowly along the ceiling.</p>
+
+<p>Lucian gathered the returns, aligning their spines with the care of someone accustomed to keeping tools in order. He carried the first armful to the shelves and began putting the volumes back.</p>
+
+<p>Halfway through, he stopped with a book still in his hands.</p>
+
+<p>&ldquo;You don't say it, do you?&rdquo;</p>
+
+<p>Elisabeta looked up. &ldquo;Say what?&rdquo;</p>
+
+<p>&ldquo;<em>I don't know.</em>&rdquo;</p>
+
+<p>He slid the volume into its place.</p>
+
+<p>&ldquo;I've been listening for it for a month. In the seminar. Here. You say <em>I would expect</em>, and <em>it may be</em>, and <em>the records cannot tell us</em>. You never just say it.&rdquo;</p>
+
+<p>&ldquo;It isn't...&rdquo;</p>
+
+<p>She stopped.</p>
+
+<p>The rest of the sentence did not come.</p>
+
+<p>Lucian picked up the next book.</p>
+
+<p>&ldquo;I'm not asking you to,&rdquo; he said. &ldquo;I only noticed.&rdquo;</p>
+
+<p>He returned to the shelves without looking at her again.</p>
+
+<p>He had noticed it a month ago, she thought, and had waited until now to say so.</p>
+
+<p>The rain had thinned by the time Elisabeta's car left the Academy. Her attendant sat beside the driver, and the two of them discussed, in low and expert voices, the traffic at the river bridge and whether the new signal had made it better or only different. The palace lights appeared one by one through the windscreen as they approached the grounds.</p>
+
+<p>At the east gate, a guard raised his arm and waved them through.</p>
+
+<p>Elisabeta watched his hand rise and fall.</p>
+
+<p>It was the same motion he had made every evening for the past month. She had seen it countless times without really seeing it.</p>
+
+<p><em>I don't know.</em></p>
+
+<p>She tried the words silently in the darkness of the back seat.</p>
+
+<p>They felt unfamiliar, like a coin from another country.</p>
+
+<p>For four years, she had answered questions every Wednesday without needing to use them. She had always been able to construct an answer from what she knew, what she had been taught, and what the question seemed to require.</p>
+
+<p>If she delivered it well, the difference between a constructed answer and a known one had rarely mattered to anyone listening.</p>
+
+<p>Perhaps it had not mattered to her, either.</p>
+
+<p>Dinner was at eight.</p>
+
+<p>The dining room had been laid for two, which in that house meant a table that could have seated twenty and a pair of footmen at the sideboard who moved like people trained to be furniture. A candle on the table guttered when the door to the service stair opened, and one of the footmen crossed quietly to close it.</p>
+
+<p>Her mother asked about the study between the soup and the fish, in the calm voice she used when she intended a subject to have a clear beginning and end.</p>
+
+<p>&ldquo;How is the work progressing?&rdquo;</p>
+
+<p>&ldquo;Well enough. The figures are interesting. I've found a gap in the Inspectorate's records.&rdquo;</p>
+
+<p>&ldquo;Have you?&rdquo;</p>
+
+<p>&ldquo;They don't record how long a timber lot waits before inspection. That could be important. I don't think the returns can tell us whether it is.&rdquo;</p>
+
+<p>&ldquo;And Mr. Fletcher? Is he a useful reader?&rdquo;</p>
+
+<p>&ldquo;He's careful,&rdquo; Elisabeta said. &ldquo;He disagrees with me.&rdquo;</p>
+
+<p>&ldquo;Good,&rdquo; said Ecaterina. &ldquo;A reader who only agrees is of no use to you.&rdquo;</p>
+
+<p>A footman came forward to lift the soup plates. Without turning her head, Ecaterina said to him, &ldquo;The sauce was too sharp,&rdquo; and he said, &ldquo;I will tell the kitchen, Your Majesty,&rdquo; and the conversation closed over the exchange as water closes over a stone.</p>
+
+<p>She adjusted her fork by a quarter of an inch.</p>
+
+<p>&ldquo;I'm sure the panel will find your work thorough. You must be careful not to fall into the scholar's habit of looking for gaps in everything. There will always be gaps. It is what makes scholars so hard to satisfy.&rdquo;</p>
+
+<p>&ldquo;Yes, Mother.&rdquo;</p>
+
+<p>Elisabeta returned to her meal.</p>
+
+<p>Across the table, her mother's hands rested neatly on the cloth. Candlelight caught the rings on her fingers. The room was composed around Ecaterina with the ease of something that had never been disturbed.</p>
+
+<p>Elisabeta looked at her plate.</p>
+
+<p><em>I don't know whether it matters.</em></p>
+
+<p>She repeated the words silently, in her own voice, while taking a piece of fish with the correct fork.</p>
+
+<p>She did not say them aloud.</p>
+
+<p>Under the table, Safira settled against her shoe, warm and familiar.</p>
+
+<p>Elisabeta moved her foot two inches to the left.</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Five",
+      title: "Chapter Five Title",
+      content: `
+
+<p>Insert Chapter Five prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Six",
+      title: "Chapter Six Title",
+      content: `
+
+<p>Insert Chapter Six prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Seven",
+      title: "Chapter Seven Title",
+      content: `
+
+<p>Insert Chapter Seven prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Eight",
+      title: "Chapter Eight Title",
+      content: `
+
+<p>Insert Chapter Eight prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Nine",
+      title: "Chapter Nine Title",
+      content: `
+
+<p>Insert Chapter Nine prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Ten",
+      title: "Chapter Ten Title",
+      content: `
+
+<p>Insert Chapter Ten prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Eleven",
+      title: "The Silent Panel",
+      content: `
+
+<p>Insert Chapter Eleven prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twelve",
+      title: "Chapter Twelve Title",
+      content: `
+
+<p>Insert Chapter Twelve prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Thirteen",
+      title: "Chapter Thirteen Title",
+      content: `
+
+<p>Insert Chapter Thirteen prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Fourteen",
+      title: "Chapter Fourteen Title",
+      content: `
+
+<p>Insert Chapter Fourteen prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Fifteen",
+      title: "Chapter Fifteen Title",
+      content: `
+
+<p>Insert Chapter Fifteen prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Sixteen",
+      title: "Chapter Sixteen Title",
+      content: `
+
+<p>Insert Chapter Sixteen prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Seventeen",
+      title: "Chapter Seventeen Title",
+      content: `
+
+<p>Insert Chapter Seventeen prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Eighteen",
+      title: "Chapter Eighteen Title",
+      content: `
+
+<p>Insert Chapter Eighteen prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Nineteen",
+      title: "Chapter Nineteen Title",
+      content: `
+
+<p>Insert Chapter Nineteen prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty",
+      title: "Chapter Twenty Title",
+      content: `
+
+<p>Insert Chapter Twenty prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-One",
+      title: "Chapter Twenty-One Title",
+      content: `
+
+<p>Insert Chapter Twenty-One prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Two",
+      title: "Chapter Twenty-Two Title",
+      content: `
+
+<p>Insert Chapter Twenty-Two prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Three",
+      title: "Chapter Twenty-Three Title",
+      content: `
+
+<p>Insert Chapter Twenty-Three prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Four",
+      title: "Chapter Twenty-Four Title",
+      content: `
+
+<p>Insert Chapter Twenty-Four prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Five",
+      title: "Chapter Twenty-Five Title",
+      content: `
+
+<p>Insert Chapter Twenty-Five prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Six",
+      title: "Chapter Twenty-Six Title",
+      content: `
+
+<p>Insert Chapter Twenty-Six prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Seven",
+      title: "Chapter Twenty-Seven Title",
+      content: `
+
+<p>Insert Chapter Twenty-Seven prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Eight",
+      title: "Chapter Twenty-Eight Title",
+      content: `
+
+<p>Insert Chapter Twenty-Eight prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Twenty-Nine",
+      title: "Chapter Twenty-Nine Title",
+      content: `
+
+<p>Insert Chapter Twenty-Nine prose here...</p>
+
+      `
+    },
+    {
+      eraLabel: "The Crowned Era: Elisabeta",
+      number: "Chapter Thirty",
+      title: "Chapter Thirty Title",
+      content: `
+
+<p>Insert Chapter Thirty prose here...</p>
+
+      `
+    }
