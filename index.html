@@ -15,19 +15,17 @@
           colors: {
             theme: {
               bg: 'var(--color-bg)',
-              'bg-deep': 'var(--color-bg-deep)',
+              'bg-subtle': 'var(--color-bg-subtle)',
               panel: 'var(--color-panel)',
-              'panel-accent': 'var(--color-panel-accent)',
+              'panel-hover': 'var(--color-panel-hover)',
               border: 'var(--color-border)',
               'border-subtle': 'var(--color-border-subtle)',
               text: 'var(--color-text)',
               'text-muted': 'var(--color-text-muted)',
               'text-faint': 'var(--color-text-faint)',
               accent: 'var(--color-accent)',
-              'accent-hover': 'var(--color-accent-hover)',
-              'accent-dim': 'var(--color-accent-dim)',
-              burgundy: 'var(--color-burgundy)',
-              'burgundy-box': 'var(--color-burgundy-box)',
+              secondary: 'var(--color-secondary)',
+              'callout-bg': 'var(--color-callout-bg)',
             }
           },
           fontFamily: {
@@ -41,48 +39,60 @@
     }
   </script>
   <style>
-    /* Default: Night Ink Mode */
+    /* ========================================================
+       THEME 1: DARK MODE (Charcoal Plum Atmosphere)
+       ======================================================== */
     :root, .theme-dark {
-      --color-bg: #11100f;
-      --color-bg-deep: #090807;
-      --color-panel: #181715;
-      --color-panel-accent: #211e1a;
-      --color-border: #38342e;
-      --color-border-subtle: #26231f;
-      --color-text: #f5f1e8;
-      --color-text-muted: #bab1a2;
-      --color-text-faint: #787166;
-      --color-accent: #c4a166;
-      --color-accent-hover: #dfba7c;
-      --color-accent-dim: rgba(196, 161, 102, 0.14);
-      --color-burgundy: #a1434d;
-      --color-burgundy-box: rgba(161, 67, 77, 0.14);
-      --header-bg: rgba(17, 16, 15, 0.94);
-      --footer-bg: #0c0b0a;
-      --primary-btn-bg: #c4a166;
-      --primary-btn-text: #0e0d0c;
+      --color-bg: #3E3D43;               /* Dominant Charcoal Plum */
+      --color-bg-subtle: #36353A;        /* Recessed background */
+      --color-panel: #49474E;            /* Elevated surface */
+      --color-panel-hover: #514B54;      /* Hover background */
+      
+      --color-border: #625B64;          /* Subtle structural border */
+      --color-border-subtle: #4D4750;   /* Hairline divider */
+      
+      --color-text: #F8F7F5;            /* Primary warm ivory */
+      --color-text-muted: #C5BAC1;      /* Muted editorial copy */
+      --color-text-faint: #988F96;      /* Sub-metadata text */
+      
+      --color-accent: #D9C1C6;          /* Primary Accent: Dusty Rose */
+      --color-secondary: #8E7D8A;       /* Secondary Accent: Muted Mauve */
+      --color-callout-bg: rgba(81, 75, 84, 0.45);
+      
+      --header-bg: rgba(62, 61, 67, 0.94);
+      --footer-bg: #36353A;
+      --primary-btn-bg: #D9C1C6;
+      --primary-btn-text: #3E3D43;
+      --selection-bg: #8E7D8A;
+      --selection-text: #F8F7F5;
     }
 
-    /* Ivory Paper Archival Mode (WCAG AAA Contrast Compliant) */
+    /* ========================================================
+       THEME 2: LIGHT MODE (Warm Ivory Parchment)
+       ======================================================== */
     .theme-ivory {
-      --color-bg: #f8f5ee;
-      --color-bg-deep: #ede6d8;
-      --color-panel: #f1ebdE;
-      --color-panel-accent: #e5ded0;
-      --color-border: #ccbeaa;
-      --color-border-subtle: #ded5c5;
-      --color-text: #1c1815;
-      --color-text-muted: #4e443a;
-      --color-text-faint: #73675a;
-      --color-accent: #876228;
-      --color-accent-hover: #6d4e1d;
-      --color-accent-dim: rgba(135, 98, 40, 0.12);
-      --color-burgundy: #7a222a;
-      --color-burgundy-box: rgba(122, 34, 42, 0.08);
-      --header-bg: rgba(248, 245, 238, 0.96);
-      --footer-bg: #eae3d5;
-      --primary-btn-bg: #876228;
-      --primary-btn-text: #fdfcf9;
+      --color-bg: #F8F7F5;               /* Warm archival ivory */
+      --color-bg-subtle: #F0EDE8;        /* Recessed parchment */
+      --color-panel: #FFFFFF;           /* Crisp surface panel */
+      --color-panel-hover: #F5F1EC;      /* Hover background */
+      
+      --color-border: #DDD6CE;          /* Warm structural line */
+      --color-border-subtle: #EBE5DD;   /* Hairline divider */
+      
+      --color-text: #3E3D43;            /* Primary charcoal plum */
+      --color-text-muted: #615E68;      /* Legible secondary charcoal */
+      --color-text-faint: #8A8590;      /* Tertiary label charcoal */
+      
+      --color-accent: #8E7D8A;          /* Primary Accent: Muted Mauve */
+      --color-secondary: #D9C1C6;       /* Secondary Accent: Dusty Rose */
+      --color-callout-bg: rgba(217, 193, 198, 0.22);
+      
+      --header-bg: rgba(248, 247, 245, 0.95);
+      --footer-bg: #EDE9E2;
+      --primary-btn-bg: #3E3D43;
+      --primary-btn-text: #F8F7F5;
+      --selection-bg: #D9C1C6;
+      --selection-text: #3E3D43;
     }
 
     body {
@@ -90,12 +100,12 @@
       color: var(--color-text);
       font-family: 'Newsreader', Georgia, serif;
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
 
     ::selection {
-      background-color: var(--color-accent);
-      color: var(--color-bg);
+      background-color: var(--selection-bg);
+      color: var(--selection-text);
     }
 
     .view-section {
@@ -113,9 +123,9 @@
     }
   </style>
 </head>
-<body class="bg-theme-bg text-theme-text min-h-screen flex flex-col justify-between selection:bg-theme-accent selection:text-theme-bg">
+<body class="bg-theme-bg text-theme-text min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text">
 
-  <!-- ==================== SITE HEADER WITH TWO-SECTION NAVIGATION ==================== -->
+  <!-- ==================== SITE HEADER WITH DUAL ARCHITECTURE ==================== -->
   <header id="siteHeader" style="background-color: var(--header-bg); border-color: var(--color-border);" class="sticky top-0 z-50 backdrop-blur-md border-b transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       
@@ -129,12 +139,12 @@
         </span>
       </a>
 
-      <!-- Primary Two-Section Architecture Navigation -->
+      <!-- Primary Navigation: Two Distinct Wings -->
       <nav class="hidden lg:flex items-center space-x-7 text-xs font-sans uppercase tracking-[0.18em]">
         
         <!-- SECTION ONE: EXPLORE THE NOVEL -->
-        <div class="flex items-center space-x-5 border-r border-theme-border/60 pr-6">
-          <span class="text-[9px] tracking-[0.22em] uppercase font-semibold text-theme-accent/80 font-sans">
+        <div class="flex items-center space-x-5 border-r border-theme-border pr-6">
+          <span class="text-[9px] tracking-[0.22em] uppercase font-semibold text-theme-secondary font-sans">
             Explore
           </span>
           <button onclick="switchView('prologue')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="prologue">
@@ -150,7 +160,7 @@
 
         <!-- SECTION TWO: READ THE NOVEL -->
         <div class="flex items-center space-x-5">
-          <span class="text-[9px] tracking-[0.22em] uppercase font-semibold text-theme-accent/80 font-sans">
+          <span class="text-[9px] tracking-[0.22em] uppercase font-semibold text-theme-secondary font-sans">
             Read
           </span>
           <button onclick="openReaderIndex('crowned')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="reader">
@@ -165,7 +175,7 @@
 
       <!-- Global Theme Switcher & Mobile Menu Trigger -->
       <div class="flex items-center space-x-3">
-        <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle paper palette" class="px-3 py-1.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-colors flex items-center gap-1.5 bg-theme-panel">
+        <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle light/dark theme" class="px-3 py-1.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-colors flex items-center gap-1.5 bg-theme-panel">
           <svg id="themeIconSun" class="w-3.5 h-3.5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
@@ -184,9 +194,9 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
+    <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-bg px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
       <div>
-        <p class="text-[10px] tracking-[0.25em] text-theme-accent font-semibold pb-2 border-b border-theme-border/40 mb-3">
+        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
           Explore the Novel
         </p>
         <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">1. Prologue / About</button>
@@ -194,7 +204,7 @@
         <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">3. Characters</button>
       </div>
       <div>
-        <p class="text-[10px] tracking-[0.25em] text-theme-accent font-semibold pb-2 border-b border-theme-border/40 mb-3">
+        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
           Read the Novel
         </p>
         <button onclick="openReaderIndex('crowned'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">1. Chapters</button>
@@ -215,7 +225,7 @@
         Or So She<br>Thought
       </h1>
       
-      <div class="w-12 h-px bg-theme-accent/40 mx-auto mb-8"></div>
+      <div class="w-12 h-px bg-theme-accent mx-auto mb-8"></div>
       
       <p class="text-xl md:text-2xl font-serif italic text-theme-text-muted max-w-2xl mx-auto leading-relaxed font-light mb-14">
         A novel about inheritance, certainty, duty, and the difficult discovery of a self beyond the life one has always known.
@@ -225,9 +235,9 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto">
         
         <!-- Experience Portal 1: Explore -->
-        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm flex flex-col justify-between hover:border-theme-accent/60 transition-colors">
+        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm flex flex-col justify-between hover:border-theme-accent hover:bg-theme-panel-hover transition-all">
           <div>
-            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">Section One</span>
+            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-2">Section One</span>
             <h2 class="font-display text-xl text-theme-text mb-3">Explore the Novel</h2>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
               An introductory exploration for visitors wishing to understand Norwyn, its political and social structures, and the central conflicts of the story before entering the manuscript.
@@ -244,9 +254,9 @@
         </div>
 
         <!-- Experience Portal 2: Read -->
-        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm flex flex-col justify-between hover:border-theme-accent/60 transition-colors">
+        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm flex flex-col justify-between hover:border-theme-accent hover:bg-theme-panel-hover transition-all">
           <div>
-            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">Section Two</span>
+            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-2">Section Two</span>
             <h2 class="font-display text-xl text-theme-text mb-3">Read the Novel</h2>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
               The direct reading sanctuary. Follow Princess Elisabeta through the complete serialized chapters, and examine the archival marginalia and historical treaties of court.
@@ -257,7 +267,7 @@
               <li>&bull; Norwyn Archival Vault</li>
             </ul>
           </div>
-          <button onclick="openReaderIndex('crowned')" class="w-full py-3.5 px-6 font-sans text-xs font-semibold tracking-[0.2em] uppercase rounded-sm border border-theme-border hover:border-theme-accent text-theme-text transition-colors text-center">
+          <button onclick="openReaderIndex('crowned')" class="w-full py-3.5 px-6 font-sans text-xs font-semibold tracking-[0.2em] uppercase rounded-sm border border-theme-border hover:border-theme-accent text-theme-text transition-colors text-center bg-theme-panel">
             Read Chapters &rarr;
           </button>
         </div>
@@ -270,7 +280,7 @@
     <!-- 1. PROLOGUE / ABOUT THE STORY -->
     <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-secondary font-semibold">
           Section One: Explore the Novel &bull; 1 / 3
         </span>
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
@@ -287,7 +297,7 @@
 
       <!-- Premise Dossier -->
       <div class="border border-theme-border bg-theme-panel p-8 md:p-12 rounded-sm space-y-6 font-serif text-base text-theme-text-muted leading-relaxed mb-12">
-        <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-2">
+        <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-2">
           The Inherited World &bull; Elisabeta’s Story
         </span>
         
@@ -300,7 +310,7 @@
         <p>
           But as marriage, family relationships and the responsibilities of the crown begin to bring those expectations into sharper focus, Elisabeta finds herself confronting questions she has never had much reason to ask.
         </p>
-        <p class="italic text-theme-text pl-4 border-l-2 border-theme-accent py-1">
+        <p class="italic text-theme-text pl-4 border-l-2 border-theme-accent py-1.5 bg-theme-bg-subtle">
           What happens when the life you have always understood begins to look different from the inside? When does duty become something you believe in, and when is it simply something you have learned to accept? And how do you distinguish between what you genuinely want and what you have spent your life learning to want?
         </p>
         <p>
@@ -322,7 +332,7 @@
     <!-- 2. THE WORLD -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-secondary font-semibold">
           Section One: Explore the Novel &bull; 2 / 3
         </span>
         <button onclick="switchView('prologue')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
@@ -338,9 +348,9 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">
+        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm">
           <div>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block mb-2">The Capital</span>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-secondary font-semibold block mb-2">The Capital</span>
             <h3 class="font-display text-xl text-theme-text mb-4">The White Spires & Siding</h3>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
               Where boulevards, motorcades, and grand administrative Spires mask narrow service lanes, river works, and freight rail yards behind the palace walls.
@@ -351,9 +361,9 @@
           </div>
         </div>
 
-        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">
+        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm">
           <div>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-semibold block mb-2">The Southern Reach</span>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-secondary font-semibold block mb-2">The Southern Reach</span>
             <h3 class="font-display text-xl text-theme-text mb-4">Valenne Dominion</h3>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
               Norwyn’s wealthy neighbor and partner, featuring fertile river basins, high grain yields, busy southern ports, and strict legalistic discipline.
@@ -364,9 +374,9 @@
           </div>
         </div>
 
-        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm shadow-sm">
+        <div class="border border-theme-border p-8 bg-theme-panel flex flex-col justify-between rounded-sm">
           <div>
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block mb-2">The Timber & River Districts</span>
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-secondary font-semibold block mb-2">The Timber & River Districts</span>
             <h3 class="font-display text-xl text-theme-text mb-4">The High Forests & Rail Yards</h3>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
               Where high-forest timber comes down after the spring thaw to sit under tarpaulins at the rail yards, awaiting the Crown's fixed inspection schedules.
@@ -392,7 +402,7 @@
     <!-- 3. CHARACTERS -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-secondary font-semibold">
           Section One: Explore the Novel &bull; 3 / 3
         </span>
         <button onclick="switchView('world')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
@@ -409,7 +419,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Elisabeta -->
-        <div class="border border-theme-accent p-8 bg-theme-panel rounded-sm shadow-sm">
+        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
             <h3 class="font-display text-xl text-theme-text">Princess Elisabeta</h3>
             <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Heiress</span>
@@ -421,7 +431,7 @@
         </div>
 
         <!-- Queen Ecaterina -->
-        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
             <h3 class="font-display text-xl text-theme-text">Queen Ecaterina</h3>
             <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Mother</span>
@@ -433,7 +443,7 @@
         </div>
 
         <!-- Alexandru -->
-        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
             <h3 class="font-display text-xl text-theme-text">Alexandru of Valenne</h3>
             <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Intended</span>
@@ -445,7 +455,7 @@
         </div>
 
         <!-- Lucian -->
-        <div class="border border-theme-border p-8 bg-theme-panel rounded-sm shadow-sm">
+        <div class="border border-theme-border bg-theme-panel p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
             <h3 class="font-display text-xl text-theme-text">Lucian</h3>
             <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold">The Joiner’s Son</span>
@@ -476,7 +486,7 @@
       <!-- Reader Controls & Orientation Bar -->
       <div class="max-w-3xl mx-auto px-6 mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
         <div class="flex items-center space-x-3">
-          <span class="text-[10px] font-sans tracking-[0.2em] uppercase font-semibold text-theme-accent">Section Two: Read</span>
+          <span class="text-[10px] font-sans tracking-[0.2em] uppercase font-semibold text-theme-secondary">Section Two: Read</span>
           <span class="text-theme-border">|</span>
           <button onclick="openReaderIndex('crowned')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
             <span>&larr;</span> <span>Chapters Index</span>
@@ -502,7 +512,7 @@
     <!-- 2. ARCHIVE -->
     <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-accent font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.2em] uppercase text-theme-secondary font-semibold">
           Section Two: Read the Novel &bull; Archive Vault
         </span>
         <button onclick="openReaderIndex('crowned')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5">
@@ -519,14 +529,14 @@
 
       <div class="space-y-8">
         <!-- Record 1 -->
-        <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm shadow-sm">
+        <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border mb-6">
             <div>
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block">Record #0012-A &bull; Treaty of the First Stones</span>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-secondary font-semibold block">Record #0012-A &bull; Treaty of the First Stones</span>
               <h3 class="font-display text-xl text-theme-text mt-1">Edict on the Consanguine League of Valenne</h3>
             </div>
             
-            <button onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:!text-[var(--primary-btn-text)] text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">
+            <button onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-bg-subtle text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">
               Look Twice
             </button>
           </div>
@@ -537,8 +547,8 @@
             </p>
           </div>
 
-          <div id="layer-rec1" style="background-color: var(--color-burgundy-box);" class="hidden mt-6 pt-5 border-t border-theme-burgundy/40 p-5 border-l-4 border-l-theme-burgundy rounded-sm">
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-bold block mb-1">
+          <div id="layer-rec1" style="background-color: var(--color-callout-bg);" class="hidden mt-6 pt-5 border-t border-theme-border p-5 border-l-4 border-l-theme-accent rounded-sm">
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-bold block mb-1">
               Penciled Marginalia: Princess Elisabeta (Royal Archives Folio)
             </span>
             <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">
@@ -548,14 +558,14 @@
         </div>
 
         <!-- Record 2 -->
-        <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm shadow-sm">
+        <div class="border border-theme-border bg-theme-panel p-6 md:p-8 rounded-sm">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border mb-6">
             <div>
-              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-semibold block">Record #0087-C &bull; Royal Nursery Directive</span>
+              <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-secondary font-semibold block">Record #0087-C &bull; Royal Nursery Directive</span>
               <h3 class="font-display text-xl text-theme-text mt-1">Memorandum on Elisabeta’s Schedule</h3>
             </div>
             
-            <button onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-accent bg-theme-panel-accent text-theme-accent hover:bg-theme-accent hover:!text-[var(--primary-btn-text)] text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">
+            <button onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-bg-subtle text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm">
               Look Twice
             </button>
           </div>
@@ -566,8 +576,8 @@
             </p>
           </div>
 
-          <div id="layer-rec2" style="background-color: var(--color-burgundy-box);" class="hidden mt-6 pt-5 border-t border-theme-burgundy/40 p-5 border-l-4 border-l-theme-burgundy rounded-sm">
-            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-burgundy font-bold block mb-1">
+          <div id="layer-rec2" style="background-color: var(--color-callout-bg);" class="hidden mt-6 pt-5 border-t border-theme-border p-5 border-l-4 border-l-theme-accent rounded-sm">
+            <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent font-bold block mb-1">
               Ecaterina's Note to the Governess (Found in private desk)
             </span>
             <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">
@@ -627,10 +637,10 @@
       // Update Nav Buttons
       document.querySelectorAll('.nav-button').forEach(btn => {
         if (btn.getAttribute('data-page') === viewId) {
-          btn.classList.add('text-theme-text', 'border-theme-accent');
+          btn.classList.add('text-theme-text', 'border-theme-accent', 'font-medium');
           btn.classList.remove('text-theme-text-muted', 'border-transparent');
         } else {
-          btn.classList.remove('text-theme-text', 'border-theme-accent');
+          btn.classList.remove('text-theme-text', 'border-theme-accent', 'font-medium');
           btn.classList.add('text-theme-text-muted', 'border-transparent');
         }
       });
@@ -651,7 +661,6 @@
       renderReaderView();
     }
 
-    // Renders either the Chapters List Index or the Active Chapter Content inside the Reader view
     function renderReaderView() {
       const mainContainer = document.getElementById('readerMainContainer');
 
@@ -668,9 +677,9 @@
         const eraSubtitle = "The Crowned Era — The Weight of Inheritance";
 
         const chapterButtonsHtml = eraChapters.map((ch, idx) => `
-          <button onclick="selectChapter('${activeEra}', ${idx})" class="w-full text-left p-5 border border-theme-border bg-theme-panel hover:border-theme-accent hover:bg-theme-panel-accent transition-all rounded-sm group flex items-center justify-between">
+          <button onclick="selectChapter('${activeEra}', ${idx})" class="w-full text-left p-5 border border-theme-border bg-theme-panel hover:border-theme-accent hover:bg-theme-panel-hover transition-all rounded-sm group flex items-center justify-between">
             <div>
-              <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-accent font-semibold block mb-1">${ch.number}</span>
+              <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-1">${ch.number}</span>
               <h3 class="font-display text-lg text-theme-text group-hover:text-theme-accent transition-colors">${ch.title}</h3>
             </div>
             <span class="text-xs font-sans uppercase tracking-widest text-theme-text-muted group-hover:text-theme-text">&rarr; Read Chapter</span>
@@ -707,7 +716,7 @@
           return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-3.5 first-letter:text-theme-accent first-letter:leading-none text-theme-text">${para}</p>`;
         }
         if (para.startsWith('>')) {
-          return `<p class="italic text-theme-text-muted pl-4 border-l-2 border-theme-accent my-6 bg-theme-panel-accent py-2 pr-3 rounded-r-sm">${para.replace(/^>\s*/, '')}</p>`;
+          return `<p class="italic text-theme-text pl-4 border-l-2 border-theme-secondary my-6 bg-theme-callout-bg py-2 pr-3 rounded-r-sm">${para.replace(/^>\s*/, '')}</p>`;
         }
         return `<p class="text-theme-text">${para}</p>`;
       }).join('\n');
@@ -726,9 +735,9 @@
       mainContainer.innerHTML = `
         <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
           <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-accent font-semibold">The Crowned Era &bull; ${chapter.number}</p>
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-semibold">The Crowned Era &bull; ${chapter.number}</p>
             <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">${chapter.title}</h2>
-            <div class="w-10 h-px bg-theme-accent/40 mx-auto mt-6"></div>
+            <div class="w-10 h-px bg-theme-accent mx-auto mt-6"></div>
           </div>
           <div class="space-y-6">
             ${formattedParagraphs}
