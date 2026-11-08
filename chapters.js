@@ -540,17 +540,19 @@ const NOVEL_CHAPTERS = {
       title: "The Cost of Want",
       content: `
 
-<p>The tear was a finger's width long, running down the left side seam of Elisabeta's blouse.</p>
+<p>The tear was two inches long, running down the left side seam of Elisabeta's blouse.</p>
 
 <p>She had found it herself.</p>
 
-<p>It was a plain cotton blouse, worn beneath her gowns where no one would see it. On Tuesday, while searching the lower stacks of the Academy library, she had caught it on an iron bracket. She felt the fabric give against her ribs but said nothing. That evening, when she undressed, she found the damage: two inches of seam had opened, exposing the lining, though the stitching on either side remained intact.</p>
+<p>It was a plain cotton blouse, worn beneath her gowns where no one would see it. On Tuesday, while searching the lower stacks of the Academy library, she had caught it on an iron bracket. She felt the fabric give against her ribs but said nothing. That evening, when she undressed, she found the damage: two inches of seam had opened, exposing the raw edges, though the stitching on either side remained intact.</p>
 
-<p>The next morning, the maid arrived for the laundry at seven, as she did every day. She knocked softly, a familiar sound that announced her presence without requiring permission to enter. She was a quiet girl with a red knuckle on one hand, and she never looked directly at anything in the room that was not the basket.</p>
+<p>The next morning, the maid arrived for the laundry at seven, as she did every day. She knocked softly, a familiar sound that announced her presence without requiring permission to enter. She was a quiet girl with a red knuckle on one hand, and she never looked directly at anything in the room that was not the basket. Behind her on the landing, a second maid was working her way along the skirting with a dustpan, and the two of them exchanged a murmured sentence about somebody's sister and a train that had not come.</p>
 
 <p>Elisabeta slipped the blouse inside her sleeve before the door opened.</p>
 
-<p>She stood by the window while the maid collected the basket, holding her arm a little stiffly against her side. She watched the courtyard rather than the girl, and she had no idea why her heart was beating so hard.</p>
+<p>She stood by the window while the maid went through the room, holding her arm a little stiffly against her side. The girl took the basket from beside the wardrobe and set it on the bed to count, her lips moving silently over the tally. Chemises. Stockings. Handkerchiefs, by the half dozen. She wrote each figure in a small book with the stub of a pencil, pressing hard. At the end, the pencil paused for the length of a breath, and then moved on.</p>
+
+<p>Elisabeta watched the courtyard rather than the girl, and she had no idea why her heart was beating so hard.</p>
 
 <p>She knew what would happen if she handed over the blouse.</p>
 
@@ -570,11 +572,21 @@ const NOVEL_CHAPTERS = {
 
 <p>On Friday she found what she needed.</p>
 
-<p>The household's charity visit that week was to the almshouse, and the street outside it had been closed for market day. The car waited at the tradesmen's gate while her attendant went to settle a dispute with the driver. A clerk had counted out one coin for each resident and placed the purse in Elisabeta's hand. The purse was heavy and entirely accounted for.</p>
+<p>The household's charity visit that week was to the almshouse, and the street outside it had been closed for market day.</p>
 
-<p>Beside the car, a haberdasher had set up a small table, with a boy standing behind it to mind the goods.</p>
+<p>The car waited at the tradesmen's gate with its engine ticking. Beyond the railings the whole lane had turned into a bazaar: a man shouting the price of onions, a cart of crated hens, a girl carrying a tray of hot chestnuts over her head through the crowd. Her attendant had gone to settle a dispute with the driver about where the car might legally stand, and the two of them could be heard conducting it at the corner in the grave, repetitive voices of men who both knew the outcome.</p>
+
+<p>Inside the almshouse, the matron had received the Princess in the hall and led her down a corridor smelling of boiled linen and carbolic. Eleven residents sat in a row of chairs along the wall, scrubbed and combed for the occasion. A clerk from the household went down the line with a ledger, counting out a coin into each palm and ticking a name as he went. One old man examined his coin carefully and bit it. The matron closed her eyes. Elisabeta said something kind to each of them, and each of them said something she would not be able to recall that evening.</p>
+
+<p>When it was done, the clerk placed the leftover purse in her hand. It was heavy, and entirely accounted for.</p>
+
+<p>Now she stood on the pavement by the car, watching a crowd that did not know who she was.</p>
+
+<p>Beside the gate, a haberdasher had set up a small table, with a boy standing behind it to mind the goods. His mother, a broad woman in a man's cap, was at the next stall arguing about the price of a cheese. The boy kept one eye on her and the other on his own wares.</p>
 
 <p>Elisabeta approached the table as though she were simply looking through a window.</p>
+
+<p>A woman ahead of her was choosing ribbon. She held three colours to the light, asked about a fourth, changed her mind, and finally asked the boy if he could do better on the green. He could not. She bought it anyway and went away in a rustle of paper. The boy turned to Elisabeta with the same polite, tired face and waited.</p>
 
 <p>She had nothing to pay with. Nothing she carried was hers to spend.</p>
 
@@ -586,7 +598,15 @@ const NOVEL_CHAPTERS = {
 
 <p>It was dented at one corner, and the painted roses on its lid had worn away until only a few red smudges remained. Inside were six needles, a spool of white thread, and a piece of tailor's chalk.</p>
 
-<p>The boy wrapped it in a twist of brown paper and did not ask her name. She walked back to the car with the parcel in her sleeve, and for the first time in her life felt like a person who had got away with something.</p>
+<p>The boy wrapped it in a twist of brown paper and did not ask her name. He tied the string with a quick, careless loop, called to his mother that he'd sold the roses, and went back to watching the cheese.</p>
+
+<p>She walked back to the car with the parcel in her sleeve, and for the first time in her life felt like a person who had got away with something.</p>
+
+<p>Her attendant returned a moment later, wiping his hands on a handkerchief.</p>
+
+<p>&ldquo;The driver's agreed to move down by the fountain, Your Highness. We can go.&rdquo;</p>
+
+<p>&ldquo;Thank you,&rdquo; said Elisabeta, and got in.</p>
 
 <p>That night, she sat on the floor of her bedroom, wearing only her slip, with her back against the foot of the bed. A green-shaded lamp cast a circle of light around her. Safira slept on the coverlet above, one paw dangling over the edge.</p>
 
@@ -603,6 +623,8 @@ const NOVEL_CHAPTERS = {
 <p>At the far end of the room lay the gold silk gown she had worn on Thursday. She had left it in a heap after undressing.</p>
 
 <p>She did not look at it.</p>
+
+<p>Somewhere below, a door closed, and the long clock on the stairs struck eleven. Later it struck the half hour, and then twelve.</p>
 
 <p>The repair took forty minutes, and it was past midnight when she bit through the thread as she had seen others do. A raised line marked the place where the stitches doubled back. She held the blouse beneath the lamp and turned it from side to side.</p>
 
@@ -624,13 +646,15 @@ const NOVEL_CHAPTERS = {
 
 <p>Elisabeta raised her arms.</p>
 
+<p>The fitting room was on the south side of the palace, and Mrs. Hale had chosen it for the light. Two young seamstresses moved quietly at the far end among the bolts of cloth, one pinning a length of lining to a dress form, the other fetching and carrying with her arms full of tissue. A fire burned low in the grate. On the table lay a tape measure, a cushion bristling with pins, and a plate of shortbread that nobody had touched.</p>
+
 <p>The silk was the shade of blue Alexandru's mother had approved. It fitted closely through the bodice and waist, and its weight held Elisabeta's shoulders back. In the long mirror, she could see herself standing rigidly while Mrs. Hale knelt beside her hip.</p>
 
 <p>She had slept for four hours, and her fingers still felt the thread.</p>
 
 <p>Behind them, Queen Ecaterina sat in a chair by the window.</p>
 
-<p>She had arrived during the first fifteen minutes of the fitting and announced that she would not interrupt. Since then, she had been reading a dispatch, turning each page with one gloved finger.</p>
+<p>She had arrived during the first fifteen minutes of the fitting and announced that she would not interrupt. Since then, she had been reading a dispatch, turning each page with one gloved finger. Twice a secretary had come to the door, murmured something, and been answered without the Queen's eyes leaving the page. Once she had said, &ldquo;Tell him Thursday,&rdquo; and he had gone away again.</p>
 
 <p>&ldquo;A little more at the waist,&rdquo; Mrs. Hale said.</p>
 
@@ -656,7 +680,9 @@ const NOVEL_CHAPTERS = {
 
 <p>Ecaterina placed the dispatch face down on the arm of her chair and crossed the room.</p>
 
-<p>She took Elisabeta's hand between both of hers and turned it toward the window. It was such an ordinary gesture that Elisabeta could not refuse it without making something of it, so she let her mother examine the mark.</p>
+<p>At the far end, the seamstress with the tissue paper found a reason to be elsewhere.</p>
+
+<p>Ecaterina took Elisabeta's hand between both of hers and turned it toward the window. It was such an ordinary gesture that Elisabeta could not refuse it without making something of it, so she let her mother examine the mark.</p>
 
 <p>Ecaterina's hands were warm.</p>
 
@@ -696,7 +722,7 @@ const NOVEL_CHAPTERS = {
 
 <p>It was entirely reasonable.</p>
 
-<p>&ldquo;If you want to learn something,&rdquo; Ecaterina continued, her voice becoming lighter, &ldquo;you only have to tell me. Needlework is a charming idea. I know a teacher who could come to the palace twice a week. A princess taking up a craft in the months before her wedding would make a gentle story, and the papers have had very little gentle to say about us lately. We could arrange everything by Friday.&rdquo;</p>
+<p>&ldquo;If you want to learn something,&rdquo; Ecaterina continued, her voice becoming lighter, &ldquo;you only have to tell me. Needlework is a charming idea. I know a teacher who could come to the palace twice a week. A princess taking up a craft in the months before her wedding would make a gentle story. We could arrange everything by Friday.&rdquo;</p>
 
 <p>For a moment, Elisabeta could not answer.</p>
 
@@ -707,8 +733,6 @@ const NOVEL_CHAPTERS = {
 <p>Her crooked stitches would be taken from her and placed under glass.</p>
 
 <p>The story would be kind. Everything would be arranged properly, and everyone would be pleased.</p>
-
-<p>And somehow, the thing she had wanted would no longer belong to her.</p>
 
 <p>&ldquo;You said a person ought to have an occupation that belongs only to them,&rdquo; she said.</p>
 
@@ -730,7 +754,7 @@ const NOVEL_CHAPTERS = {
 
 <p>The warmth went with her.</p>
 
-<p>&ldquo;After the fourteenth, you'll have more time. I'd only be sorry to see you exhaust yourself now, of all weeks. There is so much to get through, and you've always managed it so well. I'd rather you saved your strength for what matters.&rdquo;</p>
+<p>&ldquo;After the fourteenth, you'll have more time. I'd only be sorry to see you exhaust yourself now, with so much ahead. There's a great deal to get through, and you've always managed it so well. I'd rather you saved your strength for what matters.&rdquo;</p>
 
 <p>&ldquo;Yes, Mother.&rdquo;</p>
 
@@ -748,6 +772,24 @@ const NOVEL_CHAPTERS = {
 
 <p>In the glass, a young woman in blue stood with her chin at the angle she had been taught to hold it. A small dark mark showed on one finger. Her face revealed nothing.</p>
 
+<p>When the Princess and the Queen had gone, Mrs. Hale knelt a moment longer on the carpet with her hand pressed to the small of her back, then rose with a sound she would not have made in company.</p>
+
+<p>&ldquo;Pins in the cushion, Daisy,&rdquo; she said. &ldquo;Not in the mouth, not in the cuff, not behind the ear. I've told you.&rdquo;</p>
+
+<p>&ldquo;Yes, Mrs. Hale.&rdquo; The younger seamstress was folding the tissue into a stack so neat it looked like penance. &ldquo;Was it a needle, then? The Princess's hand?&rdquo;</p>
+
+<p>&ldquo;It was a pin.&rdquo;</p>
+
+<p>&ldquo;Only the Queen said...&rdquo;</p>
+
+<p>&ldquo;The Queen asks me a great many things,&rdquo; said Mrs. Hale, taking the blue silk from the form and shaking it once, &ldquo;and I answer what I'm asked. Mind the hem on that, it's the only one that curls.&rdquo;</p>
+
+<p>Daisy minded it. The fire had burned down to a red seam. From the corridor came the slow, familiar tramp of the afternoon footmen going to change the lamps, and a voice somewhere asking, rather loudly, who had moved the ladder.</p>
+
+<p>Mrs. Hale held the bodice up to the window, found the place at the left rib where she had let the seam out an eighth of an inch, and looked at it for longer than the work required.</p>
+
+<p>&ldquo;Shortbread,&rdquo; she said. &ldquo;Take it to the kitchen before it sets. Nobody's going to eat it.&rdquo;</p>
+
 <p>That night, Elisabeta did not take out the tin.</p>
 
 <p>She sat on the edge of her bed with the lamp burning and her hands resting in her lap. For a long time, she did nothing.</p>
@@ -758,7 +800,7 @@ const NOVEL_CHAPTERS = {
 
 <p>Instead, she found herself listening to the corridor.</p>
 
-<p>A pair of boots passed her door, slow and even. They did not stop.</p>
+<p>A pair of boots passed her door, slow and even. They did not stop. Further off, a cough, the creak of a chair, the dry sound of a watch being changed. A guard said something, and another answered in the same low note.</p>
 
 <p>She had heard those same footsteps at the same hour every night for a week without giving them a second thought. Now she counted the seconds until they disappeared.</p>
 
@@ -772,9 +814,9 @@ const NOVEL_CHAPTERS = {
 
 <p>She had never thought of it as something she might want to close herself away from.</p>
 
-<p>She rose and crossed to the third drawer. After lifting the shawl, she returned the tin to its hiding place and laid her hand flat against the wood.</p>
+<p>She rose and crossed to the third drawer, lifted the shawl, and checked that the tin was where she had left it. She laid her hand flat against the wood.</p>
 
-<p>She had lived in this room for twenty-two years and had never once needed to hide anything in it.</p>
+<p>She had lived in this room for twenty-two years and, apart from a notebook, had never needed to hide anything in it until now.</p>
 
 <p>The realisation left her standing there longer than she expected.</p>
 
