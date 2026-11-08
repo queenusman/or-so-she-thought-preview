@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth theme-ivory" id="rootHtml">
+<html lang="en" class="scroll-smooth theme-dark" id="rootHtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,65 +40,65 @@
   </script>
   <style>
     /* ========================================================
-       THEME 1: LIGHT MODE (Art-Directed Archival Parchment)
+       DEFAULT: DARK MODE (Charcoal Plum Velvet)
        ======================================================== */
-    :root, .theme-ivory {
-      --color-bg: #F9F7F2;               /* Deckled Warm Ivory */
-      --color-bg-subtle: #F2EDE4;        /* Soft Linen wash */
-      --color-panel: #FCFBF8;            /* Layered Laid Paper */
-      --color-panel-hover: #F6F1EA;      /* Tactile Paper Hover */
+    :root, .theme-dark {
+      --color-bg: #3E3D43;
+      --color-bg-subtle: #343338;
+      --color-panel: #49474E;
+      --color-panel-hover: #524E57;
       
-      --color-border: #DDD5C9;          /* Bookbinder rules */
-      --color-border-subtle: #ECE5DC;   /* Inner hairline edge */
+      --color-border: #625B64;
+      --color-border-subtle: #4D4750;
       
-      --color-text: #343238;            /* Pure Letterpress Charcoal */
-      --color-text-muted: #58555E;      /* Rich narrative ink */
-      --color-text-faint: #87828D;      /* Delicate archival notation */
+      --color-text: #F8F7F5;
+      --color-text-muted: #C5BAC1;
+      --color-text-faint: #988F96;
       
-      --color-accent: #8E7D8A;          /* Muted Mauve */
-      --color-secondary: #D9C1C6;       /* Dusty Rose */
-      --color-callout-bg: rgba(217, 193, 198, 0.20);
-      
-      --header-bg: rgba(249, 247, 242, 0.94);
-      --footer-bg: #EFE9E0;
-      --primary-btn-bg: #343238;
-      --primary-btn-text: #FAF8F4;
-      --primary-btn-border: #262429;
-      --selection-bg: #D9C1C6;
-      --selection-text: #343238;
-      --card-shadow: 0 4px 20px -2px rgba(62, 61, 67, 0.04), 0 1px 3px rgba(62, 61, 67, 0.03);
-      --page-texture: radial-gradient(circle at 50% 0%, rgba(217, 193, 198, 0.08) 0%, rgba(249, 247, 242, 0) 70%);
-    }
-
-    /* ========================================================
-       THEME 2: DARK MODE (Charcoal Plum Atmosphere)
-       ======================================================== */
-    .theme-dark {
-      --color-bg: #3E3D43;               /* Dominant Charcoal Plum */
-      --color-bg-subtle: #36353A;        /* Recessed background */
-      --color-panel: #49474E;            /* Elevated surface */
-      --color-panel-hover: #514B54;      /* Hover background */
-      
-      --color-border: #625B64;          /* Subtle structural border */
-      --color-border-subtle: #4D4750;   /* Hairline divider */
-      
-      --color-text: #F8F7F5;            /* Primary warm ivory */
-      --color-text-muted: #C5BAC1;      /* Muted editorial copy */
-      --color-text-faint: #988F96;      /* Sub-metadata text */
-      
-      --color-accent: #D9C1C6;          /* Primary Accent: Dusty Rose */
-      --color-secondary: #8E7D8A;       /* Secondary Accent: Muted Mauve */
+      --color-accent: #D9C1C6;
+      --color-secondary: #8E7D8A;
       --color-callout-bg: rgba(81, 75, 84, 0.45);
       
       --header-bg: rgba(62, 61, 67, 0.94);
-      --footer-bg: #36353A;
+      --footer-bg: #343338;
       --primary-btn-bg: #D9C1C6;
       --primary-btn-text: #3E3D43;
       --primary-btn-border: #D9C1C6;
       --selection-bg: #8E7D8A;
       --selection-text: #F8F7F5;
+      --page-texture: radial-gradient(circle at 50% 0%, rgba(142, 125, 138, 0.16) 0%, rgba(62, 61, 67, 0) 70%);
       --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
-      --page-texture: radial-gradient(circle at 50% 0%, rgba(142, 125, 138, 0.12) 0%, rgba(62, 61, 67, 0) 70%);
+    }
+
+    /* ========================================================
+       THEME 2: IMMERSIVE LIGHT MODE (Deep Archival Parchment)
+       ======================================================== */
+    .theme-ivory {
+      --color-bg: #F4EFEB;             /* Rich archival parchment with body */
+      --color-bg-subtle: #E9E2DB;      /* Warm laid-paper groove */
+      --color-panel: #FAF7F2;          /* Clean cream deckle surface */
+      --color-panel-hover: #F0E8DF;    /* Tactile paper hover tone */
+      
+      --color-border: #C8BFB5;        /* Defined, authoritative bookbinder rules */
+      --color-border-subtle: #DCD4C9; /* Inner margin hairline */
+      
+      --color-text: #2D2C31;          /* Crisp high-contrast letterpress ink */
+      --color-text-muted: #4F4B54;    /* Rich, deeply legible editorial text */
+      --color-text-faint: #736C78;    /* Distinct sub-metadata */
+      
+      --color-accent: #6C5B68;        /* Bold, deeply pigmented mauve accent */
+      --color-secondary: #BFA5AC;     /* Anchored dusty rose tone */
+      --color-callout-bg: rgba(217, 193, 198, 0.32);
+      
+      --header-bg: rgba(244, 239, 235, 0.96);
+      --footer-bg: #E7DFD7;
+      --primary-btn-bg: #2D2C31;
+      --primary-btn-text: #FAF7F2;
+      --primary-btn-border: #212024;
+      --selection-bg: #D9C1C6;
+      --selection-text: #2D2C31;
+      --page-texture: radial-gradient(circle at 50% 0%, rgba(217, 193, 198, 0.25) 0%, rgba(244, 239, 235, 0) 75%);
+      --card-shadow: 0 4px 24px -2px rgba(45, 44, 49, 0.08), 0 1px 3px rgba(45, 44, 49, 0.04);
     }
 
     body {
@@ -108,7 +108,7 @@
       color: var(--color-text);
       font-family: 'Newsreader', Georgia, serif;
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
 
     ::selection {
@@ -122,7 +122,7 @@
       box-shadow: var(--card-shadow);
       position: relative;
     }
-    
+
     .theme-ivory .book-card::before {
       content: '';
       position: absolute;
@@ -147,28 +147,28 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text">
 
-  <!-- ==================== SITE HEADER ==================== -->
+  <!-- ==================== SITE HEADER WITH DUAL ARCHITECTURE ==================== -->
   <header id="siteHeader" style="background-color: var(--header-bg); border-color: var(--color-border);" class="sticky top-0 z-50 backdrop-blur-md border-b transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- Brand Link -->
+      <!-- Brand Link: Always returns Home -->
       <a href="javascript:void(0)" onclick="switchView('home')" class="group flex flex-col focus:outline-none" aria-label="Return to Home">
         <span class="font-display tracking-[0.24em] text-base md:text-lg font-semibold text-theme-text group-hover:text-theme-accent transition-colors">
           OR SO SHE THOUGHT
         </span>
-        <span class="font-sans text-[9px] tracking-[0.3em] text-theme-accent uppercase font-medium mt-0.5">
+        <span class="font-sans text-[9px] tracking-[0.3em] text-theme-accent uppercase font-semibold mt-0.5">
           A Royal Psychological Novel
         </span>
       </a>
 
-      <!-- Primary Navigation: Two Wings -->
+      <!-- Primary Navigation: Two Distinct Wings -->
       <nav class="hidden lg:flex items-center space-x-8 text-xs font-sans uppercase tracking-[0.18em]">
         
         <!-- SECTION ONE: EXPLORE THE NOVEL -->
         <div class="flex items-center space-x-6 border-r border-theme-border pr-8">
-          <span class="text-[9px] tracking-[0.26em] uppercase font-semibold text-theme-secondary font-sans">
+          <span class="text-[9px] tracking-[0.26em] uppercase font-bold text-theme-secondary font-sans">
             Explore
           </span>
           <button onclick="switchView('prologue')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="prologue">
@@ -184,7 +184,7 @@
 
         <!-- SECTION TWO: READ THE NOVEL -->
         <div class="flex items-center space-x-6">
-          <span class="text-[9px] tracking-[0.26em] uppercase font-semibold text-theme-secondary font-sans">
+          <span class="text-[9px] tracking-[0.26em] uppercase font-bold text-theme-secondary font-sans">
             Read
           </span>
           <button onclick="openReaderIndex('crowned')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="reader">
@@ -197,7 +197,7 @@
 
       </nav>
 
-      <!-- Global Theme Switcher & Mobile Menu Trigger -->
+      <!-- Global Theme Switcher & Mobile Menu Trigger (Defaults to Dark Mode with prompt for Ivory Mode) -->
       <div class="flex items-center space-x-3">
         <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle theme palette" class="px-3.5 py-1.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center gap-2 bg-theme-panel shadow-sm">
           <svg id="themeIconSun" class="w-3.5 h-3.5 inline-block text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -206,7 +206,7 @@
           <svg id="themeIconMoon" class="w-3.5 h-3.5 hidden text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
-          <span id="themeToggleText">Night Mode</span>
+          <span id="themeToggleText">Ivory Mode</span>
         </button>
 
         <button onclick="toggleMobileNav()" class="p-2 lg:hidden text-theme-text hover:text-theme-accent focus:outline-none" aria-label="Open mobile menu">
@@ -220,7 +220,7 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-bg px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
       <div>
-        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
+        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Explore the Novel
         </p>
         <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">1. Prologue / About</button>
@@ -228,7 +228,7 @@
         <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">3. Characters</button>
       </div>
       <div>
-        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
+        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Read the Novel
         </p>
         <button onclick="openReaderIndex('crowned'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">1. Chapters</button>
@@ -242,11 +242,11 @@
     <!-- ==================== HOME GATEWAY ==================== -->
     <section id="view-home" class="view-section view-visible max-w-4xl mx-auto px-6 py-20 md:py-28 text-center">
       <div class="inline-flex items-center gap-2 mb-6 text-theme-secondary">
-        <span class="w-6 h-px bg-theme-secondary/60"></span>
-        <span class="font-sans text-[10px] uppercase tracking-[0.38em] font-semibold">
+        <span class="w-6 h-px bg-theme-secondary/70"></span>
+        <span class="font-sans text-[10px] uppercase tracking-[0.38em] font-bold">
           A Royal Psychological Novel
         </span>
-        <span class="w-6 h-px bg-theme-secondary/60"></span>
+        <span class="w-6 h-px bg-theme-secondary/70"></span>
       </div>
       
       <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-normal text-theme-text tracking-[0.16em] uppercase leading-[1.12] mb-8">
@@ -254,10 +254,10 @@
       </h1>
       
       <!-- Literary Device Ornament -->
-      <div class="flex items-center justify-center gap-3 my-8 opacity-80">
-        <div class="w-12 h-px bg-theme-secondary"></div>
+      <div class="flex items-center justify-center gap-3 my-8 opacity-90">
+        <div class="w-12 h-px bg-theme-border"></div>
         <div class="text-xs text-theme-accent select-none">✦</div>
-        <div class="w-12 h-px bg-theme-secondary"></div>
+        <div class="w-12 h-px bg-theme-border"></div>
       </div>
       
       <p class="text-xl md:text-2xl font-serif italic text-theme-text-muted max-w-2xl mx-auto leading-relaxed font-light mb-16">
@@ -271,10 +271,10 @@
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-semibold">Section One</span>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section One</span>
               <span class="font-serif italic text-xs text-theme-text-faint">Part I</span>
             </div>
-            <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors">
+            <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Explore the Novel
             </h2>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
@@ -297,10 +297,10 @@
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-semibold">Section Two</span>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section Two</span>
               <span class="font-serif italic text-xs text-theme-text-faint">Part II</span>
             </div>
-            <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors">
+            <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Read the Novel
             </h2>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
@@ -327,7 +327,7 @@
     <!-- 1. PROLOGUE / ABOUT THE STORY -->
     <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
           Section One: Explore the Novel &bull; 1 / 3
         </span>
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
@@ -336,20 +336,20 @@
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide">About the Story</h2>
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">About the Story</h2>
         <p class="font-serif text-theme-text-muted text-base font-light italic">
           The premise, the central conflict, and the making of a choice.
         </p>
       </div>
 
       <!-- Premise Dossier -->
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text-muted leading-relaxed mb-12">
-        <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-semibold block pb-2 border-b border-theme-border-subtle">
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12">
+        <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block pb-2 border-b border-theme-border-subtle">
           The Inherited World &bull; Elisabeta’s Story
         </span>
         
         <p>
-          Born into the royal family of Norwyn, <strong class="text-theme-text font-semibold">Princess Elisabeta</strong> has never had to imagine a life outside the one prepared for her. Her world has its own order, its traditions, its expectations and its understanding of what makes a good life. Within it, almost everything has an explanation, and almost every decision has its proper place.
+          Born into the royal family of Norwyn, <strong class="text-theme-text font-bold">Princess Elisabeta</strong> has never had to imagine a life outside the one prepared for her. Her world has its own order, its traditions, its expectations and its understanding of what makes a good life. Within it, almost everything has an explanation, and almost every decision has its proper place.
         </p>
         <p>
           She has grown up knowing what is expected of her, what her future will look like, and what it means to belong to the family that will one day shape the kingdom's future.
@@ -358,7 +358,7 @@
           But as marriage, family relationships and the responsibilities of the crown begin to bring those expectations into sharper focus, Elisabeta finds herself confronting questions she has never had much reason to ask.
         </p>
         
-        <div class="my-6 p-6 border-l-2 border-theme-accent bg-theme-bg-subtle/80 rounded-r-sm">
+        <div class="my-6 p-6 border-l-2 border-theme-accent bg-theme-callout-bg rounded-r-sm">
           <p class="italic text-theme-text text-base md:text-lg leading-relaxed">
             What happens when the life you have always understood begins to look different from the inside? When does duty become something you believe in, and when is it simply something you have learned to accept? And how do you distinguish between what you genuinely want and what you have spent your life learning to want?
           </p>
@@ -383,7 +383,7 @@
     <!-- 2. THE WORLD -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
           Section One: Explore the Novel &bull; 2 / 3
         </span>
         <button onclick="switchView('prologue')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
@@ -392,7 +392,7 @@
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide">The World of Norwyn</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The World of Norwyn</h2>
         <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
           Physical geography designed not for splendor, but for continuity, observation, and defensible survival.
         </p>
@@ -401,8 +401,8 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="book-card p-8 rounded-sm flex flex-col justify-between">
           <div>
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-2">The Capital</span>
-            <h3 class="font-display text-xl text-theme-text mb-3">The White Spires & Siding</h3>
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-2">The Capital</span>
+            <h3 class="font-display text-xl text-theme-text mb-3 font-semibold">The White Spires & Siding</h3>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
               Where boulevards, motorcades, and grand administrative Spires mask narrow service lanes, river works, and freight rail yards behind the palace walls.
             </p>
@@ -414,8 +414,8 @@
 
         <div class="book-card p-8 rounded-sm flex flex-col justify-between">
           <div>
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-2">The Southern Reach</span>
-            <h3 class="font-display text-xl text-theme-text mb-3">Valenne Dominion</h3>
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-2">The Southern Reach</span>
+            <h3 class="font-display text-xl text-theme-text mb-3 font-semibold">Valenne Dominion</h3>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
               Norwyn’s wealthy neighbor and partner, featuring fertile river basins, high grain yields, busy southern ports, and strict legalistic discipline.
             </p>
@@ -427,8 +427,8 @@
 
         <div class="book-card p-8 rounded-sm flex flex-col justify-between">
           <div>
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-2">The Timber & River Districts</span>
-            <h3 class="font-display text-xl text-theme-text mb-3">The High Forests & Rail Yards</h3>
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-2">The Timber & River Districts</span>
+            <h3 class="font-display text-xl text-theme-text mb-3 font-semibold">The High Forests & Rail Yards</h3>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
               Where high-forest timber comes down after the spring thaw to sit under tarpaulins at the rail yards, awaiting the Crown's fixed inspection schedules.
             </p>
@@ -453,7 +453,7 @@
     <!-- 3. CHARACTERS -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
           Section One: Explore the Novel &bull; 3 / 3
         </span>
         <button onclick="switchView('world')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
@@ -462,7 +462,7 @@
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide">Persons of Record</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">Persons of Record</h2>
         <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
           None are villains; none are symbols. Each operates within the plausible reality shaped for them.
         </p>
@@ -472,8 +472,8 @@
         <!-- Elisabeta -->
         <div class="book-card p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text">Princess Elisabeta</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">The Heiress</span>
+            <h3 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h3>
+            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Heiress</span>
           </div>
           <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
           <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
@@ -484,8 +484,8 @@
         <!-- Queen Ecaterina -->
         <div class="book-card p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text">Queen Ecaterina</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">The Mother</span>
+            <h3 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h3>
+            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Mother</span>
           </div>
           <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
           <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
@@ -496,8 +496,8 @@
         <!-- Alexandru -->
         <div class="book-card p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text">Alexandru of Valenne</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">The Intended</span>
+            <h3 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h3>
+            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Intended</span>
           </div>
           <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
           <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
@@ -508,8 +508,8 @@
         <!-- Lucian -->
         <div class="book-card p-8 rounded-sm">
           <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text">Lucian</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">The Joiner’s Son</span>
+            <h3 class="font-display text-xl text-theme-text font-semibold">Lucian</h3>
+            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner’s Son</span>
           </div>
           <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
           <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
@@ -537,7 +537,7 @@
       <!-- Reader Controls & Orientation Bar -->
       <div class="max-w-3xl mx-auto px-6 mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-theme-border pb-5">
         <div class="flex items-center space-x-3">
-          <span class="text-[9px] font-sans tracking-[0.25em] uppercase font-semibold text-theme-secondary">Section Two: Read</span>
+          <span class="text-[9px] font-sans tracking-[0.25em] uppercase font-bold text-theme-secondary">Section Two: Read</span>
           <span class="text-theme-border">|</span>
           <button onclick="openReaderIndex('crowned')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
             <span>&larr;</span> <span>Chapters Index</span>
@@ -563,7 +563,7 @@
     <!-- 2. ARCHIVE -->
     <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
-        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-semibold">
+        <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
           Section Two: Read the Novel &bull; Archive Vault
         </span>
         <button onclick="openReaderIndex('crowned')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
@@ -572,9 +572,9 @@
       </div>
 
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide">The Norwyn Archive</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Norwyn Archive</h2>
         <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
-          Official history records what institutions wanted remembered. Click <strong class="text-theme-accent font-medium">"Look Twice"</strong> to uncover the private marginalia beneath the decrees.
+          Official history records what institutions wanted remembered. Click <strong class="text-theme-accent font-semibold">"Look Twice"</strong> to uncover the private marginalia beneath the decrees.
         </p>
       </div>
 
@@ -583,8 +583,8 @@
         <div class="book-card p-7 md:p-9 rounded-sm">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border-subtle mb-6">
             <div>
-              <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-secondary font-semibold block">Record #0012-A &bull; Treaty of the First Stones</span>
-              <h3 class="font-display text-xl text-theme-text mt-1">Edict on the Consanguine League of Valenne</h3>
+              <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-secondary font-bold block">Record #0012-A &bull; Treaty of the First Stones</span>
+              <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Edict on the Consanguine League of Valenne</h3>
             </div>
             
             <button onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm">
@@ -592,7 +592,7 @@
             </button>
           </div>
 
-          <div class="font-serif text-base text-theme-text-muted leading-relaxed">
+          <div class="font-serif text-base text-theme-text leading-relaxed">
             <p>
               "Let it be inscribed: Henceforth, Norwyn and the House of Valenne shall govern under marital concord. The royal heir shall betroth the direct issue of Valenne at their eighteenth summer, assuring unbroken sovereignty and the defense of the northern trade gates."
             </p>
@@ -612,8 +612,8 @@
         <div class="book-card p-7 md:p-9 rounded-sm">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border-subtle mb-6">
             <div>
-              <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-secondary font-semibold block">Record #0087-C &bull; Royal Nursery Directive</span>
-              <h3 class="font-display text-xl text-theme-text mt-1">Memorandum on Elisabeta’s Schedule</h3>
+              <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-secondary font-bold block">Record #0087-C &bull; Royal Nursery Directive</span>
+              <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Memorandum on Elisabeta’s Schedule</h3>
             </div>
             
             <button onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm">
@@ -621,7 +621,7 @@
             </button>
           </div>
 
-          <div class="font-serif text-base text-theme-text-muted leading-relaxed">
+          <div class="font-serif text-base text-theme-text leading-relaxed">
             <p>
               "The Princess should be instructed in continental cadence, state economics, and music. Under no circumstance should her schedule permit unregulated retreat. Solitude invites melancholy in future rulers; purpose is the greatest armor a daughter of Norwyn can wear."
             </p>
@@ -655,7 +655,7 @@
   <footer id="siteFooter" style="background-color: var(--footer-bg); border-color: var(--color-border);" class="border-t py-10 transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <div class="text-xs text-theme-secondary mb-3">✦</div>
-      <div class="text-xs font-sans tracking-[0.2em] text-theme-text-muted uppercase">
+      <div class="text-xs font-sans tracking-[0.2em] text-theme-text-muted uppercase font-medium">
         &copy; 2026 Queen Usman. All rights reserved.
       </div>
     </div>
@@ -670,7 +670,7 @@
     let activeEra = 'crowned';
     let activeChapterIndex = null;
     let baseFontSize = 18;
-    let isIvoryMode = true; // Initialized to the refined Light Mode
+    let isIvoryMode = false; // Default: Dark Mode active
 
     function switchView(viewId) {
       const views = ['home', 'prologue', 'world', 'characters', 'reader', 'archive'];
@@ -691,10 +691,10 @@
       // Update Nav Buttons
       document.querySelectorAll('.nav-button').forEach(btn => {
         if (btn.getAttribute('data-page') === viewId) {
-          btn.classList.add('text-theme-text', 'border-theme-accent', 'font-medium');
+          btn.classList.add('text-theme-text', 'border-theme-accent', 'font-semibold');
           btn.classList.remove('text-theme-text-muted', 'border-transparent');
         } else {
-          btn.classList.remove('text-theme-text', 'border-theme-accent', 'font-medium');
+          btn.classList.remove('text-theme-text', 'border-theme-accent', 'font-semibold');
           btn.classList.add('text-theme-text-muted', 'border-transparent');
         }
       });
@@ -733,8 +733,8 @@
         const chapterButtonsHtml = eraChapters.map((ch, idx) => `
           <button onclick="selectChapter('${activeEra}', ${idx})" class="book-card w-full text-left p-6 hover:border-theme-accent hover:bg-theme-panel-hover transition-all rounded-sm group flex items-center justify-between">
             <div>
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-semibold block mb-1.5">${ch.number}</span>
-              <h3 class="font-display text-lg text-theme-text group-hover:text-theme-accent transition-colors">${ch.title}</h3>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-1.5">${ch.number}</span>
+              <h3 class="font-display text-lg text-theme-text group-hover:text-theme-accent transition-colors font-semibold">${ch.title}</h3>
             </div>
             <span class="text-xs font-sans uppercase tracking-widest text-theme-text-muted group-hover:text-theme-text">&rarr; Read Chapter</span>
           </button>
@@ -742,7 +742,7 @@
 
         mainContainer.innerHTML = `
           <div class="text-center mb-12 space-y-2">
-            <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide">${eraTitle}</h2>
+            <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">${eraTitle}</h2>
             <p class="font-serif text-sm text-theme-text-muted italic">${eraSubtitle}</p>
           </div>
           <div class="space-y-4">
@@ -767,7 +767,7 @@
 
       const formattedParagraphs = paragraphs.map((para, idx) => {
         if (idx === 0) {
-          return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text">${para}</p>`;
+          return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text font-serif">${para}</p>`;
         }
         if (para.startsWith('>')) {
           return `<p class="italic text-theme-text pl-5 border-l-2 border-theme-secondary my-8 bg-theme-callout-bg py-3 pr-4 rounded-r-sm">${para.replace(/^>\s*/, '')}</p>`;
@@ -789,8 +789,8 @@
       mainContainer.innerHTML = `
         <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
           <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-semibold">The Crowned Era &bull; ${chapter.number}</p>
-            <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide">${chapter.title}</h2>
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-bold">The Crowned Era &bull; ${chapter.number}</p>
+            <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide font-semibold">${chapter.title}</h2>
             <div class="flex items-center justify-center gap-3 mt-6">
               <span class="w-8 h-px bg-theme-border"></span>
               <span class="text-theme-secondary text-[10px]">✦</span>
@@ -842,17 +842,19 @@
       const iconMoon = document.getElementById('themeIconMoon');
 
       if (isIvoryMode) {
+        // Switch to Immersive Ivory Mode
         rootHtml.classList.remove('theme-dark');
         rootHtml.classList.add('theme-ivory');
         if (themeText) themeText.textContent = "Night Mode";
-        if (iconSun) iconSun.classList.remove('hidden');
-        if (iconMoon) iconMoon.classList.add('hidden');
+        if (iconSun) iconSun.classList.add('hidden');
+        if (iconMoon) iconMoon.classList.remove('hidden');
       } else {
+        // Switch back to Dark Mode
         rootHtml.classList.remove('theme-ivory');
         rootHtml.classList.add('theme-dark');
         if (themeText) themeText.textContent = "Ivory Mode";
-        if (iconSun) iconSun.classList.add('hidden');
-        if (iconMoon) iconMoon.classList.remove('hidden');
+        if (iconSun) iconSun.classList.remove('hidden');
+        if (iconMoon) iconMoon.classList.add('hidden');
       }
     }
 
