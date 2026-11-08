@@ -834,10 +834,8 @@ const NOVEL_CHAPTERS = {
 
 <p>She had not realised how much she had wanted that.</p>
       `
-    }
-  ]
-};
-{
+    },
+    {
       eraLabel: "The Crowned Era: Elisabeta",
       number: "Chapter Four",
       title: "The Study Sessions",
@@ -1423,3 +1421,5 @@ const NOVEL_CHAPTERS = {
 
       `
     }
+  ]
+};
