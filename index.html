@@ -84,7 +84,7 @@
       --color-panel-hover: #F0E8DF;    /* Tactile paper hover tone */
       
       --color-border: #C8BFB5;        /* Defined, authoritative bookbinder rules */
-      --color-border-subtle: #DCD4C9; /* Inner margin hairline */
+      --color-border-subtle: #DCD4C9; /* Subtle divider */
       
       --color-text: #2D2C31;          /* Crisp high-contrast letterpress ink */
       --color-text-muted: #4F4B54;    /* Rich, deeply legible editorial text */
@@ -127,15 +127,6 @@
       position: relative;
     }
 
-    .theme-ivory .book-card::before {
-      content: '';
-      position: absolute;
-      inset: 3px;
-      border: 1px solid var(--color-border-subtle);
-      pointer-events: none;
-      border-radius: 1px;
-    }
-
     .view-section {
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
@@ -159,7 +150,6 @@
       
       <!-- Brand Link with Sovereign Coronet Emblem -->
       <a href="javascript:void(0)" onclick="switchView('home')" class="group flex items-center gap-3.5 focus:outline-none" aria-label="Return to Home">
-        <!-- Option 1: The Sovereign Coronet Icon Box -->
         <div class="w-9 h-9 rounded-sm border border-theme-border flex items-center justify-center bg-theme-panel group-hover:border-theme-accent transition-all shadow-sm shrink-0">
           <svg class="w-5 h-5 text-theme-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 17L2 8l5 3.5 5-6.5 5 6.5 5-3.5-2 9H4z" />
@@ -857,14 +847,12 @@
       const iconMoon = document.getElementById('themeIconMoon');
 
       if (isIvoryMode) {
-        // Switch to Immersive Ivory Mode
         rootHtml.classList.remove('theme-dark');
         rootHtml.classList.add('theme-ivory');
         if (themeText) themeText.textContent = "Night Mode";
         if (iconSun) iconSun.classList.add('hidden');
         if (iconMoon) iconMoon.classList.remove('hidden');
       } else {
-        // Switch back to Dark Mode
         rootHtml.classList.remove('theme-ivory');
         rootHtml.classList.add('theme-dark');
         if (themeText) themeText.textContent = "Ivory Mode";
