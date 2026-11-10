@@ -169,7 +169,7 @@
         </div>
       </a>
 
-      <!-- Primary Navigation: Two Distinct Wings -->
+      <!-- Primary Navigation: Two Distinct Wings ("Prologue" updated to "Premise") -->
       <nav class="hidden lg:flex items-center space-x-8 text-xs font-sans uppercase tracking-[0.18em]">
         
         <!-- SECTION ONE -->
@@ -178,7 +178,7 @@
             Section One
           </span>
           <button onclick="switchView('prologue')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="prologue">
-            Prologue
+            Premise
           </button>
           <button onclick="switchView('world')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="world">
             The World
@@ -229,7 +229,7 @@
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Section One
         </p>
-        <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Prologue</button>
+        <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Premise</button>
         <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World</button>
         <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Characters</button>
       </div>
@@ -270,10 +270,10 @@
         A Novel About Inheritance, Duty, And The Fragile Distance Between The Life Expected And The Life Desired.
       </p>
 
-      <!-- Dual Portal Gateway Cards -->
+      <!-- Dual Portal Gateway Cards with Classy, Slim Interactive Action Buttons -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
         
-        <!-- Experience Portal 1: Explore -->
+        <!-- Experience Portal 1: Before You Begin -->
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -285,20 +285,26 @@
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
               Step into Norwyn and discover the world, the people, and the circumstances behind Or So She Thought before beginning the story.
             </p>
-            <div class="border-t border-theme-border-subtle pt-4 mb-8">
-              <ul class="text-[11px] font-sans uppercase tracking-[0.16em] text-theme-text-faint space-y-2">
-                <li class="flex items-center gap-2"><span class="text-theme-secondary text-[8px]">&diams;</span> The Premise</li>
-                <li class="flex items-center gap-2"><span class="text-theme-secondary text-[8px]">&diams;</span> The World of Norwyn</li>
-                <li class="flex items-center gap-2"><span class="text-theme-secondary text-[8px]">&diams;</span> The Characters</li>
-              </ul>
+            
+            <!-- Slim, Classy Interactive Option Buttons -->
+            <div class="border-t border-theme-border-subtle pt-5 space-y-2.5">
+              <button onclick="switchView('prologue')" class="w-full py-2 px-3.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center justify-between bg-theme-bg/40">
+                <span>&diams; The Premise</span>
+                <span>&rarr;</span>
+              </button>
+              <button onclick="switchView('world')" class="w-full py-2 px-3.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center justify-between bg-theme-bg/40">
+                <span>&diams; The World of Norwyn</span>
+                <span>&rarr;</span>
+              </button>
+              <button onclick="switchView('characters')" class="w-full py-2 px-3.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center justify-between bg-theme-bg/40">
+                <span>&diams; The Characters</span>
+                <span>&rarr;</span>
+              </button>
             </div>
           </div>
-          <button onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="w-full py-3.5 px-6 font-sans text-xs font-semibold tracking-[0.22em] uppercase rounded-sm hover:opacity-90 transition-all text-center shadow-sm">
-            Explore the Novel &rarr;
-          </button>
         </div>
 
-        <!-- Experience Portal 2: Read -->
+        <!-- Experience Portal 2: Read the Novel -->
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -310,16 +316,19 @@
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
               This is where Elisabeta's story unfolds. Settle into the chapters, follow the story at your own pace, and explore the documents and historical records that offer another glimpse into Norwyn.
             </p>
-            <div class="border-t border-theme-border-subtle pt-4 mb-8">
-              <ul class="text-[11px] font-sans uppercase tracking-[0.16em] text-theme-text-faint space-y-2">
-                <li class="flex items-center gap-2"><span class="text-theme-secondary text-[8px]">&diams;</span> Read the Chapters</li>
-                <li class="flex items-center gap-2"><span class="text-theme-secondary text-[8px]">&diams;</span> The Norwyn Archives</li>
-              </ul>
+            
+            <!-- Slim, Classy Interactive Option Buttons -->
+            <div class="border-t border-theme-border-subtle pt-5 space-y-2.5">
+              <button onclick="openReaderIndex('crowned')" class="w-full py-2 px-3.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center justify-between bg-theme-bg/40">
+                <span>&diams; Read the Chapters</span>
+                <span>&rarr;</span>
+              </button>
+              <button onclick="switchView('archive')" class="w-full py-2 px-3.5 border border-theme-border rounded-sm text-[11px] font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center justify-between bg-theme-bg/40">
+                <span>&diams; The Norwyn Archives</span>
+                <span>&rarr;</span>
+              </button>
             </div>
           </div>
-          <button onclick="openReaderIndex('crowned')" class="w-full py-3.5 px-6 font-sans text-xs font-semibold tracking-[0.22em] uppercase rounded-sm border border-theme-border hover:border-theme-accent text-theme-text transition-all text-center bg-theme-panel hover:bg-theme-panel-hover shadow-sm">
-            Read Chapters &rarr;
-          </button>
         </div>
 
       </div>
@@ -327,11 +336,11 @@
 
     <!-- ==================== SECTION ONE: EXPLORE THE NOVEL ==================== -->
 
-    <!-- 1. PROLOGUE / ABOUT THE STORY -->
+    <!-- 1. PREMISE / ABOUT THE STORY -->
     <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
-          Section One: Explore the Novel &bull; 1 / 3
+          Section One: Premise &bull; 1 / 3
         </span>
         <button onclick="switchView('home')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
           <span>&larr;</span> <span>Home</span>
@@ -387,10 +396,10 @@
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
-          Section One: Explore the Novel &bull; 2 / 3
+          Section One: The World &bull; 2 / 3
         </span>
         <button onclick="switchView('prologue')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
-          <span>&larr;</span> <span>Prologue</span>
+          <span>&larr;</span> <span>Premise</span>
         </button>
       </div>
 
@@ -445,7 +454,7 @@
       <!-- Navigation Step Forward -->
       <div class="mt-14 pt-8 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
         <button onclick="switchView('prologue')" class="text-theme-text-muted hover:text-theme-text transition-colors">
-          &larr; Back to Prologue
+          &larr; Back to Premise
         </button>
         <button onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity">
           Continue: Characters &rarr;
@@ -457,7 +466,7 @@
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
-          Section One: Explore the Novel &bull; 3 / 3
+          Section One: Characters &bull; 3 / 3
         </span>
         <button onclick="switchView('world')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
           <span>&larr;</span> <span>The World</span>
@@ -564,7 +573,7 @@
     <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="mb-10 flex items-center justify-between pb-4 border-b border-theme-border">
         <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-theme-secondary font-bold">
-          Section Two: Read the Novel &bull; Archive Vault
+          Section Two: Archive Vault
         </span>
         <button onclick="openReaderIndex('crowned')" class="font-sans text-xs uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors">
           <span>&larr;</span> <span>Back to Chapters</span>
@@ -848,8 +857,8 @@
         rootHtml.classList.remove('theme-ivory');
         rootHtml.classList.add('theme-dark');
         if (themeText) themeText.textContent = "Ivory Mode";
-        if (iconSun) iconSun.classList.add('hidden');
-        if (iconMoon) iconMoon.classList.remove('hidden');
+        if (iconSun) iconSun.classList.remove('hidden');
+        if (iconMoon) iconMoon.classList.add('hidden');
       }
 
       isIvoryMode = ivory;
