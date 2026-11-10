@@ -65,9 +65,12 @@
       
       --header-bg: rgba(62, 61, 67, 0.94);
       --footer-bg: #343338;
+      
+      /* Primary Button Styling (Uniform across modes) */
       --primary-btn-bg: #D9C1C6;
       --primary-btn-text: #3E3D43;
       --primary-btn-border: #D9C1C6;
+      
       --selection-bg: #8E7D8A;
       --selection-text: #F8F7F5;
       --page-texture: radial-gradient(circle at 50% 0%, rgba(142, 125, 138, 0.16) 0%, rgba(62, 61, 67, 0) 70%);
@@ -75,12 +78,12 @@
     }
 
     /* ========================================================
-       THEME 2: INVERSE LIGHT MODE (High-Contrast Visible Rose)
+       THEME 2: INVERSE LIGHT MODE (Matching Panel Header & Uniform Buttons)
        ======================================================== */
     .theme-ivory {
       --color-bg: #F8F7F5;               /* Direct inverse of #3E3D43 */
       --color-bg-subtle: #F1ECE5;        /* Direct inverse of #343338 */
-      --color-panel: #EDEAE4;            /* Direct inverse of #49474E */
+      --color-panel: #EDEAE4;            /* Container/Card surface */
       --color-panel-hover: #E2DDD5;      /* Direct inverse of #524E57 */
       
       --color-border: #CCC4BC;          /* Direct inverse of #625B64 */
@@ -94,11 +97,15 @@
       --color-secondary: #B27B91;       /* Deep Rose for structural labels */
       --color-callout-bg: rgba(178, 123, 145, 0.16);
       
-      --header-bg: rgba(248, 247, 245, 0.94);
-      --footer-bg: #F1ECE5;
-      --primary-btn-bg: #3E3D43;
-      --primary-btn-text: #F8F7F5;
-      --primary-btn-border: #3E3D43;
+      /* Navigation header matches container color (#EDEAE4) */
+      --header-bg: rgba(237, 234, 228, 0.96);
+      --footer-bg: #EDEAE4;
+      
+      /* Primary Button Styling (Uniform: identical to dark mode) */
+      --primary-btn-bg: #D9C1C6;
+      --primary-btn-text: #3E3D43;
+      --primary-btn-border: #D9C1C6;
+      
       --selection-bg: #B27B91;
       --selection-text: #F8F7F5;
       --page-texture: radial-gradient(circle at 50% 0%, rgba(178, 123, 145, 0.12) 0%, rgba(248, 247, 245, 0) 70%);
@@ -223,7 +230,7 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-bg px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
+    <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
       <div>
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Explore the Novel
@@ -839,14 +846,13 @@
       }
     }
 
-    function toggleGlobalTheme() {
-      isIvoryMode = !isIvoryMode;
+    function applyTheme(ivory) {
       const rootHtml = document.getElementById('rootHtml');
       const themeText = document.getElementById('themeToggleText');
       const iconSun = document.getElementById('themeIconSun');
       const iconMoon = document.getElementById('themeIconMoon');
 
-      if (isIvoryMode) {
+      if (ivory) {
         rootHtml.classList.remove('theme-dark');
         rootHtml.classList.add('theme-ivory');
         if (themeText) themeText.textContent = "Night Mode";
@@ -859,6 +865,13 @@
         if (iconSun) iconSun.classList.remove('hidden');
         if (iconMoon) iconMoon.classList.add('hidden');
       }
+
+      isIvoryMode = ivory;
+      localStorage.setItem('novel_theme_mode', ivory ? 'ivory' : 'dark');
+    }
+
+    function toggleGlobalTheme() {
+      applyTheme(!isIvoryMode);
     }
 
     function toggleMobileNav() {
@@ -867,6 +880,12 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('novel_theme_mode');
+      if (savedTheme === 'ivory') {
+        applyTheme(true);
+      } else {
+        applyTheme(false); // Default to Dark Mode
+      }
       switchView('home');
     });
   </script>
