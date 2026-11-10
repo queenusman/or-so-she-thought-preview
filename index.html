@@ -368,10 +368,10 @@
 
       <!-- Navigation Step Forward -->
       <div class="pt-8 border-t border-theme-border flex items-center justify-between text-xs font-sans uppercase tracking-[0.2em]">
-        <button onclick="switchView('home')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+        <button type="button" onclick="switchView('home')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
           &larr; Return Home
         </button>
-        <button onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="px-7 py-3.5 font-semibold rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
+        <button type="button" onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="px-7 py-3.5 font-semibold rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
           Continue: The World of Norwyn &rarr;
         </button>
       </div>
@@ -379,64 +379,178 @@
 
     <!-- 2. THE WORLD OF NORWYN -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">WELCOME TO NORWYN</h2>
-        <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed space-y-4">
-          An island kingdom with a history of its own, Norwyn is a place shaped by its monarchy, its customs, its landscape and the people who live within it.<br><br>
-          Its royal household occupies a position unlike that of any other family in the kingdom. Its traditions have been carried across generations, its institutions preserve the authority of the Crown, and its people have built ordinary lives within a society where birth and position matter.<br><br>
-          Beyond the palace gates lies a country of towns, settlements, trade, changing seasons and established ways of life.<br><br>
-          This is Norwyn: the kingdom in which Or So She Thought takes place.<br><br>
-          Explore its history, government, society and everyday life before beginning the story.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="book-card p-8 rounded-sm flex flex-col justify-between">
-          <div>
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-2">The Capital</span>
-            <h3 class="font-display text-xl text-theme-text mb-3 font-semibold">The White Spires & Siding</h3>
-            <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
-              Where boulevards, motorcades, and grand administrative Spires mask narrow service lanes, river works, and freight rail yards behind the palace walls.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-theme-border-subtle text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">
-            Seat of Queen Ecaterina & Elisabeta
-          </div>
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
+        <div>
+          <h2 class="font-display text-3xl md:text-5xl text-theme-heading tracking-wide mb-3 font-semibold uppercase">THE WORLD OF NORWYN</h2>
+          <p class="font-serif italic text-base text-theme-text-muted">Discover the kingdom behind the story.</p>
+          <div class="w-12 h-px bg-theme-border mx-auto my-6"></div>
         </div>
 
-        <div class="book-card p-8 rounded-sm flex flex-col justify-between">
-          <div>
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-2">The Southern Reach</span>
-            <h3 class="font-display text-xl text-theme-text mb-3 font-semibold">Valenne Dominion</h3>
-            <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
-              Norwyn’s wealthy neighbor and partner, featuring fertile river basins, high grain yields, busy southern ports, and strict legalistic discipline.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-theme-border-subtle text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">
-            Domain of Alexandru
-          </div>
+        <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-base md:text-lg text-theme-text leading-relaxed text-left">
+          <p>
+            Every story has a world beyond its characters. A place with its own history, traditions and ways of life. A place where people grow up learning what is familiar, what is expected of them and where they belong.
+          </p>
+          <p>
+            Norwyn is an island kingdom ruled by an absolute monarchy. The royal family holds a prominent place in its society, but the kingdom extends far beyond the palace. Its towns, households and places of work are home to people whose lives are shaped by their own circumstances, relationships and responsibilities.
+          </p>
+          <p>
+            Tradition, family and social position influence much of life in Norwyn. They affect how people understand their place in society, what opportunities are available to them and what others expect them to become.
+          </p>
+          <p class="font-serif italic text-theme-heading pt-2">
+            This is the kingdom in which Or So She Thought takes place.
+          </p>
         </div>
 
-        <div class="book-card p-8 rounded-sm flex flex-col justify-between">
-          <div>
-            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-2">The Timber & River Districts</span>
-            <h3 class="font-display text-xl text-theme-text mb-3 font-semibold">The High Forests & Rail Yards</h3>
-            <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mb-6">
-              Where high-forest timber comes down after the spring thaw to sit under tarpaulins at the rail yards, awaiting the Crown's fixed inspection schedules.
+        <!-- Detailed Sections 1 to 8 -->
+        <div class="space-y-8 font-serif text-base text-theme-text leading-relaxed text-left">
+          
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">1. THE KINGDOM</span>
+            <p>
+              Norwyn is an island kingdom with its own monarchy and established traditions. Its capital, known simply as the Capital, is situated inland.
+            </p>
+            <p>
+              Beyond the royal residence are towns and settlements where people live, work and trade. These communities form part of a wider society connected by the movement of people and goods.
+            </p>
+            <p>
+              Although the palace is central to the kingdom's public life, it is only one part of Norwyn. The country has a life of its own beyond the royal household, shaped by the everyday activities of the people who live there.
             </p>
           </div>
-          <div class="pt-4 border-t border-theme-border-subtle text-[11px] font-sans uppercase tracking-wider text-theme-text-faint">
-            Domain of Lucian
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">02. THE CROWN AND THE MONARCHY</span>
+            <p>
+              Norwyn is governed by an absolute monarchy, with the Crown holding the highest authority in the kingdom.
+            </p>
+            <p>
+              The throne passes through the female line. Succession follows the maternal royal lineage, making the queen's family line central to the continuation of the monarchy.
+            </p>
+            <p>
+              This principle is reflected in the royal family's naming tradition. Children born into the family inherit their mother's royal family name, preserving the maternal line across generations.
+            </p>
+            <p>
+              There is also a distinction in the titles held within the royal marriage. The husband of a reigning queen remains a Prince rather than becoming King.
+            </p>
+            <p>
+              These traditions shape the structure of the monarchy and influence how the royal family understands inheritance, position and continuity.
+            </p>
           </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">03. THE ROYAL FAMILY AND SOCIETY</span>
+            <p>
+              In Norwyn, society is organised around two principal social classes: royals and non-royals.
+            </p>
+            <p>
+              Being born into the royal family means belonging to an institution with a position of its own. Royal birth brings privileges, but it also carries responsibilities and expectations that extend beyond the individual.
+            </p>
+            <p>
+              The wider population belongs to the non-royal class. Within it, however, people live under different circumstances. Family background, occupation, personal relationships and access to resources all contribute to the differences between households.
+            </p>
+            <p>
+              Social position influences life in Norwyn, but it does not tell the whole story of an individual's circumstances.
+            </p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">04. THE LAND AND ITS PLACES</span>
+            <p>
+              The Capital lies inland, while towns and settlements make up the wider landscape of Norwyn.
+            </p>
+            <p>
+              People move between these places for work, trade and other everyday reasons. Goods travel between communities, connecting different parts of the kingdom through their economic and social activities.
+            </p>
+            <p>
+              The locations encountered in Or So She Thought offer different views of Norwyn. Some are closely associated with the royal household, while others belong to the wider life of the country.
+            </p>
+            <p>
+              Each provides a different perspective on the kingdom and the people who inhabit it.
+            </p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">05. THE SEASONS</span>
+            <p>Norwyn has three seasons:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Spring</li>
+              <li>Autumn</li>
+              <li>Winter</li>
+            </ul>
+            <p>There is no summer.</p>
+            <p>
+              These seasons mark the passage of the year and form the natural calendar of the kingdom.
+            </p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">06. FOOD AND EVERYDAY LIFE</span>
+            <p>
+              The everyday life of a place can often be understood through ordinary details. In Norwyn, food offers a glimpse into the differences between households.
+            </p>
+            <p>
+              Rice, beans and potatoes are common foods. Buttered bread, however, is associated with greater wealth. What might appear to be a small difference in daily meals can reflect the circumstances in which people live.
+            </p>
+            <p>
+              Not every distinction in Norwyn is visible through titles or formal displays of status. Some are found in household routines, the things people can afford and the comforts available to them.
+            </p>
+            <p>
+              These ordinary details help establish the material world in which the characters live.
+            </p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">07. WORK AND TRADE</span>
+            <p>
+              Work and trade are part of what keeps Norwyn's communities connected. Fabric and flour are among the kingdom's major trades, linking the production and exchange of goods across different parts of the country.
+            </p>
+            <p>
+              People work in different occupations to support their households and contribute to the wider economy. Their activities form part of the everyday life that continues beyond the affairs of the royal family.
+            </p>
+            <p>
+              The kingdom is sustained not only by its institutions, but also by the work of the people who live within it.
+            </p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">08. ARCHITECTURE AND APPEARANCE</span>
+            <p>
+              Norwyn has a visual identity influenced by several architectural and aesthetic traditions, including French, Spanish and Cambodian influences.
+            </p>
+            <p>
+              These influences contribute to the appearance of its buildings and surroundings, while the kingdom retains a character of its own.
+            </p>
+            <p>
+              Norwyn is a fictional kingdom, not a representation of any particular real country or historical period. Its appearance and cultural identity belong to the world of the novel.
+            </p>
+          </div>
+
         </div>
+
+        <!-- Beyond the Palace Closing Statement -->
+        <div class="book-card p-8 md:p-12 rounded-sm space-y-4 text-center">
+          <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">BEYOND THE PALACE</span>
+          <p class="font-serif italic text-lg text-theme-heading">
+            There is a kingdom beyond the royal residence, with people whose lives do not revolve around the Crown.
+          </p>
+          <p class="font-serif text-sm text-theme-text-muted max-w-xl mx-auto leading-relaxed">
+            They have homes to maintain, work to do, relationships to navigate and familiar routines that give structure to their days. They live within a society shaped by its own traditions and distinctions, just as the royal family does.
+          </p>
+          <p class="font-serif text-sm text-theme-text-muted max-w-xl mx-auto leading-relaxed">
+            For the characters of Or So She Thought, Norwyn is more than the place where events happen. It is part of the world that has shaped their understanding of family, position, responsibility and the lives they might lead. To understand the story, it helps to understand the world around it.
+          </p>
+          <p class="font-serif italic text-theme-heading pt-2">
+            Welcome to Norwyn.
+          </p>
+        </div>
+
       </div>
 
       <!-- Navigation Step Forward -->
       <div class="mt-14 pt-8 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-        <button onclick="switchView('prologue')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+        <button type="button" onclick="switchView('prologue')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
           &larr; Back to Premise
         </button>
-        <button onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
+        <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="px-7 py-3.5 font-semibold rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
           Continue: The Characters &rarr;
         </button>
       </div>
@@ -503,10 +617,10 @@
 
       <!-- Concluding Section One / Option to Enter Section Two -->
       <div class="mt-14 pt-8 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-        <button onclick="switchView('world')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+        <button type="button" onclick="switchView('world')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
           &larr; Back to The World of Norwyn
         </button>
-        <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
+        <button type="button" onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
           Enter Section Two: Chapters &rarr;
         </button>
       </div>
@@ -522,16 +636,16 @@
         <div class="flex items-center space-x-3">
           <span class="text-[9px] font-sans tracking-[0.25em] uppercase font-bold text-theme-secondary">Section Two: Read</span>
           <span class="text-theme-border">|</span>
-          <button onclick="openReaderIndex('crowned')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors cursor-pointer">
+          <button type="button" onclick="openReaderIndex('crowned')" class="text-xs font-sans uppercase tracking-[0.18em] text-theme-text-muted hover:text-theme-text flex items-center gap-1.5 transition-colors cursor-pointer">
             <span>&larr;</span> <span>Chapter Index</span>
           </button>
         </div>
 
         <div class="flex items-center space-x-4">
           <div class="flex items-center border border-theme-border rounded-sm text-xs font-sans bg-theme-panel shadow-sm">
-            <button onclick="changeFontSize(-1)" class="px-3.5 py-1 text-theme-text-muted hover:text-theme-text cursor-pointer" title="Decrease font size">A-</button>
+            <button type="button" onclick="changeFontSize(-1)" class="px-3.5 py-1 text-theme-text-muted hover:text-theme-text cursor-pointer" title="Decrease font size">A-</button>
             <span class="text-theme-border">|</span>
-            <button onclick="changeFontSize(1)" class="px-3.5 py-1 text-theme-text-muted hover:text-theme-text font-semibold cursor-pointer" title="Increase font size">A+</button>
+            <button type="button" onclick="changeFontSize(1)" class="px-3.5 py-1 text-theme-text-muted hover:text-theme-text font-semibold cursor-pointer" title="Increase font size">A+</button>
           </div>
         </div>
       </div>
@@ -558,7 +672,7 @@
               <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Edict on the Consanguine League of Valenne</h3>
             </div>
             
-            <button onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm cursor-pointer">
+            <button type="button" onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm cursor-pointer">
               Look Twice
             </button>
           </div>
@@ -587,7 +701,7 @@
               <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Memorandum on Elisabeta’s Schedule</h3>
             </div>
             
-            <button onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm cursor-pointer">
+            <button type="button" onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm cursor-pointer">
               Look Twice
             </button>
           </div>
@@ -611,10 +725,10 @@
 
       <!-- Navigation Step Forward -->
       <div class="mt-14 pt-8 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-        <button onclick="switchView('characters')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+        <button type="button" onclick="switchView('characters')" class="text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
           &larr; View The Characters
         </button>
-        <button onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
+        <button type="button" onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border: 1px solid var(--primary-btn-border);" class="w-full sm:w-auto px-8 py-4 font-semibold tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity cursor-pointer">
           Open Chapter Index &rarr;
         </button>
       </div>
@@ -836,18 +950,7 @@
       const header = document.getElementById('siteHeader');
       const currentScrollY = window.pageYOffset;
 
-      if (currentScrollY <= 20) {
-        header.classList.remove('-translate-y-full');
-        header.classList.add('translate-y-0');
-      } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        // Scrolling down -> hide header
-        header.classList.remove('translate-y-0');
-        header.classList.add('-translate-y-full');
-      } else if (currentScrollY < lastScrollY) {
-        // Scrolling up -> reveal header
-        header.classList.remove('-translate-y-full');
-        header.classList.add('translate-y-0');
-      }
+      (currentScrollY <= 20) ? header.classList.remove('-translate-y-full') : (currentScrollY > lastScrollY && currentScrollY > 80) ? header.classList.add('-translate-y-full') : header.classList.remove('-translate-y-full');
 
       lastScrollY = currentScrollY;
     }, { passive: true });
