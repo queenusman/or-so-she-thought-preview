@@ -78,30 +78,33 @@
     }
 
     /* ========================================================
-       THEME 2: INVERSE LIGHT MODE (Matching Panel Header & Uniform Buttons)
+       THEME 2: INVERSE LIGHT MODE
+       Containers match header canvas (#F8F7F5)
        ======================================================== */
     .theme-ivory {
-      --color-bg: #F8F7F5;               /* Direct inverse of #3E3D43 */
-      --color-bg-subtle: #F1ECE5;        /* Direct inverse of #343338 */
-      --color-panel: #EDEAE4;            /* Container/Card surface */
-      --color-panel-hover: #E2DDD5;      /* Direct inverse of #524E57 */
+      --color-bg: #F8F7F5;               /* Warm Ivory background */
+      --color-bg-subtle: #F1ECE5;        /* Soft ambient tone */
       
-      --color-border: #CCC4BC;          /* Direct inverse of #625B64 */
-      --color-border-subtle: #DCD6CF;   /* Direct inverse of #4D4750 */
+      /* Containers and panels match the header canvas color */
+      --color-panel: #F8F7F5;            
+      --color-panel-hover: #F1ECE5;      
       
-      --color-text: #3E3D43;            /* Direct inverse of #F8F7F5 */
-      --color-text-muted: #5A5760;      /* Direct inverse of #C5BAC1 */
-      --color-text-faint: #7E7985;      /* Direct inverse of #988F96 */
+      --color-border: #CCC4BC;          /* Structural rule */
+      --color-border-subtle: #DCD6CF;   /* Hairline divider */
+      
+      --color-text: #3E3D43;            /* Charcoal Plum text */
+      --color-text-muted: #5A5760;      /* Editorial body */
+      --color-text-faint: #7E7985;      /* Sub-metadata */
       
       --color-accent: #B27B91;          /* Visible, rich Antique Rose */
       --color-secondary: #B27B91;       /* Deep Rose for structural labels */
-      --color-callout-bg: rgba(178, 123, 145, 0.16);
+      --color-callout-bg: rgba(178, 123, 145, 0.14);
       
-      /* Navigation header matches container color (#EDEAE4) */
-      --header-bg: rgba(237, 234, 228, 0.96);
-      --footer-bg: #EDEAE4;
+      /* Navigation header matches canvas */
+      --header-bg: rgba(248, 247, 245, 0.94);
+      --footer-bg: #F1ECE5;
       
-      /* Primary Button Styling (Uniform: identical to dark mode) */
+      /* Primary Button Styling (Identical to dark mode) */
       --primary-btn-bg: #D9C1C6;
       --primary-btn-text: #3E3D43;
       --primary-btn-border: #D9C1C6;
@@ -109,7 +112,7 @@
       --selection-bg: #B27B91;
       --selection-text: #F8F7F5;
       --page-texture: radial-gradient(circle at 50% 0%, rgba(178, 123, 145, 0.12) 0%, rgba(248, 247, 245, 0) 70%);
-      --card-shadow: 0 4px 20px -2px rgba(62, 61, 67, 0.06), 0 1px 3px rgba(62, 61, 67, 0.04);
+      --card-shadow: 0 2px 12px -2px rgba(62, 61, 67, 0.05), 0 1px 3px rgba(62, 61, 67, 0.03);
     }
 
     body {
