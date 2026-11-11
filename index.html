@@ -150,6 +150,25 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Force Justified Layout and Drop Cap on Chapters */
+    .chapter-paragraph {
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 1.75rem;
+    }
+
+    .chapter-paragraph:first-of-type::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.8;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 2px;
+      color: var(--color-accent);
+      font-weight: normal;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text">
@@ -190,21 +209,21 @@
       </div>
     </div>
 
-    <!-- 3-Line Collapsible Navigation Drawer (Author's Note as Section One, item 1) -->
+    <!-- 3-Line Collapsible Navigation Drawer -->
     <div id="mobileNav" class="hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
       <div>
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Section One
         </p>
-        <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
         <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Premise</button>
         <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World of Norwyn</button>
         <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Characters</button>
       </div>
       <div>
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
-          Section Two
+          Section Two (Read)
         </p>
+        <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
         <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read the Chapters</button>
         <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Norwyn Archives</button>
       </div>
@@ -234,7 +253,8 @@
         <div class="w-12 h-px bg-theme-border"></div>
       </div>
       
-      <p class="text-xl md:text-2xl font-serif italic font-semibold text-theme-text-muted max-w-2xl mx-auto leading-relaxed mb-16">
+      <!-- Dedication line maintained cleanly at the top -->
+      <p class="text-xl md:text-2xl font-serif italic font-normal text-theme-text-muted max-w-2xl mx-auto leading-relaxed mb-16">
         For those who have had to discover where their inheritance ends and their own lives begin.
       </p>
 
@@ -255,9 +275,6 @@
             </p>
             
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
-              <button type="button" onclick="switchView('author-note')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
-                <span>A Note from the Author</span>
-              </button>
               <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Premise</span>
               </button>
@@ -285,6 +302,9 @@
             </p>
             
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
+              <button type="button" onclick="switchView('author-note')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+                <span>A Note from the Author</span>
+              </button>
               <button type="button" onclick="openReaderIndex()" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
               </button>
@@ -296,48 +316,11 @@
         </div>
 
       </div>
-
-      <!-- Dedication below the two section options -->
-      <div class="max-w-xl mx-auto px-6 py-6 font-serif italic font-bold text-lg md:text-xl text-theme-text leading-relaxed tracking-wide select-none">
-        "For those who have had to discover where their inheritance ends and their own lives begin."
-      </div>
     </section>
 
     <!-- ==================== SECTION ONE: EXPLORE THE NOVEL ==================== -->
 
-    <!-- 1. A NOTE FROM THE AUTHOR (Now First Section) -->
-    <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
-        <p class="font-serif text-theme-text-muted text-base font-light italic">
-          Welcome to Or So She Thought.
-        </p>
-      </div>
-
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12">
-        <p class="text-justify">
-          This novel takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is a fictional place, shaped by the needs of the story and the people who inhabit it.
-        </p>
-        <p class="text-justify">
-          At the centre of the novel is Elisabeta, a young woman raised within the royal family and expected to inherit a life already surrounded by responsibilities, traditions and expectations. Through her experiences and relationships, the story explores the complicated ways in which family, upbringing, duty and personal desire can shape a person's understanding of themselves.
-        </p>
-        <p class="text-justify">
-          I have always been interested in the parts of people that are not immediately visible: the thoughts behind familiar behaviour, the expectations people learn to live with, the small adjustments they make to belong, and the moments when what they have always known begins to look different. These interests found their way into this story.
-        </p>
-        <p class="text-justify">
-          As you read, you will encounter a world that extends beyond the events of the main narrative. The World of Norwyn, the character introductions and The Norwyn Archives offer additional glimpses into the kingdom, its people and its institutions. They are there for readers who enjoy exploring the details of a fictional world, but they are not required reading. The story can be followed through the chapters alone.
-        </p>
-        <p class="text-justify">
-          I hope you enjoy discovering Norwyn and getting to know the people who call it home. More than anything, I hope the story gives you something worth thinking about long after you have turned the final page.
-        </p>
-        <p class="pt-4 border-t border-theme-border-subtle font-semibold text-justify">
-          Thank you for reading.<br>
-          <span class="font-display tracking-wider text-theme-accent">Queen Usman</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- 2. PREMISE -->
+    <!-- 1. PREMISE -->
     <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
@@ -373,7 +356,7 @@
       </div>
     </section>
 
-    <!-- 3. THE WORLD OF NORWYN -->
+    <!-- 2. THE WORLD OF NORWYN -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
         <div>
@@ -542,7 +525,7 @@
       </div>
     </section>
 
-    <!-- 4. THE CHARACTERS -->
+    <!-- 3. THE CHARACTERS -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Characters</h2>
@@ -600,7 +583,39 @@
 
     <!-- ==================== SECTION TWO: READ THE NOVEL ==================== -->
 
-    <!-- 1. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
+    <!-- 1. A NOTE FROM THE AUTHOR (Now First Section in Section Two) -->
+    <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light italic">
+          Welcome to Or So She Thought.
+        </p>
+      </div>
+
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12">
+        <p class="text-justify">
+          This novel takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is a fictional place, shaped by the needs of the story and the people who inhabit it.
+        </p>
+        <p class="text-justify">
+          At the centre of the novel is Elisabeta, a young woman raised within the royal family and expected to inherit a life already surrounded by responsibilities, traditions and expectations. Through her experiences and relationships, the story explores the complicated ways in which family, upbringing, duty and personal desire can shape a person's understanding of themselves.
+        </p>
+        <p class="text-justify">
+          I have always been interested in the parts of people that are not immediately visible: the thoughts behind familiar behaviour, the expectations people learn to live with, the small adjustments they make to belong, and the moments when what they have always known begins to look different. These interests found their way into this story.
+        </p>
+        <p class="text-justify">
+          As you read, you will encounter a world that extends beyond the events of the main narrative. The World of Norwyn, the character introductions and The Norwyn Archives offer additional glimpses into the kingdom, its people and its institutions. They are there for readers who enjoy exploring the details of a fictional world, but they are not required reading. The story can be followed through the chapters alone.
+        </p>
+        <p class="text-justify">
+          I hope you enjoy discovering Norwyn and getting to know the people who call it home. More than anything, I hope the story gives you something worth thinking about long after you have turned the final page.
+        </p>
+        <p class="pt-4 border-t border-theme-border-subtle font-semibold text-justify">
+          Thank you for reading.<br>
+          <span class="font-display tracking-wider text-theme-accent">Queen Usman</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
       
       <!-- Floating Minimalist Font Size Control Widget (Top-Right) -->
@@ -616,7 +631,7 @@
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
-    <!-- 2. ARCHIVE -->
+    <!-- 3. ARCHIVE -->
     <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Norwyn Archive</h2>
@@ -799,7 +814,7 @@
         .filter(Boolean);
 
       const formattedParagraphs = paragraphs.map((para, idx) => {
-        return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text font-serif text-justify">${para}</p>`;
+        return `<p class="chapter-paragraph text-theme-text">${para}</p>`;
       }).join('\n');
 
       const hasPrev = activeChapterIndex > 0;
