@@ -199,6 +199,9 @@
           <button onclick="switchView('archive')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="archive">
             Archive
           </button>
+          <button onclick="switchView('author-note')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="author-note">
+            Author's Note
+          </button>
         </div>
 
       </nav>
@@ -239,6 +242,7 @@
         </p>
         <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Chapters</button>
         <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Archive</button>
+        <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Author's Note</button>
       </div>
     </div>
   </header>
@@ -271,7 +275,7 @@
       </p>
 
       <!-- Dual Portal Gateway Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto mb-16">
         
         <!-- Experience Portal 1: Explore -->
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
@@ -286,7 +290,6 @@
               Step into Norwyn and discover the world, the people, and the circumstances behind Or So She Thought before beginning the story.
             </p>
             
-            <!-- Clickable Neutralized Option Buttons -->
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
               <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Premise</span>
@@ -311,10 +314,9 @@
               Read the Novel
             </h2>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
-              This is where Elisabeta's story unfolds. Settle into the chapters, follow the story at your own pace, and explore the documents and historical records that offer another glimpse into Norwyn.
+              This is where Elisabeta's story unfolds. Settle into the chapters, follow the story at your own pace, and explore the documents, notes, and historical records that offer another glimpse into Norwyn.
             </p>
             
-            <!-- Clickable Neutralized Option Buttons -->
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
               <button type="button" onclick="openReaderIndex()" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
@@ -322,10 +324,18 @@
               <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Norwyn Archives</span>
               </button>
+              <button type="button" onclick="switchView('author-note')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+                <span>A Note from the Author</span>
+              </button>
             </div>
           </div>
         </div>
 
+      </div>
+
+      <!-- Dedication below the two section options -->
+      <div class="max-w-xl mx-auto px-6 py-6 font-serif italic font-bold text-base md:text-lg text-theme-text leading-relaxed opacity-90 select-none">
+        "For those who have had to discover where their inheritance ends and their own lives begin."
       </div>
     </section>
 
@@ -342,26 +352,26 @@
 
       <!-- Premise Dossier -->
       <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12">
-        <p>
+        <p class="text-justify">
           Born into the royal family of Norwyn, Princess Elisabeta has never had to imagine a life outside the one prepared for her. Her world has its own order, traditions and expectations, along with a clear understanding of what makes a good life. Within it, almost everything has an explanation, and almost every decision has its proper place.
         </p>
-        <p>
+        <p class="text-justify">
           She has grown up knowing what is expected of her, what her future is supposed to look like and what it means to belong to the family that will one day shape the kingdom's future.
         </p>
-        <p>
+        <p class="text-justify">
           But as marriage, family relationships and the responsibilities of the Crown bring these expectations into sharper focus, Elisabeta begins to confront questions she has never had much reason to ask.
         </p>
         
         <div class="my-6 p-6 border-l-2 border-theme-accent bg-theme-callout-bg rounded-r-sm">
-          <p class="italic text-theme-text text-base md:text-lg leading-relaxed">
+          <p class="italic text-theme-text text-base md:text-lg leading-relaxed text-justify">
             What happens when the life you have always understood begins to look different from the inside? When does duty become something you believe in, and when is it simply something you have learned to accept? How do you distinguish between what you genuinely want and what you have spent your life learning to want?
           </p>
         </div>
         
-        <p>
+        <p class="text-justify">
           Her difficulty is not simply deciding whether to follow the life expected of her or turn away from it. It is understanding how much of her sense of herself, her family and the world has been shaped by the very life she is beginning to question.
         </p>
-        <p class="font-serif italic text-theme-heading pt-4 border-t border-theme-border-subtle">
+        <p class="font-serif italic text-theme-heading pt-4 border-t border-theme-border-subtle text-justify">
           Or So She Thought is a literary psychological novel about family, identity, duty and the complicated process of understanding a life you have always known.
         </p>
       </div>
@@ -376,7 +386,7 @@
           <div class="w-12 h-px bg-theme-border mx-auto my-6"></div>
         </div>
 
-        <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-base md:text-lg text-theme-text leading-relaxed text-left">
+        <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-base md:text-lg text-theme-text leading-relaxed text-justify">
           <p>
             Every story has a world beyond its characters. A place with its own history, traditions and ways of life. A place where people grow up learning what is familiar, what is expected of them and where they belong.
           </p>
@@ -392,10 +402,10 @@
         </div>
 
         <!-- Detailed Sections 1 to 8 -->
-        <div class="space-y-8 font-serif text-base text-theme-text leading-relaxed text-left">
+        <div class="space-y-8 font-serif text-base text-theme-text leading-relaxed text-justify">
           
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">1. THE KINGDOM</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">1. THE KINGDOM</span>
             <p>
               Norwyn is an island kingdom with its own monarchy and established traditions. Its capital, known simply as the Capital, is situated inland.
             </p>
@@ -408,7 +418,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">02. THE CROWN AND THE MONARCHY</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">02. THE CROWN AND THE MONARCHY</span>
             <p>
               Norwyn is governed by an absolute monarchy, with the Crown holding the highest authority in the kingdom.
             </p>
@@ -427,7 +437,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">03. THE ROYAL FAMILY AND SOCIETY</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">03. THE ROYAL FAMILY AND SOCIETY</span>
             <p>
               In Norwyn, society is organised around two principal social classes: royals and non-royals.
             </p>
@@ -443,7 +453,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">04. THE LAND AND ITS PLACES</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">04. THE LAND AND ITS PLACES</span>
             <p>
               The Capital lies inland, while towns and settlements make up the wider landscape of Norwyn.
             </p>
@@ -459,9 +469,9 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">05. THE SEASONS</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">05. THE SEASONS</span>
             <p>Norwyn has three seasons:</p>
-            <ul class="list-disc pl-5 space-y-1">
+            <ul class="list-disc pl-5 space-y-1 text-left">
               <li>Spring</li>
               <li>Autumn</li>
               <li>Winter</li>
@@ -473,7 +483,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">06. FOOD AND EVERYDAY LIFE</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">06. FOOD AND EVERYDAY LIFE</span>
             <p>
               The everyday life of a place can often be understood through ordinary details. In Norwyn, food offers a glimpse into the differences between households.
             </p>
@@ -489,7 +499,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">07. WORK AND TRADE</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">07. WORK AND TRADE</span>
             <p>
               Work and trade are part of what keeps Norwyn's communities connected. Fabric and flour are among the kingdom's major trades, linking the production and exchange of goods across different parts of the country.
             </p>
@@ -502,7 +512,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">08. ARCHITECTURE AND APPEARANCE</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">08. ARCHITECTURE AND APPEARANCE</span>
             <p>
               Norwyn has a visual identity influenced by several architectural and aesthetic traditions, including French, Spanish and Cambodian influences.
             </p>
@@ -522,10 +532,10 @@
           <p class="font-serif italic text-lg text-theme-heading">
             There is a kingdom beyond the royal residence, with people whose lives do not revolve around the Crown.
           </p>
-          <p class="font-serif text-sm text-theme-text-muted max-w-xl mx-auto leading-relaxed">
+          <p class="font-serif text-sm text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
             They have homes to maintain, work to do, relationships to navigate and familiar routines that give structure to their days. They live within a society shaped by its own traditions and distinctions, just as the royal family does.
           </p>
-          <p class="font-serif text-sm text-theme-text-muted max-w-xl mx-auto leading-relaxed">
+          <p class="font-serif text-sm text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
             For the characters of Or So She Thought, Norwyn is more than the place where events happen. It is part of the world that has shaped their understanding of family, position, responsibility and the lives they might lead. To understand the story, it helps to understand the world around it.
           </p>
           <p class="font-serif italic text-theme-heading pt-2">
@@ -552,7 +562,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Heiress</span>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
             Formed so carefully to rule that she struggles to distinguish between what she has been educated to want and what belongs to her own desire.
           </p>
         </div>
@@ -563,7 +573,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Mother</span>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
             She does not control Elisabeta to dominate her. She prepares Elisabeta because she knows what unshielded exposure looks like in court. Preparation is her highest form of love.
           </p>
         </div>
@@ -574,7 +584,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Intended</span>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
             Disciplined, respectful, and genuinely kind. His decency makes him far harder to resist than a tyrant, because accepting him feels like reason itself.
           </p>
         </div>
@@ -585,7 +595,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Lucian</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner’s Son</span>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
             He is not a storybook escape into effortless freedom. He knows what rules cost the wood in the yard, offering intellectual confrontation rather than salvation.
           </p>
         </div>
@@ -633,7 +643,7 @@
             </button>
           </div>
 
-          <div class="font-serif text-base text-theme-text leading-relaxed">
+          <div class="font-serif text-base text-theme-text leading-relaxed text-justify">
             <p>
               "Let it be inscribed: Henceforth, Norwyn and the House of Valenne shall govern under marital concord. The royal heir shall betroth the direct issue of Valenne at their eighteenth summer, assuring unbroken sovereignty and the defense of the northern trade gates."
             </p>
@@ -643,7 +653,7 @@
             <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-accent font-bold block mb-1">
               Penciled Marginalia: Princess Elisabeta (Royal Archives Folio)
             </span>
-            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">
+            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed text-justify">
               "They recite this clause to me as though the ink were mixed with mortar. Every tutor speaks of unbroken sovereignty, yet none can tell me why an emergency bargain struck generations ago requires my own hands to seal it anew."
             </p>
           </div>
@@ -662,7 +672,7 @@
             </button>
           </div>
 
-          <div class="font-serif text-base text-theme-text leading-relaxed">
+          <div class="font-serif text-base text-theme-text leading-relaxed text-justify">
             <p>
               "The Princess should be instructed in continental cadence, state economics, and music. Under no circumstance should her schedule permit unregulated retreat. Solitude invites melancholy in future rulers; purpose is the greatest armor a daughter of Norwyn can wear."
             </p>
@@ -672,11 +682,43 @@
             <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-accent font-bold block mb-1">
               Ecaterina's Note to the Governess (Found in private desk)
             </span>
-            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed">
+            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed text-justify">
               "Do not let her think this is punishment. I spent my eighteenth year trapped in a carriage while councilors debated whether I was sane enough to inherit. If Elisabeta knows the answer before they can frame the question, nobody will ever dare question her mind. Keep her busy so she does not bleed."
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. A NOTE FROM THE AUTHOR ==================== -->
+    <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light italic">
+          Welcome to Or So She Thought.
+        </p>
+      </div>
+
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12">
+        <p class="text-justify">
+          This novel takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is a fictional place, shaped by the needs of the story and the people who inhabit it.
+        </p>
+        <p class="text-justify">
+          At the centre of the novel is Elisabeta, a young woman raised within the royal family and expected to inherit a life already surrounded by responsibilities, traditions and expectations. Through her experiences and relationships, the story explores the complicated ways in which family, upbringing, duty and personal desire can shape a person's understanding of themselves.
+        </p>
+        <p class="text-justify">
+          I have always been interested in the parts of people that are not immediately visible: the thoughts behind familiar behaviour, the expectations people learn to live with, the small adjustments they make to belong, and the moments when what they have always known begins to look different. These interests found their way into this story.
+        </p>
+        <p class="text-justify">
+          As you read, you will encounter a world that extends beyond the events of the main narrative. The World of Norwyn, the character introductions and The Norwyn Archives offer additional glimpses into the kingdom, its people and its institutions. They are there for readers who enjoy exploring the details of a fictional world, but they are not required reading. The story can be followed through the chapters alone.
+        </p>
+        <p class="text-justify">
+          I hope you enjoy discovering Norwyn and getting to know the people who call it home. More than anything, I hope the story gives you something worth thinking about long after you have turned the final page.
+        </p>
+        <p class="pt-4 border-t border-theme-border-subtle font-semibold">
+          Thank you for reading.<br>
+          <span class="font-display tracking-wider text-theme-accent">Queen Usman</span>
+        </p>
       </div>
     </section>
 
@@ -703,7 +745,7 @@
     let isIvoryMode = false; // Default: Dark Mode active
 
     function switchView(viewId) {
-      const views = ['home', 'prologue', 'world', 'characters', 'reader', 'archive'];
+      const views = ['home', 'prologue', 'world', 'characters', 'reader', 'archive', 'author-note'];
       
       views.forEach(v => {
         const el = document.getElementById(`view-${v}`);
