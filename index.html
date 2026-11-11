@@ -286,7 +286,7 @@
               Step into Norwyn and discover the world, the people, and the circumstances behind Or So She Thought before beginning the story.
             </p>
             
-            <!-- Clickable Interactive Option Buttons -->
+            <!-- Clickable Interactive Option Buttons (No Arrows) -->
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
               <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Premise</span>
@@ -314,7 +314,7 @@
               This is where Elisabeta's story unfolds. Settle into the chapters, follow the story at your own pace, and explore the documents and historical records that offer another glimpse into Norwyn.
             </p>
             
-            <!-- Clickable Interactive Option Buttons -->
+            <!-- Clickable Interactive Option Buttons (No Arrows) -->
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
               <button type="button" onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
@@ -599,7 +599,18 @@
     <!-- ==================== SECTION TWO: READ THE NOVEL ==================== -->
 
     <!-- 1. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
-    <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300">
+    <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
+      
+      <!-- Option 1: Floating Minimalist Font Size Control Widget (Top-Right / Corner Floating Pill) -->
+      <div class="max-w-3xl mx-auto px-6 mb-6 flex justify-end">
+        <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5">
+          <button type="button" onclick="changeFontSize(-1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
+          <span class="text-theme-border select-none px-1">|</span>
+          <button type="button" onclick="changeFontSize(1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text font-semibold transition-colors cursor-pointer" title="Increase font size">A+</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Reading Stage -->
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
@@ -748,18 +759,17 @@
 
       const eraChapters = NOVEL_CHAPTERS[activeEra];
 
-      // STATE A: CHAPTER DIRECTORY (INDEX)
+      // STATE A: CHAPTER DIRECTORY (INDEX) - Restored to original clean card list style without arrows
       if (activeChapterIndex === null) {
         const eraTitle = "Chapter Index";
         const eraSubtitle = "The Crowned Era — The Weight of Inheritance";
 
         const chapterButtonsHtml = eraChapters.map((ch, idx) => `
-          <button type="button" onclick="selectChapter('${activeEra}', ${idx})" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-3 px-5 border rounded-lg text-left hover:opacity-90 transition-all shadow-sm cursor-pointer group flex items-center justify-between">
+          <button type="button" onclick="selectChapter('${activeEra}', ${idx})" class="book-card w-full text-left p-6 hover:border-theme-accent hover:bg-theme-panel-hover transition-all rounded-sm group block cursor-pointer">
             <div>
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase font-bold block mb-1 opacity-80">${ch.number}</span>
-              <h3 class="font-display text-lg font-semibold">${ch.title}</h3>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-1.5">${ch.number}</span>
+              <h3 class="font-display text-lg text-theme-text group-hover:text-theme-accent transition-colors font-semibold">${ch.title}</h3>
             </div>
-            <span class="font-sans text-xs uppercase tracking-widest opacity-70 group-hover:translate-x-1 transition-transform">&rarr;</span>
           </button>
         `).join('');
 
@@ -798,11 +808,11 @@
       const btnStyle = "background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);";
 
       const prevLinkHtml = hasPrev 
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">&larr; Previous Chapter</button>` 
+        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">Previous Chapter</button>` 
         : `<span></span>`;
 
       const nextLinkHtml = hasNext 
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">Next Chapter &rarr;</button>` 
+        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">Next Chapter</button>` 
         : `<span></span>`;
 
       mainContainer.innerHTML = `
@@ -820,21 +830,10 @@
             ${formattedParagraphs}
           </div>
 
-          <!-- Classy Bottom Footer Container with Chapter Navigation & Integrated Font Size Adjuster -->
-          <div class="mt-20 pt-10 border-t border-theme-border flex flex-col sm:flex-row items-center justify-between gap-6">
+          <!-- Bottom Footer Navigation without arrows -->
+          <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
             ${prevLinkHtml}
-            
-            <div class="flex items-center gap-4">
-              <button type="button" onclick="openReaderIndex('${activeEra}')" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">&uarr; Chapter Index</button>
-              
-              <!-- Relocated Classy Font Size Adjuster -->
-              <div class="flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel shadow-sm overflow-hidden">
-                <button type="button" onclick="changeFontSize(-1)" class="px-3 py-2 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
-                <span class="text-theme-border select-none">|</span>
-                <button type="button" onclick="changeFontSize(1)" class="px-3 py-2 text-theme-text-muted hover:text-theme-text font-semibold transition-colors cursor-pointer" title="Increase font size">A+</button>
-              </div>
-            </div>
-
+            <button type="button" onclick="openReaderIndex('${activeEra}')" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">Chapter Index</button>
             ${nextLinkHtml}
           </div>
         </article>
@@ -881,8 +880,8 @@
         rootHtml.classList.remove('theme-ivory');
         rootHtml.classList.add('theme-dark');
         if (themeText) themeText.textContent = "Ivory Mode";
-        if (iconSun) iconSun.classList.add('hidden');
-        if (iconMoon) iconMoon.classList.remove('hidden');
+        if (iconSun) iconSun.classList.remove('hidden');
+        if (iconMoon) iconMoon.classList.add('hidden');
       }
 
       isIvoryMode = ivory;
