@@ -715,7 +715,7 @@
         <p class="text-justify">
           I hope you enjoy discovering Norwyn and getting to know the people who call it home. More than anything, I hope the story gives you something worth thinking about long after you have turned the final page.
         </p>
-        <p class="pt-4 border-t border-theme-border-subtle font-semibold">
+        <p class="pt-4 border-t border-theme-border-subtle font-semibold text-justify">
           Thank you for reading.<br>
           <span class="font-display tracking-wider text-theme-accent">Queen Usman</span>
         </p>
@@ -835,10 +835,7 @@
         .filter(Boolean);
 
       const formattedParagraphs = paragraphs.map((para, idx) => {
-        if (idx === 0) {
-          return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text font-serif text-justify">${para}</p>`;
-        }
-        return `<p class="text-theme-text text-justify">${para}</p>`;
+        return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text font-serif text-justify">${para}</p>`;
       }).join('\n');
 
       const hasPrev = activeChapterIndex > 0;
