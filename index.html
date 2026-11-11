@@ -193,7 +193,7 @@
           <span class="text-[9px] tracking-[0.26em] uppercase font-bold text-theme-secondary font-sans">
             Section Two
           </span>
-          <button onclick="openReaderIndex('crowned')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="reader">
+          <button onclick="openReaderIndex()" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="reader">
             Chapters
           </button>
           <button onclick="switchView('archive')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="archive">
@@ -237,7 +237,7 @@
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Section Two
         </p>
-        <button onclick="openReaderIndex('crowned'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Chapters</button>
+        <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Chapters</button>
         <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Archive</button>
       </div>
     </div>
@@ -316,7 +316,7 @@
             
             <!-- Clickable Neutralized Option Buttons -->
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
-              <button type="button" onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="openReaderIndex()" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
               </button>
               <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
@@ -732,7 +732,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function openReaderIndex(era = 'crowned') {
+    function openReaderIndex() {
       switchView('reader');
       activeEra = 'crowned';
       activeChapterIndex = null;
@@ -793,7 +793,10 @@
         .filter(Boolean);
 
       const formattedParagraphs = paragraphs.map((para, idx) => {
-        return `<p class="text-theme-text">${para}</p>`;
+        if (idx === 0) {
+          return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text font-serif text-justify">${para}</p>`;
+        }
+        return `<p class="text-theme-text text-justify">${para}</p>`;
       }).join('\n');
 
       const hasPrev = activeChapterIndex > 0;
@@ -827,7 +830,7 @@
           <!-- Bottom Footer Navigation -->
           <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
             ${prevLinkHtml}
-            <button type="button" onclick="openReaderIndex('${activeEra}')" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
+            <button type="button" onclick="openReaderIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
             ${nextLinkHtml}
           </div>
         </article>
