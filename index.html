@@ -380,11 +380,20 @@
           </p>
         </div>
 
-        <!-- Detailed Sections 1 to 8 -->
+        <!-- Detailed Sections 1 to 8 (Video embedded right inside 1. The Kingdom) -->
         <div class="space-y-8 font-serif text-base text-theme-text leading-relaxed text-justify">
           
-          <div class="book-card p-8 rounded-sm space-y-3">
+          <div class="book-card p-8 rounded-sm space-y-4">
             <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">1. THE KINGDOM</span>
+            
+            <!-- Autoplay Video on Scroll into View -->
+            <div class="my-6 rounded-sm overflow-hidden border border-theme-border shadow-md">
+              <video id="kingdomVideo" class="w-full h-auto object-cover" muted playsinline preload="auto">
+                <source src="video_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
             <p>
               Norwyn is an island kingdom with its own monarchy and established traditions. Its capital, known simply as the Capital, is situated inland.
             </p>
@@ -583,7 +592,7 @@
 
     <!-- ==================== SECTION TWO: READ THE NOVEL ==================== -->
 
-    <!-- 1. A NOTE FROM THE AUTHOR (Now First Section in Section Two) -->
+    <!-- 1. A NOTE FROM THE AUTHOR (First Section in Section Two) -->
     <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
@@ -911,6 +920,24 @@
       const drawer = document.getElementById('mobileNav');
       drawer.classList.toggle('hidden');
     }
+
+    // Intersection Observer to autoplay the video when scrolled into view, and pause when scrolled away
+    document.addEventListener("DOMContentLoaded", () => {
+      const video = document.getElementById("kingdomVideo");
+      if (video) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              video.play().catch(err => console.log("Autoplay prevented:", err));
+            } else {
+              video.pause();
+            }
+          });
+        }, { threshold: 0.4 });
+
+        observer.observe(video);
+      }
+    });
 
     // Smart Scroll: Header hides when scrolling down, reappears when scrolling up
     let lastScrollY = window.pageYOffset;
