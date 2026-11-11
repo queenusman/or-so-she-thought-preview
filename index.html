@@ -66,10 +66,10 @@
       --header-bg: rgba(62, 61, 67, 0.94);
       --footer-bg: #343338;
       
-      /* Primary Button Styling (Dark Mode) - Lighter Dusty Rose */
-      --primary-btn-bg: #E2D0D4;
-      --primary-btn-text: #3E3D43;
-      --primary-btn-border: #E2D0D4;
+      /* Neutral Button Styling matching Header Theme Toggle */
+      --primary-btn-bg: #49474E;
+      --primary-btn-text: #C5BAC1;
+      --primary-btn-border: #625B64;
       
       --selection-bg: #8E7D8A;
       --selection-text: #F8F7F5;
@@ -104,10 +104,10 @@
       --header-bg: rgba(248, 247, 245, 0.94);
       --footer-bg: #F8F7F5;
       
-      /* Primary Button Styling (Neutralized, lighter desaturated stone-rose) */
-      --primary-btn-bg: #E4D8DB;
-      --primary-btn-text: #3E3D43;
-      --primary-btn-border: #D8CCCF;
+      /* Neutral Button Styling matching Header Theme Toggle in Light Mode */
+      --primary-btn-bg: #F8F7F5;
+      --primary-btn-text: #5A5760;
+      --primary-btn-border: #CCC4BC;
       
       --selection-bg: #C79EAF;
       --selection-text: #F8F7F5;
@@ -205,7 +205,7 @@
 
       <!-- Global Theme Switcher & Mobile Menu Trigger -->
       <div class="flex items-center space-x-3">
-        <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle theme palette" class="px-3.5 py-1.5 border border-theme-border rounded-lg text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-heading hover:border-theme-accent transition-all flex items-center gap-2 bg-theme-panel shadow-sm cursor-pointer">
+        <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle theme palette" class="px-3.5 py-1.5 border border-theme-border rounded-lg text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center gap-2 bg-theme-panel shadow-sm cursor-pointer">
           <svg id="themeIconSun" class="w-3.5 h-3.5 inline-block text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
@@ -286,15 +286,15 @@
               Step into Norwyn and discover the world, the people, and the circumstances behind Or So She Thought before beginning the story.
             </p>
             
-            <!-- Clickable Interactive Option Buttons (No Arrows) -->
+            <!-- Clickable Neutralized Option Buttons -->
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
-              <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Premise</span>
               </button>
-              <button type="button" onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The World of Norwyn</span>
               </button>
-              <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Characters</span>
               </button>
             </div>
@@ -314,12 +314,12 @@
               This is where Elisabeta's story unfolds. Settle into the chapters, follow the story at your own pace, and explore the documents and historical records that offer another glimpse into Norwyn.
             </p>
             
-            <!-- Clickable Interactive Option Buttons (No Arrows) -->
+            <!-- Clickable Neutralized Option Buttons -->
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
-              <button type="button" onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="openReaderIndex('crowned')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
               </button>
-              <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Norwyn Archives</span>
               </button>
             </div>
@@ -552,8 +552,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Heiress</span>
           </div>
-          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
             Formed so carefully to rule that she struggles to distinguish between what she has been educated to want and what belongs to her own desire.
           </p>
         </div>
@@ -564,8 +563,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Mother</span>
           </div>
-          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
             She does not control Elisabeta to dominate her. She prepares Elisabeta because she knows what unshielded exposure looks like in court. Preparation is her highest form of love.
           </p>
         </div>
@@ -576,8 +574,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Intended</span>
           </div>
-          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
             Disciplined, respectful, and genuinely kind. His decency makes him far harder to resist than a tyrant, because accepting him feels like reason itself.
           </p>
         </div>
@@ -588,8 +585,7 @@
             <h3 class="font-display text-xl text-theme-text font-semibold">Lucian</h3>
             <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner’s Son</span>
           </div>
-          <span class="font-sans text-xs uppercase text-theme-text-faint block mb-4">The Crowned Era</span>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light">
+          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4">
             He is not a storybook escape into effortless freedom. He knows what rules cost the wood in the yard, offering intellectual confrontation rather than salvation.
           </p>
         </div>
@@ -601,7 +597,7 @@
     <!-- 1. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
       
-      <!-- Option 1: Floating Minimalist Font Size Control Widget (Top-Right / Corner Floating Pill) -->
+      <!-- Floating Minimalist Font Size Control Widget (Top-Right) -->
       <div class="max-w-3xl mx-auto px-6 mb-6 flex justify-end">
         <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5">
           <button type="button" onclick="changeFontSize(-1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
@@ -632,7 +628,7 @@
               <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Edict on the Consanguine League of Valenne</h3>
             </div>
             
-            <button type="button" onclick="toggleLookTwice('rec1')" id="btn-rec1" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm cursor-pointer">
+            <button type="button" onclick="toggleLookTwice('rec1')" id="btn-rec1" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="self-start sm:self-auto px-4 py-2 border rounded-lg text-xs font-sans tracking-[0.16em] uppercase transition-all shadow-sm cursor-pointer hover:border-theme-accent">
               Look Twice
             </button>
           </div>
@@ -661,7 +657,7 @@
               <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Memorandum on Elisabeta’s Schedule</h3>
             </div>
             
-            <button type="button" onclick="toggleLookTwice('rec2')" id="btn-rec2" class="self-start sm:self-auto px-4 py-2 border border-theme-border bg-theme-panel hover:bg-theme-panel-hover text-theme-text hover:border-theme-accent text-xs font-sans tracking-[0.16em] uppercase transition-all rounded-sm shadow-sm cursor-pointer">
+            <button type="button" onclick="toggleLookTwice('rec2')" id="btn-rec2" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="self-start sm:self-auto px-4 py-2 border rounded-lg text-xs font-sans tracking-[0.16em] uppercase transition-all shadow-sm cursor-pointer hover:border-theme-accent">
               Look Twice
             </button>
           </div>
@@ -759,16 +755,15 @@
 
       const eraChapters = NOVEL_CHAPTERS[activeEra];
 
-      // STATE A: CHAPTER DIRECTORY (INDEX) - Restored to original clean card list style without arrows
+      // STATE A: CHAPTER DIRECTORY (INDEX)
       if (activeChapterIndex === null) {
         const eraTitle = "Chapter Index";
-        const eraSubtitle = "The Crowned Era — The Weight of Inheritance";
 
         const chapterButtonsHtml = eraChapters.map((ch, idx) => `
-          <button type="button" onclick="selectChapter('${activeEra}', ${idx})" class="book-card w-full text-left p-6 hover:border-theme-accent hover:bg-theme-panel-hover transition-all rounded-sm group block cursor-pointer">
+          <button type="button" onclick="selectChapter('${activeEra}', ${idx})" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full text-left p-6 border rounded-lg hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer group block">
             <div>
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold block mb-1.5">${ch.number}</span>
-              <h3 class="font-display text-lg text-theme-text group-hover:text-theme-accent transition-colors font-semibold">${ch.title}</h3>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80 block mb-1.5">${ch.number}</span>
+              <h3 class="font-display text-lg font-semibold">${ch.title}</h3>
             </div>
           </button>
         `).join('');
@@ -776,7 +771,6 @@
         mainContainer.innerHTML = `
           <div class="text-center mb-12 space-y-2">
             <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">${eraTitle}</h2>
-            <p class="font-serif text-sm text-theme-text-muted italic">${eraSubtitle}</p>
           </div>
           <div class="space-y-4">
             ${chapterButtonsHtml}
@@ -808,17 +802,17 @@
       const btnStyle = "background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);";
 
       const prevLinkHtml = hasPrev 
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">Previous Chapter</button>` 
+        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Previous Chapter</button>` 
         : `<span></span>`;
 
       const nextLinkHtml = hasNext 
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">Next Chapter</button>` 
+        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Next Chapter</button>` 
         : `<span></span>`;
 
       mainContainer.innerHTML = `
         <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
           <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-bold">The Crowned Era &bull; ${chapter.number}</p>
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-bold">${chapter.number}</p>
             <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide font-semibold">${chapter.title}</h2>
             <div class="flex items-center justify-center gap-3 mt-6">
               <span class="w-8 h-px bg-theme-border"></span>
@@ -830,10 +824,10 @@
             ${formattedParagraphs}
           </div>
 
-          <!-- Bottom Footer Navigation without arrows -->
+          <!-- Bottom Footer Navigation -->
           <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
             ${prevLinkHtml}
-            <button type="button" onclick="openReaderIndex('${activeEra}')" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-semibold hover:opacity-90 transition-all shadow-sm cursor-pointer">Chapter Index</button>
+            <button type="button" onclick="openReaderIndex('${activeEra}')" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
             ${nextLinkHtml}
           </div>
         </article>
