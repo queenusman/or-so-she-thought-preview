@@ -154,7 +154,7 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text">
 
-  <!-- ==================== SITE HEADER WITH SMART SCROLL ==================== -->
+  <!-- ==================== SITE HEADER WITH 3-LINE COMPRESSED MENU ==================== -->
   <header id="siteHeader" style="background-color: var(--header-bg); border-color: var(--color-border);" class="sticky top-0 z-50 backdrop-blur-md border-b transition-all duration-300 ease-in-out">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       
@@ -169,44 +169,7 @@
         </div>
       </a>
 
-      <!-- Primary Navigation: Two Distinct Wings -->
-      <nav class="hidden lg:flex items-center space-x-8 text-xs font-sans uppercase tracking-[0.18em]">
-        
-        <!-- SECTION ONE -->
-        <div class="flex items-center space-x-6 border-r border-theme-border pr-8">
-          <span class="text-[9px] tracking-[0.26em] uppercase font-bold text-theme-secondary font-sans">
-            Section One
-          </span>
-          <button onclick="switchView('prologue')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="prologue">
-            Premise
-          </button>
-          <button onclick="switchView('world')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="world">
-            The World of Norwyn
-          </button>
-          <button onclick="switchView('characters')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="characters">
-            The Characters
-          </button>
-        </div>
-
-        <!-- SECTION TWO -->
-        <div class="flex items-center space-x-6">
-          <span class="text-[9px] tracking-[0.26em] uppercase font-bold text-theme-secondary font-sans">
-            Section Two
-          </span>
-          <button onclick="openReaderIndex()" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="reader">
-            Chapters
-          </button>
-          <button onclick="switchView('archive')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="archive">
-            Archive
-          </button>
-          <button onclick="switchView('author-note')" class="nav-button py-1 text-theme-text-muted hover:text-theme-text border-b border-transparent transition-colors" data-page="author-note">
-            Author's Note
-          </button>
-        </div>
-
-      </nav>
-
-      <!-- Global Theme Switcher & Mobile Menu Trigger -->
+      <!-- Global Theme Switcher & 3-Line Menu Trigger -->
       <div class="flex items-center space-x-3">
         <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle theme palette" class="px-3.5 py-1.5 border border-theme-border rounded-lg text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center gap-2 bg-theme-panel shadow-sm cursor-pointer">
           <svg id="themeIconSun" class="w-3.5 h-3.5 inline-block text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -218,21 +181,22 @@
           <span id="themeToggleText">Ivory Mode</span>
         </button>
 
-        <button onclick="toggleMobileNav()" class="p-2 lg:hidden text-theme-text hover:text-theme-accent focus:outline-none cursor-pointer" aria-label="Open mobile menu">
-          <svg id="hamburgerIcon" class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+        <button onclick="toggleMobileNav()" class="p-2.5 border border-theme-border rounded-lg bg-theme-panel text-theme-text hover:text-theme-accent hover:border-theme-accent focus:outline-none cursor-pointer flex items-center gap-2 shadow-sm" aria-label="Open navigation menu">
+          <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7h16M4 12h16M4 17h16" />
           </svg>
+          <span class="text-[11px] font-sans uppercase tracking-widest hidden sm:inline">Menu</span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobileNav" class="hidden lg:hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
+    <!-- 3-Line Collapsible Navigation Drawer (Matching Real Page Titles) -->
+    <div id="mobileNav" class="hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
       <div>
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Section One
         </p>
-        <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Premise</button>
+        <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Premise</button>
         <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World of Norwyn</button>
         <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Characters</button>
       </div>
@@ -240,9 +204,9 @@
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Section Two
         </p>
-        <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Chapters</button>
-        <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Archive</button>
-        <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Author's Note</button>
+        <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read the Chapters</button>
+        <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Norwyn Archives</button>
+        <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
       </div>
     </div>
   </header>
@@ -334,7 +298,7 @@
       </div>
 
       <!-- Dedication below the two section options -->
-      <div class="max-w-xl mx-auto px-6 py-6 font-serif italic font-bold text-base md:text-lg text-theme-text leading-relaxed opacity-90 select-none">
+      <div class="max-w-xl mx-auto px-6 py-6 font-serif italic font-bold text-lg md:text-xl text-theme-text leading-relaxed tracking-wide select-none">
         "For those who have had to discover where their inheritance ends and their own lives begin."
       </div>
     </section>
@@ -835,7 +799,10 @@
         .filter(Boolean);
 
       const formattedParagraphs = paragraphs.map((para, idx) => {
-        return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text font-serif text-justify">${para}</p>`;
+        if (idx === 0) {
+          return `<p class="first-letter:text-5xl first-letter:font-display first-letter:float-left first-letter:mr-4 first-letter:text-theme-accent first-letter:leading-none text-theme-text font-serif text-justify">${para}</p>`;
+        }
+        return `<p class="text-theme-text text-justify">${para}</p>`;
       }).join('\n');
 
       const hasPrev = activeChapterIndex > 0;
