@@ -169,21 +169,6 @@
       color: var(--color-accent);
       font-weight: normal;
     }
-
-    /* Scroll-play video section styling */
-    .scroll-video-section {
-      padding: 40px 0;
-      display: flex;
-      justify-content: center;
-    }
-    .scroll-video {
-      width: 100%;
-      max-width: 900px;
-      border-radius: 8px;
-      border: 1px solid var(--color-border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      background: #000;
-    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text">
@@ -257,10 +242,14 @@
         <span class="w-6 h-px bg-theme-secondary/70"></span>
       </div>
       
-      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-normal text-theme-text tracking-[0.16em] uppercase leading-[1.12] mb-8">
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-normal text-theme-text tracking-[0.16em] uppercase leading-[1.12] mb-4">
         Or So She<br>Thought
       </h1>
       
+      <p class="font-sans text-[11px] uppercase tracking-[0.3em] text-theme-secondary font-semibold mb-8">
+        By Queen Usman
+      </p>
+
       <!-- Literary Device Ornament -->
       <div class="flex items-center justify-center gap-3 my-8 opacity-90">
         <div class="w-12 h-px bg-theme-border"></div>
@@ -345,28 +334,25 @@
       </div>
 
       <!-- Premise Dossier -->
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12">
-        <p class="text-justify">
-          Born into the royal family of Norwyn, Princess Elisabeta has never had to imagine a life outside the one prepared for her. Her world has its own order, traditions and expectations, along with a clear understanding of what makes a good life. Within it, almost everything has an explanation, and almost every decision has its proper place.
-        </p>
-        <p class="text-justify">
-          She has grown up knowing what is expected of her, what her future is supposed to look like and what it means to belong to the family that will one day shape the kingdom's future.
-        </p>
-        <p class="text-justify">
-          But as marriage, family relationships and the responsibilities of the Crown bring these expectations into sharper focus, Elisabeta begins to confront questions she has never had much reason to ask.
-        </p>
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12 text-justify">
+        <p>In Norwyn, an island kingdom ruled by a royal family, a person's future can be decided long before they are old enough to question it.</p>
+        <p>Princess Elisabeta has spent her life preparing for hers.</p>
+        <p>At twenty-two, she is the eldest daughter of Queen Ecaterina and heir to the throne. She has been educated in governance, raised according to the expectations of the royal household and taught to understand the principles that hold her country together. Her engagement to Alexandru of Valenne is another part of the future waiting for her.</p>
+        <p>It is a life she understands. Its responsibilities have been explained to her, its expectations are familiar, and she has learned to see the reasoning behind the arrangements that govern it.</p>
+        <p>But understanding why things are done a certain way does not always mean knowing what those arrangements mean for the people living under them.</p>
+        <p>Beyond the palace, Norwyn is full of people with their own ambitions, difficulties, loyalties and private concerns. Their lives are shaped by circumstances very different from Elisabeta's, and the decisions made in the name of order do not always look the same from where they stand.</p>
+        <p>As Elisabeta encounters more of the world beyond her familiar surroundings, the explanations she has always relied upon begin to meet experiences they cannot so easily contain.</p>
+        <p>There are questions that cannot be settled by knowing the right principles. And there are parts of a person's life that may have been decided without them ever realising how much they had accepted.</p>
         
         <div class="my-6 p-6 border-l-2 border-theme-accent bg-theme-callout-bg rounded-r-sm">
-          <p class="italic text-theme-text text-base md:text-lg leading-relaxed text-justify">
-            What happens when the life you have always understood begins to look different from the inside? When does duty become something you believe in, and when is it simply something you have learned to accept? How do you distinguish between what you genuinely want and what you have spent your life learning to want?
+          <p class="italic text-theme-text text-base md:text-lg leading-relaxed">
+            Or So She Thought is a literary psychological novel about identity, family, duty, privilege and the complicated relationship between the lives we inherit and the lives we might have chosen.
           </p>
         </div>
-        
-        <p class="text-justify">
-          Her difficulty is not simply deciding whether to follow the life expected of her or turn away from it. It is understanding how much of her sense of herself, her family and the world has been shaped by the very life she is beginning to question.
-        </p>
-        <p class="font-serif italic text-theme-heading pt-4 border-t border-theme-border-subtle text-justify">
-          Or So She Thought is a literary psychological novel about family, identity, duty and the complicated process of understanding a life you have always known.
+
+        <p class="pt-4 border-t border-theme-border-subtle text-center font-serif italic text-theme-text-muted">
+          It asks a question that belongs to no particular kingdom or royal family:<br>
+          <strong class="text-theme-text not-italic block mt-2 text-lg">How much of who we are comes from the choices we have made, and how much from the life we were taught to accept?</strong>
         </p>
       </div>
     </section>
@@ -376,153 +362,133 @@
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
         <div>
           <h2 class="font-display text-3xl md:text-5xl text-theme-heading tracking-wide mb-3 font-semibold uppercase">THE WORLD OF NORWYN</h2>
-          <p class="font-serif italic text-base text-theme-text-muted">Discover the kingdom behind the story.</p>
+          <p class="font-serif italic text-base text-theme-text-muted">A Reader's Introduction</p>
           <div class="w-12 h-px bg-theme-border mx-auto my-6"></div>
         </div>
 
         <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-base md:text-lg text-theme-text leading-relaxed text-justify">
-          <p>
-            Every story has a world beyond its characters. A place with its own history, traditions and ways of life. A place where people grow up learning what is familiar, what is expected of them and where they belong.
-          </p>
-          <p>
-            Norwyn is an island kingdom ruled by an absolute monarchy. The royal family holds a prominent place in its society, but the kingdom extends far beyond the palace. Its towns, households and places of work are home to people whose lives are shaped by their own circumstances, relationships and responsibilities.
-          </p>
-          <p>
-            Tradition, family and social position influence much of life in Norwyn. They affect how people understand their place in society, what opportunities are available to them and what others expect them to become.
-          </p>
+          <p>An island kingdom with an ancient royal dynasty, Norwyn has its own customs, institutions and way of life. Its Queen holds absolute authority, its Crown passes from mother to daughter, and its capital lies inland, at the centre of the country's political and administrative life.</p>
+          <p>Beyond the royal palace are cities, towns, rural communities, workshops, farms, ports and settlements connected by trade and transport. People work, study, raise families and make their living in circumstances that differ considerably from one part of the kingdom to another.</p>
           <p class="font-serif italic text-theme-heading pt-2">
-            This is the kingdom in which Or So She Thought takes place.
+            The following is a glimpse of the country in which Elisabeta's story unfolds.
           </p>
         </div>
 
-        <!-- Detailed Sections 1 to 8 (Video embedded right inside 1. The Kingdom) -->
+        <!-- Detailed Sections: World of Norwyn content -->
         <div class="space-y-8 font-serif text-base text-theme-text leading-relaxed text-justify">
           
-          <div class="book-card p-8 rounded-sm space-y-4">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">1. THE KINGDOM</span>
-            
-            <!-- Scroll-play video section -->
-            <div class="scroll-video-section">
-              <video id="scrollVideo" class="scroll-video" src="video_1.mp4"
-                     muted loop playsinline preload="metadata" controls></video>
-            </div>
-
-            <p>
-              Norwyn is an island kingdom with its own monarchy and established traditions. Its capital, known simply as the Capital, is situated inland.
-            </p>
-            <p>
-              Beyond the royal residence are towns and settlements where people live, work and trade. These communities form part of a wider society connected by the movement of people and goods.
-            </p>
-            <p>
-              Although the palace is central to the kingdom's public life, it is only one part of Norwyn. The country has a life of its own beyond the royal household, shaped by the everyday activities of the people who live there.
-            </p>
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Island and Its Seasons</span>
+            <p>Norwyn is a large island with a varied landscape. Mountains and forests occupy parts of the country, while farmland, rivers and long coastlines shape others. Its settlements differ in climate, occupation and way of life.</p>
+            <p>The landscape is closely connected to the work of its people. Farmland supports agriculture, forests supply timber, rivers carry goods towards inland centres, and coastal communities maintain connections with other kingdoms.</p>
+            <p>Norwyn has three seasons: spring, autumn and winter. There is no summer. The year moves through the thaw, the return of colder weather, the first frost and periods when the rain eases.</p>
+            <p>The novel opens in winter, when damp stone, cold rooms and the steady work of keeping fires lit are familiar parts of daily life.</p>
+            <p>Across the water lie other kingdoms, among them Valenne, whose royal family and commercial interests have an important relationship with Norwyn.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">02. THE CROWN AND THE MONARCHY</span>
-            <p>
-              Norwyn is governed by an absolute monarchy, with the Crown holding the highest authority in the kingdom.
-            </p>
-            <p>
-              The throne passes through the female line. Succession follows the maternal royal lineage, making the queen's family line central to the continuation of the monarchy.
-            </p>
-            <p>
-              This principle is reflected in the royal family's naming tradition. Children born into the family inherit their mother's royal family name, preserving the maternal line across generations.
-            </p>
-            <p>
-              There is also a distinction in the titles held within the royal marriage. The husband of a reigning queen remains a Prince rather than becoming King.
-            </p>
-            <p>
-              These traditions shape the structure of the monarchy and influence how the royal family understands inheritance, position and continuity.
-            </p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Crown</span>
+            <p>Norwyn is an absolute monarchy. The Queen is the kingdom's sovereign and holds supreme governing authority.</p>
+            <p>The Crown passes through the female line, with the eldest daughter serving as heir. Royal children inherit their mother's royal family name. A Queen's husband does not become King; he retains the title of Prince, and the succession remains within the maternal line.</p>
+            <p>At the beginning of the story, Norwyn is ruled by Queen Ecaterina. Her eldest daughter, Princess Elisabeta, is heir to the throne. Her younger daughter is Princess Ileana.</p>
+            <p>The monarchy is part of everyday national life, not simply a ceremonial institution. Its responsibilities extend into the administration of the kingdom, its official records and the institutions that carry out its business.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">03. THE ROYAL FAMILY AND SOCIETY</span>
-            <p>
-              In Norwyn, society is organised around two principal social classes: royals and non-royals.
-            </p>
-            <p>
-              Being born into the royal family means belonging to an institution with a position of its own. Royal birth brings privileges, but it also carries responsibilities and expectations that extend beyond the individual.
-            </p>
-            <p>
-              The wider population belongs to the non-royal class. Within it, however, people live under different circumstances. Family background, occupation, personal relationships and access to resources all contribute to the differences between households.
-            </p>
-            <p>
-              Social position influences life in Norwyn, but it does not tell the whole story of an individual's circumstances.
-            </p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The People of Norwyn</span>
+            <p>Norwyn formally recognises two classes: royals and non-royals.</p>
+            <p>Royals belong to the ruling dynasty. Everyone outside it is non-royal.</p>
+            <p>Within the non-royal population, however, lives differ greatly. Wealth, occupation, education, family circumstances and access to opportunities all influence the kind of life a person can lead.</p>
+            <p>A prosperous merchant, a university student, a skilled joiner and a poorly paid labourer may share the same formal status without sharing the same advantages.</p>
+            <p>The distinction between royal and non-royal is an important part of Norwyn's social structure, but it is not the only distinction that shapes people's lives.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">04. THE LAND AND ITS PLACES</span>
-            <p>
-              The Capital lies inland, while towns and settlements make up the wider landscape of Norwyn.
-            </p>
-            <p>
-              People move between these places for work, trade and other everyday reasons. Goods travel between communities, connecting different parts of the kingdom through their economic and social activities.
-            </p>
-            <p>
-              The locations encountered in Or So She Thought offer different views of Norwyn. Some are closely associated with the royal household, while others belong to the wider life of the country.
-            </p>
-            <p>
-              Each provides a different perspective on the kingdom and the people who inhabit it.
-            </p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Capital and the Palace</span>
+            <p>Norwyn's capital is known simply as the Capital. Situated inland, it is the seat of government, the home of the royal family and the location of several of the kingdom's principal institutions.</p>
+            <p>The Royal Palace is both a residence and a working establishment. Its rooms accommodate the royal family, household staff and official visitors, while its corridors and offices are part of the daily business of the Crown.</p>
+            <p>Among its familiar spaces are the library, the Blue Drawing Room, the conservatory, the oak-panelled east gallery and the long hall in the west wing.</p>
+            <p>The palace is grand without being excessively showy. Its rooms are carefully furnished and maintained, and its atmosphere is shaped by beeswax, wool, polished wood and the warmth of its fires.</p>
+            <p>Behind its formal appearance is a considerable amount of ordinary work. Gardeners tend the grounds, dressers maintain clothing, attendants manage arrangements, and household staff prepare rooms, meals and fires. The palace depends on the people who keep it functioning, many of whom remain outside the attention given to its royal residents.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">05. THE SEASONS</span>
-            <p>Norwyn has three seasons:</p>
-            <ul class="list-disc pl-5 space-y-1 text-left">
-              <li>Spring</li>
-              <li>Autumn</li>
-              <li>Winter</li>
-            </ul>
-            <p>There is no summer.</p>
-            <p>
-              These seasons mark the passage of the year and form the natural calendar of the kingdom.
-            </p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Culture and Customs</span>
+            <p>Norwyn's culture draws on French, Spanish, wider European and Cambodian influences. These can be seen in aspects of its architecture, clothing, food, craftsmanship, ceremony and domestic life.</p>
+            <p>The kingdom has developed its own blend of these influences. Its identity is not confined to the royal household, and its customs are shared and adapted in different ways across the island.</p>
+            <p>Norwyn favours a particular kind of elegance: grandeur accompanied by restraint. Fine materials, careful workmanship and attention to detail are valued more than unnecessary display. Formality is part of public life, but it is often expressed through precise manners and understated presentation.</p>
+            <p>Royal occasions follow established conventions. Introductions, seating arrangements, forms of address and official appearances are carefully organised.</p>
+            <p>The Queen is addressed as Your Majesty, while princesses are addressed as Your Highness.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">06. FOOD AND EVERYDAY LIFE</span>
-            <p>
-              The everyday life of a place can often be understood through ordinary details. In Norwyn, food offers a glimpse into the differences between households.
-            </p>
-            <p>
-              Rice, beans and potatoes are common foods. Buttered bread, however, is associated with greater wealth. What might appear to be a small difference in daily meals can reflect the circumstances in which people live.
-            </p>
-            <p>
-              Not every distinction in Norwyn is visible through titles or formal displays of status. Some are found in household routines, the things people can afford and the comforts available to them.
-            </p>
-            <p>
-              These ordinary details help establish the material world in which the characters live.
-            </p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Education and the Royal Academy</span>
+            <p>Education in Norwyn takes place in several kinds of institutions, serving royal children and non-royal students from different backgrounds.</p>
+            <p>One of the kingdom's principal institutions is the Royal Academy of Governance, situated in the Capital. It provides education in governance and administration and prepares students for responsibilities within the kingdom's institutions.</p>
+            <p>Its students include members of the royal family as well as people from outside the royal class.</p>
+            <p>An important part of the Academy's teaching is Structural Ideology, a body of thought concerned with order, organisation and the relationship between individual responsibilities and the needs of the whole.</p>
+            <p>Within this teaching is the doctrine of Alignment. It describes the ideal of a person whose understanding of order has become so well formed that they recognise what serves the whole without needing to be instructed at every step.</p>
+            <p>Students encounter these principles through lessons, discussions and practical examples. Their understanding is also assessed through formal examinations and academic panels.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">07. WORK AND TRADE</span>
-            <p>
-              Work and trade are part of what keeps Norwyn's communities connected. Fabric and flour are among the kingdom's major trades, linking the production and exchange of goods across different parts of the country.
-            </p>
-            <p>
-              People work in different occupations to support their households and contribute to the wider economy. Their activities form part of the everyday life that continues beyond the affairs of the royal family.
-            </p>
-            <p>
-              The kingdom is sustained not only by its institutions, but also by the work of the people who live within it.
-            </p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Work and Trade</span>
+            <p>Fabric and flour are among Norwyn's major trades.</p>
+            <p>The country's agricultural communities contribute to flour production, while its textile workshops produce cloth for domestic use, commerce and the royal household.</p>
+            <p>Other important forms of work include timber production, joinery, carpentry, construction, gardening, tailoring, transport and administration.</p>
+            <p>Forests supply timber, and rivers provide routes for moving heavy goods. Coal and timber are carried towards the Capital, where railway sidings and industrial works support the movement and use of these materials.</p>
+            <p>Norwyn's economy depends on people with many different skills. Some work in family businesses and independent workshops; others are employed by institutions, merchants, households and larger enterprises.</p>
+            <p>Trade also extends beyond the island. Commercial arrangements between Norwyn and other kingdoms connect ports, businesses and workers across the water.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">08. ARCHITECTURE AND APPEARANCE</span>
-            <p>
-              Norwyn has a visual identity influenced by several architectural and aesthetic traditions, including French, Spanish and Cambodian influences.
-            </p>
-            <p>
-              These influences contribute to the appearance of its buildings and surroundings, while the kingdom retains a character of its own.
-            </p>
-            <p>
-              Norwyn is a fictional kingdom, not a representation of any particular real country or historical period. Its appearance and cultural identity belong to the world of the novel.
-            </p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Food and Everyday Life</span>
+            <p>Rice, beans and potatoes are common foods in ordinary Norwynian households.</p>
+            <p>Differences in prosperity can sometimes be seen in the small details of a meal. Buttered bread, for example, is associated with greater comfort and wealth.</p>
+            <p>The royal household has a more varied dining tradition. Meals may include soup, fish and tea, while formal receptions and state occasions call for more elaborate arrangements.</p>
+            <p>Daily life is shaped by occupation, household responsibilities, education and the weather. In larger homes, domestic staff undertake much of the work required to maintain the residence, from preparing rooms and serving meals to caring for clothing and keeping fires burning.</p>
+            <p>The appearance of an orderly household depends on the work that takes place long before its guests arrive.</p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Clothing and Dress</span>
+            <p>Clothing in Norwyn reflects occupation, wealth, climate and occasion.</p>
+            <p>Royal and wealthy women wear carefully made gowns, often using silk and other fine fabrics. Plain cotton is worn beneath formal clothing, while wool provides warmth during the colder months.</p>
+            <p>Formal occasions call for particular standards of dress. Men may wear black wool, and women wear gloves and carefully chosen accessories.</p>
+            <p>Household employees wear uniforms suited to their duties.</p>
+            <p>Fine clothing is valued not only for its appearance but also for its construction, fabric and workmanship. Norwyn's textile traditions are an important part of its cultural and commercial life.</p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Technology and Transport</span>
+            <p>Norwyn is a technologically developed kingdom.</p>
+            <p>Electric lighting, motor cars, telephones, newspapers, press photography, cassette recorders and railways are all part of its world.</p>
+            <p>These technologies exist alongside older practices. Candles and coal fires remain familiar, handwritten cards are still exchanged, and paper records continue to play an important role in households and institutions.</p>
+            <p>Motor cars serve private and official journeys, while railways and rivers connect the Capital with other settlements and commercial centres.</p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Royal Family and Public Life</span>
+            <p>The Crown is a visible part of Norwyn's public life.</p>
+            <p>The royal family attends official visits, charity occasions, receptions, state dinners, public openings and formal ceremonies. Such events are carefully arranged, from the order of arrival to the seating plan and the photographs released to the press.</p>
+            <p>Royal marriages are also connected to the relationships between kingdoms. They can carry dynastic and diplomatic significance, bringing together families whose positions extend beyond their personal circumstances.</p>
+            <p>For members of the royal household, public appearances and private responsibilities are closely connected.</p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Valenne</span>
+            <p>Across the water from Norwyn lies Valenne, a separate kingdom with its own royal court, educational institutions and commercial interests.</p>
+            <p>Its southern ports are important to trade and employment. Agreements between the two kingdoms affect businesses, institutions and the people whose livelihoods depend on their arrangements.</p>
+            <p>Alexandru, Elisabeta's betrothed, is the heir to Valenne. His position makes the relationship between the two royal families an important part of the world surrounding the story.</p>
+          </div>
+
+          <div class="book-card p-8 rounded-sm space-y-3">
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Institutions and Records</span>
+            <p>Norwyn has institutions responsible for maintaining official records and administering different aspects of national life.</p>
+            <p>The Founders' Archive preserves records and is supported by the Founders' Trust, which also organises public occasions such as its annual gala.</p>
+            <p>The Inspectorate oversees the Timber Inspection Schedule. Under this arrangement, timber entering Norwyn's trade is inspected on four fixed days each year, according to the same standard and using official seals.</p>
+            <p>The Schedule is regarded as an example of orderly administration because it is designed to apply the same requirements regardless of ownership.</p>
+            <p>It is also one of the examples used at the Royal Academy when students study the principles of Structural Ideology.</p>
           </div>
 
         </div>
@@ -552,54 +518,313 @@
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Characters</h2>
         <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
-          None are villains; none are symbols. Each operates within the plausible reality shaped for them.
+          A Character Guide
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Elisabeta -->
-        <div class="book-card p-8 rounded-sm">
-          <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Heiress</span>
+      <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12 text-justify">
+        <p>The people of Or So She Thought come from different households, professions and positions within Norwynian society. Some belong to the royal family; others are connected to the institutions, businesses and everyday work that keep the kingdom running.</p>
+        <p class="font-serif italic text-theme-heading pt-2">
+          Here are some of the people you will encounter as the story begins.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        
+        <!-- The Royal Family Group -->
+        <div class="space-y-4">
+          <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">The Royal Family</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Elisabeta -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Heiress</span>
+              </div>
+              <p class="text-xs text-theme-accent font-sans mb-3">Age: Twenty-two</p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Position: Eldest daughter of Queen Ecaterina, heir to the throne of Norwyn and betrothed to Alexandru of Valenne.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Raised in the Royal Palace, Elisabeta has spent much of her life preparing for the responsibilities that accompany her position. Her education includes private lessons in Structural Ideology and formal study at the Royal Academy of Governance.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                She is courteous, composed and attentive to detail. She chooses her words carefully, often qualifies her statements and is accustomed to explaining her reasoning. She notices small changes in her surroundings and has a particular habit of counting things.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                She reads closely, keeps a private notebook and is familiar with the principles that have shaped her education.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                As the heir, Elisabeta is expected to represent the continuity of Norwyn's royal dynasty. She has been taught to understand what that responsibility requires, though understanding a responsibility and experiencing it are not always the same thing.
+              </p>
+            </div>
+
+            <!-- Queen Ecaterina -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Sovereign</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Reigning Queen of Norwyn and mother of Princesses Elisabeta and Ileana.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Ecaterina is measured and composed, rarely hurrying to fill a silence. She speaks with precision and tends to explain her reasoning rather than rely on unnecessary commands.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                She often wears dark plum gowns with silver detailing and gloves. Her appearance is carefully maintained, and she notices the small details of dress and posture in those around her.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                She is accustomed to the responsibilities of the Crown and to the demands of running a royal household.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                To her daughters, she is both their mother and the sovereign of their kingdom. The two roles are never entirely separate.
+              </p>
+            </div>
+
+            <!-- Princess Ileana -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Princess Ileana</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Second Daughter</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: The Queen's second daughter and Elisabeta's younger sister.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Ileana is quiet, precise and dry in her humour. She is attentive to practical details and often notices things that others overlook.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                She is familiar with the organisation of the royal household and regularly works with papers, records and household information.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Although she shares her sister's intelligence, she has a different temperament and occupies a different position within the family.
+              </p>
+            </div>
+
+            <!-- Safira -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Safira</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Companion</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Elisabeta's cat.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Safira is a familiar presence in the palace. She sleeps beneath tables, settles wherever there is room and follows the movements of the people around her.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                She has her own ideas about where she belongs, which do not always coincide with the household's arrangements.
+              </p>
+            </div>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
-            Formed so carefully to rule that she struggles to distinguish between what she has been educated to want and what belongs to her own desire.
-          </p>
         </div>
 
-        <!-- Queen Ecaterina -->
-        <div class="book-card p-8 rounded-sm">
-          <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Mother</span>
+        <!-- The Court of Valenne -->
+        <div class="space-y-4 pt-4">
+          <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">The Court of Valenne</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Alexandru -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Intended</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Heir to the throne of Valenne and Elisabeta's betrothed.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Alexandru is tall and fair, with hair that tends to come loose after a walk across a courtyard in the rain.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                He is warm, socially confident and quick with a joke. He remembers small details about people, sometimes imperfectly, and is comfortable in formal company.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                He is fond of horses, particularly a grey horse named Marrow, who has an unfortunate refusal to cross water.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Alexandru and Elisabeta first met when she was eighteen. Their engagement forms part of the relationship between the royal families of Norwyn and Valenne.
+              </p>
+            </div>
+
+            <!-- Ambassador Duvall -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Ambassador Duvall</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Diplomat</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Valenne's ambassador to Norwyn.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                A spare, silver-haired man of quiet manner, Duvall represents Valenne at the Norwyn court and attends formal occasions involving the two kingdoms.
+              </p>
+            </div>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
-            She does not control Elisabeta to dominate her. She prepares Elisabeta because she knows what unshielded exposure looks like in court. Preparation is her highest form of love.
-          </p>
         </div>
 
-        <!-- Alexandru -->
-        <div class="book-card p-8 rounded-sm">
-          <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Intended</span>
+        <!-- The Royal Household -->
+        <div class="space-y-4 pt-4">
+          <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">The Royal Household</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Mr. Corrow -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Mr. Corrow</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Tutor</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Elisabeta's private tutor.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Mr. Corrow teaches Elisabeta Structural Ideology and conducts her weekly lessons in the palace library.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                He is courteous, precise and fond of order. He values careful reasoning and takes particular satisfaction in a pupil who can defend an argument under questioning.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                He has taught Elisabeta for four years and is familiar with her academic abilities.
+              </p>
+            </div>
+
+            <!-- Mrs. Hale -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Mrs. Hale</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Dresser</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Royal dresser.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Mrs. Hale is responsible for fitting and maintaining the royal family's gowns. She has worked in the household for many years and knows the practical demands of dressing its members.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Direct and observant, she is particular about measurements, fabrics and the condition of every garment. She often works with pins in her mouth and keeps careful records of the gowns entrusted to her.
+              </p>
+            </div>
+
+            <!-- The Steward -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">The Steward</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">Administration</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Senior officer of the royal household.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                The steward oversees domestic arrangements and communicates official instructions and information.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Courteous and restrained, he is accustomed to the routines and formalities of palace administration.
+              </p>
+            </div>
+
+            <!-- The Household Staff -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">The Household Staff</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Workers</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                The palace employs pages, maids, attendants, dressers, stewards, secretaries, guards, cooks, gardeners and other workers.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Their responsibilities differ, but together they maintain the daily life of the royal residence. An attendant accompanies Elisabeta whenever she leaves the palace.
+              </p>
+            </div>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
-            Disciplined, respectful, and genuinely kind. His decency makes him far harder to resist than a tyrant, because accepting him feels like reason itself.
-          </p>
         </div>
 
-        <!-- Lucian -->
-        <div class="book-card p-8 rounded-sm">
-          <div class="flex items-baseline justify-between mb-2">
-            <h3 class="font-display text-xl text-theme-text font-semibold">Lucian</h3>
-            <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner’s Son</span>
+        <!-- The Royal Academy and The Fletcher Family -->
+        <div class="space-y-4 pt-4">
+          <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">The Academy & The Fletcher Family</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Professor Calloway -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Professor Calloway</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Lecturer</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Lecturer at the Royal Academy of Governance.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Professor Calloway teaches the doctrine of Alignment and uses practical examples to explain the principles of Structural Ideology.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                He is formal and composed. He carries a folder to the lectern but rarely needs to open it during a lesson.
+              </p>
+            </div>
+
+            <!-- Lucian Fletcher -->
+            <div class="book-card p-8 rounded-sm space-y-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Lucian Fletcher</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner’s Son</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Student at the Royal Academy of Governance and son of Tobias Fletcher, a joiner.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Lucian is broad-shouldered and slightly stooped, with large hands and marked knuckles. He wears a grey jumper mended at both elbows, often keeps a pencil behind his ear and has a pale scar along his jaw.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                He is observant, direct and unhurried. He answers plainly, uses dry humour sparingly and is comfortable admitting when he does not know something.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                His family is connected to Norwyn's timber trade, and he has practical experience of wood and the work involved in preparing it.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                At the Academy, Lucian brings a familiarity with physical work and materials into discussions often concerned with principles and administration.
+              </p>
+            </div>
+
+            <!-- Tobias Fletcher -->
+            <div class="book-card p-8 rounded-sm space-y-2 md:col-span-2">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Tobias Fletcher</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner</span>
+              </div>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+                Position: Joiner and father of Lucian Fletcher.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                Tobias operates a timber yard beside the river. His workshop has undertaken work for the palace, including woodwork for the east wing.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                He is broad and grey-haired, with large hands marked by years of manual work. He speaks slowly and has a dry sense of humour.
+              </p>
+              <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light text-justify">
+                His work is part of the skilled craftsmanship that supports Norwyn's buildings and businesses.
+              </p>
+            </div>
           </div>
-          <p class="font-serif text-sm text-theme-text-muted leading-relaxed font-light mt-4 text-justify">
-            He is not a storybook escape into effortless freedom. He knows what rules cost the wood in the yard, offering intellectual confrontation rather than salvation.
-          </p>
         </div>
+
+        <!-- The Relationships Summary Card -->
+        <div class="book-card p-8 rounded-sm space-y-4 mt-8">
+          <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Key Relationships</h3>
+          <ul class="list-disc pl-5 space-y-2 text-sm text-theme-text-muted font-serif">
+            <li>Queen Ecaterina is the mother of Elisabeta and Ileana.</li>
+            <li>Elisabeta is the eldest daughter and heir to the throne of Norwyn.</li>
+            <li>Ileana is Elisabeta's younger sister.</li>
+            <li>Alexandru of Valenne is Elisabeta's betrothed.</li>
+            <li>Mr. Corrow is Elisabeta's private tutor.</li>
+            <li>Professor Calloway teaches at the Royal Academy of Governance.</li>
+            <li>Mrs. Hale is responsible for the royal family's gowns.</li>
+            <li>Lucian Fletcher is a student at the Academy and the son of Tobias Fletcher.</li>
+            <li>Safira is Elisabeta's cat.</li>
+            <li>Ambassador Duvall represents Valenne at the Norwyn court.</li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -933,24 +1158,6 @@
       const drawer = document.getElementById('mobileNav');
       drawer.classList.toggle('hidden');
     }
-
-    // Scroll-play video observer
-    (function () {
-      const video = document.getElementById("scrollVideo");
-      if (!video) return;
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play().catch(() => {});
-          } else {
-            video.pause();
-          }
-        });
-      }, { threshold: 0.5 });
-
-      observer.observe(video);
-    })();
 
     // Smart Scroll: Header hides when scrolling down, reappears when scrolling up
     let lastScrollY = window.pageYOffset;
