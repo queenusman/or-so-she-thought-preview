@@ -224,6 +224,7 @@
           Section Two (Read)
         </p>
         <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
+        <button onclick="switchView('disclaimer'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Disclaimer</button>
         <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read the Chapters</button>
         <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Norwyn Archives</button>
       </div>
@@ -309,6 +310,9 @@
               <button type="button" onclick="switchView('author-note')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>A Note from the Author</span>
               </button>
+              <button type="button" onclick="switchView('disclaimer')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+                <span>Disclaimer</span>
+              </button>
               <button type="button" onclick="openReaderIndex()" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
               </button>
@@ -374,9 +378,8 @@
           </p>
         </div>
 
-        <!-- Detailed Sections: World of Norwyn content -->
+        <!-- Detailed Sections -->
         <div class="space-y-8 font-serif text-base text-theme-text leading-relaxed text-justify">
-          
           <div class="book-card p-8 rounded-sm space-y-3">
             <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Island and Its Seasons</span>
             <p>Norwyn is a large island with a varied landscape. Mountains and forests occupy parts of the country, while farmland, rivers and long coastlines shape others. Its settlements differ in climate, occupation and way of life.</p>
@@ -490,7 +493,6 @@
             <p>The Schedule is regarded as an example of orderly administration because it is designed to apply the same requirements regardless of ownership.</p>
             <p>It is also one of the examples used at the Royal Academy when students study the principles of Structural Ideology.</p>
           </div>
-
         </div>
 
         <!-- Beyond the Palace Closing Statement -->
@@ -509,7 +511,6 @@
             Welcome to Norwyn.
           </p>
         </div>
-
       </div>
     </section>
 
@@ -830,7 +831,7 @@
 
     <!-- ==================== SECTION TWO: READ THE NOVEL ==================== -->
 
-    <!-- 1. A NOTE FROM THE AUTHOR (First Section in Section Two) -->
+    <!-- 1. A NOTE FROM THE AUTHOR -->
     <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
@@ -839,30 +840,54 @@
         </p>
       </div>
 
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12">
-        <p class="text-justify">
-          This novel takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is a fictional place, shaped by the needs of the story and the people who inhabit it.
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12 text-justify">
+        <p>
+          <em>Or So She Thought</em> takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is entirely fictional. It has been shaped for this story and the people who inhabit it.
         </p>
-        <p class="text-justify">
-          At the centre of the novel is Elisabeta, a young woman raised within the royal family and expected to inherit a life already surrounded by responsibilities, traditions and expectations. Through her experiences and relationships, the story explores the complicated ways in which family, upbringing, duty and personal desire can shape a person's understanding of themselves.
+        <p>
+          At the centre of the novel is Elisabeta, a young woman raised within the royal family and prepared for a future that comes with responsibilities, traditions and expectations of its own. Through her experiences and relationships, the story explores how family, upbringing, duty and personal desire influence the way we understand ourselves and the lives we believe we are meant to lead.
         </p>
-        <p class="text-justify">
-          I have always been interested in the parts of people that are not immediately visible: the thoughts behind familiar behaviour, the expectations people learn to live with, the small adjustments they make to belong, and the moments when what they have always known begins to look different. These interests found their way into this story.
+        <p>
+          I have always been drawn to the less visible parts of human experience: the thoughts behind familiar behaviour, the expectations we gradually learn to accept, the adjustments we make without always noticing, and the moments when something we have always believed begins to look different. I wanted to explore some of these questions through fiction, and they became part of the foundation of this story.
         </p>
-        <p class="text-justify">
-          As you read, you will encounter a world that extends beyond the events of the main narrative. The World of Norwyn, the character introductions and The Norwyn Archives offer additional glimpses into the kingdom, its people and its institutions. They are there for readers who enjoy exploring the details of a fictional world, but they are not required reading. The story can be followed through the chapters alone.
+        <p>
+          For readers who enjoy discovering the details of an imagined world, I have included <em>The World of Norwyn</em>, a character guide and <em>The Norwyn Archives</em>. These offer additional glimpses into the kingdom, its people and its institutions. They are entirely optional, however. You can follow the story through the chapters alone and return to the additional material whenever you wish.
         </p>
-        <p class="text-justify">
-          I hope you enjoy discovering Norwyn and getting to know the people who call it home. More than anything, I hope the story gives you something worth thinking about long after you have turned the final page.
+        <p>
+          I hope you enjoy your time in Norwyn, find something to appreciate in its people, and perhaps recognise a few things about the world beyond it.
         </p>
-        <p class="pt-4 border-t border-theme-border-subtle font-semibold text-justify">
-          Thank you for reading.<br>
+        <p>
+          Thank you for giving this story your time.
+        </p>
+        <p class="pt-4 border-t border-theme-border-subtle font-semibold text-right">
           <span class="font-display tracking-wider text-theme-accent">Queen Usman</span>
         </p>
       </div>
     </section>
 
-    <!-- 2. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
+    <!-- 2. DISCLAIMER (New Section) -->
+    <section id="view-disclaimer" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">Disclaimer</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light italic">
+          Legal notice & narrative boundaries.
+        </p>
+      </div>
+
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12 text-justify">
+        <p>
+          Or So She Thought is a work of fiction. Norwyn, its institutions, history, customs, places and characters are imagined. Any resemblance to actual people, places, events or institutions is coincidental.
+        </p>
+        <p>
+          Although the story draws on elements of history, culture and human experience, it does not depict any particular country or historical society. Its world has been created for the purposes of this novel.
+        </p>
+        <p>
+          The people and events within these pages belong to Norwyn.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
       
       <!-- Floating Minimalist Font Size Control Widget (Top-Right) -->
@@ -878,7 +903,7 @@
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
-    <!-- 3. ARCHIVE -->
+    <!-- 4. ARCHIVE -->
     <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Norwyn Archive</h2>
@@ -971,7 +996,7 @@
     let isIvoryMode = false; // Default: Dark Mode active
 
     function switchView(viewId) {
-      const views = ['home', 'prologue', 'world', 'characters', 'reader', 'archive', 'author-note'];
+      const views = ['home', 'prologue', 'world', 'characters', 'reader', 'archive', 'author-note', 'disclaimer'];
       
       views.forEach(v => {
         const el = document.getElementById(`view-${v}`);
