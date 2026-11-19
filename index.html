@@ -47,30 +47,23 @@
        DEFAULT: DARK MODE (Charcoal Plum Velvet)
        ======================================================== */
     :root, .theme-dark {
-      --color-bg: #3E3D43;               /* Dominant Charcoal Plum */
-      --color-bg-subtle: #343338;        /* Recessed background */
-      --color-panel: #49474E;            /* Elevated surface */
-      --color-panel-hover: #524E57;      /* Hover panel */
-      
-      --color-border: #625B64;          /* Structural border */
-      --color-border-subtle: #4D4750;   /* Hairline divider */
-      
-      --color-text: #F8F7F5;            /* Warm Ivory */
-      --color-text-muted: #C5BAC1;      /* Muted editorial copy */
-      --color-text-faint: #988F96;      /* Sub-metadata */
-      
-      --color-accent: #E2D0D4;          /* Lighter Dusty Rose */
-      --color-secondary: #8E7D8A;       /* Muted Mauve */
+      --color-bg: #3E3D43;
+      --color-bg-subtle: #343338;
+      --color-panel: #49474E;
+      --color-panel-hover: #524E57;
+      --color-border: #625B64;
+      --color-border-subtle: #4D4750;
+      --color-text: #F8F7F5;
+      --color-text-muted: #C5BAC1;
+      --color-text-faint: #988F96;
+      --color-accent: #E2D0D4;
+      --color-secondary: #8E7D8A;
       --color-callout-bg: rgba(81, 75, 84, 0.45);
-      
       --header-bg: rgba(62, 61, 67, 0.94);
       --footer-bg: #343338;
-      
-      /* Neutral Button Styling matching Header Theme Toggle */
       --primary-btn-bg: #49474E;
       --primary-btn-text: #C5BAC1;
       --primary-btn-border: #625B64;
-      
       --selection-bg: #8E7D8A;
       --selection-text: #F8F7F5;
       --page-texture: radial-gradient(circle at 50% 0%, rgba(142, 125, 138, 0.16) 0%, rgba(62, 61, 67, 0) 70%);
@@ -111,36 +104,25 @@
 
     /* ========================================================
        THEME 2: INVERSE LIGHT MODE
-       Header, Containers & Footer Synchronized to #F8F7F5
        ======================================================== */
     .theme-ivory {
-      --color-bg: #F8F7F5;               /* Warm Ivory background */
-      --color-bg-subtle: #F1ECE5;        /* Soft ambient tone */
-      
-      /* Containers and panels match the header & footer canvas color */
-      --color-panel: #F8F7F5;            
-      --color-panel-hover: #F1ECE5;      
-      
-      --color-border: #CCC4BC;          /* Structural rule */
-      --color-border-subtle: #DCD6CF;   /* Hairline divider */
-      
-      --color-text: #3E3D43;            /* Charcoal Plum text */
-      --color-text-muted: #5A5760;      /* Editorial body */
-      --color-text-faint: #7E7985;      /* Sub-metadata */
-      
-      --color-accent: #C79EAF;          /* Lighter, softer Antique Rose */
-      --color-secondary: #C79EAF;       /* Deep Rose for structural labels */
+      --color-bg: #F8F7F5;
+      --color-bg-subtle: #F1ECE5;
+      --color-panel: #F8F7F5;
+      --color-panel-hover: #F1ECE5;
+      --color-border: #CCC4BC;
+      --color-border-subtle: #DCD6CF;
+      --color-text: #3E3D43;
+      --color-text-muted: #5A5760;
+      --color-text-faint: #7E7985;
+      --color-accent: #C79EAF;
+      --color-secondary: #C79EAF;
       --color-callout-bg: rgba(199, 158, 175, 0.12);
-      
-      /* Navigation header & footer match the container/canvas color */
       --header-bg: rgba(248, 247, 245, 0.94);
       --footer-bg: #F8F7F5;
-      
-      /* Neutral Button Styling matching Header Theme Toggle in Light Mode */
       --primary-btn-bg: #F8F7F5;
       --primary-btn-text: #5A5760;
       --primary-btn-border: #CCC4BC;
-      
       --selection-bg: #C79EAF;
       --selection-text: #F8F7F5;
       --page-texture: radial-gradient(circle at 50% 0%, rgba(199, 158, 175, 0.1) 0%, rgba(248, 247, 245, 0) 70%);
@@ -197,17 +179,15 @@
     }
 
     .view-section {
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.2s ease;
     }
     .view-hidden {
       display: none !important;
       opacity: 0;
-      transform: translateY(6px);
     }
     .view-visible {
       display: block;
       opacity: 1;
-      transform: translateY(0);
     }
 
     /* Force Justified Layout and Drop Cap on Chapters */
@@ -234,10 +214,9 @@
        ======================================================== */
     .scriptorium-shell {
       position: relative;
-      min-height: 76vh;
+      width: 100%;
       border: 1px solid var(--color-border);
       border-radius: 4px;
-      overflow: hidden;
       background: radial-gradient(ellipse 85% 60% at 50% 0%, var(--room-hi) 0%, var(--room) 72%);
       box-shadow: var(--card-shadow);
     }
@@ -275,7 +254,7 @@
 
     .scriptorium-subview {
       width: 100%;
-      transition: opacity .55s ease, visibility 0s;
+      transition: opacity .45s ease;
     }
 
     .shelf-subview {
@@ -440,27 +419,25 @@
     .archive-reader-subview {
       display: none;
       position: relative;
-      min-height: 76vh;
       width: 100%;
       background: radial-gradient(ellipse 90% 70% at 50% 45%, var(--room-hi) 0%, var(--room) 70%);
     }
     body[data-archive-mode="reader"] .archive-reader-subview {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
 
     .scriptorium-stage {
       position: relative;
       width: 100%;
-      height: 76vh;
-      min-height: 540px;
-      overflow: hidden;
+      height: clamp(460px, 72vh, 720px);
       display: flex;
       align-items: center;
       justify-content: center;
       user-select: none;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
-      touch-action: none;
+      touch-action: pan-y;
       cursor: pointer;
     }
     .scriptorium-bar {
@@ -522,7 +499,7 @@
       position: absolute;
       z-index: 30;
       left: 50%;
-      bottom: 24px;
+      bottom: 18px;
       transform: translateX(-50%);
       width: max-content;
       max-width: calc(100% - 40px);
@@ -555,9 +532,9 @@
       flex: none;
       perspective: 2800px;
       font-size: 17px;
-      --fd: 1.15s;
+      --fd: 0.95s;
       transform: translate(var(--tx, 0px), var(--ty, 0px)) rotateX(var(--rx, 0deg));
-      transition: transform 1.1s cubic-bezier(.45, .05, .2, 1);
+      transition: transform 0.75s cubic-bezier(.22, .8, .28, 1);
     }
     .scriptorium-book.nt {
       transition: none;
@@ -579,7 +556,7 @@
       width: 50%;
       z-index: 0;
       background: var(--vellum-edge);
-      transition: opacity .4s;
+      transition: opacity .35s;
     }
     .scriptorium-book .slab.r { left: 50%; }
     .scriptorium-book .slab.l { left: 0; }
@@ -593,7 +570,7 @@
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       transform: rotateY(0deg);
-      transition: transform var(--fd, 1.15s) cubic-bezier(.45, .05, .2, 1);
+      transition: transform var(--fd, 0.95s) cubic-bezier(.22, .8, .28, 1);
     }
     .scriptorium-book .leaf.flipped {
       transform: rotateY(-180deg);
@@ -623,7 +600,7 @@
       background: linear-gradient(to left, rgba(0, 0, 0, .48), rgba(0, 0, 0, 0) 75%);
     }
     .scriptorium-book .leaf.turning .face::after {
-      animation: shade var(--fd, 1.15s) ease-in-out;
+      animation: shade var(--fd, 0.95s) ease-in-out;
     }
     @keyframes shade {
       0% { opacity: 0; }
@@ -782,11 +759,11 @@
       z-index: 1;
       display: flex;
       flex-direction: column;
-      padding: 7% 8% 5.5% 11.5%;
+      padding: 6.5% 8% 5% 11.5%;
       color: var(--ink);
     }
     .scriptorium-book .face.back .pg {
-      padding: 7% 11.5% 5.5% 8%;
+      padding: 6.5% 11.5% 5% 8%;
     }
     .scriptorium-book .rh {
       font-family: 'Inter', sans-serif;
@@ -797,9 +774,9 @@
       color: var(--rubric);
       display: flex;
       justify-content: flex-end;
-      padding-bottom: .9em;
+      padding-bottom: .8em;
       border-bottom: 1px solid #DCD6CF;
-      margin-bottom: 1.15em;
+      margin-bottom: 1.05em;
       white-space: nowrap;
     }
     .scriptorium-book .face.back .rh {
@@ -808,11 +785,15 @@
     .scriptorium-book .tx {
       flex: 1;
       min-height: 0;
-      overflow: hidden;
+      overflow-y: auto;
       line-height: 1.55;
       text-align: justify;
       hyphens: auto;
       -webkit-hyphens: auto;
+      scrollbar-width: none;
+    }
+    .scriptorium-book .tx::-webkit-scrollbar {
+      display: none;
     }
     .scriptorium-book .tx p {
       margin: 0 0 .7em;
@@ -821,7 +802,7 @@
       float: left;
       font-family: 'Cinzel', Georgia, serif;
       color: var(--rubric);
-      font-size: 3.1em;
+      font-size: 3em;
       line-height: .8;
       padding: .06em .14em 0 0;
       font-weight: 400;
@@ -834,8 +815,8 @@
       font-size: .74em;
       font-style: italic;
       color: var(--ink-muted);
-      padding-top: .7em;
-      min-height: 2em;
+      padding-top: .65em;
+      min-height: 1.8em;
     }
     .scriptorium-book .face.front .ft {
       flex-direction: row-reverse;
@@ -849,7 +830,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      gap: .85em;
+      gap: .8em;
     }
     .scriptorium-book .tp-small {
       font-family: 'Inter', sans-serif;
@@ -862,7 +843,7 @@
     }
     .scriptorium-book .tp-title {
       font-family: 'Cinzel', Georgia, serif;
-      font-size: 2.05em;
+      font-size: 2em;
       line-height: 1.12;
       letter-spacing: .08em;
       margin: 0;
@@ -966,7 +947,7 @@
       width: 100%;
       transform-origin: left center;
       transform: rotateY(0deg);
-      transition: transform var(--fd, .72s) cubic-bezier(.5, .02, .25, 1);
+      transition: transform var(--fd, .65s) cubic-bezier(.22, .8, .28, 1);
     }
     .scriptorium-book.sg .leaf.flipped {
       transform: rotateY(-102deg);
@@ -994,7 +975,7 @@
     }
     .scriptorium-book.sg .pg {
       align-items: center;
-      padding: 48px max(8%, 18px) 64px;
+      padding: 42px max(8%, 18px) 56px;
     }
     .scriptorium-book.sg .pg > * {
       width: 100%;
@@ -1006,18 +987,15 @@
     .scriptorium-book.sg .face.front .ft {
       flex-direction: row;
     }
-    .scriptorium-book.sg .tx {
-      text-shadow: none;
-    }
     @keyframes lift { from { opacity: 1; } to { opacity: 0; } }
     @keyframes drop { from { opacity: 0; } to { opacity: 1; } }
     .scriptorium-book.sg .leaf.under .face.front::after {
       background: rgba(0, 0, 0, .45);
-      animation: lift var(--fd, .72s) ease-out both;
+      animation: lift var(--fd, .65s) ease-out both;
     }
     .scriptorium-book.sg .leaf.over .face.front::after {
       background: rgba(0, 0, 0, .45);
-      animation: drop var(--fd, .72s) ease-in both;
+      animation: drop var(--fd, .65s) ease-in both;
     }
 
     @media (max-width: 720px) {
@@ -1026,6 +1004,7 @@
       .scriptorium-hint { font-size: 15px; }
       .scriptorium-mast p.scriptorium-lead { font-size: 15px; }
       .scriptorium-fine { font-size: 14px; }
+      .scriptorium-stage { height: clamp(440px, 68vh, 640px); }
     }
     @media (pointer: coarse) {
       .scriptorium-btn { min-height: 40px; padding: 0 12px; }
@@ -1201,7 +1180,6 @@
         <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
       </div>
 
-      <!-- Premise Dossier -->
       <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12 text-justify">
         <p>In the island kingdom of Norwyn, where royal traditions are woven into everyday life and the future of a kingdom rests upon the shoulders of its next queen, Princess Elisabeta has always known what is expected of her.</p>
         <p>She has been raised for a life of duty.</p>
@@ -1235,7 +1213,6 @@
           </p>
         </div>
 
-        <!-- Detailed Sections -->
         <div class="space-y-8 font-serif text-base text-theme-text leading-relaxed text-justify">
           <div class="book-card p-8 rounded-sm space-y-3">
             <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Island and Its Seasons</span>
@@ -1376,7 +1353,6 @@
           </div>
         </div>
 
-        <!-- Beyond the Palace Closing Statement -->
         <div class="book-card p-8 md:p-12 rounded-sm space-y-4 text-center">
           <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">BEYOND THE PALACE</span>
           <p class="font-serif italic text-lg text-theme-heading">
@@ -1418,11 +1394,8 @@
       </div>
 
       <div class="space-y-8">
-        
-        <!-- The Royal Family Group -->
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Elisabeta -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h4>
@@ -1446,7 +1419,6 @@
               </p>
             </div>
 
-            <!-- Queen Ecaterina -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h4>
@@ -1469,7 +1441,6 @@
               </p>
             </div>
 
-            <!-- Princess Ileana -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Ileana</h4>
@@ -1489,7 +1460,6 @@
               </p>
             </div>
 
-            <!-- Safira -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Safira</h4>
@@ -1508,10 +1478,8 @@
           </div>
         </div>
 
-        <!-- The Court of Valenne -->
         <div class="space-y-4 pt-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Alexandru -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h4>
@@ -1534,7 +1502,6 @@
               </p>
             </div>
 
-            <!-- Ambassador Duvall -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Ambassador Duvall</h4>
@@ -1550,10 +1517,8 @@
           </div>
         </div>
 
-        <!-- The Royal Household -->
         <div class="space-y-4 pt-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Mr. Corrow -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Mr. Corrow</h4>
@@ -1573,7 +1538,6 @@
               </p>
             </div>
 
-            <!-- Mrs. Hale -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Mrs. Hale</h4>
@@ -1590,7 +1554,6 @@
               </p>
             </div>
 
-            <!-- The Steward -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">The Steward</h4>
@@ -1607,7 +1570,6 @@
               </p>
             </div>
 
-            <!-- The Household Staff -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">The Household Staff</h4>
@@ -1623,10 +1585,8 @@
           </div>
         </div>
 
-        <!-- The Royal Academy and The Fletcher Family -->
         <div class="space-y-4 pt-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Professor Calloway -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Professor Calloway</h4>
@@ -1643,7 +1603,6 @@
               </p>
             </div>
 
-            <!-- Lucian Fletcher -->
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Lucian Fletcher</h4>
@@ -1666,7 +1625,6 @@
               </p>
             </div>
 
-            <!-- Tobias Fletcher -->
             <div class="book-card p-8 rounded-sm space-y-2 md:col-span-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Tobias Fletcher</h4>
@@ -1688,7 +1646,6 @@
           </div>
         </div>
 
-        <!-- The Relationships Summary Card -->
         <div class="book-card p-8 rounded-sm space-y-4 mt-8">
           <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Key Relationships</h3>
           <ul class="list-disc pl-5 space-y-2 text-sm text-theme-text-muted font-serif">
@@ -1768,8 +1725,6 @@
 
     <!-- 3. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
-      
-      <!-- Floating Minimalist Font Size Control Widget (Top-Right) -->
       <div class="max-w-3xl mx-auto px-6 mb-6 flex justify-end">
         <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5">
           <button type="button" onclick="changeFontSize(-1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
@@ -1778,12 +1733,11 @@
         </div>
       </div>
 
-      <!-- Dynamic Reading Stage -->
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
     <!-- 4. ARCHIVE (Scriptorium Bookcase Shelf & Interactive Reader) -->
-    <section id="view-archive" class="view-section view-hidden max-w-6xl mx-auto px-6 py-12">
+    <section id="view-archive" class="view-section view-hidden max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <div class="scriptorium-shell" id="scriptoriumShell">
         
         <!-- Shelf Subview -->
@@ -1845,7 +1799,7 @@
     let activeEra = 'crowned';
     let activeChapterIndex = null;
     let baseFontSize = 18;
-    let isIvoryMode = false; // Default: Dark Mode active
+    let isIvoryMode = false;
 
     function switchView(viewId) {
       const views = ['home', 'prologue', 'world', 'characters', 'reader', 'archive', 'author-note', 'disclaimer'];
@@ -1863,22 +1817,11 @@
         }
       });
 
+      window.scrollTo({ top: 0, behavior: 'auto' });
+
       if (viewId === 'archive' && window.ScriptoriumArchive) {
         window.ScriptoriumArchive.showShelf();
       }
-
-      // Update Nav Buttons
-      document.querySelectorAll('.nav-button').forEach(btn => {
-        if (btn.getAttribute('data-page') === viewId) {
-          btn.classList.add('text-theme-text', 'border-theme-accent', 'font-semibold');
-          btn.classList.remove('text-theme-text-muted', 'border-transparent');
-        } else {
-          btn.classList.remove('text-theme-text', 'border-theme-accent', 'font-semibold');
-          btn.classList.add('text-theme-text-muted', 'border-transparent');
-        }
-      });
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function openReaderIndex() {
@@ -1904,7 +1847,6 @@
 
       const eraChapters = NOVEL_CHAPTERS[activeEra];
 
-      // STATE A: CHAPTER DIRECTORY (INDEX)
       if (activeChapterIndex === null) {
         const eraTitle = "Chapter Index";
 
@@ -1929,7 +1871,6 @@
         return;
       }
 
-      // STATE B: ACTIVE CHAPTER READING VIEW
       const chapter = eraChapters[activeChapterIndex];
 
       let cleanContent = chapter.content.trim();
@@ -1941,7 +1882,7 @@
         .map(p => p.trim())
         .filter(Boolean);
 
-      const formattedParagraphs = paragraphs.map((para, idx) => {
+      const formattedParagraphs = paragraphs.map((para) => {
         return `<p class="chapter-paragraph text-theme-text">${para}</p>`;
       }).join('\n');
 
@@ -1973,7 +1914,6 @@
             ${formattedParagraphs}
           </div>
 
-          <!-- Bottom Footer Navigation -->
           <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
             ${prevLinkHtml}
             <button type="button" onclick="openReaderIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
@@ -2046,7 +1986,7 @@
       if (savedTheme === 'ivory') {
         applyTheme(true);
       } else {
-        applyTheme(false); // Default to Dark Mode
+        applyTheme(false);
       }
       switchView('home');
     });
@@ -2059,7 +1999,7 @@
     var $ = function (q, el) { return (el || document).querySelector(q); };
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var coarse = window.matchMedia('(pointer: coarse)').matches;
-    var FLIP = reduce ? 10 : 1150, FLIP_S = reduce ? 10 : 720;
+    var FLIP = reduce ? 10 : 950, FLIP_S = reduce ? 10 : 650;
 
     function svgWrap(inner) { return '<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>'; }
     var EMB = {
@@ -2192,16 +2132,16 @@
     function pageSound(k) {
       k = k || 1;
       var side = rnd(-.25, .25);
-      burst({ type: 'bandpass', f0: 700, f1: 2400, q: .55, dur: .85 * k, gain: .075, attack: .3 * k, pan: side });
-      burst({ type: 'highpass', f0: 2600, f1: 5200, q: .4, dur: .7 * k, gain: .02, attack: .3 * k, pan: side });
+      burst({ type: 'bandpass', f0: 700, f1: 2400, q: .55, dur: .75 * k, gain: .075, attack: .25 * k, pan: side });
+      burst({ type: 'highpass', f0: 2600, f1: 5200, q: .4, dur: .6 * k, gain: .02, attack: .25 * k, pan: side });
       var n = 8 + Math.floor(Math.random() * 5);
       for (var i = 0; i < n; i++) {
-        var at = rnd(.04, .62) * k;
+        var at = rnd(.04, .55) * k;
         burst({ at: at, dur: rnd(.01, .03), f0: rnd(2400, 6500), q: rnd(1.5, 3.5), gain: rnd(.025, .075) * (1 - at * .5), attack: .002, pan: side + rnd(-.1, .1) });
       }
-      burst({ at: .9 * k, type: 'lowpass', f0: 520, f1: 190, q: .5, dur: .16, gain: .13, attack: .012, pan: side });
-      burst({ at: .91 * k, dur: .05, f0: 3200, f1: 1500, q: 1.4, gain: .04, attack: .004, pan: side });
-      thump(68, .08, .14, .9 * k);
+      burst({ at: .8 * k, type: 'lowpass', f0: 520, f1: 190, q: .5, dur: .16, gain: .13, attack: .012, pan: side });
+      burst({ at: .81 * k, dur: .05, f0: 3200, f1: 1500, q: 1.4, gain: .04, attack: .004, pan: side });
+      thump(68, .08, .14, .8 * k);
     }
 
     var FILL = ['#49474E', '#574B55', '#46414B', '#5E525C', '#3E3D43', '#524952', '#4D4249', '#5A5056', '#444048', '#564750', '#4A4652'];
@@ -2390,7 +2330,7 @@
       var list = bookEl.querySelectorAll('.tx');
       for (var i = 0; i < list.length; i++) {
         var tx = list[i]; tx.style.fontSize = ''; var fs = 1, n = 0;
-        while (tx.scrollHeight > tx.clientHeight + 1 && fs > .5 && n++ < 18) { fs -= .03; tx.style.fontSize = fs.toFixed(2) + 'em'; }
+        while (tx.scrollHeight > tx.clientHeight + 2 && fs > .58 && n++ < 16) { fs -= .03; tx.style.fontSize = fs.toFixed(2) + 'em'; }
       }
       var ct = bookEl.querySelectorAll('.cv-t');
       for (var j = 0; j < ct.length; j++) {
@@ -2403,14 +2343,14 @@
 
     function sizeBook() {
       var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : 640);
-      var H = stage.clientHeight || 540;
+      var H = stage.clientHeight || 520;
       if (single()) {
         pw = W;
         bookEl.style.width = W + 'px'; bookEl.style.height = H + 'px';
         bookEl.style.fontSize = (Math.min(W, H * (W > H ? .85 : .62)) * .045).toFixed(2) + 'px';
       } else {
         var ratio = 7 / 5;
-        pw = Math.max(170, Math.floor(Math.min((W - 60) / 2, (H - 90) / ratio)));
+        pw = Math.max(180, Math.floor(Math.min((W - 80) / 2, (H - 80) / ratio)));
         bookEl.style.width = (2 * pw) + 'px'; bookEl.style.height = Math.round(pw * ratio) + 'px';
         bookEl.style.fontSize = (pw * .0435).toFixed(2) + 'px';
         position(); thickness();
@@ -2486,11 +2426,11 @@
         if (Math.abs(s - prevS) === 1) total = turnSingle(prevS, s - prevS);
         else { applyState(); total = 200; }
       } else {
-        var stagger = Math.abs(f - prevF) > 1 ? (closing ? 130 : 110) : 0, c = 0, todo = [];
+        var stagger = Math.abs(f - prevF) > 1 ? (closing ? 110 : 95) : 0, c = 0, todo = [];
         for (var i = 0; i < leaves.length; i++) { if (leaves[i].flipped !== (i < f)) todo.push(i); }
         if (f < prevF) todo.reverse();
         todo.forEach(function (i) { flip(i, i < f, stagger * c++); });
-        total = stagger * Math.max(0, c - 1) + FLIP + 60;
+        total = stagger * Math.max(0, c - 1) + FLIP + 50;
         position(); thickness();
       }
       busyUntil = now + total;
@@ -2522,23 +2462,33 @@
     function pullBook(b, slot, btn) {
       if (slot.classList.contains('pulling')) return;
       lastBtn = btn; slot.classList.add('pulling'); audio();
-      setTimeout(function () { openBook(b); slot.classList.remove('pulling'); }, reduce ? 20 : 420);
+      setTimeout(function () {
+        openBook(b);
+        slot.classList.remove('pulling');
+        var shell = $('#scriptoriumShell');
+        if (shell) shell.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, reduce ? 20 : 320);
     }
     function openBook(b) {
       closing = false; busyUntil = 0; cur = b; s = 0; tipShown = false;
       layout = wantSingle() ? 'single' : 'spread';
+      document.body.dataset.archiveMode = 'reader';
       build(b);
       $('#scriptoriumRTitle').textContent = b.short + ' · ' + b.who;
-      document.body.dataset.archiveMode = 'reader';
       $('#toShelfBtn').disabled = false;
       var anim = !single();
-      if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '70px'); bookEl.style.setProperty('--rx', '24deg'); }
+      if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '36px'); bookEl.style.setProperty('--rx', '12deg'); }
       requestAnimationFrame(function () {
         sizeBook(); applyState(); ui();
-        if (anim) { void bookEl.offsetWidth; bookEl.classList.remove('nt'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg'); }
+        if (anim) {
+          void bookEl.offsetWidth;
+          bookEl.classList.remove('nt');
+          bookEl.style.setProperty('--ty', '0px');
+          bookEl.style.setProperty('--rx', '0deg');
+        }
         showHint((coarse ? 'Tap' : 'Click') + ' the cover to open it.');
       });
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (cur === b) fitAll(); });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (cur === b) sizeBook(); });
     }
     function closeBook() {
       if (document.body.dataset.archiveMode !== 'reader' || closing) return;
@@ -2551,10 +2501,10 @@
           c0.style.transition = 'none'; c0.style.display = ''; c0.classList.add('flipped');
           void c0.offsetWidth;
           c0.style.transition = ''; c0.classList.add('turning'); c0.classList.remove('flipped');
-          s = 0; pageSound(.68); wait = FLIP_S + 60;
+          s = 0; pageSound(.68); wait = FLIP_S + 50;
         } else wait = go(0, true);
       }
-      setTimeout(toShelf, wait + (reduce ? 20 : 350));
+      setTimeout(toShelf, wait + (reduce ? 20 : 280));
     }
     function toShelf() {
       closing = false; $('#toShelfBtn').disabled = false;
