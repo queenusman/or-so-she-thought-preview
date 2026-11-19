@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth theme-dark" id="rootHtml">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>OR SO SHE THOUGHT — Official Novel Website</title>
   
   <!-- Browser Favicon: The Sovereign Coronet -->
@@ -75,6 +75,38 @@
       --selection-text: #F8F7F5;
       --page-texture: radial-gradient(circle at 50% 0%, rgba(142, 125, 138, 0.16) 0%, rgba(62, 61, 67, 0) 70%);
       --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
+
+      /* Scriptorium Archive Tokens (Dark) */
+      --room: #343338;
+      --room-hi: #49474E;
+      --case-bg: #2B2A2F;
+      --case-hi: #3E3D43;
+      --shelf-back: #232227;
+      --plank-top: #524E57;
+      --plank-mid: #3E3D43;
+      --plank-bot: #29282D;
+      --gilt: #E2D0D4;
+      --gilt-dim: #8E7D8A;
+      --plate-bg-1: #49474E;
+      --plate-bg-2: #3E3D43;
+      --plate-text: #E2D0D4;
+      --plate-border: #625B64;
+      --ink: #3E3D43;
+      --ink-muted: #5A5760;
+      --vellum: #F8F7F5;
+      --vellum-edge: #EAE4DC;
+      --rubric: #8C586C;
+      --ui: #F8F7F5;
+      --ui-dim: #C5BAC1;
+      --btn-bg: rgba(73, 71, 78, 0.88);
+      --btn-hover: rgba(82, 78, 87, 0.96);
+      --btn-border: #625B64;
+      --btn-border-hover: #E2D0D4;
+      --leather: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .45 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23f)'/%3E%3C/svg%3E");
+      --paper-stain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .30 .55 0 0 0 -.25'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23p)'/%3E%3C/svg%3E");
+      --paper-fiber: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='q'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .06' numOctaves='2' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .25 0 0 0 0 .20 0 0 0 0 .23 .4 0 0 0 -.12'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23q)'/%3E%3C/svg%3E");
+      --marble: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='turbulence' baseFrequency='.008 .02' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='2.1 0 0 0 .22 0 1.4 0 0 .18 0 0 1.9 0 .22 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23m)'/%3E%3C/svg%3E");
+      --u: 8px;
     }
 
     /* ========================================================
@@ -113,6 +145,33 @@
       --selection-text: #F8F7F5;
       --page-texture: radial-gradient(circle at 50% 0%, rgba(199, 158, 175, 0.1) 0%, rgba(248, 247, 245, 0) 70%);
       --card-shadow: 0 2px 12px -2px rgba(62, 61, 67, 0.05), 0 1px 3px rgba(62, 61, 67, 0.03);
+
+      /* Scriptorium Archive Tokens (Ivory) */
+      --room: #F8F7F5;
+      --room-hi: #EFE9E1;
+      --case-bg: #E6DFD6;
+      --case-hi: #F1ECE5;
+      --shelf-back: #D8CFC4;
+      --plank-top: #F8F7F5;
+      --plank-mid: #E5DDD3;
+      --plank-bot: #CFC5B9;
+      --gilt: #F4E6E9;
+      --gilt-dim: #C79EAF;
+      --plate-bg-1: #F8F7F5;
+      --plate-bg-2: #EFE9E1;
+      --plate-text: #3E3D43;
+      --plate-border: #CCC4BC;
+      --ink: #3E3D43;
+      --ink-muted: #5A5760;
+      --vellum: #F8F7F5;
+      --vellum-edge: #EDE7DF;
+      --rubric: #9A667A;
+      --ui: #3E3D43;
+      --ui-dim: #5A5760;
+      --btn-bg: rgba(248, 247, 245, 0.92);
+      --btn-hover: rgba(241, 236, 229, 0.98);
+      --btn-border: #CCC4BC;
+      --btn-border-hover: #C79EAF;
     }
 
     body {
@@ -169,9 +228,817 @@
       color: var(--color-accent);
       font-weight: normal;
     }
+
+    /* ========================================================
+       SCRIPTORIUM ARCHIVE BOOKCASE & PAGE FLIP STYLES
+       ======================================================== */
+    .scriptorium-shell {
+      position: relative;
+      min-height: 76vh;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      overflow: hidden;
+      background: radial-gradient(ellipse 85% 60% at 50% 0%, var(--room-hi) 0%, var(--room) 72%);
+      box-shadow: var(--card-shadow);
+    }
+
+    .scriptorium-btn {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: 11px;
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--ui-dim);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+      transition: background .2s, border-color .2s, color .2s, opacity .2s;
+    }
+    .scriptorium-btn:hover:not(:disabled) {
+      background: var(--btn-hover);
+      border-color: var(--btn-border-hover);
+      color: var(--ui);
+    }
+    .scriptorium-btn:disabled {
+      opacity: .35;
+      cursor: default;
+    }
+    .scriptorium-btn.tog[aria-pressed="false"] {
+      opacity: .55;
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;
+    }
+
+    .scriptorium-subview {
+      width: 100%;
+      transition: opacity .55s ease, visibility 0s;
+    }
+
+    .shelf-subview {
+      padding: 28px 20px 36px;
+      color: var(--ui);
+    }
+    body[data-archive-mode="reader"] .shelf-subview {
+      display: none;
+    }
+
+    .scriptorium-mast {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+    .scriptorium-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+      color: var(--gilt-dim);
+      margin: 0 0 10px;
+    }
+    .scriptorium-mast h3 {
+      font-family: 'Cinzel', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(24px, 4vw, 38px);
+      line-height: 1.1;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      color: var(--ui);
+    }
+    .scriptorium-mast p.scriptorium-lead {
+      margin: 0;
+      color: var(--ui-dim);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(16px, 2.1vw, 19px);
+      max-width: 54ch;
+      line-height: 1.45;
+    }
+
+    .scriptorium-case {
+      position: relative;
+      max-width: 920px;
+      margin: 24px auto 0;
+      padding: 14px;
+      background: var(--leather), linear-gradient(135deg, var(--case-hi), var(--case-bg) 65%, var(--case-hi));
+      border: 1px solid var(--btn-border);
+      border-radius: 4px;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, .35), inset 0 0 0 1px rgba(226, 208, 212, .08);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .scriptorium-shelf {
+      background: linear-gradient(var(--shelf-back), var(--case-bg));
+      box-shadow: inset 0 10px 16px rgba(0, 0, 0, .42);
+      margin-bottom: 2px;
+    }
+    .scriptorium-row {
+      display: flex;
+      align-items: flex-end;
+      padding: calc(var(--u) * 2.2) calc(var(--u) * 1.2) 0;
+      min-height: calc(var(--u) * 26);
+    }
+    .scriptorium-plank {
+      height: calc(var(--u) * 2.6);
+      position: relative;
+      background: var(--leather), linear-gradient(var(--plank-top), var(--plank-mid) 45%, var(--plank-bot));
+      border-top: 1px solid rgba(226, 208, 212, 0.16);
+      box-shadow: 0 7px 14px rgba(0, 0, 0, .45);
+    }
+    .scriptorium-spine {
+      position: relative;
+      flex: none;
+      display: block;
+      border: 0;
+      padding: 0;
+      cursor: default;
+      width: calc(var(--w) * var(--u));
+      height: calc(var(--h) * var(--u));
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, .35), rgba(255, 255, 255, .08) 16%, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, .38)),
+        var(--leather), var(--c);
+      box-shadow: 1px 0 0 rgba(0, 0, 0, .55), inset 0 2px 2px rgba(255, 255, 255, .06);
+      border-radius: 2px 2px 0 0;
+      transform-origin: 50% 100%;
+      transition: transform .3s cubic-bezier(.3, .7, .3, 1), box-shadow .3s;
+    }
+    .scriptorium-spine i.band {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: calc(var(--u) * .35);
+      background: linear-gradient(var(--gilt), var(--gilt-dim));
+      opacity: .7;
+    }
+    .scriptorium-slot {
+      position: relative;
+      flex: none;
+    }
+    .scriptorium-spine.real {
+      cursor: pointer;
+      z-index: 2;
+    }
+    .scriptorium-spine.real:hover, .scriptorium-spine.real:focus-visible {
+      transform: translateY(calc(var(--u) * -1.3)) rotate(-1.2deg);
+      box-shadow: 4px 8px 18px rgba(0, 0, 0, .55), 1px 0 0 rgba(0, 0, 0, .6);
+    }
+    .scriptorium-slot.pulling .scriptorium-spine.real {
+      transform: translateY(calc(var(--u) * -4)) scale(1.05);
+      box-shadow: 8px 16px 26px rgba(0, 0, 0, .65);
+      transition-duration: .4s;
+    }
+    .scriptorium-spine .st {
+      position: absolute;
+      inset: 0;
+      padding: 16% 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      writing-mode: vertical-rl;
+      font-family: 'Cinzel', Georgia, serif;
+      font-weight: 500;
+      letter-spacing: .14em;
+      white-space: nowrap;
+      color: var(--gilt);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, .65);
+    }
+    .scriptorium-plate {
+      position: absolute;
+      left: 50%;
+      top: calc(100% + var(--u) * .45);
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: max(9px, calc(var(--u) * 1.1));
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 2px 8px;
+      background: linear-gradient(var(--plate-bg-1), var(--plate-bg-2));
+      color: var(--plate-text);
+      border: 1px solid var(--plate-border);
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .35);
+      z-index: 3;
+      pointer-events: none;
+    }
+    .scriptorium-fine {
+      max-width: 920px;
+      margin: 24px auto 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 15px;
+      color: var(--ui-dim);
+      font-style: italic;
+    }
+
+    /* Reader subview inside the Archive shell */
+    .archive-reader-subview {
+      display: none;
+      position: relative;
+      min-height: 76vh;
+      width: 100%;
+      background: radial-gradient(ellipse 90% 70% at 50% 45%, var(--room-hi) 0%, var(--room) 70%);
+    }
+    body[data-archive-mode="reader"] .archive-reader-subview {
+      display: block;
+    }
+
+    .scriptorium-stage {
+      position: relative;
+      width: 100%;
+      height: 76vh;
+      min-height: 540px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      touch-action: none;
+      cursor: pointer;
+    }
+    .scriptorium-bar {
+      position: relative;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      pointer-events: none;
+    }
+    .scriptorium-bar > * {
+      pointer-events: auto;
+    }
+    .scriptorium-bar.top {
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border-subtle);
+      background: rgba(52, 51, 56, 0.45);
+    }
+    .theme-ivory .scriptorium-bar.top {
+      background: rgba(248, 247, 245, 0.72);
+    }
+    .scriptorium-bar.bottom {
+      justify-content: center;
+      border-top: 1px solid var(--color-border-subtle);
+      background: rgba(52, 51, 56, 0.45);
+    }
+    .theme-ivory .scriptorium-bar.bottom {
+      background: rgba(248, 247, 245, 0.72);
+    }
+    .scriptorium-rtitle {
+      flex: 1;
+      font-family: 'Cinzel', Georgia, serif;
+      letter-spacing: .14em;
+      color: var(--ui-dim);
+      font-size: 13px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      pointer-events: none;
+    }
+    .scriptorium-folio {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--ui);
+      min-width: 13ch;
+      text-align: center;
+      font-size: 11px;
+      padding: 8px 14px;
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      border-radius: 8px;
+      backdrop-filter: blur(8px);
+    }
+    .scriptorium-hint {
+      position: absolute;
+      z-index: 30;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+      width: max-content;
+      max-width: calc(100% - 40px);
+      text-align: center;
+      margin: 0;
+      pointer-events: none;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      color: var(--ui);
+      font-size: 16px;
+      line-height: 1.35;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .22);
+      opacity: 0;
+      transition: opacity .6s;
+    }
+    .scriptorium-hint.on {
+      opacity: 1;
+    }
+    .archive-reader-subview[data-layout="single"] .scriptorium-rtitle {
+      display: none;
+    }
+
+    /* Book 3D Mechanics */
+    .scriptorium-book {
+      position: relative;
+      flex: none;
+      perspective: 2800px;
+      font-size: 17px;
+      --fd: 1.15s;
+      transform: translate(var(--tx, 0px), var(--ty, 0px)) rotateX(var(--rx, 0deg));
+      transition: transform 1.1s cubic-bezier(.45, .05, .2, 1);
+    }
+    .scriptorium-book.nt {
+      transition: none;
+    }
+    .scriptorium-book .shadow {
+      position: absolute;
+      left: 1%;
+      right: 1%;
+      bottom: -16px;
+      height: 34px;
+      background: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, .55), transparent 70%);
+      filter: blur(7px);
+      z-index: 0;
+    }
+    .scriptorium-book .slab {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      z-index: 0;
+      background: var(--vellum-edge);
+      transition: opacity .4s;
+    }
+    .scriptorium-book .slab.r { left: 50%; }
+    .scriptorium-book .slab.l { left: 0; }
+    .scriptorium-book .leaf {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      transform-origin: left center;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: transform var(--fd, 1.15s) cubic-bezier(.45, .05, .2, 1);
+    }
+    .scriptorium-book .leaf.flipped {
+      transform: rotateY(-180deg);
+    }
+    .scriptorium-book .face {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .scriptorium-book .face.back {
+      transform: rotateY(180deg);
+    }
+    .scriptorium-book .face::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      pointer-events: none;
+      opacity: 0;
+    }
+    .scriptorium-book .face.front::after {
+      background: linear-gradient(to right, rgba(0, 0, 0, .48), rgba(0, 0, 0, 0) 75%);
+    }
+    .scriptorium-book .face.back::after {
+      background: linear-gradient(to left, rgba(0, 0, 0, .48), rgba(0, 0, 0, 0) 75%);
+    }
+    .scriptorium-book .leaf.turning .face::after {
+      animation: shade var(--fd, 1.15s) ease-in-out;
+    }
+    @keyframes shade {
+      0% { opacity: 0; }
+      35% { opacity: .72; }
+      65% { opacity: .48; }
+      100% { opacity: 0; }
+    }
+
+    .scriptorium-book .face.board {
+      background:
+        linear-gradient(to right, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0) 5%),
+        var(--leather),
+        radial-gradient(120% 90% at 30% 20%, var(--cv2), var(--cv));
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .45), inset -10px 0 20px rgba(0, 0, 0, .35), inset 0 0 40px rgba(0, 0, 0, .3);
+    }
+    .scriptorium-book .face.board.front {
+      inset: -7px -9px -7px 0;
+      border-radius: 0 5px 5px 0;
+    }
+    .scriptorium-book .face.board.back {
+      inset: -7px 0 -7px -9px;
+      border-radius: 5px 0 0 5px;
+      background:
+        linear-gradient(to left, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0) 5%),
+        var(--leather),
+        radial-gradient(120% 90% at 70% 20%, var(--cv2), var(--cv));
+    }
+    .scriptorium-book .cv {
+      position: absolute;
+      inset: 0;
+      padding: 7% 8% 7% 12%;
+      display: flex;
+    }
+    .scriptorium-book .cv-fr {
+      flex: 1;
+      border: 1.5px solid var(--gilt);
+      padding: 5px;
+      opacity: .92;
+      display: flex;
+      min-width: 0;
+    }
+    .scriptorium-book .cv-fr2 {
+      flex: 1;
+      border: 1px solid var(--gilt-dim);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 8% 6%;
+      text-align: center;
+      min-width: 0;
+    }
+    .scriptorium-book .foil {
+      color: var(--gilt);
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(100deg, #B8A3AA 0%, #F7EFF1 28%, #C9B2BA 50%, #F8F7F5 72%, #A68F97 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .scriptorium-book .cv-t {
+      font-family: 'Cinzel', Georgia, serif;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: .12em;
+      line-height: 1.15;
+      max-width: 100%;
+    }
+    .scriptorium-book .cv-a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: .24em;
+      font-size: .68em;
+      text-transform: uppercase;
+    }
+    .scriptorium-book .emb {
+      width: 34%;
+      color: var(--gilt);
+    }
+    .scriptorium-book .emb svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .scriptorium-book .orn {
+      width: 55%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gilt), transparent);
+      position: relative;
+    }
+    .scriptorium-book .orn::after {
+      content: "✦";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 9px;
+      line-height: 1;
+      color: var(--gilt);
+      transform: translate(-50%, -50%);
+    }
+    .scriptorium-book .blind {
+      position: absolute;
+      inset: 7% 8% 7% 12%;
+      border: 1.5px solid rgba(0, 0, 0, .25);
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, .04), 0 0 0 6px rgba(0, 0, 0, .22);
+      display: grid;
+      place-items: center;
+    }
+    .scriptorium-book .blind .emb {
+      color: rgba(0, 0, 0, .35);
+      filter: drop-shadow(0 1px 0 rgba(255, 255, 255, .1));
+    }
+    .scriptorium-book .marble-wrap { position: absolute; }
+    .scriptorium-book .face.board.back .marble-wrap { inset: 14px 0 14px 14px; }
+    .scriptorium-book .face.board.front .marble-wrap { inset: 14px 14px 14px 0; }
+    .scriptorium-book .marble {
+      position: absolute;
+      inset: 0;
+      background: var(--marble), #E8E0DA;
+      background-size: cover;
+      background-blend-mode: multiply;
+      filter: hue-rotate(var(--hue, 0deg)) saturate(.28) sepia(.22) brightness(.88);
+      box-shadow: inset 0 0 22px rgba(62, 61, 67, .42);
+    }
+
+    .scriptorium-book .face.paper {
+      background:
+        var(--paper-stain), var(--paper-fiber),
+        radial-gradient(ellipse 78% 74% at 50% 48%, rgba(0, 0, 0, 0) 60%, rgba(98, 91, 100, .18) 100%),
+        linear-gradient(#F8F7F5, #F1ECE5);
+      box-shadow: inset 0 0 6px rgba(62, 61, 67, .22);
+    }
+    .scriptorium-book .face.paper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .scriptorium-book .face.paper.front::before {
+      background: linear-gradient(to right, rgba(62, 61, 67, .36) 0, rgba(62, 61, 67, .12) 3%, transparent 13%), linear-gradient(to left, rgba(62, 61, 67, .16), transparent 4%);
+    }
+    .scriptorium-book .face.paper.back::before {
+      background: linear-gradient(to left, rgba(62, 61, 67, .36) 0, rgba(62, 61, 67, .12) 3%, transparent 13%), linear-gradient(to right, rgba(62, 61, 67, .16), transparent 4%);
+    }
+    .scriptorium-book .fox {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(142, 125, 138, .14), rgba(142, 125, 138, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .scriptorium-book .pg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 7% 8% 5.5% 11.5%;
+      color: var(--ink);
+    }
+    .scriptorium-book .face.back .pg {
+      padding: 7% 11.5% 5.5% 8%;
+    }
+    .scriptorium-book .rh {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: .56em;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--rubric);
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: .9em;
+      border-bottom: 1px solid #DCD6CF;
+      margin-bottom: 1.15em;
+      white-space: nowrap;
+    }
+    .scriptorium-book .face.back .rh {
+      justify-content: flex-start;
+    }
+    .scriptorium-book .tx {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      line-height: 1.55;
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+    .scriptorium-book .tx p {
+      margin: 0 0 .7em;
+    }
+    .scriptorium-book .tx p.first::first-letter {
+      float: left;
+      font-family: 'Cinzel', Georgia, serif;
+      color: var(--rubric);
+      font-size: 3.1em;
+      line-height: .8;
+      padding: .06em .14em 0 0;
+      font-weight: 400;
+    }
+    .scriptorium-book .ft {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: .74em;
+      font-style: italic;
+      color: var(--ink-muted);
+      padding-top: .7em;
+      min-height: 2em;
+    }
+    .scriptorium-book .face.front .ft {
+      flex-direction: row-reverse;
+    }
+    .scriptorium-book .ft .cw { opacity: .85; }
+
+    .scriptorium-book .center-pg {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: .85em;
+    }
+    .scriptorium-book .tp-small {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      font-size: .56em;
+      color: var(--rubric);
+      margin: 0;
+    }
+    .scriptorium-book .tp-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 2.05em;
+      line-height: 1.12;
+      letter-spacing: .08em;
+      margin: 0;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .scriptorium-book .tp-by {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      margin: 0;
+      font-size: 1.1em;
+      color: var(--ink);
+    }
+    .scriptorium-book .tp-meta {
+      margin: 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: .86em;
+      color: var(--ink-muted);
+      font-style: italic;
+      max-width: 24ch;
+      line-height: 1.45;
+    }
+    .scriptorium-book .tp-emb {
+      width: 22%;
+      color: var(--rubric);
+      opacity: .88;
+    }
+    .scriptorium-book .tp-emb svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .scriptorium-book .rule {
+      width: 46%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #CCC4BC, transparent);
+      position: relative;
+    }
+    .scriptorium-book .rule::after {
+      content: "✦";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 9px;
+      line-height: 1;
+      color: var(--rubric);
+      transform: translate(-50%, -50%);
+    }
+    .scriptorium-book .note {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: .96em;
+      line-height: 1.55;
+      margin: 0;
+      max-width: 25ch;
+      text-align: center;
+      color: var(--ink-muted);
+    }
+    .scriptorium-book .stamp {
+      margin-top: .8em;
+      width: 7.8em;
+      height: 7.8em;
+      border-radius: 50%;
+      border: 1.5px solid var(--rubric);
+      display: grid;
+      place-items: center;
+      transform: rotate(-8deg);
+      color: var(--rubric);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: .56em;
+      letter-spacing: .2em;
+      text-align: center;
+      line-height: 1.6;
+      box-shadow: 0 0 0 3px rgba(154, 102, 122, .12);
+    }
+    .scriptorium-book .finis {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.85em;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin: 0;
+      color: var(--rubric);
+    }
+
+    /* Single-sheet phone mode inside reader subview */
+    .scriptorium-book.sg {
+      width: 100%;
+      height: 100%;
+      perspective: 1900px;
+      perspective-origin: 30% 50%;
+      transform: none;
+      transition: none;
+    }
+    .scriptorium-book.sg .shadow,
+    .scriptorium-book.sg .slab {
+      display: none;
+    }
+    .scriptorium-book.sg .leaf {
+      left: 0;
+      width: 100%;
+      transform-origin: left center;
+      transform: rotateY(0deg);
+      transition: transform var(--fd, .72s) cubic-bezier(.5, .02, .25, 1);
+    }
+    .scriptorium-book.sg .leaf.flipped {
+      transform: rotateY(-102deg);
+    }
+    .scriptorium-book.sg .leaf.turning {
+      will-change: transform;
+    }
+    .scriptorium-book.sg .face.front {
+      inset: 0;
+    }
+    .scriptorium-book.sg .face.front::after {
+      background: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, 0) 85%);
+    }
+    .scriptorium-book.sg .face.board.front {
+      inset: 0;
+      border-radius: 0;
+      background: var(--leather), radial-gradient(120% 90% at 40% 30%, var(--cv2), var(--cv));
+      box-shadow: inset 0 0 70px rgba(0, 0, 0, .4);
+    }
+    .scriptorium-book.sg .cv {
+      padding: 48px max(9%, 20px) 64px;
+    }
+    .scriptorium-book.sg .face.paper.front::before {
+      background: linear-gradient(to right, rgba(62, 61, 67, .35) 0, rgba(62, 61, 67, .12) 3%, transparent 11%);
+    }
+    .scriptorium-book.sg .pg {
+      align-items: center;
+      padding: 48px max(8%, 18px) 64px;
+    }
+    .scriptorium-book.sg .pg > * {
+      width: 100%;
+      max-width: 34em;
+    }
+    .scriptorium-book.sg .rh {
+      justify-content: space-between;
+    }
+    .scriptorium-book.sg .face.front .ft {
+      flex-direction: row;
+    }
+    .scriptorium-book.sg .tx {
+      text-shadow: none;
+    }
+    @keyframes lift { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes drop { from { opacity: 0; } to { opacity: 1; } }
+    .scriptorium-book.sg .leaf.under .face.front::after {
+      background: rgba(0, 0, 0, .45);
+      animation: lift var(--fd, .72s) ease-out both;
+    }
+    .scriptorium-book.sg .leaf.over .face.front::after {
+      background: rgba(0, 0, 0, .45);
+      animation: drop var(--fd, .72s) ease-in both;
+    }
+
+    @media (max-width: 720px) {
+      .scriptorium-rtitle { display: none; }
+      .scriptorium-btn { font-size: 10px; padding: 7px 10px; }
+      .scriptorium-hint { font-size: 15px; }
+      .scriptorium-mast p.scriptorium-lead { font-size: 15px; }
+      .scriptorium-fine { font-size: 14px; }
+    }
+    @media (pointer: coarse) {
+      .scriptorium-btn { min-height: 40px; padding: 0 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scriptorium-book, .scriptorium-book .leaf, .scriptorium-subview { transition-duration: .01s !important; }
+      .scriptorium-book .leaf.turning .face::after,
+      .scriptorium-book.sg .leaf.under .face::after,
+      .scriptorium-book.sg .leaf.over .face::after { animation: none; }
+    }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text">
+<body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text" data-archive-mode="shelf">
 
   <!-- ==================== SITE HEADER WITH 3-LINE COMPRESSED MENU ==================== -->
   <header id="siteHeader" style="background-color: var(--header-bg); border-color: var(--color-border);" class="sticky top-0 z-50 backdrop-blur-md border-b transition-all duration-300 ease-in-out">
@@ -915,73 +1782,46 @@
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
-    <!-- 4. ARCHIVE -->
-    <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Norwyn Archive</h2>
-        <p class="font-serif text-theme-text-muted text-base font-light leading-relaxed">
-          Official history records what institutions wanted remembered. Click <strong class="text-theme-accent font-semibold">"Look Twice"</strong> to uncover the private marginalia beneath the decrees.
-        </p>
-      </div>
-
-      <div class="space-y-8">
-        <!-- Record 1 -->
-        <div class="book-card p-7 md:p-9 rounded-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border-subtle mb-6">
+    <!-- 4. ARCHIVE (Scriptorium Bookcase Shelf & Interactive Reader) -->
+    <section id="view-archive" class="view-section view-hidden max-w-6xl mx-auto px-6 py-12">
+      <div class="scriptorium-shell" id="scriptoriumShell">
+        
+        <!-- Shelf Subview -->
+        <div class="scriptorium-subview shelf-subview" id="archiveShelfView">
+          <div class="flex flex-wrap items-start justify-between gap-4 scriptorium-mast">
             <div>
-              <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-secondary font-bold block">Record #0012-A &bull; Treaty of the First Stones</span>
-              <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Edict on the Consanguine League of Valenne</h3>
+              <p class="scriptorium-eyebrow">The Norwyn Archives · Royal Reading Room</p>
+              <h3>Scriptorium</h3>
+              <p class="scriptorium-lead">A quiet archive with four bound volumes on the shelves. Take one down and turn its pages.</p>
             </div>
-            
-            <button type="button" onclick="toggleLookTwice('rec1')" id="btn-rec1" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="self-start sm:self-auto px-4 py-2 border rounded-lg text-xs font-sans tracking-[0.16em] uppercase transition-all shadow-sm cursor-pointer hover:border-theme-accent">
-              Look Twice
-            </button>
+            <button class="scriptorium-btn tog" id="bSoundShelf" type="button" aria-pressed="true">Sound</button>
           </div>
 
-          <div class="font-serif text-base text-theme-text leading-relaxed text-justify">
-            <p>
-              "Let it be inscribed: Henceforth, Norwyn and the House of Valenne shall govern under marital concord. The royal heir shall betroth the direct issue of Valenne at their eighteenth summer, assuring unbroken sovereignty and the defense of the northern trade gates."
-            </p>
+          <div class="scriptorium-case" id="scriptoriumCase"></div>
+
+          <p class="scriptorium-fine">Three books are retold in plain English from works in the public domain. The History of Norwyn is an invented chronicle.</p>
+        </div>
+
+        <!-- Reader Subview -->
+        <div class="scriptorium-subview archive-reader-subview" id="archiveReaderView" aria-label="Reading an archival volume">
+          <div class="scriptorium-bar top">
+            <button class="scriptorium-btn" id="toShelfBtn" type="button">&larr; Shelf</button>
+            <div class="scriptorium-rtitle" id="scriptoriumRTitle"></div>
+            <button class="scriptorium-btn tog" id="bSoundReader" type="button" aria-pressed="true">Sound</button>
           </div>
 
-          <div id="layer-rec1" style="background-color: var(--color-callout-bg);" class="hidden mt-6 pt-5 border-t border-theme-border p-5 border-l-4 border-l-theme-accent rounded-sm">
-            <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-accent font-bold block mb-1">
-              Penciled Marginalia: Princess Elisabeta (Royal Archives Folio)
-            </span>
-            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed text-justify">
-              "They recite this clause to me as though the ink were mixed with mortar. Every tutor speaks of unbroken sovereignty, yet none can tell me why an emergency bargain struck generations ago requires my own hands to seal it anew."
-            </p>
+          <div class="scriptorium-stage" id="scriptoriumStage" aria-live="polite">
+            <div class="scriptorium-book" id="scriptoriumBook"></div>
+            <p class="scriptorium-hint" id="scriptoriumHint"></p>
+          </div>
+
+          <div class="scriptorium-bar bottom">
+            <button class="scriptorium-btn" id="scriptoriumPrev" type="button" aria-label="Previous page">&lsaquo; Back</button>
+            <div class="scriptorium-folio" id="scriptoriumFolio"></div>
+            <button class="scriptorium-btn" id="scriptoriumNext" type="button" aria-label="Next page">Turn &rsaquo;</button>
           </div>
         </div>
 
-        <!-- Record 2 -->
-        <div class="book-card p-7 md:p-9 rounded-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-theme-border-subtle mb-6">
-            <div>
-              <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-secondary font-bold block">Record #0087-C &bull; Royal Nursery Directive</span>
-              <h3 class="font-display text-xl text-theme-text mt-1 font-semibold">Memorandum on Elisabeta’s Schedule</h3>
-            </div>
-            
-            <button type="button" onclick="toggleLookTwice('rec2')" id="btn-rec2" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="self-start sm:self-auto px-4 py-2 border rounded-lg text-xs font-sans tracking-[0.16em] uppercase transition-all shadow-sm cursor-pointer hover:border-theme-accent">
-              Look Twice
-            </button>
-          </div>
-
-          <div class="font-serif text-base text-theme-text leading-relaxed text-justify">
-            <p>
-              "The Princess should be instructed in continental cadence, state economics, and music. Under no circumstance should her schedule permit unregulated retreat. Solitude invites melancholy in future rulers; purpose is the greatest armor a daughter of Norwyn can wear."
-            </p>
-          </div>
-
-          <div id="layer-rec2" style="background-color: var(--color-callout-bg);" class="hidden mt-6 pt-5 border-t border-theme-border p-5 border-l-4 border-l-theme-accent rounded-sm">
-            <span class="font-sans text-[9px] tracking-[0.24em] uppercase text-theme-accent font-bold block mb-1">
-              Ecaterina's Note to the Governess (Found in private desk)
-            </span>
-            <p class="font-serif italic text-theme-text text-sm md:text-base leading-relaxed text-justify">
-              "Do not let her think this is punishment. I spent my eighteenth year trapped in a carriage while councilors debated whether I was sane enough to inherit. If Elisabeta knows the answer before they can frame the question, nobody will ever dare question her mind. Keep her busy so she does not bleed."
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1022,6 +1862,10 @@
           }
         }
       });
+
+      if (viewId === 'archive' && window.ScriptoriumArchive) {
+        window.ScriptoriumArchive.showShelf();
+      }
 
       // Update Nav Buttons
       document.querySelectorAll('.nav-button').forEach(btn => {
@@ -1141,19 +1985,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function toggleLookTwice(recId) {
-      const layer = document.getElementById(`layer-${recId}`);
-      const btn = document.getElementById(`btn-${recId}`);
-
-      if (layer.classList.contains('hidden')) {
-        layer.classList.remove('hidden');
-        btn.textContent = "Close Look";
-      } else {
-        layer.classList.add('hidden');
-        btn.textContent = "Look Twice";
-      }
-    }
-
     function changeFontSize(delta) {
       baseFontSize = Math.min(26, Math.max(16, baseFontSize + (delta * 1.5)));
       const readingBody = document.getElementById('readingBody');
@@ -1185,6 +2016,9 @@
 
       isIvoryMode = ivory;
       localStorage.setItem('novel_theme_mode', ivory ? 'ivory' : 'dark');
+      if (window.ScriptoriumArchive) {
+        window.ScriptoriumArchive.reflow();
+      }
     }
 
     function toggleGlobalTheme() {
@@ -1216,6 +2050,607 @@
       }
       switchView('home');
     });
+  </script>
+
+  <!-- ==================== SCRIPTORIUM ARCHIVE LOGIC ==================== -->
+  <script>
+  (function () {
+    'use strict';
+    var $ = function (q, el) { return (el || document).querySelector(q); };
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var coarse = window.matchMedia('(pointer: coarse)').matches;
+    var FLIP = reduce ? 10 : 1150, FLIP_S = reduce ? 10 : 720;
+
+    function svgWrap(inner) { return '<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>'; }
+    var EMB = {
+      sun: function () {
+        var r = '<circle cx="50" cy="50" r="13"/><circle cx="50" cy="50" r="19" stroke-width=".8"/>';
+        for (var i = 0; i < 16; i++) {
+          var a = i * Math.PI / 8, l = i % 2 ? 32 : 39;
+          r += '<line x1="' + (50 + Math.cos(a) * 24).toFixed(1) + '" y1="' + (50 + Math.sin(a) * 24).toFixed(1) + '" x2="' + (50 + Math.cos(a) * l).toFixed(1) + '" y2="' + (50 + Math.sin(a) * l).toFixed(1) + '"/>';
+        }
+        return svgWrap(r);
+      },
+      crown: function () { return svgWrap('<path d="M18 64 L11 30 L33 47 L50 20 L67 47 L89 30 L82 64 Z"/><path d="M18 64 H82 V77 H18 Z"/><circle cx="11" cy="26" r="3.4"/><circle cx="50" cy="16" r="3.4"/><circle cx="89" cy="26" r="3.4"/><circle cx="34" cy="70.5" r="2.5"/><circle cx="50" cy="70.5" r="2.5"/><circle cx="66" cy="70.5" r="2.5"/><path d="M33 47 L36 64 M67 47 L64 64 M50 20 V64" stroke-width="1"/><path d="M14 84 H86" stroke-width=".8"/>'); },
+      spears: function () { return svgWrap('<path d="M22 84 L78 18 M78 84 L22 18"/><path d="M81 14 L72 20 L78 26 Z"/><path d="M19 14 L28 20 L22 26 Z"/><circle cx="50" cy="51" r="9"/><circle cx="50" cy="51" r="14" stroke-width=".7"/>'); },
+      ziggurat: function () { return svgWrap('<path d="M12 84 H88 V72 H78 V60 H68 V48 H58 V36 H42 V48 H32 V60 H22 V72 H12 Z"/><path d="M50 84 V48" stroke-width="1"/><path d="M50 26 V14 M44 20 H56" stroke-width="1.2"/>'); }
+    };
+
+    var BOOKS = [
+      {
+        id: 'norwyn', short: 'History of Norwyn', cover: 'HISTORY OF NORWYN', spineTitle: 'HISTORY<br>OF NORWYN', fs: 1.32, tsz: 1.38,
+        author: 'THE ROYAL CHRONICLERS', who: 'The Chroniclers of Norwyn', plate: 'Chroniclers · Age of Crowns',
+        cv: '#5A3846', cv2: '#7A4E60', spine: '#633F4E', emb: 'crown', hue: 315,
+        sub: 'The rise and quiet end of a northern kingdom', meta: 'Kept in the stone archive at Highmere',
+        intro: ['This chronicle is kept in the stone archive at Highmere. It tells of Norwyn, a kingdom of cold harbours and high passes, and it was set down by many hands over nine reigns. Where the old scribes disagreed, they wrote both accounts and left the reader to choose.'],
+        pages: [
+          { r: 'I · The Founding', t: ['Before there were kings, the clans of the fjords fished the grey water and quarrelled over every shore. In the winter of the Long Frost, a shipwright named Aldric Norwyn called the eldest of each clan to a standing stone at Highmere. He asked them to lay down their axes for one season. They did, and the ice did not break until spring.'] },
+          { r: 'II · The Iron Crown', t: ['The clans named Aldric their first king, and the smiths of Karrow forged him a crown of black iron with nine points, one for each clan. It was heavy and plain, and he wore it only at councils. Aldric said a crown should be heavy, so that no one forgets what it costs to carry.'] },
+          { r: 'III · The Salt Road', t: ['Under Queen Maren the Wide, the kingdom cut a road through the mountains to the salt pans of the south. Mules carried grain down and salt up, and a town grew at every well along the way. In her old age the queen walked the whole road on foot, and it is said she counted every stone.'] },
+          { r: 'IV · The Winter of Wolves', t: ['In the ninth year of King Edric, the snows came early and the wolves came down from the passes. Farms were left empty, and children were carried to the walled towns on sledges. The king opened the royal granaries and sold his own horses to buy grain. Ever since, a lamp is left burning at every door on the first night of winter.'] },
+          { r: 'V · The Quarrel of Crowns', t: ['Edric\u2019s grandsons each claimed the throne, and for eleven years two courts sat, one at Highmere and one at Karrow. The farmers paid taxes to both and trusted neither. The war ended when their sister Isolde rode between the armies at Greywater Ford and asked who would feed them all next winter. Both sides went home.'] },
+          { r: 'VI · The Silver Years', t: ['Queen Isolde ruled for forty years and never raised an army. She opened the archive to anyone who could read, built bridges where her fathers had built fortresses, and let the harbours trade under every flag. Scholars came from the far south to copy the chronicles, and most of what we know of Norwyn was written in her time.'] },
+          { r: 'VII · The Last Page', t: ['The chronicle does not say how the kingdom ended, or whether it did. The last scribe left one line in the margin: the crown lies in the archive, under the stone where it was first sworn. Whoever finds it is asked to set it on a heavy table, and to remember why it was made heavy.'] }
+        ]
+      },
+      {
+        id: 'tao', short: 'Tao Te Ching', cover: 'TAO TE CHING', spineTitle: 'TAO TE CHING', fs: 1.42, tsz: 1.45,
+        author: 'LAOZI', who: 'Laozi', plate: 'Laozi · c. 300 BC',
+        cv: '#3A4548', cv2: '#4F5E62', spine: '#424E52', emb: 'sun', hue: 175,
+        sub: 'Attributed to Laozi, keeper of the archives', meta: 'Classical Chinese · c. fourth century BC',
+        intro: ['Eighty-one short chapters, said to have been left at the western pass by an old archivist named Laozi as he rode out of the kingdom. Scholars doubt the story and think the book was gathered over time. Its subject is the Way: what is natural, quiet and unforced, and how a person or a ruler might live by it.'],
+        pages: [
+          { r: 'Chapter 1', t: ['The way that can be told is not the lasting Way. A name that can be spoken is not the lasting name. Without a name, it is the beginning of heaven and earth; with a name, it is the mother of ten thousand things. So always free of desire, you see the hidden marvel; always in desire, you see only its edges. The two spring from one source and differ only in name. Their sameness is a mystery, mystery upon mystery, the gate of every wonder.'] },
+          { r: 'Chapter 8', t: ['The highest good is like water. Water serves all things and does not compete; it settles in the low places that others avoid, and so it is close to the Way. In dwelling, be near the earth. In thinking, be deep. In giving, be kind. In speaking, be true. In ruling, be just. In work, be capable. In action, choose the right moment. Because you do not compete, no one can blame you.'] },
+          { r: 'Chapter 11', t: ['Thirty spokes meet in the hub, but it is the empty hole at the center that makes the wheel useful. Clay is shaped into a pot, but it is the emptiness inside that makes it useful. Doors and windows are cut to make a room, and it is the empty space that makes it livable. So we profit from what is there, and use what is not.'] },
+          { r: 'Chapter 16', t: ['Reach the utmost emptiness; keep to deep stillness. The ten thousand things rise and fall together, and I watch them return. Each grows, then goes back to its root. Returning to the root is stillness, and stillness is returning to one’s destiny. To know what lasts is clarity. Not to know it is to stumble blindly into trouble.'] },
+          { r: 'Chapter 33', t: ['One who knows others is wise; one who knows themselves is enlightened. One who conquers others is strong; one who conquers themselves is mighty. One who knows contentment is rich. One who acts with resolve has purpose. One who does not lose their place endures, and one who dies yet is not forgotten has a long life.'] },
+          { r: 'Chapter 64', t: ['What is at rest is easy to hold. What has not yet appeared is easy to plan for. The brittle is easily broken and the small easily scattered. Act before things exist; set things in order before disorder begins. A tree you cannot reach around grew from a tiny shoot. A tower nine stories high began as a heap of earth. A journey of a thousand miles begins beneath your feet.'] },
+          { r: 'Chapters 76 and 78', t: ['A person is soft and supple when alive, and stiff and hard when dead. The grass and trees are tender when alive, and dry and brittle when dead. So the hard and stiff are companions of death, and the soft and gentle are companions of life.', 'Nothing in the world is softer than water, yet nothing is better at wearing down the hard.'] }
+        ]
+      },
+      {
+        id: 'war', short: 'Art of War', cover: 'ART OF WAR', spineTitle: 'ART OF WAR', fs: 1.6, tsz: 1.7,
+        author: 'SUN TZU', who: 'Sun Tzu', plate: 'Sun Tzu · c. 450 BC',
+        cv: '#3B3D4E', cv2: '#51546B', spine: '#444659', emb: 'spears', hue: 225,
+        sub: 'Attributed to Sun Wu, “Master Sun”', meta: 'Classical Chinese · c. fifth to fourth century BC',
+        intro: ['A short Chinese handbook on war, traditionally credited to a general called Sun Wu, or Sun Tzu, “Master Sun”. It has thirteen chapters. Its advice is plain to read and hard to follow: win before the fight begins, spend little, know the ground, know the enemy, and know yourself.'],
+        pages: [
+          { r: 'I · Laying Plans', t: ['War is a matter of vital importance to the state: the field of life and death, the road to survival or ruin. It must be studied with care. It turns on five things: the Way, Heaven, Earth, the commander, and method and discipline. The Way is what brings the people into harmony with their ruler, so that they will follow him in life and in death and not fear danger.'] },
+          { r: 'I · Laying Plans', t: ['All warfare is based on deception. When able, seem unable; when active, seem inactive. When near, make the enemy believe you are far; when far, that you are near. Offer bait to lure him. Feign disorder and crush him. If he is secure at every point, prepare against him; if he is strong, avoid him. Strike where he is unprepared. Appear where you are not expected.'] },
+          { r: 'III · Attack by Stratagem', t: ['To win a hundred victories in a hundred battles is not the highest excellence. The highest excellence is to subdue the enemy without fighting. So the best strategy is to attack the enemy’s plans; next best, his alliances; next, his army; and the worst is to besiege walled cities.'] },
+          { r: 'III · Attack by Stratagem', t: ['Know the enemy and know yourself, and in a hundred battles you will never be in danger. Know yourself but not the enemy, and for every victory you will suffer a defeat. Know neither, and you will lose every battle.'] },
+          { r: 'VI · Weak Points and Strong', t: ['Water shapes its course according to the ground; the soldier works out his victory according to the enemy. As water keeps no constant shape, there are no constant conditions in war. One who can change his tactics to suit his opponent, and so win, may be called a heaven-born captain.'] },
+          { r: 'VII · Maneuvering', t: ['Let your speed be that of the wind, your order that of the forest. In raiding, be like fire; in standing still, like a mountain. Let your plans be dark and impenetrable as night, and when you move, fall like a thunderbolt.'] },
+          { r: 'XIII · The Use of Spies', t: ['Armies may face one another for years, all for a victory decided in a single day. To stay ignorant of the enemy because you begrudge a little silver to those who would inform you is the height of inhumanity. Such a man is no leader of men, no support to his ruler, and no master of victory.'] }
+        ]
+      },
+      {
+        id: 'gil', short: 'Gilgamesh', cover: 'GILGAMESH', spineTitle: 'GILGAMESH', fs: 1.72, tsz: 1.7,
+        author: 'THE SCRIBES OF URUK', who: 'Scribes of Mesopotamia', plate: 'Mesopotamia · c. 1200 BC',
+        cv: '#524642', cv2: '#6E5E59', spine: '#5D504C', emb: 'ziggurat', hue: 340,
+        sub: 'Told by the scribes of Mesopotamia', meta: 'Akkadian on clay tablets · c. 1200 BC, from older Sumerian poems',
+        intro: ['Written in cuneiform on clay tablets, this is among the oldest long stories in the world. The standard version has twelve tablets. Copies were found in the ruined library of King Ashurbanipal at Nineveh, and many lines are still missing. These pages follow its main road: a king, a friend, a death, and a failed search for life without end.'],
+        pages: [
+          { r: 'Tablet I', t: ['He who saw the deep, the foundation of the land, who knew all things and was wise in everything: Gilgamesh, who saw secret places and brought back a tale from before the flood. He came a long road, weary and at peace, and cut all his labors on a stone. He raised the wall of Uruk, whose outer face shines like copper and whose inner face has no equal.'] },
+          { r: 'Tablets I and II', t: ['Two parts god and one part man, Gilgamesh was strong and restless, and the people of Uruk cried out under his hand. The gods heard, and made him a match: Enkidu, born of clay and wilderness, who lived among the gazelles and drank at their waterhole. A woman from the temple taught him bread, beer and the ways of men.'] },
+          { r: 'Tablets II to V', t: ['The two met at a doorway and wrestled until the doorposts shook. Then Gilgamesh’s anger cooled, and they became friends. Together they went to the Cedar Forest and killed Humbaba, its guardian, and cut down the great cedars. It was a bold deed, and the gods did not forgive it.'] },
+          { r: 'Tablets VI to VIII', t: ['The goddess Ishtar offered to marry Gilgamesh, and he refused her. She sent the Bull of Heaven against the city, and the friends killed it. The gods decreed that one of them must die, and Enkidu fell sick. For days he lay dying, and Gilgamesh would not let him be buried until a worm fell from his nose.'] },
+          { r: 'Tablet X', t: ['Grief sent Gilgamesh into the wilderness in a lion’s skin, afraid of death. He passed the scorpion-people who guard the road of the sun, and reached the tavern-keeper Siduri at the edge of the sea. She told him: the life you are looking for you will not find. The gods gave death to people and kept life for themselves. Fill your belly, be glad, and look at the child who holds your hand.'] },
+          { r: 'Tablet XI', t: ['Beyond the waters of death lived Utnapishtim, who had survived the flood. The god Ea warned him through a reed wall: tear down your house and build a boat. He loaded the seed of every living thing. For six days and seven nights the storm raged, and the gods crouched like dogs. After it ended he sent out a dove, then a swallow, then a raven, which did not return.'] },
+          { r: 'Tablet XI', t: ['Utnapishtim set a test: stay awake for six days and seven nights. Gilgamesh fell asleep at once. He was shown a plant at the bottom of the sea that could make an old man young. He dived for it with stones tied to his feet, but while he bathed a snake carried it off. Gilgamesh wept. Back in Uruk, he showed the boatman the wall: look at its brickwork. Was it not laid by the seven sages?'] }
+        ]
+      }
+    ];
+
+    function mulberry(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+    function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+    var ac = null, noiseBuf = null, bus = null, soundOn = true;
+    function audio() {
+      if (!ac) {
+        try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; }
+        var sr = ac.sampleRate, len = sr * 2; noiseBuf = ac.createBuffer(1, len, sr);
+        var d = noiseBuf.getChannelData(0); for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+        var irLen = Math.floor(sr * (window.matchMedia('(pointer: coarse)').matches ? .8 : 1.5)), ir = ac.createBuffer(2, irLen, sr);
+        for (var c = 0; c < 2; c++) {
+          var ch = ir.getChannelData(c), lp = 0;
+          for (var j = 0; j < irLen; j++) { lp += (Math.random() * 2 - 1 - lp) * .35; ch[j] = lp * Math.pow(1 - j / irLen, 3.2); }
+        }
+        var conv = ac.createConvolver(); conv.buffer = ir;
+        var wet = ac.createGain(); wet.gain.value = .3;
+        var dry = ac.createGain(); dry.gain.value = 1;
+        var inp = ac.createGain();
+        inp.connect(dry); inp.connect(conv); conv.connect(wet);
+        dry.connect(ac.destination); wet.connect(ac.destination);
+        bus = inp;
+      }
+      if (ac.state === 'suspended') { try { ac.resume(); } catch (e) {} }
+      return ac;
+    }
+    function burst(o) {
+      if (!soundOn) return; var a = audio(); if (!a) return;
+      var t = a.currentTime + (o.at || 0), dur = o.dur || .3;
+      var src = a.createBufferSource(); src.buffer = noiseBuf;
+      var f = a.createBiquadFilter(); f.type = o.type || 'bandpass'; f.Q.value = o.q || .8;
+      f.frequency.setValueAtTime(o.f0 || 3000, t); f.frequency.exponentialRampToValueAtTime(o.f1 || o.f0 || 3000, t + dur);
+      var g = a.createGain(); g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(o.gain || .15, t + (o.attack || .01));
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      var pan = a.createStereoPanner ? a.createStereoPanner() : null;
+      src.connect(f); f.connect(g);
+      if (pan) { pan.pan.value = o.pan || 0; g.connect(pan); pan.connect(bus); } else g.connect(bus);
+      src.start(t, Math.random() * 1.5); src.stop(t + dur + .05);
+    }
+    function thump(freq, gain, dur, at) {
+      if (!soundOn) return; var a = audio(); if (!a) return; var t = a.currentTime + (at || 0);
+      var o = a.createOscillator(); o.type = 'sine'; o.frequency.setValueAtTime(freq, t); o.frequency.exponentialRampToValueAtTime(freq * .55, t + dur);
+      var g = a.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(gain, t + .01); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(bus); o.start(t); o.stop(t + dur + .05);
+    }
+    function rnd(a, b) { return a + Math.random() * (b - a); }
+    function pageSound(k) {
+      k = k || 1;
+      var side = rnd(-.25, .25);
+      burst({ type: 'bandpass', f0: 700, f1: 2400, q: .55, dur: .85 * k, gain: .075, attack: .3 * k, pan: side });
+      burst({ type: 'highpass', f0: 2600, f1: 5200, q: .4, dur: .7 * k, gain: .02, attack: .3 * k, pan: side });
+      var n = 8 + Math.floor(Math.random() * 5);
+      for (var i = 0; i < n; i++) {
+        var at = rnd(.04, .62) * k;
+        burst({ at: at, dur: rnd(.01, .03), f0: rnd(2400, 6500), q: rnd(1.5, 3.5), gain: rnd(.025, .075) * (1 - at * .5), attack: .002, pan: side + rnd(-.1, .1) });
+      }
+      burst({ at: .9 * k, type: 'lowpass', f0: 520, f1: 190, q: .5, dur: .16, gain: .13, attack: .012, pan: side });
+      burst({ at: .91 * k, dur: .05, f0: 3200, f1: 1500, q: 1.4, gain: .04, attack: .004, pan: side });
+      thump(68, .08, .14, .9 * k);
+    }
+
+    var FILL = ['#49474E', '#574B55', '#46414B', '#5E525C', '#3E3D43', '#524952', '#4D4249', '#5A5056', '#444048', '#564750', '#4A4652'];
+    var POS = [3, 6, 4, 6];
+    function band(top) { return '<i class="band" style="top:' + top + '%"></i>'; }
+    function mkFiller(rnd) {
+      var w = 2.2 + rnd() * 3.2, h = 14 + rnd() * 8;
+      var el = document.createElement('div'); el.className = 'scriptorium-spine'; el.setAttribute('aria-hidden', 'true');
+      el.style.setProperty('--w', w.toFixed(2)); el.style.setProperty('--h', h.toFixed(2)); el.style.setProperty('--c', FILL[Math.floor(rnd() * FILL.length)]);
+      var html = ''; if (rnd() < .7) html += band(8) + band(12); if (rnd() < .5) html += band(86); if (rnd() < .3) html += band(46);
+      el.innerHTML = html; return { el: el, w: w };
+    }
+    function mkReal(b) {
+      var slot = document.createElement('div'); slot.className = 'scriptorium-slot';
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'scriptorium-spine real'; btn.dataset.book = b.id;
+      btn.setAttribute('aria-label', 'Take ' + b.short + ' by ' + b.who + ' from the shelf');
+      btn.style.setProperty('--w', 9); btn.style.setProperty('--h', 23); btn.style.setProperty('--c', b.spine);
+      btn.innerHTML = band(6) + band(10) + band(88) + band(92) + '<span class="st" style="font-size:calc(var(--u) * ' + b.fs + ')">' + b.spineTitle + '</span>';
+      var plate = document.createElement('div'); plate.className = 'scriptorium-plate'; plate.textContent = b.plate;
+      slot.appendChild(btn); slot.appendChild(plate);
+      btn.addEventListener('click', function () { pullBook(b, slot, btn); });
+      return slot;
+    }
+    function buildCase() {
+      var caseEl = $('#scriptoriumCase'); if (!caseEl) return;
+      caseEl.innerHTML = '';
+      var hostW = caseEl.parentElement ? caseEl.parentElement.clientWidth : window.innerWidth;
+      var U = Math.max(5.2, Math.min(8.8, hostW * 0.0095));
+      caseEl.style.setProperty('--u', U + 'px');
+      BOOKS.forEach(function (b, si) {
+        var rnd = mulberry(101 + si * 37);
+        var shelf = document.createElement('div'); shelf.className = 'scriptorium-shelf';
+        var row = document.createElement('div'); row.className = 'scriptorium-row';
+        var board = document.createElement('div'); board.className = 'scriptorium-plank';
+        shelf.appendChild(row); shelf.appendChild(board); caseEl.appendChild(shelf);
+        var avail = Math.max(240, (row.clientWidth || (hostW - 60)) - 2 * 1.2 * U), used = 0;
+        for (var i = 0; i < POS[si]; i++) { var f = mkFiller(rnd); row.appendChild(f.el); used += f.w * U; }
+        row.appendChild(mkReal(b)); used += 9 * U;
+        var guard = 0;
+        while (used < avail - 2 * U && guard++ < 60) {
+          var g = mkFiller(rnd); if (used + g.w * U > avail) break;
+          row.appendChild(g.el); used += g.w * U;
+        }
+      });
+    }
+
+    var archiveReaderView = $('#archiveReaderView'), stage = $('#scriptoriumStage'), bookEl = $('#scriptoriumBook'), hintEl = $('#scriptoriumHint');
+    var cur = null, sides = [], leaves = [], s = 0, layout = 'spread', pw = 300, lastBtn = null, hintTimer = null;
+    var tipShown = false, lastW = 0, closing = false, busyUntil = 0;
+
+    function wantSingle() { return window.innerWidth < 720 || window.innerHeight < 460; }
+    function single() { return layout === 'single'; }
+    function fOf(x) { return single() ? x : Math.ceil(x / 2); }
+    function foliate(i) { var n = ((i - 2) >> 1) + 1; return 'Folio ' + n + (i % 2 === 0 ? 'r' : 'v'); }
+    function sideLabel(i) {
+      var last = sides.length - 1;
+      if (i === 0) return 'Cover'; if (i === 1) return 'Inside cover';
+      if (i === last) return 'Back cover'; if (i === last - 1) return 'Endpaper';
+      return foliate(i);
+    }
+    function firstWord(txt) { var m = String(txt).replace(/<[^>]+>/g, '').trim().split(/\s+/)[0] || ''; return m.replace(/[^A-Za-z’‘'-]/g, ''); }
+
+    function paperFox(el, seed) {
+      var r = mulberry(seed * 7919 + 13), n = 3 + Math.floor(r() * 4), h = '';
+      for (var i = 0; i < n; i++) {
+        var sz = 3 + r() * 9;
+        h += '<i class="fox" style="left:' + (r() * 92).toFixed(1) + '%;top:' + (r() * 92).toFixed(1) + '%;width:' + sz.toFixed(1) + '%;height:' + (sz * .72).toFixed(1) + '%;opacity:' + (.35 + r() * .5).toFixed(2) + '"></i>';
+      }
+      el.insertAdjacentHTML('afterbegin', h);
+    }
+
+    function makeSides(b) {
+      var a = [{ kind: 'cover' }, { kind: 'inside' }, { kind: 'title' }, { kind: 'verso' }, { kind: 'text', r: 'Argument', t: b.intro }];
+      b.pages.forEach(function (p) { a.push({ kind: 'text', r: p.r, t: p.t }); });
+      if (a.length % 2) a.push({ kind: 'finis' });
+      a.push({ kind: 'endR' }); a.push({ kind: 'back' });
+      return a;
+    }
+
+    function makeFace(side, i, b, one) {
+      var d = document.createElement('div'), isBack = !one && i % 2 === 1, k = side.kind;
+      var cls = 'face ' + (isBack ? 'back' : 'front');
+      if (k === 'cover' || k === 'inside' || k === 'endR' || k === 'back') cls += ' board'; else cls += ' paper';
+      d.className = cls;
+      var html = '';
+      if (k === 'cover') {
+        html = '<div class="cv"><div class="cv-fr"><div class="cv-fr2">' +
+          '<div class="orn"></div>' +
+          '<h4 class="foil cv-t" style="font-size:calc(' + b.tsz + 'em * var(--k, 1))">' + esc(b.cover) + '</h4>' +
+          '<div class="emb">' + EMB[b.emb]() + '</div>' +
+          '<div class="orn"></div>' +
+          '<p class="foil cv-a">' + esc(b.author) + '</p>' +
+          '</div></div></div>';
+      } else if (k === 'inside' || k === 'endR') {
+        html = '<div class="marble-wrap"><div class="marble" style="--hue:' + b.hue + 'deg"></div></div>';
+      } else if (k === 'back') {
+        html = '<div class="blind"><div class="emb">' + EMB[b.emb]() + '</div></div>';
+      } else if (k === 'title') {
+        html = '<div class="pg"><div class="center-pg">' +
+          '<p class="tp-small">Here begins the book</p><div class="rule"></div>' +
+          '<h4 class="tp-title">' + esc(b.short) + '</h4>' +
+          '<div class="tp-emb">' + EMB[b.emb]() + '</div>' +
+          '<p class="tp-by">' + esc(b.who) + '</p>' +
+          '<p class="tp-meta">' + esc(b.sub) + '</p>' +
+          '<div class="rule"></div><p class="tp-meta">' + esc(b.meta) + '</p>' +
+          '</div></div>';
+      } else if (k === 'verso') {
+        html = '<div class="pg"><div class="center-pg">' +
+          '<p class="note">These are short passages set down for this reading room. The older works are retold in plain English, and nothing here is a full translation.</p>' +
+          '<div class="stamp">EX LIBRIS<br>SCRIPTORIUM</div>' +
+          '</div></div>';
+      } else if (k === 'finis') {
+        html = '<div class="pg"><div class="center-pg"><div class="rule"></div><p class="finis">Finis</p><div class="rule"></div></div></div>';
+      } else if (k === 'text') {
+        var paras = side.t.map(function (p, n) { return '<p' + (n === 0 ? ' class="first"' : '') + '>' + esc(p) + '</p>'; }).join('');
+        var head = one ? '<span>' + esc(b.short.toUpperCase()) + '</span><span>' + esc(side.r) + '</span>' : '<span>' + (isBack ? esc(b.short.toUpperCase()) : esc(side.r)) + '</span>';
+        var foot;
+        if (one) foot = '<span class="fol">page ' + i + '</span><span></span>';
+        else {
+          var nxt = sides[i + 1] && sides[i + 1].kind === 'text' ? firstWord(sides[i + 1].t[0]) : '';
+          foot = '<span class="fol">' + foliate(i).toLowerCase() + '</span>' + (isBack && nxt ? '<span class="cw">' + esc(nxt) + '</span>' : '<span></span>');
+        }
+        html = '<div class="pg"><div class="rh">' + head + '</div><div class="tx" lang="en">' + paras + '</div><div class="ft">' + foot + '</div></div>';
+      }
+      d.innerHTML = html;
+      if (!one && d.classList.contains('paper')) paperFox(d, i + b.id.length * 31);
+      return d;
+    }
+
+    function buildSpread(b) {
+      sides = makeSides(b);
+      bookEl.innerHTML = '';
+      var shadow = document.createElement('div'); shadow.className = 'shadow'; bookEl.appendChild(shadow);
+      var sl = document.createElement('div'); sl.className = 'slab l'; var sr = document.createElement('div'); sr.className = 'slab r';
+      bookEl.appendChild(sl); bookEl.appendChild(sr);
+      bookEl.slabL = sl; bookEl.slabR = sr;
+      leaves = []; var N = sides.length / 2;
+      for (var k = 0; k < N; k++) {
+        var el = document.createElement('div'); el.className = 'leaf';
+        el.style.zIndex = N - k; el.style.transitionDuration = FLIP + 'ms';
+        el.appendChild(makeFace(sides[2 * k], 2 * k, b, false));
+        el.appendChild(makeFace(sides[2 * k + 1], 2 * k + 1, b, false));
+        bookEl.appendChild(el);
+        leaves.push({ el: el, flipped: false });
+      }
+    }
+    function buildSingle(b) {
+      var full = makeSides(b);
+      sides = [full[0]].concat(full.slice(2, full.length - 2));
+      bookEl.innerHTML = '';
+      leaves = [];
+      sides.forEach(function (sd, k) {
+        var el = document.createElement('div'); el.className = 'leaf'; el.style.zIndex = sides.length - k;
+        el.appendChild(makeFace(sd, k, b, true));
+        bookEl.appendChild(el);
+        leaves.push({ el: el, flipped: false });
+      });
+    }
+    function build(b) {
+      bookEl.className = 'scriptorium-book' + (single() ? ' sg' : '');
+      archiveReaderView.dataset.layout = layout;
+      bookEl.style.setProperty('--cv', b.cv); bookEl.style.setProperty('--cv2', b.cv2);
+      bookEl.style.setProperty('--fd', (single() ? FLIP_S : FLIP) + 'ms');
+      bookEl.style.setProperty('--k', single() ? '1.25' : '1');
+      bookEl.style.setProperty('--tx', '0px'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg');
+      if (single()) buildSingle(b); else buildSpread(b);
+    }
+
+    function applyState() {
+      var f = fOf(s), N = leaves.length;
+      leaves.forEach(function (lf, i) {
+        var el = lf.el, want = i < f; lf.flipped = want;
+        el.style.transition = 'none';
+        el.classList.remove('turning', 'under', 'over');
+        el.classList.toggle('flipped', want);
+        if (single()) el.style.display = (i >= s && i <= s + 2) ? '' : 'none';
+        else el.style.zIndex = want ? (i + 1) : (N - i);
+      });
+      void bookEl.offsetWidth;
+      leaves.forEach(function (lf) { lf.el.style.transition = ''; if (!single()) lf.el.style.transitionDuration = FLIP + 'ms'; });
+    }
+
+    function fitAll() {
+      var saved = [];
+      if (single()) leaves.forEach(function (lf) { saved.push(lf.el.style.display); lf.el.style.display = ''; });
+      var list = bookEl.querySelectorAll('.tx');
+      for (var i = 0; i < list.length; i++) {
+        var tx = list[i]; tx.style.fontSize = ''; var fs = 1, n = 0;
+        while (tx.scrollHeight > tx.clientHeight + 1 && fs > .5 && n++ < 18) { fs -= .03; tx.style.fontSize = fs.toFixed(2) + 'em'; }
+      }
+      var ct = bookEl.querySelectorAll('.cv-t');
+      for (var j = 0; j < ct.length; j++) {
+        var t = ct[j]; if (!t.dataset.fs) t.dataset.fs = t.style.fontSize;
+        t.style.fontSize = t.dataset.fs; var m = 1, q = 0;
+        while (t.scrollWidth > t.clientWidth + 1 && m > .4 && q++ < 30) { m -= .03; t.style.fontSize = 'calc(' + t.dataset.fs + ' * ' + m.toFixed(2) + ')'; }
+      }
+      if (single()) leaves.forEach(function (lf, i) { lf.el.style.display = saved[i]; });
+    }
+
+    function sizeBook() {
+      var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : 640);
+      var H = stage.clientHeight || 540;
+      if (single()) {
+        pw = W;
+        bookEl.style.width = W + 'px'; bookEl.style.height = H + 'px';
+        bookEl.style.fontSize = (Math.min(W, H * (W > H ? .85 : .62)) * .045).toFixed(2) + 'px';
+      } else {
+        var ratio = 7 / 5;
+        pw = Math.max(170, Math.floor(Math.min((W - 60) / 2, (H - 90) / ratio)));
+        bookEl.style.width = (2 * pw) + 'px'; bookEl.style.height = Math.round(pw * ratio) + 'px';
+        bookEl.style.fontSize = (pw * .0435).toFixed(2) + 'px';
+        position(); thickness();
+      }
+      fitAll();
+    }
+
+    function position() {
+      if (!cur || single()) return;
+      var last = sides.length - 1, x = 0;
+      if (s === 0) x = -pw / 2; else if (s === last) x = pw / 2;
+      bookEl.style.setProperty('--tx', x + 'px');
+    }
+    function thickness() {
+      if (single() || !bookEl.slabR) return;
+      var n = leaves.length, f = Math.ceil(s / 2);
+      function sh(count, dir) {
+        var t = Math.min(9, Math.round(count * 1.3)), out = [];
+        for (var i = 0; i < t; i++) out.push((dir * (i + 1)) + 'px ' + (i + 1) + 'px 0 ' + (i % 2 ? '#EAE4DC' : '#D5CDC2'));
+        return out.join(',');
+      }
+      bookEl.slabR.style.boxShadow = sh(n - f, 1); bookEl.slabL.style.boxShadow = sh(f, -1);
+      bookEl.slabR.style.opacity = (f >= n) ? 0 : 1; bookEl.slabL.style.opacity = (f <= 0) ? 0 : 1;
+    }
+
+    function flip(i, want, delay) {
+      var lf = leaves[i], N = leaves.length; if (lf.flipped === want) return; lf.flipped = want;
+      lf.el.style.zIndex = N + 5;
+      setTimeout(function () { lf.el.classList.add('turning'); lf.el.classList.toggle('flipped', want); }, delay || 0);
+      setTimeout(function () { lf.el.classList.remove('turning'); lf.el.style.zIndex = want ? (i + 1) : (N - i); }, (delay || 0) + FLIP + 40);
+    }
+
+    function turnSingle(from, d) {
+      var D = FLIP_S, lf, beneath;
+      if (d > 0) {
+        lf = leaves[from]; beneath = leaves[from + 1];
+        if (leaves[from + 2]) leaves[from + 2].el.style.display = '';
+        lf.flipped = true;
+        lf.el.classList.add('turning', 'flipped'); beneath.classList.add('under');
+        setTimeout(function () {
+          lf.el.classList.remove('turning'); beneath.classList.remove('under'); lf.el.style.display = 'none';
+        }, D + 30);
+      } else {
+        lf = leaves[from - 1]; beneath = leaves[from];
+        lf.el.style.transition = 'none'; lf.el.style.display = '';
+        void lf.el.offsetWidth;
+        lf.el.style.transition = '';
+        lf.flipped = false;
+        lf.el.classList.add('turning'); beneath.classList.add('over');
+        lf.el.classList.remove('flipped');
+        setTimeout(function () {
+          lf.el.classList.remove('turning'); beneath.classList.remove('over');
+          if (leaves[from + 2]) leaves[from + 2].el.style.display = 'none';
+        }, D + 30);
+      }
+      return D + 60;
+    }
+
+    function ui() {
+      var last = sides.length - 1;
+      $('#scriptoriumFolio').textContent = single() ? (s === 0 ? 'Cover' : s === last ? 'The end' : 'Page ' + s + ' of ' + (last - 1)) : sideLabel(s);
+      $('#scriptoriumPrev').disabled = s === 0; $('#scriptoriumNext').disabled = s === last;
+    }
+
+    function go(ns, force) {
+      if (!cur) return 0;
+      var now = Date.now();
+      if (!force && (closing || now < busyUntil)) return 0;
+      var last = sides.length - 1;
+      ns = Math.max(0, Math.min(last, ns)); if (ns === s) return 0;
+      var prevS = s, prevF = fOf(s); s = ns; var f = fOf(s), total;
+      if (single()) {
+        if (Math.abs(s - prevS) === 1) total = turnSingle(prevS, s - prevS);
+        else { applyState(); total = 200; }
+      } else {
+        var stagger = Math.abs(f - prevF) > 1 ? (closing ? 130 : 110) : 0, c = 0, todo = [];
+        for (var i = 0; i < leaves.length; i++) { if (leaves[i].flipped !== (i < f)) todo.push(i); }
+        if (f < prevF) todo.reverse();
+        todo.forEach(function (i) { flip(i, i < f, stagger * c++); });
+        total = stagger * Math.max(0, c - 1) + FLIP + 60;
+        position(); thickness();
+      }
+      busyUntil = now + total;
+      ui(); hideHint();
+      if (single() || f !== prevF) pageSound(single() ? .68 : 1);
+      if (!tipShown && s > 0) {
+        tipShown = true;
+        var tip = single() ? (coarse ? 'Swipe sideways or tap the right side to turn the page.' : 'Click the page, or use the arrow keys.') : (coarse ? 'Tap the right page to turn forward, the left to go back.' : 'Click a page, or use the arrow keys.');
+        setTimeout(function () { if (!closing) showHint(tip, 4500); }, total + 200);
+      }
+      return total;
+    }
+    function next() {
+      if (single()) return go(s + 1);
+      var f = Math.min(leaves.length, Math.ceil(s / 2) + 1);
+      go(f === leaves.length ? 2 * f - 1 : 2 * f);
+    }
+    function prev() {
+      if (single()) return go(s - 1);
+      var f = Math.ceil(s / 2) - 1; if (f < 0) return; go(2 * f);
+    }
+
+    function showHint(t, ms) {
+      hintEl.textContent = t; hintEl.classList.add('on'); clearTimeout(hintTimer);
+      if (ms) hintTimer = setTimeout(function () { hintEl.classList.remove('on'); }, ms);
+    }
+    function hideHint() { clearTimeout(hintTimer); hintEl.classList.remove('on'); }
+
+    function pullBook(b, slot, btn) {
+      if (slot.classList.contains('pulling')) return;
+      lastBtn = btn; slot.classList.add('pulling'); audio();
+      setTimeout(function () { openBook(b); slot.classList.remove('pulling'); }, reduce ? 20 : 420);
+    }
+    function openBook(b) {
+      closing = false; busyUntil = 0; cur = b; s = 0; tipShown = false;
+      layout = wantSingle() ? 'single' : 'spread';
+      build(b);
+      $('#scriptoriumRTitle').textContent = b.short + ' · ' + b.who;
+      document.body.dataset.archiveMode = 'reader';
+      $('#toShelfBtn').disabled = false;
+      var anim = !single();
+      if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '70px'); bookEl.style.setProperty('--rx', '24deg'); }
+      requestAnimationFrame(function () {
+        sizeBook(); applyState(); ui();
+        if (anim) { void bookEl.offsetWidth; bookEl.classList.remove('nt'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg'); }
+        showHint((coarse ? 'Tap' : 'Click') + ' the cover to open it.');
+      });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (cur === b) fitAll(); });
+    }
+    function closeBook() {
+      if (document.body.dataset.archiveMode !== 'reader' || closing) return;
+      closing = true; hideHint();
+      $('#scriptoriumPrev').disabled = true; $('#scriptoriumNext').disabled = true; $('#toShelfBtn').disabled = true;
+      var wait = 0;
+      if (s > 0) {
+        if (single()) {
+          var c0 = leaves[0].el;
+          c0.style.transition = 'none'; c0.style.display = ''; c0.classList.add('flipped');
+          void c0.offsetWidth;
+          c0.style.transition = ''; c0.classList.add('turning'); c0.classList.remove('flipped');
+          s = 0; pageSound(.68); wait = FLIP_S + 60;
+        } else wait = go(0, true);
+      }
+      setTimeout(toShelf, wait + (reduce ? 20 : 350));
+    }
+    function toShelf() {
+      closing = false; $('#toShelfBtn').disabled = false;
+      document.body.dataset.archiveMode = 'shelf';
+      hideHint();
+      buildCase();
+      if (lastBtn) setTimeout(function () { lastBtn.focus({ preventScroll: true }); }, 60);
+    }
+
+    function relayout() {
+      if (!cur || single() === wantSingle()) return false;
+      var spreadLen = makeSides(cur).length;
+      if (single()) s = s === 0 ? 0 : s + 1;
+      else s = s <= 0 ? 0 : (s === 1 ? 1 : Math.min(s - 1, spreadLen - 4));
+      layout = wantSingle() ? 'single' : 'spread';
+      build(cur); sizeBook(); applyState(); ui();
+      return true;
+    }
+
+    var down = null;
+    stage.addEventListener('pointerdown', function (e) { down = { x: e.clientX, y: e.clientY }; });
+    stage.addEventListener('pointerup', function (e) {
+      if (!down) return; var dx = e.clientX - down.x, dy = e.clientY - down.y; down = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) { dx < 0 ? next() : prev(); return; }
+      if (Math.abs(dx) > 12 || Math.abs(dy) > 12) return;
+      var last = sides.length - 1;
+      if (s === 0) return next();
+      var r = stage.getBoundingClientRect(), goNext;
+      if (single()) goNext = e.clientX > r.left + r.width * .33;
+      else { var br = bookEl.getBoundingClientRect(); goNext = e.clientX > br.left + br.width / 2; }
+      if (goNext) { if (s !== last) next(); else prev(); } else prev();
+    });
+    stage.addEventListener('pointercancel', function () { down = null; });
+    $('#scriptoriumNext').addEventListener('click', next);
+    $('#scriptoriumPrev').addEventListener('click', prev);
+    $('#toShelfBtn').addEventListener('click', closeBook);
+
+    addEventListener('keydown', function (e) {
+      var viewArchive = $('#view-archive');
+      if (!viewArchive || viewArchive.classList.contains('view-hidden')) return;
+      if (document.body.dataset.archiveMode !== 'reader') return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+      else if (e.key === 'Home') { e.preventDefault(); go(0); }
+      else if (e.key === 'End') { e.preventDefault(); go(sides.length - 1); }
+      else if (e.key === 'Escape') { closeBook(); }
+    });
+
+    function syncSoundButtons() {
+      ['#bSoundShelf', '#bSoundReader'].forEach(function (sel) {
+        var btn = $(sel);
+        if (btn) btn.setAttribute('aria-pressed', String(soundOn));
+      });
+    }
+    ['#bSoundShelf', '#bSoundReader'].forEach(function (sel) {
+      var btn = $(sel);
+      if (btn) {
+        btn.addEventListener('click', function () {
+          soundOn = !soundOn;
+          syncSoundButtons();
+          if (soundOn) audio();
+        });
+      }
+    });
+
+    var rt = null;
+    addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () {
+        if (document.body.dataset.archiveMode === 'reader') { if (!relayout()) sizeBook(); }
+        else if (window.innerWidth !== lastW) { lastW = window.innerWidth; buildCase(); }
+      }, 140);
+    });
+
+    window.ScriptoriumArchive = {
+      showShelf: function () {
+        closing = false;
+        document.body.dataset.archiveMode = 'shelf';
+        hideHint();
+        requestAnimationFrame(function () {
+          lastW = window.innerWidth;
+          buildCase();
+        });
+      },
+      reflow: function () {
+        if (document.body.dataset.archiveMode === 'reader' && cur) {
+          sizeBook();
+        } else {
+          buildCase();
+        }
+      }
+    };
+
+    lastW = window.innerWidth;
+    buildCase();
+  })();
   </script>
 </body>
 </html>
