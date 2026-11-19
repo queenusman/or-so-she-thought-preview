@@ -1753,7 +1753,7 @@
 
           <div class="scriptorium-case" id="scriptoriumCase"></div>
 
-          <p class="scriptorium-fine">Three books are retold in plain English from works in the public domain. The History of Norwyn is an invented chronicle.</p>
+          <p class="scriptorium-fine">Three books are retold in plain English from works in the public domain. The Annals of Norwyn is an invented chronicle.</p>
         </div>
 
         <!-- Reader Subview -->
@@ -2018,19 +2018,115 @@
 
     var BOOKS = [
       {
-        id: 'norwyn', short: 'History of Norwyn', cover: 'HISTORY OF NORWYN', spineTitle: 'HISTORY<br>OF NORWYN', fs: 1.32, tsz: 1.38,
-        author: 'THE ROYAL CHRONICLERS', who: 'The Chroniclers of Norwyn', plate: 'Chroniclers · Age of Crowns',
+        id: 'norwyn', short: 'The Annals of Norwyn', cover: 'THE ANNALS OF NORWYN', spineTitle: 'THE ANNALS<br>OF NORWYN', fs: 1.25, tsz: 1.32,
+        author: 'THE ROYAL CHRONICLERS', who: 'The Royal Chroniclers', plate: 'Founding Era · 1700s',
         cv: '#5A3846', cv2: '#7A4E60', spine: '#633F4E', emb: 'crown', hue: 315,
-        sub: 'The rise and quiet end of a northern kingdom', meta: 'Kept in the stone archive at Highmere',
-        intro: ['This chronicle is kept in the stone archive at Highmere. It tells of Norwyn, a kingdom of cold harbours and high passes, and it was set down by many hands over nine reigns. Where the old scribes disagreed, they wrote both accounts and left the reader to choose.'],
+        sub: 'Being a True Account of the Founding of the Kingdom and the First Reign',
+        meta: 'Wherein are set down the Three Villages, the Woman who bound them into one, and the Establishment of the first Royal House of that Realm. Chronicled from the founding era, in the seventeen hundreds.',
+        intro: [
+          'Before Norwyn was a kingdom, it was but a land of three villages. Each held its own people, its own rulers, its own concerns, and its own ancient customs. They shared one island, yet were not one realm. No Crown stood over them, no common authority held sway among them, and no single government bore charge of all three.',
+          'In that season there arose a woman of one of those villages, Arabella by name, who is reckoned among the most weighty figures in all the history of Norwyn. By her wit, her sound judgement, and her unyielding purpose, she called into question the old order of authority, and set herself to raise what had never before been seen: a united kingdom, governed by one body of law.',
+          'Her labours drew the three villages together, and upon them the foundations of Norwyn were laid. She became its first Queen.',
+          'The throne she established was to pass by the female line, descending from mother to daughter, the eldest daughter being acknowledged as heir. The story of the Norwynian Crown begins, therefore, not with an inherited throne, but with the woman who made it.'
+        ],
         pages: [
-          { r: 'I · The Founding', t: ['Before there were kings, the clans of the fjords fished the grey water and quarrelled over every shore. In the winter of the Long Frost, a shipwright named Aldric Norwyn called the eldest of each clan to a standing stone at Highmere. He asked them to lay down their axes for one season. They did, and the ice did not break until spring.'] },
-          { r: 'II · The Iron Crown', t: ['The clans named Aldric their first king, and the smiths of Karrow forged him a crown of black iron with nine points, one for each clan. It was heavy and plain, and he wore it only at councils. Aldric said a crown should be heavy, so that no one forgets what it costs to carry.'] },
-          { r: 'III · The Salt Road', t: ['Under Queen Maren the Wide, the kingdom cut a road through the mountains to the salt pans of the south. Mules carried grain down and salt up, and a town grew at every well along the way. In her old age the queen walked the whole road on foot, and it is said she counted every stone.'] },
-          { r: 'IV · The Winter of Wolves', t: ['In the ninth year of King Edric, the snows came early and the wolves came down from the passes. Farms were left empty, and children were carried to the walled towns on sledges. The king opened the royal granaries and sold his own horses to buy grain. Ever since, a lamp is left burning at every door on the first night of winter.'] },
-          { r: 'V · The Quarrel of Crowns', t: ['Edric\u2019s grandsons each claimed the throne, and for eleven years two courts sat, one at Highmere and one at Karrow. The farmers paid taxes to both and trusted neither. The war ended when their sister Isolde rode between the armies at Greywater Ford and asked who would feed them all next winter. Both sides went home.'] },
-          { r: 'VI · The Silver Years', t: ['Queen Isolde ruled for forty years and never raised an army. She opened the archive to anyone who could read, built bridges where her fathers had built fortresses, and let the harbours trade under every flag. Scholars came from the far south to copy the chronicles, and most of what we know of Norwyn was written in her time.'] },
-          { r: 'VII · The Last Page', t: ['The chronicle does not say how the kingdom ended, or whether it did. The last scribe left one line in the margin: the crown lies in the archive, under the stone where it was first sworn. Whoever finds it is asked to set it on a heavy table, and to remember why it was made heavy.'] }
+          {
+            r: 'Book the First · Of the Land Before the Kingdom',
+            t: [
+              'In the elder days, three villages stood upon the island. Though they dwelt upon one ground, each kept its own leaders and its own local ordinances. Their interests were not ever the same, and a decree that bound one village laid no necessary claim upon the people of another.',
+              'Where no common authority existed, matters of shared concern were hard to settle. Divided leadership, rival interests, and quarrels over who should bear responsibility made concord a thing not easily kept.',
+              'Each village held fast to its own manner of doing. Yet the notion of a more ordered and united government remained unrealised, a thing dimly possible but not yet brought to pass.',
+              'It was into this divided country that Arabella was born.'
+            ]
+          },
+          {
+            r: 'Book the Second · Of Arabella, the Woman of the Village',
+            t: [
+              'Arabella began not her life as a Queen. She was a daughter of one of the three villages, and lived within that very society whose arrangements she was in time to challenge and to remake.',
+              'She was marked out by a keen and watchful mind. She observed how decisions were made, how authority was apportioned, and what came of suffering power to rest in the hands of men whose interests did not always accord with those of the wider people.',
+              'Arabella perceived that many evils could not be cured by merely setting one man in the place of another. The arrangements that suffered such evils to endure must themselves be searched out and examined.',
+              'She would by no means bow to the rule of self-seeking men who strove to preserve their influence at the cost of others. Her opposition was no mere disagreement. She questioned the very principles upon which their authority stood, and denied that leadership belonged by nature to those who had long held it.',
+              'Her ambition reached beyond the winning of a place for herself. She sought to establish an order in which authority should be fixed by laws and duties, and not left wholly to the humours of powerful individuals.'
+            ]
+          },
+          {
+            r: 'Book the Third · Of the Contest of Authority',
+            t: [
+              'The struggle that went before the founding of Norwyn was, at its root, a struggle over authority.',
+              'The old arrangements had suffered men of influence to wield great power within their several communities. Yet their interests did not always answer to the needs of those they governed.',
+              'Arabella marked the weakness of a system wherein those who held authority might use it to guard their own estate, with small regard for the wider consequence. She challenged these arrangements, and stood against those who resisted the changes she would bring.',
+              'Her cause demanded more than conviction. She must learn the interests of the several communities, discover where they were at variance, and find a ground whereon a common political order might be built.',
+              'The opposition she met made the labour heavier. Those who prospered under the old ways had little reason to welcome a system that would set their authority within a new frame of law.',
+              'Nevertheless Arabella pressed on in the forming of a united order.'
+            ]
+          },
+          {
+            r: 'Book the Fourth · Of the Laws of Arabella',
+            t: [
+              'Arabella understood that a kingdom cannot be upheld by the authority of its founder alone.',
+              'If the three villages were to become one realm, they must have laws to govern their common affairs, and to fix duties beyond the reach of any local ruler.',
+              'She set great store by law, by good order, and by the right exercise of authority. Rather than lean wholly upon private compacts or the favour of powerful men, she sought arrangements that should outlast the very hour of their making.',
+              'The laws that arose from her labours became the earliest foundations of Norwyn\'s legal and political tradition. They marked a turning away from scattered local rule toward a common government.',
+              'The establishment of these laws was among the weightiest steps by which three villages were made a kingdom.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Of the Union of the Three Villages',
+            t: [
+              'The making of Norwyn required that three separate communities become members of one political body.',
+              'By Arabella\'s labours they were brought together beneath a common authority, and the means were prepared for a united kingdom. This was more than a pact between neighbouring peoples. It was a great change in the governance of the land, and in the manner in which its people were ordered beneath one shared political identity.',
+              'The three villages became the foundation of Norwyn. Their union gave rise to a common Crown, a central authority, and a growing body of laws and institutions.',
+              'The kingdom that sprang from this union was in time to become the Norwyn inherited by later generations.'
+            ]
+          },
+          {
+            r: 'Book the Sixth · Of the Founding of Norwyn, and of the First Crown',
+            t: [
+              'With the union of the three villages, Norwyn was established as a kingdom. This founding was the crown and consummation of Arabella\'s labours, to raise a political order that might unite the communities and give them a lasting frame of government.',
+              'Arabella became the first Queen of Norwyn. Her place was no inheritance from any earlier royal line. The Crown she wore was the very institution she had helped to bring into being. The setting up of the monarchy gave the new realm a central sovereign power, and laid the ground upon which every later ruler should govern. The royal history of Norwyn began with Arabella\'s reign.',
+              'As first Queen, Arabella held a station such as had never existed among the three villages before their union. Her authority bore the new political identity of Norwyn, and the establishment of a monarchy under a female sovereign.',
+              'The Crown became the chief institution of the kingdom, the sign of its continuance, and the authority through which its laws and institutions should be upheld.',
+              'The monarchy was not to be defined by a succession of kings, nor by the passing of power through a male line. Its continuance should be secured through women. This resolve became one of the defining marks of Norwyn\'s political character.'
+            ]
+          },
+          {
+            r: 'Book the Seventh · Of the Law of the Female Line, and of the First Royal House',
+            t: [
+              'Among the most enduring foundations of Arabella\'s monarchy was the law of succession by the female line.',
+              'Under this ordinance the Crown should pass through the royal women. The eldest daughter of the reigning Queen should be acknowledged heir to the throne. The royal children should inherit their mother\'s royal family name, so that the dynasty might be preserved through successive generations of women.',
+              'The law set a clear distinction between the station of the Queen and that of her husband. The reigning sovereign should hold the Crown, while her husband should bear the title of Prince, and not that of King. By this means the authority of the monarchy was kept bound to the female line, and it became a defining feature of the constitutional and dynastic tradition of Norwyn.',
+              'With the establishment of the monarchy came the beginning of the royal dynasty. The first Royal House was founded upon the principles laid down in Arabella\'s reign, and its continuance depended upon the female line and the succession of daughters to the Crown.',
+              'In time the royal household would form its own customs, duties, and ceremonies. The monarchy would become more than the personal authority of its first Queen. It would become an institution handed from one generation to the next, bearing with it the history and identity of the kingdom. Every Queen thereafter should inherit a Crown whose foundations Arabella had laid.'
+            ]
+          },
+          {
+            r: 'Book the Eighth · Of the Foundations Left Behind',
+            t: [
+              'Arabella\'s place in the history of Norwyn rests not alone upon the founding of the monarchy, but upon the political transformation that made the kingdom possible. She brought together three separate villages, withstood the authority of powerful men, established laws, and set up a sovereignty that should continue through the female line.',
+              'The kingdom that followed would grow beyond the circumstances of its founding. Its institutions, its commerce, its customs, and its society would change through the passing generations. Yet the central institution that Arabella had established should remain. Norwyn should continue to be governed by a Queen, and the Crown should continue through the female line.',
+              'Her reign was the beginning of a royal history which later ages would inherit, preserve, and shape in their own time.'
+            ]
+          },
+          {
+            r: 'The Legacy of Arabella',
+            t: [
+              'Every kingdom has its origin, but not every kingdom begins with the making of its own monarchy.',
+              'The history of Norwyn begins with three separate villages, and with a woman who beheld the possibility of something greater than the arrangements that already stood.',
+              'Arabella did not inherit the Crown. She established it. She did not receive a united kingdom. She brought one into being. And the monarchy that should endure for generations began with her.',
+              'ARABELLA, FIRST QUEEN OF NORWYN.',
+              'The beginning of the Crown. The beginning of the kingdom.'
+            ]
+          },
+          {
+            r: 'Colophon',
+            t: [
+              'Title: The Annals of Norwyn',
+              'Subject: The founding of Norwyn and the first reign',
+              'Period: The founding era, from the seventeen hundreds',
+              'Principal figure: Queen Arabella, First Queen of Norwyn',
+              'Kind: An historical chronicle, being a foundational record of Norwynian history.'
+            ]
+          }
         ]
       },
       {
@@ -2214,7 +2310,8 @@
     }
 
     function makeSides(b) {
-      var a = [{ kind: 'cover' }, { kind: 'inside' }, { kind: 'title' }, { kind: 'verso' }, { kind: 'text', r: 'Argument', t: b.intro }];
+      var introTitle = b.id === 'norwyn' ? 'The Proem' : 'Argument';
+      var a = [{ kind: 'cover' }, { kind: 'inside' }, { kind: 'title' }, { kind: 'verso' }, { kind: 'text', r: introTitle, t: b.intro }];
       b.pages.forEach(function (p) { a.push({ kind: 'text', r: p.r, t: p.t }); });
       if (a.length % 2) a.push({ kind: 'finis' });
       a.push({ kind: 'endR' }); a.push({ kind: 'back' });
@@ -2249,9 +2346,12 @@
           '<div class="rule"></div><p class="tp-meta">' + esc(b.meta) + '</p>' +
           '</div></div>';
       } else if (k === 'verso') {
+        var versoNote = b.id === 'norwyn'
+          ? 'Set down from the founding records of Norwyn, preserving the history of the Three Villages, Queen Arabella, and the establishment of the Royal House.'
+          : 'These are short passages set down for this reading room. The older works are retold in plain English, and nothing here is a full translation.';
         html = '<div class="pg"><div class="center-pg">' +
-          '<p class="note">These are short passages set down for this reading room. The older works are retold in plain English, and nothing here is a full translation.</p>' +
-          '<div class="stamp">EX LIBRIS<br>SCRIPTORIUM</div>' +
+          '<p class="note">' + esc(versoNote) + '</p>' +
+          '<div class="stamp">EX LIBRIS<br>NORWYN ARCHIVE</div>' +
           '</div></div>';
       } else if (k === 'finis') {
         html = '<div class="pg"><div class="center-pg"><div class="rule"></div><p class="finis">Finis</p><div class="rule"></div></div></div>';
