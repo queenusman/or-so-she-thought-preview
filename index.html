@@ -162,8 +162,7 @@
       background-attachment: fixed;
       color: var(--color-text);
       font-family: 'Newsreader', Georgia, serif;
-      font-size: 19px;
-      line-height: 1.75;
+      font-size: 18px;
       -webkit-font-smoothing: antialiased;
       transition: background-color 0.25s ease, color 0.25s ease;
     }
@@ -196,7 +195,7 @@
     .chapter-paragraph {
       text-align: justify;
       text-justify: inter-word;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.85rem;
     }
 
     .chapter-paragraph:first-of-type::first-letter {
@@ -226,7 +225,7 @@
     .scriptorium-btn {
       font-family: 'Inter', -apple-system, sans-serif;
       font-weight: 500;
-      letter-spacing: .14em;
+      letter-spacing: .12em;
       text-transform: uppercase;
       font-size: 14px;
       background: var(--btn-bg);
@@ -274,8 +273,8 @@
     .scriptorium-eyebrow {
       font-family: 'Inter', sans-serif;
       font-size: 14px;
-      font-weight: 700;
-      letter-spacing: .24em;
+      font-weight: 600;
+      letter-spacing: .22em;
       text-transform: uppercase;
       color: var(--gilt-dim);
       margin: 0 0 10px;
@@ -283,11 +282,11 @@
     .scriptorium-mast h3 {
       font-family: 'Cinzel', Georgia, serif;
       font-weight: 600;
-      font-size: clamp(26px, 4vw, 40px);
-      line-height: 1.12;
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.15;
       letter-spacing: .16em;
       text-transform: uppercase;
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       color: var(--ui);
     }
     .scriptorium-mast p.scriptorium-lead {
@@ -296,7 +295,7 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       font-size: clamp(18px, 2.2vw, 21px);
-      max-width: 58ch;
+      max-width: 56ch;
       line-height: 1.5;
     }
 
@@ -395,11 +394,11 @@
       transform: translateX(-50%);
       font-family: 'Inter', sans-serif;
       font-weight: 500;
-      font-size: max(12px, calc(var(--u) * 1.15));
-      letter-spacing: .1em;
+      font-size: 14px;
+      letter-spacing: .08em;
       text-transform: uppercase;
       white-space: nowrap;
-      padding: 2px 9px;
+      padding: 2px 10px;
       background: linear-gradient(var(--plate-bg-1), var(--plate-bg-2));
       color: var(--plate-text);
       border: 1px solid var(--plate-border);
@@ -410,9 +409,9 @@
     }
     .scriptorium-fine {
       max-width: 920px;
-      margin: 24px auto 0;
+      margin: 26px auto 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 17px;
+      font-size: 16px;
       color: var(--ui-dim);
       font-style: italic;
     }
@@ -473,7 +472,7 @@
     .scriptorium-rtitle {
       flex: 1;
       font-family: 'Cinzel', Georgia, serif;
-      letter-spacing: .14em;
+      letter-spacing: .12em;
       color: var(--ui-dim);
       font-size: 15px;
       text-align: center;
@@ -485,13 +484,13 @@
     .scriptorium-folio {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
-      letter-spacing: .14em;
+      letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--ui);
       min-width: 14ch;
       text-align: center;
       font-size: 14px;
-      padding: 8px 14px;
+      padding: 8px 16px;
       background: var(--btn-bg);
       border: 1px solid var(--btn-border);
       border-radius: 8px;
@@ -511,7 +510,7 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       color: var(--ui);
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.35;
       padding: 8px 18px;
       border-radius: 999px;
@@ -674,8 +673,8 @@
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       margin: 0;
-      letter-spacing: .2em;
-      font-size: .78em;
+      letter-spacing: .18em;
+      font-size: .8em;
       text-transform: uppercase;
     }
     .scriptorium-book .emb {
@@ -770,15 +769,15 @@
     .scriptorium-book .rh {
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: 13px;
-      letter-spacing: .16em;
+      font-size: .72em;
+      letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--rubric);
       display: flex;
       justify-content: flex-end;
-      padding-bottom: 8px;
+      padding-bottom: .75em;
       border-bottom: 1px solid #DCD6CF;
-      margin-bottom: 12px;
+      margin-bottom: 1em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -786,26 +785,27 @@
     .scriptorium-book .face.back .rh {
       justify-content: flex-start;
     }
+    /* Uniform font size across all book pages, continuing naturally onto next page */
     .scriptorium-book .tx {
       flex: 1;
       min-height: 0;
       overflow: hidden;
-      font-size: 16px;
-      line-height: 1.55;
+      font-size: 1em;
+      line-height: 1.52;
       text-align: justify;
       hyphens: auto;
       -webkit-hyphens: auto;
     }
     .scriptorium-book .tx p {
-      margin: 0 0 11px;
+      margin: 0 0 .68em;
     }
     .scriptorium-book .tx p.first::first-letter {
       float: left;
       font-family: 'Cinzel', Georgia, serif;
       color: var(--rubric);
-      font-size: 46px;
+      font-size: 2.85em;
       line-height: .82;
-      padding: 4px 10px 2px 0;
+      padding: .05em .14em 0 0;
       font-weight: 400;
     }
     .scriptorium-book .ft {
@@ -813,11 +813,11 @@
       justify-content: space-between;
       align-items: baseline;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 14px;
+      font-size: .82em;
       font-style: italic;
       color: var(--ink-muted);
-      padding-top: 8px;
-      min-height: 24px;
+      padding-top: .65em;
+      min-height: 1.8em;
     }
     .scriptorium-book .face.front .ft {
       flex-direction: row-reverse;
@@ -831,20 +831,20 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      gap: 12px;
+      gap: .8em;
     }
     .scriptorium-book .tp-small {
       font-family: 'Inter', sans-serif;
       font-weight: 700;
-      letter-spacing: .2em;
+      letter-spacing: .18em;
       text-transform: uppercase;
-      font-size: 13px;
+      font-size: .72em;
       color: var(--rubric);
       margin: 0;
     }
     .scriptorium-book .tp-title {
       font-family: 'Cinzel', Georgia, serif;
-      font-size: 30px;
+      font-size: 1.85em;
       line-height: 1.15;
       letter-spacing: .08em;
       margin: 0;
@@ -855,16 +855,16 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       margin: 0;
-      font-size: 19px;
+      font-size: 1.15em;
       color: var(--ink);
     }
     .scriptorium-book .tp-meta {
       margin: 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 15px;
+      font-size: .92em;
       color: var(--ink-muted);
       font-style: italic;
-      max-width: 30ch;
+      max-width: 26ch;
       line-height: 1.45;
     }
     .scriptorium-book .tp-emb {
@@ -888,7 +888,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      font-size: 11px;
+      font-size: 9px;
       line-height: 1;
       color: var(--rubric);
       transform: translate(-50%, -50%);
@@ -896,17 +896,17 @@
     .scriptorium-book .note {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
-      font-size: 17px;
-      line-height: 1.55;
+      font-size: 1em;
+      line-height: 1.5;
       margin: 0;
-      max-width: 30ch;
+      max-width: 26ch;
       text-align: center;
       color: var(--ink-muted);
     }
     .scriptorium-book .stamp {
-      margin-top: 10px;
-      width: 112px;
-      height: 112px;
+      margin-top: .8em;
+      width: 7.8em;
+      height: 7.8em;
       border-radius: 50%;
       border: 1.5px solid var(--rubric);
       display: grid;
@@ -915,7 +915,7 @@
       color: var(--rubric);
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: 12px;
+      font-size: .68em;
       letter-spacing: .16em;
       text-align: center;
       line-height: 1.5;
@@ -923,7 +923,7 @@
     }
     .scriptorium-book .finis {
       font-family: 'Cinzel', Georgia, serif;
-      font-size: 28px;
+      font-size: 1.8em;
       letter-spacing: .16em;
       text-transform: uppercase;
       margin: 0;
@@ -980,7 +980,7 @@
     }
     .scriptorium-book.sg .pg > * {
       width: 100%;
-      max-width: 36em;
+      max-width: 34em;
     }
     .scriptorium-book.sg .rh {
       justify-content: space-between;
@@ -1001,14 +1001,14 @@
 
     @media (max-width: 720px) {
       .scriptorium-rtitle { display: none; }
-      .scriptorium-btn { font-size: 13px; padding: 7px 11px; }
+      .scriptorium-btn { font-size: 14px; padding: 7px 12px; }
       .scriptorium-hint { font-size: 16px; }
       .scriptorium-mast p.scriptorium-lead { font-size: 17px; }
-      .scriptorium-fine { font-size: 16px; }
+      .scriptorium-fine { font-size: 15px; }
       .scriptorium-stage { height: clamp(460px, 70vh, 660px); }
     }
     @media (pointer: coarse) {
-      .scriptorium-btn { min-height: 40px; padding: 0 13px; }
+      .scriptorium-btn { min-height: 44px; padding: 0 14px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .scriptorium-book, .scriptorium-book .leaf, .scriptorium-subview { transition-duration: .01s !important; }
@@ -1026,7 +1026,7 @@
       
       <!-- Coronet Icon Emblem Only with Curved Edges -->
       <a href="javascript:void(0)" onclick="switchView('home')" class="group flex items-center focus:outline-none" aria-label="Return to Home">
-        <div class="w-10 h-10 rounded-lg border border-theme-border flex items-center justify-center bg-theme-panel group-hover:border-theme-accent transition-all shadow-sm shrink-0">
+        <div class="w-11 h-11 rounded-lg border border-theme-border flex items-center justify-center bg-theme-panel group-hover:border-theme-accent transition-all shadow-sm shrink-0">
           <svg class="w-5 h-5 text-theme-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 17L2 8l5 3.5 5-6.5 5 6.5 5-3.5-2 9H4z" />
             <path d="M4 19h16" stroke-width="1.25" />
@@ -1047,7 +1047,7 @@
           <span id="themeToggleText">Ivory Mode</span>
         </button>
 
-        <button onclick="toggleMobileNav()" class="p-2.5 border border-theme-border rounded-lg bg-theme-panel text-theme-text hover:text-theme-accent hover:border-theme-accent focus:outline-none cursor-pointer flex items-center gap-2 shadow-sm" aria-label="Open navigation menu">
+        <button onclick="toggleMobileNav()" class="px-3.5 py-2 border border-theme-border rounded-lg bg-theme-panel text-theme-text hover:text-theme-accent hover:border-theme-accent focus:outline-none cursor-pointer flex items-center gap-2 shadow-sm" aria-label="Open navigation menu">
           <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7h16M4 12h16M4 17h16" />
           </svg>
@@ -1056,10 +1056,10 @@
       </div>
     </div>
 
-    <!-- 3-Line Collapsible Navigation Drawer -->
+    <!-- 3-Line Collapsible Navigation Drawer (Aligned with Reader & World Architecture) -->
     <div id="mobileNav" class="hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-sm font-sans uppercase tracking-[0.16em]">
       <div>
-        <p class="text-sm tracking-[0.2em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
+        <p class="text-sm tracking-[0.18em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
           Orientation &amp; Front Matter
         </p>
         <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
@@ -1067,7 +1067,7 @@
         <button onclick="switchView('disclaimer'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Disclaimer</button>
       </div>
       <div>
-        <p class="text-sm tracking-[0.2em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
+        <p class="text-sm tracking-[0.18em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
           The Story &amp; World of Norwyn
         </p>
         <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read the Chapters</button>
@@ -1084,17 +1084,17 @@
     <section id="view-home" class="view-section view-visible max-w-4xl mx-auto px-6 py-20 md:py-28 text-center">
       <div class="inline-flex items-center gap-2 mb-6 text-theme-secondary">
         <span class="w-6 h-px bg-theme-secondary/70"></span>
-        <span class="font-sans text-sm uppercase tracking-[0.28em] font-bold">
+        <span class="font-sans text-sm uppercase tracking-[0.24em] font-semibold">
           A Royal Psychological Novel
         </span>
         <span class="w-6 h-px bg-theme-secondary/70"></span>
       </div>
       
-      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-normal text-theme-text tracking-[0.16em] uppercase leading-[1.12] mb-4">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-normal text-theme-text tracking-[0.16em] uppercase leading-[1.15] mb-4">
         Or So She<br>Thought
       </h1>
       
-      <p class="font-sans text-sm uppercase tracking-[0.26em] text-theme-secondary font-semibold mb-8">
+      <p class="font-sans text-sm uppercase tracking-[0.22em] text-theme-secondary font-semibold mb-8">
         By Queen Usman
       </p>
 
@@ -1106,7 +1106,7 @@
       </div>
       
       <!-- Dedication Line -->
-      <p class="text-2xl md:text-[26px] font-serif italic font-normal text-theme-text-muted max-w-2xl mx-auto leading-relaxed mb-16">
+      <p class="text-xl md:text-2xl font-serif italic font-normal text-theme-text-muted max-w-2xl mx-auto leading-relaxed mb-16">
         For the woman discovering that she can love where she comes from and still choose where she goes.
       </p>
 
@@ -1117,12 +1117,12 @@
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-bold">Section One</span>
+              <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold">Section One</span>
             </div>
             <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Before You Begin
             </h2>
-            <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed mb-6 font-light">
+            <p class="font-serif text-base text-theme-text-muted leading-relaxed mb-6 font-light">
               Begin with the author's welcome, the premise of Elisabeta's world, and the boundaries of the story before stepping into the chapters or the wider kingdom.
             </p>
             
@@ -1144,12 +1144,12 @@
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-bold">Section Two</span>
+              <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold">Section Two</span>
             </div>
             <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Story &amp; World of Norwyn
             </h2>
-            <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed mb-6 font-light">
+            <p class="font-serif text-base text-theme-text-muted leading-relaxed mb-6 font-light">
               Follow Elisabeta's story chapter by chapter, and whenever curiosity leads you, explore the world of Norwyn, its people, and the bound volumes in the Scriptorium archive.
             </p>
             
@@ -1178,10 +1178,10 @@
     <!-- 1. PREMISE -->
     <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
       </div>
 
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-[19px] text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
         <p>In the island kingdom of Norwyn, where royal traditions are woven into everyday life and the future of a kingdom rests upon the shoulders of its next queen, Princess Elisabeta has always known what is expected of her.</p>
         <p>She has been raised for a life of duty.</p>
         <p>At twenty-two, Elisabeta is the eldest daughter of Queen Ecaterina and heir to the throne. She has spent years learning the history of her kingdom, studying the art of governance and preparing for the responsibilities that will one day be hers. Even her future marriage has been arranged, with her engagement to Prince Alexandru of Valenne forming another part of the life everyone expects her to lead.</p>
@@ -1200,10 +1200,10 @@
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
         <div>
-          <h2 class="font-display text-3xl md:text-5xl text-theme-heading tracking-wide mb-3 font-semibold uppercase">DISCOVER NORWYN</h2>
+          <h2 class="font-display text-3xl md:text-4xl text-theme-heading tracking-wide mb-3 font-semibold uppercase">DISCOVER NORWYN</h2>
         </div>
 
-        <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-[19px] text-theme-text leading-relaxed text-justify">
+        <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-lg md:text-xl text-theme-text leading-relaxed text-justify">
           <p>Across the water, upon a great island with mountains, forests and winding rivers, lies the kingdom of Norwyn.</p>
           <p>It is a land with an ancient royal dynasty, customs passed down through generations and a way of life that belongs entirely to its people. Here, the Queen holds absolute authority, the Crown passes from mother to daughter, and the kingdom's capital rests inland, at the heart of its political and administrative life.</p>
           <p>But Norwyn is much more than its royal palace.</p>
@@ -1214,9 +1214,9 @@
           </p>
         </div>
 
-        <div class="space-y-8 font-serif text-[18px] text-theme-text leading-relaxed text-justify">
+        <div class="space-y-8 font-serif text-lg text-theme-text leading-relaxed text-justify">
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">The Island and Its Seasons</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Island and Its Seasons</span>
             <p>Norwyn is a large island, and there is much to discover across its varied landscape.</p>
             <p>In some parts, mountains rise above great stretches of forest. Elsewhere, farmland spreads across the countryside, rivers wind towards inland settlements, and long coastlines look out towards distant shores. Each region has its own character, shaped by its surroundings and the people who call it home.</p>
             <p>The land and its people have always been closely connected. Farmers tend the fields, forests provide timber, rivers carry goods towards inland centres, and coastal communities maintain the kingdom's connections with lands across the water.</p>
@@ -1226,7 +1226,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">The Crown</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Crown</span>
             <p>At the heart of Norwyn's history stands its royal dynasty.</p>
             <p>Norwyn is an absolute monarchy, and the Queen is the kingdom's sovereign, holding supreme governing authority. The Crown passes through the female line, with the eldest daughter serving as heir to the throne.</p>
             <p>Royal children inherit their mother's royal family name. When a Queen marries, her husband retains the title of Prince rather than becoming King, and the succession remains within the maternal line.</p>
@@ -1236,7 +1236,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">The People of Norwyn</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The People of Norwyn</span>
             <p>Every kingdom has its people, and Norwyn is no different.</p>
             <p>Its society formally recognises two classes: royals and non-royals. Royals belong to the ruling dynasty, while everyone outside it is considered non-royal.</p>
             <p>But life among the non-royal population is far from uniform.</p>
@@ -1247,7 +1247,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">The Capital and the Palace</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Capital and the Palace</span>
             <p>At the heart of the island, away from the coast, lies the Capital.</p>
             <p>It is the seat of government, the home of the royal family and the location of several of Norwyn's most important institutions. Its streets bring together official buildings, places of learning, commercial establishments and private residences.</p>
             <p>And within the Capital stands the Royal Palace.</p>
@@ -1259,7 +1259,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Culture and Customs</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Culture and Customs</span>
             <p>Norwyn has a culture all its own, shaped over generations by French, Spanish, wider European and Cambodian influences.</p>
             <p>These influences can be found in its architecture, clothing, food, craftsmanship, ceremonies and domestic life. Over time, they have come together to form something distinctly Norwynian.</p>
             <p>There is a particular appreciation for elegance in the kingdom, though not necessarily for extravagance. Fine materials, careful workmanship and thoughtful details are valued more than unnecessary display. A beautiful garment need not be covered in ornament, and a grand room need not be filled with everything it can hold.</p>
@@ -1270,7 +1270,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Education and the Royal Academy</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Education and the Royal Academy</span>
             <p>Learning has an important place in Norwyn, and the kingdom is home to several kinds of educational institutions serving students from different backgrounds.</p>
             <p>Among its principal institutions is the Royal Academy of Governance, situated in the Capital.</p>
             <p>The Academy provides education in governance and administration, preparing students for responsibilities within the kingdom's institutions. Its students include members of the royal family as well as those from outside the royal class.</p>
@@ -1281,7 +1281,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Work and Trade</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Work and Trade</span>
             <p>Much of Norwyn's life is built upon the work of its people.</p>
             <p>Fabric and flour are among the kingdom's major trades. Agricultural communities contribute to flour production, while textile workshops produce cloth for households, businesses and the royal residence.</p>
             <p>There is also timber production, joinery, carpentry, construction, gardening, tailoring, transport and administration.</p>
@@ -1292,7 +1292,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Food and Everyday Life</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Food and Everyday Life</span>
             <p>There are familiar comforts to be found in a Norwynian home.</p>
             <p>Rice, beans and potatoes are common foods in ordinary households, forming part of the meals that sustain families throughout the year.</p>
             <p>Prosperity can sometimes be seen in the smallest details. Buttered bread, for instance, is associated with greater comfort and wealth.</p>
@@ -1303,7 +1303,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Clothing and Dress</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Clothing and Dress</span>
             <p>Clothing in Norwyn tells its own little story.</p>
             <p>What people wear depends on their occupation, prosperity, the weather and the occasion. A working day calls for practical clothing, while a formal gathering brings different expectations.</p>
             <p>Royal and wealthy women wear carefully made gowns, often fashioned from silk and other fine fabrics. Plain cotton is worn beneath formal clothing, while wool provides warmth during the colder months.</p>
@@ -1314,7 +1314,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Technology and Transport</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Technology and Transport</span>
             <p>Norwyn may be a kingdom of old traditions, but it is by no means untouched by modern life.</p>
             <p>Electric lights brighten its buildings, motor cars travel along its roads, and telephones connect households and offices. Newspapers bring reports from across the island and beyond, while press photographers capture important public occasions.</p>
             <p>Cassette recorders and railways are also part of the kingdom's everyday world.</p>
@@ -1324,7 +1324,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">The Royal Family and Public Life</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Royal Family and Public Life</span>
             <p>The Crown is a familiar presence throughout Norwyn.</p>
             <p>The royal family attends official visits, charity occasions, receptions, state dinners, public openings and formal ceremonies. These events are carefully arranged, from the order of arrival to the seating plan and the photographs later released to the press.</p>
             <p>Such occasions allow the royal family to be seen across the kingdom and form part of its relationship with the public.</p>
@@ -1333,7 +1333,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Valenne</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Valenne</span>
             <p>Across the water from Norwyn lies another kingdom: Valenne.</p>
             <p>It has its own royal court, educational institutions and commercial interests, and its relationship with Norwyn extends across royal, diplomatic and commercial life.</p>
             <p>Its southern ports are particularly important to trade and employment. Agreements between the two kingdoms affect businesses, institutions and the many people whose livelihoods depend upon commerce across the water.</p>
@@ -1343,7 +1343,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block text-left">Institutions and Records</span>
+            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Institutions and Records</span>
             <p>Every kingdom has a history worth preserving, and Norwyn is no exception.</p>
             <p>Across the island, institutions maintain official records and administer different aspects of national life. Some preserve the history of the kingdom, while others oversee the practical arrangements that keep its industries and public affairs running.</p>
             <p>The Founders' Archive preserves historical records and is supported by the Founders' Trust, which also organises public occasions such as its annual gala.</p>
@@ -1355,23 +1355,23 @@
         </div>
 
         <div class="book-card p-8 md:p-12 rounded-sm space-y-4 text-center">
-          <span class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold block">BEYOND THE PALACE</span>
+          <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block">BEYOND THE PALACE</span>
           <p class="font-serif italic text-xl text-theme-heading">
             And so, beyond the royal residence, the kingdom carries on.
           </p>
-          <p class="font-serif text-[17px] text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
             Shops open in the morning. Trains travel between settlements. Farmers tend their fields, students attend their lessons, and families gather in their homes at the end of the day.
           </p>
-          <p class="font-serif text-[17px] text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
             There are relationships to nurture, businesses to maintain, responsibilities to fulfil and familiar routines that give each day its shape.
           </p>
-          <p class="font-serif text-[17px] text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
             Not every life revolves around the Crown. Not every story begins in a palace or ends within its walls. Norwyn belongs to all the people who call it home, each living within the traditions, circumstances and distinctions that shape their part of the kingdom.
           </p>
-          <p class="font-serif text-[17px] text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
             For the characters of <em>Or So She Thought</em>, Norwyn is much more than the place where events happen. It is the world that has shaped their understanding of family, position, responsibility and the lives they might lead.
           </p>
-          <p class="font-serif text-[17px] text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
             And while Elisabeta's story offers one way of discovering this kingdom, there is so much more beyond its pages. There are places yet to visit, histories yet to uncover and lives yet to meet.
           </p>
           <p class="font-serif italic text-theme-heading pt-4 text-2xl">
@@ -1400,7 +1400,7 @@
         </a>
       </div>
 
-      <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-[19px] text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
         <p>The kingdom of Norwyn is home to all sorts of people, each with a life, a history and a place in the world they call home. Some live within the royal palace, others make their way through the kingdom's institutions, businesses and bustling streets. Each has their own responsibilities, relationships and little corner of Norwyn to call their own.</p>
         <p class="font-serif italic text-theme-heading pt-2 text-center">
           Come and meet some of the people whose paths cross in <em>Or So She Thought</em>.
@@ -1411,117 +1411,117 @@
         <!-- Group 1: Royal Family & Court of Valenne -->
         <div id="char-royal-court" class="space-y-6 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Heiress</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Heiress</span>
               </div>
               <p class="text-sm text-theme-accent font-sans mb-3">Age: Twenty-two</p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 <strong>Position:</strong> Eldest daughter of Queen Ecaterina, heir to the throne of Norwyn and betrothed to Alexandru of Valenne.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Born into the royal family, Elisabeta has grown up within the walls of the Royal Palace, where her days have been shaped by lessons, expectations and preparations for the future awaiting her. Her education has included private instruction in Structural Ideology and formal studies at the Royal Academy of Governance, where she has learned the principles that guide the kingdom and its institutions.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 She is courteous and composed, with a thoughtful nature and an eye for the smallest details. She takes care with her words, likes to explain her reasoning and rarely leaves a question without considering it from several sides. She also has a curious habit of counting things, often noticing details that others might pass by.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Elisabeta enjoys reading and keeps a private notebook of her thoughts. She is familiar with the ideas she has been taught and takes a genuine interest in understanding the world around her, even when it does not always make sense as neatly as her lessons suggest.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 As the eldest daughter and heir, she has been raised to carry the future of Norwyn's royal family. She knows what is expected of her and has spent years learning how to meet those expectations. But there is still much to discover about the life waiting beyond the lessons, the palace walls and the future others have carefully imagined for her.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Sovereign</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Sovereign</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 <strong>Position:</strong> Reigning Queen of Norwyn and mother of Princesses Elisabeta and Ileana.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 For many years, Ecaterina has worn the Crown of Norwyn, carrying its responsibilities with the quiet assurance of someone who knows exactly what her position requires. She is a thoughtful and measured woman who rarely rushes to fill a silence. When she speaks, she chooses her words carefully and prefers to explain her decisions rather than simply expect others to follow them.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Her appearance is always beautifully arranged. She is particularly fond of dark plum gowns with delicate silver detailing, usually accompanied by a pair of elegant gloves. She pays attention to the smallest details, from the way a dress is fastened to the posture of someone standing before her. Very little escapes her notice.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Between the affairs of the kingdom and the running of the Royal Palace, Ecaterina has become accustomed to a life in which there is always something requiring her attention. She understands the traditions of the Crown, the duties of her household and the many little arrangements that keep royal life moving smoothly.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 But beyond the throne, she is also a mother to two daughters. To Elisabeta and Ileana, she is the woman who has watched them grow, guided their upbringing and shared their home. Yet the Crown is never far away. Even within the family, the Queen and the mother must often sit side by side.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Ileana</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">Second Daughter</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Second Daughter</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: The Queen's second daughter and Elisabeta's younger sister.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Ileana is quiet, precise and dry in her humour. She is attentive to practical details and often notices things that others overlook.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 She is familiar with the organisation of the royal household and regularly works with papers, records and household information.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Although she shares her sister's intelligence, she has a different temperament and occupies a different position within the family.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Safira</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Companion</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Companion</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Elisabeta's cat.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Safira is a familiar presence in the palace. She sleeps beneath tables, settles wherever there is room and follows the movements of the people around her.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 She has her own ideas about where she belongs, which do not always coincide with the household's arrangements.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Intended</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Intended</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Heir to the throne of Valenne and Elisabeta's betrothed.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Alexandru is tall and fair, with hair that tends to come loose after a walk across a courtyard in the rain.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 He is warm, socially confident and quick with a joke. He remembers small details about people, sometimes imperfectly, and is comfortable in formal company.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 He is fond of horses, particularly a grey horse named Marrow, who has an unfortunate refusal to cross water.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Alexandru and Elisabeta first met when she was eighteen. Their engagement forms part of the relationship between the royal families of Norwyn and Valenne.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Ambassador Duvall</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Diplomat</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Diplomat</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Valenne's ambassador to Norwyn.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 A spare, silver-haired man of quiet manner, Duvall represents Valenne at the Norwyn court and attends formal occasions involving the two kingdoms.
               </p>
             </div>
@@ -1531,123 +1531,123 @@
         <!-- Group 2: Royal Household, Academy & Fletcher Family -->
         <div id="char-household-academy" class="space-y-6 pt-2 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Mr. Corrow</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Tutor</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Tutor</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Elisabeta's private tutor.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Mr. Corrow teaches Elisabeta Structural Ideology and conducts her weekly lessons in the palace library.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 He is courteous, precise and fond of order. He values careful reasoning and takes particular satisfaction in a pupil who can defend an argument under questioning.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 He has taught Elisabeta for four years and is familiar with her academic abilities.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Mrs. Hale</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Dresser</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Dresser</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Royal dresser.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Mrs. Hale is responsible for fitting and maintaining the royal family's gowns. She has worked in the household for many years and knows the practical demands of dressing its members.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Direct and observant, she is particular about measurements, fabrics and the condition of every garment. She often works with pins in her mouth and keeps careful records of the gowns entrusted to her.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">The Steward</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">Administration</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">Administration</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Senior officer of the royal household.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 The steward oversees domestic arrangements and communicates official instructions and information.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Courteous and restrained, he is accustomed to the routines and formalities of palace administration.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">The Household Staff</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Workers</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Workers</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 The palace employs pages, maids, attendants, dressers, stewards, secretaries, guards, cooks, gardeners and other workers.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Their responsibilities differ, but together they maintain the daily life of the royal residence. An attendant accompanies Elisabeta whenever she leaves the palace.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Professor Calloway</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Lecturer</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Lecturer</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Lecturer at the Royal Academy of Governance.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Professor Calloway teaches the doctrine of Alignment and uses practical examples to explain the principles of Structural Ideology.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 He is formal and composed. He carries a folder to the lectern but rarely needs to open it during a lesson.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Lucian Fletcher</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">Joiner’s Son</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Joiner’s Son</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Student at the Royal Academy of Governance and son of Tobias Fletcher, a joiner.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Lucian is broad-shouldered and slightly stooped, with large hands and marked knuckles. He wears a grey jumper mended at both elbows, often keeps a pencil behind his ear and has a pale scar along his jaw.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 He is observant, direct and unhurried. He answers plainly, uses dry humour sparingly and is comfortable admitting when he does not know something.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 His family is connected to Norwyn's timber trade, and he has practical experience of wood and the work involved in preparing it.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 At the Academy, Lucian brings a familiarity with physical work and materials into discussions often concerned with principles and administration.
               </p>
             </div>
 
-            <div class="book-card p-8 rounded-sm space-y-2 md:col-span-2">
+            <div class="book-card p-8 rounded-sm space-y-2.5 md:col-span-2">
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Tobias Fletcher</h4>
-                <span class="font-sans text-sm tracking-[0.14em] uppercase text-theme-secondary font-bold">The Joiner</span>
+                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Joiner</span>
               </div>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
                 Position: Joiner and father of Lucian Fletcher.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 Tobias operates a timber yard beside the river. His workshop has undertaken work for the palace, including woodwork for the east wing.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 He is broad and grey-haired, with large hands marked by years of manual work. He speaks slowly and has a dry sense of humour.
               </p>
-              <p class="font-serif text-[17px] text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
                 His work is part of the skilled craftsmanship that supports Norwyn's buildings and businesses.
               </p>
             </div>
@@ -1656,8 +1656,8 @@
 
         <!-- Group 3: Key Relationships Summary Card -->
         <div id="char-relationships" class="book-card p-8 rounded-sm space-y-4 mt-8 scroll-mt-24">
-          <h3 class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-bold">Key Relationships</h3>
-          <ul class="list-disc pl-5 space-y-2 text-[17px] text-theme-text-muted font-serif">
+          <h3 class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold">Key Relationships</h3>
+          <ul class="list-disc pl-5 space-y-2 text-base text-theme-text-muted font-serif">
             <li>Queen Ecaterina is the mother of Elisabeta and Ileana.</li>
             <li>Elisabeta is the eldest daughter and heir to the throne of Norwyn.</li>
             <li>Ileana is Elisabeta's younger sister.</li>
@@ -1679,13 +1679,13 @@
     <!-- 1. A NOTE FROM THE AUTHOR -->
     <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
         <p class="font-serif text-theme-text-muted text-lg font-light italic">
           Welcome to Or So She Thought.
         </p>
       </div>
 
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-[19px] text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
         <p>
           <em>Or So She Thought</em> takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is entirely fictional. It has been shaped for this story and the people who inhabit it.
         </p>
@@ -1713,13 +1713,13 @@
     <!-- 2. DISCLAIMER -->
     <section id="view-disclaimer" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">Disclaimer</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">Disclaimer</h2>
         <p class="font-serif text-theme-text-muted text-lg font-light italic">
           Legal notice &amp; narrative boundaries.
         </p>
       </div>
 
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-[19px] text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
         <p>
           Or So She Thought is a work of fiction. Norwyn, its institutions, history, customs, places and characters are imagined. Any resemblance to actual people, places, events or institutions is coincidental.
         </p>
@@ -1799,7 +1799,7 @@
   <!-- ==================== FOOTER ==================== -->
   <footer id="siteFooter" style="background-color: var(--footer-bg); border-color: var(--color-border);" class="border-t py-10 transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="text-sm font-sans tracking-[0.18em] text-theme-text-muted uppercase font-medium">
+      <div class="text-sm font-sans tracking-[0.16em] text-theme-text-muted uppercase font-medium">
         &copy; 2026 Queen Usman. All rights reserved.
       </div>
     </div>
@@ -1813,7 +1813,7 @@
   <script>
     let activeEra = 'crowned';
     let activeChapterIndex = null;
-    let baseFontSize = 20;
+    let baseFontSize = 19;
     let isIvoryMode = false;
 
     function switchView(viewId) {
@@ -1868,7 +1868,7 @@
         const chapterButtonsHtml = eraChapters.map((ch, idx) => `
           <button type="button" onclick="selectChapter('${activeEra}', ${idx})" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full text-left p-6 border rounded-lg hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer group block">
             <div>
-              <span class="font-sans text-sm tracking-[0.18em] uppercase opacity-80 block mb-1.5">${ch.number}</span>
+              <span class="font-sans text-sm tracking-[0.16em] uppercase opacity-85 block mb-1.5">${ch.number}</span>
               <h3 class="font-display text-xl font-semibold">${ch.title}</h3>
             </div>
           </button>
@@ -1915,9 +1915,9 @@
         : `<span></span>`;
 
       mainContainer.innerHTML = `
-        <article id="readingBody" style="font-size: ${baseFontSize}px; line-height: ${baseFontSize * 1.75}px;" class="font-serif transition-all duration-200">
+        <article id="readingBody" style="font-size:${baseFontSize}px;line-height:${baseFontSize * 1.75}px" class="font-serif transition-all duration-200">
           <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-sm tracking-[0.24em] uppercase text-theme-secondary font-bold">${chapter.number}</p>
+            <p class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-semibold">${chapter.number}</p>
             <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide font-semibold">${chapter.title}</h2>
             <div class="flex items-center justify-center gap-3 mt-6">
               <span class="w-8 h-px bg-theme-border"></span>
@@ -1929,7 +1929,7 @@
             ${formattedParagraphs}
           </div>
 
-          <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-sm font-sans uppercase tracking-[0.16em]">
+          <div class="mt-20 pt-10 border-t border-theme-border flex flex-wrap items-center justify-between gap-4 text-sm font-sans uppercase tracking-[0.14em]">
             ${prevLinkHtml}
             <button type="button" onclick="openReaderIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
             ${nextLinkHtml}
@@ -2205,4 +2205,884 @@
             t: [
               'That the Individual Doth Not Exist in Isolation. Constantin begins with the relation between the individual and society. A man may possess thoughts, preferences, ambitions, and judgements of his own. Yet the circumstances in which those qualities grow are shaped by the arrangements that surround him. Family, schooling, occupation, social expectation, and public institutions all bear upon the conditions of individual life. The individual is therefore both a distinct person and a participant in a larger structure. Constantin holds this distinction to be weighty, because he believes that social questions cannot be answered by the examination of personal intention alone. An act may begin with one man, and yet its consequences may reach a household, an institution, or a wider community. In like manner, an expectation may be laid upon an individual by an arrangement whose history and purpose extend far beyond his own lifetime. To understand the individual, Constantin argues, one must also understand the relations in which he lives.',
               'Of Position and Responsibility. A central concern of the volume is the bond between station and responsibility. Constantin argues that stations within an ordered society are not mere descriptions of rank. They carry expectations touching conduct and obligation. A man entrusted with authority bears duties that differ from those of one without it. A public office carries obligations that reach beyond the private interests of its holder. A place in the household may bring duties owed to the other members of the household. The nature and extent of these duties depend upon the structure in which the station exists. Constantin therefore cautions against examining responsibility without examining station. He insists also that authority be considered together with obligation, for the possession of authority removes no duty from him who exercises it.',
-              'Of Continuity Between the Generations. Constantin regards the handing down of knowledge and duty as essential to the continuance of society. Each generation inherits arrangements established before it: institutions, customs, knowledge, and expectations. The next generation may
+              'Of Continuity Between the Generations. Constantin regards the handing down of knowledge and duty as essential to the continuance of society. Each generation inherits arrangements established before it: institutions, customs, knowledge, and expectations. The next generation may preserve, interpret, or amend them, but it does not meet society as an entirely new creation. This continuity lays duties that reach beyond immediate private circumstance. Constantin argues that education and the household play a particular part in this handing down, for they introduce individuals to the knowledge and practices by which established arrangements are kept. Yet the transmission of an arrangement does not of itself establish its worth. The purpose of what is handed down must remain intelligible.',
+              'Of Personal Judgement and Collective Obligation. One of the more intricate subjects in the volume is the relation between private judgement and social obligation. Constantin allows that individuals possess inclinations and judgements that may not always accord with established expectation, and he considers the consequences of that difference. His traditional position places great weight upon responsibility and upon the preservation of working arrangements. He therefore warns against treating every personal preference as sufficient reason to disregard an established obligation. At the same time, his examination of social organisation requires that duties and expectations be understood in relation to their purposes. This creates a weighty distinction between the existence of an obligation and the justification of the arrangement from which it arises. That distinction grows most pressing when an individual meets with conflicting responsibilities.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter I',
+            t: [
+              'Part the First: Of the Individual in Society. Chapter I. Of the Individual as a Social Element. The opening chapter sets the individual forth as a distinct participant within a larger social arrangement. Constantin examines the bond between personal existence and social participation, and considers how individuals come to be joined to households, communities, and institutions. He introduces the distinction between the individual as a person and the individual as an element within a structure, and argues that neither view suffices alone. The person cannot be reduced wholly to his social station, yet his circumstances cannot be understood without regard to the arrangements in which he takes part.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter II',
+            t: [
+              'Chapter II. Of the Formation of Social Identity. This chapter examines how individuals come to understand themselves in relation to the society about them. Constantin considers the influence of upbringing, household practice, education, circumstance, and inherited expectation, and argues that social identity is formed through repeated participation in relations and established practices. It considers how individuals learn what is expected of them, and how their understanding of their station grows over time. It examines also the distinction between an individual\'s actual duties and his understanding of those duties.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter III',
+            t: [
+              'Chapter III. Of Position and Social Expectation. The third chapter examines the relation between recognised social stations and the expectations attached to them. Constantin considers how expectations are established and kept, and why different stations carry different obligations. He examines the bond between public recognition, private responsibility, and social conduct, and argues that expectations are not always the same as the formal duties of a station: some arise through custom, others through institutional arrangement. To grasp the difference is essential to the examination of social organisation.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter IV',
+            t: [
+              'Part the Second: Of Responsibility and Social Organisation. Chapter IV. Of the Nature of Responsibility. Constantin examines responsibility as a principle joining station, conduct, and consequence. He considers the obligations that arise through participation in ordered arrangements, and the importance of understanding them before exercising authority or making decisions that touch others. The chapter distinguishes responsibility arising through formal appointment from that which grows through participation in a relation or institution, and argues that responsibility cannot be rightly weighed without regard to the circumstances in which it exists.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter V',
+            t: [
+              'Chapter V. Of the Household as a Social Structure. This chapter considers the household as one of the earliest and most enduring structures through which individuals take part in society. Constantin examines the ordering of household duties, the relations between its members, and its contribution to wider social continuity. He regards the household not merely as a private arrangement, but as an institution through which knowledge, conduct, and expectation are handed down, and explores how duties within it may shape an individual\'s later understanding of obligation and station.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter VI',
+            t: [
+              'Chapter VI. Of Education and Social Formation. Constantin examines education as a means through which knowledge and established principles are transmitted, and considers the relation between education, individual growth, and the continuance of society. Education, in this chapter, is not confined to the gathering of information. It includes the forming of judgement, the understanding of duties, and the capacity to take part in established institutions. The chapter examines also the duty of places of learning to preserve knowledge while allowing their students to understand the principles behind what they are taught.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter VII',
+            t: [
+              'Chapter VII. Of Authority and Obligation. This chapter examines the relation between authority and responsibility. Constantin considers why authority must be understood in relation to the obligations attached to it, and examines the duties of those who hold places of influence, and the consequences of exercising authority without due regard to its purpose. He argues that authority is an element of social organisation, but that its continued justification depends upon the responsibilities attending its exercise.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter VIII',
+            t: [
+              'Part the Third: Of Individual Conduct and Collective Stability. Chapter VIII. Of Personal Judgement and Social Obligation. Constantin examines the circumstances in which private judgement and established obligation may differ. He considers the duty of individuals to understand the consequences of their decisions, above all when those decisions touch other members of a structure. The chapter distinguishes personal preference, considered judgement, and the fulfilment of duty, and asks whether an individual\'s immediate interests can ever be considered apart from the obligations arising from his station.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter IX',
+            t: [
+              'Chapter IX. Of Desire and Duty. This chapter considers the relation between personal inclination and established obligation. Constantin allows that individuals may desire circumstances that differ from those belonging to their existing duties. He examines the consequences of such differences, and the importance of distinguishing what a man wishes to do from what his station requires of him. The chapter explores the strain that may arise when personal ambition, household responsibility, and wider social expectation do not correspond.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter X',
+            t: [
+              'Chapter X. Of Individual Conduct and Collective Stability. The tenth chapter considers how individual actions bear upon the wider structures in which men take part. Constantin argues that the stability of a society cannot be ascribed to its formal institutions alone, but depends also upon the conduct of those who act within them. He examines the relation between repeated individual behaviour and established social practice, and considers how seemingly private decisions may produce wider consequences when repeated across households, institutions, and communities.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter XI',
+            t: [
+              'Part the Fourth: Of Continuity and Alignment. Chapter XI. Of the Principle of Alignment. This chapter develops one of the central principles of Structural Ideology. Constantin defines alignment as the correspondence between station, function, responsibility, and the wider structure. He examines how a structure works when its elements fulfil their functions, and how difficulties arise when the relations between them grow unclear or contradictory. The chapter distinguishes alignment from simple assent or obedience. An individual may disagree with an established practice while still understanding the duties of his station. Equally, an institution may keep its outward appearance while its true function has become severed from its stated purpose. Alignment therefore requires examination, and not mere assumption.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter XII',
+            t: [
+              'Chapter XII. Of Generational Responsibility. Constantin considers the relation between successive generations and the continuance of social arrangements. He examines the handing down of knowledge, institutional duties, and established practices. The chapter argues that each generation inherits both the benefits and the obligations of arrangements established before it, and considers the duty of one generation to render inherited knowledge intelligible to the next.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter XIII',
+            t: [
+              'Chapter XIII. Of Continuity and the Preservation of Order. This chapter examines the worth of keeping working social arrangements in being. Constantin argues that continuity allows institutions and communities to retain accumulated knowledge and experience, and he cautions against changes that disregard the relations supporting an established structure. Yet he distinguishes continuity from the preservation of every existing practice: the continued existence of an arrangement does not remove the need to examine its purpose. The chapter considers the conditions under which amendment may preserve, rather than undermine, the wider structure.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter XIV',
+            t: [
+              'Part the Fifth: Of the Limits of Social Organisation. Chapter XIV. Of the Limits of Individual Interpretation. Constantin examines the difficulty of understanding individual behaviour through social station alone. He allows that men may hold like stations while differing in circumstance, experience, and judgement, and the chapter considers the limits of general explanations when applied to particular persons. It argues that the study of society requires attention both to the structure and to the people who take part in it.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter XV',
+            t: [
+              'Chapter XV. Of the Examination of Established Arrangements. This chapter considers how inherited arrangements ought to be examined. Constantin argues that age and familiarity are not sufficient proof of an arrangement\'s purpose or worth. He considers the importance of discovering the function an institution was established to perform, the practices through which it operates, and the consequences of keeping or altering those practices. The chapter provides a framework for examining established arrangements without treating either preservation or alteration as automatically justified.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Chapter XVI',
+            t: [
+              'Chapter XVI. Of the Responsibilities of an Organised Society. The concluding chapter returns to the relation between the individual and the wider social structure. Constantin examines the duties of individuals, households, and institutions in maintaining the arrangements through which society operates. He argues that continuity depends upon more than the existence of established institutions: it requires an understanding of their purposes, and of the duties of those who take part in them. The chapter ends by returning to the central proposition of the volume, that individual responsibility and collective stability cannot rightly be understood apart from one another.'
+            ]
+          },
+          {
+            r: 'Book the Sixth · Selected Passages',
+            t: [
+              'The propositions following set forth the principal ideas developed throughout the volume.',
+              'Upon the Nature of Society: A society is not merely a collection of individuals occupying the same territory. It is an arrangement of relationships through which individual lives become connected to a wider order.',
+              'Upon Individual Position: To understand the position of an individual, one must examine not only where that individual stands, but the relationships through which that position acquires its meaning.',
+              'Upon Responsibility: Responsibility is not established by the possession of a title alone. It is demonstrated through the fulfilment of the obligations that accompany it.',
+              'Upon Authority: Authority that recognises its privileges but neglects its obligations is an incomplete arrangement.',
+              'Upon Education: Knowledge transmitted without an understanding of its purpose may be repeated for generations without being properly understood.',
+              'Upon the Household: The household is among the first arrangements through which an individual encounters the relationship between personal conduct and collective responsibility.',
+              'Upon Continuity: Every generation receives an arrangement it did not establish. Its task is not necessarily to preserve every detail, but to understand what has been entrusted to it.',
+              'Upon Alignment: Alignment is the correspondence of position, function and responsibility within the structure to which each belongs.',
+              'Upon Change: An established arrangement deserves neither automatic preservation nor careless rejection. It deserves examination.',
+              'Upon the Individual and Society: The individual is not made insignificant by belonging to a greater structure, nor does the structure cease to matter because it is composed of individuals.'
+            ]
+          },
+          {
+            r: 'Book the Seventh · Reception in the Schools',
+            t: [
+              'Its Influence upon Norwynian Education. The Individual and Society became an influential text in the academic study of Structural Ideology. Its examination of household order, social station, authority, and responsibility rendered it of use to several branches of learning.',
+              'Students of governance met its arguments when examining the relation between public office and institutional duty. Students of social organisation studied its treatment of the household, of education, and of generational continuity. Its principle of alignment also became weighty in later scholarly discussion of the relation between individual stations and wider institutional arrangements.',
+              'At the Royal Academy of Governance, the volume forms a part of the intellectual tradition through which students examine the ordering of Norwynian society. It is studied not merely as a historical philosophical text, but as a work that established concepts still bearing upon the examination of governance and institutional life.',
+              'Of Later Interpretations. Constantin\'s influence did not prevent later scholars from questioning his conclusions. Some later readings lay greater stress upon the duties of institutions toward individuals. Others examine whether social expectations may continue even after the circumstances that first justified them have changed.',
+              'There are differences also in how scholars interpret alignment. Some understand it chiefly as a principle of social correspondence and continuance. Others insist upon the need to examine whether the structure itself fulfils its stated purpose.',
+              'These disputes have contributed to the continued scholarly relevance of Constantin\'s work. His writings remain influential, but their influence does not require that every proposition be accepted without examination.'
+            ]
+          },
+          {
+            r: 'Book the Eighth · Wherefore the Work Endures',
+            t: [
+              'The worth of the second volume lies in its endeavour to explain how the life of the individual and the ordering of society are bound together. It examines the familiar elements of society through a single philosophical frame: family, education, responsibility, authority, private judgement, and continuity. Its arguments are concerned above all with the duties belonging to established stations.',
+              'Yet the volume raises also questions that reach beyond the conclusions of its author.',
+              'What befalls an individual when his responsibilities conflict?',
+              'Can an institution keep its purpose while changing its practices?',
+              'How ought inherited expectations to be examined?',
+              'Doth the preservation of a social arrangement always serve the people who take part in it?',
+              'What comes of it when an individual\'s station and the function assigned to that station no longer correspond?',
+              'These questions explain why the work continues to be studied. It furnishes a framework for the examination of society, while leaving room for disagreement as to the conclusions that should follow.'
+            ]
+          },
+          {
+            r: 'Book the Ninth · In the World of Elisabeta',
+            t: [
+              'The Individual and Society belongs to the academic tradition met with by students of governance in Norwyn. Its principles bear most closely upon the education of those whose stations carry duties extending beyond their private lives.',
+              'For Elisabeta, the volume supplies a philosophical language for examining the relation between private judgement, inherited responsibility, and public station. Its treatment of authority, household order, and generational continuity reflects, moreover, questions that are present within the wider institutions of Norwyn.',
+              'The book does not furnish answers to every difficulty belonging to these subjects. It establishes instead a framework through which they may be examined.',
+              'Its most remarkable tension lies in the distinction between understanding a responsibility and deciding whether the expectations surrounding it are justified. A person may understand precisely why a duty exists, and yet remain uncertain what the fulfilling of it ought to require.',
+              'That question is not resolved by the existence of a philosophical system.',
+              'It remains a question for the individual.'
+            ]
+          },
+          {
+            r: 'Book the Tenth · From the Collection',
+            t: [
+              'Norwyn Structural Ideology: The Philosophical Works of Maximilian Constantin. A collection in several volumes, examining the relations through which an ordered society is established, maintained, and understood. It explores the foundations of social structure, the station of individuals, the working of institutions, the principle of alignment, and the relation between continuity and change. Each volume treats of a different dimension of Structural Ideology.',
+              'Volume the First: Foundations of Structural Ideology. The principles through which structures, relations, functions, and ordered arrangements may be understood.',
+              'Volume the Second: The Individual and Society. The station of individuals within social structures, including responsibility, education, authority, and continuity.',
+              'Volume the Third: Institutions and Governance. The ordering of institutions, the exercise of authority, and the duties belonging to public administration.',
+              'Volume the Fourth: Alignment and Social Organisation. The correspondence between the several elements of a structure, and the relations through which ordered systems function.',
+              'Volume the Fifth: Structural Change and Continuity. The development of established arrangements, the conditions surrounding change, and the preservation of institutional purpose.',
+              'MAXIMILIAN CONSTANTIN. Philosopher of Norwyn. Author of Norwyn Structural Ideology. An influential voice in the philosophical examination of the individual, of society, and of the structures through which the common life is ordered.'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'theodore', short: 'The Dispossessed Heart', cover: 'THE DISPOSSESSED HEART', spineTitle: 'THE DISPOSSESSED<br>HEART', fs: 1.18, tsz: 1.24,
+        author: 'ANSELM THEODORE', who: 'Anselm Theodore', plate: 'Theodore · Essays',
+        cv: '#3B3D4E', cv2: '#51546B', spine: '#444659', emb: 'spears', hue: 225,
+        sub: 'Of Attachment, of Selfhood, and of the Quiet Loss of the Individual',
+        meta: 'A Collection of Philosophical and Psychological Essays, by Anselm Theodore. Class: Psychological and Philosophical Literature · Chief Subject: The Formation of the Self · Further Subjects: Attachment, Identity, Desire, Memory, Relationships, and Adaptation · Form: A Collection of Reflective Essays · Tongue: The Norwynian Academic and Literary Tradition.',
+        intro: [
+          'Not everything a person loses is taken from him.',
+          'Some things are surrendered by degrees, through decisions that seem reasonable at the hour of their making. A preference is bent to suit another\'s comfort. An ambition is put by because the season seems unfit. An opinion is spoken less often because the explaining of it has grown wearisome. Nothing need happen to make the change at once known.',
+          'The bond endures. The household remains familiar. The person goes on fulfilling his duties and taking part in the ordinary life of the day. To the outward eye there may be little sign that aught has altered. Yet the individual may have grown accustomed to a narrower understanding of himself.',
+          'The Dispossessed Heart examines the relation between emotional attachment and the formation of personal identity. It considers how men are shaped by those whom they love, by those whose approval they seek, by those whose expectations they have learned to foresee, and by those whose presence becomes a part of the manner in which they understand themselves.',
+          'The work is concerned with the quieter consequences of attachment. It explores how people adapt their preferences, read their own desires through the looks and answers of others, fall into familiar emotional parts, and by degrees grow used to ways of living that did not wholly arise from within themselves.',
+          'It considers also the difficulty of perceiving such changes. A person does not always feel adaptation as a loss. He may take it for maturity, for patience, for compromise, for affection, or for the common duty of sharing a life with another. Sometimes that understanding is just. Bonds require consideration, and the presence of another must needs alter the circumstances in which a man\'s own choices are made. The difficulty arises when an adjustment has become so familiar that the person no longer remembers what stood before it.',
+          'The work does not suppose that the original self was of necessity more genuine, nor that every change is a surrender. It asks instead how individuals may distinguish between changes that become a part of their growth, and changes that by degrees render their own preferences, possibilities, and judgements hard to recognise.',
+          'At its heart lies the examination of a particular kind of loss: the loss of acquaintance with oneself.',
+          'The Central Question: What befalls the individual when the desire to belong comes by degrees to be mingled with the manner in which he understands who he is?'
+        ],
+        pages: [
+          {
+            r: 'Book the First · Of the Work',
+            t: [
+              'Not everything a person loses is taken from him.',
+              'Some things are surrendered by degrees, through decisions that seem reasonable at the hour of their making. A preference is bent to suit another\'s comfort. An ambition is put by because the season seems unfit. An opinion is spoken less often because the explaining of it has grown wearisome. Nothing need happen to make the change at once known.',
+              'The bond endures. The household remains familiar. The person goes on fulfilling his duties and taking part in the ordinary life of the day. To the outward eye there may be little sign that aught has altered. Yet the individual may have grown accustomed to a narrower understanding of himself.',
+              'The Dispossessed Heart examines the relation between emotional attachment and the formation of personal identity. It considers how men are shaped by those whom they love, by those whose approval they seek, by those whose expectations they have learned to foresee, and by those whose presence becomes a part of the manner in which they understand themselves.',
+              'The work is concerned with the quieter consequences of attachment. It explores how people adapt their preferences, read their own desires through the looks and answers of others, fall into familiar emotional parts, and by degrees grow used to ways of living that did not wholly arise from within themselves.',
+              'It considers also the difficulty of perceiving such changes. A person does not always feel adaptation as a loss. He may take it for maturity, for patience, for compromise, for affection, or for the common duty of sharing a life with another. Sometimes that understanding is just. Bonds require consideration, and the presence of another must needs alter the circumstances in which a man\'s own choices are made. The difficulty arises when an adjustment has become so familiar that the person no longer remembers what stood before it.',
+              'The work does not suppose that the original self was of necessity more genuine, nor that every change is a surrender. It asks instead how individuals may distinguish between changes that become a part of their growth, and changes that by degrees render their own preferences, possibilities, and judgements hard to recognise.',
+              'At its heart lies the examination of a particular kind of loss: the loss of acquaintance with oneself. The Central Question: What befalls the individual when the desire to belong comes by degrees to be mingled with the manner in which he understands who he is?'
+            ]
+          },
+          {
+            r: 'Book the Second · Of the Author',
+            t: [
+              'Anselm Theodore, Philosopher and Writer upon Human Experience. Anselm Theodore was a Norwynian essayist and philosophical observer, whose writings examined the formation of individual identity through the ordinary experience of men. His work was concerned with the less visible processes by which people come to an understanding of themselves.',
+              'Rather than treat identity as a thing established wholly by deliberate choice, Theodore examined the influence of repeated experience, of emotional attachment, of personal expectation, and of the relations in which individuals take part. He was drawn especially to the difference between what men consciously resolve and what they gradually become accustomed to doing.',
+              'His essays considered the ways in which individuals learn to foresee the answers of others, to modify their conduct, to interpret their own preferences, and to form expectations of the kind of person they are permitted or expected to be.',
+              'Theodore wrote to reflect, and not to instruct. He did not attempt to set forth a universal explanation for human behaviour. He examined familiar experiences closely, often asking what some apparently common decision might reveal of the growth of identity. He was concerned with the relation between private experience and the larger patterns through which individuals understand themselves.',
+              'Of His Intellectual Position. Theodore approached identity as a thing formed through experience, and not merely discovered through looking inward. He believed that individuals were shaped by the circumstances in which they lived, the relations they kept, and the conduct they repeated.',
+              'Yet he was careful not to treat the individual as the passive product of his surroundings. Men interpret their experiences, respond to them, form expectations, and make decisions; and these decisions in turn become part of the circumstances through which later experience is understood. Identity is thus both influenced by experience and a party to the shaping of experience to come.',
+              'His work set particular store by the difference between conscious adaptation and habitual adaptation. A man may deliberately change his conduct in answer to some circumstance. In time, however, the repeated conduct may become automatic, and what once required thought may come to feel the natural expression of his character. Theodore held this passage to be a weighty subject of psychological examination.',
+              'Of His Manner of Writing. Theodore\'s essays begin from recognisable human experiences. He cared less to present abstract definitions than to examine the small decisions, repeated habits, and private interpretations through which psychological patterns become visible. His writing often passed from a common observation to a more difficult question concerning its meaning. He avoided treating individuals as examples of fixed psychological kinds. He preferred to show how different explanations might stand together, and how the same conduct might spring from different experiences. His work thus holds a singular place between philosophical reflection and psychological observation.'
+            ]
+          },
+          {
+            r: 'Book the Third · Of the Intellectual Premise',
+            t: [
+              'Of the Formation of the Self. The self is often spoken of as a steadfast possession, a thing a man carries unchanged through all circumstances. Yet men do not know themselves apart from their lives. Their expectations are shaped by former experience. Their preferences grow through repeated choice. Their understanding of bonds is changed by attachment, disappointment, recognition, and memory. He who enters upon a given relation is not of necessity the same in experience as he who leaves it, remains within it, or continues to understand himself through it. Theodore\'s work begins from this observation. He examines identity as a developing arrangement of experiences, interpretations, expectations, and repeated responses.',
+              'A man meets with something. He interprets it. He responds to it. The response may be repeated. Repeated responses grow familiar. Familiarity bears upon expectation. Expectation begins to shape conduct to come. In time, a response that once belonged to a particular circumstance may become part of the individual\'s understanding of himself. This process does not always require deliberate intent. He who once held his peace to avoid an uncomfortable quarrel may at length grow accustomed to withholding disagreement. He who repeatedly puts off his own preferences may by degrees cease to count them of weight. The conduct becomes familiar before its consequences are fully perceived. Theodore is moved by this distance between the beginning of a habit and the identity that may in time grow up about it.',
+              'Of Experience and Repetition. An experience does not of necessity become a part of a man\'s identity merely because it befell him. Its influence depends in part upon how it is interpreted, remembered, and taken up into later conduct. A single disappointment may be remembered without greatly altering how one approaches others. Repeated disappointments may produce a different expectation: the individual may grow more guarded, less open in speech, more choosing in what he reveals. At length these responses may no longer be felt as answers to particular circumstances, but taken for personal characteristics. Theodore examines how repeated responses may by degrees acquire the appearance of permanence.',
+              'Of Adaptation and Automaticity. Adaptation is an ordinary part of human life. Individuals adjust their conduct to new surroundings, new bonds, and new duties, and such adjustments may be needful, beneficial, or merely practical. The trouble lies not in adaptation itself, but in what follows when adaptation continues after the circumstances that first required it have changed. A conduct once useful may become needless. A preference once put by may remain neglected. An expectation formed within one relation may go on to influence conduct in another. The individual may continue to answer a familiar situation though the original situation no longer exists. Theodore describes this as an essential part of the forming of the habitual self.',
+              'Of Attachment and Self-Recognition. Attachment adds another dimension to the formation of identity. Men do not merely form bonds with others; they form expectations of themselves within those bonds. They learn how they are received, which conduct is encouraged, which expressions are misunderstood, and which parts of their character seem to preserve closeness. These experiences may influence the manner in which individuals present themselves. A man may become more patient, more open, more guarded, or more accommodating. Some of these changes may be true growth. Others may reflect an effort to keep some form of recognition. Often both explanations are possible, and Theodore\'s concern lies in how individuals may distinguish between the two.'
+            ]
+          },
+          {
+            r: 'Book the Fourth · Of the Central Ideas',
+            t: [
+              'I. The Self as an Accumulation of Experience. Identity is shaped by the experiences an individual repeatedly meets with, and the meanings attached to them. Theodore examines how repeated patterns become familiar, and how familiarity may in time be mistaken for permanence. He questions whether men always recognise the experiences that have contributed to their present understanding of themselves.',
+              'II. The Adaptation of Desire. Men do not always cease to want a thing because the desire has vanished. Sometimes the circumstances surrounding a desire change. Sometimes the expressing of it becomes uncomfortable. Sometimes the individual grows accustomed to putting it off. Theodore examines how repeated postponement may alter the way a person understands what he wants, and he distinguishes between a desire that has truly changed and one that has become difficult to acknowledge.',
+              'III. Attachment and Recognition. The wish to be understood, accepted, or valued may influence the way individuals behave. Theodore considers how men may grow watchful of the answers of those whose regard matters to them, and how this watchfulness may in time influence what they express, conceal, or expect. He examines the difference between being recognised by another, and understanding oneself through another\'s recognition.',
+              'IV. The Development of Emotional Roles. Men often become known for particular parts within their bonds. One is held dependable. Another is expected to be patient. Another is known never to complain, or always to understand. These descriptions may at first reflect true qualities, yet repetition can turn them into expectations, and the individual may begin to act according to the part though his circumstances or feelings have changed. Theodore examines how emotional roles arise and how they bear upon personal identity.',
+              'V. The Disappearance of Alternatives. Every repeated choice influences the circumstances surrounding choices to come. Some possibilities become more familiar and near at hand; others receive less regard. He who repeatedly chooses one road may in time grow less acquainted with the roads he once considered. Theodore examines the relation between decision, repetition, and the gradual narrowing of perceived possibility, and is moved especially by the difference between choosing not to pursue a possibility and gradually forgetting that it once mattered.',
+              'VI. Memory and the Interpretation of the Past. Men do not remember their experiences as neutral records; they interpret the past from the standpoint of their present circumstances. A decision once thought needful may later seem needless. An experience once thought slight may acquire greater meaning. Theodore considers how memory contributes to personal identity, and how present understanding may alter the meaning assigned to earlier experiences.',
+              'VII. The Difference Between Change and Loss. Not every change is a loss of self. Men grow, reconsider their beliefs, acquire new preferences, and become different through experience. Theodore therefore avoids treating the earlier version of an individual as of course more genuine than the present one. He asks how individuals may distinguish between changes that are growth and adaptations that have by degrees made certain parts of their lives difficult to recognise.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay I',
+            t: [
+              'Part the First: Of the Formation of the Individual. Essay I. The Self Before It Is Recognised. An examination of how identity grows through experiences that may not at first seem of weight. The essay considers how repeated circumstances influence expectation, personal interpretation, and habitual conduct, and explores the possibility that men may become accustomed to certain ways of living long before they understand how those ways arose.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay II',
+            t: [
+              'Essay II. The Experiences That Remain. An examination of the influence of remembered and repeated experiences upon the forming of identity. The essay considers why certain experiences remain influential though their immediate circumstances have passed, and the difference between remembering an event and continuing to order one\'s expectations about it.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay III',
+            t: [
+              'Essay III. When a Response Becomes a Characteristic. An exploration of how repeated reactions may come to be reckoned part of a man\'s nature. He who repeatedly avoids dispute may in time describe himself as naturally agreeable. He who learns to foresee disappointment may grow accustomed to expecting less. The essay examines how conduct acquires, through repetition, the appearance of personal character.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay IV',
+            t: [
+              'Essay IV. The Familiarity of Being Someone. An examination of how familiarity influences self-perception. The essay considers why men may continue in established ways though those ways no longer reflect their present circumstances, and asks whether a familiar identity may grow difficult to question merely because it has been kept so long.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay V',
+            t: [
+              'Part the Second: Of the Education of Desire. Essay V. The Things We Stop Wanting. An examination of the difference between losing a desire and growing accustomed to living without it. The essay considers how repeated postponement, changing circumstance, and outward expectation may influence the growth of personal preference, and asks whether the absence of a desire is always proof that it has vanished.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay VI',
+            t: [
+              'Essay VI. The Quiet Adjustment of Expectation. An exploration of how individuals by degrees alter what they expect of themselves, of other people, and of their circumstances. The essay considers how expectations may change through repeated experience without any deliberate resolve to change them.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay VII',
+            t: [
+              'Essay VII. When a Preference Becomes a Personality. An examination of how repeated choices may in time be taken as evidence of settled character. The essay explores the difference between preferring a thing and becoming accustomed to choosing it, and how men may mistake the absence of an alternative for the absence of desire.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay VIII',
+            t: [
+              'Essay VIII. The Lives We No Longer Consider. An exploration of the possibilities that by degrees fade from an individual\'s ordinary imagination. The essay examines how decisions, duties, and repeated circumstances influence which alternatives men continue to regard as open to them.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay IX',
+            t: [
+              'Part the Third: Of the Dispossessed Heart. Essay IX. The Person You Become to Be Loved. An examination of the relation between attachment and self-presentation. The essay considers how individuals may grow attentive to the conduct that preserves closeness, and how that conduct may by degrees become familiar. It asks when accommodation becomes part of a man\'s understanding of himself.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay X',
+            t: [
+              'Essay X. The Things We Learn Not to Ask For. An exploration of how repeated experience influences what individuals feel at ease in requesting of others. The essay considers the difference between choosing not to ask for a thing and learning to expect that asking will bring an unwelcome answer.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay XI',
+            t: [
+              'Essay XI. The Difference Between Being Needed and Being Known. An examination of the distinction between the part an individual fulfils in another\'s life and the person he understands himself to be. The essay considers how usefulness, reliability, and emotional availability may influence the recognition individuals receive.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay XII',
+            t: [
+              'Essay XII. The Self That Exists in Someone Else\'s Presence. An exploration of how different bonds may bring forward different parts of an individual\'s character. The essay considers whether the person one becomes in another\'s presence is a departure from his identity, or another expression of it.'
+            ]
+          },
+          {
+            r: 'Book the Fifth · Essay XIII',
+            t: [
+              'Essay XIII. When Being Understood Becomes a Requirement. An examination of the desire to be recognised and rightly interpreted by others. The essay considers how the need for understanding may influence what men reveal, explain, or withhold.'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'gil', short: 'Gilgamesh', cover: 'GILGAMESH', spineTitle: 'GILGAMESH', fs: 1.72, tsz: 1.7,
+        author: 'THE SCRIBES OF URUK', who: 'Scribes of Mesopotamia', plate: 'Mesopotamia · c. 1200 BC',
+        cv: '#524642', cv2: '#6E5E59', spine: '#5D504C', emb: 'ziggurat', hue: 340,
+        sub: 'Told by the scribes of Mesopotamia', meta: 'Akkadian on clay tablets · c. 1200 BC, from older Sumerian poems',
+        intro: ['Written in cuneiform on clay tablets, this is among the oldest long stories in the world. The standard version has twelve tablets. Copies were found in the ruined library of King Ashurbanipal at Nineveh, and many lines are still missing. These pages follow its main road: a king, a friend, a death, and a failed search for life without end.'],
+        pages: [
+          { r: 'Tablet I', t: ['He who saw the deep, the foundation of the land, who knew all things and was wise in everything: Gilgamesh, who saw secret places and brought back a tale from before the flood. He came a long road, weary and at peace, and cut all his labors on a stone. He raised the wall of Uruk, whose outer face shines like copper and whose inner face has no equal.'] },
+          { r: 'Tablets I and II', t: ['Two parts god and one part man, Gilgamesh was strong and restless, and the people of Uruk cried out under his hand. The gods heard, and made him a match: Enkidu, born of clay and wilderness, who lived among the gazelles and drank at their waterhole. A woman from the temple taught him bread, beer and the ways of men.'] },
+          { r: 'Tablets II to V', t: ['The two met at a doorway and wrestled until the doorposts shook. Then Gilgamesh’s anger cooled, and they became friends. Together they went to the Cedar Forest and killed Humbaba, its guardian, and cut down the great cedars. It was a bold deed, and the gods did not forgive it.'] },
+          { r: 'Tablets VI to VIII', t: ['The goddess Ishtar offered to marry Gilgamesh, and he refused her. She sent the Bull of Heaven against the city, and the friends killed it. The gods decreed that one of them must die, and Enkidu fell sick. For days he lay dying, and Gilgamesh would not let him be buried until a worm fell from his nose.'] },
+          { r: 'Tablet X', t: ['Grief sent Gilgamesh into the wilderness in a lion’s skin, afraid of death. He passed the scorpion-people who guard the road of the sun, and reached the tavern-keeper Siduri at the edge of the sea. She told him: the life you are looking for you will not find. The gods gave death to people and kept life for themselves. Fill your belly, be glad, and look at the child who holds your hand.'] },
+          { r: 'Tablet XI', t: ['Beyond the waters of death lived Utnapishtim, who had survived the flood. The god Ea warned him through a reed wall: tear down your house and build a boat. He loaded the seed of every living thing. For six days and seven nights the storm raged, and the gods crouched like dogs. After it ended he sent out a dove, then a swallow, then a raven, which did not return.'] },
+          { r: 'Tablet XI', t: ['Utnapishtim set a test: stay awake for six days and seven nights. Gilgamesh fell asleep at once. He was shown a plant at the bottom of the sea that could make an old man young. He dived for it with stones tied to his feet, but while he bathed a snake carried it off. Gilgamesh wept. Back in Uruk, he showed the boatman the wall: look at its brickwork. Was it not laid by the seven sages?'] }
+        ]
+      }
+    ];
+
+    function mulberry(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+    function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+    var ac = null, noiseBuf = null, bus = null, soundOn = true;
+    function audio() {
+      if (!ac) {
+        try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; }
+        var sr = ac.sampleRate, len = sr * 2; noiseBuf = ac.createBuffer(1, len, sr);
+        var d = noiseBuf.getChannelData(0); for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+        var irLen = Math.floor(sr * (window.matchMedia('(pointer: coarse)').matches ? .8 : 1.5)), ir = ac.createBuffer(2, irLen, sr);
+        for (var c = 0; c < 2; c++) {
+          var ch = ir.getChannelData(c), lp = 0;
+          for (var j = 0; j < irLen; j++) { lp += (Math.random() * 2 - 1 - lp) * .35; ch[j] = lp * Math.pow(1 - j / irLen, 3.2); }
+        }
+        var conv = ac.createConvolver(); conv.buffer = ir;
+        var wet = ac.createGain(); wet.gain.value = .3;
+        var dry = ac.createGain(); dry.gain.value = 1;
+        var inp = ac.createGain();
+        inp.connect(dry); inp.connect(conv); conv.connect(wet);
+        dry.connect(ac.destination); wet.connect(ac.destination);
+        bus = inp;
+      }
+      if (ac.state === 'suspended') { try { ac.resume(); } catch (e) {} }
+      return ac;
+    }
+    function burst(o) {
+      if (!soundOn) return; var a = audio(); if (!a) return;
+      var t = a.currentTime + (o.at || 0), dur = o.dur || .3;
+      var src = a.createBufferSource(); src.buffer = noiseBuf;
+      var f = a.createBiquadFilter(); f.type = o.type || 'bandpass'; f.Q.value = o.q || .8;
+      f.frequency.setValueAtTime(o.f0 || 3000, t); f.frequency.exponentialRampToValueAtTime(o.f1 || o.f0 || 3000, t + dur);
+      var g = a.createGain(); g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(o.gain || .15, t + (o.attack || .01));
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      var pan = a.createStereoPanner ? a.createStereoPanner() : null;
+      src.connect(f); f.connect(g);
+      if (pan) { pan.pan.value = o.pan || 0; g.connect(pan); pan.connect(bus); } else g.connect(bus);
+      src.start(t, Math.random() * 1.5); src.stop(t + dur + .05);
+    }
+    function thump(freq, gain, dur, at) {
+      if (!soundOn) return; var a = audio(); if (!a) return; var t = a.currentTime + (at || 0);
+      var o = a.createOscillator(); o.type = 'sine'; o.frequency.setValueAtTime(freq, t); o.frequency.exponentialRampToValueAtTime(freq * .55, t + dur);
+      var g = a.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(gain, t + .01); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(bus); o.start(t); o.stop(t + dur + .05);
+    }
+    function rnd(a, b) { return a + Math.random() * (b - a); }
+    function pageSound(k) {
+      k = k || 1;
+      var side = rnd(-.25, .25);
+      burst({ type: 'bandpass', f0: 700, f1: 2400, q: .55, dur: .75 * k, gain: .075, attack: .25 * k, pan: side });
+      burst({ type: 'highpass', f0: 2600, f1: 5200, q: .4, dur: .6 * k, gain: .02, attack: .25 * k, pan: side });
+      var n = 8 + Math.floor(Math.random() * 5);
+      for (var i = 0; i < n; i++) {
+        var at = rnd(.04, .55) * k;
+        burst({ at: at, dur: rnd(.01, .03), f0: rnd(2400, 6500), q: rnd(1.5, 3.5), gain: rnd(.025, .075) * (1 - at * .5), attack: .002, pan: side + rnd(-.1, .1) });
+      }
+      burst({ at: .8 * k, type: 'lowpass', f0: 520, f1: 190, q: .5, dur: .16, gain: .13, attack: .012, pan: side });
+      burst({ at: .81 * k, dur: .05, f0: 3200, f1: 1500, q: 1.4, gain: .04, attack: .004, pan: side });
+      thump(68, .08, .14, .8 * k);
+    }
+
+    var FILL = ['#49474E', '#574B55', '#46414B', '#5E525C', '#3E3D43', '#524952', '#4D4249', '#5A5056', '#444048', '#564750', '#4A4652'];
+    var POS = [3, 6, 4, 6];
+    function band(top) { return '<i class="band" style="top:' + top + '%"></i>'; }
+    function mkFiller(rnd) {
+      var w = 2.2 + rnd() * 3.2, h = 14 + rnd() * 8;
+      var el = document.createElement('div'); el.className = 'scriptorium-spine'; el.setAttribute('aria-hidden', 'true');
+      el.style.setProperty('--w', w.toFixed(2)); el.style.setProperty('--h', h.toFixed(2)); el.style.setProperty('--c', FILL[Math.floor(rnd() * FILL.length)]);
+      var html = ''; if (rnd() < .7) html += band(8) + band(12); if (rnd() < .5) html += band(86); if (rnd() < .3) html += band(46);
+      el.innerHTML = html; return { el: el, w: w };
+    }
+    function mkReal(b) {
+      var slot = document.createElement('div'); slot.className = 'scriptorium-slot';
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'scriptorium-spine real'; btn.dataset.book = b.id;
+      btn.setAttribute('aria-label', 'Take ' + b.short + ' by ' + b.who + ' from the shelf');
+      btn.style.setProperty('--w', 9); btn.style.setProperty('--h', 23); btn.style.setProperty('--c', b.spine);
+      btn.innerHTML = band(6) + band(10) + band(88) + band(92) + '<span class="st" style="font-size:calc(var(--u) * ' + b.fs + ')">' + b.spineTitle + '</span>';
+      var plate = document.createElement('div'); plate.className = 'scriptorium-plate'; plate.textContent = b.plate;
+      slot.appendChild(btn); slot.appendChild(plate);
+      btn.addEventListener('click', function () { pullBook(b, slot, btn); });
+      return slot;
+    }
+    function buildCase() {
+      var caseEl = $('#scriptoriumCase'); if (!caseEl) return;
+      caseEl.innerHTML = '';
+      var hostW = caseEl.parentElement ? caseEl.parentElement.clientWidth : window.innerWidth;
+      var U = Math.max(5.2, Math.min(8.8, hostW * 0.0095));
+      caseEl.style.setProperty('--u', U + 'px');
+      BOOKS.forEach(function (b, si) {
+        var rnd = mulberry(101 + si * 37);
+        var shelf = document.createElement('div'); shelf.className = 'scriptorium-shelf';
+        var row = document.createElement('div'); row.className = 'scriptorium-row';
+        var board = document.createElement('div'); board.className = 'scriptorium-plank';
+        shelf.appendChild(row); shelf.appendChild(board); caseEl.appendChild(shelf);
+        var avail = Math.max(240, (row.clientWidth || (hostW - 60)) - 2 * 1.2 * U), used = 0;
+        for (var i = 0; i < POS[si]; i++) { var f = mkFiller(rnd); row.appendChild(f.el); used += f.w * U; }
+        row.appendChild(mkReal(b)); used += 9 * U;
+        var guard = 0;
+        while (used < avail - 2 * U && guard++ < 60) {
+          var g = mkFiller(rnd); if (used + g.w * U > avail) break;
+          row.appendChild(g.el); used += g.w * U;
+        }
+      });
+    }
+
+    var archiveReaderView = $('#archiveReaderView'), stage = $('#scriptoriumStage'), bookEl = $('#scriptoriumBook'), hintEl = $('#scriptoriumHint');
+    var cur = null, sides = [], leaves = [], s = 0, layout = 'spread', pw = 300, lastBtn = null, hintTimer = null;
+    var tipShown = false, lastW = 0, closing = false, busyUntil = 0;
+
+    function wantSingle() { return window.innerWidth < 720 || window.innerHeight < 460; }
+    function single() { return layout === 'single'; }
+    function fOf(x) { return single() ? x : Math.ceil(x / 2); }
+    function foliate(i) { var n = ((i - 2) >> 1) + 1; return 'Folio ' + n + (i % 2 === 0 ? 'r' : 'v'); }
+    function sideLabel(i) {
+      var last = sides.length - 1;
+      if (i === 0) return 'Cover'; if (i === 1) return 'Inside cover';
+      if (i === last) return 'Back cover'; if (i === last - 1) return 'Endpaper';
+      return foliate(i);
+    }
+    function firstWord(txt) { var m = String(txt).replace(/<[^>]+>/g, '').trim().split(/\s+/)[0] || ''; return m.replace(/[^A-Za-z’‘'-]/g, ''); }
+
+    function paperFox(el, seed) {
+      var r = mulberry(seed * 7919 + 13), n = 3 + Math.floor(r() * 4), h = '';
+      for (var i = 0; i < n; i++) {
+        var sz = 3 + r() * 9;
+        h += '<i class="fox" style="left:' + (r() * 92).toFixed(1) + '%;top:' + (r() * 92).toFixed(1) + '%;width:' + sz.toFixed(1) + '%;height:' + (sz * .72).toFixed(1) + '%;opacity:' + (.35 + r() * .5).toFixed(2) + '"></i>';
+      }
+      el.insertAdjacentHTML('afterbegin', h);
+    }
+
+    /* Split longer text sections across consecutive pages at a uniform font size */
+    function paginateSection(label, paragraphs, maxCharsPerPage, startDropCap) {
+      var chunks = [];
+      var current = [];
+      var charCount = 0;
+      for (var i = 0; i < paragraphs.length; i++) {
+        var p = paragraphs[i];
+        var pLen = p.length + 18;
+        if (current.length > 0 && (charCount + pLen > maxCharsPerPage)) {
+          chunks.push({
+            r: label + ' (cont.)',
+            t: current,
+            dropCap: false
+          });
+          current = [p];
+          charCount = pLen;
+        } else {
+          current.push(p);
+          charCount += pLen;
+        }
+      }
+      if (current.length > 0) {
+        chunks.push({
+          r: chunks.length === 0 ? label : label + ' (cont.)',
+          t: current,
+          dropCap: startDropCap && chunks.length === 0
+        });
+      }
+      return chunks;
+    }
+
+    function makeSides(b, isOneSheet) {
+      var maxChars = isOneSheet ? 980 : 1220;
+      var introTitle = b.id === 'norwyn' ? 'The Proem' : b.id === 'constantin' ? 'Proem' : b.id === 'theodore' ? 'Proem' : 'Argument';
+      var a = [{ kind: 'cover' }, { kind: 'inside' }, { kind: 'title' }, { kind: 'verso' }];
+      var introChunks = paginateSection(introTitle, b.intro, maxChars, true);
+      introChunks.forEach(function (ch) {
+        a.push({ kind: 'text', r: ch.r, t: ch.t, dropCap: ch.dropCap });
+      });
+      b.pages.forEach(function (p) {
+        var secChunks = paginateSection(p.r, p.t, maxChars, true);
+        secChunks.forEach(function (ch) {
+          a.push({ kind: 'text', r: ch.r, t: ch.t, dropCap: ch.dropCap });
+        });
+      });
+      if (!isOneSheet && a.length % 2) a.push({ kind: 'finis' });
+      a.push({ kind: 'endR' }); a.push({ kind: 'back' });
+      return a;
+    }
+
+    function makeFace(side, i, b, one) {
+      var d = document.createElement('div'), isBack = !one && i % 2 === 1, k = side.kind;
+      var cls = 'face ' + (isBack ? 'back' : 'front');
+      if (k === 'cover' || k === 'inside' || k === 'endR' || k === 'back') cls += ' board'; else cls += ' paper';
+      d.className = cls;
+      var html = '';
+      if (k === 'cover') {
+        html = '<div class="cv"><div class="cv-fr"><div class="cv-fr2">' +
+          '<div class="orn"></div>' +
+          '<h4 class="foil cv-t" style="font-size:calc(' + b.tsz + 'em * var(--k, 1))">' + esc(b.cover) + '</h4>' +
+          '<div class="emb">' + EMB[b.emb]() + '</div>' +
+          '<div class="orn"></div>' +
+          '<p class="foil cv-a">' + esc(b.author) + '</p>' +
+          '</div></div></div>';
+      } else if (k === 'inside' || k === 'endR') {
+        html = '<div class="marble-wrap"><div class="marble" style="--hue:' + b.hue + 'deg"></div></div>';
+      } else if (k === 'back') {
+        html = '<div class="blind"><div class="emb">' + EMB[b.emb]() + '</div></div>';
+      } else if (k === 'title') {
+        html = '<div class="pg"><div class="center-pg">' +
+          '<p class="tp-small">Here begins the book</p><div class="rule"></div>' +
+          '<h4 class="tp-title">' + esc(b.short) + '</h4>' +
+          '<div class="tp-emb">' + EMB[b.emb]() + '</div>' +
+          '<p class="tp-by">' + esc(b.who) + '</p>' +
+          '<p class="tp-meta">' + esc(b.sub) + '</p>' +
+          '<div class="rule"></div><p class="tp-meta">' + esc(b.meta) + '</p>' +
+          '</div></div>';
+      } else if (k === 'verso') {
+        var versoNote = b.id === 'norwyn'
+          ? 'Set down from the founding records of Norwyn, preserving the history of the Three Villages, Queen Arabella, and the establishment of the Royal House.'
+          : b.id === 'constantin'
+          ? 'Preserved in the scholarly holdings of the Royal Academy of Governance, examining station, responsibility, continuity, and alignment.'
+          : b.id === 'theodore'
+          ? 'Reflective essays from the Norwynian literary tradition on attachment, selfhood, desire, memory, and the quiet adaptation of the individual.'
+          : 'These are short passages set down for this reading room. The older works are retold in plain English, and nothing here is a full translation.';
+        html = '<div class="pg"><div class="center-pg">' +
+          '<p class="note">' + esc(versoNote) + '</p>' +
+          '<div class="stamp">EX LIBRIS<br>NORWYN ARCHIVE</div>' +
+          '</div></div>';
+      } else if (k === 'finis') {
+        html = '<div class="pg"><div class="center-pg"><div class="rule"></div><p class="finis">Finis</p><div class="rule"></div></div></div>';
+      } else if (k === 'text') {
+        var showDrop = side.dropCap !== false;
+        var paras = side.t.map(function (p, n) { return '<p' + (n === 0 && showDrop ? ' class="first"' : '') + '>' + esc(p) + '</p>'; }).join('');
+        var head = one ? '<span>' + esc(b.short.toUpperCase()) + '</span><span>' + esc(side.r) + '</span>' : '<span>' + (isBack ? esc(b.short.toUpperCase()) : esc(side.r)) + '</span>';
+        var foot;
+        if (one) foot = '<span class="fol">page ' + i + '</span><span></span>';
+        else {
+          var nxt = sides[i + 1] && sides[i + 1].kind === 'text' ? firstWord(sides[i + 1].t[0]) : '';
+          foot = '<span class="fol">' + foliate(i).toLowerCase() + '</span>' + (isBack && nxt ? '<span class="cw">' + esc(nxt) + '</span>' : '<span></span>');
+        }
+        html = '<div class="pg"><div class="rh">' + head + '</div><div class="tx" lang="en">' + paras + '</div><div class="ft">' + foot + '</div></div>';
+      }
+      d.innerHTML = html;
+      if (!one && d.classList.contains('paper')) paperFox(d, i + b.id.length * 31);
+      return d;
+    }
+
+    function buildSpread(b) {
+      sides = makeSides(b, false);
+      bookEl.innerHTML = '';
+      var shadow = document.createElement('div'); shadow.className = 'shadow'; bookEl.appendChild(shadow);
+      var sl = document.createElement('div'); sl.className = 'slab l'; var sr = document.createElement('div'); sr.className = 'slab r';
+      bookEl.appendChild(sl); bookEl.appendChild(sr);
+      bookEl.slabL = sl; bookEl.slabR = sr;
+      leaves = []; var N = sides.length / 2;
+      for (var k = 0; k < N; k++) {
+        var el = document.createElement('div'); el.className = 'leaf';
+        el.style.zIndex = N - k; el.style.transitionDuration = FLIP + 'ms';
+        el.appendChild(makeFace(sides[2 * k], 2 * k, b, false));
+        el.appendChild(makeFace(sides[2 * k + 1], 2 * k + 1, b, false));
+        bookEl.appendChild(el);
+        leaves.push({ el: el, flipped: false });
+      }
+    }
+    function buildSingle(b) {
+      var full = makeSides(b, true);
+      sides = [full[0]].concat(full.slice(2, full.length - 2));
+      bookEl.innerHTML = '';
+      leaves = [];
+      sides.forEach(function (sd, k) {
+        var el = document.createElement('div'); el.className = 'leaf'; el.style.zIndex = sides.length - k;
+        el.appendChild(makeFace(sd, k, b, true));
+        bookEl.appendChild(el);
+        leaves.push({ el: el, flipped: false });
+      });
+    }
+    function build(b) {
+      bookEl.className = 'scriptorium-book' + (single() ? ' sg' : '');
+      archiveReaderView.dataset.layout = layout;
+      bookEl.style.setProperty('--cv', b.cv); bookEl.style.setProperty('--cv2', b.cv2);
+      bookEl.style.setProperty('--fd', (single() ? FLIP_S : FLIP) + 'ms');
+      bookEl.style.setProperty('--k', single() ? '1.2' : '1');
+      bookEl.style.setProperty('--tx', '0px'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg');
+      if (single()) buildSingle(b); else buildSpread(b);
+    }
+
+    function applyState() {
+      var f = fOf(s), N = leaves.length;
+      leaves.forEach(function (lf, i) {
+        var el = lf.el, want = i < f; lf.flipped = want;
+        el.style.transition = 'none';
+        el.classList.remove('turning', 'under', 'over');
+        el.classList.toggle('flipped', want);
+        if (single()) el.style.display = (i >= s && i <= s + 2) ? '' : 'none';
+        else el.style.zIndex = want ? (i + 1) : (N - i);
+      });
+      void bookEl.offsetWidth;
+      leaves.forEach(function (lf) { lf.el.style.transition = ''; if (!single()) lf.el.style.transitionDuration = FLIP + 'ms'; });
+    }
+
+    function sizeBook() {
+      var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : 640);
+      var H = stage.clientHeight || 520;
+      if (single()) {
+        pw = W;
+        bookEl.style.width = W + 'px'; bookEl.style.height = H + 'px';
+        bookEl.style.fontSize = (Math.min(W, H * (W > H ? .85 : .62)) * .044).toFixed(2) + 'px';
+      } else {
+        var ratio = 7 / 5;
+        pw = Math.max(190, Math.floor(Math.min((W - 80) / 2, (H - 80) / ratio)));
+        bookEl.style.width = (2 * pw) + 'px'; bookEl.style.height = Math.round(pw * ratio) + 'px';
+        bookEl.style.fontSize = (pw * .043).toFixed(2) + 'px';
+        position(); thickness();
+      }
+    }
+
+    function position() {
+      if (!cur || single()) return;
+      var last = sides.length - 1, x = 0;
+      if (s === 0) x = -pw / 2; else if (s === last) x = pw / 2;
+      bookEl.style.setProperty('--tx', x + 'px');
+    }
+    function thickness() {
+      if (single() || !bookEl.slabR) return;
+      var n = leaves.length, f = Math.ceil(s / 2);
+      function sh(count, dir) {
+        var t = Math.min(9, Math.round(count * 1.3)), out = [];
+        for (var i = 0; i < t; i++) out.push((dir * (i + 1)) + 'px ' + (i + 1) + 'px 0 ' + (i % 2 ? '#EAE4DC' : '#D5CDC2'));
+        return out.join(',');
+      }
+      bookEl.slabR.style.boxShadow = sh(n - f, 1); bookEl.slabL.style.boxShadow = sh(f, -1);
+      bookEl.slabR.style.opacity = (f >= n) ? 0 : 1; bookEl.slabL.style.opacity = (f <= 0) ? 0 : 1;
+    }
+
+    function flip(i, want, delay) {
+      var lf = leaves[i], N = leaves.length; if (lf.flipped === want) return; lf.flipped = want;
+      lf.el.style.zIndex = N + 5;
+      setTimeout(function () { lf.el.classList.add('turning'); lf.el.classList.toggle('flipped', want); }, delay || 0);
+      setTimeout(function () { lf.el.classList.remove('turning'); lf.el.style.zIndex = want ? (i + 1) : (N - i); }, (delay || 0) + FLIP + 40);
+    }
+
+    function turnSingle(from, d) {
+      var D = FLIP_S, lf, beneath;
+      if (d > 0) {
+        lf = leaves[from]; beneath = leaves[from + 1];
+        if (leaves[from + 2]) leaves[from + 2].el.style.display = '';
+        lf.flipped = true;
+        lf.el.classList.add('turning', 'flipped'); beneath.classList.add('under');
+        setTimeout(function () {
+          lf.el.classList.remove('turning'); beneath.classList.remove('under'); lf.el.style.display = 'none';
+        }, D + 30);
+      } else {
+        lf = leaves[from - 1]; beneath = leaves[from];
+        lf.el.style.transition = 'none'; lf.el.style.display = '';
+        void lf.el.offsetWidth;
+        lf.el.style.transition = '';
+        lf.flipped = false;
+        lf.el.classList.add('turning'); beneath.classList.add('over');
+        lf.el.classList.remove('flipped');
+        setTimeout(function () {
+          lf.el.classList.remove('turning'); beneath.classList.remove('over');
+          if (leaves[from + 2]) leaves[from + 2].el.style.display = 'none';
+        }, D + 30);
+      }
+      return D + 60;
+    }
+
+    function ui() {
+      var last = sides.length - 1;
+      $('#scriptoriumFolio').textContent = single() ? (s === 0 ? 'Cover' : s === last ? 'The end' : 'Page ' + s + ' of ' + (last - 1)) : sideLabel(s);
+      $('#scriptoriumPrev').disabled = s === 0; $('#scriptoriumNext').disabled = s === last;
+    }
+
+    function go(ns, force) {
+      if (!cur) return 0;
+      var now = Date.now();
+      if (!force && (closing || now < busyUntil)) return 0;
+      var last = sides.length - 1;
+      ns = Math.max(0, Math.min(last, ns)); if (ns === s) return 0;
+      var prevS = s, prevF = fOf(s); s = ns; var f = fOf(s), total;
+      if (single()) {
+        if (Math.abs(s - prevS) === 1) total = turnSingle(prevS, s - prevS);
+        else { applyState(); total = 200; }
+      } else {
+        var stagger = Math.abs(f - prevF) > 1 ? (closing ? 110 : 95) : 0, c = 0, todo = [];
+        for (var i = 0; i < leaves.length; i++) { if (leaves[i].flipped !== (i < f)) todo.push(i); }
+        if (f < prevF) todo.reverse();
+        todo.forEach(function (i) { flip(i, i < f, stagger * c++); });
+        total = stagger * Math.max(0, c - 1) + FLIP + 50;
+        position(); thickness();
+      }
+      busyUntil = now + total;
+      ui(); hideHint();
+      if (single() || f !== prevF) pageSound(single() ? .68 : 1);
+      if (!tipShown && s > 0) {
+        tipShown = true;
+        var tip = single() ? (coarse ? 'Swipe sideways or tap the right side to turn the page.' : 'Click the page, or use the arrow keys.') : (coarse ? 'Tap the right page to turn forward, the left to go back.' : 'Click a page, or use the arrow keys.');
+        setTimeout(function () { if (!closing) showHint(tip, 4500); }, total + 200);
+      }
+      return total;
+    }
+    function next() {
+      if (single()) return go(s + 1);
+      var f = Math.min(leaves.length, Math.ceil(s / 2) + 1);
+      go(f === leaves.length ? 2 * f - 1 : 2 * f);
+    }
+    function prev() {
+      if (single()) return go(s - 1);
+      var f = Math.ceil(s / 2) - 1; if (f < 0) return; go(2 * f);
+    }
+
+    function showHint(t, ms) {
+      hintEl.textContent = t; hintEl.classList.add('on'); clearTimeout(hintTimer);
+      if (ms) hintTimer = setTimeout(function () { hintEl.classList.remove('on'); }, ms);
+    }
+    function hideHint() { clearTimeout(hintTimer); hintEl.classList.remove('on'); }
+
+    function pullBook(b, slot, btn) {
+      if (slot.classList.contains('pulling')) return;
+      lastBtn = btn; slot.classList.add('pulling'); audio();
+      setTimeout(function () {
+        openBook(b);
+        slot.classList.remove('pulling');
+        var shell = $('#scriptoriumShell');
+        if (shell) shell.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, reduce ? 20 : 320);
+    }
+    function openBook(b) {
+      closing = false; busyUntil = 0; cur = b; s = 0; tipShown = false;
+      layout = wantSingle() ? 'single' : 'spread';
+      document.body.dataset.archiveMode = 'reader';
+      build(b);
+      $('#scriptoriumRTitle').textContent = b.short + ' · ' + b.who;
+      $('#toShelfBtn').disabled = false;
+      var anim = !single();
+      if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '36px'); bookEl.style.setProperty('--rx', '12deg'); }
+      requestAnimationFrame(function () {
+        sizeBook(); applyState(); ui();
+        if (anim) {
+          void bookEl.offsetWidth;
+          bookEl.classList.remove('nt');
+          bookEl.style.setProperty('--ty', '0px');
+          bookEl.style.setProperty('--rx', '0deg');
+        }
+        showHint((coarse ? 'Tap' : 'Click') + ' the cover to open it.');
+      });
+    }
+    function closeBook() {
+      if (document.body.dataset.archiveMode !== 'reader' || closing) return;
+      closing = true; hideHint();
+      $('#scriptoriumPrev').disabled = true; $('#scriptoriumNext').disabled = true; $('#toShelfBtn').disabled = true;
+      var wait = 0;
+      if (s > 0) {
+        if (single()) {
+          var c0 = leaves[0].el;
+          c0.style.transition = 'none'; c0.style.display = ''; c0.classList.add('flipped');
+          void c0.offsetWidth;
+          c0.style.transition = ''; c0.classList.add('turning'); c0.classList.remove('flipped');
+          s = 0; pageSound(.68); wait = FLIP_S + 50;
+        } else wait = go(0, true);
+      }
+      setTimeout(toShelf, wait + (reduce ? 20 : 280));
+    }
+    function toShelf() {
+      closing = false; $('#toShelfBtn').disabled = false;
+      document.body.dataset.archiveMode = 'shelf';
+      hideHint();
+      buildCase();
+      if (lastBtn) setTimeout(function () { lastBtn.focus({ preventScroll: true }); }, 60);
+    }
+
+    function relayout() {
+      if (!cur || single() === wantSingle()) return false;
+      var spreadLen = makeSides(cur, wantSingle()).length;
+      if (single()) s = s === 0 ? 0 : s + 1;
+      else s = s <= 0 ? 0 : (s === 1 ? 1 : Math.min(s - 1, spreadLen - 4));
+      layout = wantSingle() ? 'single' : 'spread';
+      build(cur); sizeBook(); applyState(); ui();
+      return true;
+    }
+
+    var down = null;
+    stage.addEventListener('pointerdown', function (e) { down = { x: e.clientX, y: e.clientY }; });
+    stage.addEventListener('pointerup', function (e) {
+      if (!down) return; var dx = e.clientX - down.x, dy = e.clientY - down.y; down = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) { dx < 0 ? next() : prev(); return; }
+      if (Math.abs(dx) > 12 || Math.abs(dy) > 12) return;
+      var last = sides.length - 1;
+      if (s === 0) return next();
+      var r = stage.getBoundingClientRect(), goNext;
+      if (single()) goNext = e.clientX > r.left + r.width * .33;
+      else { var br = bookEl.getBoundingClientRect(); goNext = e.clientX > br.left + br.width / 2; }
+      if (goNext) { if (s !== last) next(); else prev(); } else prev();
+    });
+    stage.addEventListener('pointercancel', function () { down = null; });
+    $('#scriptoriumNext').addEventListener('click', next);
+    $('#scriptoriumPrev').addEventListener('click', prev);
+    $('#toShelfBtn').addEventListener('click', closeBook);
+
+    addEventListener('keydown', function (e) {
+      var viewArchive = $('#view-archive');
+      if (!viewArchive || viewArchive.classList.contains('view-hidden')) return;
+      if (document.body.dataset.archiveMode !== 'reader') return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+      else if (e.key === 'Home') { e.preventDefault(); go(0); }
+      else if (e.key === 'End') { e.preventDefault(); go(sides.length - 1); }
+      else if (e.key === 'Escape') { closeBook(); }
+    });
+
+    function syncSoundButtons() {
+      ['#bSoundShelf', '#bSoundReader'].forEach(function (sel) {
+        var btn = $(sel);
+        if (btn) btn.setAttribute('aria-pressed', String(soundOn));
+      });
+    }
+    ['#bSoundShelf', '#bSoundReader'].forEach(function (sel) {
+      var btn = $(sel);
+      if (btn) {
+        btn.addEventListener('click', function () {
+          soundOn = !soundOn;
+          syncSoundButtons();
+          if (soundOn) audio();
+        });
+      }
+    });
+
+    var rt = null;
+    addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () {
+        if (document.body.dataset.archiveMode === 'reader') { if (!relayout()) sizeBook(); }
+        else if (window.innerWidth !== lastW) { lastW = window.innerWidth; buildCase(); }
+      }, 140);
+    });
+
+    window.ScriptoriumArchive = {
+      showShelf: function () {
+        closing = false;
+        document.body.dataset.archiveMode = 'shelf';
+        hideHint();
+        requestAnimationFrame(function () {
+          lastW = window.innerWidth;
+          buildCase();
+        });
+      },
+      reflow: function () {
+        if (document.body.dataset.archiveMode === 'reader' && cur) {
+          sizeBook();
+        } else {
+          buildCase();
+        }
+      }
+    };
+
+    lastW = window.innerWidth;
+    buildCase();
+  })();
+  </script>
+</body>
+</html>
