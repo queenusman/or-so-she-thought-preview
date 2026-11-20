@@ -190,7 +190,6 @@
       opacity: 1;
     }
 
-    /* Main prose blocks stepped down by one notch for balanced readability */
     .prose-body {
       font-size: 1.125rem;
       line-height: 1.78;
@@ -204,7 +203,6 @@
       line-height: 1.7;
     }
 
-    /* Force Justified Layout and Drop Cap on Chapters */
     .chapter-paragraph {
       text-align: justify;
       text-justify: inter-word;
@@ -441,10 +439,11 @@
       flex-direction: column;
     }
 
+    /* Enlarged reading stage on both desktop and mobile */
     .scriptorium-stage {
       position: relative;
       width: 100%;
-      height: clamp(480px, 74vh, 740px);
+      height: clamp(540px, 80vh, 820px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -460,7 +459,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 16px 20px;
+      padding: 14px 18px;
       pointer-events: none;
     }
     .scriptorium-bar > * {
@@ -513,10 +512,10 @@
       position: absolute;
       z-index: 30;
       left: 50%;
-      bottom: 18px;
+      bottom: 16px;
       transform: translateX(-50%);
       width: max-content;
-      max-width: calc(100% - 40px);
+      max-width: calc(100% - 32px);
       text-align: center;
       margin: 0;
       pointer-events: none;
@@ -525,7 +524,7 @@
       color: var(--ui);
       font-size: 16px;
       line-height: 1.35;
-      padding: 8px 18px;
+      padding: 7px 16px;
       border-radius: 999px;
       background: var(--btn-bg);
       border: 1px solid var(--btn-border);
@@ -545,8 +544,8 @@
       position: relative;
       flex: none;
       perspective: 2800px;
-      font-size: 17px;
-      --fd: 0.95s;
+      font-size: 18px;
+      --fd: 0.9s;
       transform: translate(var(--tx, 0px), var(--ty, 0px)) rotateX(var(--rx, 0deg));
       transition: transform 0.75s cubic-bezier(.22, .8, .28, 1);
     }
@@ -584,7 +583,7 @@
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       transform: rotateY(0deg);
-      transition: transform var(--fd, 0.95s) cubic-bezier(.22, .8, .28, 1);
+      transition: transform var(--fd, 0.9s) cubic-bezier(.22, .8, .28, 1);
     }
     .scriptorium-book .leaf.flipped {
       transform: rotateY(-180deg);
@@ -614,7 +613,7 @@
       background: linear-gradient(to left, rgba(0, 0, 0, .48), rgba(0, 0, 0, 0) 75%);
     }
     .scriptorium-book .leaf.turning .face::after {
-      animation: shade var(--fd, 0.95s) ease-in-out;
+      animation: shade var(--fd, 0.9s) ease-in-out;
     }
     @keyframes shade {
       0% { opacity: 0; }
@@ -782,15 +781,15 @@
     .scriptorium-book .rh {
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: .56em;
-      letter-spacing: .22em;
+      font-size: .58em;
+      letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--rubric);
       display: flex;
       justify-content: flex-end;
-      padding-bottom: .8em;
+      padding-bottom: .75em;
       border-bottom: 1px solid #DCD6CF;
-      margin-bottom: 1.05em;
+      margin-bottom: .95em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -803,19 +802,19 @@
       min-height: 0;
       overflow: hidden;
       font-size: 1em;
-      line-height: 1.52;
+      line-height: 1.5;
       text-align: justify;
       hyphens: auto;
       -webkit-hyphens: auto;
     }
     .scriptorium-book .tx p {
-      margin: 0 0 .68em;
+      margin: 0 0 .64em;
     }
     .scriptorium-book .tx p.first::first-letter {
       float: left;
       font-family: 'Cinzel', Georgia, serif;
       color: var(--rubric);
-      font-size: 2.85em;
+      font-size: 2.8em;
       line-height: .82;
       padding: .05em .14em 0 0;
       font-weight: 400;
@@ -825,10 +824,10 @@
       justify-content: space-between;
       align-items: baseline;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: .74em;
+      font-size: .76em;
       font-style: italic;
       color: var(--ink-muted);
-      padding-top: .65em;
+      padding-top: .6em;
       min-height: 1.8em;
     }
     .scriptorium-book .face.front .ft {
@@ -848,16 +847,16 @@
     .scriptorium-book .tp-small {
       font-family: 'Inter', sans-serif;
       font-weight: 700;
-      letter-spacing: .26em;
+      letter-spacing: .24em;
       text-transform: uppercase;
-      font-size: .56em;
+      font-size: .58em;
       color: var(--rubric);
       margin: 0;
     }
     .scriptorium-book .tp-title {
       font-family: 'Cinzel', Georgia, serif;
-      font-size: 2em;
-      line-height: 1.12;
+      font-size: 1.9em;
+      line-height: 1.14;
       letter-spacing: .08em;
       margin: 0;
       color: var(--ink);
@@ -867,16 +866,16 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       margin: 0;
-      font-size: 1.1em;
+      font-size: 1.12em;
       color: var(--ink);
     }
     .scriptorium-book .tp-meta {
       margin: 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: .86em;
+      font-size: .88em;
       color: var(--ink-muted);
       font-style: italic;
-      max-width: 24ch;
+      max-width: 26ch;
       line-height: 1.45;
     }
     .scriptorium-book .tp-emb {
@@ -908,10 +907,10 @@
     .scriptorium-book .note {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
-      font-size: .96em;
-      line-height: 1.55;
+      font-size: .98em;
+      line-height: 1.52;
       margin: 0;
-      max-width: 25ch;
+      max-width: 26ch;
       text-align: center;
       color: var(--ink-muted);
     }
@@ -927,7 +926,7 @@
       color: var(--rubric);
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: .56em;
+      font-size: .58em;
       letter-spacing: .2em;
       text-align: center;
       line-height: 1.6;
@@ -942,12 +941,12 @@
       color: var(--rubric);
     }
 
-    /* Single-sheet phone mode inside reader subview */
+    /* Single-sheet phone/mobile mode inside reader subview */
     .scriptorium-book.sg {
       width: 100%;
       height: 100%;
       perspective: 1900px;
-      perspective-origin: 30% 50%;
+      perspective-origin: 35% 50%;
       transform: none;
       transition: none;
     }
@@ -960,7 +959,7 @@
       width: 100%;
       transform-origin: left center;
       transform: rotateY(0deg);
-      transition: transform var(--fd, .65s) cubic-bezier(.22, .8, .28, 1);
+      transition: transform var(--fd, .6s) cubic-bezier(.22, .8, .28, 1);
     }
     .scriptorium-book.sg .leaf.flipped {
       transform: rotateY(-102deg);
@@ -972,7 +971,7 @@
       inset: 0;
     }
     .scriptorium-book.sg .face.front::after {
-      background: linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, 0) 85%);
+      background: linear-gradient(to right, rgba(0, 0, 0, .42), rgba(0, 0, 0, 0) 85%);
     }
     .scriptorium-book.sg .face.board.front {
       inset: 0;
@@ -981,18 +980,18 @@
       box-shadow: inset 0 0 70px rgba(0, 0, 0, .4);
     }
     .scriptorium-book.sg .cv {
-      padding: 48px max(9%, 20px) 64px;
+      padding: 40px max(7%, 16px) 52px;
     }
     .scriptorium-book.sg .face.paper.front::before {
       background: linear-gradient(to right, rgba(62, 61, 67, .35) 0, rgba(62, 61, 67, .12) 3%, transparent 11%);
     }
     .scriptorium-book.sg .pg {
       align-items: center;
-      padding: 42px max(8%, 18px) 56px;
+      padding: 28px max(5%, 14px) 44px;
     }
     .scriptorium-book.sg .pg > * {
       width: 100%;
-      max-width: 34em;
+      max-width: 38em;
     }
     .scriptorium-book.sg .rh {
       justify-content: space-between;
@@ -1003,12 +1002,12 @@
     @keyframes lift { from { opacity: 1; } to { opacity: 0; } }
     @keyframes drop { from { opacity: 0; } to { opacity: 1; } }
     .scriptorium-book.sg .leaf.under .face.front::after {
-      background: rgba(0, 0, 0, .45);
-      animation: lift var(--fd, .65s) ease-out both;
+      background: rgba(0, 0, 0, .42);
+      animation: lift var(--fd, .6s) ease-out both;
     }
     .scriptorium-book.sg .leaf.over .face.front::after {
-      background: rgba(0, 0, 0, .45);
-      animation: drop var(--fd, .65s) ease-in both;
+      background: rgba(0, 0, 0, .42);
+      animation: drop var(--fd, .6s) ease-in both;
     }
 
     @media (max-width: 720px) {
@@ -1017,7 +1016,8 @@
       .scriptorium-hint { font-size: 15px; }
       .scriptorium-mast p.scriptorium-lead { font-size: 15px; }
       .scriptorium-fine { font-size: 14px; }
-      .scriptorium-stage { height: clamp(460px, 70vh, 660px); }
+      .scriptorium-stage { height: clamp(560px, 82vh, 780px); }
+      #view-archive.max-w-6xl { padding-left: 0.5rem; padding-right: 0.5rem; }
     }
     @media (pointer: coarse) {
       .scriptorium-btn { min-height: 40px; padding: 0 12px; }
@@ -1409,7 +1409,6 @@
         <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Characters</h2>
       </div>
 
-      <!-- Quick-Jump Anchor Bar -->
       <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
         <a href="#char-royal-court" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
           Royal Family &amp; Court
@@ -1430,7 +1429,6 @@
       </div>
 
       <div class="space-y-12">
-        <!-- Group 1: Royal Family & Court of Valenne -->
         <div id="char-royal-court" class="space-y-6 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2.5">
@@ -1550,7 +1548,6 @@
           </div>
         </div>
 
-        <!-- Group 2: Royal Household, Academy & Fletcher Family -->
         <div id="char-household-academy" class="space-y-6 pt-2 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2.5">
@@ -1676,7 +1673,6 @@
           </div>
         </div>
 
-        <!-- Group 3: Key Relationships Summary Card -->
         <div id="char-relationships" class="book-card p-8 rounded-sm space-y-4 mt-8 scroll-mt-24">
           <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Key Relationships</h3>
           <ul class="list-disc pl-5 space-y-2 character-bio text-theme-text-muted font-serif">
@@ -2043,7 +2039,7 @@
     var $ = function (q, el) { return (el || document).querySelector(q); };
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var coarse = window.matchMedia('(pointer: coarse)').matches;
-    var FLIP = reduce ? 10 : 950, FLIP_S = reduce ? 10 : 650;
+    var FLIP = reduce ? 10 : 900, FLIP_S = reduce ? 10 : 600;
 
     function svgWrap(inner) { return '<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>'; }
     var EMB = {
@@ -2065,110 +2061,86 @@
         id: 'norwyn', short: 'The Annals of Norwyn', cover: 'THE ANNALS OF NORWYN', spineTitle: 'THE ANNALS<br>OF NORWYN', fs: 1.25, tsz: 1.32,
         author: 'THE ROYAL CHRONICLERS', who: 'The Royal Chroniclers', plate: 'Founding Era · 1700s',
         cv: '#5A3846', cv2: '#7A4E60', spine: '#633F4E', emb: 'crown', hue: 315,
-        sub: 'Being a True Account of the Founding of the Kingdom and the First Reign',
-        meta: 'Wherein are set down the Three Villages, the Woman who bound them into one, and the Establishment of the first Royal House of that Realm. Chronicled from the founding era, in the seventeen hundreds.',
+        sub: 'The Founding of the Kingdom and the First Reign',
+        meta: 'An Account of the Three Villages, of the Woman who United Them, and of the Establishment of the First Royal Dynasty of Norwyn. Subject: The founding of Norwyn and the first reign · Period: The founding era, beginning in the seventeen hundreds · Principal figure: Queen Arabella, First Queen of Norwyn · Class: An historical chronicle · Place in Norwynian history: A foundational historical record.',
         intro: [
-          'Before Norwyn was a kingdom, it was but a land of three villages. Each held its own people, its own rulers, its own concerns, and its own ancient customs. They shared one island, yet were not one realm. No Crown stood over them, no common authority held sway among them, and no single government bore charge of all three.',
-          'In that season there arose a woman of one of those villages, Arabella by name, who is reckoned among the most weighty figures in all the history of Norwyn. By her wit, her sound judgement, and her unyielding purpose, she called into question the old order of authority, and set herself to raise what had never before been seen: a united kingdom, governed by one body of law.',
-          'Her labours drew the three villages together, and upon them the foundations of Norwyn were laid. She became its first Queen.',
-          'The throne she established was to pass by the female line, descending from mother to daughter, the eldest daughter being acknowledged as heir. The story of the Norwynian Crown begins, therefore, not with an inherited throne, but with the woman who made it.'
+          'Every kingdom hath an origin, yet it is given to few to be traced to a single beginning. The origin of Norwyn may be so traced. It begins with three separate villages, and with one woman who beheld in them the possibility of something greater than the arrangements that then stood.',
+          'This volume setteth down the account of that beginning. It treats of the land as it was before there was any kingdom upon it; of the woman Arabella, who rose from among the people of one of those villages; of the authority she challenged and the laws she established; of the union by which three communities became one; and of the Crown which she raised, and which was to pass from mother to daughter through the generations that followed.',
+          'The reader is asked to hold fast to one truth above the rest, for the whole history turns upon it: the Crown of Norwyn was not inherited. It was made. Arabella did not come to a throne that already stood. She brought the throne into being, and with it the kingdom that it ruled.',
+          'The account that follows is set down in the manner of a chronicle. It declares what is known of the founding, and it does not seek to fill with invention the places where the record is silent. Where the founding era is described, the description is of what was done and what was established; the reader will find no speeches put into the mouths of the dead, nor any names, battles, or dates supplied beyond those that the record itself affords.',
+          'The volume is divided into six books, with appendices and a closing statement of the Legacy of Arabella. The first book treateth of the land before the kingdom. The second, of Arabella and the question of authority. The third, of the laws and the union. The fourth, of the founding and the first Crown. The fifth, of the Law of the Female Line and the first Royal House. The sixth, of the foundations that she left behind.'
         ],
         pages: [
           {
-            r: 'Book the First · Of the Land Before the Kingdom',
+            r: 'Introduction · Of the Three Villages',
             t: [
-              'In the elder days, three villages stood upon the island. Though they dwelt upon one ground, each kept its own leaders and its own local ordinances. Their interests were not ever the same, and a decree that bound one village laid no necessary claim upon the people of another.',
-              'Where no common authority existed, matters of shared concern were hard to settle. Divided leadership, rival interests, and quarrels over who should bear responsibility made concord a thing not easily kept.',
-              'Each village held fast to its own manner of doing. Yet the notion of a more ordered and united government remained unrealised, a thing dimly possible but not yet brought to pass.',
-              'It was into this divided country that Arabella was born.'
+              'Of the Three Villages, and of the Woman who United Them. Long before Norwyn became a kingdom, the land was divided among three separate villages. Each possessed its own community, its own leadership, its own interests, and its own established ways of life. They shared one island, yet they did not belong to a single kingdom.',
+              'There was no united Crown. There was no common royal authority. There was no single government that bore responsibility for all three communities.',
+              'It was in this season that Arabella, a woman of one of the three villages, rose to be among the most weighty figures in all the history of Norwyn.',
+              'By her intelligence, her political judgement, and her determination, Arabella called into question the arrangements of authority that then existed, and set about creating what had not existed before: a united kingdom, governed by a common system of laws. Her labours brought the three villages together, and laid the foundations of Norwyn. She became its first Queen.',
+              'The monarchy that she founded was to follow a female line of succession. The Crown should pass from mother to daughter, and the eldest daughter should be acknowledged as heir. The history of the Norwynian monarchy therefore beginneth not with an inherited throne, but with the woman who established it.'
             ]
           },
           {
-            r: 'Book the Second · Of Arabella, the Woman of the Village',
+            r: 'Book the First · Chapter I · The Three Villages',
             t: [
-              'Arabella began not her life as a Queen. She was a daughter of one of the three villages, and lived within that very society whose arrangements she was in time to challenge and to remake.',
-              'She was marked out by a keen and watchful mind. She observed how decisions were made, how authority was apportioned, and what came of suffering power to rest in the hands of men whose interests did not always accord with those of the wider people.',
-              'Arabella perceived that many evils could not be cured by merely setting one man in the place of another. The arrangements that suffered such evils to endure must themselves be searched out and examined.',
-              'She would by no means bow to the rule of self-seeking men who strove to preserve their influence at the cost of others. Her opposition was no mere disagreement. She questioned the very principles upon which their authority stood, and denied that leadership belonged by nature to those who had long held it.',
-              'Her ambition reached beyond the winning of a place for herself. She sought to establish an order in which authority should be fixed by laws and duties, and not left wholly to the humours of powerful individuals.'
+              'Of the Land Before the Kingdom. Chapter I. The Island and Its Three Villages. Before the establishment of Norwyn, the island was home to three separate villages.',
+              'Although they occupied the same land, the communities kept their own leadership and their own local arrangements. Their interests were not always identical, and decisions that affected one village did not of necessity govern the lives of the people in another.',
+              'It is a thing worth the reader\'s notice that sharing a land is not the same as sharing a government. The three villages were neighbours upon one island, yet each was a community apart. No Crown stood over them. No common royal authority gave them a single head. Neither was there any one government that answered for all three.',
+              'The record speaks of three villages and no more, and of their separateness and no less. It is upon that separateness that the whole of the founding rests; for it was out of three communities that did not yet belong together that the kingdom of Norwyn was afterward formed.',
+              'It was into this divided landscape that Arabella was born.'
             ]
           },
           {
-            r: 'Book the Third · Of the Contest of Authority',
+            r: 'Book the First · Chapter II · Common Authority',
             t: [
-              'The struggle that went before the founding of Norwyn was, at its root, a struggle over authority.',
-              'The old arrangements had suffered men of influence to wield great power within their several communities. Yet their interests did not always answer to the needs of those they governed.',
-              'Arabella marked the weakness of a system wherein those who held authority might use it to guard their own estate, with small regard for the wider consequence. She challenged these arrangements, and stood against those who resisted the changes she would bring.',
-              'Her cause demanded more than conviction. She must learn the interests of the several communities, discover where they were at variance, and find a ground whereon a common political order might be built.',
-              'The opposition she met made the labour heavier. Those who prospered under the old ways had little reason to welcome a system that would set their authority within a new frame of law.',
-              'Nevertheless Arabella pressed on in the forming of a united order.'
+              'Chapter II. Of the Want of a Common Authority. The absence of a united authority meant that matters concerning shared interests could become difficult to resolve.',
+              'Differences in leadership, competing interests, and disagreements over responsibility created circumstances in which cooperation was not always easy to maintain. Where each village looked to its own leaders, and no leader held authority over all, there was no ready means by which a question touching the three communities together might be settled for them all.',
+              'Yet the record doth not describe the old arrangements as wholly without order. Each village had its own established way of doing things. What was wanting was not the existence of order within each community, but a common political order that should join the three; and that want was the condition out of which the founding arose.',
+              'The possibility of a more organised and united political arrangement existed, but it had not been realised. The three villages stood, as it were, at the threshold of a greater thing which no one had yet brought to pass.',
+              'The next book relateth how a woman of one of those villages came to look upon that threshold, and resolved to cross it.'
             ]
           },
           {
-            r: 'Book the Fourth · Of the Laws of Arabella',
+            r: 'Book the Second · Chapter III · Arabella',
             t: [
-              'Arabella understood that a kingdom cannot be upheld by the authority of its founder alone.',
-              'If the three villages were to become one realm, they must have laws to govern their common affairs, and to fix duties beyond the reach of any local ruler.',
-              'She set great store by law, by good order, and by the right exercise of authority. Rather than lean wholly upon private compacts or the favour of powerful men, she sought arrangements that should outlast the very hour of their making.',
-              'The laws that arose from her labours became the earliest foundations of Norwyn\'s legal and political tradition. They marked a turning away from scattered local rule toward a common government.',
-              'The establishment of these laws was among the weightiest steps by which three villages were made a kingdom.'
+              'Of Arabella, and of the Question of Authority. Chapter III. Arabella, the Woman from the Village. Arabella did not begin her life as a Queen. She was a member of one of the three villages, living within the very society whose arrangements she would in time challenge and transform.',
+              'She distinguished herself by a sharp and observant mind. She was attentive to the manner in which decisions were made, to the distribution of authority, and to the consequences of suffering power to remain in the hands of individuals whose interests did not always correspond with those of the wider community.',
+              'Arabella understood that many difficulties could not be resolved simply by replacing one person with another. The arrangements that permitted those difficulties to continue had to be examined as well. This was the root of her whole design: she looked not only upon the men who held authority, but upon the system that allowed them to hold it as they did.',
+              'She was particularly unwilling to accept the authority exercised by self-interested men who sought to preserve their influence at the expense of others.',
+              'Her opposition was not limited to disagreement. She questioned the principles upon which their authority rested, and she challenged the assumption that leadership belonged naturally to those who had traditionally held it.',
+              'Arabella\'s ambition extended beyond securing a position for herself. She sought to establish a system in which authority would be defined by laws and responsibilities, rather than left entirely to the interests of powerful individuals.'
             ]
           },
           {
-            r: 'Book the Fifth · Of the Union of the Three Villages',
+            r: 'Book the Second · Chapter IV · Question of Authority',
             t: [
-              'The making of Norwyn required that three separate communities become members of one political body.',
-              'By Arabella\'s labours they were brought together beneath a common authority, and the means were prepared for a united kingdom. This was more than a pact between neighbouring peoples. It was a great change in the governance of the land, and in the manner in which its people were ordered beneath one shared political identity.',
-              'The three villages became the foundation of Norwyn. Their union gave rise to a common Crown, a central authority, and a growing body of laws and institutions.',
-              'The kingdom that sprang from this union was in time to become the Norwyn inherited by later generations.'
+              'Chapter IV. The Question of Authority. The struggle that preceded the establishment of Norwyn was, at its heart, a struggle over authority.',
+              'The existing arrangements had allowed influential men to exercise considerable power within their communities. Their interests, however, were not always aligned with the needs of the people they governed. Arabella recognised the limitations of a system in which those holding authority could use it to protect their own positions without sufficient regard for the wider consequences.',
+              'She challenged these arrangements, and she confronted those who resisted the changes she sought to introduce.',
+              'Her position required more than conviction. She needed to understand the interests of the separate communities, to identify the areas of disagreement among them, and to establish a basis upon which a common political order could be built.',
+              'The resistance she encountered made the task more difficult. Those who benefited from the existing arrangements had little reason to welcome a system that would place their authority within a new legal structure.',
+              'Nevertheless, Arabella continued to pursue the formation of a united political order.'
             ]
           },
           {
-            r: 'Book the Sixth · Of the Founding of Norwyn, and of the First Crown',
+            r: 'Book the Third · Chapter V · Laws of Arabella',
             t: [
-              'With the union of the three villages, Norwyn was established as a kingdom. This founding was the crown and consummation of Arabella\'s labours, to raise a political order that might unite the communities and give them a lasting frame of government.',
-              'Arabella became the first Queen of Norwyn. Her place was no inheritance from any earlier royal line. The Crown she wore was the very institution she had helped to bring into being. The setting up of the monarchy gave the new realm a central sovereign power, and laid the ground upon which every later ruler should govern. The royal history of Norwyn began with Arabella\'s reign.',
-              'As first Queen, Arabella held a station such as had never existed among the three villages before their union. Her authority bore the new political identity of Norwyn, and the establishment of a monarchy under a female sovereign.',
-              'The Crown became the chief institution of the kingdom, the sign of its continuance, and the authority through which its laws and institutions should be upheld.',
-              'The monarchy was not to be defined by a succession of kings, nor by the passing of power through a male line. Its continuance should be secured through women. This resolve became one of the defining marks of Norwyn\'s political character.'
+              'Of the Laws, and of the Union. Chapter V. The Laws of Arabella. Arabella understood that a kingdom could not be sustained by the authority of its founder alone.',
+              'If the three villages were to become one kingdom, they required laws that could govern their shared affairs and establish responsibilities beyond the authority of individual local leaders.',
+              'Her approach placed considerable importance on law, organisation, and the proper exercise of authority. Rather than relying exclusively on personal agreements or on the influence of powerful individuals, Arabella sought to establish arrangements that could endure beyond the circumstances of their creation.',
+              'The laws associated with her founding efforts became the earliest foundations of Norwyn\'s legal and political tradition. They represented a movement away from separate local authority towards a common system of governance.',
+              'The establishment of these laws was among the most important steps in transforming the three villages into a kingdom.'
             ]
           },
           {
-            r: 'Book the Seventh · Of the Law of the Female Line, and of the First Royal House',
+            r: 'Book the Third · Chapter VI · Union of the Villages',
             t: [
-              'Among the most enduring foundations of Arabella\'s monarchy was the law of succession by the female line.',
-              'Under this ordinance the Crown should pass through the royal women. The eldest daughter of the reigning Queen should be acknowledged heir to the throne. The royal children should inherit their mother\'s royal family name, so that the dynasty might be preserved through successive generations of women.',
-              'The law set a clear distinction between the station of the Queen and that of her husband. The reigning sovereign should hold the Crown, while her husband should bear the title of Prince, and not that of King. By this means the authority of the monarchy was kept bound to the female line, and it became a defining feature of the constitutional and dynastic tradition of Norwyn.',
-              'With the establishment of the monarchy came the beginning of the royal dynasty. The first Royal House was founded upon the principles laid down in Arabella\'s reign, and its continuance depended upon the female line and the succession of daughters to the Crown.',
-              'In time the royal household would form its own customs, duties, and ceremonies. The monarchy would become more than the personal authority of its first Queen. It would become an institution handed from one generation to the next, bearing with it the history and identity of the kingdom. Every Queen thereafter should inherit a Crown whose foundations Arabella had laid.'
-            ]
-          },
-          {
-            r: 'Book the Eighth · Of the Foundations Left Behind',
-            t: [
-              'Arabella\'s place in the history of Norwyn rests not alone upon the founding of the monarchy, but upon the political transformation that made the kingdom possible. She brought together three separate villages, withstood the authority of powerful men, established laws, and set up a sovereignty that should continue through the female line.',
-              'The kingdom that followed would grow beyond the circumstances of its founding. Its institutions, its commerce, its customs, and its society would change through the passing generations. Yet the central institution that Arabella had established should remain. Norwyn should continue to be governed by a Queen, and the Crown should continue through the female line.',
-              'Her reign was the beginning of a royal history which later ages would inherit, preserve, and shape in their own time.'
-            ]
-          },
-          {
-            r: 'The Legacy of Arabella',
-            t: [
-              'Every kingdom has its origin, but not every kingdom begins with the making of its own monarchy.',
-              'The history of Norwyn begins with three separate villages, and with a woman who beheld the possibility of something greater than the arrangements that already stood.',
-              'Arabella did not inherit the Crown. She established it. She did not receive a united kingdom. She brought one into being. And the monarchy that should endure for generations began with her.',
-              'ARABELLA, FIRST QUEEN OF NORWYN.',
-              'The beginning of the Crown. The beginning of the kingdom.'
-            ]
-          },
-          {
-            r: 'Colophon',
-            t: [
-              'Title: The Annals of Norwyn',
-              'Subject: The founding of Norwyn and the first reign',
-              'Period: The founding era, from the seventeen hundreds',
-              'Principal figure: Queen Arabella, First Queen of Norwyn',
-              'Kind: An historical chronicle, being a foundational record of Norwynian history.'
+              'Chapter VI. The Union of the Three Villages. The establishment of Norwyn required the three separate communities to become part of a single political entity.',
+              'Arabella\'s efforts brought them together under a common authority, and created the conditions for the formation of a united kingdom.',
+              'This was more than an agreement between neighbouring communities. It marked a fundamental change in how the land was governed, and in how its people were organised under a shared political identity.',
+              'The three villages became the foundation of Norwyn. Their union provided the basis for a common Crown, a central authority, and a developing system of laws and institutions.',
+              'The kingdom that emerged from this union would eventually become the Norwyn inherited by later generations.'
             ]
           }
         ]
@@ -2693,18 +2665,43 @@
       el.insertAdjacentHTML('afterbegin', h);
     }
 
+    /* Conservative pagination budget so text never overflows or vanishes */
+    function splitLongParagraph(p, maxChars) {
+      if (p.length <= maxChars) return [p];
+      var words = p.split(/\s+/);
+      var out = [];
+      var buf = '';
+      for (var i = 0; i < words.length; i++) {
+        var next = buf ? (buf + ' ' + words[i]) : words[i];
+        if (next.length > maxChars && buf) {
+          out.push(buf);
+          buf = words[i];
+        } else {
+          buf = next;
+        }
+      }
+      if (buf) out.push(buf);
+      return out;
+    }
+
     function paginateSection(label, paragraphs, maxCharsPerPage, startDropCap) {
+      var expanded = [];
+      for (var k = 0; k < paragraphs.length; k++) {
+        var parts = splitLongParagraph(paragraphs[k], Math.floor(maxCharsPerPage * 0.85));
+        for (var j = 0; j < parts.length; j++) expanded.push(parts[j]);
+      }
+
       var chunks = [];
       var current = [];
       var charCount = 0;
-      for (var i = 0; i < paragraphs.length; i++) {
-        var p = paragraphs[i];
-        var pLen = p.length + 18;
+      for (var i = 0; i < expanded.length; i++) {
+        var p = expanded[i];
+        var pLen = p.length + 34;
         if (current.length > 0 && (charCount + pLen > maxCharsPerPage)) {
           chunks.push({
-            r: label + ' (cont.)',
+            r: chunks.length === 0 ? label : label + ' (cont.)',
             t: current,
-            dropCap: false
+            dropCap: startDropCap && chunks.length === 0
           });
           current = [p];
           charCount = pLen;
@@ -2724,8 +2721,8 @@
     }
 
     function makeSides(b, isOneSheet) {
-      var maxChars = isOneSheet ? 980 : 1220;
-      var introTitle = b.id === 'norwyn' ? 'The Proem' : b.id === 'constantin' ? 'Proem' : b.id === 'theodore' ? 'Proem' : 'Argument';
+      var maxChars = isOneSheet ? 780 : 880;
+      var introTitle = b.id === 'norwyn' ? 'A Preface to the Reader' : b.id === 'constantin' ? 'Proem' : b.id === 'theodore' ? 'Proem' : 'Argument';
       var a = [{ kind: 'cover' }, { kind: 'inside' }, { kind: 'title' }, { kind: 'verso' }];
       var introChunks = paginateSection(introTitle, b.intro, maxChars, true);
       introChunks.forEach(function (ch) {
@@ -2771,7 +2768,7 @@
           '</div></div>';
       } else if (k === 'verso') {
         var versoNote = b.id === 'norwyn'
-          ? 'Set down from the founding records of Norwyn, preserving the history of the Three Villages, Queen Arabella, and the establishment of the Royal House.'
+          ? 'Set down from the founding records of Norwyn, preserving the history of the Three Villages, Queen Arabella, and the establishment of the First Royal Dynasty.'
           : b.id === 'constantin'
           ? 'Preserved in the scholarly holdings of the Royal Academy of Governance, examining station, responsibility, continuity, and alignment.'
           : b.id === 'theodore'
@@ -2834,7 +2831,7 @@
       archiveReaderView.dataset.layout = layout;
       bookEl.style.setProperty('--cv', b.cv); bookEl.style.setProperty('--cv2', b.cv2);
       bookEl.style.setProperty('--fd', (single() ? FLIP_S : FLIP) + 'ms');
-      bookEl.style.setProperty('--k', single() ? '1.25' : '1');
+      bookEl.style.setProperty('--k', single() ? '1.3' : '1');
       bookEl.style.setProperty('--tx', '0px'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg');
       if (single()) buildSingle(b); else buildSpread(b);
     }
@@ -2846,25 +2843,30 @@
         el.style.transition = 'none';
         el.classList.remove('turning', 'under', 'over');
         el.classList.toggle('flipped', want);
-        if (single()) el.style.display = (i >= s && i <= s + 2) ? '' : 'none';
-        else el.style.zIndex = want ? (i + 1) : (N - i);
+        if (single()) {
+          el.style.display = (i >= s - 1 && i <= s + 2) ? '' : 'none';
+          el.style.zIndex = want ? (i + 1) : (N - i);
+        } else {
+          el.style.zIndex = want ? (i + 1) : (N - i);
+        }
       });
       void bookEl.offsetWidth;
       leaves.forEach(function (lf) { lf.el.style.transition = ''; if (!single()) lf.el.style.transitionDuration = FLIP + 'ms'; });
     }
 
+    /* Larger book dimensions on both desktop and mobile */
     function sizeBook() {
       var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : 640);
-      var H = stage.clientHeight || 520;
+      var H = stage.clientHeight || 560;
       if (single()) {
         pw = W;
         bookEl.style.width = W + 'px'; bookEl.style.height = H + 'px';
-        bookEl.style.fontSize = (Math.min(W, H * (W > H ? .85 : .62)) * .045).toFixed(2) + 'px';
+        bookEl.style.fontSize = Math.max(16.5, Math.min(20, W * 0.046)).toFixed(2) + 'px';
       } else {
         var ratio = 7 / 5;
-        pw = Math.max(180, Math.floor(Math.min((W - 80) / 2, (H - 80) / ratio)));
+        pw = Math.max(210, Math.floor(Math.min((W - 44) / 2, (H - 44) / ratio)));
         bookEl.style.width = (2 * pw) + 'px'; bookEl.style.height = Math.round(pw * ratio) + 'px';
-        bookEl.style.fontSize = (pw * .0435).toFixed(2) + 'px';
+        bookEl.style.fontSize = (pw * .044).toFixed(2) + 'px';
         position(); thickness();
       }
     }
@@ -2894,30 +2896,46 @@
       setTimeout(function () { lf.el.classList.remove('turning'); lf.el.style.zIndex = want ? (i + 1) : (N - i); }, (delay || 0) + FLIP + 40);
     }
 
+    /* Reliable two-way single-sheet flip on mobile */
     function turnSingle(from, d) {
-      var D = FLIP_S, lf, beneath;
+      var D = FLIP_S, N = leaves.length, lf, beneath;
       if (d > 0) {
         lf = leaves[from]; beneath = leaves[from + 1];
-        if (leaves[from + 2]) leaves[from + 2].el.style.display = '';
+        if (!lf || !beneath) { applyState(); return 120; }
+        lf.el.style.display = '';
+        beneath.el.style.display = '';
+        lf.el.style.zIndex = N + 6;
+        beneath.el.style.zIndex = N + 2;
         lf.flipped = true;
-        lf.el.classList.add('turning', 'flipped'); beneath.classList.add('under');
+        lf.el.classList.add('turning', 'flipped');
+        beneath.el.classList.add('under');
         setTimeout(function () {
-          lf.el.classList.remove('turning'); beneath.classList.remove('under'); lf.el.style.display = 'none';
+          lf.el.classList.remove('turning');
+          beneath.el.classList.remove('under');
+          applyState();
         }, D + 30);
       } else {
         lf = leaves[from - 1]; beneath = leaves[from];
-        lf.el.style.transition = 'none'; lf.el.style.display = '';
+        if (!lf || !beneath) { applyState(); return 120; }
+        lf.el.style.transition = 'none';
+        lf.el.style.display = '';
+        lf.el.style.zIndex = N + 6;
+        beneath.el.style.display = '';
+        beneath.el.style.zIndex = N + 2;
+        lf.el.classList.add('flipped');
         void lf.el.offsetWidth;
         lf.el.style.transition = '';
         lf.flipped = false;
-        lf.el.classList.add('turning'); beneath.classList.add('over');
+        lf.el.classList.add('turning');
+        beneath.el.classList.add('over');
         lf.el.classList.remove('flipped');
         setTimeout(function () {
-          lf.el.classList.remove('turning'); beneath.classList.remove('over');
-          if (leaves[from + 2]) leaves[from + 2].el.style.display = 'none';
+          lf.el.classList.remove('turning');
+          beneath.el.classList.remove('over');
+          applyState();
         }, D + 30);
       }
-      return D + 60;
+      return D + 50;
     }
 
     function ui() {
@@ -2935,7 +2953,7 @@
       var prevS = s, prevF = fOf(s); s = ns; var f = fOf(s), total;
       if (single()) {
         if (Math.abs(s - prevS) === 1) total = turnSingle(prevS, s - prevS);
-        else { applyState(); total = 200; }
+        else { applyState(); total = 180; }
       } else {
         var stagger = Math.abs(f - prevF) > 1 ? (closing ? 110 : 95) : 0, c = 0, todo = [];
         for (var i = 0; i < leaves.length; i++) { if (leaves[i].flipped !== (i < f)) todo.push(i); }
@@ -2949,7 +2967,7 @@
       if (single() || f !== prevF) pageSound(single() ? .68 : 1);
       if (!tipShown && s > 0) {
         tipShown = true;
-        var tip = single() ? (coarse ? 'Swipe sideways or tap the right side to turn the page.' : 'Click the page, or use the arrow keys.') : (coarse ? 'Tap the right page to turn forward, the left to go back.' : 'Click a page, or use the arrow keys.');
+        var tip = single() ? 'Swipe left/right or tap the left or right edge to turn pages.' : (coarse ? 'Tap the right page to turn forward, the left to go back.' : 'Click a page, or use the arrow keys.');
         setTimeout(function () { if (!closing) showHint(tip, 4500); }, total + 200);
       }
       return total;
@@ -3035,16 +3053,27 @@
     }
 
     var down = null;
-    stage.addEventListener('pointerdown', function (e) { down = { x: e.clientX, y: e.clientY }; });
+    stage.addEventListener('pointerdown', function (e) {
+      down = { x: e.clientX, y: e.clientY };
+    });
     stage.addEventListener('pointerup', function (e) {
-      if (!down) return; var dx = e.clientX - down.x, dy = e.clientY - down.y; down = null;
-      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) { dx < 0 ? next() : prev(); return; }
-      if (Math.abs(dx) > 12 || Math.abs(dy) > 12) return;
+      if (!down) return;
+      var dx = e.clientX - down.x, dy = e.clientY - down.y;
+      down = null;
+      if (Math.abs(dx) > 32 && Math.abs(dx) > Math.abs(dy) * 1.1) {
+        dx < 0 ? next() : prev();
+        return;
+      }
+      if (Math.abs(dx) > 14 || Math.abs(dy) > 14) return;
       var last = sides.length - 1;
       if (s === 0) return next();
       var r = stage.getBoundingClientRect(), goNext;
-      if (single()) goNext = e.clientX > r.left + r.width * .33;
-      else { var br = bookEl.getBoundingClientRect(); goNext = e.clientX > br.left + br.width / 2; }
+      if (single()) {
+        goNext = e.clientX >= r.left + r.width * 0.38;
+      } else {
+        var br = bookEl.getBoundingClientRect();
+        goNext = e.clientX >= br.left + br.width / 2;
+      }
       if (goNext) { if (s !== last) next(); else prev(); } else prev();
     });
     stage.addEventListener('pointercancel', function () { down = null; });
