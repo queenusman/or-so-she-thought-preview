@@ -162,7 +162,6 @@
       background-attachment: fixed;
       color: var(--color-text);
       font-family: 'Newsreader', Georgia, serif;
-      font-size: 18px;
       -webkit-font-smoothing: antialiased;
       transition: background-color 0.25s ease, color 0.25s ease;
     }
@@ -191,16 +190,30 @@
       opacity: 1;
     }
 
+    /* Larger main prose blocks for Premise, World, Characters, Author Note, Disclaimer */
+    .prose-body {
+      font-size: 1.1875rem; /* ~19px */
+      line-height: 1.8;
+    }
+    .prose-body-lg {
+      font-size: 1.25rem; /* 20px */
+      line-height: 1.82;
+    }
+    .character-bio {
+      font-size: 1.0625rem; /* ~17px */
+      line-height: 1.72;
+    }
+
     /* Force Justified Layout and Drop Cap on Chapters */
     .chapter-paragraph {
       text-align: justify;
       text-justify: inter-word;
-      margin-bottom: 1.85rem;
+      margin-bottom: 1.75rem;
     }
 
     .chapter-paragraph:first-of-type::first-letter {
       font-family: 'Cinzel', serif;
-      font-size: 3.75rem;
+      font-size: 3.5rem;
       float: left;
       line-height: 0.8;
       padding-top: 4px;
@@ -225,12 +238,12 @@
     .scriptorium-btn {
       font-family: 'Inter', -apple-system, sans-serif;
       font-weight: 500;
-      letter-spacing: .12em;
+      letter-spacing: .16em;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 11px;
       background: var(--btn-bg);
       border: 1px solid var(--btn-border);
-      padding: 9px 16px;
+      padding: 8px 14px;
       border-radius: 8px;
       cursor: pointer;
       color: var(--ui-dim);
@@ -272,9 +285,9 @@
     }
     .scriptorium-eyebrow {
       font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: .22em;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .34em;
       text-transform: uppercase;
       color: var(--gilt-dim);
       margin: 0 0 10px;
@@ -282,11 +295,11 @@
     .scriptorium-mast h3 {
       font-family: 'Cinzel', Georgia, serif;
       font-weight: 600;
-      font-size: clamp(26px, 4vw, 38px);
-      line-height: 1.15;
+      font-size: clamp(24px, 4vw, 38px);
+      line-height: 1.1;
       letter-spacing: .16em;
       text-transform: uppercase;
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       color: var(--ui);
     }
     .scriptorium-mast p.scriptorium-lead {
@@ -294,9 +307,9 @@
       color: var(--ui-dim);
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
-      font-size: clamp(18px, 2.2vw, 21px);
+      font-size: clamp(16px, 2.1vw, 19px);
       max-width: 56ch;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
     .scriptorium-case {
@@ -394,11 +407,11 @@
       transform: translateX(-50%);
       font-family: 'Inter', sans-serif;
       font-weight: 500;
-      font-size: 14px;
-      letter-spacing: .08em;
+      font-size: max(9px, calc(var(--u) * 1.1));
+      letter-spacing: .12em;
       text-transform: uppercase;
       white-space: nowrap;
-      padding: 2px 10px;
+      padding: 2px 8px;
       background: linear-gradient(var(--plate-bg-1), var(--plate-bg-2));
       color: var(--plate-text);
       border: 1px solid var(--plate-border);
@@ -409,9 +422,9 @@
     }
     .scriptorium-fine {
       max-width: 920px;
-      margin: 26px auto 0;
+      margin: 24px auto 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 16px;
+      font-size: 15px;
       color: var(--ui-dim);
       font-style: italic;
     }
@@ -431,7 +444,7 @@
     .scriptorium-stage {
       position: relative;
       width: 100%;
-      height: clamp(500px, 76vh, 760px);
+      height: clamp(480px, 74vh, 740px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -472,9 +485,9 @@
     .scriptorium-rtitle {
       flex: 1;
       font-family: 'Cinzel', Georgia, serif;
-      letter-spacing: .12em;
+      letter-spacing: .14em;
       color: var(--ui-dim);
-      font-size: 15px;
+      font-size: 13px;
       text-align: center;
       white-space: nowrap;
       overflow: hidden;
@@ -484,13 +497,13 @@
     .scriptorium-folio {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
-      letter-spacing: .12em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--ui);
-      min-width: 14ch;
+      min-width: 13ch;
       text-align: center;
-      font-size: 14px;
-      padding: 8px 16px;
+      font-size: 11px;
+      padding: 8px 14px;
       background: var(--btn-bg);
       border: 1px solid var(--btn-border);
       border-radius: 8px;
@@ -510,7 +523,7 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       color: var(--ui);
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.35;
       padding: 8px 18px;
       border-radius: 999px;
@@ -532,7 +545,7 @@
       position: relative;
       flex: none;
       perspective: 2800px;
-      font-size: 18px;
+      font-size: 17px;
       --fd: 0.95s;
       transform: translate(var(--tx, 0px), var(--ty, 0px)) rotateX(var(--rx, 0deg));
       transition: transform 0.75s cubic-bezier(.22, .8, .28, 1);
@@ -673,8 +686,8 @@
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       margin: 0;
-      letter-spacing: .18em;
-      font-size: .8em;
+      letter-spacing: .24em;
+      font-size: .68em;
       text-transform: uppercase;
     }
     .scriptorium-book .emb {
@@ -769,15 +782,15 @@
     .scriptorium-book .rh {
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: .72em;
-      letter-spacing: .14em;
+      font-size: .56em;
+      letter-spacing: .22em;
       text-transform: uppercase;
       color: var(--rubric);
       display: flex;
       justify-content: flex-end;
-      padding-bottom: .75em;
+      padding-bottom: .8em;
       border-bottom: 1px solid #DCD6CF;
-      margin-bottom: 1em;
+      margin-bottom: 1.05em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -813,7 +826,7 @@
       justify-content: space-between;
       align-items: baseline;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: .82em;
+      font-size: .74em;
       font-style: italic;
       color: var(--ink-muted);
       padding-top: .65em;
@@ -836,16 +849,16 @@
     .scriptorium-book .tp-small {
       font-family: 'Inter', sans-serif;
       font-weight: 700;
-      letter-spacing: .18em;
+      letter-spacing: .26em;
       text-transform: uppercase;
-      font-size: .72em;
+      font-size: .56em;
       color: var(--rubric);
       margin: 0;
     }
     .scriptorium-book .tp-title {
       font-family: 'Cinzel', Georgia, serif;
-      font-size: 1.85em;
-      line-height: 1.15;
+      font-size: 2em;
+      line-height: 1.12;
       letter-spacing: .08em;
       margin: 0;
       color: var(--ink);
@@ -855,16 +868,16 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       margin: 0;
-      font-size: 1.15em;
+      font-size: 1.1em;
       color: var(--ink);
     }
     .scriptorium-book .tp-meta {
       margin: 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: .92em;
+      font-size: .86em;
       color: var(--ink-muted);
       font-style: italic;
-      max-width: 26ch;
+      max-width: 24ch;
       line-height: 1.45;
     }
     .scriptorium-book .tp-emb {
@@ -896,10 +909,10 @@
     .scriptorium-book .note {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
-      font-size: 1em;
-      line-height: 1.5;
+      font-size: .96em;
+      line-height: 1.55;
       margin: 0;
-      max-width: 26ch;
+      max-width: 25ch;
       text-align: center;
       color: var(--ink-muted);
     }
@@ -915,15 +928,15 @@
       color: var(--rubric);
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: .68em;
-      letter-spacing: .16em;
+      font-size: .56em;
+      letter-spacing: .2em;
       text-align: center;
-      line-height: 1.5;
+      line-height: 1.6;
       box-shadow: 0 0 0 3px rgba(154, 102, 122, .12);
     }
     .scriptorium-book .finis {
       font-family: 'Cinzel', Georgia, serif;
-      font-size: 1.8em;
+      font-size: 1.85em;
       letter-spacing: .16em;
       text-transform: uppercase;
       margin: 0;
@@ -1001,14 +1014,14 @@
 
     @media (max-width: 720px) {
       .scriptorium-rtitle { display: none; }
-      .scriptorium-btn { font-size: 14px; padding: 7px 12px; }
-      .scriptorium-hint { font-size: 16px; }
-      .scriptorium-mast p.scriptorium-lead { font-size: 17px; }
-      .scriptorium-fine { font-size: 15px; }
+      .scriptorium-btn { font-size: 10px; padding: 7px 10px; }
+      .scriptorium-hint { font-size: 15px; }
+      .scriptorium-mast p.scriptorium-lead { font-size: 15px; }
+      .scriptorium-fine { font-size: 14px; }
       .scriptorium-stage { height: clamp(460px, 70vh, 660px); }
     }
     @media (pointer: coarse) {
-      .scriptorium-btn { min-height: 44px; padding: 0 14px; }
+      .scriptorium-btn { min-height: 40px; padding: 0 12px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .scriptorium-book, .scriptorium-book .leaf, .scriptorium-subview { transition-duration: .01s !important; }
@@ -1026,7 +1039,7 @@
       
       <!-- Coronet Icon Emblem Only with Curved Edges -->
       <a href="javascript:void(0)" onclick="switchView('home')" class="group flex items-center focus:outline-none" aria-label="Return to Home">
-        <div class="w-11 h-11 rounded-lg border border-theme-border flex items-center justify-center bg-theme-panel group-hover:border-theme-accent transition-all shadow-sm shrink-0">
+        <div class="w-10 h-10 rounded-lg border border-theme-border flex items-center justify-center bg-theme-panel group-hover:border-theme-accent transition-all shadow-sm shrink-0">
           <svg class="w-5 h-5 text-theme-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 17L2 8l5 3.5 5-6.5 5 6.5 5-3.5-2 9H4z" />
             <path d="M4 19h16" stroke-width="1.25" />
@@ -1037,29 +1050,29 @@
 
       <!-- Global Theme Switcher & 3-Line Menu Trigger -->
       <div class="flex items-center space-x-3">
-        <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle theme palette" class="px-4 py-2 border border-theme-border rounded-lg text-sm font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center gap-2 bg-theme-panel shadow-sm cursor-pointer">
-          <svg id="themeIconSun" class="w-4 h-4 inline-block text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button onclick="toggleGlobalTheme()" id="globalThemeBtn" aria-label="Toggle theme palette" class="px-3.5 py-1.5 border border-theme-border rounded-lg text-[11px] font-sans uppercase tracking-wider text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all flex items-center gap-2 bg-theme-panel shadow-sm cursor-pointer">
+          <svg id="themeIconSun" class="w-3.5 h-3.5 inline-block text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
-          <svg id="themeIconMoon" class="w-4 h-4 hidden text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg id="themeIconMoon" class="w-3.5 h-3.5 hidden text-theme-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
           <span id="themeToggleText">Ivory Mode</span>
         </button>
 
-        <button onclick="toggleMobileNav()" class="px-3.5 py-2 border border-theme-border rounded-lg bg-theme-panel text-theme-text hover:text-theme-accent hover:border-theme-accent focus:outline-none cursor-pointer flex items-center gap-2 shadow-sm" aria-label="Open navigation menu">
+        <button onclick="toggleMobileNav()" class="p-2.5 border border-theme-border rounded-lg bg-theme-panel text-theme-text hover:text-theme-accent hover:border-theme-accent focus:outline-none cursor-pointer flex items-center gap-2 shadow-sm" aria-label="Open navigation menu">
           <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7h16M4 12h16M4 17h16" />
           </svg>
-          <span class="text-sm font-sans uppercase tracking-widest hidden sm:inline">Menu</span>
+          <span class="text-[11px] font-sans uppercase tracking-widest hidden sm:inline">Menu</span>
         </button>
       </div>
     </div>
 
-    <!-- 3-Line Collapsible Navigation Drawer (Aligned with Reader & World Architecture) -->
-    <div id="mobileNav" class="hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-sm font-sans uppercase tracking-[0.16em]">
+    <!-- 3-Line Collapsible Navigation Drawer -->
+    <div id="mobileNav" class="hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
       <div>
-        <p class="text-sm tracking-[0.18em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
+        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           Orientation &amp; Front Matter
         </p>
         <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
@@ -1067,7 +1080,7 @@
         <button onclick="switchView('disclaimer'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Disclaimer</button>
       </div>
       <div>
-        <p class="text-sm tracking-[0.18em] text-theme-secondary font-semibold pb-2 border-b border-theme-border mb-3">
+        <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
           The Story &amp; World of Norwyn
         </p>
         <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read the Chapters</button>
@@ -1084,24 +1097,24 @@
     <section id="view-home" class="view-section view-visible max-w-4xl mx-auto px-6 py-20 md:py-28 text-center">
       <div class="inline-flex items-center gap-2 mb-6 text-theme-secondary">
         <span class="w-6 h-px bg-theme-secondary/70"></span>
-        <span class="font-sans text-sm uppercase tracking-[0.24em] font-semibold">
+        <span class="font-sans text-[10px] uppercase tracking-[0.38em] font-bold">
           A Royal Psychological Novel
         </span>
         <span class="w-6 h-px bg-theme-secondary/70"></span>
       </div>
       
-      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-normal text-theme-text tracking-[0.16em] uppercase leading-[1.15] mb-4">
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-normal text-theme-text tracking-[0.16em] uppercase leading-[1.12] mb-4">
         Or So She<br>Thought
       </h1>
       
-      <p class="font-sans text-sm uppercase tracking-[0.22em] text-theme-secondary font-semibold mb-8">
+      <p class="font-sans text-[11px] uppercase tracking-[0.3em] text-theme-secondary font-semibold mb-8">
         By Queen Usman
       </p>
 
       <!-- Literary Device Ornament -->
       <div class="flex items-center justify-center gap-3 my-8 opacity-90">
         <div class="w-12 h-px bg-theme-border"></div>
-        <div class="text-sm text-theme-accent select-none">✦</div>
+        <div class="text-xs text-theme-accent select-none">✦</div>
         <div class="w-12 h-px bg-theme-border"></div>
       </div>
       
@@ -1117,23 +1130,23 @@
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold">Section One</span>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section One</span>
             </div>
             <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Before You Begin
             </h2>
-            <p class="font-serif text-base text-theme-text-muted leading-relaxed mb-6 font-light">
+            <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
               Begin with the author's welcome, the premise of Elisabeta's world, and the boundaries of the story before stepping into the chapters or the wider kingdom.
             </p>
             
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
-              <button type="button" onclick="switchView('author-note')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('author-note')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>A Note from the Author</span>
               </button>
-              <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Premise</span>
               </button>
-              <button type="button" onclick="switchView('disclaimer')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('disclaimer')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Disclaimer</span>
               </button>
             </div>
@@ -1144,26 +1157,26 @@
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold">Section Two</span>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section Two</span>
             </div>
             <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Story &amp; World of Norwyn
             </h2>
-            <p class="font-serif text-base text-theme-text-muted leading-relaxed mb-6 font-light">
+            <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
               Follow Elisabeta's story chapter by chapter, and whenever curiosity leads you, explore the world of Norwyn, its people, and the bound volumes in the Scriptorium archive.
             </p>
             
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
-              <button type="button" onclick="openReaderIndex()" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="openReaderIndex()" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
               </button>
-              <button type="button" onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The World of Norwyn</span>
               </button>
-              <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Characters</span>
               </button>
-              <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+              <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Norwyn Archives</span>
               </button>
             </div>
@@ -1178,10 +1191,10 @@
     <!-- 1. PREMISE -->
     <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
       </div>
 
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
         <p>In the island kingdom of Norwyn, where royal traditions are woven into everyday life and the future of a kingdom rests upon the shoulders of its next queen, Princess Elisabeta has always known what is expected of her.</p>
         <p>She has been raised for a life of duty.</p>
         <p>At twenty-two, Elisabeta is the eldest daughter of Queen Ecaterina and heir to the throne. She has spent years learning the history of her kingdom, studying the art of governance and preparing for the responsibilities that will one day be hers. Even her future marriage has been arranged, with her engagement to Prince Alexandru of Valenne forming another part of the life everyone expects her to lead.</p>
@@ -1200,10 +1213,10 @@
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
         <div>
-          <h2 class="font-display text-3xl md:text-4xl text-theme-heading tracking-wide mb-3 font-semibold uppercase">DISCOVER NORWYN</h2>
+          <h2 class="font-display text-3xl md:text-5xl text-theme-heading tracking-wide mb-3 font-semibold uppercase">DISCOVER NORWYN</h2>
         </div>
 
-        <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-lg md:text-xl text-theme-text leading-relaxed text-justify">
+        <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body-lg text-theme-text text-justify">
           <p>Across the water, upon a great island with mountains, forests and winding rivers, lies the kingdom of Norwyn.</p>
           <p>It is a land with an ancient royal dynasty, customs passed down through generations and a way of life that belongs entirely to its people. Here, the Queen holds absolute authority, the Crown passes from mother to daughter, and the kingdom's capital rests inland, at the heart of its political and administrative life.</p>
           <p>But Norwyn is much more than its royal palace.</p>
@@ -1214,9 +1227,9 @@
           </p>
         </div>
 
-        <div class="space-y-8 font-serif text-lg text-theme-text leading-relaxed text-justify">
+        <div class="space-y-8 font-serif prose-body text-theme-text text-justify">
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Island and Its Seasons</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Island and Its Seasons</span>
             <p>Norwyn is a large island, and there is much to discover across its varied landscape.</p>
             <p>In some parts, mountains rise above great stretches of forest. Elsewhere, farmland spreads across the countryside, rivers wind towards inland settlements, and long coastlines look out towards distant shores. Each region has its own character, shaped by its surroundings and the people who call it home.</p>
             <p>The land and its people have always been closely connected. Farmers tend the fields, forests provide timber, rivers carry goods towards inland centres, and coastal communities maintain the kingdom's connections with lands across the water.</p>
@@ -1226,7 +1239,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Crown</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Crown</span>
             <p>At the heart of Norwyn's history stands its royal dynasty.</p>
             <p>Norwyn is an absolute monarchy, and the Queen is the kingdom's sovereign, holding supreme governing authority. The Crown passes through the female line, with the eldest daughter serving as heir to the throne.</p>
             <p>Royal children inherit their mother's royal family name. When a Queen marries, her husband retains the title of Prince rather than becoming King, and the succession remains within the maternal line.</p>
@@ -1236,7 +1249,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The People of Norwyn</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The People of Norwyn</span>
             <p>Every kingdom has its people, and Norwyn is no different.</p>
             <p>Its society formally recognises two classes: royals and non-royals. Royals belong to the ruling dynasty, while everyone outside it is considered non-royal.</p>
             <p>But life among the non-royal population is far from uniform.</p>
@@ -1247,7 +1260,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Capital and the Palace</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Capital and the Palace</span>
             <p>At the heart of the island, away from the coast, lies the Capital.</p>
             <p>It is the seat of government, the home of the royal family and the location of several of Norwyn's most important institutions. Its streets bring together official buildings, places of learning, commercial establishments and private residences.</p>
             <p>And within the Capital stands the Royal Palace.</p>
@@ -1259,7 +1272,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Culture and Customs</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Culture and Customs</span>
             <p>Norwyn has a culture all its own, shaped over generations by French, Spanish, wider European and Cambodian influences.</p>
             <p>These influences can be found in its architecture, clothing, food, craftsmanship, ceremonies and domestic life. Over time, they have come together to form something distinctly Norwynian.</p>
             <p>There is a particular appreciation for elegance in the kingdom, though not necessarily for extravagance. Fine materials, careful workmanship and thoughtful details are valued more than unnecessary display. A beautiful garment need not be covered in ornament, and a grand room need not be filled with everything it can hold.</p>
@@ -1270,7 +1283,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Education and the Royal Academy</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Education and the Royal Academy</span>
             <p>Learning has an important place in Norwyn, and the kingdom is home to several kinds of educational institutions serving students from different backgrounds.</p>
             <p>Among its principal institutions is the Royal Academy of Governance, situated in the Capital.</p>
             <p>The Academy provides education in governance and administration, preparing students for responsibilities within the kingdom's institutions. Its students include members of the royal family as well as those from outside the royal class.</p>
@@ -1281,7 +1294,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Work and Trade</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Work and Trade</span>
             <p>Much of Norwyn's life is built upon the work of its people.</p>
             <p>Fabric and flour are among the kingdom's major trades. Agricultural communities contribute to flour production, while textile workshops produce cloth for households, businesses and the royal residence.</p>
             <p>There is also timber production, joinery, carpentry, construction, gardening, tailoring, transport and administration.</p>
@@ -1292,7 +1305,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Food and Everyday Life</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Food and Everyday Life</span>
             <p>There are familiar comforts to be found in a Norwynian home.</p>
             <p>Rice, beans and potatoes are common foods in ordinary households, forming part of the meals that sustain families throughout the year.</p>
             <p>Prosperity can sometimes be seen in the smallest details. Buttered bread, for instance, is associated with greater comfort and wealth.</p>
@@ -1303,7 +1316,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Clothing and Dress</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Clothing and Dress</span>
             <p>Clothing in Norwyn tells its own little story.</p>
             <p>What people wear depends on their occupation, prosperity, the weather and the occasion. A working day calls for practical clothing, while a formal gathering brings different expectations.</p>
             <p>Royal and wealthy women wear carefully made gowns, often fashioned from silk and other fine fabrics. Plain cotton is worn beneath formal clothing, while wool provides warmth during the colder months.</p>
@@ -1314,7 +1327,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Technology and Transport</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Technology and Transport</span>
             <p>Norwyn may be a kingdom of old traditions, but it is by no means untouched by modern life.</p>
             <p>Electric lights brighten its buildings, motor cars travel along its roads, and telephones connect households and offices. Newspapers bring reports from across the island and beyond, while press photographers capture important public occasions.</p>
             <p>Cassette recorders and railways are also part of the kingdom's everyday world.</p>
@@ -1324,7 +1337,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">The Royal Family and Public Life</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Royal Family and Public Life</span>
             <p>The Crown is a familiar presence throughout Norwyn.</p>
             <p>The royal family attends official visits, charity occasions, receptions, state dinners, public openings and formal ceremonies. These events are carefully arranged, from the order of arrival to the seating plan and the photographs later released to the press.</p>
             <p>Such occasions allow the royal family to be seen across the kingdom and form part of its relationship with the public.</p>
@@ -1333,7 +1346,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Valenne</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Valenne</span>
             <p>Across the water from Norwyn lies another kingdom: Valenne.</p>
             <p>It has its own royal court, educational institutions and commercial interests, and its relationship with Norwyn extends across royal, diplomatic and commercial life.</p>
             <p>Its southern ports are particularly important to trade and employment. Agreements between the two kingdoms affect businesses, institutions and the many people whose livelihoods depend upon commerce across the water.</p>
@@ -1343,7 +1356,7 @@
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block text-left">Institutions and Records</span>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Institutions and Records</span>
             <p>Every kingdom has a history worth preserving, and Norwyn is no exception.</p>
             <p>Across the island, institutions maintain official records and administer different aspects of national life. Some preserve the history of the kingdom, while others oversee the practical arrangements that keep its industries and public affairs running.</p>
             <p>The Founders' Archive preserves historical records and is supported by the Founders' Trust, which also organises public occasions such as its annual gala.</p>
@@ -1355,23 +1368,23 @@
         </div>
 
         <div class="book-card p-8 md:p-12 rounded-sm space-y-4 text-center">
-          <span class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold block">BEYOND THE PALACE</span>
+          <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">BEYOND THE PALACE</span>
           <p class="font-serif italic text-xl text-theme-heading">
             And so, beyond the royal residence, the kingdom carries on.
           </p>
-          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
             Shops open in the morning. Trains travel between settlements. Farmers tend their fields, students attend their lessons, and families gather in their homes at the end of the day.
           </p>
-          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
             There are relationships to nurture, businesses to maintain, responsibilities to fulfil and familiar routines that give each day its shape.
           </p>
-          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
             Not every life revolves around the Crown. Not every story begins in a palace or ends within its walls. Norwyn belongs to all the people who call it home, each living within the traditions, circumstances and distinctions that shape their part of the kingdom.
           </p>
-          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
             For the characters of <em>Or So She Thought</em>, Norwyn is much more than the place where events happen. It is the world that has shaped their understanding of family, position, responsibility and the lives they might lead.
           </p>
-          <p class="font-serif text-base text-theme-text-muted max-w-xl mx-auto leading-relaxed text-justify">
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
             And while Elisabeta's story offers one way of discovering this kingdom, there is so much more beyond its pages. There are places yet to visit, histories yet to uncover and lives yet to meet.
           </p>
           <p class="font-serif italic text-theme-heading pt-4 text-2xl">
@@ -1389,18 +1402,18 @@
 
       <!-- Quick-Jump Anchor Bar -->
       <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
-        <a href="#char-royal-court" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+        <a href="#char-royal-court" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
           Royal Family &amp; Court
         </a>
-        <a href="#char-household-academy" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+        <a href="#char-household-academy" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
           Household &amp; Academy
         </a>
-        <a href="#char-relationships" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+        <a href="#char-relationships" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
           Key Relationships
         </a>
       </div>
 
-      <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
         <p>The kingdom of Norwyn is home to all sorts of people, each with a life, a history and a place in the world they call home. Some live within the royal palace, others make their way through the kingdom's institutions, businesses and bustling streets. Each has their own responsibilities, relationships and little corner of Norwyn to call their own.</p>
         <p class="font-serif italic text-theme-heading pt-2 text-center">
           Come and meet some of the people whose paths cross in <em>Or So She Thought</em>.
@@ -1412,116 +1425,116 @@
         <div id="char-royal-court" class="space-y-6 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Heiress</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Heiress</span>
               </div>
-              <p class="text-sm text-theme-accent font-sans mb-3">Age: Twenty-two</p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="text-xs text-theme-accent font-sans mb-3">Age: Twenty-two</p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 <strong>Position:</strong> Eldest daughter of Queen Ecaterina, heir to the throne of Norwyn and betrothed to Alexandru of Valenne.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Born into the royal family, Elisabeta has grown up within the walls of the Royal Palace, where her days have been shaped by lessons, expectations and preparations for the future awaiting her. Her education has included private instruction in Structural Ideology and formal studies at the Royal Academy of Governance, where she has learned the principles that guide the kingdom and its institutions.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 She is courteous and composed, with a thoughtful nature and an eye for the smallest details. She takes care with her words, likes to explain her reasoning and rarely leaves a question without considering it from several sides. She also has a curious habit of counting things, often noticing details that others might pass by.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Elisabeta enjoys reading and keeps a private notebook of her thoughts. She is familiar with the ideas she has been taught and takes a genuine interest in understanding the world around her, even when it does not always make sense as neatly as her lessons suggest.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 As the eldest daughter and heir, she has been raised to carry the future of Norwyn's royal family. She knows what is expected of her and has spent years learning how to meet those expectations. But there is still much to discover about the life waiting beyond the lessons, the palace walls and the future others have carefully imagined for her.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Sovereign</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Sovereign</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 <strong>Position:</strong> Reigning Queen of Norwyn and mother of Princesses Elisabeta and Ileana.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 For many years, Ecaterina has worn the Crown of Norwyn, carrying its responsibilities with the quiet assurance of someone who knows exactly what her position requires. She is a thoughtful and measured woman who rarely rushes to fill a silence. When she speaks, she chooses her words carefully and prefers to explain her decisions rather than simply expect others to follow them.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Her appearance is always beautifully arranged. She is particularly fond of dark plum gowns with delicate silver detailing, usually accompanied by a pair of elegant gloves. She pays attention to the smallest details, from the way a dress is fastened to the posture of someone standing before her. Very little escapes her notice.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Between the affairs of the kingdom and the running of the Royal Palace, Ecaterina has become accustomed to a life in which there is always something requiring her attention. She understands the traditions of the Crown, the duties of her household and the many little arrangements that keep royal life moving smoothly.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 But beyond the throne, she is also a mother to two daughters. To Elisabeta and Ileana, she is the woman who has watched them grow, guided their upbringing and shared their home. Yet the Crown is never far away. Even within the family, the Queen and the mother must often sit side by side.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Ileana</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Second Daughter</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Second Daughter</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: The Queen's second daughter and Elisabeta's younger sister.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Ileana is quiet, precise and dry in her humour. She is attentive to practical details and often notices things that others overlook.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 She is familiar with the organisation of the royal household and regularly works with papers, records and household information.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Although she shares her sister's intelligence, she has a different temperament and occupies a different position within the family.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Safira</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Companion</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Companion</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Elisabeta's cat.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Safira is a familiar presence in the palace. She sleeps beneath tables, settles wherever there is room and follows the movements of the people around her.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 She has her own ideas about where she belongs, which do not always coincide with the household's arrangements.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Intended</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Intended</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Heir to the throne of Valenne and Elisabeta's betrothed.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Alexandru is tall and fair, with hair that tends to come loose after a walk across a courtyard in the rain.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 He is warm, socially confident and quick with a joke. He remembers small details about people, sometimes imperfectly, and is comfortable in formal company.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 He is fond of horses, particularly a grey horse named Marrow, who has an unfortunate refusal to cross water.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Alexandru and Elisabeta first met when she was eighteen. Their engagement forms part of the relationship between the royal families of Norwyn and Valenne.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Ambassador Duvall</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Diplomat</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Diplomat</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Valenne's ambassador to Norwyn.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 A spare, silver-haired man of quiet manner, Duvall represents Valenne at the Norwyn court and attends formal occasions involving the two kingdoms.
               </p>
             </div>
@@ -1532,122 +1545,122 @@
         <div id="char-household-academy" class="space-y-6 pt-2 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Mr. Corrow</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Tutor</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Tutor</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Elisabeta's private tutor.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Mr. Corrow teaches Elisabeta Structural Ideology and conducts her weekly lessons in the palace library.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 He is courteous, precise and fond of order. He values careful reasoning and takes particular satisfaction in a pupil who can defend an argument under questioning.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 He has taught Elisabeta for four years and is familiar with her academic abilities.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Mrs. Hale</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Dresser</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Dresser</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Royal dresser.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Mrs. Hale is responsible for fitting and maintaining the royal family's gowns. She has worked in the household for many years and knows the practical demands of dressing its members.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Direct and observant, she is particular about measurements, fabrics and the condition of every garment. She often works with pins in her mouth and keeps careful records of the gowns entrusted to her.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">The Steward</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">Administration</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">Administration</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Senior officer of the royal household.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 The steward oversees domestic arrangements and communicates official instructions and information.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Courteous and restrained, he is accustomed to the routines and formalities of palace administration.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">The Household Staff</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Workers</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Workers</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 The palace employs pages, maids, attendants, dressers, stewards, secretaries, guards, cooks, gardeners and other workers.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Their responsibilities differ, but together they maintain the daily life of the royal residence. An attendant accompanies Elisabeta whenever she leaves the palace.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Professor Calloway</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Lecturer</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Lecturer</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Lecturer at the Royal Academy of Governance.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Professor Calloway teaches the doctrine of Alignment and uses practical examples to explain the principles of Structural Ideology.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 He is formal and composed. He carries a folder to the lectern but rarely needs to open it during a lesson.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Lucian Fletcher</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Joiner’s Son</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner’s Son</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Student at the Royal Academy of Governance and son of Tobias Fletcher, a joiner.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Lucian is broad-shouldered and slightly stooped, with large hands and marked knuckles. He wears a grey jumper mended at both elbows, often keeps a pencil behind his ear and has a pale scar along his jaw.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 He is observant, direct and unhurried. He answers plainly, uses dry humour sparingly and is comfortable admitting when he does not know something.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 His family is connected to Norwyn's timber trade, and he has practical experience of wood and the work involved in preparing it.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 At the Academy, Lucian brings a familiarity with physical work and materials into discussions often concerned with principles and administration.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5 md:col-span-2">
-              <div class="flex items-baseline justify-between gap-2 mb-1">
+              <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Tobias Fletcher</h4>
-                <span class="font-sans text-sm tracking-[0.12em] uppercase text-theme-secondary font-semibold">The Joiner</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner</span>
               </div>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify mt-4">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
                 Position: Joiner and father of Lucian Fletcher.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 Tobias operates a timber yard beside the river. His workshop has undertaken work for the palace, including woodwork for the east wing.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 He is broad and grey-haired, with large hands marked by years of manual work. He speaks slowly and has a dry sense of humour.
               </p>
-              <p class="font-serif text-base text-theme-text-muted leading-relaxed font-light text-justify">
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
                 His work is part of the skilled craftsmanship that supports Norwyn's buildings and businesses.
               </p>
             </div>
@@ -1656,8 +1669,8 @@
 
         <!-- Group 3: Key Relationships Summary Card -->
         <div id="char-relationships" class="book-card p-8 rounded-sm space-y-4 mt-8 scroll-mt-24">
-          <h3 class="font-sans text-sm tracking-[0.18em] uppercase text-theme-secondary font-semibold">Key Relationships</h3>
-          <ul class="list-disc pl-5 space-y-2 text-base text-theme-text-muted font-serif">
+          <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Key Relationships</h3>
+          <ul class="list-disc pl-5 space-y-2 character-bio text-theme-text-muted font-serif">
             <li>Queen Ecaterina is the mother of Elisabeta and Ileana.</li>
             <li>Elisabeta is the eldest daughter and heir to the throne of Norwyn.</li>
             <li>Ileana is Elisabeta's younger sister.</li>
@@ -1679,13 +1692,13 @@
     <!-- 1. A NOTE FROM THE AUTHOR -->
     <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
-        <p class="font-serif text-theme-text-muted text-lg font-light italic">
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light italic">
           Welcome to Or So She Thought.
         </p>
       </div>
 
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
         <p>
           <em>Or So She Thought</em> takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is entirely fictional. It has been shaped for this story and the people who inhabit it.
         </p>
@@ -1713,13 +1726,13 @@
     <!-- 2. DISCLAIMER -->
     <section id="view-disclaimer" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">Disclaimer</h2>
-        <p class="font-serif text-theme-text-muted text-lg font-light italic">
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">Disclaimer</h2>
+        <p class="font-serif text-theme-text-muted text-base font-light italic">
           Legal notice &amp; narrative boundaries.
         </p>
       </div>
 
-      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif text-lg text-theme-text leading-relaxed mb-12 text-justify">
+      <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
         <p>
           Or So She Thought is a work of fiction. Norwyn, its institutions, history, customs, places and characters are imagined. Any resemblance to actual people, places, events or institutions is coincidental.
         </p>
@@ -1735,10 +1748,10 @@
     <!-- 3. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
       <div class="max-w-3xl mx-auto px-6 mb-6 flex justify-end">
-        <div class="inline-flex items-center border border-theme-border rounded-lg text-sm font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5">
-          <button type="button" onclick="changeFontSize(-1)" class="px-3.5 py-1.5 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
+        <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5">
+          <button type="button" onclick="changeFontSize(-1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
           <span class="text-theme-border select-none px-1">|</span>
-          <button type="button" onclick="changeFontSize(1)" class="px-3.5 py-1.5 text-theme-text-muted hover:text-theme-text font-semibold transition-colors cursor-pointer" title="Increase font size">A+</button>
+          <button type="button" onclick="changeFontSize(1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text font-semibold transition-colors cursor-pointer" title="Increase font size">A+</button>
         </div>
       </div>
 
@@ -1799,7 +1812,7 @@
   <!-- ==================== FOOTER ==================== -->
   <footer id="siteFooter" style="background-color: var(--footer-bg); border-color: var(--color-border);" class="border-t py-10 transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="text-sm font-sans tracking-[0.16em] text-theme-text-muted uppercase font-medium">
+      <div class="text-xs font-sans tracking-[0.2em] text-theme-text-muted uppercase font-medium">
         &copy; 2026 Queen Usman. All rights reserved.
       </div>
     </div>
@@ -1813,7 +1826,7 @@
   <script>
     let activeEra = 'crowned';
     let activeChapterIndex = null;
-    let baseFontSize = 19;
+    let baseFontSize = 18;
     let isIvoryMode = false;
 
     function switchView(viewId) {
@@ -1868,8 +1881,8 @@
         const chapterButtonsHtml = eraChapters.map((ch, idx) => `
           <button type="button" onclick="selectChapter('${activeEra}', ${idx})" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full text-left p-6 border rounded-lg hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer group block">
             <div>
-              <span class="font-sans text-sm tracking-[0.16em] uppercase opacity-85 block mb-1.5">${ch.number}</span>
-              <h3 class="font-display text-xl font-semibold">${ch.title}</h3>
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80 block mb-1.5">${ch.number}</span>
+              <h3 class="font-display text-lg font-semibold">${ch.title}</h3>
             </div>
           </button>
         `).join('');
@@ -1907,21 +1920,21 @@
       const btnStyle = "background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);";
 
       const prevLinkHtml = hasPrev 
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Previous Chapter</button>` 
+        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Previous Chapter</button>` 
         : `<span></span>`;
 
       const nextLinkHtml = hasNext 
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Next Chapter</button>` 
+        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Next Chapter</button>` 
         : `<span></span>`;
 
       mainContainer.innerHTML = `
-        <article id="readingBody" style="font-size:${baseFontSize}px;line-height:${baseFontSize * 1.75}px" class="font-serif transition-all duration-200">
+        <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
           <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-sm tracking-[0.2em] uppercase text-theme-secondary font-semibold">${chapter.number}</p>
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-bold">${chapter.number}</p>
             <h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide font-semibold">${chapter.title}</h2>
             <div class="flex items-center justify-center gap-3 mt-6">
               <span class="w-8 h-px bg-theme-border"></span>
-              <span class="text-theme-secondary text-sm">✦</span>
+              <span class="text-theme-secondary text-[10px]">✦</span>
               <span class="w-8 h-px bg-theme-border"></span>
             </div>
           </div>
@@ -1929,9 +1942,9 @@
             ${formattedParagraphs}
           </div>
 
-          <div class="mt-20 pt-10 border-t border-theme-border flex flex-wrap items-center justify-between gap-4 text-sm font-sans uppercase tracking-[0.14em]">
+          <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
             ${prevLinkHtml}
-            <button type="button" onclick="openReaderIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-sm font-sans uppercase tracking-[0.14em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
+            <button type="button" onclick="openReaderIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
             ${nextLinkHtml}
           </div>
         </article>
@@ -1941,7 +1954,7 @@
     }
 
     function changeFontSize(delta) {
-      baseFontSize = Math.min(28, Math.max(17, baseFontSize + (delta * 1.5)));
+      baseFontSize = Math.min(26, Math.max(16, baseFontSize + (delta * 1.5)));
       const readingBody = document.getElementById('readingBody');
       if (readingBody) {
         readingBody.style.fontSize = `${baseFontSize}px`;
@@ -2168,7 +2181,7 @@
               'Every person enters upon an arrangement of relations that stood before his coming. He is born into a household, is made acquainted with customs, is schooled according to established principles, and is by degrees made familiar with the duties that belong to his circumstances.',
               'Some duties are inherited through family. Others attend upon education, occupation, public office, or social station. Some are fixed by formal law, while others are kept alive by expectation and long practice.',
               'In The Individual and Society, Maximilian Constantin examines the relation between the individual and those structures that order the common life. The volume considers how men come to understand their place in society, how duties become attached to particular stations, and how the conduct of individuals bears upon the stability of the arrangements in which they take part.',
-              'Constantin proceeds from a traditional philosophical position. He holds established institutions, inherited duties, and the continuance of society to be weighty foundations of an ordered kingdom. He contends that social arrangements ought not to be treated as isolated conventions, but understood in relation to the larger ends they serve.',
+              'Constantin proceeds from a traditional philosophical position. He holds established institutions, inherited duties, and the continuance of society to be weighty foundations of an ordered kingdom. He contends that social arrangements ought not be treated as isolated conventions, but understood in relation to the larger ends they serve.',
               'His inquiry reaches from the household to education, to authority, to public responsibility, and to the relation between private judgement and common obligation.',
               'Nor does the volume concern itself solely with the duties of individuals. It considers likewise the duties of the arrangements that define them. A station, says Constantin, cannot be understood apart from its function. Authority cannot be rightly examined without regard to the obligations that attend it. And the preservation of an institution requires more than the repetition of its customary practices: its purpose must remain understood.',
               'The chief concern of this work is therefore the relation between individual conduct and the continuance of society. It asks: What is it to hold a station within an ordered society, and what duties follow from that station?'
@@ -2664,7 +2677,6 @@
       el.insertAdjacentHTML('afterbegin', h);
     }
 
-    /* Split longer text sections across consecutive pages at a uniform font size */
     function paginateSection(label, paragraphs, maxCharsPerPage, startDropCap) {
       var chunks = [];
       var current = [];
@@ -2806,7 +2818,7 @@
       archiveReaderView.dataset.layout = layout;
       bookEl.style.setProperty('--cv', b.cv); bookEl.style.setProperty('--cv2', b.cv2);
       bookEl.style.setProperty('--fd', (single() ? FLIP_S : FLIP) + 'ms');
-      bookEl.style.setProperty('--k', single() ? '1.2' : '1');
+      bookEl.style.setProperty('--k', single() ? '1.25' : '1');
       bookEl.style.setProperty('--tx', '0px'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg');
       if (single()) buildSingle(b); else buildSpread(b);
     }
@@ -2831,12 +2843,12 @@
       if (single()) {
         pw = W;
         bookEl.style.width = W + 'px'; bookEl.style.height = H + 'px';
-        bookEl.style.fontSize = (Math.min(W, H * (W > H ? .85 : .62)) * .044).toFixed(2) + 'px';
+        bookEl.style.fontSize = (Math.min(W, H * (W > H ? .85 : .62)) * .045).toFixed(2) + 'px';
       } else {
         var ratio = 7 / 5;
-        pw = Math.max(190, Math.floor(Math.min((W - 80) / 2, (H - 80) / ratio)));
+        pw = Math.max(180, Math.floor(Math.min((W - 80) / 2, (H - 80) / ratio)));
         bookEl.style.width = (2 * pw) + 'px'; bookEl.style.height = Math.round(pw * ratio) + 'px';
-        bookEl.style.fontSize = (pw * .043).toFixed(2) + 'px';
+        bookEl.style.fontSize = (pw * .0435).toFixed(2) + 'px';
         position(); thickness();
       }
     }
