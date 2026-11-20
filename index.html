@@ -192,15 +192,15 @@
 
     /* Main prose blocks stepped down by one notch for balanced readability */
     .prose-body {
-      font-size: 1.125rem; /* 18px */
+      font-size: 1.125rem;
       line-height: 1.78;
     }
     .prose-body-lg {
-      font-size: 1.1875rem; /* ~19px */
+      font-size: 1.1875rem;
       line-height: 1.8;
     }
     .character-bio {
-      font-size: 1rem; /* 16px */
+      font-size: 1rem;
       line-height: 1.7;
     }
 
@@ -798,7 +798,6 @@
     .scriptorium-book .face.back .rh {
       justify-content: flex-start;
     }
-    /* Uniform font size across all book pages, continuing naturally onto next page */
     .scriptorium-book .tx {
       flex: 1;
       min-height: 0;
@@ -1209,7 +1208,7 @@
       </div>
     </section>
 
-    <!-- 2. THE WORLD OF NORWYN -->
+    <!-- 2. THE WORLD OF NORWYN & GALLERY -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
         <div>
@@ -1390,6 +1389,16 @@
           <p class="font-serif italic text-theme-heading pt-4 text-2xl">
             Welcome to Norwyn.
           </p>
+        </div>
+
+        <!-- ==================== GALLERY (Part of The World of Norwyn) ==================== -->
+        <div id="world-gallery" class="book-card p-8 md:p-12 rounded-sm space-y-4 text-left scroll-mt-24">
+          <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">The Gallery</span>
+          <h3 class="font-display text-2xl md:text-3xl text-theme-text font-semibold tracking-wide">A Kingdom Beyond the Pages</h3>
+          <p class="font-serif prose-body text-theme-text-muted text-justify">
+            Browse visual plates across the kingdom, architecture, interiors, seasons, royal life, and daily life in Norwyn.
+          </p>
+          <div id="norwynWorldGalleryMount"></div>
         </div>
       </div>
     </section>
@@ -1818,9 +1827,10 @@
     </div>
   </footer>
 
-  <!-- External Chapter Files -->
+  <!-- External Chapter & Gallery Files -->
   <script src="chapters.js"></script>
   <script src="chapter-4.js"></script>
+  <script src="norwyn-visual-archive.js"></script>
 
   <!-- Main Application Logic -->
   <script>
@@ -1846,6 +1856,13 @@
       });
 
       window.scrollTo({ top: 0, behavior: 'auto' });
+
+      if (viewId === 'world') {
+        const galleryMount = document.getElementById('norwynWorldGalleryMount');
+        if (window.NorwynVisualArchive && galleryMount) {
+          window.NorwynVisualArchive.mount(galleryMount);
+        }
+      }
 
       if (viewId === 'archive' && window.ScriptoriumArchive) {
         window.ScriptoriumArchive.showShelf();
@@ -1998,7 +2015,6 @@
       drawer.classList.toggle('hidden');
     }
 
-    // Smart Scroll: Header hides when scrolling down, reappears when scrolling up
     let lastScrollY = window.pageYOffset;
     window.addEventListener('scroll', () => {
       const header = document.getElementById('siteHeader');
