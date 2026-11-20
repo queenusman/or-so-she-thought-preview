@@ -258,7 +258,7 @@
     }
 
     .shelf-subview {
-      padding: 28px 20px 36px;
+      padding: 36px 24px 44px;
       color: var(--ui);
     }
     body[data-archive-mode="reader"] .shelf-subview {
@@ -294,14 +294,14 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-style: italic;
       font-size: clamp(16px, 2.1vw, 19px);
-      max-width: 54ch;
+      max-width: 56ch;
       line-height: 1.45;
     }
 
     .scriptorium-case {
       position: relative;
       max-width: 920px;
-      margin: 24px auto 0;
+      margin: 28px auto 0;
       padding: 14px;
       background: var(--leather), linear-gradient(135deg, var(--case-hi), var(--case-bg) 65%, var(--case-hi));
       border: 1px solid var(--btn-border);
@@ -430,7 +430,7 @@
     .scriptorium-stage {
       position: relative;
       width: 100%;
-      height: clamp(460px, 72vh, 720px);
+      height: clamp(480px, 74vh, 740px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -446,7 +446,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 14px 18px;
+      padding: 16px 20px;
       pointer-events: none;
     }
     .scriptorium-bar > * {
@@ -1055,23 +1055,23 @@
       </div>
     </div>
 
-    <!-- 3-Line Collapsible Navigation Drawer -->
+    <!-- 3-Line Collapsible Navigation Drawer (Aligned with Reader & World Architecture) -->
     <div id="mobileNav" class="hidden border-b border-theme-border bg-theme-panel px-6 py-6 space-y-6 text-xs font-sans uppercase tracking-[0.2em]">
       <div>
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
-          Section One
+          Orientation & Front Matter
         </p>
+        <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
         <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Premise</button>
-        <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World of Norwyn</button>
-        <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Characters</button>
+        <button onclick="switchView('disclaimer'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Disclaimer</button>
       </div>
       <div>
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
-          Section Two (Read)
+          The Story & World of Norwyn
         </p>
-        <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
-        <button onclick="switchView('disclaimer'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Disclaimer</button>
         <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read the Chapters</button>
+        <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World of Norwyn</button>
+        <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Characters</button>
         <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Norwyn Archives</button>
       </div>
     </div>
@@ -1112,7 +1112,7 @@
       <!-- Dual Portal Gateway Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto mb-16">
         
-        <!-- Experience Portal 1: Explore -->
+        <!-- Experience Portal 1: Orientation & Front Matter -->
         <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -1122,45 +1122,45 @@
               Before You Begin
             </h2>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
-              Before you begin the story, take a moment to get to know Norwyn, its people, and the world in which their lives unfold.
-            </p>
-            
-            <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
-              <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
-                <span>The Premise</span>
-              </button>
-              <button type="button" onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
-                <span>The World of Norwyn</span>
-              </button>
-              <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
-                <span>The Characters</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience Portal 2: Read -->
-        <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section Two</span>
-            </div>
-            <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
-              Read the Novel
-            </h2>
-            <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
-              This is where Elisabeta's story begins to unfold. Make yourself comfortable, take your time with the chapters, and, whenever curiosity leads you, wander a little further through the letters, documents and historical records that offer glimpses of the world around her.
+              Begin with the author's welcome, the premise of Elisabeta's world, and the boundaries of the story before stepping into the chapters or the wider kingdom.
             </p>
             
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
               <button type="button" onclick="switchView('author-note')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>A Note from the Author</span>
               </button>
+              <button type="button" onclick="switchView('prologue')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+                <span>The Premise</span>
+              </button>
               <button type="button" onclick="switchView('disclaimer')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Disclaimer</span>
               </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Portal 2: The Story & World of Norwyn -->
+        <div class="book-card p-9 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section Two</span>
+            </div>
+            <h2 class="font-display text-2xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
+              Story &amp; World of Norwyn
+            </h2>
+            <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
+              Follow Elisabeta's story chapter by chapter, and whenever curiosity leads you, explore the world of Norwyn, its people, and the bound volumes in the Scriptorium archive.
+            </p>
+            
+            <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
               <button type="button" onclick="openReaderIndex()" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>Read the Chapters</span>
+              </button>
+              <button type="button" onclick="switchView('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+                <span>The World of Norwyn</span>
+              </button>
+              <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
+                <span>The Characters</span>
               </button>
               <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Norwyn Archives</span>
@@ -1382,8 +1382,21 @@
 
     <!-- 3. THE CHARACTERS -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
-      <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="text-center max-w-2xl mx-auto mb-10">
         <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Characters</h2>
+      </div>
+
+      <!-- Quick-Jump Anchor Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
+        <a href="#char-royal-court" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[10px] font-sans uppercase tracking-[0.2em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          Royal Family &amp; Court
+        </a>
+        <a href="#char-household-academy" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[10px] font-sans uppercase tracking-[0.2em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          Household &amp; Academy
+        </a>
+        <a href="#char-relationships" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[10px] font-sans uppercase tracking-[0.2em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          Key Relationships
+        </a>
       </div>
 
       <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif text-base text-theme-text leading-relaxed mb-12 text-justify">
@@ -1393,8 +1406,9 @@
         </p>
       </div>
 
-      <div class="space-y-8">
-        <div class="space-y-4">
+      <div class="space-y-12">
+        <!-- Group 1: Royal Family & Court of Valenne -->
+        <div id="char-royal-court" class="space-y-6 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
@@ -1475,11 +1489,7 @@
                 She has her own ideas about where she belongs, which do not always coincide with the household's arrangements.
               </p>
             </div>
-          </div>
-        </div>
 
-        <div class="space-y-4 pt-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h4>
@@ -1517,7 +1527,8 @@
           </div>
         </div>
 
-        <div class="space-y-4 pt-4">
+        <!-- Group 2: Royal Household, Academy & Fletcher Family -->
+        <div id="char-household-academy" class="space-y-6 pt-2 scroll-mt-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
@@ -1582,11 +1593,7 @@
                 Their responsibilities differ, but together they maintain the daily life of the royal residence. An attendant accompanies Elisabeta whenever she leaves the palace.
               </p>
             </div>
-          </div>
-        </div>
 
-        <div class="space-y-4 pt-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2">
               <div class="flex items-baseline justify-between mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Professor Calloway</h4>
@@ -1646,7 +1653,8 @@
           </div>
         </div>
 
-        <div class="book-card p-8 rounded-sm space-y-4 mt-8">
+        <!-- Group 3: Key Relationships Summary Card -->
+        <div id="char-relationships" class="book-card p-8 rounded-sm space-y-4 mt-8 scroll-mt-24">
           <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Key Relationships</h3>
           <ul class="list-disc pl-5 space-y-2 text-sm text-theme-text-muted font-serif">
             <li>Queen Ecaterina is the mother of Elisabeta and Ileana.</li>
@@ -1737,7 +1745,7 @@
     </section>
 
     <!-- 4. ARCHIVE (Scriptorium Bookcase Shelf & Interactive Reader) -->
-    <section id="view-archive" class="view-section view-hidden max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <section id="view-archive" class="view-section view-hidden max-w-6xl mx-auto px-4 sm:px-6 py-12">
       <div class="scriptorium-shell" id="scriptoriumShell">
         
         <!-- Shelf Subview -->
@@ -1746,9 +1754,12 @@
             <div>
               <p class="scriptorium-eyebrow">The Norwyn Archives · Royal Reading Room</p>
               <h3>Scriptorium</h3>
-              <p class="scriptorium-lead">A quiet archive with four bound volumes on the shelves. Take one down and turn its pages.</p>
+              <p class="scriptorium-lead">A quiet reading room with bound volumes on the shelves. Pull a spine to open its pages, or return to the novel chapters whenever you are ready.</p>
             </div>
-            <button class="scriptorium-btn tog" id="bSoundShelf" type="button" aria-pressed="true">Sound</button>
+            <div class="flex flex-wrap items-center gap-2">
+              <button class="scriptorium-btn" type="button" onclick="openReaderIndex()">Read the Chapters &rarr;</button>
+              <button class="scriptorium-btn tog" id="bSoundShelf" type="button" aria-pressed="true">Sound</button>
+            </div>
           </div>
 
           <div class="scriptorium-case" id="scriptoriumCase"></div>
@@ -1761,7 +1772,10 @@
           <div class="scriptorium-bar top">
             <button class="scriptorium-btn" id="toShelfBtn" type="button">&larr; Shelf</button>
             <div class="scriptorium-rtitle" id="scriptoriumRTitle"></div>
-            <button class="scriptorium-btn tog" id="bSoundReader" type="button" aria-pressed="true">Sound</button>
+            <div class="flex items-center gap-2">
+              <button class="scriptorium-btn hidden sm:inline-block" type="button" onclick="openReaderIndex()">Chapters</button>
+              <button class="scriptorium-btn tog" id="bSoundReader" type="button" aria-pressed="true">Sound</button>
+            </div>
           </div>
 
           <div class="scriptorium-stage" id="scriptoriumStage" aria-live="polite">
