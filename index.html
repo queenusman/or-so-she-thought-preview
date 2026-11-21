@@ -950,6 +950,7 @@
       border-radius: 4px;
       background: radial-gradient(ellipse 85% 60% at 50% 0%, var(--room-hi) 0%, var(--room) 72%);
       box-shadow: var(--card-shadow);
+      overflow: hidden;
     }
 
     .scriptorium-btn {
@@ -1164,6 +1165,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       user-select: none;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
@@ -1261,7 +1263,7 @@
       flex: none;
       perspective: 2800px;
       font-size: 18px;
-      --fd: 0.9s;
+      --fd: 0.85s;
       transform: translate(var(--tx, 0px), var(--ty, 0px)) rotateX(var(--rx, 0deg));
       transition: transform 0.75s cubic-bezier(.22, .8, .28, 1);
     }
@@ -1277,6 +1279,15 @@
       background: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, .55), transparent 70%);
       filter: blur(7px);
       z-index: 0;
+      transition: left .5s ease, right .5s ease, opacity .4s ease;
+    }
+    .scriptorium-book.closed-cover .shadow {
+      left: 50%;
+      right: 0;
+    }
+    .scriptorium-book.closed-back .shadow {
+      left: 0;
+      right: 50%;
     }
     .scriptorium-book .slab {
       position: absolute;
@@ -1289,7 +1300,8 @@
     }
     .scriptorium-book .slab.r { left: 50%; }
     .scriptorium-book .slab.l { left: 0; }
-    .scriptorium-book.closed-cover .slab {
+    .scriptorium-book.closed-cover .slab,
+    .scriptorium-book.closed-back .slab {
       opacity: 0 !important;
       box-shadow: none !important;
     }
@@ -1303,7 +1315,8 @@
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       transform: rotateY(0deg);
-      transition: transform var(--fd, 0.9s) cubic-bezier(.22, .8, .28, 1);
+      transition: transform var(--fd, 0.85s) cubic-bezier(.22, .8, .28, 1);
+      will-change: transform;
     }
     .scriptorium-book .leaf.flipped {
       transform: rotateY(-180deg);
@@ -1333,7 +1346,7 @@
       background: linear-gradient(to left, rgba(0, 0, 0, .48), rgba(0, 0, 0, 0) 75%);
     }
     .scriptorium-book .leaf.turning .face::after {
-      animation: shade var(--fd, 0.9s) ease-in-out;
+      animation: shade var(--fd, 0.85s) ease-in-out;
     }
     @keyframes shade {
       0% { opacity: 0; }
@@ -1714,13 +1727,14 @@
       color: var(--rubric);
     }
 
+    /* Single-page mobile layout */
     .scriptorium-book.sg {
       width: 100%;
       height: 100%;
-      perspective: 1900px;
-      perspective-origin: 35% 50%;
-      transform: none;
-      transition: none;
+      perspective: 1800px;
+      perspective-origin: 30% 50%;
+      transform: none !important;
+      transition: none !important;
     }
     .scriptorium-book.sg .shadow,
     .scriptorium-book.sg .slab {
@@ -1731,10 +1745,12 @@
       width: 100%;
       transform-origin: left center;
       transform: rotateY(0deg);
-      transition: transform var(--fd, .6s) cubic-bezier(.22, .8, .28, 1);
+      transition: transform var(--fd, .55s) cubic-bezier(.22, .8, .28, 1);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
     .scriptorium-book.sg .leaf.flipped {
-      transform: rotateY(-102deg);
+      transform: rotateY(-106deg);
     }
     .scriptorium-book.sg .leaf.turning {
       will-change: transform;
@@ -1752,14 +1768,14 @@
       box-shadow: inset 0 0 70px rgba(0, 0, 0, .4);
     }
     .scriptorium-book.sg .cv {
-      padding: 40px max(7%, 16px) 52px;
+      padding: 36px max(7%, 16px) 48px;
     }
     .scriptorium-book.sg .face.paper.front::before {
       background: linear-gradient(to right, rgba(62, 61, 67, .35) 0, rgba(62, 61, 67, .12) 3%, transparent 11%);
     }
     .scriptorium-book.sg .pg {
       align-items: center;
-      padding: 28px max(5%, 14px) 44px;
+      padding: 24px max(5%, 16px) 38px;
     }
     .scriptorium-book.sg .pg > * {
       width: 100%;
@@ -1767,28 +1783,36 @@
     }
     .scriptorium-book.sg .rh {
       justify-content: space-between;
+      gap: 10px;
+    }
+    .scriptorium-book.sg .rh span:first-child {
+      flex: none;
+    }
+    .scriptorium-book.sg .rh span:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .scriptorium-book.sg .ft {
       justify-content: center;
     }
-    @keyframes lift { from { opacity: 1; } to { opacity: 0; } }
-    @keyframes drop { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes lift { from { opacity: .65; } to { opacity: 0; } }
+    @keyframes drop { from { opacity: 0; } to { opacity: .65; } }
     .scriptorium-book.sg .leaf.under .face.front::after {
-      background: rgba(0, 0, 0, .42);
-      animation: lift var(--fd, .6s) ease-out both;
+      background: rgba(0, 0, 0, .38);
+      animation: lift var(--fd, .55s) ease-out both;
     }
     .scriptorium-book.sg .leaf.over .face.front::after {
-      background: rgba(0, 0, 0, .42);
-      animation: drop var(--fd, .6s) ease-in both;
+      background: rgba(0, 0, 0, .38);
+      animation: drop var(--fd, .55s) ease-in both;
     }
 
     @media (max-width: 720px) {
       .scriptorium-rtitle { display: none; }
       .scriptorium-btn { font-size: 10px; padding: 7px 10px; }
-      .scriptorium-hint { font-size: 15px; }
+      .scriptorium-hint { font-size: 14px; bottom: 12px; }
       .scriptorium-mast p.scriptorium-lead { font-size: 15px; }
       .scriptorium-fine { font-size: 14px; }
-      .scriptorium-stage { height: clamp(560px, 82vh, 780px); }
+      .scriptorium-stage { height: clamp(540px, 78dvh, 760px); }
       #view-archive.max-w-6xl { padding-left: 0.5rem; padding-right: 0.5rem; }
     }
     @media (pointer: coarse) {
@@ -1797,8 +1821,8 @@
     @media (prefers-reduced-motion: reduce) {
       .scriptorium-book, .scriptorium-book .leaf, .scriptorium-subview { transition-duration: .01s !important; }
       .scriptorium-book .leaf.turning .face::after,
-      .scriptorium-book.sg .leaf.under .face::after,
-      .scriptorium-book.sg .leaf.over .face::after { animation: none; }
+      .scriptorium-book.sg .leaf.under .face.front::after,
+      .scriptorium-book.sg .leaf.over .face.front::after { animation: none; }
     }
   </style>
 </head>
@@ -1894,7 +1918,7 @@
         </p>
         <button onclick="switchView('author-note'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">A Note from the Author</button>
         <button onclick="switchView('prologue'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Premise</button>
-        <button onclick="switchView('disclaimer'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Disclaimer</button>
+        <button onclick="switchView('disclaimer'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Content Notice &amp; Copyright</button>
       </div>
       <div>
         <p class="text-[10px] tracking-[0.25em] text-theme-secondary font-bold pb-2 border-b border-theme-border mb-3">
@@ -1902,7 +1926,7 @@
         </p>
         <button onclick="openReaderIndex(); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">Read the Chapters</button>
         <button onclick="switchView('world'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The World of Norwyn</button>
-        <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Characters</button>
+        <button onclick="switchView('characters'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The People of Norwyn</button>
         <button onclick="switchView('archive'); toggleMobileNav()" class="block w-full text-left py-2 text-theme-text-muted hover:text-theme-text">The Norwyn Archives</button>
       </div>
     </div>
@@ -1949,7 +1973,7 @@
               Before You Begin
             </h2>
             <p class="font-serif text-sm text-theme-text-muted leading-relaxed mb-6 font-light">
-              Begin with the author's welcome, the premise of Elisabeta's world, and the boundaries of the story before stepping into the chapters or the wider kingdom.
+              Begin with the author's welcome, the premise of Elisabeta's world, and the content and copyright notice before stepping into the chapters or the wider kingdom.
             </p>
 
             <div class="border-t border-theme-border-subtle pt-5 space-y-2.5 relative z-20">
@@ -1960,7 +1984,7 @@
                 <span>The Premise</span>
               </button>
               <button type="button" onclick="switchView('disclaimer')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
-                <span>Disclaimer</span>
+                <span>Content Notice &amp; Copyright</span>
               </button>
             </div>
           </div>
@@ -1986,7 +2010,7 @@
                 <span>The World of Norwyn</span>
               </button>
               <button type="button" onclick="switchView('characters')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
-                <span>The Characters</span>
+                <span>The People of Norwyn</span>
               </button>
               <button type="button" onclick="switchView('archive')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all flex items-center justify-center shadow-sm cursor-pointer">
                 <span>The Norwyn Archives</span>
@@ -1998,25 +2022,32 @@
       </div>
     </section>
 
-    <!-- ==================== SECTION ONE: EXPLORE THE NOVEL ==================== -->
+    <!-- ==================== SECTION ONE: BEFORE YOU BEGIN ==================== -->
 
     <!-- 1. PREMISE -->
     <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">Premise</h2>
       </div>
 
       <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
-        <p>In the island kingdom of Norwyn, where royal traditions are woven into everyday life and the future of a kingdom rests upon the shoulders of its next queen, Princess Elisabeta has always known what is expected of her.</p>
-        <p>She has been raised for a life of duty.</p>
-        <p>At twenty-two, Elisabeta is the eldest daughter of Queen Ecaterina and heir to the throne. She has spent years learning the history of her kingdom, studying the art of governance and preparing for the responsibilities that will one day be hers. Even her future marriage has been arranged, with her engagement to Prince Alexandru of Valenne forming another part of the life everyone expects her to lead.</p>
-        <p>It is, by all appearances, a wonderful life. She has a palace to call home, a kingdom to inherit and a future carefully prepared for her.</p>
-        <p>And Elisabeta has never had much reason to imagine it could be otherwise.</p>
-        <p>But beyond the palace gates, Norwyn is a world of its own. Its streets are filled with people making their way through lives of love, ambition, disappointment and unexpected possibility. They have their own hopes to protect, promises to keep and decisions to make. And although the kingdom may look different from where they stand, its rules and traditions touch their lives just as surely.</p>
-        <p>As Elisabeta begins to see more of the world beyond the one she has always known, familiar answers begin to give way to unfamiliar questions. Things she once understood so easily become a little harder to explain. The life she has been preparing for begins to look different when she considers the lives of those around her.</p>
-        <p>Perhaps growing into the person everyone expects you to be is not quite the same as discovering who you are.</p>
+        <p>Elisabeta is twenty-two, heir to the crown of Norwyn, and very good at knowing what is expected of her.</p>
+        <p>In the island kingdom of Norwyn, the crown passes from mother to daughter, and every royal child carries her mother's name. The kingdom is governed by centuries of tradition, carefully maintained institutions and a philosophy that teaches that stability comes from arranging differences so that nothing works against the whole. Its Capital stands inland, among old stone buildings, long galleries and grand residences. There are three seasons and no summer. Fires are lit before dawn, rooms are prepared before their occupants arrive, and an entire world of people work quietly to keep the kingdom running.</p>
+        <p>Elisabeta has been raised to understand this world. As the eldest daughter of Queen Ecaterina, she has spent her life studying its history, learning the principles of government and preparing for the responsibilities of a future queen. She knows how to answer difficult questions, defend established principles and carry herself with the composure expected of someone who will one day inherit a kingdom. Her engagement to Prince Alexandru of Valenne is another part of that future, one that two kingdoms have spent a year preparing.</p>
+        <p>It is, by every reasonable measure, a remarkable life. She has a loving family, a kingdom to inherit and a future that appears to have been arranged with considerable care.</p>
+        <p>And, until recently, she has had little reason to question any of it.</p>
+        <p>Her mother loves her. Her sister is her closest friend. Her future husband is pleasant and well-meaning. The people around her are not cruel, and nobody seems particularly interested in making her unhappy. If anything, they are looking after her. There are arrangements for her comfort, decisions made in her best interests and expectations that have existed for so long that nobody thinks to explain them.</p>
+        <p>But a well-run life can conceal a great deal.</p>
+        <p>It begins with small things. A wire caught on a branch. A seam in a wooden panel. A glass of water that arrives at precisely the right temperature, though she has seen nobody bring it. The details are easily dismissed, yet they leave her with an unfamiliar sense that there is more happening around her than she has been taught to notice.</p>
+        <p>Beyond the palace, Norwyn is full of lives she has never had to consider closely. People make promises, pursue ambitions, endure disappointments, fall in love and find ways to live within circumstances they did not choose. Their lives are shaped by the same traditions and institutions that have shaped hers, though from positions very different from her own. The kingdom she has always understood from the perspective of its inheritance, its history and its government begins to look different when she considers the people who keep it functioning.</p>
+        <p>As Elisabeta becomes more attentive to the world around her, familiar explanations become harder to accept without examination. She begins to notice what has been arranged, who has made the arrangements, what they require of others and how little she has ever needed to ask. Even the future she has been preparing for begins to look different when she considers what it means to inherit a life that so many people have helped to decide.</p>
+        <p>There is no single revelation waiting to overturn everything she knows. No obvious enemy to expose, no simple injustice to correct and no easy distinction between those who care for her and those who expect something from her. The people she loves are part of the world she is beginning to question, just as she is part of theirs.</p>
+        <p>And somewhere between the answers she has always known and the questions she has only just begun to ask, Elisabeta must confront something she has never had much reason to consider:</p>
         <p class="pt-4 border-t border-theme-border-subtle text-center font-serif italic text-theme-text-muted">
-          And perhaps the most important part of a life is not always the part someone else has planned for you.
+          Does knowing how to live the life prepared for you mean you have ever known what you wanted from it?
+        </p>
+        <p class="pt-2 text-theme-text-muted">
+          <em>Or So She Thought</em> is a literary psychological novel about inheritance, family, duty, identity and the quiet arrangements that shape a person's life. It is about a kingdom, the people who sustain it, and a young woman beginning to discover that being cared for is not necessarily the same as being known.
         </p>
       </div>
     </section>
@@ -2026,180 +2057,163 @@
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
         <div>
           <h2 class="font-display text-3xl md:text-5xl text-theme-heading tracking-wide mb-3 font-semibold uppercase">DISCOVER NORWYN</h2>
+          <p class="font-serif italic text-theme-text-muted text-lg md:text-xl">
+            An introduction to a kingdom beyond the pages.
+          </p>
         </div>
 
         <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body-lg text-theme-text text-justify">
-          <p>Across the water, upon a great island with mountains, forests and winding rivers, lies the kingdom of Norwyn.</p>
-          <p>It is a land with an ancient royal dynasty, customs passed down through generations and a way of life that belongs entirely to its people. Here, the Queen holds absolute authority, the Crown passes from mother to daughter, and the kingdom's capital rests inland, at the heart of its political and administrative life.</p>
-          <p>But Norwyn is much more than its royal palace.</p>
-          <p>Beyond its grand halls and carefully tended gardens are bustling cities, familiar little towns, peaceful rural communities, busy workshops, farms, harbours and settlements connected by roads, rivers and trade. From the merchant opening his shop in the morning to the student making her way to class, everyone has somewhere to go, something to do and a life of their own to lead.</p>
-          <p>Some lives are filled with comfort and opportunity; others are shaped by harder circumstances. Yet together, they make up the kingdom and give it its character.</p>
+          <p>Across the water, beyond the reach of familiar maps, lies an island kingdom of mountains, forests, winding rivers and old stone cities.</p>
+          <p>Norwyn.</p>
+          <p>A kingdom with a history of its own, an ancient royal lineage, customs carried across generations and a way of life shaped by the land, the weather and the people who call it home. Its Crown has passed from mother to daughter for centuries. Its capital stands far from the sea. Its grandest residences are warmed against the cold, its institutions have long histories, and even the smallest details of everyday life seem to belong to a world that has existed long before any of its present inhabitants.</p>
+          <p>Yet Norwyn is not a kingdom frozen in time.</p>
+          <p>Its railways carry goods across the island. Motor cars pass through old streets. Telephone calls interrupt quiet afternoons. Newspapers arrive with news from beyond its shores. In its towns, shops open, students attend their lessons, businesses change hands and families make their way through the ordinary complications of living.</p>
           <p class="font-serif italic text-theme-heading pt-2">
-            What follows is a little journey through the country in which Elisabeta's story unfolds.
+            There is much to discover here. But perhaps the most interesting things about Norwyn are not always the ones that announce themselves.
           </p>
         </div>
 
         <div class="space-y-8 font-serif prose-body text-theme-text text-justify">
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Island and Its Seasons</span>
-            <p>Norwyn is a large island, and there is much to discover across its varied landscape.</p>
-            <p>In some parts, mountains rise above great stretches of forest. Elsewhere, farmland spreads across the countryside, rivers wind towards inland settlements, and long coastlines look out towards distant shores. Each region has its own character, shaped by its surroundings and the people who call it home.</p>
-            <p>The land and its people have always been closely connected. Farmers tend the fields, forests provide timber, rivers carry goods towards inland centres, and coastal communities maintain the kingdom's connections with lands across the water.</p>
-            <p>Norwyn has three seasons: spring, autumn and winter. There is no summer. Instead, the year follows the gentle thaw of spring, the return of colder weather in autumn and the first frosts of winter, with periods of rain and quieter skies in between.</p>
-            <p>The seasons bring their own familiar rhythms. Winter means damp stone, cold rooms and the comforting glow of a well-kept fire. The easing of the rain brings changes of its own, as people return to outdoor work and the countryside takes on a different appearance.</p>
-            <p>And beyond the island, across the water, are other kingdoms. Among them is Valenne, whose royal family and commercial interests have long-standing connections with Norwyn.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">THE ISLAND</span>
+            <p>Mountains rise over the northern forests. Rivers cross the countryside towards the inland Capital, while the southern coast opens onto harbours, fishing towns and distant kingdoms. Between them lie farms, villages, industrial settlements and roads that connect one part of the island to another.</p>
+            <p>Norwyn is a land of varied landscapes, though its seasons are fewer than one might expect.</p>
+            <p>There is spring, autumn and winter.</p>
+            <p>No summer.</p>
+            <p>The year moves from the easing cold of spring into the return of rain and colder days in autumn, before winter settles over the island once more. The weather is often damp. Stone buildings hold the chill, rivers run through grey skies, and fires remain a familiar part of domestic life even where electric lights have long since replaced candles.</p>
+            <p>The seasons shape more than the landscape. They determine what grows, what travels, what people wear and how the days are spent. The countryside has its own rhythms, as do the towns and the Capital. Life changes with the weather, but never quite stops for it.</p>
+            <p>And beyond the southern waters lie other kingdoms, with their own histories, ambitions and lives.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Crown</span>
-            <p>At the heart of Norwyn's history stands its royal dynasty.</p>
-            <p>Norwyn is an absolute monarchy, and the Queen is the kingdom's sovereign, holding supreme governing authority. The Crown passes through the female line, with the eldest daughter serving as heir to the throne.</p>
-            <p>Royal children inherit their mother's royal family name. When a Queen marries, her husband retains the title of Prince rather than becoming King, and the succession remains within the maternal line.</p>
-            <p>At the beginning of our story, Queen Ecaterina rules Norwyn. Her eldest daughter, Princess Elisabeta, is heir to the throne, while her younger daughter is Princess Ileana.</p>
-            <p>The monarchy is woven into the everyday life of the kingdom. It is not simply a matter of grand ceremonies and royal appearances. The Crown has responsibilities that reach into the administration of the country, its official records and the institutions entrusted with carrying out its affairs.</p>
-            <p>For generations, the royal household has been part of the story of Norwyn, shaping the kingdom in ways that extend far beyond the palace walls.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">THE CROWN</span>
+            <p>Norwyn is ruled by a Queen.</p>
+            <p>The monarchy is absolute, and the Crown is passed through the female line. The eldest daughter of the reigning Queen is heir to the throne. Royal children inherit their mother's family name, and the Queen's husband holds the title of Prince rather than King.</p>
+            <p>The royal family is not merely a symbol of the kingdom. It stands at the centre of its political, administrative and public life, with responsibilities extending far beyond the palace.</p>
+            <p>Royal history is preserved in portraits, official records, family names and institutions that have outlasted generations. The past is never entirely separate from the present. It remains in the titles people carry, the traditions they observe and the expectations that accompany certain positions.</p>
+            <p>In Norwyn, the Crown is inherited.</p>
+            <p>So, too, are many of the things that come with it.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The People of Norwyn</span>
-            <p>Every kingdom has its people, and Norwyn is no different.</p>
-            <p>Its society formally recognises two classes: royals and non-royals. Royals belong to the ruling dynasty, while everyone outside it is considered non-royal.</p>
-            <p>But life among the non-royal population is far from uniform.</p>
-            <p>There are prosperous merchants with thriving businesses, university students preparing for their futures, skilled joiners whose work is known across their towns, and labourers who earn their living through difficult and often poorly paid work.</p>
-            <p>Wealth, occupation, education, family circumstances and access to opportunities all influence the lives people are able to lead.</p>
-            <p>A merchant and a labourer may share the same formal social status, but their homes, prospects and daily experiences may be worlds apart.</p>
-            <p>The distinction between royal and non-royal is an important part of Norwynian society, but there are many other things that shape a person's place in the kingdom.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">A KINGDOM OF MANY LIVES</span>
+            <p>Norwyn formally distinguishes between royals and non-royals. Beyond that distinction, however, the lives of its people vary enormously.</p>
+            <p>Merchants conduct business in busy streets. Students spend their days in lecture rooms and libraries. Joiners work with timber, dressmakers with fabric, and labourers take on work that often begins before the rest of the town is awake. Families run shops, maintain farms, manage workshops and make a living in ways that have changed little or considerably over the years.</p>
+            <p>Some live comfortably. Others have very little to spare.</p>
+            <p>There are grand residences with several rooms kept ready for guests, and modest homes where the day's work is never quite finished. There are people whose names open doors and others who spend their lives making certain those doors are ready to open for someone else.</p>
+            <p>The kingdom may share a common history, but its people do not share identical lives.</p>
+            <p>And no palace, however large, contains all of Norwyn.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Capital and the Palace</span>
-            <p>At the heart of the island, away from the coast, lies the Capital.</p>
-            <p>It is the seat of government, the home of the royal family and the location of several of Norwyn's most important institutions. Its streets bring together official buildings, places of learning, commercial establishments and private residences.</p>
-            <p>And within the Capital stands the Royal Palace.</p>
-            <p>It is a grand residence, though one that favours elegance over unnecessary display. Its rooms are carefully furnished, its galleries maintained and its gardens tended throughout the year. Among its familiar spaces are the library, the Blue Drawing Room, the conservatory, the oak-panelled east gallery and the long hall in the west wing.</p>
-            <p>Inside, the atmosphere is one of polished wood, beeswax, soft wool and fires kept burning against the cold. The palace has its formal rooms and important occasions, but it also has quieter corners where ordinary household life continues.</p>
-            <p>For behind every beautifully prepared room is someone who has taken the time to prepare it.</p>
-            <p>Gardeners care for the grounds, dressers maintain the royal family's clothing, attendants organise arrangements, and household staff see to meals, fires and the many details that allow the residence to function.</p>
-            <p>The palace may be home to a Queen and her family, but it is also a workplace for the many people whose efforts keep it running.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">THE CAPITAL</span>
+            <p>Inland, at the heart of the kingdom, lies the Capital.</p>
+            <p>It is a city of government offices, old residences, commercial streets, railway sidings and river works. Its architecture carries the weight of its history, though its streets are not untouched by modern life. Motor cars move alongside older buildings. Telegraphs and telephones connect offices and homes. Trains carry goods towards the city, while the river remains part of the movement of the kingdom.</p>
+            <p>The Capital is where Norwyn's institutions gather, where decisions are made and where the royal family resides.</p>
+            <p>But the city has a life beyond its official purpose. There are shops to visit, streets to cross, appointments to keep, rooms to rent, lessons to attend and places where people gather long after the day's business has ended.</p>
+            <p>Its character is found as much in the quiet streets and ordinary routines as in its grand buildings.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Culture and Customs</span>
-            <p>Norwyn has a culture all its own, shaped over generations by French, Spanish, wider European and Cambodian influences.</p>
-            <p>These influences can be found in its architecture, clothing, food, craftsmanship, ceremonies and domestic life. Over time, they have come together to form something distinctly Norwynian.</p>
-            <p>There is a particular appreciation for elegance in the kingdom, though not necessarily for extravagance. Fine materials, careful workmanship and thoughtful details are valued more than unnecessary display. A beautiful garment need not be covered in ornament, and a grand room need not be filled with everything it can hold.</p>
-            <p>Formality has its place in public life, often expressed through precise manners, thoughtful presentation and established customs.</p>
-            <p>Royal occasions follow familiar conventions. Introductions are made in a particular way, seating arrangements are carefully considered, and official appearances follow established forms.</p>
-            <p>The Queen is addressed as Your Majesty, while princesses are addressed as Your Highness.</p>
-            <p>These traditions are part of what makes Norwyn recognisable, giving its public life a sense of continuity across generations.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">THE PALACE</span>
+            <p>The Royal Palace stands among the old buildings of the Capital, its galleries, courtyards, gardens and rooms maintained with a care that is rarely visible to those who enter.</p>
+            <p>It is a residence of polished oak, fine fabrics, painted ceilings, silver candle stands and rooms designed for different purposes. Some are reserved for formal occasions. Others are familiar spaces in which the royal family spends its days. There are libraries, drawing rooms, galleries, a conservatory and long corridors that seem to belong to another age.</p>
+            <p>The palace has its own rhythms.</p>
+            <p>Fires are prepared. Tea is carried. Rooms are aired and arranged. Clothing is maintained, meals planned, correspondence sorted and appointments recorded. A residence of this size requires an extraordinary amount of work, much of it completed before the people who live there have begun their day.</p>
+            <p>The palace is home to the royal family, but it is also the workplace of the people who maintain it.</p>
+            <p>Behind its quiet rooms are kitchens, offices, storerooms, workshops and servants' quarters. Behind its carefully arranged appearances are countless ordinary tasks, repeated every day by people whose names may never appear in the kingdom's history.</p>
+            <p>There is always more to a house than the rooms its guests are permitted to see.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Education and the Royal Academy</span>
-            <p>Learning has an important place in Norwyn, and the kingdom is home to several kinds of educational institutions serving students from different backgrounds.</p>
-            <p>Among its principal institutions is the Royal Academy of Governance, situated in the Capital.</p>
-            <p>The Academy provides education in governance and administration, preparing students for responsibilities within the kingdom's institutions. Its students include members of the royal family as well as those from outside the royal class.</p>
-            <p>One of the important subjects taught there is Structural Ideology, a body of thought concerned with order, organisation and the relationship between individual responsibilities and the needs of the whole.</p>
-            <p>Within this teaching is the doctrine of Alignment. It describes the ideal of a person whose understanding of order has become so well formed that they recognise what serves the whole without needing to be instructed at every step.</p>
-            <p>Students encounter these principles through lessons, discussions and practical examples. Their understanding is examined through formal assessments and academic panels.</p>
-            <p>For those who study at the Academy, learning is not simply about remembering established principles. It is also about understanding how those principles are applied in the world beyond the classroom.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">THE NORWYNIAN WAY</span>
+            <p>Norwyn has been shaped by a variety of historical and cultural influences, among them French, Spanish, wider European and Cambodian traditions. Over generations, these influences have become part of a culture that belongs to Norwyn alone.</p>
+            <p>Elegance is appreciated, but extravagance is not always the measure of it. Fine materials, thoughtful workmanship and a sense of proportion are valued in clothing, architecture, furnishings and everyday objects. A well-made garment, a properly maintained room or a beautifully prepared table can be admired without needing to make a spectacle of itself.</p>
+            <p>Public life is more formal than private life. Introductions, titles, seating arrangements and official occasions follow established conventions. Certain words are used in particular circumstances. Certain gestures are expected. Much of what people know about behaving properly is learned so early that it rarely requires explanation.</p>
+            <p>The kingdom's customs are not all grand ceremonies. Many are smaller, carried through ordinary days and familiar habits, preserved simply because generations have continued to observe them.</p>
+            <p>Some traditions are easy to understand.</p>
+            <p>Others are simply the way things are done.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Work and Trade</span>
-            <p>Much of Norwyn's life is built upon the work of its people.</p>
-            <p>Fabric and flour are among the kingdom's major trades. Agricultural communities contribute to flour production, while textile workshops produce cloth for households, businesses and the royal residence.</p>
-            <p>There is also timber production, joinery, carpentry, construction, gardening, tailoring, transport and administration.</p>
-            <p>The forests supply timber, while rivers provide routes for moving heavy goods towards inland centres. Coal and timber travel towards the Capital, where railway sidings and industrial works support their movement and use.</p>
-            <p>Across the kingdom, people work in family businesses, independent workshops, commercial establishments, institutions and private households. Some inherit their occupations, while others learn a trade or build a business of their own.</p>
-            <p>Norwyn's economy depends upon all these different skills and enterprises.</p>
-            <p>And beyond its shores, trade continues across the water. Commercial arrangements connect Norwyn's ports with businesses and workers in other kingdoms, bringing goods, opportunities and livelihoods together.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">LEARNING AND IDEAS</span>
+            <p>Norwyn has long placed importance on education, particularly in the study of government, administration and the responsibilities of public life.</p>
+            <p>In the Capital stands the Royal Academy of Governance, where students study the principles on which the kingdom's institutions are built. Its halls, lecture rooms, libraries and examination panels form part of a wider educational tradition in which learning is expected to prepare people for the responsibilities they may one day carry.</p>
+            <p>Among the ideas taught in Norwyn is a philosophy of order, one that considers the relationship between individual roles and the stability of the whole. It has influenced the kingdom's institutions and the way its people are taught to understand responsibility, organisation and their place within a larger structure.</p>
+            <p>Ideas, like customs, have histories.</p>
+            <p>And in Norwyn, some have been passed down for so long that it is difficult to tell where an established principle ends and an unquestioned belief begins.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Food and Everyday Life</span>
-            <p>There are familiar comforts to be found in a Norwynian home.</p>
-            <p>Rice, beans and potatoes are common foods in ordinary households, forming part of the meals that sustain families throughout the year.</p>
-            <p>Prosperity can sometimes be seen in the smallest details. Buttered bread, for instance, is associated with greater comfort and wealth.</p>
-            <p>The royal household enjoys a more varied dining tradition. Soup, fish and tea may be served at ordinary meals, while formal receptions and state occasions call for more elaborate arrangements.</p>
-            <p>Daily life is shaped by the work people do, the responsibilities they carry at home, their education and the changing weather.</p>
-            <p>In larger residences, domestic staff undertake much of the work required to maintain the household. Rooms are prepared, meals are served, clothing is cared for and fires are kept burning.</p>
-            <p>A home that appears perfectly in order is often the result of many hands working long before anyone notices.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">WORK, TRADE AND THE EVERYDAY</span>
+            <p>Much of Norwyn depends upon what its people produce.</p>
+            <p>The island's forests supply timber. Its agricultural communities produce food and flour. Its workshops turn fabric into clothing, wood into furniture and raw materials into goods that travel far beyond the places in which they are made.</p>
+            <p>Trade moves along roads, rivers and railways. Ships leave the southern ports for other kingdoms. Businesses depend on the movement of goods, on agreements made between institutions, and on the many people involved in transporting, producing, inspecting and selling what the country needs.</p>
+            <p>Fabric and flour are among Norwyn's principal trades, though neither is the whole of its economy. Timber, fishing, construction, transport, domestic service and countless smaller businesses contribute to the life of the kingdom.</p>
+            <p>Work is not always visible where its results are.</p>
+            <p>A meal arrives at a table. A coat hangs ready. A fire burns in a room before its occupants wake. Goods appear in shops, documents reach offices and buildings remain in order.</p>
+            <p>Someone, somewhere, has spent time making each of these things possible.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Clothing and Dress</span>
-            <p>Clothing in Norwyn tells its own little story.</p>
-            <p>What people wear depends on their occupation, prosperity, the weather and the occasion. A working day calls for practical clothing, while a formal gathering brings different expectations.</p>
-            <p>Royal and wealthy women wear carefully made gowns, often fashioned from silk and other fine fabrics. Plain cotton is worn beneath formal clothing, while wool provides warmth during the colder months.</p>
-            <p>Men may wear black wool for formal occasions, while women complete their dress with gloves and carefully chosen accessories.</p>
-            <p>Household employees wear uniforms suited to their particular duties.</p>
-            <p>Norwyn places considerable value on fine clothing, not only for its appearance but also for the quality of its fabric, construction and workmanship.</p>
-            <p>Its textile traditions are an important part of both its cultural identity and commercial life.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">THE COMFORTS OF HOME</span>
+            <p>The ordinary Norwynian table is built around familiar food. Rice, beans and potatoes are common, accompanied by fish, soup, bread and whatever else a household can afford or prepare.</p>
+            <p>The differences between households are often reflected in small things. The variety of food, the quality of the fabric, the warmth of a room, the number of people available to help with daily work. Butter, for instance, is associated with greater comfort and prosperity.</p>
+            <p>Homes vary just as much as their tables.</p>
+            <p>Some are large residences with staff and rooms for every occasion. Others are modest, their occupants managing the work of the household alongside everything else they do. Across the kingdom, people make their homes according to their means, their occupations, their families and the circumstances in which they live.</p>
+            <p>There is a familiar warmth to domestic life in Norwyn, though comfort means different things to different people.</p>
+            <p>A quiet afternoon, a warm room, a cup of tea, a meal shared without hurry. These things are common enough to be unremarkable.</p>
+            <p>And yet, much of a person's life is made up of precisely such things.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Technology and Transport</span>
-            <p>Norwyn may be a kingdom of old traditions, but it is by no means untouched by modern life.</p>
-            <p>Electric lights brighten its buildings, motor cars travel along its roads, and telephones connect households and offices. Newspapers bring reports from across the island and beyond, while press photographers capture important public occasions.</p>
-            <p>Cassette recorders and railways are also part of the kingdom's everyday world.</p>
-            <p>Yet older practices have not disappeared. Candles remain familiar, coal fires continue to warm homes, handwritten cards are exchanged, and paper records still occupy an important place in households and institutions.</p>
-            <p>Motor cars serve private and official journeys, while railways and rivers connect the Capital with other settlements and commercial centres.</p>
-            <p>In Norwyn, the old and the new exist side by side, each finding its place in the lives of its people.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">OLD WORLD, MODERN LIFE</span>
+            <p>Norwyn belongs to a world in which the old and the new have learned to live alongside one another.</p>
+            <p>Electricity, telephones, motor vehicles, railways, newspapers, cameras and cassette players are part of everyday life. Offices have typewriters and photocopiers. People travel by road and rail. News moves between cities, across ports and beyond the kingdom's borders.</p>
+            <p>But progress has not replaced everything that came before.</p>
+            <p>Candles are still used. Fires are still laid. Handwritten correspondence is still exchanged. Records are kept on paper, and traditions continue to shape the way people conduct themselves even when the technology around them has changed.</p>
+            <p>Norwyn is modern enough to be familiar, yet old enough in its habits to feel distinctly its own.</p>
+            <p>It is a place where a telephone may ring in a house whose rooms have stood for generations, where a motor car waits outside an old stone residence, and where a new decision may still depend on a document passed from one desk to another.</p>
           </div>
 
           <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">The Royal Family and Public Life</span>
-            <p>The Crown is a familiar presence throughout Norwyn.</p>
-            <p>The royal family attends official visits, charity occasions, receptions, state dinners, public openings and formal ceremonies. These events are carefully arranged, from the order of arrival to the seating plan and the photographs later released to the press.</p>
-            <p>Such occasions allow the royal family to be seen across the kingdom and form part of its relationship with the public.</p>
-            <p>Royal marriages carry significance of their own. Beyond the personal lives of those involved, they can strengthen relationships between kingdoms, unite royal families and hold diplomatic importance.</p>
-            <p>For members of the royal household, public appearances and private responsibilities are closely connected. Their lives are lived within traditions that have been observed for generations, even as each new generation brings its own circumstances.</p>
-          </div>
-
-          <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Valenne</span>
-            <p>Across the water from Norwyn lies another kingdom: Valenne.</p>
-            <p>It has its own royal court, educational institutions and commercial interests, and its relationship with Norwyn extends across royal, diplomatic and commercial life.</p>
-            <p>Its southern ports are particularly important to trade and employment. Agreements between the two kingdoms affect businesses, institutions and the many people whose livelihoods depend upon commerce across the water.</p>
-            <p>Among those connected to Valenne is Alexandru, Elisabeta's betrothed and heir to its throne.</p>
-            <p>His place in the Valennian royal family makes the relationship between the two kingdoms an important part of the world surrounding the story.</p>
-            <p>Though separated by water, Norwyn and Valenne are connected in ways that reach into the lives of their people.</p>
-          </div>
-
-          <div class="book-card p-8 rounded-sm space-y-3">
-            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">Institutions and Records</span>
-            <p>Every kingdom has a history worth preserving, and Norwyn is no exception.</p>
-            <p>Across the island, institutions maintain official records and administer different aspects of national life. Some preserve the history of the kingdom, while others oversee the practical arrangements that keep its industries and public affairs running.</p>
-            <p>The Founders' Archive preserves historical records and is supported by the Founders' Trust, which also organises public occasions such as its annual gala.</p>
-            <p>The Inspectorate oversees the Timber Inspection Schedule. Under this arrangement, timber entering Norwyn's trade is inspected on four fixed days each year, according to the same standards and using official seals.</p>
-            <p>The Schedule is regarded as an example of orderly administration because the same requirements apply regardless of ownership.</p>
-            <p>It is also one of the examples studied at the Royal Academy when students learn about Structural Ideology.</p>
-            <p>Through its archives, institutions and official records, Norwyn preserves more than the decisions of its rulers. It also preserves the arrangements, work and ideas that have helped shape the kingdom over time.</p>
+            <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-left">BEYOND NORWYN</span>
+            <p>Norwyn does not stand alone.</p>
+            <p>Across the water lies Valenne, a neighbouring kingdom with its own royal family, institutions, commercial interests and history. The two kingdoms share connections that extend beyond geography, linking their royal households, their trade and the people whose lives are influenced by what happens on either side of the water.</p>
+            <p>There are other places beyond them, too.</p>
+            <p>Other shores. Other cities. Other lives.</p>
+            <p>But Norwyn has its own character, and it is not easily mistaken for somewhere else.</p>
+            <p>Its history belongs to its people. Its customs belong to its generations. Its institutions, however old or ordinary they may appear, form part of a world that has been built, maintained and lived in long before the beginning of this story.</p>
           </div>
         </div>
 
         <div class="book-card p-8 md:p-12 rounded-sm space-y-4 text-center">
-          <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">BEYOND THE PALACE</span>
-          <p class="font-serif italic text-xl text-theme-heading">
-            And so, beyond the royal residence, the kingdom carries on.
+          <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">BEYOND THE PAGES</span>
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
+            There is more to Norwyn than its Crown, its Capital or its grandest buildings.
           </p>
           <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
-            Shops open in the morning. Trains travel between settlements. Farmers tend their fields, students attend their lessons, and families gather in their homes at the end of the day.
+            There are towns whose streets are busy long before noon, villages surrounded by farmland, ports that never quite sleep, forests where timber is cut and carried away, and homes in which the day's work is still waiting to be done.
           </p>
           <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
-            There are relationships to nurture, businesses to maintain, responsibilities to fulfil and familiar routines that give each day its shape.
+            There are people with plans for the future, people trying to hold on to what they have, people who are perfectly content with their lives and people who wish they could change almost everything about them.
           </p>
           <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
-            Not every life revolves around the Crown. Not every story begins in a palace or ends within its walls. Norwyn belongs to all the people who call it home, each living within the traditions, circumstances and distinctions that shape their part of the kingdom.
+            Each belongs to the kingdom in their own way.
           </p>
           <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
-            For the characters of <em>Or So She Thought</em>, Norwyn is much more than the place where events happen. It is the world that has shaped their understanding of family, position, responsibility and the lives they might lead.
+            Norwyn is not merely the setting of a story. It is a world in which lives continue beyond the moments we are permitted to witness, where every place has its history and every person has something that occupies their thoughts.
           </p>
           <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
-            And while Elisabeta's story offers one way of discovering this kingdom, there is so much more beyond its pages. There are places yet to visit, histories yet to uncover and lives yet to meet.
+            You may come to Norwyn through the palace, but there is an entire kingdom beyond its doors.
           </p>
-          <p class="font-serif italic text-theme-heading pt-4 text-2xl">
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
+            Some of it is grand. Some of it is ordinary. Some of it may be more familiar than you expect.
+          </p>
+          <p class="font-serif prose-body text-theme-text-muted max-w-2xl mx-auto text-justify">
+            And there is always more to discover.
+          </p>
+          <p class="font-serif font-semibold text-theme-heading pt-4 text-2xl">
             Welcome to Norwyn.
           </p>
         </div>
@@ -2216,354 +2230,500 @@
       </div>
     </section>
 
-    <!-- 3. THE CHARACTERS -->
+    <!-- 3. THE PEOPLE OF NORWYN -->
     <section id="view-characters" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Characters</h2>
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-3 tracking-wide font-semibold uppercase">THE PEOPLE OF NORWYN</h2>
+        <p class="font-serif italic text-theme-text-muted text-lg md:text-xl">
+          Every life has its own arrangements. Not all of them are visible.
+        </p>
       </div>
 
-      <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
-        <a href="#char-royal-court" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
-          Royal Family &amp; Court
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <a href="#people-royal-family" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          The Royal Family
         </a>
-        <a href="#char-household-academy" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
-          Household &amp; Academy
+        <a href="#people-valenne" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          From Valenne
         </a>
-        <a href="#char-relationships" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
-          Key Relationships
+        <a href="#people-household" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          The Household
+        </a>
+        <a href="#people-academy" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          The Academy
+        </a>
+        <a href="#people-government" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="py-2 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all">
+          Government &amp; Public Life
         </a>
       </div>
 
       <div class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
-        <p>The kingdom of Norwyn is home to all sorts of people, each with a life, a history and a place in the world they call home. Some live within the royal palace, others make their way through the kingdom's institutions, businesses and bustling streets. Each has their own responsibilities, relationships and little corner of Norwyn to call their own.</p>
+        <p>The kingdom of Norwyn is home to all sorts of people, each with a history, a place in the world, and a life that extends far beyond what others see of them. Some live within the Royal Palace. Others belong to the institutions that keep the kingdom running, work along its river, study in its academies, or return each evening to homes far removed from royal life.</p>
+        <p>Their paths cross in ways both ordinary and unexpected. They carry their own habits, loyalties, ambitions, opinions and private understandings of the world. Some are accustomed to being noticed. Others prefer it when they are not.</p>
         <p class="font-serif italic text-theme-heading pt-2 text-center">
-          Come and meet some of the people whose paths cross in <em>Or So She Thought</em>.
+          These are a few of the people you will meet in <em>Or So She Thought</em>.
         </p>
       </div>
 
       <div class="space-y-12">
-        <div id="char-royal-court" class="space-y-6 scroll-mt-24">
+
+        <!-- THE ROYAL FAMILY -->
+        <div id="people-royal-family" class="space-y-6 scroll-mt-24">
+          <h3 class="font-display text-2xl text-theme-text tracking-wider uppercase font-semibold border-b border-theme-border-subtle pb-3">
+            THE ROYAL FAMILY
+          </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Elisabeta</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Heiress</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Heiress</span>
               </div>
-              <p class="text-xs text-theme-accent font-sans mb-3">Age: Twenty-two</p>
+              <p class="text-xs text-theme-accent font-sans mb-2"><strong>Age:</strong> Twenty-two</p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                <strong>Position:</strong> Eldest daughter of Queen Ecaterina, heir to the throne of Norwyn and betrothed to Alexandru of Valenne.
+                The eldest daughter of Queen Ecaterina, heir to the throne of Norwyn, and promised to Alexandru of Valenne.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Born into the royal family, Elisabeta has grown up within the walls of the Royal Palace, where her days have been shaped by lessons, expectations and preparations for the future awaiting her. Her education has included private instruction in Structural Ideology and formal studies at the Royal Academy of Governance, where she has learned the principles that guide the kingdom and its institutions.
+                Elisabeta has spent most of her life being prepared for a future that has never been particularly difficult for others to imagine. Her education has been thorough, her manners carefully formed, and her understanding of the kingdom shaped by years of study, private instruction and life within the palace.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                She is courteous and composed, with a thoughtful nature and an eye for the smallest details. She takes care with her words, likes to explain her reasoning and rarely leaves a question without considering it from several sides. She also has a curious habit of counting things, often noticing details that others might pass by.
+                She is composed, articulate and attentive. She has a habit of noticing things that appear to have no particular importance, and of thinking about them long after everyone else has moved on. She likes reading, a good argument, and occasionally getting away with something she ought not to have done.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Elisabeta enjoys reading and keeps a private notebook of her thoughts. She is familiar with the ideas she has been taught and takes a genuine interest in understanding the world around her, even when it does not always make sense as neatly as her lessons suggest.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                As the eldest daughter and heir, she has been raised to carry the future of Norwyn's royal family. She knows what is expected of her and has spent years learning how to meet those expectations. But there is still much to discover about the life waiting beyond the lessons, the palace walls and the future others have carefully imagined for her.
+                There is more to her than the person the kingdom knows how to recognise.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Queen Ecaterina</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Sovereign</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Sovereign</span>
               </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                <strong>Position:</strong> Reigning Queen of Norwyn and mother of Princesses Elisabeta and Ileana.
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                The reigning Queen of Norwyn. Mother of Elisabeta and Ileana.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                For many years, Ecaterina has worn the Crown of Norwyn, carrying its responsibilities with the quiet assurance of someone who knows exactly what her position requires. She is a thoughtful and measured woman who rarely rushes to fill a silence. When she speaks, she chooses her words carefully and prefers to explain her decisions rather than simply expect others to follow them.
+                Ecaterina is a woman who rarely seems hurried. She has a particular way of attending to people, listening without interruption and making small corrections that somehow leave very little room for argument.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Her appearance is always beautifully arranged. She is particularly fond of dark plum gowns with delicate silver detailing, usually accompanied by a pair of elegant gloves. She pays attention to the smallest details, from the way a dress is fastened to the posture of someone standing before her. Very little escapes her notice.
+                She is thoughtful, warm and exacting in equal measure. Her attention is difficult to escape, though not always easy to understand. Years of carrying the Crown have made her familiar with the weight of decisions, the importance of appearances and the countless details that cannot be left to chance.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Between the affairs of the kingdom and the running of the Royal Palace, Ecaterina has become accustomed to a life in which there is always something requiring her attention. She understands the traditions of the Crown, the duties of her household and the many little arrangements that keep royal life moving smoothly.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                But beyond the throne, she is also a mother to two daughters. To Elisabeta and Ileana, she is the woman who has watched them grow, guided their upbringing and shared their home. Yet the Crown is never far away. Even within the family, the Queen and the mother must often sit side by side.
+                She is a Queen. She is also a mother. She has never had the luxury of pretending those two things are entirely separate.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
                 <h4 class="font-display text-xl text-theme-text font-semibold">Princess Ileana</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Second Daughter</span>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Second Daughter</span>
               </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: The Queen's second daughter and Elisabeta's younger sister.
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Younger sister to Elisabeta.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Ileana is quiet, precise and dry in her humour. She is attentive to practical details and often notices things that others overlook.
+                Ileana has a quiet manner and a dry sense of humour that is easy to miss if one is not paying attention. She is practical, precise and particularly interested in the things other people forget to check.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                She is familiar with the organisation of the royal household and regularly works with papers, records and household information.
+                She has a fondness for papers, records, figures and the peculiar satisfaction of finding something where it ought not to be. While her sister has a talent for making an argument, Ileana is often more interested in what remains after the argument is over.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Although she shares her sister's intelligence, she has a different temperament and occupies a different position within the family.
+                She knows the palace well, though perhaps not in quite the same way as everyone else.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Safira</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Companion</span>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Prince Dara</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Queen's Husband</span>
               </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Elisabeta's cat.
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Husband to Queen Ecaterina and father to Elisabeta and Ileana.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Safira is a familiar presence in the palace. She sleeps beneath tables, settles wherever there is room and follows the movements of the people around her.
+                Dara has never quite lost his affection for the places from which he came. The southern coast, its harbours, fishing boats, lighthouses and the people who work around them remain closer to his heart than most palace occasions.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                She has her own ideas about where she belongs, which do not always coincide with the household's arrangements.
-              </p>
-            </div>
-
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Alexandru of Valenne</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Intended</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Heir to the throne of Valenne and Elisabeta's betrothed.
+                He is warm, easy to please and rather difficult to make solemn for long. He has a particular fondness for his daughters and a habit of finding something amusing in circumstances that other people take very seriously.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Alexandru is tall and fair, with hair that tends to come loose after a walk across a courtyard in the rain.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                He is warm, socially confident and quick with a joke. He remembers small details about people, sometimes imperfectly, and is comfortable in formal company.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                He is fond of horses, particularly a grey horse named Marrow, who has an unfortunate refusal to cross water.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Alexandru and Elisabeta first met when she was eighteen. Their engagement forms part of the relationship between the royal families of Norwyn and Valenne.
-              </p>
-            </div>
-
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Ambassador Duvall</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Diplomat</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Valenne's ambassador to Norwyn.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                A spare, silver-haired man of quiet manner, Duvall represents Valenne at the Norwyn court and attends formal occasions involving the two kingdoms.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div id="char-household-academy" class="space-y-6 pt-2 scroll-mt-24">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Mr. Corrow</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Tutor</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Elisabeta's private tutor.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Mr. Corrow teaches Elisabeta Structural Ideology and conducts her weekly lessons in the palace library.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                He is courteous, precise and fond of order. He values careful reasoning and takes particular satisfaction in a pupil who can defend an argument under questioning.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                He has taught Elisabeta for four years and is familiar with her academic abilities.
-              </p>
-            </div>
-
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Mrs. Hale</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Dresser</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Royal dresser.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Mrs. Hale is responsible for fitting and maintaining the royal family's gowns. She has worked in the household for many years and knows the practical demands of dressing its members.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Direct and observant, she is particular about measurements, fabrics and the condition of every garment. She often works with pins in her mouth and keeps careful records of the gowns entrusted to her.
-              </p>
-            </div>
-
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">The Steward</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">Administration</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Senior officer of the royal household.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                The steward oversees domestic arrangements and communicates official instructions and information.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Courteous and restrained, he is accustomed to the routines and formalities of palace administration.
-              </p>
-            </div>
-
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">The Household Staff</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Workers</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                The palace employs pages, maids, attendants, dressers, stewards, secretaries, guards, cooks, gardeners and other workers.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Their responsibilities differ, but together they maintain the daily life of the royal residence. An attendant accompanies Elisabeta whenever she leaves the palace.
-              </p>
-            </div>
-
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Professor Calloway</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Lecturer</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Lecturer at the Royal Academy of Governance.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Professor Calloway teaches the doctrine of Alignment and uses practical examples to explain the principles of Structural Ideology.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                He is formal and composed. He carries a folder to the lectern but rarely needs to open it during a lesson.
-              </p>
-            </div>
-
-            <div class="book-card p-8 rounded-sm space-y-2.5">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Lucian Fletcher</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner’s Son</span>
-              </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Student at the Royal Academy of Governance and son of Tobias Fletcher, a joiner.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Lucian is broad-shouldered and slightly stooped, with large hands and marked knuckles. He wears a grey jumper mended at both elbows, often keeps a pencil behind his ear and has a pale scar along his jaw.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                He is observant, direct and unhurried. He answers plainly, uses dry humour sparingly and is comfortable admitting when he does not know something.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                His family is connected to Norwyn's timber trade, and he has practical experience of wood and the work involved in preparing it.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                At the Academy, Lucian brings a familiarity with physical work and materials into discussions often concerned with principles and administration.
+                There are places where he feels more at home than the palace. He has never made much effort to hide it.
               </p>
             </div>
 
             <div class="book-card p-8 rounded-sm space-y-2.5 md:col-span-2">
-              <div class="flex items-baseline justify-between mb-1">
-                <h4 class="font-display text-xl text-theme-text font-semibold">Tobias Fletcher</h4>
-                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold">The Joiner</span>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Safira</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Palace Cat</span>
               </div>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify mt-4">
-                Position: Joiner and father of Lucian Fletcher.
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Small, grey and entirely unconcerned with the importance of the people around her.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                Tobias operates a timber yard beside the river. His workshop has undertaken work for the palace, including woodwork for the east wing.
+                Safira has a notch in her left ear, a preference for sleeping beneath Elisabeta's table, and a remarkable ability to occupy whichever room she has not been invited into.
               </p>
               <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                He is broad and grey-haired, with large hands marked by years of manual work. He speaks slowly and has a dry sense of humour.
-              </p>
-              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
-                His work is part of the skilled craftsmanship that supports Norwyn's buildings and businesses.
+                She moves between the sisters' rooms as though the palace were hers to arrange. Nobody appears to have persuaded her otherwise.
               </p>
             </div>
           </div>
         </div>
 
-        <div id="char-relationships" class="book-card p-8 rounded-sm space-y-4 mt-8 scroll-mt-24">
-          <h3 class="font-sans text-[11px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Key Relationships</h3>
-          <ul class="list-disc pl-5 space-y-2 character-bio text-theme-text-muted font-serif">
-            <li>Queen Ecaterina is the mother of Elisabeta and Ileana.</li>
-            <li>Elisabeta is the eldest daughter and heir to the throne of Norwyn.</li>
-            <li>Ileana is Elisabeta's younger sister.</li>
-            <li>Alexandru of Valenne is Elisabeta's betrothed.</li>
-            <li>Mr. Corrow is Elisabeta's private tutor.</li>
-            <li>Professor Calloway teaches at the Royal Academy of Governance.</li>
-            <li>Mrs. Hale is responsible for the royal family's gowns.</li>
-            <li>Lucian Fletcher is a student at the Academy and the son of Tobias Fletcher.</li>
-            <li>Safira is Elisabeta's cat.</li>
-            <li>Ambassador Duvall represents Valenne at the Norwyn court.</li>
-          </ul>
+        <!-- FROM VALENNE -->
+        <div id="people-valenne" class="space-y-6 pt-2 scroll-mt-24">
+          <h3 class="font-display text-2xl text-theme-text tracking-wider uppercase font-semibold border-b border-theme-border-subtle pb-3">
+            FROM VALENNE
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Alexandru</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Intended</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Heir to the throne of Valenne. Elisabeta's betrothed.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Alexandru is tall, fair and rarely as formal as the occasion requires. He has an easy manner, a quick sense of humour and a genuine interest in the people around him. He remembers small details, though not always perfectly, and is particularly good at making unfamiliar rooms feel less unfamiliar.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He likes horses, especially his grey, Marrow, who has made a rather unfortunate habit of refusing to cross water.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Alexandru is comfortable with people. He takes pleasure in conversation and has little difficulty finding something to say. He is, in many respects, exactly the sort of person one hopes to find at a royal gathering.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Whether a person is easy to know and easy to understand are quite different things.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Ambassador Duvall</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Diplomat</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Valenne's ambassador to Norwyn.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Duvall is silver-haired, spare in appearance and careful in his manner. He has spent enough time in royal courts to understand that a conversation is not always about what is being said, and that the most difficult questions are rarely asked directly.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He is accustomed to representing a kingdom without allowing too much of himself to enter the room.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5 md:col-span-2">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Madame Aubrac</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Observer</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                A member of Alexandru's household, Madame Aubrac is polite, attentive and rarely without her notebook.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                She has an eye for arrangements, particularly those involving people, photographs and the small details that determine how something will be remembered by others.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Some people attend an occasion. Others seem to be taking note of it.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE HOUSEHOLD -->
+        <div id="people-household" class="space-y-6 pt-2 scroll-mt-24">
+          <h3 class="font-display text-2xl text-theme-text tracking-wider uppercase font-semibold border-b border-theme-border-subtle pb-3">
+            THE HOUSEHOLD
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Mr. Corrow</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Tutor</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Elisabeta's private tutor of four years.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Mr. Corrow is a careful man who brings his own pens, trims their nibs and prefers a well-defended argument to a quick answer. He teaches Structural Ideology and has a particular appreciation for a pupil who can explain not only what she believes, but why.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He is courteous, precise and fond of order. His lessons are not easily abandoned simply because the person attending them has other things on her mind.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Anselm</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Attendant</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Elisabeta's attendant.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Tall, slightly stooped and possessed of a dry sense of duty, Anselm is accustomed to accompanying the Princess wherever she goes. He keeps a log, reads paperbacks in corridors and has never been particularly forthcoming about what he reads.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He is one of those people whose presence becomes so familiar that it is easy to forget how much they see.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Mrs. Hale</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Dresser</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                A royal dresser who has worked in the household for nearly thirty years.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Mrs. Hale understands gowns, fabrics, measurements and the considerable difficulty of getting everything right when there is very little time to correct it. She is direct, observant and rarely without a pin somewhere inconvenient.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                She has spent so long attending to the details of other people's appearances that she is unlikely to overlook much.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">The Steward</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Keeper of the Household</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                The senior officer responsible for the running of the Royal Palace.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Schedules, correspondence, instructions, arrangements and the daily business of a royal household pass through offices that rarely attract attention. The steward is accustomed to keeping things moving, communicating what needs to be communicated, and ensuring that the palace functions as expected.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                In Norwyn, very little happens simply because someone happens to remember it.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5 md:col-span-2">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">The Household Staff</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The People Behind the Palace</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Attendants, secretaries, maids, cooks, stewards, gardeners, guards, dressers, clerks and other workers make up the life of the Royal Palace.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                They light fires, prepare rooms, carry papers, maintain buildings, arrange meals, manage supplies and attend to the needs of the people who live and work there.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                The palace may appear quiet, but quiet is rarely something that happens on its own.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE ACADEMY -->
+        <div id="people-academy" class="space-y-6 pt-2 scroll-mt-24">
+          <h3 class="font-display text-2xl text-theme-text tracking-wider uppercase font-semibold border-b border-theme-border-subtle pb-3">
+            THE ACADEMY
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Professor Calloway</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Lecturer</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                A lecturer at the Royal Academy of Governance.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Professor Calloway teaches the doctrine of Alignment and is fond of using practical illustrations to explain the principles of Structural Ideology. He is formal, composed and rarely without a folder at the lectern, though it is not always clear why he has brought it.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He has a particular talent for making an ordinary example seem worth considering for rather longer than one intended.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Lucian Fletcher</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Joiner's Son</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                A student at the Royal Academy of Governance. Son of Tobias Fletcher, a joiner.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Lucian is broad-shouldered, slightly stooped and more comfortable with things that can be handled than things that can only be discussed. His jumper is mended at both elbows. He has a pale scar along his jaw, a pencil that often finds its way behind his ear, and a habit of answering questions without making them sound more complicated than they are.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He knows timber from the yard side of the work. He understands what happens to a piece of wood before it becomes something useful, and what it costs to get it there.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He is direct, careful and untroubled by admitting what he does not know.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Not everyone at the Academy arrives with the same understanding of the things being studied.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Tobias Fletcher</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Joiner</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Lucian's father. A joiner with a timber yard beside the river siding.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Tobias is a broad, grey-haired man with hands marked by years of work. His trade has taken him into places where careful workmanship matters, including the Royal Palace, where his yard has supplied timber and undertaken work on its buildings.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                He understands materials, their limitations and the difference between what looks finished and what is finished properly.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Some knowledge is acquired in classrooms. Some is acquired by working with something that does not forgive mistakes.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">The Thursday Seminar</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Students</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Sokha Vann, Sabine Roque and Teodor Vasc are among the students who share the Academy's Thursday seminar.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Sokha is accustomed to being sent away with more rice than he can eat. Sabine has sharp pencils and little patience. Teodor has a talent for appearing amused by almost everything.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                They have their own opinions, their own habits and their own reasons for being in the room. The Academy brings them together. It does not make them alike.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GOVERNMENT AND PUBLIC LIFE -->
+        <div id="people-government" class="space-y-6 pt-2 scroll-mt-24">
+          <h3 class="font-display text-2xl text-theme-text tracking-wider uppercase font-semibold border-b border-theme-border-subtle pb-3">
+            GOVERNMENT AND PUBLIC LIFE
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Minister Brask</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Minister of Transport</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                A minister responsible for matters of transport, carriage and wharf.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Brask is a substantial man who has a tendency to perspire at inconvenient moments. He has three daughters, a busy office and responsibilities that rarely seem to become simpler by being discussed.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Mr. Fenn and Vireak</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Photographers</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Fenn is the photographer responsible for royal portraits. Vireak, his assistant, pays attention to light and occasionally says things under his breath in a language that is not Norwynian.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                They work in a profession where people must hold still, look their best and trust that someone else knows when the picture is right.
+              </p>
+            </div>
+
+            <div class="book-card p-8 rounded-sm space-y-2.5 md:col-span-2">
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <h4 class="font-display text-xl text-theme-text font-semibold">Mrs. Ives</h4>
+                <span class="font-sans text-[9px] tracking-[0.22em] uppercase text-theme-secondary font-bold shrink-0">The Matron</span>
+              </div>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Matron of an almshouse near the river works.
+              </p>
+              <p class="font-serif character-bio text-theme-text-muted font-light text-justify">
+                Mrs. Ives keeps a list, a ring of keys and a close understanding of the people entrusted to her care. Her work belongs to a part of Norwyn that rarely appears in royal photographs, but is no less a part of the kingdom.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEYOND THE TITLES -->
+        <div class="book-card p-8 md:p-12 rounded-sm space-y-4 font-serif prose-body text-theme-text text-justify">
+          <span class="font-sans text-[10px] tracking-[0.28em] uppercase text-theme-secondary font-bold block text-center">BEYOND THE TITLES</span>
+          <p>In Norwyn, people are often introduced by what they are, where they belong, whom they serve, or what they are expected to do.</p>
+          <p>A Princess. A tutor. A joiner. A lecturer. A minister. A matron.</p>
+          <p>But a title is only the beginning of knowing someone.</p>
+          <p>The people in <em>Or So She Thought</em> have their own ways of seeing the world, their own private habits, and their own understandings of what matters. Some are certain of their place. Some are still working it out. Others have never thought to question it.</p>
+          <p>You will meet them in the palace, in the Academy, at formal gatherings, in offices, in workshops and in the ordinary moments between one thing and the next.</p>
+          <p>You may think you know them quite quickly.</p>
+          <p class="font-serif italic text-theme-heading pt-2 text-center">
+            Norwyn has a way of making that less certain.
+          </p>
         </div>
 
       </div>
     </section>
 
-    <!-- ==================== SECTION TWO: READ THE NOVEL ==================== -->
+    <!-- ==================== SECTION TWO: ORIENTATION & FRONT MATTER ==================== -->
 
-    <!-- 1. A NOTE FROM THE AUTHOR -->
+    <!-- 4. A NOTE FROM THE AUTHOR -->
     <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
-        <p class="font-serif text-theme-text-muted text-base font-light italic">
-          Welcome to Or So She Thought.
-        </p>
       </div>
 
       <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
         <p>
-          <em>Or So She Thought</em> takes place in Norwyn, an imagined island kingdom with its own history, institutions, customs and way of life. Although its world draws on a range of historical and cultural influences, Norwyn is entirely fictional. It has been shaped for this story and the people who inhabit it.
+          I have always been interested in the things people rarely think to question. The familiar arrangements of a life. The small expectations that become second nature. The ways we learn to accommodate, to anticipate, to make ourselves comfortable with things we never consciously chose. And how, sometimes, it takes very little to make something we have always known feel suddenly unfamiliar.
         </p>
         <p>
-          At the centre of the novel is Elisabeta, a young woman raised within the royal family and prepared for a future that comes with responsibilities, traditions and expectations of its own. Through her experiences and relationships, the story explores how family, upbringing, duty and personal desire influence the way we understand ourselves and the lives we believe we are meant to lead.
+          I wanted to explore some of these things through fiction, not by offering answers, but by following people closely enough to see what they might not see in themselves. I am drawn to the ordinary moments that reveal more than they appear to: a remark that stays with someone longer than it should, a kindness whose meaning changes with time, a decision made almost without thought that quietly alters the course of something else. The things that seem insignificant until they are no longer.
         </p>
         <p>
-          I have always been drawn to the less visible parts of human experience: the thoughts behind familiar behaviour, the expectations we gradually learn to accept, the adjustments we make without always noticing, and the moments when something we have always believed begins to look different. I wanted to explore some of these questions through fiction, and they became part of the foundation of this story.
+          In writing this novel, I became particularly interested in the relationship between care and understanding, between what is done for us and what is understood about us, and in how easily the two can be mistaken for one another. There is something fascinating about the lives we consider settled, the beliefs we hold without examination, and the moments when neither feels quite as certain as it once did.
         </p>
         <p>
-          For readers who enjoy discovering the details of an imagined world, I have included <em>The World of Norwyn</em>, a character guide and <em>The Norwyn Archives</em>. These offer additional glimpses into the kingdom, its people and its institutions. They are entirely optional, however. You can follow the story through the chapters alone and return to the additional material whenever you wish.
+          I have no particular interest in making every question resolve neatly, or in deciding what a reader ought to think of the people they encounter. Some things are better left a little unsettled. Perhaps there is value in looking at something twice, in allowing an impression to linger long enough for it to become something else.
         </p>
         <p>
-          I hope you enjoy your time in Norwyn, find something to appreciate in its people, and perhaps recognise a few things about the world beyond it.
-        </p>
-        <p>
-          Thank you for giving this story your time.
+          Thank you for entering this world, for spending your time with its people, and for reading <em>Or So She Thought</em>.
         </p>
         <p class="pt-4 border-t border-theme-border-subtle font-semibold text-right">
-          <span class="font-display tracking-wider text-theme-accent">Queen Usman</span>
+          <strong class="font-display tracking-wider text-theme-accent">Queen Usman</strong>
         </p>
       </div>
     </section>
 
-    <!-- 2. DISCLAIMER -->
+    <!-- 5. CONTENT NOTICE AND COPYRIGHT -->
     <section id="view-disclaimer" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold">Disclaimer</h2>
-        <p class="font-serif text-theme-text-muted text-base font-light italic">
-          Legal notice &amp; narrative boundaries.
-        </p>
+        <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-4 tracking-wide font-semibold uppercase">Copyright, Fiction and Content Notice</h2>
       </div>
 
       <div class="book-card p-8 md:p-14 rounded-sm space-y-6 font-serif prose-body text-theme-text mb-12 text-justify">
         <p>
-          Or So She Thought is a work of fiction. Norwyn, its institutions, history, customs, places and characters are imagined. Any resemblance to actual people, places, events or institutions is coincidental.
+          <em>Or So She Thought</em> is a work of fiction. Norwyn, Valenne, and all other kingdoms, places, institutions, histories, laws, customs, traditions, organisations and characters depicted in this novel are imagined. Any resemblance to actual persons, living or dead, places, events, institutions or historical circumstances is coincidental.
         </p>
         <p>
-          Although the story draws on elements of history, culture and human experience, it does not depict any particular country or historical society. Its world has been created for the purposes of this novel.
+          Although the novel draws upon elements of history, culture and human experience, its setting does not represent any particular country, historical society, religion or community. Its world has been created for the purposes of this story. The customs, traditions, systems of government, social structures and cultural practices described within are the author's invention and should not be understood as factual representations of any real society.
+        </p>
+        <p>
+          The novel contains themes of grief, bereavement, family expectations, duty, personal autonomy and institutional pressure, including a restrained depiction of the circumstances surrounding a death.
         </p>
         <p>
           The people and events within these pages belong to Norwyn.
         </p>
+        <div class="pt-6 border-t border-theme-border-subtle space-y-4">
+          <p class="font-semibold text-theme-heading">
+            Copyright &copy; 2026 Queen Usman. All rights reserved.
+          </p>
+          <p class="text-theme-text-muted">
+            No part of this book may be reproduced, distributed, transmitted, stored or adapted in any form or by any means without the prior written permission of the author, except for brief quotations used in reviews, criticism or other uses permitted by applicable copyright law.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- 3. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
+    <!-- 6. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
       <div class="max-w-3xl mx-auto px-6 mb-6 flex justify-end">
         <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5">
@@ -2576,7 +2736,7 @@
       <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
     </section>
 
-    <!-- 4. ARCHIVE (Scriptorium Bookcase Shelf & Interactive Reader) -->
+    <!-- 7. ARCHIVE (Scriptorium Bookcase Shelf & Interactive Reader) -->
     <section id="view-archive" class="view-section view-hidden max-w-6xl mx-auto px-4 sm:px-6 py-12">
       <div class="scriptorium-shell" id="scriptoriumShell">
 
@@ -2635,7 +2795,6 @@
       </div>
     </div>
   </footer>
-
   <!-- ==================== CINEMATIC ENTRANCE SOUND & LOGIC ==================== -->
   <script>
   (function () {
@@ -3465,7 +3624,6 @@
     };
   })();
   </script>
-
   <!-- Main Application Logic -->
   <script>
     let activeEra = 'crowned';
@@ -3682,7 +3840,7 @@
     var $ = function (q, el) { return (el || document).querySelector(q); };
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var coarse = window.matchMedia('(pointer: coarse)').matches;
-    var FLIP = reduce ? 10 : 900, FLIP_S = reduce ? 10 : 600;
+    var FLIP = reduce ? 10 : 850, FLIP_S = reduce ? 10 : 550;
 
     function svgWrap(inner) { return '<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>'; }
     var EMB = {
@@ -4576,7 +4734,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
 
     var archiveReaderView = $('#archiveReaderView'), stage = $('#scriptoriumStage'), bookEl = $('#scriptoriumBook'), hintEl = $('#scriptoriumHint');
     var cur = null, sides = [], leaves = [], s = 0, layout = 'spread', pw = 300, lastBtn = null, hintTimer = null;
-    var tipShown = false, lastW = 0, closing = false, busyUntil = 0;
+    var tipShown = false, lastW = 0, closing = false, busyUntil = 0, animTimer = null;
 
     function wantSingle() { return window.innerWidth < 720 || window.innerHeight < 460; }
     function single() { return layout === 'single'; }
@@ -4621,6 +4779,12 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       return '<p' + (isDropCap ? ' class="first"' : '') + '>' + esc(blk.text) + '</p>';
     }
 
+    function getStageDimensions() {
+      var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : Math.min(window.innerWidth - 16, 1100));
+      var H = stage.clientHeight || Math.max(540, Math.min(820, window.innerHeight * 0.78));
+      return { W: Math.max(280, W), H: Math.max(420, H) };
+    }
+
     function measureAndPaginate(b, isOneSheet) {
       var rawItems = parseBodyItems(b.body);
       var probe = document.createElement('div');
@@ -4631,15 +4795,14 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       probe.style.visibility = 'hidden';
       probe.style.pointerEvents = 'none';
 
-      var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : 640);
-      var H = stage.clientHeight || 560;
+      var dims = getStageDimensions();
       if (isOneSheet) {
-        probe.style.width = W + 'px';
-        probe.style.height = H + 'px';
-        probe.style.fontSize = Math.max(16.5, Math.min(20, W * 0.046)).toFixed(2) + 'px';
+        probe.style.width = dims.W + 'px';
+        probe.style.height = dims.H + 'px';
+        probe.style.fontSize = Math.max(16, Math.min(19.5, dims.W * 0.044)).toFixed(2) + 'px';
       } else {
         var ratio = 7 / 5;
-        var pWidth = Math.max(210, Math.floor(Math.min((W - 44) / 2, (H - 44) / ratio)));
+        var pWidth = Math.max(210, Math.floor(Math.min((dims.W - 44) / 2, (dims.H - 44) / ratio)));
         probe.style.width = (2 * pWidth) + 'px';
         probe.style.height = Math.round(pWidth * ratio) + 'px';
         probe.style.fontSize = (pWidth * .044).toFixed(2) + 'px';
@@ -4878,14 +5041,16 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       archiveReaderView.dataset.layout = layout;
       bookEl.style.setProperty('--cv', b.cv); bookEl.style.setProperty('--cv2', b.cv2);
       bookEl.style.setProperty('--fd', (single() ? FLIP_S : FLIP) + 'ms');
-      bookEl.style.setProperty('--k', single() ? '1.3' : '1');
+      bookEl.style.setProperty('--k', single() ? '1.25' : '1');
       bookEl.style.setProperty('--tx', '0px'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg');
       if (single()) buildSingle(b); else buildSpread(b);
     }
 
     function applyState() {
-      var f = fOf(s), N = leaves.length;
+      clearTimeout(animTimer);
+      var f = fOf(s), N = leaves.length, last = sides.length - 1;
       bookEl.classList.toggle('closed-cover', !single() && s === 0);
+      bookEl.classList.toggle('closed-back', !single() && s === last);
       leaves.forEach(function (lf, i) {
         var el = lf.el, want = i < f; lf.flipped = want;
         el.style.transition = 'none';
@@ -4899,19 +5064,21 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         }
       });
       void bookEl.offsetWidth;
-      leaves.forEach(function (lf) { lf.el.style.transition = ''; if (!single()) lf.el.style.transitionDuration = FLIP + 'ms'; });
+      leaves.forEach(function (lf) {
+        lf.el.style.transition = '';
+        lf.el.style.transitionDuration = (single() ? FLIP_S : FLIP) + 'ms';
+      });
     }
 
     function sizeBook() {
-      var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : 640);
-      var H = stage.clientHeight || 560;
+      var dims = getStageDimensions();
       if (single()) {
-        pw = W;
-        bookEl.style.width = W + 'px'; bookEl.style.height = H + 'px';
-        bookEl.style.fontSize = Math.max(16.5, Math.min(20, W * 0.046)).toFixed(2) + 'px';
+        pw = dims.W;
+        bookEl.style.width = dims.W + 'px'; bookEl.style.height = dims.H + 'px';
+        bookEl.style.fontSize = Math.max(16, Math.min(19.5, dims.W * 0.044)).toFixed(2) + 'px';
       } else {
         var ratio = 7 / 5;
-        pw = Math.max(210, Math.floor(Math.min((W - 44) / 2, (H - 44) / ratio)));
+        pw = Math.max(210, Math.floor(Math.min((dims.W - 44) / 2, (dims.H - 44) / ratio)));
         bookEl.style.width = (2 * pw) + 'px'; bookEl.style.height = Math.round(pw * ratio) + 'px';
         bookEl.style.fontSize = (pw * .044).toFixed(2) + 'px';
         position(); thickness();
@@ -4926,8 +5093,10 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
     }
     function thickness() {
       if (single() || !bookEl.slabR) return;
+      var last = sides.length - 1;
       bookEl.classList.toggle('closed-cover', s === 0);
-      if (s === 0) {
+      bookEl.classList.toggle('closed-back', s === last);
+      if (s === 0 || s === last) {
         bookEl.slabR.style.opacity = 0;
         bookEl.slabR.style.boxShadow = 'none';
         bookEl.slabL.style.opacity = 0;
@@ -4944,26 +5113,27 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       bookEl.slabR.style.opacity = (f >= n) ? 0 : 1; bookEl.slabL.style.opacity = (f <= 0) ? 0 : 1;
     }
 
-    function flip(i, want, delay) {
+    function flip(i, want, delay, orderIdx) {
       var lf = leaves[i], N = leaves.length; if (lf.flipped === want) return; lf.flipped = want;
-      lf.el.style.zIndex = N + 5;
+      lf.el.style.zIndex = N + 10 - (orderIdx || 0);
       setTimeout(function () { lf.el.classList.add('turning'); lf.el.classList.toggle('flipped', want); }, delay || 0);
       setTimeout(function () { lf.el.classList.remove('turning'); lf.el.style.zIndex = want ? (i + 1) : (N - i); }, (delay || 0) + FLIP + 40);
     }
 
     function turnSingle(from, d) {
+      clearTimeout(animTimer);
       var D = FLIP_S, N = leaves.length, lf, beneath;
       if (d > 0) {
         lf = leaves[from]; beneath = leaves[from + 1];
         if (!lf || !beneath) { applyState(); return 120; }
         lf.el.style.display = '';
         beneath.el.style.display = '';
-        lf.el.style.zIndex = N + 6;
+        lf.el.style.zIndex = N + 8;
         beneath.el.style.zIndex = N + 2;
         lf.flipped = true;
         lf.el.classList.add('turning', 'flipped');
         beneath.el.classList.add('under');
-        setTimeout(function () {
+        animTimer = setTimeout(function () {
           lf.el.classList.remove('turning');
           beneath.el.classList.remove('under');
           applyState();
@@ -4973,7 +5143,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         if (!lf || !beneath) { applyState(); return 120; }
         lf.el.style.transition = 'none';
         lf.el.style.display = '';
-        lf.el.style.zIndex = N + 6;
+        lf.el.style.zIndex = N + 8;
         beneath.el.style.display = '';
         beneath.el.style.zIndex = N + 2;
         lf.el.classList.add('flipped');
@@ -4983,13 +5153,13 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         lf.el.classList.add('turning');
         beneath.el.classList.add('over');
         lf.el.classList.remove('flipped');
-        setTimeout(function () {
+        animTimer = setTimeout(function () {
           lf.el.classList.remove('turning');
           beneath.el.classList.remove('over');
           applyState();
         }, D + 30);
       }
-      return D + 50;
+      return D + 40;
     }
 
     function ui() {
@@ -5009,10 +5179,10 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         if (Math.abs(s - prevS) === 1) total = turnSingle(prevS, s - prevS);
         else { applyState(); total = 180; }
       } else {
-        var stagger = Math.abs(f - prevF) > 1 ? (closing ? 110 : 95) : 0, c = 0, todo = [];
+        var stagger = Math.abs(f - prevF) > 1 ? (closing ? 95 : 85) : 0, c = 0, todo = [];
         for (var i = 0; i < leaves.length; i++) { if (leaves[i].flipped !== (i < f)) todo.push(i); }
         if (f < prevF) todo.reverse();
-        todo.forEach(function (i) { flip(i, i < f, stagger * c++); });
+        todo.forEach(function (i, idx) { flip(i, i < f, stagger * c++, idx); });
         total = stagger * Math.max(0, c - 1) + FLIP + 50;
         position(); thickness();
       }
@@ -5021,7 +5191,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       if (single() || f !== prevF) pageSound(single() ? .68 : 1);
       if (!tipShown && s > 0) {
         tipShown = true;
-        var tip = single() ? 'Swipe left/right or tap the left or right edge to turn pages.' : (coarse ? 'Tap the right page to turn forward, the left to go back.' : 'Click a page, or use the arrow keys.');
+        var tip = single() ? 'Swipe left/right or tap the left or right half to turn pages.' : (coarse ? 'Tap the right page to turn forward, the left to go back.' : 'Click a page, or use the arrow keys.');
         setTimeout(function () { if (!closing) showHint(tip, 4500); }, total + 200);
       }
       return total;
@@ -5056,14 +5226,13 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       closing = false; busyUntil = 0; cur = b; s = 0; tipShown = false;
       layout = wantSingle() ? 'single' : 'spread';
       document.body.dataset.archiveMode = 'reader';
-      build(b);
       $('#scriptoriumRTitle').textContent = b.short + (b.who ? ' · ' + b.who : '');
       $('#toShelfBtn').disabled = false;
-      var anim = !single();
-      if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '36px'); bookEl.style.setProperty('--rx', '12deg'); }
       requestAnimationFrame(function () {
-        sizeBook();
         build(b);
+        sizeBook();
+        var anim = !single();
+        if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '36px'); bookEl.style.setProperty('--rx', '12deg'); }
         applyState();
         ui();
         if (anim) {
@@ -5100,12 +5269,26 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
     }
 
     function relayout() {
-      if (!cur || single() === wantSingle()) return false;
-      var spreadLen = makeSides(cur, wantSingle()).length;
-      if (single()) s = s === 0 ? 0 : s + 1;
-      else s = s <= 0 ? 0 : (s === 1 ? 1 : Math.min(s - 1, spreadLen - 4));
-      layout = wantSingle() ? 'single' : 'spread';
-      build(cur); sizeBook(); build(cur); applyState(); ui();
+      if (!cur) return false;
+      var nextSingle = wantSingle();
+      if (single() === nextSingle) return false;
+      var prevTotal = Math.max(1, sides.length - 1);
+      var ratio = s / prevTotal;
+      layout = nextSingle ? 'single' : 'spread';
+      build(cur);
+      sizeBook();
+      var newLast = sides.length - 1;
+      if (s === 0) {
+        s = 0;
+      } else if (nextSingle) {
+        s = Math.max(1, Math.min(newLast, Math.round(ratio * newLast)));
+      } else {
+        var mapped = Math.max(2, Math.min(newLast - 1, Math.round(ratio * newLast)));
+        s = mapped % 2 === 1 ? mapped + 1 : mapped;
+        if (s > newLast) s = newLast;
+      }
+      applyState();
+      ui();
       return true;
     }
 
@@ -5124,7 +5307,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       if (s === 0) return next();
       var r = stage.getBoundingClientRect(), goNext;
       if (single()) {
-        goNext = e.clientX >= r.left + r.width * 0.38;
+        goNext = e.clientX >= r.left + r.width * 0.48;
       } else {
         var br = bookEl.getBoundingClientRect();
         goNext = e.clientX >= br.left + br.width / 2;
@@ -5169,9 +5352,21 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       clearTimeout(rt);
       rt = setTimeout(function () {
         if (document.body.dataset.archiveMode === 'reader') {
-          if (!relayout()) {
+          if (!relayout() && cur) {
+            var prevTotal = Math.max(1, sides.length - 1);
+            var ratio = s / prevTotal;
+            build(cur);
             sizeBook();
-            if (cur) { build(cur); applyState(); ui(); }
+            var newLast = sides.length - 1;
+            if (s === 0) s = 0;
+            else if (single()) s = Math.max(1, Math.min(newLast, Math.round(ratio * newLast)));
+            else {
+              var mapped = Math.max(2, Math.min(newLast - 1, Math.round(ratio * newLast)));
+              s = mapped % 2 === 1 ? mapped + 1 : mapped;
+              if (s > newLast) s = newLast;
+            }
+            applyState();
+            ui();
           }
         }
         else if (window.innerWidth !== lastW) { lastW = window.innerWidth; buildCase(); }
@@ -5191,7 +5386,6 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       reflow: function () {
         if (document.body.dataset.archiveMode === 'reader' && cur) {
           sizeBook();
-          build(cur);
           applyState();
           ui();
         } else {
