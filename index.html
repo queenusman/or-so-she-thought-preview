@@ -728,6 +728,219 @@
     }
 
     /* ========================================================
+       NORWYN GALLERY (NĀDIRAH-STYLE STACK / SWIPE + DIALOG)
+       ======================================================== */
+    .nw-gallery-wrap {
+      width: 100%;
+      margin-top: 1.25rem;
+    }
+    .nw-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      width: 100%;
+    }
+    .nw-g-item {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: inherit;
+      cursor: zoom-in;
+      text-align: left;
+    }
+    .nw-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      background: var(--color-bg-subtle);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+    }
+    .nw-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s cubic-bezier(.22,.61,.36,1);
+    }
+    .nw-g-item:hover .nw-media img {
+      transform: scale(1.02);
+    }
+    .nw-ph {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      background: var(--color-bg-subtle);
+    }
+    .nw-ph span {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+    .nw-ph::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: calc(50% - 24px);
+      width: 1px;
+      height: 12px;
+      background: var(--color-accent);
+    }
+    .nw-g-count {
+      display: none;
+      margin-top: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+
+    @media (min-width: 900px) {
+      .nw-gallery {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .nw-media {
+        min-height: 520px;
+      }
+      .nw-g-count {
+        display: none;
+      }
+    }
+
+    @media (max-width: 899px) {
+      .nw-gallery {
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        scrollbar-width: none;
+      }
+      .nw-gallery::-webkit-scrollbar {
+        display: none;
+      }
+      .nw-g-item {
+        flex: 0 0 86%;
+        scroll-snap-align: start;
+      }
+      .nw-media {
+        min-height: 0;
+        aspect-ratio: 4 / 5;
+      }
+      .nw-g-count {
+        display: block;
+      }
+    }
+
+    dialog.nw-lb {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      background: rgba(17, 17, 17, 0.96);
+      color: #F5F1EA;
+    }
+    dialog.nw-lb::backdrop {
+      background: rgba(17, 17, 17, 0.96);
+    }
+    .nw-lb__stage {
+      position: absolute;
+      inset: 72px 64px 72px;
+      display: grid;
+      place-items: center;
+    }
+    .nw-lb__frame {
+      position: relative;
+      height: 100%;
+      max-width: 100%;
+      aspect-ratio: 4 / 5;
+      background: #242424;
+      border: 1px solid rgba(245, 241, 234, 0.14);
+    }
+    .nw-lb__frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .nw-lb__frame .nw-ph {
+      background: #242424;
+    }
+    .nw-lb__frame .nw-ph span {
+      color: rgba(245, 241, 234, 0.75);
+    }
+    .nw-lb__cap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+      text-align: center;
+      color: #F5F1EA;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0 24px;
+    }
+    .nw-lb button.nw-ctl {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      color: #F5F1EA;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+    .nw-lb .nw-ctl--close {
+      top: calc(env(safe-area-inset-top, 0px) + 12px);
+      right: 12px;
+    }
+    .nw-lb .nw-ctl--prev {
+      left: 8px;
+      top: 50%;
+      margin-top: -24px;
+    }
+    .nw-lb .nw-ctl--next {
+      right: 8px;
+      top: 50%;
+      margin-top: -24px;
+    }
+    .nw-lb .nw-ctl svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.4;
+    }
+    @media (max-width: 600px) {
+      .nw-lb__stage {
+        inset: 72px 12px 80px;
+      }
+      .nw-lb .nw-ctl--prev,
+      .nw-lb .nw-ctl--next {
+        top: auto;
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+        margin: 0;
+      }
+    }
+
+    /* ========================================================
        SCRIPTORIUM ARCHIVE BOOKCASE & PAGE FLIP STYLES
        ======================================================== */
     .scriptorium-shell {
@@ -1076,6 +1289,10 @@
     }
     .scriptorium-book .slab.r { left: 50%; }
     .scriptorium-book .slab.l { left: 0; }
+    .scriptorium-book.closed-cover .slab {
+      opacity: 0 !important;
+      box-shadow: none !important;
+    }
     .scriptorium-book .leaf {
       position: absolute;
       left: 50%;
@@ -1358,19 +1575,15 @@
     }
     .scriptorium-book .ft {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: baseline;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: .76em;
+      font-size: .78em;
       font-style: italic;
       color: var(--ink-muted);
       padding-top: .6em;
       min-height: 1.8em;
     }
-    .scriptorium-book .face.front .ft {
-      flex-direction: row-reverse;
-    }
-    .scriptorium-book .ft .cw { opacity: .85; }
 
     .scriptorium-book .center-pg {
       flex: 1;
@@ -1555,8 +1768,8 @@
     .scriptorium-book.sg .rh {
       justify-content: space-between;
     }
-    .scriptorium-book.sg .face.front .ft {
-      flex-direction: row;
+    .scriptorium-book.sg .ft {
+      justify-content: center;
     }
     @keyframes lift { from { opacity: 1; } to { opacity: 0; } }
     @keyframes drop { from { opacity: 0; } to { opacity: 1; } }
@@ -1807,6 +2020,7 @@
         </p>
       </div>
     </section>
+
     <!-- 2. THE WORLD OF NORWYN & GALLERY -->
     <section id="view-world" class="view-section view-hidden max-w-5xl mx-auto px-6 py-16">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-8">
@@ -3051,11 +3265,206 @@
     document.addEventListener('keydown', onKey);
   })();
   </script>
-
   <!-- External Chapter & Gallery Files -->
   <script src="chapters.js"></script>
   <script src="chapter-4.js"></script>
   <script src="norwyn-visual-archive.js"></script>
+
+  <!-- ==================== NORWYN WORLD GALLERY & LIGHTBOX DIALOG ==================== -->
+  <dialog class="nw-lb" id="norwynWorldLightbox" aria-label="Norwyn gallery image viewer">
+    <button type="button" class="nw-ctl nw-ctl--close" id="nwLbClose" aria-label="Close image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <button type="button" class="nw-ctl nw-ctl--prev" id="nwLbPrev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+    </button>
+    <button type="button" class="nw-ctl nw-ctl--next" id="nwLbNext" aria-label="Next image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+    </button>
+    <div class="nw-lb__stage">
+      <div class="nw-lb__frame" id="nwLbFrame"></div>
+    </div>
+    <p class="nw-lb__cap" id="nwLbCap" aria-live="polite"></p>
+  </dialog>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var FALLBACK_PLATES = [
+      {
+        src: '',
+        label: 'Plate I · The Three Villages & Northern Coast',
+        alt: 'Coastal cliffs and villages along the northern shore of Norwyn'
+      },
+      {
+        src: '',
+        label: 'Plate II · The Capital & Royal Palace Courtyards',
+        alt: 'Inland capital streets and limestone palace courtyards in Norwyn'
+      },
+      {
+        src: '',
+        label: 'Plate III · The Royal Academy of Governance',
+        alt: 'Lecture halls and archive study chambers at the Royal Academy of Governance'
+      },
+      {
+        src: '',
+        label: 'Plate IV · Autumn & Frost Across the Timber Rivers',
+        alt: 'River timber transport and autumn mist across Norwyn'
+      }
+    ];
+
+    var lbDialog = document.getElementById('norwynWorldLightbox');
+    var lbFrame = document.getElementById('nwLbFrame');
+    var lbCap = document.getElementById('nwLbCap');
+    var lbClose = document.getElementById('nwLbClose');
+    var lbPrev = document.getElementById('nwLbPrev');
+    var lbNext = document.getElementById('nwLbNext');
+
+    var activePlates = [];
+    var lbIdx = 0;
+    var lbReturnFocus = null;
+
+    function escAttr(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;');
+    }
+
+    function collectPlates() {
+      var ext = window.NorwynVisualArchive;
+      if (ext && Array.isArray(ext.plates) && ext.plates.length) {
+        return ext.plates.map(function (item, idx) {
+          return {
+            src: item.src || item.url || '',
+            label: item.label || item.caption || item.title || ('Plate ' + (idx + 1)),
+            alt: item.alt || item.caption || item.label || ('Norwyn plate ' + (idx + 1))
+          };
+        });
+      }
+      if (ext && Array.isArray(ext.items) && ext.items.length) {
+        return ext.items.map(function (item, idx) {
+          return {
+            src: item.src || item.url || '',
+            label: item.label || item.caption || item.title || ('Plate ' + (idx + 1)),
+            alt: item.alt || item.caption || item.label || ('Norwyn plate ' + (idx + 1))
+          };
+        });
+      }
+      return FALLBACK_PLATES;
+    }
+
+    function renderLightboxSlide() {
+      if (!activePlates.length || !lbFrame || !lbCap) return;
+      var item = activePlates[lbIdx];
+      lbFrame.innerHTML = item.src
+        ? '<img src="' + escAttr(item.src) + '" alt="' + escAttr(item.alt) + '">'
+        : '<div class="nw-ph" role="img" aria-label="' + escAttr(item.alt) + '"><span>' + escAttr(item.label) + '</span></div>';
+      lbCap.textContent = item.label + ' · ' + (lbIdx + 1) + ' / ' + activePlates.length;
+    }
+
+    function openWorldLightbox(index, triggerEl) {
+      if (!activePlates.length) activePlates = collectPlates();
+      lbIdx = ((index % activePlates.length) + activePlates.length) % activePlates.length;
+      lbReturnFocus = triggerEl || document.activeElement;
+      renderLightboxSlide();
+      if (lbDialog && typeof lbDialog.showModal === 'function' && !lbDialog.open) {
+        lbDialog.showModal();
+      }
+    }
+
+    function stepWorldLightbox(delta) {
+      if (!activePlates.length) return;
+      var total = activePlates.length;
+      lbIdx = (lbIdx + delta + total) % total;
+      renderLightboxSlide();
+    }
+
+    if (lbClose && lbDialog) {
+      lbClose.addEventListener('click', function () { lbDialog.close(); });
+    }
+    if (lbPrev) {
+      lbPrev.addEventListener('click', function () { stepWorldLightbox(-1); });
+    }
+    if (lbNext) {
+      lbNext.addEventListener('click', function () { stepWorldLightbox(1); });
+    }
+    if (lbDialog) {
+      lbDialog.addEventListener('close', function () {
+        if (lbReturnFocus && typeof lbReturnFocus.focus === 'function') {
+          lbReturnFocus.focus({ preventScroll: true });
+        }
+      });
+      lbDialog.addEventListener('click', function (e) {
+        if (e.target === lbDialog) lbDialog.close();
+      });
+      lbDialog.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          stepWorldLightbox(-1);
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          stepWorldLightbox(1);
+        }
+      });
+    }
+
+    function renderNorwynGallery(mountEl) {
+      if (!mountEl) return;
+      activePlates = collectPlates();
+
+      var itemsHtml = activePlates.map(function (plate, idx) {
+        var imgTag = plate.src
+          ? '<img src="' + escAttr(plate.src) + '" alt="' + escAttr(plate.alt) + '" loading="lazy">'
+          : '';
+        var phTag = plate.src
+          ? ''
+          : '<div class="nw-ph" role="img" aria-label="' + escAttr(plate.alt) + '"><span>' + escAttr(plate.label) + '</span></div>';
+
+        return '<button type="button" class="nw-g-item" data-nw-idx="' + idx + '" aria-label="' + escAttr('Enlarge image ' + (idx + 1) + ' of ' + activePlates.length + ': ' + plate.label) + '">' +
+          '<div class="nw-media">' + imgTag + phTag + '</div>' +
+          '</button>';
+      }).join('');
+
+      mountEl.innerHTML =
+        '<div class="nw-gallery-wrap">' +
+          '<div class="nw-gallery" id="nwGalleryTrack" role="group" aria-label="Norwyn world gallery">' + itemsHtml + '</div>' +
+          '<p class="nw-g-count" id="nwGalleryCount" aria-live="polite">1 / ' + activePlates.length + '</p>' +
+        '</div>';
+
+      var track = mountEl.querySelector('#nwGalleryTrack');
+      var counter = mountEl.querySelector('#nwGalleryCount');
+
+      if (track) {
+        track.addEventListener('click', function (e) {
+          var btn = e.target.closest('.nw-g-item');
+          if (!btn) return;
+          var idx = parseInt(btn.getAttribute('data-nw-idx'), 10);
+          openWorldLightbox(isNaN(idx) ? 0 : idx, btn);
+        });
+
+        track.addEventListener('scroll', function () {
+          if (!counter || !track.firstElementChild) return;
+          var stepW = track.firstElementChild.offsetWidth + 12;
+          if (stepW <= 0) return;
+          var pos = Math.round(track.scrollLeft / stepW);
+          var clamped = Math.max(0, Math.min(pos, activePlates.length - 1));
+          counter.textContent = (clamped + 1) + ' / ' + activePlates.length;
+        }, { passive: true });
+      }
+    }
+
+    window.NorwynWorldGallery = {
+      mount: function (targetEl) {
+        renderNorwynGallery(targetEl || document.getElementById('norwynWorldGalleryMount'));
+      },
+      openAt: function (index) {
+        openWorldLightbox(index || 0, null);
+      }
+    };
+  })();
+  </script>
 
   <!-- Main Application Logic -->
   <script>
@@ -3084,8 +3493,11 @@
 
       if (viewId === 'world') {
         const galleryMount = document.getElementById('norwynWorldGalleryMount');
-        if (window.NorwynVisualArchive && galleryMount) {
+        if (window.NorwynVisualArchive && typeof window.NorwynVisualArchive.mount === 'function' && galleryMount) {
           window.NorwynVisualArchive.mount(galleryMount);
+        }
+        if (window.NorwynWorldGallery && galleryMount) {
+          window.NorwynWorldGallery.mount(galleryMount);
         }
       }
 
@@ -4169,17 +4581,15 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
     function wantSingle() { return window.innerWidth < 720 || window.innerHeight < 460; }
     function single() { return layout === 'single'; }
     function fOf(x) { return single() ? x : Math.ceil(x / 2); }
-    function foliate(i) { var n = ((i - 2) >> 1) + 1; return 'Folio ' + n + (i % 2 === 0 ? 'r' : 'v'); }
+    function pageNumberLabel(i) {
+      var n = ((i - 2) >> 1) + 1;
+      return String(n);
+    }
     function sideLabel(i) {
       var last = sides.length - 1;
       if (i === 0) return 'Cover'; if (i === 1) return 'Inside cover';
       if (i === last) return 'Back cover'; if (i === last - 1) return 'Endpaper';
-      return foliate(i);
-    }
-    function firstWord(item) {
-      var txt = typeof item === 'string' ? item : (item && item.text ? item.text : '');
-      var m = String(txt).replace(/<[^>]+>/g, '').trim().split(/\s+/)[0] || '';
-      return m.replace(/[^A-Za-z’‘'-]/g, '');
+      return 'Page ' + pageNumberLabel(i);
     }
 
     function paperFox(el, seed) {
@@ -4258,7 +4668,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
 
       var ft = document.createElement('div');
       ft.className = 'ft';
-      ft.innerHTML = '<span>folio 1r</span>';
+      ft.innerHTML = '<span>1</span>';
 
       pg.appendChild(rh);
       pg.appendChild(tx);
@@ -4372,8 +4782,8 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
     function makeSides(b, isOneSheet) {
       var a = [{ kind: 'cover' }, { kind: 'inside' }, { kind: 'title' }, { kind: 'verso' }];
       var paginatedPages = measureAndPaginate(b, isOneSheet);
-      paginatedPages.forEach(function (pgObj) {
-        a.push({ kind: 'text', r: pgObj.r, items: pgObj.items });
+      paginatedPages.forEach(function (pgObj, idx) {
+        a.push({ kind: 'text', r: pgObj.r, items: pgObj.items, pgNum: idx + 1 });
       });
       if (!isOneSheet && a.length % 2) a.push({ kind: 'finis' });
       a.push({ kind: 'endR' }); a.push({ kind: 'back' });
@@ -4425,16 +4835,8 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         var head = one
           ? '<span>' + esc(b.short) + '</span><span>' + esc(side.r) + '</span>'
           : '<span>' + (isBack ? esc(b.short) : esc(side.r)) + '</span>';
-        var foot;
-        if (one) {
-          foot = '<span class="fol">page ' + i + '</span><span></span>';
-        } else {
-          var nextSide = sides[i + 1];
-          var nxt = (nextSide && nextSide.kind === 'text' && nextSide.items && nextSide.items.length)
-            ? firstWord(nextSide.items[0])
-            : '';
-          foot = '<span class="fol">' + foliate(i).toLowerCase() + '</span>' + (isBack && nxt ? '<span class="cw">' + esc(nxt) + '</span>' : '<span></span>');
-        }
+        var numStr = side.pgNum ? String(side.pgNum) : String(i);
+        var foot = '<span>' + esc(numStr) + '</span>';
         html = '<div class="pg"><div class="rh">' + head + '</div><div class="tx" lang="en">' + blocksHtml + '</div><div class="ft">' + foot + '</div></div>';
       }
       d.innerHTML = html;
@@ -4483,6 +4885,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
 
     function applyState() {
       var f = fOf(s), N = leaves.length;
+      bookEl.classList.toggle('closed-cover', !single() && s === 0);
       leaves.forEach(function (lf, i) {
         var el = lf.el, want = i < f; lf.flipped = want;
         el.style.transition = 'none';
@@ -4523,6 +4926,14 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
     }
     function thickness() {
       if (single() || !bookEl.slabR) return;
+      bookEl.classList.toggle('closed-cover', s === 0);
+      if (s === 0) {
+        bookEl.slabR.style.opacity = 0;
+        bookEl.slabR.style.boxShadow = 'none';
+        bookEl.slabL.style.opacity = 0;
+        bookEl.slabL.style.boxShadow = 'none';
+        return;
+      }
       var n = leaves.length, f = Math.ceil(s / 2);
       function sh(count, dir) {
         var t = Math.min(9, Math.round(count * 1.3)), out = [];
