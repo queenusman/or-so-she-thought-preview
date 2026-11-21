@@ -1,9 +1,9 @@
 const NOVEL_CHAPTERS = {
   crowned: [
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter One",
-      title: "The Architecture of Thought",
+      title: "",
       content: `
 
 <p>The library held the cold the way old stone did in winter. It was less a bite than a weight, something that settled into the room and stayed there.</p>
@@ -266,9 +266,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Two",
-      title: "The Alignment Doctrine",
+      title: "",
       content: `
 
 <p>Rain had been falling since before dawn.</p>
@@ -535,9 +535,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Three",
-      title: "The Cost of Want",
+      title: "",
       content: `
 
 <p>The tear was two inches long, running down the left side seam of Elisabeta's blouse.</p>
@@ -836,9 +836,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Four",
-      title: "The Study Sessions",
+      title: "",
       content: `
 
 <p>Elisabeta had submitted the request in writing, because writing was how things were done in her life.</p>
@@ -1162,9 +1162,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Five",
-      title: "Chapter Five Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Five prose here...</p>
@@ -1172,9 +1172,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Six",
-      title: "Chapter Six Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Six prose here...</p>
@@ -1182,9 +1182,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Seven",
-      title: "Chapter Seven Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Seven prose here...</p>
@@ -1192,9 +1192,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Eight",
-      title: "Chapter Eight Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Eight prose here...</p>
@@ -1202,9 +1202,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Nine",
-      title: "Chapter Nine Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Nine prose here...</p>
@@ -1212,9 +1212,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Ten",
-      title: "Chapter Ten Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Ten prose here...</p>
@@ -1222,9 +1222,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Eleven",
-      title: "The Silent Panel",
+      title: "",
       content: `
 
 <p>Insert Chapter Eleven prose here...</p>
@@ -1232,9 +1232,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twelve",
-      title: "Chapter Twelve Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twelve prose here...</p>
@@ -1242,9 +1242,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Thirteen",
-      title: "Chapter Thirteen Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Thirteen prose here...</p>
@@ -1252,9 +1252,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Fourteen",
-      title: "Chapter Fourteen Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Fourteen prose here...</p>
@@ -1262,9 +1262,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Fifteen",
-      title: "Chapter Fifteen Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Fifteen prose here...</p>
@@ -1272,9 +1272,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Sixteen",
-      title: "Chapter Sixteen Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Sixteen prose here...</p>
@@ -1282,9 +1282,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Seventeen",
-      title: "Chapter Seventeen Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Seventeen prose here...</p>
@@ -1292,9 +1292,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Eighteen",
-      title: "Chapter Eighteen Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Eighteen prose here...</p>
@@ -1302,9 +1302,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Nineteen",
-      title: "Chapter Nineteen Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Nineteen prose here...</p>
@@ -1312,9 +1312,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty",
-      title: "Chapter Twenty Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty prose here...</p>
@@ -1322,9 +1322,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-One",
-      title: "Chapter Twenty-One Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-One prose here...</p>
@@ -1332,9 +1332,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Two",
-      title: "Chapter Twenty-Two Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Two prose here...</p>
@@ -1342,9 +1342,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Three",
-      title: "Chapter Twenty-Three Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Three prose here...</p>
@@ -1352,9 +1352,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Four",
-      title: "Chapter Twenty-Four Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Four prose here...</p>
@@ -1362,9 +1362,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Five",
-      title: "Chapter Twenty-Five Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Five prose here...</p>
@@ -1372,9 +1372,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Six",
-      title: "Chapter Twenty-Six Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Six prose here...</p>
@@ -1382,9 +1382,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Seven",
-      title: "Chapter Twenty-Seven Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Seven prose here...</p>
@@ -1392,9 +1392,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Eight",
-      title: "Chapter Twenty-Eight Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Eight prose here...</p>
@@ -1402,9 +1402,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Twenty-Nine",
-      title: "Chapter Twenty-Nine Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Twenty-Nine prose here...</p>
@@ -1412,9 +1412,9 @@ const NOVEL_CHAPTERS = {
       `
     },
     {
-      eraLabel: "The Crowned Era: Elisabeta",
+      eraLabel: "The Crowned Era of Elisabeta",
       number: "Chapter Thirty",
-      title: "Chapter Thirty Title",
+      title: "",
       content: `
 
 <p>Insert Chapter Thirty prose here...</p>
