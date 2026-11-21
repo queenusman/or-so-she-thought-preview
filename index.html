@@ -509,13 +509,13 @@
     const ARCHIVE_BOOKS = [
       {
         id: 'founding',
-        shelfTitle: 'The Founding of Norwyn',
+        shelfTitle: 'THE FOUNDING OF NORWYN',
         shelfSub: 'The Story of Queen Arabella and the Birth of a Kingdom',
         spineTitle: 'THE FOUNDING OF NORWYN',
         leather: '#3B1D1E',
         titlePage: {
-          title: 'The Annals of Norwyn',
-          subtitle: 'The Founding of the Kingdom and the First Reign',
+          title: 'THE FOUNDING OF NORWYN',
+          subtitle: 'The Story of Queen Arabella and the Birth of a Kingdom',
           author: '',
           desc: "A history of the three villages, the woman who united them, and the establishment of Norwyn's first royal dynasty."
         },
@@ -1283,20 +1283,24 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       const queue = blocks.map(b => ({ ...b }));
       const pages = [];
       let current = [];
-      let firstParaUsed = false;
+      let sectionDropCapReady = true;
 
       sampleTx.innerHTML = '';
       const fits = () => sampleTx.scrollHeight <= sampleTx.clientHeight + 1;
 
       while (queue.length > 0) {
         const blk = queue[0];
-        const useDropCap = blk.type === 'p' && !firstParaUsed;
+        const useDropCap = blk.type === 'p' && sectionDropCapReady && !blk.continuation;
         const el = renderBlockEl(blk, useDropCap);
         sampleTx.appendChild(el);
 
         if (fits()) {
           current.push({ ...blk, dropCap: useDropCap });
-          if (useDropCap) firstParaUsed = true;
+          if (blk.type === 'bh1' || blk.type === 'bh2') {
+            sectionDropCapReady = true;
+          } else if (blk.type === 'p') {
+            sectionDropCapReady = false;
+          }
           queue.shift();
         } else {
           sampleTx.removeChild(el);
@@ -1322,7 +1326,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
 
             if (best > 0) {
               current.push({ type: 'p', text: words.slice(0, best).join(' '), dropCap: useDropCap });
-              if (useDropCap) firstParaUsed = true;
+              sectionDropCapReady = false;
               pages.push(current);
               current = [];
               sampleTx.innerHTML = '';
@@ -1330,7 +1334,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
               const remainder = words.slice(best).join(' ');
               queue.shift();
               if (remainder) {
-                queue.unshift({ type: 'p', text: remainder });
+                queue.unshift({ type: 'p', text: remainder, continuation: true });
               }
             } else if (current.length > 0) {
               pages.push(current);
@@ -1338,7 +1342,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
               sampleTx.innerHTML = '';
             } else {
               current.push({ ...blk, dropCap: useDropCap });
-              if (useDropCap) firstParaUsed = true;
+              sectionDropCapReady = false;
               pages.push(current);
               current = [];
               sampleTx.innerHTML = '';
@@ -1350,6 +1354,9 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
             sampleTx.innerHTML = '';
           } else {
             current.push({ ...blk, dropCap: false });
+            if (blk.type === 'bh1' || blk.type === 'bh2') {
+              sectionDropCapReady = true;
+            }
             queue.shift();
           }
         }
@@ -1467,7 +1474,6 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
     }
 
     function compileBookPages(book) {
-      // Measure against an actual rendered .tx element inside the viewport
       bookViewport.innerHTML = '';
       const probePage = document.createElement('article');
       probePage.className = 'pg';
