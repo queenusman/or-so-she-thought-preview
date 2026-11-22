@@ -896,33 +896,9 @@
     .nw-gallery-bar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 12px;
       margin-top: 12px;
-    }
-    .nw-slide-controls {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .nw-slide-btn {
-      font-family: 'Inter', sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 6px 11px;
-      border-radius: 7px;
-      border: 1px solid var(--color-border);
-      background: var(--color-panel);
-      color: var(--color-text-muted);
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s, background-color 0.2s;
-    }
-    .nw-slide-btn:hover {
-      border-color: var(--color-accent);
-      color: var(--color-text);
-      background: var(--color-panel-hover);
     }
     .nw-g-count {
       font-family: 'Inter', sans-serif;
@@ -1341,21 +1317,6 @@
       text-overflow: ellipsis;
       pointer-events: none;
     }
-    .scriptorium-folio {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--ui);
-      min-width: 13ch;
-      text-align: center;
-      font-size: 10px;
-      padding: 7px 13px;
-      background: var(--btn-bg);
-      border: 1px solid var(--btn-border);
-      border-radius: 8px;
-      backdrop-filter: blur(8px);
-    }
     .scriptorium-hint {
       position: absolute;
       z-index: 30;
@@ -1386,7 +1347,6 @@
     .archive-reader-subview[data-layout="single"] .scriptorium-rtitle {
       display: none;
     }
-
     .scriptorium-book {
       position: relative;
       flex: none;
@@ -2150,834 +2110,579 @@
 
       </div>
     </section>
-    <!-- ==================== SECTION ONE: BEFORE YOU BEGIN ==================== -->
 
-    <!-- 1. THE PREMISE -->
-    <section id="view-prologue" class="view-section view-hidden max-w-4xl mx-auto px-6 py-14">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">The Premise</h2>
+    <!-- ==================== THE PREMISE ==================== -->
+    <section id="view-prologue" class="view-section view-hidden max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <div class="mb-8 flex items-center justify-between border-b border-theme-border pb-4">
+        <button type="button" onclick="navigateTo('home')" class="text-xs font-sans uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+          Home
+        </button>
+        <span class="font-display text-xs tracking-[0.25em] uppercase text-theme-secondary font-bold">The Premise</span>
+        <span class="w-12"></span>
       </div>
 
-      <div class="book-card p-7 md:p-12 rounded-sm space-y-5 font-serif prose-body text-theme-text mb-10 text-justify">
-        <p>Elisabeta is twenty-two, heir to the crown of Norwyn, and very good at knowing what is expected of her.</p>
-        <p>In the island kingdom of Norwyn, the crown passes from mother to daughter, and every royal child carries her mother's name. The kingdom is governed by centuries of tradition, carefully maintained institutions and a philosophy that teaches that stability comes from arranging differences so that nothing works against the whole. Its Capital stands inland, among old stone buildings, long galleries and grand residences. There are three seasons and no summer. Fires are lit before dawn, rooms are prepared before their occupants arrive, and an entire world of people work quietly to keep the kingdom running.</p>
-        <p>Elisabeta has been raised to understand this world. As the eldest daughter of Queen Ecaterina, she has spent her life studying its history, learning the principles of government and preparing for the responsibilities of a future queen. She knows how to answer difficult questions, defend established principles and carry herself with the composure expected of someone who will one day inherit a kingdom. Her engagement to Prince Alexandru of Valenne is another part of that future, one that two kingdoms have spent a year preparing.</p>
-        <p>It is, by every reasonable measure, a remarkable life. She has a loving family, a kingdom to inherit and a future that appears to have been arranged with considerable care.</p>
-        <p>And, until recently, she has had little reason to question any of it.</p>
-        <p>Her mother loves her. Her sister is her closest friend. Her future husband is pleasant and well-meaning. The people around her are not cruel, and nobody seems particularly interested in making her unhappy. If anything, they are looking after her. There are arrangements for her comfort, decisions made in her best interests and expectations that have existed for so long that nobody thinks to explain them.</p>
-        <p>But a well-run life can conceal a great deal.</p>
-        <p>It begins with small things. A wire caught on a branch. A seam in a wooden panel. A glass of water that arrives at precisely the right temperature, though she has seen nobody bring it. The details are easily dismissed, yet they leave her with an unfamiliar sense that there is more happening around her than she has been taught to notice.</p>
-        <p>Beyond the palace, Norwyn is full of lives she has never had to consider closely. People make promises, pursue ambitions, endure disappointments, fall in love and find ways to live within circumstances they did not choose. Their lives are shaped by the same traditions and institutions that have shaped hers, though from positions very different from her own. The kingdom she has always understood from the perspective of its inheritance, its history and its government begins to look different when she considers the people who keep it functioning.</p>
-        <p>As Elisabeta becomes more attentive to the world around her, familiar explanations become harder to accept without examination. She begins to notice what has been arranged, who has made the arrangements, what they require of others and how little she has ever needed to ask. Even the future she has been preparing for begins to look different when she considers what it means to inherit a life that so many people have helped to decide.</p>
-        <p>There is no single revelation waiting to overturn everything she knows. No obvious enemy to expose, no simple injustice to correct and no easy distinction between those who care for her and those who expect something from her. The people she loves are part of the world she is beginning to question, just as she is part of theirs.</p>
-        <p>And somewhere between the answers she has always known and the questions she has only just begun to ask, Elisabeta must confront something she has never had much reason to consider:</p>
-        <p class="pt-4 border-t border-theme-border-subtle text-center font-serif italic text-theme-text-muted">
-          Does knowing how to live the life prepared for you mean you have ever known what you wanted from it?
+      <article class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body text-theme-text text-justify">
+        <div class="text-center mb-8">
+          <p class="font-sans text-[10px] tracking-[0.3em] uppercase text-theme-secondary mb-2 font-bold">The Premise</p>
+          <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">Before the Curtain Rises</h2>
+        </div>
+
+        <p class="entry-paragraph text-theme-text">
+          <em>Or So She Thought</em> is a novel about a young woman shaped by an ancient kingdom, a loving family, and a future that seems settled long before she has lived it.
         </p>
-        <p class="pt-2 text-theme-text-muted">
-          <em>Or So She Thought</em> is a literary psychological novel about inheritance, family, duty, identity and the quiet arrangements that shape a person's life. It is about a kingdom, the people who sustain it, and a young woman beginning to discover that being cared for is not necessarily the same as being known.
+
+        <p class="entry-paragraph text-theme-text">
+          Set in Norwyn—a land where the Crown passes through the female line and where tradition lives beside modern life—the story follows Princess Elisabeta as ordinary days, quiet observations, and long-held assumptions begin to shift beneath familiar routines.
         </p>
-      </div>
+
+        <p class="entry-paragraph text-theme-text">
+          At its heart is a quiet question: what happens when someone begins to see the world—and her own place within it—more clearly than she ever thought to look?
+        </p>
+      </article>
     </section>
 
-    <!-- 2. THE WORLD OF NORWYN (Hybrid Index + Sliding Selector + Reading Sheet + Sliding Gallery) -->
-    <section id="view-world" class="view-section view-hidden max-w-4xl mx-auto px-6 py-14">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text tracking-wide mb-2.5 font-semibold uppercase">DISCOVER NORWYN</h2>
-        <p class="font-serif italic text-theme-text-muted text-base md:text-lg">
-          An introduction to a kingdom beyond the pages.
-        </p>
+    <!-- ==================== DISCOVER NORWYN ==================== -->
+    <section id="view-world" class="view-section view-hidden max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <div class="mb-8 flex items-center justify-between border-b border-theme-border pb-4">
+        <button type="button" onclick="navigateTo('home')" class="text-xs font-sans uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+          Home
+        </button>
+        <span class="font-display text-xs tracking-[0.25em] uppercase text-theme-secondary font-bold">The World of Norwyn</span>
+        <span class="w-12"></span>
       </div>
 
-      <!-- Dynamic Index / Hybrid Sliding Reader Mount -->
-      <div id="worldMainContainer"></div>
+      <div class="text-center mb-10 space-y-2">
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text tracking-wide font-semibold">DISCOVER NORWYN</h2>
+      </div>
 
-      <!-- ==================== GALLERY (Part of The World of Norwyn) ==================== -->
-      <div id="world-gallery" class="book-card p-7 md:p-10 rounded-sm space-y-4 text-left mt-12 scroll-mt-24">
-        <span class="font-sans text-[9px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">The Gallery</span>
-        <h3 class="font-display text-xl md:text-2xl text-theme-text font-semibold tracking-wide">A Kingdom Beyond the Pages</h3>
-        <p class="font-serif prose-body text-theme-text-muted text-justify">
-          Slide through visual plates across the kingdom, architecture, interiors, seasons, royal life, and daily life in Norwyn. Click any plate to inspect it closely.
-        </p>
+      <div id="worldMainContainer" class="leaf-sheet"></div>
+
+      <div id="world-gallery" class="mt-10 pt-8 border-t border-theme-border">
+        <h3 class="font-display text-base md:text-lg tracking-[0.22em] uppercase text-theme-text text-center mb-2">
+          The Gallery
+        </h3>
         <div id="norwynWorldGalleryMount"></div>
       </div>
     </section>
 
-    <!-- 3. THE CHARACTERS (Threshold Index + Hybrid Sliding Selector + Registry Glimpses) -->
-    <section id="view-characters" class="view-section view-hidden max-w-4xl mx-auto px-6 py-14">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-2.5 tracking-wide font-semibold uppercase">THE CHARACTERS</h2>
-        <p class="font-serif italic text-theme-text-muted text-base md:text-lg">
-          Every life has its own arrangements. Not all of them are visible.
-        </p>
+    <!-- ==================== THE CHARACTERS ==================== -->
+    <section id="view-characters" class="view-section view-hidden max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <div class="mb-8 flex items-center justify-between border-b border-theme-border pb-4">
+        <button type="button" onclick="navigateTo('home')" class="text-xs font-sans uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+          Home
+        </button>
+        <span class="font-display text-xs tracking-[0.25em] uppercase text-theme-secondary font-bold">The Characters</span>
+        <span class="w-12"></span>
       </div>
 
-      <!-- Dynamic Index / Hybrid Sliding Registry Mount -->
-      <div id="peopleMainContainer"></div>
+      <div class="text-center mb-10 space-y-2">
+        <h2 class="font-display text-3xl md:text-4xl text-theme-text tracking-wide font-semibold">THE CHARACTERS</h2>
+      </div>
+
+      <div id="peopleMainContainer" class="leaf-sheet"></div>
     </section>
 
-    <!-- ==================== SECTION TWO: ORIENTATION & FRONT MATTER ==================== -->
-
-    <!-- 4. A NOTE FROM THE AUTHOR -->
-    <section id="view-author-note" class="view-section view-hidden max-w-4xl mx-auto px-6 py-14">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold">A Note from the Author</h2>
-      </div>
-
-      <div class="book-card p-7 md:p-12 rounded-sm space-y-5 font-serif prose-body text-theme-text mb-10 text-justify">
-        <p>
-          I have always been interested in the things people rarely think to question. The familiar arrangements of a life. The small expectations that become second nature. The ways we learn to accommodate, to anticipate, to make ourselves comfortable with things we never consciously chose. And how, sometimes, it takes very little to make something we have always known feel suddenly unfamiliar.
-        </p>
-        <p>
-          I wanted to explore some of these things through fiction, not by offering answers, but by following people closely enough to see what they might not see in themselves. I am drawn to the ordinary moments that reveal more than they appear to: a remark that stays with someone longer than it should, a kindness whose meaning changes with time, a decision made almost without thought that quietly alters the course of something else. The things that seem insignificant until they are no longer.
-        </p>
-        <p>
-          In writing this novel, I became particularly interested in the relationship between care and understanding, between what is done for us and what is understood about us, and in how easily the two can be mistaken for one another. There is something fascinating about the lives we consider settled, the beliefs we hold without examination, and the moments when neither feels quite as certain as it once did.
-        </p>
-        <p>
-          I have no particular interest in making every question resolve neatly, or in deciding what a reader ought to think of the people they encounter. Some things are better left a little unsettled. Perhaps there is value in looking at something twice, in allowing an impression to linger long enough for it to become something else.
-        </p>
-        <p>
-          Thank you for entering this world, for spending your time with its people, and for reading <em>Or So She Thought</em>.
-        </p>
-        <p class="pt-4 border-t border-theme-border-subtle font-semibold text-right">
-          <strong class="font-display tracking-wider text-theme-accent">Queen Usman</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- 5. COPYRIGHT AND CONTENT NOTICE -->
-    <section id="view-disclaimer" class="view-section view-hidden max-w-4xl mx-auto px-6 py-14">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="font-display text-3xl md:text-4xl text-theme-text mb-4 tracking-wide font-semibold uppercase">Copyright and Content Notice</h2>
-      </div>
-
-      <div class="book-card p-7 md:p-12 rounded-sm space-y-5 font-serif prose-body text-theme-text mb-10 text-justify">
-        <p>
-          <em>Or So She Thought</em> is a work of fiction. Norwyn, Valenne, and all other kingdoms, places, institutions, histories, laws, customs, traditions, organisations and characters depicted in this novel are imagined. Any resemblance to actual persons, living or dead, places, events, institutions or historical circumstances is coincidental.
-        </p>
-        <p>
-          Although the novel draws upon elements of history, culture and human experience, its setting does not represent any particular country, historical society, religion or community. Its world has been created for the purposes of this story. The customs, traditions, systems of government, social structures and cultural practices described within are the author's invention and should not be understood as factual representations of any real society.
-        </p>
-        <p>
-          The novel contains themes of grief, bereavement, family expectations, duty, personal autonomy and institutional pressure, including a restrained depiction of the circumstances surrounding a death.
-        </p>
-        <p>
-          The people and events within these pages belong to Norwyn.
-        </p>
-        <div class="pt-6 border-t border-theme-border-subtle space-y-4">
-          <p class="font-semibold text-theme-heading">
-            Copyright &copy; 2026 Queen Usman. All rights reserved.
-          </p>
-          <p class="text-theme-text-muted">
-            No part of this book may be reproduced, distributed, transmitted, stored or adapted in any form or by any means without the prior written permission of the author, except for brief quotations used in reviews, criticism or other uses permitted by applicable copyright law.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. CHAPTERS (Dynamic Reader Sanctuary - Epigraph Preview + Progress Markers + Hybrid Strip + Turn-Leaf Cross-Fade) -->
-    <section id="view-reader" class="view-section view-hidden py-10 transition-colors duration-300 relative">
-      <div class="max-w-3xl mx-auto px-6 mb-5 flex items-center justify-between gap-4">
-        <div id="readerTopNavBar" class="flex items-center gap-2"></div>
-        <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5 ml-auto">
-          <button type="button" onclick="changeFontSize(-1)" class="px-2.5 py-1 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
-          <span class="text-theme-border select-none px-1">|</span>
-          <button type="button" onclick="changeFontSize(1)" class="px-2.5 py-1 text-theme-text-muted hover:text-theme-text font-semibold transition-colors cursor-pointer" title="Increase font size">A+</button>
+    <!-- ==================== READ THE CHAPTERS ==================== -->
+    <section id="view-reader" class="view-section view-hidden max-w-3xl mx-auto px-6 py-10 md:py-14">
+      <div class="mb-6 flex items-center justify-between border-b border-theme-border pb-3.5">
+        <button type="button" onclick="navigateTo('home')" class="text-xs font-sans uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+          Home
+        </button>
+        <span class="font-display text-xs tracking-[0.25em] uppercase text-theme-secondary font-bold">Read the Chapters</span>
+        <div class="flex items-center space-x-2">
+          <button type="button" onclick="changeFontSize(-1)" aria-label="Decrease font size" class="w-7 h-7 border border-theme-border rounded-lg text-xs font-sans text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all cursor-pointer flex items-center justify-center bg-theme-panel shadow-sm">A-</button>
+          <button type="button" onclick="changeFontSize(1)" aria-label="Increase font size" class="w-7 h-7 border border-theme-border rounded-lg text-xs font-sans text-theme-text-muted hover:text-theme-text hover:border-theme-accent transition-all cursor-pointer flex items-center justify-center bg-theme-panel shadow-sm">A+</button>
         </div>
       </div>
 
-      <div id="readerMainContainer" class="max-w-3xl mx-auto px-6 leaf-sheet"></div>
+      <div id="readerTopNavBar" class="mb-6 flex items-center justify-start"></div>
+
+      <div id="readerMainContainer" class="leaf-sheet"></div>
     </section>
 
-    <!-- 7. ARCHIVE (Scriptorium Bookcase Shelf & Interactive Reader) -->
-    <section id="view-archive" class="view-section view-hidden max-w-5xl mx-auto px-4 sm:px-6 py-10">
-      <div class="scriptorium-shell" id="scriptoriumShell">
+    <!-- ==================== THE NORWYN ARCHIVES (SCRIPTORIUM) ==================== -->
+    <section id="view-archive" class="view-section view-hidden max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+      <div class="mb-7 flex items-center justify-between border-b border-theme-border pb-4">
+        <button type="button" onclick="navigateTo('home')" class="text-xs font-sans uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+          Home
+        </button>
+        <span class="font-display text-xs tracking-[0.25em] uppercase text-theme-secondary font-bold">The Norwyn Archives</span>
+        <span class="w-12"></span>
+      </div>
 
-        <!-- Shelf Subview -->
-        <div class="scriptorium-subview shelf-subview" id="archiveShelfView">
-          <div class="flex flex-wrap items-center justify-between gap-4 scriptorium-mast">
+      <div id="scriptoriumShell" class="scriptorium-shell">
+        <div class="scriptorium-subview shelf-subview" id="shelfView">
+          <div class="scriptorium-mast flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <p class="scriptorium-eyebrow">The Norwyn Archives · Royal Reading Room</p>
-              <h3>Scriptorium</h3>
+              <p class="scriptorium-eyebrow">The Scriptorium · Norwyn</p>
+              <h3>The Norwyn Archives</h3>
             </div>
-            <div class="flex flex-wrap items-center gap-2">
-              <button class="scriptorium-btn" type="button" onclick="navigateTo('reader')">Read the Chapters</button>
-              <button class="scriptorium-btn tog" id="bSoundShelf" type="button" aria-pressed="true">Sound</button>
-            </div>
+            <button type="button" class="scriptorium-btn tog self-start sm:self-auto" id="bSoundShelf" aria-pressed="true" aria-label="Page sounds">Page sounds</button>
           </div>
 
-          <div class="scriptorium-case" id="scriptoriumCase"></div>
+          <div class="scriptorium-case" id="scriptoriumCase" role="region" aria-label="Bookcase of bound volumes"></div>
 
-          <p class="scriptorium-fine">The Scriptorium holds four bound volumes: <em>The Founding of Norwyn</em>, <em>Norwyn Structural Ideology</em>, <em>The Dispossessed Heart</em>, and <em>The Annals of Norwyn</em>.</p>
+          <p class="scriptorium-fine">Select a volume on the shelf to lift it from the case and open its pages.</p>
         </div>
 
-        <!-- Reader Subview -->
-        <div class="scriptorium-subview archive-reader-subview" id="archiveReaderView" aria-label="Reading an archival volume">
+        <div class="scriptorium-subview archive-reader-subview" id="archiveReaderView" data-layout="spread">
           <div class="scriptorium-bar top">
-            <button class="scriptorium-btn" id="toShelfBtn" type="button">Shelf</button>
-            <div class="scriptorium-rtitle" id="scriptoriumRTitle"></div>
-            <div class="flex items-center gap-2">
-              <button class="scriptorium-btn hidden sm:inline-block" type="button" onclick="navigateTo('reader')">Chapters</button>
-              <button class="scriptorium-btn tog" id="bSoundReader" type="button" aria-pressed="true">Sound</button>
-            </div>
+            <button type="button" class="scriptorium-btn" id="toShelfBtn">Shelf</button>
+            <span class="scriptorium-rtitle" id="scriptoriumRTitle"></span>
+            <button type="button" class="scriptorium-btn tog" id="bSoundReader" aria-pressed="true" aria-label="Page sounds">Page sounds</button>
           </div>
-
-          <div class="scriptorium-stage" id="scriptoriumStage" aria-live="polite">
-            <div class="scriptorium-book" id="scriptoriumBook"></div>
+          <div class="scriptorium-stage" id="scriptoriumStage">
+            <div class="scriptorium-book" id="scriptoriumBook" role="region" aria-live="polite"></div>
             <p class="scriptorium-hint" id="scriptoriumHint"></p>
           </div>
-
           <div class="scriptorium-bar bottom">
-            <button class="scriptorium-btn" id="scriptoriumPrev" type="button" aria-label="Previous page">Back</button>
-            <div class="scriptorium-folio" id="scriptoriumFolio"></div>
-            <button class="scriptorium-btn" id="scriptoriumNext" type="button" aria-label="Next page">Turn</button>
+            <button type="button" class="scriptorium-btn" id="scriptoriumCoverBtn">Cover</button>
           </div>
         </div>
-
       </div>
+    </section>
+
+    <!-- ==================== A NOTE FROM THE AUTHOR ==================== -->
+    <section id="view-author-note" class="view-section view-hidden max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <div class="mb-8 flex items-center justify-between border-b border-theme-border pb-4">
+        <button type="button" onclick="navigateTo('home')" class="text-xs font-sans uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+          Home
+        </button>
+        <span class="font-display text-xs tracking-[0.25em] uppercase text-theme-secondary font-bold">A Note from the Author</span>
+        <span class="w-12"></span>
+      </div>
+
+      <article class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body text-theme-text text-justify">
+        <div class="text-center mb-8">
+          <p class="font-sans text-[10px] tracking-[0.3em] uppercase text-theme-secondary mb-2 font-bold">A Note from the Author</p>
+          <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">Why I Wrote This Story</h2>
+        </div>
+
+        <p class="entry-paragraph text-theme-text">
+          Welcome to the world of <em>Or So She Thought</em>.
+        </p>
+
+        <p class="entry-paragraph text-theme-text">
+          For a long time, I have been drawn to stories that unfold quietly—stories about the small moments in which a person begins to notice the weight of expectation, the comfort of what is familiar, and the distance between what others see and what lies within.
+        </p>
+
+        <p class="entry-paragraph text-theme-text">
+          Norwyn grew slowly: its seasons, its institutions, its households, and the people who inhabit them. Take your time as you read, explore the world and its archives at your own pace, and step into the chapters whenever you are ready.
+        </p>
+
+        <div class="pt-4 font-serif italic text-theme-text-muted">
+          — Queen Usman
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== COPYRIGHT & CONTENT NOTICE ==================== -->
+    <section id="view-disclaimer" class="view-section view-hidden max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <div class="mb-8 flex items-center justify-between border-b border-theme-border pb-4">
+        <button type="button" onclick="navigateTo('home')" class="text-xs font-sans uppercase tracking-[0.2em] text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer">
+          Home
+        </button>
+        <span class="font-display text-xs tracking-[0.25em] uppercase text-theme-secondary font-bold">Copyright &amp; Content Notice</span>
+        <span class="w-12"></span>
+      </div>
+
+      <article class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body text-theme-text text-justify">
+        <div class="text-center mb-8">
+          <p class="font-sans text-[10px] tracking-[0.3em] uppercase text-theme-secondary mb-2 font-bold">Copyright &amp; Content Notice</p>
+          <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">Copyright &amp; Literary Notice</h2>
+        </div>
+
+        <p class="entry-paragraph text-theme-text">
+          <em>Or So She Thought</em> and all accompanying world notes, character entries, and archival texts are original works of fiction by Queen Usman. No part of this book may be reproduced, stored in a retrieval system, or transmitted in any form or by any means without prior written permission from the author.
+        </p>
+
+        <p class="entry-paragraph text-theme-text">
+          Norwyn, its royal lineage, institutions, historical chronicles, and characters are entirely fictional. Any resemblance to actual persons, living or dead, or to real-world states or institutions is purely coincidental.
+        </p>
+      </article>
     </section>
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer id="siteFooter" style="background-color: var(--footer-bg); border-color: var(--color-border);" class="border-t py-8 transition-colors duration-300">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <div class="text-xs font-sans tracking-[0.2em] text-theme-text-muted uppercase font-medium">
-        &copy; 2026 Queen Usman. All rights reserved.
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer style="background-color: var(--footer-bg); border-color: var(--color-border);" class="border-t py-10 mt-12 text-center">
+    <div class="max-w-4xl mx-auto px-6 space-y-3">
+      <p class="font-display text-xs tracking-[0.25em] uppercase text-theme-text">
+        Or So She Thought — By Queen Usman
+      </p>
+      <p class="font-serif italic text-sm text-theme-text-muted">
+        Stories. Worlds. Lives.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-5 pt-2 text-[10px] font-sans uppercase tracking-[0.2em] text-theme-text-faint">
+        <button type="button" onclick="navigateTo('author-note')" class="hover:text-theme-text transition-colors cursor-pointer">A Note from the Author</button>
+        <button type="button" onclick="navigateTo('prologue')" class="hover:text-theme-text transition-colors cursor-pointer">The Premise</button>
+        <button type="button" onclick="navigateTo('disclaimer')" class="hover:text-theme-text transition-colors cursor-pointer">Copyright &amp; Content Notice</button>
       </div>
     </div>
   </footer>
-
-  <!-- ==================== CINEMATIC ENTRANCE SOUND & LOGIC ==================== -->
+  <!-- ==================== CINEMATIC ENTRANCE SCRIPT ==================== -->
   <script>
   (function () {
-    var root = document.documentElement;
-    var intro = document.getElementById('quIntro');
-    if (!intro) return;
+    var root = document.getElementById('quIntro');
+    if (!root) return;
 
-    if (!root.classList.contains('qu-intro-on')) {
-      intro.remove();
+    var STORAGE_KEY = 'qu_intro_seen_v1';
+    var url = new URL(location.href);
+    var force = url.searchParams.has('intro');
+    var calibrate = url.searchParams.has('calibrate');
+    var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var seen = false;
+    try { seen = sessionStorage.getItem(STORAGE_KEY) === '1'; } catch (e) {}
+
+    if (seen && !force && !calibrate) {
+      document.documentElement.classList.remove('qu-intro-on', 'qu-intro-ivory');
+      root.remove();
       return;
     }
 
-    var enterBtn = document.getElementById('quEnter');
-    var skipBtn = document.getElementById('quSkip');
-    var soundBtn = document.getElementById('quSound');
-    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var inerted = [];
+    document.documentElement.classList.add('qu-intro-on');
+    try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+
+    var ENTER_MS = reduced ? 650 : 2500;
+    var SKIP_MS = reduced ? 550 : 750;
+    var MOTES = reduced ? 0 : 28;
+    var BG_VOL = 0.05;
+    var CHIME_VOL = 0.14;
+    var DOOR_VOL = 0.22;
+    var RAMP_SEC = 1.6;
+    var FADE_SEC = 1.1;
+
+    var scene = root.querySelector('.qu-scene');
+    var frame = root.querySelector('.qu-frame');
+    var photo = root.querySelector('.qu-photo');
+    var door = root.querySelector('.qu-door');
+    var orb = root.querySelector('.qu-orb');
+    var motes = root.querySelector('.qu-motes');
+    var enterBtn = root.getElementById('quEnter');
+    var skipBtn = root.getElementById('quSkip');
+    var soundBtn = root.getElementById('quSound');
     var prevFocus = document.activeElement;
-    var leaving = false;
-    var raf = 0;
 
-    Array.prototype.forEach.call(document.body.children, function (el) {
-      if (el !== intro && !/^(SCRIPT|STYLE|LINK)$/.test(el.tagName) && !el.inert) {
-        el.inert = true;
-        inerted.push(el);
-      }
-    });
-    if (enterBtn) enterBtn.focus({ preventScroll: true });
+    function parseNum(v, fb) { var n = parseFloat(v); return isFinite(n) ? n : fb; }
+    function parseDoor(str) {
+      var p = (str || '').split(',').map(Number);
+      return { cx: p[0] || 50, cy: p[1] || 58, w: p[2] || 24, h: p[3] || 58 };
+    }
+    function parseLamps(str) {
+      if (!str) return [];
+      return str.split(';').map(function (s) {
+        var p = s.split(',').map(Number);
+        return { x: p[0], y: p[1], r: p[2] || 18, i: p[3] || 2 };
+      }).filter(function (l) { return isFinite(l.x) && isFinite(l.y); });
+    }
 
-    var num = function (a) {
-      return a.split(',').map(function (v) { return parseFloat(v); });
-    };
-    var door = num(intro.dataset.door || '50,58,24,58');
-    var lampCfg = (intro.dataset.lamps || '').split(';').filter(Boolean).map(num);
-    var stage = intro.querySelector('.qu-stage');
-    var frame = intro.querySelector('.qu-frame');
-    var photo = intro.querySelector('.qu-photo');
-    var doorEl = intro.querySelector('.qu-door');
-    var orb = intro.querySelector('.qu-orb');
-    var wash = intro.querySelector('.qu-wash');
-    var ar = 1.6;
+    var doorSpec = parseDoor(root.dataset.door);
+    var arch = root.dataset.arch === 'true';
+    var lamps = parseLamps(root.dataset.lamps);
+    var imgSrc = (root.dataset.image || '').trim();
 
-    doorEl.style.cssText =
-      'left:' + (door[0] - door[2] / 2) + '%;' +
-      'top:' + (door[1] - door[3] / 2) + '%;' +
-      'width:' + door[2] + '%;' +
-      'height:' + door[3] + '%;' +
-      (intro.dataset.arch === 'true' ? 'border-radius:50% 50% 0 0 / 22% 22% 0 0;' : '');
+    door.style.left = (doorSpec.cx - doorSpec.w / 2) + '%';
+    door.style.top = (doorSpec.cy - doorSpec.h / 2) + '%';
+    door.style.width = doorSpec.w + '%';
+    door.style.height = doorSpec.h + '%';
+    if (arch) door.style.borderRadius = (doorSpec.w / 2) + '% / ' + (doorSpec.w / 2 * 1.4) + '% 0 0';
+    orb.style.left = doorSpec.cx + '%';
+    orb.style.top = doorSpec.cy + '%';
+    orb.style.width = (doorSpec.w * 0.6) + '%';
+    orb.style.setProperty('--os', Math.max(14, Math.round(80 / Math.max(10, doorSpec.w))));
 
-    orb.style.cssText =
-      'left:' + door[0] + '%;' +
-      'top:' + door[1] + '%;' +
-      'width:' + (door[2] * 1.4) + '%;' +
-      'height:' + (door[3] * 1.2) + '%;' +
-      '--os:' + Math.ceil(Math.max(100 / (door[2] * 1.4), 100 / (door[3] * 1.2)) * 2.4);
-
-    var lamps = lampCfg.map(function (c) {
+    lamps.forEach(function (l) {
       var g = document.createElement('div');
-      var b = document.createElement('div');
       g.className = 'qu-glow';
+      g.style.left = l.x + '%'; g.style.top = l.y + '%';
+      g.style.width = (l.r * 2.2) + '%';
+      g.style.opacity = Math.min(1, 0.35 * l.i);
+      frame.insertBefore(g, door);
+
+      var b = document.createElement('div');
       b.className = 'qu-bulb';
-      g.style.cssText = 'left:' + c[0] + '%;top:' + c[1] + '%;width:' + c[2] + '%';
-      b.style.cssText = 'left:' + c[0] + '%;top:' + c[1] + '%;width:' + (c[3] || 2.2) + '%';
-      frame.insertBefore(g, wash);
-      frame.insertBefore(b, wash);
-      return { g: g, b: b, x: c[0], v: 1, t: 1, n: 0 };
+      b.style.left = l.x + '%'; b.style.top = l.y + '%';
+      b.style.width = (l.r * 0.24) + '%';
+      b.style.opacity = Math.min(1, 0.65 * l.i);
+      frame.insertBefore(b, door);
     });
 
-    function layout() {
-      var vw = window.innerWidth;
-      var vh = window.innerHeight;
-      var w = Math.max(vw, vh * ar);
-      var h = w / ar;
-      if (h < vh) {
-        h = vh;
-        w = h * ar;
+    function fitFrame() {
+      var nw = photo.naturalWidth, nh = photo.naturalHeight;
+      if (!nw || !nh) {
+        frame.style.left = '0'; frame.style.top = '0';
+        frame.style.width = '100%'; frame.style.height = '100%';
+        return;
       }
-      var l = Math.min(0, Math.max(vw - w, vw / 2 - door[0] * w / 100));
-      var t = Math.min(0, Math.max(vh - h, vh * 0.52 - door[1] * h / 100));
-      frame.style.cssText = 'left:' + l + 'px;top:' + t + 'px;width:' + w + 'px;height:' + h + 'px';
-      stage.style.transformOrigin = (l + door[0] * w / 100) + 'px ' + (t + door[1] * h / 100) + 'px';
+      var vw = window.innerWidth, vh = window.innerHeight;
+      var ia = nw / nh, va = vw / vh, w, h;
+      if (ia > va) { h = vh; w = h * ia; } else { w = vw; h = w / ia; }
+      frame.style.width = w + 'px'; frame.style.height = h + 'px';
+      frame.style.left = ((vw - w) / 2) + 'px';
+      frame.style.top = ((vh - h) / 2) + 'px';
     }
+    window.addEventListener('resize', fitFrame);
 
-    var src = intro.dataset.image;
-    if (src && photo) {
-      photo.onload = function () {
-        if (photo.naturalWidth && photo.naturalHeight) {
-          ar = photo.naturalWidth / photo.naturalHeight;
-          layout();
-        }
-        intro.classList.add('is-loaded');
+    if (imgSrc) {
+      var probe = new Image();
+      probe.onload = function () {
+        photo.src = imgSrc;
+        fitFrame();
+        root.classList.add('is-loaded');
       };
-      photo.onerror = function () {
-        photo.removeAttribute('src');
-      };
-      photo.src = src;
+      probe.src = imgSrc;
     }
 
-    layout();
-    window.addEventListener('resize', layout);
-
-    var AC = window.AudioContext || window.webkitAudioContext;
-    var ctx = null, master = null, verb = null, noise = null, brown = null;
-    var modA = null, modB = null, ambSrcs = [];
-    var soundPref = 'unset', ambOn = false, ambG = null, ambT = 0;
-
-    function audio() {
-      if (!AC) return null;
-      if (!ctx) {
-        ctx = new AC();
-        var comp = ctx.createDynamicsCompressor();
-        comp.connect(ctx.destination);
-        master = ctx.createGain();
-        master.gain.value = 0.9;
-        master.connect(comp);
-
-        verb = ctx.createConvolver();
-        var len = Math.floor(ctx.sampleRate * 2.6);
-        var ir = ctx.createBuffer(2, len, ctx.sampleRate);
-        for (var c = 0; c < 2; c++) {
-          var d = ir.getChannelData(c);
-          for (var i = 0; i < len; i++) {
-            d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.6);
-          }
-        }
-        verb.buffer = ir;
-        var vg = ctx.createGain();
-        vg.gain.value = 0.6;
-        verb.connect(vg);
-        vg.connect(master);
-
-        noise = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate);
-        var nd = noise.getChannelData(0);
-        for (var j = 0; j < nd.length; j++) nd[j] = Math.random() * 2 - 1;
-
-        brown = ctx.createBuffer(1, ctx.sampleRate * 4, ctx.sampleRate);
-        var bd = brown.getChannelData(0);
-        var last = 0;
-        for (var k = 0; k < bd.length; k++) {
-          last = (last + 0.02 * (Math.random() * 2 - 1)) / 1.02;
-          bd[k] = last * 3.5;
-        }
-      }
-      if (ctx.state === 'suspended') {
-        try { ctx.resume(); } catch (e) {}
-      }
-      return ctx;
+    for (var i = 0; i < MOTES; i++) {
+      var s = document.createElement('span');
+      var size = (1.5 + Math.random() * 2.5).toFixed(1) + 'px';
+      s.style.setProperty('--s', size);
+      s.style.left = (Math.random() * 100).toFixed(1) + '%';
+      s.style.setProperty('--x', ((Math.random() - 0.5) * 140).toFixed(0) + 'px');
+      s.style.setProperty('--o', (0.25 + Math.random() * 0.55).toFixed(2));
+      s.style.setProperty('--d', (11 + Math.random() * 14).toFixed(1) + 's');
+      s.style.setProperty('--dl', (-Math.random() * 18).toFixed(1) + 's');
+      motes.appendChild(s);
     }
 
-    function wet(n, a) {
-      if (!ctx || !verb) return;
-      var g = ctx.createGain();
-      g.gain.value = a;
-      n.connect(g);
-      g.connect(verb);
+    var ac, master, droneGain;
+    var soundWant = false;
+    var soundStarted = false;
+
+    function ensureAudio() {
+      if (ac) return ac;
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return null;
+      ac = new Ctx();
+      master = ac.createGain();
+      master.gain.value = 0.0001;
+      master.connect(ac.destination);
+      return ac;
     }
 
-    function panNode(p) {
-      if (!ctx) return null;
-      var n = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
-      if (n) n.pan.value = p;
-      return n;
-    }
+    function startDrone() {
+      if (soundStarted) return;
+      var ctx = ensureAudio();
+      if (!ctx) return;
+      soundStarted = true;
 
-    function out(node, p) {
-      if (!ctx || !master) return;
-      var n = panNode(p);
-      if (n) {
-        node.connect(n);
-        n.connect(master);
-      } else {
-        node.connect(master);
-      }
-    }
+      var now = ctx.currentTime;
+      droneGain = ctx.createGain();
+      droneGain.gain.setValueAtTime(0.0001, now);
+      droneGain.gain.exponentialRampToValueAtTime(BG_VOL, now + RAMP_SEC);
 
-    function crackle(amp, t, freq, p) {
-      if (!ctx || !noise) return;
-      t = t || ctx.currentTime;
-      var s = ctx.createBufferSource();
-      var f = ctx.createBiquadFilter();
-      var g = ctx.createGain();
-      s.buffer = noise;
-      s.playbackRate.value = 0.8 + Math.random() * 0.8;
-      f.type = 'bandpass';
-      f.frequency.value = freq || 700 + Math.pow(Math.random(), 1.6) * 5500;
-      f.Q.value = 1.5 + Math.random() * 4;
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.linearRampToValueAtTime(amp, t + 0.001);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.006 + Math.random() * 0.02);
-      s.connect(f);
-      f.connect(g);
-      out(g, p == null ? Math.random() * 1.2 - 0.6 : p);
-      s.start(t, Math.random() * 1.5, 0.08);
-    }
-
-    function lick(amp, p) {
-      if (!ctx || !noise) return;
-      var t = ctx.currentTime;
-      var s = ctx.createBufferSource();
-      var f = ctx.createBiquadFilter();
-      var g = ctx.createGain();
-      s.buffer = noise;
-      f.type = 'bandpass';
-      f.frequency.value = 350 + Math.random() * 600;
-      f.Q.value = 0.8;
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.linearRampToValueAtTime(amp, t + 0.06);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.3);
-      s.connect(f);
-      f.connect(g);
-      out(g, p);
-      wet(g, 0.15);
-      s.start(t, Math.random() * 1.5, 0.4);
-    }
-
-    function whuff(p) {
-      if (!ctx || !brown) return;
-      var t = ctx.currentTime;
-      var s = ctx.createBufferSource();
-      var f = ctx.createBiquadFilter();
-      var g = ctx.createGain();
-      s.buffer = brown;
-      f.type = 'lowpass';
-      f.frequency.value = 420;
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.linearRampToValueAtTime(0.07, t + 0.05);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.35);
-      s.connect(f);
-      f.connect(g);
-      out(g, p || 0);
-      s.start(t, Math.random() * 3, 0.45);
-    }
-
-    function flameEvent(o, drop) {
-      if (!ambOn || !ctx) return;
-      var p = Math.max(-0.8, Math.min(0.8, (o.x - 50) / 50 * 0.8));
-      lick(0.015 + drop * 0.09, p);
-      if (drop > 0.3) whuff(p);
-      if (Math.random() < 0.5) crackle(0.01 + drop * 0.05, 0, 0, p);
-    }
-
-    function crackleLoop() {
-      if (!ambOn) return;
-      var cluster = Math.random() < 0.2 ? 3 + ((Math.random() * 4) | 0) : 1;
-      for (var n = 0; n < cluster; n++) {
-        setTimeout(function () {
-          if (ambOn) crackle(0.006 + Math.pow(Math.random(), 3) * 0.07);
-        }, n * (10 + Math.random() * 30));
-      }
-      ambT = setTimeout(crackleLoop, 90 + Math.random() * 1000);
-    }
-
-    function startAmb() {
-      if (ambOn || !audio()) return;
-      ambOn = true;
-      var t = ctx.currentTime;
-      ambG = ctx.createGain();
-      ambG.gain.setValueAtTime(0.0001, t);
-      ambG.gain.linearRampToValueAtTime(0.04, t + 1.2);
-      ambG.connect(master);
-
-      modA = ctx.createGain();
-      modB = ctx.createGain();
-      modA.connect(ambG);
-      modB.connect(ambG);
-
-      var a = ctx.createBufferSource();
-      var fa = ctx.createBiquadFilter();
-      var ga = ctx.createGain();
-      a.buffer = brown;
-      a.loop = true;
-      fa.type = 'lowpass';
-      fa.frequency.value = 450;
-      ga.gain.value = 0.9;
-      a.connect(fa);
-      fa.connect(ga);
-      ga.connect(modA);
-
-      var b = ctx.createBufferSource();
-      var fb = ctx.createBiquadFilter();
-      var gb = ctx.createGain();
-      b.buffer = noise;
-      b.loop = true;
-      fb.type = 'bandpass';
-      fb.frequency.value = 950;
-      fb.Q.value = 0.6;
-      gb.gain.value = 0.22;
-      b.connect(fb);
-      fb.connect(gb);
-      gb.connect(modB);
-
-      a.start();
-      b.start();
-      ambSrcs = [a, b];
-      crackle(0.05, t + 0.05, 1600, 0);
-      crackleLoop();
-    }
-
-    function stopAmb(sec) {
-      ambOn = false;
-      clearTimeout(ambT);
-      if (!ambG || !ctx) return;
-      var t = ctx.currentTime;
-      var d = sec || 0.05;
-      ambG.gain.cancelScheduledValues(t);
-      ambG.gain.setValueAtTime(Math.max(0.0001, ambG.gain.value), t);
-      ambG.gain.linearRampToValueAtTime(0.0001, t + d);
-      var toStop = ambSrcs.slice();
-      setTimeout(function () {
-        toStop.forEach(function (x) {
-          try { x.stop(); } catch (e) {}
-        });
-      }, (d + 0.06) * 1000);
-      ambG = modA = modB = null;
-      ambSrcs = [];
-    }
-
-    function thump(delay) {
-      if (!ctx || !master || !noise) return;
-      var t = ctx.currentTime + delay;
-      var o = ctx.createOscillator();
-      var g = ctx.createGain();
-      crackle(0.14, Math.max(ctx.currentTime + 0.01, t - 0.12), 900, 0);
-      o.type = 'sine';
-      o.frequency.setValueAtTime(85, t);
-      o.frequency.exponentialRampToValueAtTime(30, t + 0.8);
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.linearRampToValueAtTime(0.9, t + 0.01);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + 1.7);
-      o.connect(g);
-      g.connect(master);
-      wet(g, 0.35);
-      o.start(t);
-      o.stop(t + 1.8);
-
-      var s = ctx.createBufferSource();
-      var f = ctx.createBiquadFilter();
-      var n = ctx.createGain();
-      s.buffer = noise;
-      f.type = 'lowpass';
-      f.frequency.value = 280;
-      n.gain.setValueAtTime(0.0001, t);
-      n.gain.linearRampToValueAtTime(0.55, t + 0.008);
-      n.gain.exponentialRampToValueAtTime(0.0001, t + 0.5);
-      s.connect(f);
-      f.connect(n);
-      n.connect(master);
-      wet(n, 0.4);
-      s.start(t, 0, 0.6);
-    }
-
-    function bright(delay) {
-      if (!ctx || !master || !noise) return;
-      var t = ctx.currentTime + delay;
-      var peak = 1.7;
       var lp = ctx.createBiquadFilter();
-      var pg = ctx.createGain();
-      var mix = ctx.createGain();
       lp.type = 'lowpass';
+      lp.frequency.value = 420;
       lp.Q.value = 0.7;
-      mix.gain.value = 0.25;
-      lp.frequency.setValueAtTime(180, t);
-      lp.frequency.exponentialRampToValueAtTime(2200, t + peak);
-      lp.frequency.exponentialRampToValueAtTime(500, t + 3.8);
-      pg.gain.setValueAtTime(0.0001, t);
-      pg.gain.linearRampToValueAtTime(0.09, t + peak);
-      pg.gain.exponentialRampToValueAtTime(0.0001, t + 4);
-      mix.connect(lp);
-      lp.connect(pg);
-      pg.connect(master);
-      wet(pg, 0.55);
 
-      [73.42, 73.9, 110, 110.5, 146.83].forEach(function (fq) {
+      [[110, 0.55], [164.81, 0.28], [220, 0.22], [277.18, 0.12]].forEach(function (pair, idx) {
         var o = ctx.createOscillator();
-        o.type = 'sawtooth';
-        o.frequency.value = fq;
-        o.detune.value = (Math.random() - 0.5) * 12;
-        o.connect(mix);
-        o.start(t);
-        o.stop(t + 4.1);
+        var g = ctx.createGain();
+        o.type = idx % 2 ? 'triangle' : 'sine';
+        o.frequency.value = pair[0];
+        o.detune.value = (idx - 1.5) * 4;
+        g.gain.value = pair[1];
+        o.connect(g);
+        g.connect(lp);
+        o.start(now);
       });
 
-      var sub = ctx.createOscillator();
-      var sg = ctx.createGain();
-      sub.type = 'sine';
-      sub.frequency.value = 36.7;
-      sg.gain.setValueAtTime(0.0001, t);
-      sg.gain.linearRampToValueAtTime(0.3, t + peak);
-      sg.gain.exponentialRampToValueAtTime(0.0001, t + 3.6);
-      sub.connect(sg);
-      sg.connect(master);
-      sub.start(t);
-      sub.stop(t + 3.7);
-
-      var s = ctx.createBufferSource();
+      var bufLen = ctx.sampleRate * 2;
+      var buf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+      var data = buf.getChannelData(0);
+      var last = 0;
+      for (var k = 0; k < bufLen; k++) {
+        var w = Math.random() * 2 - 1;
+        data[k] = (last + 0.02 * w) / 1.02;
+        last = data[k];
+        data[k] *= 0.14;
+      }
+      var noise = ctx.createBufferSource();
+      noise.buffer = buf;
+      noise.loop = true;
       var bp = ctx.createBiquadFilter();
-      var ag = ctx.createGain();
-      s.buffer = noise;
-      s.loop = true;
       bp.type = 'bandpass';
-      bp.Q.value = 0.8;
-      bp.frequency.setValueAtTime(400, t);
-      bp.frequency.exponentialRampToValueAtTime(3500, t + peak);
-      ag.gain.setValueAtTime(0.0001, t);
-      ag.gain.linearRampToValueAtTime(0.06, t + peak);
-      ag.gain.exponentialRampToValueAtTime(0.0001, t + 3.4);
-      s.connect(bp);
-      bp.connect(ag);
-      ag.connect(master);
-      wet(ag, 0.4);
-      s.start(t);
-      s.stop(t + 3.5);
+      bp.frequency.value = 650;
+      bp.Q.value = 1.8;
+      noise.connect(bp);
+      bp.connect(lp);
+      noise.start(now);
 
-      var o = ctx.createOscillator();
-      var g = ctx.createGain();
-      var at = t + peak;
-      o.type = 'sine';
-      o.frequency.setValueAtTime(60, at);
-      o.frequency.exponentialRampToValueAtTime(32, at + 0.9);
-      g.gain.setValueAtTime(0.0001, at);
-      g.gain.linearRampToValueAtTime(0.45, at + 0.03);
-      g.gain.exponentialRampToValueAtTime(0.0001, at + 1.6);
-      o.connect(g);
-      g.connect(master);
-      wet(g, 0.5);
-      o.start(at);
-      o.stop(at + 1.7);
-    }
-
-    function playEnter() {
-      if (soundPref === 'off' || !audio()) return;
-      ambOn = false;
-      clearTimeout(ambT);
-      thump(reduce ? 0.08 : 0.15);
-      bright(reduce ? 0.12 : 0.25);
+      lp.connect(droneGain);
+      droneGain.connect(master);
     }
 
     function setSound(on) {
-      soundPref = on ? 'on' : 'off';
-      if (soundBtn) {
-        soundBtn.setAttribute('aria-pressed', String(on));
-        soundBtn.setAttribute('aria-label', on ? 'Turn sound off' : 'Turn sound on');
-        soundBtn.textContent = '\u266a ' + (on ? 'Sound on' : 'Sound off');
+      soundWant = on;
+      soundBtn.setAttribute('aria-pressed', String(on));
+      soundBtn.innerHTML = on ? '&#9834; Sound on' : '&#9834; Enable sound';
+      soundBtn.setAttribute('aria-label', on ? 'Turn sound off' : 'Turn sound on');
+      if (on) {
+        var ctx = ensureAudio();
+        if (ctx) {
+          if (ctx.state === 'suspended') ctx.resume();
+          startDrone();
+          var t = ctx.currentTime;
+          master.gain.cancelScheduledValues(t);
+          master.gain.setValueAtTime(Math.max(0.0001, master.gain.value), t);
+          master.gain.linearRampToValueAtTime(1, t + 0.35);
+        }
+      } else if (ac && master) {
+        var t2 = ac.currentTime;
+        master.gain.cancelScheduledValues(t2);
+        master.gain.setValueAtTime(Math.max(0.0001, master.gain.value), t2);
+        master.gain.exponentialRampToValueAtTime(0.0001, t2 + 0.25);
       }
-      if (on) startAmb();
-      else stopAmb(0.3);
     }
 
-    if (soundBtn) {
-      soundBtn.addEventListener('click', function () {
-        setSound(soundPref !== 'on');
+    function playChime() {
+      if (!soundWant || !ac || !master || ac.state !== 'running') return;
+      var now = ac.currentTime;
+      [440, 659.25, 880, 1318.5].forEach(function (freq, idx) {
+        var o = ac.createOscillator();
+        var g = ac.createGain();
+        o.type = 'sine';
+        o.frequency.value = freq;
+        var start = now + idx * 0.07;
+        g.gain.setValueAtTime(0.0001, start);
+        g.gain.exponentialRampToValueAtTime(CHIME_VOL / (idx + 1.2), start + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, start + 2.4);
+        o.connect(g);
+        g.connect(master);
+        o.start(start);
+        o.stop(start + 2.5);
       });
     }
 
-    document.addEventListener('visibilitychange', function () {
-      if (!ctx) return;
-      if (document.hidden) {
-        try { ctx.suspend(); } catch (e) {}
-      } else if (soundPref !== 'off') {
-        try { ctx.resume(); } catch (e) {}
+    function playDoor() {
+      if (!soundWant || !ac || !master || ac.state !== 'running') return;
+      var now = ac.currentTime;
+      var len = Math.floor(ac.sampleRate * 1.4);
+      var buf = ac.createBuffer(1, len, ac.sampleRate);
+      var d = buf.getChannelData(0);
+      for (var i = 0; i < len; i++) {
+        var x = i / len;
+        d[i] = (Math.random() * 2 - 1) * Math.sin(Math.min(1, x * 2.5) * Math.PI) * (1 - x * 0.6);
       }
+      var src = ac.createBufferSource();
+      src.buffer = buf;
+      var filter = ac.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(190, now);
+      filter.frequency.exponentialRampToValueAtTime(920, now + 0.9);
+      filter.Q.value = 2.4;
+      var g = ac.createGain();
+      g.gain.setValueAtTime(0.0001, now);
+      g.gain.linearRampToValueAtTime(DOOR_VOL, now + 0.15);
+      g.gain.exponentialRampToValueAtTime(0.0001, now + 1.35);
+      src.connect(filter);
+      filter.connect(g);
+      g.connect(master);
+      src.start(now);
+    }
+
+    function stopAudio() {
+      if (!ac || !master) return;
+      try {
+        var t = ac.currentTime;
+        master.gain.cancelScheduledValues(t);
+        master.gain.setValueAtTime(Math.max(0.0001, master.gain.value), t);
+        master.gain.exponentialRampToValueAtTime(0.0001, t + FADE_SEC);
+        setTimeout(function () { try { ac.close(); } catch (e) {} }, (FADE_SEC + 0.2) * 1000);
+      } catch (e) {}
+    }
+
+    soundBtn.addEventListener('click', function () { setSound(!soundWant); });
+
+    var leaving = false;
+    function finish() {
+      stopAudio();
+      root.classList.add('is-done');
+      document.documentElement.classList.remove('qu-intro-on', 'qu-intro-ivory');
+      try {
+        if (prevFocus && prevFocus.focus && prevFocus !== document.body) {
+          prevFocus.focus({ preventScroll: true });
+        }
+      } catch (e) {}
+      setTimeout(function () { root.remove(); }, 1200);
+    }
+
+    enterBtn.addEventListener('click', function () {
+      if (leaving) return;
+      leaving = true;
+      root.classList.add('is-leaving', 'is-opening');
+      playChime();
+      playDoor();
+      setTimeout(finish, ENTER_MS);
     });
 
-    function flick(o, now) {
-      if (now > o.n) {
-        var prev = o.v;
-        o.t = 0.72 + Math.random() * 0.28;
-        if (Math.random() < 0.05) o.t = 0.45 + Math.random() * 0.15;
-        o.n = now + 45 + Math.random() * 140;
-        if (prev - o.t > 0.14 && ambOn) flameEvent(o, prev - o.t);
-      }
-      o.v += (o.t - o.v) * 0.22;
-      return o.v;
-    }
+    skipBtn.addEventListener('click', function () {
+      if (leaving) return;
+      leaving = true;
+      root.classList.add('is-skipping');
+      setTimeout(finish, SKIP_MS);
+    });
 
-    function tick(now) {
-      var sum = 0;
-      lamps.forEach(function (o, i) {
-        var v = flick(o, now) * (0.94 + 0.06 * Math.sin(now / (900 + i * 370)));
-        o.g.style.opacity = v.toFixed(3);
-        o.g.style.transform = 'translate(-50%,-50%) scale(' + (0.9 + 0.1 * v).toFixed(3) + ')';
-        o.b.style.opacity = (0.55 + 0.45 * v).toFixed(3);
-        o.b.style.transform = 'translate(-50%,-50%) scale(' + (0.85 + 0.15 * v).toFixed(3) + ')';
-        sum += v;
-      });
-      if (lamps.length && wash) {
-        var avg = sum / lamps.length;
-        wash.style.opacity = (0.25 + 0.35 * avg).toFixed(3);
-        if (modA && modB && ctx) {
-          var m = Math.max(0.25, 0.3 + 1.3 * (avg - 0.4));
-          modA.gain.setTargetAtTime(m, ctx.currentTime, 0.04);
-          modB.gain.setTargetAtTime(Math.max(0.05, m * m), ctx.currentTime, 0.03);
-        }
-      }
-      raf = requestAnimationFrame(tick);
-    }
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') skipBtn.click();
+    });
 
-    if (reduce) {
-      lamps.forEach(function (o) {
-        o.g.style.opacity = 0.9;
-        o.b.style.opacity = 0.95;
-      });
-    } else {
-      raf = requestAnimationFrame(tick);
-    }
-
-    var calibrating = /[?&#]calibrate/.test(location.href);
-    var onCalKey = null;
-    if (calibrating) {
-      intro.classList.add('is-calibrating');
-      var panel = document.createElement('div');
+    if (calibrate) {
+      root.classList.add('is-calibrating');
+      var box = document.createElement('div');
+      box.className = 'qu-cal';
+      root.appendChild(box);
       var pts = [];
-      var dots = [];
-      panel.className = 'qu-cal';
-      intro.appendChild(panel);
-
-      function outCal() {
-        var t = pts.length < 2
-          ? (pts.length ? 'Now click the door\u2019s BOTTOM-RIGHT corner.' : 'Click the door\u2019s TOP-LEFT corner.')
-          : 'Now click each lamp bulb. Backspace undoes the last click.';
-        var s = '<b>' + t + '</b><br>';
+      var lampPts = [];
+      var mode = 'door';
+      function renderCal() {
+        root.querySelectorAll('.qu-dot').forEach(function (n) { n.remove(); });
+        pts.forEach(function (pt) {
+          var dot = document.createElement('div');
+          dot.className = 'qu-dot';
+          dot.style.left = pt.x + '%'; dot.style.top = pt.y + '%';
+          root.appendChild(dot);
+        });
+        lampPts.forEach(function (lp) {
+          var dot = document.createElement('div');
+          dot.className = 'qu-dot';
+          dot.style.borderColor = '#C5BAC1';
+          dot.style.left = lp.x + '%'; dot.style.top = lp.y + '%';
+          root.appendChild(dot);
+        });
+        var dAttr = '';
         if (pts.length >= 2) {
-          var a = pts[0], b = pts[1];
-          s += 'data-door="' + ((a[0] + b[0]) / 2).toFixed(1) + ',' + ((a[1] + b[1]) / 2).toFixed(1) + ',' + Math.abs(b[0] - a[0]).toFixed(1) + ',' + Math.abs(b[1] - a[1]).toFixed(1) + '"<br>';
-          s += 'data-lamps="' + pts.slice(2).map(function (q) { return q[0].toFixed(1) + ',' + q[1].toFixed(1) + ',18,2.2'; }).join(';') + '"';
+          var x1 = pts[0].x, y1 = pts[0].y, x2 = pts[1].x, y2 = pts[1].y;
+          var cx = ((x1 + x2) / 2).toFixed(1), cy = ((y1 + y2) / 2).toFixed(1);
+          var w = Math.abs(x2 - x1).toFixed(1), h = Math.abs(y2 - y1).toFixed(1);
+          dAttr = 'data-door="' + cx + ',' + cy + ',' + w + ',' + h + '"';
         }
-        panel.innerHTML = s;
+        var lAttr = lampPts.length ? ' data-lamps="' + lampPts.map(function (p) { return p.x + ',' + p.y + ',18,2.2'; }).join(';') + '"' : '';
+        box.innerHTML = 'Mode: <b>' + mode + '</b> (press <b>L</b> to switch to lamps, <b>R</b> to reset).<br>' +
+          '<code>' + (dAttr + lAttr || 'Click top-left and bottom-right of the doorway.') + '</code>';
       }
-
-      frame.addEventListener('click', function (e) {
-        var r = frame.getBoundingClientRect();
-        var x = (e.clientX - r.left) / r.width * 100;
-        var y = (e.clientY - r.top) / r.height * 100;
-        pts.push([x, y]);
-        var d = document.createElement('div');
-        d.className = 'qu-dot';
-        d.style.left = x + '%';
-        d.style.top = y + '%';
-        frame.appendChild(d);
-        dots.push(d);
-        outCal();
+      renderCal();
+      root.addEventListener('click', function (e) {
+        if (e.target === box || box.contains(e.target)) return;
+        var rect = root.getBoundingClientRect();
+        var x = +(((e.clientX - rect.left) / rect.width) * 100).toFixed(1);
+        var y = +(((e.clientY - rect.top) / rect.height) * 100).toFixed(1);
+        if (mode === 'door') { if (pts.length >= 2) pts = []; pts.push({ x: x, y: y }); }
+        else { lampPts.push({ x: x, y: y }); }
+        renderCal();
       });
-
-      onCalKey = function (e) {
-        if (e.key === 'Backspace' && pts.length) {
-          pts.pop();
-          var lastDot = dots.pop();
-          if (lastDot) lastDot.remove();
-          outCal();
-        }
-      };
-      document.addEventListener('keydown', onCalKey);
-      outCal();
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'l' || e.key === 'L') { mode = mode === 'door' ? 'lamps' : 'door'; renderCal(); }
+        if (e.key === 'r' || e.key === 'R') { pts = []; lampPts = []; renderCal(); }
+      });
     }
 
-    var motes = intro.querySelector('.qu-motes');
-    if (!reduce && motes) {
-      for (var i = 0; i < 26; i++) {
-        var m = document.createElement('span');
-        var st = m.style;
-        st.left = (18 + Math.random() * 64) + '%';
-        st.setProperty('--s', (1.5 + Math.random() * 2.5).toFixed(1) + 'px');
-        st.setProperty('--d', (14 + Math.random() * 16).toFixed(1) + 's');
-        st.setProperty('--dl', (-Math.random() * 20).toFixed(1) + 's');
-        st.setProperty('--x', ((Math.random() - 0.5) * 120).toFixed(0) + 'px');
-        st.setProperty('--o', (0.25 + Math.random() * 0.55).toFixed(2));
-        motes.appendChild(m);
-      }
-    }
-
-    function finish() {
-      cancelAnimationFrame(raf);
-      window.removeEventListener('resize', layout);
-      if (ctx) {
-        try { ctx.close(); } catch (e) {}
-        ctx = null;
-      }
-      inerted.forEach(function (el) { el.inert = false; });
-      root.classList.remove('qu-intro-on', 'qu-intro-ivory');
-      intro.remove();
-      document.removeEventListener('keydown', onKey);
-      if (onCalKey) document.removeEventListener('keydown', onCalKey);
-      if (prevFocus && prevFocus.focus) {
-        try { prevFocus.focus({ preventScroll: true }); } catch (e) {}
-      }
-    }
-
-    function enter() {
-      if (leaving) return;
-      leaving = true;
-      intro.classList.add('is-leaving');
-      playEnter();
-      var tOpen = reduce ? 250 : 350;
-      var tDone = reduce ? 950 : 2100;
-      var tEnd = tDone + (reduce ? 600 : 1050);
-      setTimeout(function () { intro.classList.add('is-opening'); }, tOpen);
-      setTimeout(function () { intro.classList.add('is-done'); }, tDone);
-      setTimeout(finish, tEnd);
-    }
-
-    function skip() {
-      if (leaving) return;
-      leaving = true;
-      intro.classList.add('is-skipping', 'is-done');
-      if (ctx) stopAmb(0.15);
-      setTimeout(finish, reduce ? 550 : 650);
-    }
-
-    function onKey(e) {
-      if (calibrating) return;
-      if (e.key === 'Escape') {
-        e.preventDefault();
-        skip();
-      } else if (e.key === 'Tab') {
-        if (e.shiftKey && document.activeElement === enterBtn) {
-          e.preventDefault();
-          if (skipBtn) skipBtn.focus();
-        } else if (!e.shiftKey && document.activeElement === skipBtn) {
-          e.preventDefault();
-          if (enterBtn) enterBtn.focus();
-        }
-      }
-    }
-
-    if (enterBtn) enterBtn.addEventListener('click', enter);
-    if (skipBtn) skipBtn.addEventListener('click', skip);
-    document.addEventListener('keydown', onKey);
+    try { enterBtn.focus({ preventScroll: true }); } catch (e) {}
   })();
   </script>
+
   <!-- External Chapter & Gallery Files -->
   <script src="chapters.js"></script>
   <script src="chapter-4.js"></script>
@@ -3004,25 +2709,25 @@
   (function () {
     'use strict';
 
-    var FALLBACK_PLATES = [
+    var FALLBACK_VIEWS = [
       {
         src: '',
-        label: 'Plate I · The Three Villages & Northern Coast',
+        label: 'View 1 · The Three Villages & Northern Coast',
         alt: 'Coastal cliffs and villages along the northern shore of Norwyn'
       },
       {
         src: '',
-        label: 'Plate II · The Capital & Royal Palace Courtyards',
+        label: 'View 2 · The Capital & Royal Palace Courtyards',
         alt: 'Inland capital streets and limestone palace courtyards in Norwyn'
       },
       {
         src: '',
-        label: 'Plate III · The Royal Academy of Governance',
+        label: 'View 3 · The Royal Academy of Governance',
         alt: 'Lecture halls and archive study chambers at the Royal Academy of Governance'
       },
       {
         src: '',
-        label: 'Plate IV · Autumn & Frost Across the Timber Rivers',
+        label: 'View 4 · Autumn & Frost Across the Timber Rivers',
         alt: 'River timber transport and autumn mist across Norwyn'
       }
     ];
@@ -3034,7 +2739,7 @@
     var lbPrev = document.getElementById('nwLbPrev');
     var lbNext = document.getElementById('nwLbNext');
 
-    var activePlates = [];
+    var activeViews = [];
     var lbIdx = 0;
     var lbReturnFocus = null;
 
@@ -3045,41 +2750,54 @@
         .replace(/</g, '&lt;');
     }
 
-    function collectPlates() {
+    function normalizeViewLabel(rawLabel, index) {
+      var num = index + 1;
+      var cleaned = String(rawLabel || '').trim();
+      if (!cleaned) return 'View ' + num;
+      cleaned = cleaned.replace(/^Plate\s+(?:[IVXLCDM]+|\d+)\b/i, 'View ' + num);
+      if (!/^View\s+\d+\b/i.test(cleaned)) {
+        cleaned = 'View ' + num + ' · ' + cleaned;
+      }
+      return cleaned;
+    }
+
+    function collectViews() {
       var ext = window.NorwynVisualArchive;
       if (ext && Array.isArray(ext.plates) && ext.plates.length) {
         return ext.plates.map(function (item, idx) {
+          var raw = item.label || item.caption || item.title || ('View ' + (idx + 1));
           return {
             src: item.src || item.url || '',
-            label: item.label || item.caption || item.title || ('Plate ' + (idx + 1)),
-            alt: item.alt || item.caption || item.label || ('Norwyn plate ' + (idx + 1))
+            label: normalizeViewLabel(raw, idx),
+            alt: item.alt || item.caption || item.label || ('Norwyn view ' + (idx + 1))
           };
         });
       }
       if (ext && Array.isArray(ext.items) && ext.items.length) {
         return ext.items.map(function (item, idx) {
+          var raw = item.label || item.caption || item.title || ('View ' + (idx + 1));
           return {
             src: item.src || item.url || '',
-            label: item.label || item.caption || item.title || ('Plate ' + (idx + 1)),
-            alt: item.alt || item.caption || item.label || ('Norwyn plate ' + (idx + 1))
+            label: normalizeViewLabel(raw, idx),
+            alt: item.alt || item.caption || item.label || ('Norwyn view ' + (idx + 1))
           };
         });
       }
-      return FALLBACK_PLATES;
+      return FALLBACK_VIEWS;
     }
 
     function renderLightboxSlide() {
-      if (!activePlates.length || !lbFrame || !lbCap) return;
-      var item = activePlates[lbIdx];
+      if (!activeViews.length || !lbFrame || !lbCap) return;
+      var item = activeViews[lbIdx];
       lbFrame.innerHTML = item.src
         ? '<img src="' + escAttr(item.src) + '" alt="' + escAttr(item.alt) + '">'
         : '<div class="nw-ph" role="img" aria-label="' + escAttr(item.alt) + '"><span>' + escAttr(item.label) + '</span></div>';
-      lbCap.textContent = item.label + ' · ' + (lbIdx + 1) + ' / ' + activePlates.length;
+      lbCap.textContent = item.label + ' · ' + (lbIdx + 1) + ' / ' + activeViews.length;
     }
 
     function openWorldLightbox(index, triggerEl) {
-      if (!activePlates.length) activePlates = collectPlates();
-      lbIdx = ((index % activePlates.length) + activePlates.length) % activePlates.length;
+      if (!activeViews.length) activeViews = collectViews();
+      lbIdx = ((index % activeViews.length) + activeViews.length) % activeViews.length;
       lbReturnFocus = triggerEl || document.activeElement;
       renderLightboxSlide();
       if (lbDialog && typeof lbDialog.showModal === 'function' && !lbDialog.open) {
@@ -3088,8 +2806,8 @@
     }
 
     function stepWorldLightbox(delta) {
-      if (!activePlates.length) return;
-      var total = activePlates.length;
+      if (!activeViews.length) return;
+      var total = activeViews.length;
       lbIdx = (lbIdx + delta + total) % total;
       renderLightboxSlide();
     }
@@ -3125,19 +2843,19 @@
 
     function renderNorwynGallery(mountEl) {
       if (!mountEl) return;
-      activePlates = collectPlates();
+      activeViews = collectViews();
 
-      var itemsHtml = activePlates.map(function (plate, idx) {
-        var imgTag = plate.src
-          ? '<img src="' + escAttr(plate.src) + '" alt="' + escAttr(plate.alt) + '" loading="lazy">'
+      var itemsHtml = activeViews.map(function (viewItem, idx) {
+        var imgTag = viewItem.src
+          ? '<img src="' + escAttr(viewItem.src) + '" alt="' + escAttr(viewItem.alt) + '" loading="lazy">'
           : '';
-        var phTag = plate.src
+        var phTag = viewItem.src
           ? ''
-          : '<div class="nw-ph" role="img" aria-label="' + escAttr(plate.alt) + '"><span>' + escAttr(plate.label) + '</span></div>';
+          : '<div class="nw-ph" role="img" aria-label="' + escAttr(viewItem.alt) + '"><span>' + escAttr(viewItem.label) + '</span></div>';
 
-        return '<button type="button" class="nw-g-item" data-nw-idx="' + idx + '" aria-label="' + escAttr('Enlarge image ' + (idx + 1) + ' of ' + activePlates.length + ': ' + plate.label) + '">' +
+        return '<button type="button" class="nw-g-item" data-nw-idx="' + idx + '" aria-label="' + escAttr('Enlarge image ' + (idx + 1) + ' of ' + activeViews.length + ': ' + viewItem.label) + '">' +
           '<div class="nw-media">' + imgTag + phTag + '</div>' +
-          '<span class="nw-g-label">' + escAttr(plate.label) + '</span>' +
+          '<span class="nw-g-label">' + escAttr(viewItem.label) + '</span>' +
           '</button>';
       }).join('');
 
@@ -3145,18 +2863,12 @@
         '<div class="nw-gallery-wrap">' +
           '<div class="nw-gallery" id="nwGalleryTrack" role="group" aria-label="Norwyn world sliding gallery">' + itemsHtml + '</div>' +
           '<div class="nw-gallery-bar">' +
-            '<p class="nw-g-count" id="nwGalleryCount" aria-live="polite">1 / ' + activePlates.length + '</p>' +
-            '<div class="nw-slide-controls">' +
-              '<button type="button" class="nw-slide-btn" id="nwSlidePrev" aria-label="Slide gallery left">Earlier</button>' +
-              '<button type="button" class="nw-slide-btn" id="nwSlideNext" aria-label="Slide gallery right">Later</button>' +
-            '</div>' +
+            '<p class="nw-g-count" id="nwGalleryCount" aria-live="polite">1 / ' + activeViews.length + '</p>' +
           '</div>' +
         '</div>';
 
       var track = mountEl.querySelector('#nwGalleryTrack');
       var counter = mountEl.querySelector('#nwGalleryCount');
-      var slidePrev = mountEl.querySelector('#nwSlidePrev');
-      var slideNext = mountEl.querySelector('#nwSlideNext');
 
       function getStepWidth() {
         if (!track || !track.firstElementChild) return 260;
@@ -3177,20 +2889,9 @@
           var stepW = getStepWidth();
           if (stepW <= 0) return;
           var pos = Math.round(track.scrollLeft / stepW);
-          var clamped = Math.max(0, Math.min(pos, activePlates.length - 1));
-          counter.textContent = (clamped + 1) + ' / ' + activePlates.length;
+          var clamped = Math.max(0, Math.min(pos, activeViews.length - 1));
+          counter.textContent = (clamped + 1) + ' / ' + activeViews.length;
         }, { passive: true });
-      }
-
-      if (slidePrev && track) {
-        slidePrev.addEventListener('click', function () {
-          track.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
-        });
-      }
-      if (slideNext && track) {
-        slideNext.addEventListener('click', function () {
-          track.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
-        });
       }
     }
 
@@ -3205,11 +2906,10 @@
   })();
   </script>
 
-  <!-- Main Application Logic (Unified Navigation, Hybrid World/Characters/Chapter Sliders, Chapter Preview + Turn-Leaf Cross-Fade) -->
+  <!-- Main Application Logic (Unified Navigation, Hybrid World/Characters/Chapter Sliders, Chapter Index + Turn-Leaf Cross-Fade) -->
   <script>
     let activeEra = 'crowned';
     let activeChapterIndex = null;
-    let previewedChapterIndex = 0;
     let activeWorldIndex = null;
     let activePersonKey = null;
     let baseFontSize = 18;
@@ -3419,35 +3119,35 @@
             key: 'elisabeta',
             name: 'Princess Elisabeta',
             epithet: 'The Heiress',
-            registry: { circle: 'Royal Family', station: 'Age 22 · Heir to the Crown of Norwyn', noted: 'Keeps small observations long after others move on' },
+            registry: { belonging: 'Royal Family', role: 'Age 22 · Heir to the Crown of Norwyn', noted: 'Keeps small observations long after others move on' },
             glimpse: 'The eldest daughter of Queen Ecaterina and betrothed to Alexandru of Valenne, Elisabeta has been shaped by years of lessons, palace life and a future others find easy to picture. Composed, articulate and attentive to small details, she likes reading, a good argument, and occasionally getting away with something she ought not to have done—though there is more to her than the kingdom knows how to recognise.'
           },
           {
             key: 'ecaterina',
             name: 'Queen Ecaterina',
             epithet: 'The Sovereign',
-            registry: { circle: 'Royal Family', station: 'Reigning Queen of Norwyn', noted: 'Listens without interruption; makes small, settled corrections' },
+            registry: { belonging: 'Royal Family', role: 'Reigning Queen of Norwyn', noted: 'Listens without interruption; makes small, settled corrections' },
             glimpse: 'Thoughtful, warm and exacting in equal measure, Ecaterina rarely seems hurried. Years of carrying the Crown have left her attentive to appearances, decisions and details left unguarded, yet she is also a mother to Elisabeta and Ileana—two roles that have never sat entirely apart.'
           },
           {
             key: 'ileana',
             name: 'Princess Ileana',
             epithet: 'The Second Daughter',
-            registry: { circle: 'Royal Family', station: 'Second Daughter of the Queen', noted: 'Draws to papers, records, figures and what outlasts an argument' },
+            registry: { belonging: 'Royal Family', role: 'Second Daughter of the Queen', noted: 'Draws to papers, records, figures and what outlasts an argument' },
             glimpse: 'Quiet, practical and dry in a humour easy to miss, Ileana notices what others forget to check. She knows the palace well, though often through records and details that leave her looking at the same rooms differently than everyone else.'
           },
           {
             key: 'dara',
             name: 'Prince Dara',
             epithet: "The Queen's Husband",
-            registry: { circle: 'Royal Family', station: 'Consort to Queen Ecaterina · Father', noted: 'Southern harbours, fishing boats and lighthouses' },
+            registry: { belonging: 'Royal Family', role: 'Consort to Queen Ecaterina · Father', noted: 'Southern harbours, fishing boats and lighthouses' },
             glimpse: 'Warm, easy to please and hard to make solemn for long, Dara carries an enduring affection for the southern coast where he came from. Fond of his daughters and quick to find humour where others stay stiff, he has never made much effort to hide where he feels most at home.'
           },
           {
             key: 'safira',
             name: 'Safira',
             epithet: 'The Palace Cat',
-            registry: { circle: 'Royal Family', station: 'Uninvited Resident', noted: 'Notch in left ear; sleeps beneath Elisabeta\'s table' },
+            registry: { belonging: 'Royal Family', role: 'Uninvited Resident', noted: 'Notch in left ear; sleeps beneath Elisabeta\'s table' },
             glimpse: 'Small, grey and indifferent to rank, Safira slips into rooms she was never invited into and moves between the sisters\' quarters as if arranging the palace herself.'
           }
         ]
@@ -3459,21 +3159,21 @@
             key: 'alexandru',
             name: 'Alexandru',
             epithet: 'The Intended',
-            registry: { circle: 'Valenne', station: 'Heir to Valenne · Betrothed', noted: 'Grey horse Marrow refuses to cross water' },
+            registry: { belonging: 'Valenne', role: 'Heir to Valenne · Betrothed', noted: 'Grey horse Marrow refuses to cross water' },
             glimpse: 'Tall, fair and seldom as formal as court occasions expect, Alexandru puts people at ease quickly and enjoys conversation, even when his memory for small details is slightly off. Easy company and easy to know are not always the same thing.'
           },
           {
             key: 'duvall',
             name: 'Ambassador Duvall',
             epithet: 'The Diplomat',
-            registry: { circle: 'Valenne', station: 'Ambassador to Norwyn', noted: 'Silver-haired; reads what is not asked directly' },
+            registry: { belonging: 'Valenne', role: 'Ambassador to Norwyn', noted: 'Silver-haired; reads what is not asked directly' },
             glimpse: 'Spare and measured in manner, Duvall knows that court talk often circles around its real question, and he represents Valenne without letting much of himself into the room.'
           },
           {
             key: 'aubrac',
             name: 'Madame Aubrac',
             epithet: 'The Observer',
-            registry: { circle: 'Valenne', station: 'Member of Alexandru\'s Household', noted: 'Polite, attentive and rarely without her notebook' },
+            registry: { belonging: 'Valenne', role: 'Member of Alexandru\'s Household', noted: 'Polite, attentive and rarely without her notebook' },
             glimpse: 'With an eye for arrangements, people, photographs and the small touches that shape how an occasion is remembered, Madame Aubrac seems less like someone merely attending than someone taking note.'
           }
         ]
@@ -3485,35 +3185,35 @@
             key: 'corrow',
             name: 'Mr. Corrow',
             epithet: 'The Tutor',
-            registry: { circle: 'The Household', station: 'Private Tutor (Four Years)', noted: 'Trims his own nibs; teaches Structural Ideology' },
+            registry: { belonging: 'The Household', role: 'Private Tutor (Four Years)', noted: 'Trims his own nibs; teaches Structural Ideology' },
             glimpse: 'Courteous, precise and fond of order, Mr. Corrow values a pupil who can explain not only what she believes, but why—and his lessons rarely give way just because other things crowd her mind.'
           },
           {
             key: 'anselm',
             name: 'Anselm',
             epithet: 'The Attendant',
-            registry: { circle: 'The Household', station: 'Attendant to Princess Elisabeta', noted: 'Keeps a log; reads paperbacks in corridors' },
+            registry: { belonging: 'The Household', role: 'Attendant to Princess Elisabeta', noted: 'Keeps a log; reads paperbacks in corridors' },
             glimpse: 'Tall, slightly stooped and dry in his sense of duty, Anselm goes where the Princess goes. Because his presence is so constant, it is easy to overlook how much passes in front of him.'
           },
           {
             key: 'hale',
             name: 'Mrs. Hale',
             epithet: 'The Dresser',
-            registry: { circle: 'The Household', station: 'Royal Dresser (Nearly Thirty Years)', noted: 'Measurements, fabrics and an inconvenient pin' },
+            registry: { belonging: 'The Household', role: 'Royal Dresser (Nearly Thirty Years)', noted: 'Measurements, fabrics and an inconvenient pin' },
             glimpse: 'Direct and observant, Mrs. Hale knows what it takes to get a gown right under tight pressure—and thirty years of tending to appearances leaves very little unnoticed.'
           },
           {
             key: 'steward',
             name: 'The Steward',
             epithet: 'The Keeper of the Household',
-            registry: { circle: 'The Household', station: 'Senior Household Officer', noted: 'Schedules, correspondence and quiet palace order' },
+            registry: { belonging: 'The Household', role: 'Senior Household Officer', noted: 'Schedules, correspondence and quiet palace order' },
             glimpse: 'Restrained and methodical, the steward oversees the daily machinery of schedules, notices and domestic arrangements that keep the palace running as expected.'
           },
           {
             key: 'staff',
             name: 'The Household Staff',
             epithet: 'The People Behind the Palace',
-            registry: { circle: 'The Household', station: 'Attendants, Maids, Cooks, Gardeners & Clerks', noted: 'Fires, rooms, papers, meals and repairs' },
+            registry: { belonging: 'The Household', role: 'Attendants, Maids, Cooks, Gardeners & Clerks', noted: 'Fires, rooms, papers, meals and repairs' },
             glimpse: 'Before the household wakes, fires are lit, rooms are aired, meals are planned and halls are set in order. The quiet of the palace is built out of work that rarely draws attention to itself.'
           }
         ]
@@ -3525,28 +3225,28 @@
             key: 'calloway',
             name: 'Professor Calloway',
             epithet: 'The Lecturer',
-            registry: { circle: 'The Academy', station: 'Royal Academy of Governance', noted: 'Teaches Alignment; carries a folder to the lectern' },
+            registry: { belonging: 'The Academy', role: 'Royal Academy of Governance', noted: 'Teaches Alignment; carries a folder to the lectern' },
             glimpse: 'Formal and composed, Professor Calloway uses everyday illustrations to draw out Structural Ideology—often leaving a plain example echoing longer than expected.'
           },
           {
             key: 'lucian',
             name: 'Lucian Fletcher',
             epithet: "The Joiner's Son",
-            registry: { circle: 'The Academy', station: 'Academy Student · Son of Tobias Fletcher', noted: 'Mended grey jumper, scar along jaw, pencil by ear' },
+            registry: { belonging: 'The Academy', role: 'Academy Student · Son of Tobias Fletcher', noted: 'Mended grey jumper, scar along jaw, pencil by ear' },
             glimpse: 'Broad-shouldered, slightly stooped and plain-spoken, Lucian knows wood from the yard side before it ever reaches a lecture room—and he is comfortable saying plainly when he does not know something.'
           },
           {
             key: 'tobias',
             name: 'Tobias Fletcher',
             epithet: 'The Joiner',
-            registry: { circle: 'The Academy & River Trade', station: 'Joiner · Timber Yard by River Siding', noted: 'Palace woodwork; knows what is truly finished' },
+            registry: { belonging: 'The Academy & River Trade', role: 'Joiner · Timber Yard by River Siding', noted: 'Palace woodwork; knows what is truly finished' },
             glimpse: 'Broad, grey-haired and unhurried, Tobias works a timber yard beside the river siding and has done woodwork for the palace itself, where a joint either holds or it does not.'
           },
           {
             key: 'seminar',
             name: 'The Thursday Seminar',
             epithet: 'The Students',
-            registry: { circle: 'The Academy', station: 'Sokha Vann, Sabine Roque & Teodor Vasc', noted: 'Shared room, separate habits and opinions' },
+            registry: { belonging: 'The Academy', role: 'Sokha Vann, Sabine Roque & Teodor Vasc', noted: 'Shared room, separate habits and opinions' },
             glimpse: 'Around the Thursday table sit Sokha Vann, Sabine Roque and Teodor Vasc—each bringing different habits, sharpness and amusement to the same room without becoming alike.'
           }
         ]
@@ -3558,21 +3258,21 @@
             key: 'brask',
             name: 'Minister Brask',
             epithet: 'The Minister of Transport',
-            registry: { circle: 'Government', station: 'Transport, Carriage & Wharf', noted: 'Three daughters; busy office; warm moments' },
+            registry: { belonging: 'Government', role: 'Transport, Carriage & Wharf', noted: 'Three daughters; busy office; warm moments' },
             glimpse: 'A substantial man with a busy office and three daughters, Brask deals with transport and wharf affairs that rarely grow simpler simply by being talked through.'
           },
           {
             key: 'fenn-vireak',
             name: 'Mr. Fenn and Vireak',
             epithet: 'The Photographers',
-            registry: { circle: 'Public Life', station: 'Royal Portrait Photographer & Assistant', noted: 'Light, stillness and quiet words not in Norwynian' },
+            registry: { belonging: 'Public Life', role: 'Royal Portrait Photographer & Assistant', noted: 'Light, stillness and quiet words not in Norwynian' },
             glimpse: 'While Fenn guides royal portraits, Vireak watches the light and murmurs softly in another tongue—working where people must hold still and trust the frame.'
           },
           {
             key: 'ives',
             name: 'Mrs. Ives',
             epithet: 'The Matron',
-            registry: { circle: 'Public Life', station: 'Almshouse Near the River Works', noted: 'A list, a ring of keys and steady oversight' },
+            registry: { belonging: 'Public Life', role: 'Almshouse Near the River Works', noted: 'A list, a ring of keys and steady oversight' },
             glimpse: 'Far from royal portraits, Mrs. Ives keeps a list, a ring of keys and a close watch over those in an almshouse beside the river works.'
           }
         ]
@@ -3793,12 +3493,12 @@
 
         <div class="border-t border-b border-theme-border-subtle py-3.5 px-4 mb-7 bg-theme-bg-subtle/50 space-y-1.5 text-sm font-sans">
           <div class="flex flex-wrap gap-2">
-            <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Circle</span>
-            <span class="text-theme-text-muted">${escapeHtmlText(person.registry.circle)}</span>
+            <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Belonging</span>
+            <span class="text-theme-text-muted">${escapeHtmlText(person.registry.belonging)}</span>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Station</span>
-            <span class="text-theme-text-muted">${escapeHtmlText(person.registry.station)}</span>
+            <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Role</span>
+            <span class="text-theme-text-muted">${escapeHtmlText(person.registry.role)}</span>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Noted Detail</span>
@@ -3929,20 +3629,22 @@
       `;
     }
 
-    function extractChapterOpeningLine(chapter) {
-      let body = (chapter.content || '').trim();
-      if (chapter.title) {
-        const plainTitle = stripHtmlToPlainText(chapter.title);
-        const plainNum = stripHtmlToPlainText(chapter.number);
-        const re = new RegExp(`^(?:Chapter\\s+[A-Za-z]+\\s*:\\s*${plainTitle}|${plainNum}\\s*:\\s*${plainTitle}|${plainTitle})\\s*`, 'i');
-        body = body.replace(re, '').trim();
+    function getChapterStripLabels(chapter) {
+      const rawNum = stripHtmlToPlainText(chapter.number);
+      const rawTitle = stripHtmlToPlainText(chapter.title);
+      const numMatch = rawNum.match(/^(?:Chapter\s+)?([A-Za-z0-9]+)$/i);
+      const shortNum = numMatch ? `Ch. ${numMatch[1]}` : rawNum;
+
+      if (rawTitle && rawTitle.toLowerCase() !== rawNum.toLowerCase()) {
+        return {
+          eyebrow: shortNum,
+          label: rawTitle
+        };
       }
-      const rawFirstBlock = (body.split(/\n\s*\n/)[0] || '').trim();
-      const plainFirstPara = stripHtmlToPlainText(rawFirstBlock);
-      if (!plainFirstPara) return '';
-      const sentenceMatch = plainFirstPara.match(/^.+?[.!?]["”']?(?=\s|$)/);
-      const line = sentenceMatch ? sentenceMatch[0] : plainFirstPara;
-      return line.length > 175 ? line.slice(0, 172).trimEnd() + '…' : line;
+      return {
+        eyebrow: 'Chapter',
+        label: rawNum || 'Chapter'
+      };
     }
 
     function transitionReaderContent(commitFn) {
@@ -3968,11 +3670,6 @@
           sheet.classList.remove('is-fading-out');
         });
       }, 210);
-    }
-
-    function previewChapterRow(index) {
-      previewedChapterIndex = index;
-      renderReaderView();
     }
 
     function openReaderIndex(useCrossFade) {
@@ -4011,27 +3708,23 @@
       const formattedParagraphs = paragraphs.map(formatChapterParagraphHtml).join('\n');
 
       const nextChapter = hasNext ? eraChapters[idx + 1] : null;
-      const nextOpening = nextChapter ? extractChapterOpeningLine(nextChapter) : '';
+      const nextNumText = nextChapter ? stripHtmlToPlainText(nextChapter.number) : '';
+      const nextTitleText = nextChapter && nextChapter.title ? stripHtmlToPlainText(nextChapter.title) : '';
 
-      const thresholdHtml = nextChapter
+      const nextPlateHtml = nextChapter
         ? `
-          <div class="book-card p-6 md:p-8 rounded-sm space-y-2.5 text-center">
+          <button type="button" onclick="selectChapter('${activeEra}', ${idx + 1}, true)" class="book-card w-full p-6 md:p-8 rounded-sm space-y-2 text-center hover:border-theme-accent transition-all cursor-pointer block">
             <span class="font-sans text-[9px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">
-              Next Threshold · ${escapeHtmlText(stripHtmlToPlainText(nextChapter.number))}
+              Next in the Story
             </span>
-            ${nextChapter.title ? `<h3 class="font-display text-lg md:text-xl text-theme-text font-semibold">${escapeHtmlText(stripHtmlToPlainText(nextChapter.title))}</h3>` : ''}
-            <p class="font-serif italic text-theme-text-muted text-base max-w-xl mx-auto">
-              “${escapeHtmlText(nextOpening)}”
-            </p>
-            <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
-              <button type="button" onclick="selectChapter('${activeEra}', ${idx + 1}, true)" style="${btnStyle}" class="py-2 px-4 border rounded-lg text-[10px] font-sans uppercase tracking-[0.2em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
-                Turn to ${escapeHtmlText(stripHtmlToPlainText(nextChapter.number))}
-              </button>
-            </div>
-          </div>
+            <h3 class="font-display text-lg md:text-xl text-theme-text font-semibold tracking-wide">
+              ${escapeHtmlText(nextNumText)}
+            </h3>
+            ${nextTitleText ? `<p class="font-serif italic text-theme-text-muted text-base">${escapeHtmlText(nextTitleText)}</p>` : ''}
+          </button>
         `
         : `
-          <div class="book-card p-6 md:p-8 rounded-sm space-y-2 text-center">
+          <div class="book-card w-full p-6 md:p-8 rounded-sm space-y-2 text-center">
             <span class="font-sans text-[9px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">
               End of Available Chapters
             </span>
@@ -4064,7 +3757,7 @@
           </div>
 
           <div class="space-y-5">
-            ${thresholdHtml}
+            ${nextPlateHtml}
             ${hasPrev ? `
               <div class="flex items-center justify-start pt-1">
                 <button type="button" onclick="selectChapter('${activeEra}', ${idx - 1}, true)" style="${btnStyle}" class="py-2 px-4 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
@@ -4080,7 +3773,6 @@
     function selectChapter(era, index, useCrossFade) {
       activeEra = 'crowned';
       activeChapterIndex = index;
-      previewedChapterIndex = index;
       markChapterAsRead(activeEra, index);
 
       const eraChapters = (typeof NOVEL_CHAPTERS !== 'undefined' && NOVEL_CHAPTERS[activeEra]) ? NOVEL_CHAPTERS[activeEra] : null;
@@ -4160,29 +3852,19 @@
       if (activeChapterIndex === null) {
         if (topBar) topBar.innerHTML = '';
 
-        const safePreviewIdx = Math.max(0, Math.min(previewedChapterIndex, eraChapters.length - 1));
-        const previewCh = eraChapters[safePreviewIdx];
-        const previewOpening = previewCh ? extractChapterOpeningLine(previewCh) : '';
-
         const chapterButtonsHtml = eraChapters.map((ch, idx) => {
           const isRead = readSet.has(`${activeEra}:${idx}`);
-          const isPreviewed = idx === safePreviewIdx;
-          const markerLabel = isRead ? 'Read · ✦' : 'Unread';
-          const markerClass = isRead ? 'text-theme-accent' : 'text-theme-text-faint';
+          const statusText = isRead ? 'Read' : 'Unread';
+          const statusClass = isRead ? 'text-theme-accent' : 'text-theme-text-faint';
 
           return `
-            <div style="${btnStyle}" class="w-full p-4 md:p-5 border rounded-lg ${isPreviewed ? 'border-theme-accent' : ''} transition-all shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <button type="button" onclick="previewChapterRow(${idx})" class="text-left flex-grow cursor-pointer focus:outline-none">
-                <div class="flex items-center gap-2.5 mb-1">
-                  <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80">${escapeHtmlText(stripHtmlToPlainText(ch.number))}</span>
-                  <span class="font-sans text-[9px] tracking-[0.2em] uppercase ${markerClass}">${markerLabel}</span>
-                </div>
+            <button type="button" onclick="selectChapter('${activeEra}', ${idx}, true)" style="${btnStyle}" class="w-full text-left p-4 md:p-5 border rounded-lg hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer flex items-center justify-between gap-4">
+              <div>
+                <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80 block mb-1">${escapeHtmlText(stripHtmlToPlainText(ch.number))}</span>
                 ${ch.title ? `<h3 class="font-display text-base md:text-lg font-semibold text-theme-text">${escapeHtmlText(stripHtmlToPlainText(ch.title))}</h3>` : ''}
-              </button>
-              <button type="button" onclick="selectChapter('${activeEra}', ${idx}, true)" class="py-1.5 px-3.5 border border-theme-border rounded-lg text-[10px] font-sans uppercase tracking-[0.2em] text-theme-accent hover:border-theme-accent hover:text-theme-text transition-all cursor-pointer shrink-0 self-start sm:self-center">
-                Open
-              </button>
-            </div>
+              </div>
+              <span class="font-sans text-[9px] uppercase tracking-[0.2em] ${statusClass} shrink-0">${statusText}</span>
+            </button>
           `;
         }).join('');
 
@@ -4193,17 +3875,6 @@
               ${readSet.size} of ${eraChapters.length} Read
             </p>
           </div>
-
-          ${previewCh ? `
-            <button type="button" onclick="selectChapter('${activeEra}', ${safePreviewIdx}, true)" class="book-card w-full text-left p-6 md:p-7 rounded-sm mb-7 space-y-2 hover:border-theme-accent transition-all cursor-pointer block">
-              <span class="font-sans text-[9px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">
-                Opening Line · ${escapeHtmlText(stripHtmlToPlainText(previewCh.number))}
-              </span>
-              <p class="font-serif italic text-lg md:text-xl text-theme-text leading-relaxed">
-                “${escapeHtmlText(previewOpening)}”
-              </p>
-            </button>
-          ` : ''}
 
           <div class="space-y-3">
             ${chapterButtonsHtml}
@@ -4231,10 +3902,11 @@
 
       const chapterStripHtml = eraChapters.map((ch, idx) => {
         const isCurrent = idx === activeChapterIndex;
+        const pillParts = getChapterStripLabels(ch);
         return `
           <button type="button" data-chapter-pill="${idx}" onclick="selectChapter('${activeEra}', ${idx}, true)" class="nw-hybrid-pill ${isCurrent ? 'is-active' : ''}">
-            <span class="font-sans text-[8px] tracking-[0.2em] uppercase opacity-75 block mb-0.5">${escapeHtmlText(stripHtmlToPlainText(ch.number))}</span>
-            <span class="font-display text-[11px] font-semibold tracking-wider block truncate">${escapeHtmlText(stripHtmlToPlainText(ch.title || ch.number))}</span>
+            <span class="font-sans text-[8px] tracking-[0.2em] uppercase opacity-75 block mb-0.5">${escapeHtmlText(pillParts.eyebrow)}</span>
+            <span class="font-display text-[11px] font-semibold tracking-wider block truncate">${escapeHtmlText(pillParts.label)}</span>
           </button>
         `;
       }).join('');
@@ -4251,6 +3923,10 @@
       `;
 
       const strip = document.getElementById('chapterHybridStrip');
+      const activePill = strip ? strip.querySelector(`[data-chapter-pill="${activeChapterIndex}"]`) : null;
+      centerHybridPillOnce(strip, activePill);
+    }
+    const strip = document.getElementById('chapterHybridStrip');
       const activePill = strip ? strip.querySelector(`[data-chapter-pill="${activeChapterIndex}"]`) : null;
       centerHybridPillOnce(strip, activePill);
     }
@@ -5109,9 +4785,411 @@ What remains of the individual when the person they have learned to be is examin
           { label: 'Reigning sovereign', value: 'Her Majesty Queen Ecaterina' },
           { label: 'Heir to the throne', value: 'Her Royal Highness Princess Elisabeta Ecaterina' }
         ],
-        body: `## The Second Book: The Royal History and Laws of Norwyn
-#### The Crown, the Royal Lineage, and the Laws of Nine Queens
-Archival manuscript prepared for the Scriptorium. Full chronicle text to be inserted.`
+        body: `## Prefatory Note
+This volume sets forth the historical framework of Norwyn: the founding of the kingdom, the royal genealogy, the law of succession, and the growth of its laws.
+It sets the royal genealogy beside the legal history of the Crown, that the reader may follow the line of nine Queens, and the laws that each of them introduced.
+The relations of the royal house are kept consistent throughout. In particular, Queen Ioana is the mother of Queen Ecaterina, and Prince Dara is Ecaterina's husband.
+The reign dates, family relations, and individual enactment dates that follow form the settled historical record of the kingdom.
+
+## Part the First: The Crown and Its Founding Principles
+### 1. Of the Establishment of the Kingdom
+Before Norwyn was a kingdom, the island was inhabited by communities ordered about three separate villages. Each had its own established customs, its own arrangements of leadership, its own occupations, and its own system of local responsibility. The villages shared one island, yet did not act as a single political authority. Their interests were often apart, and disputes over resources, duties, and authority made lasting cooperation hard to keep.
+It was in this season that Arabella arose as a figure of great influence. She was no heiress to a throne. She was not born into an established monarchy, nor did she inherit sovereign authority from any previous Queen. Her place was established through her own leadership, and through the political union she brought about.
+She challenged the existing arrangements that allowed powerful individuals to set private interests above the security and prosperity of the communities. She sought to establish an authority able to maintain order, to protect the interests of the people, and to prevent the island from falling back into political division.
+The union of the three villages became the beginning of Norwyn. The establishment of the Crown turned that union into a kingdom, and Arabella became its first Queen, and founded the royal institution that would govern the island for generations.
+The monarchy was founded upon succession through the female line. The eldest daughter of a reigning Queen should inherit the Crown, so that royal authority might pass through the maternal line. This was no mere preference concerning inheritance. It became one of the central principles upon which the political identity of Norwyn was built. Arabella's reign established the foundations of the kingdom: its unity, its sovereign authority, its royal family, and the principle governing the continuation of the Crown.
+
+### 2. Of the Nature of the Norwynian Monarchy
+Norwyn is governed by an absolute monarchy. The Queen is the sovereign authority of the kingdom, and her authority is exercised through ministers, boards, committees, and the administrative offices charged with carrying out the affairs of government.
+The Queen's authority is not inherited by her husband through marriage, nor is it carried to another family through the marriage of a royal daughter. The Queen's husband holds the title of Prince. He does not become King, and does not acquire the Crown through his marriage.
+The royal family is ordered about the reigning Queen and her descendants. The eldest daughter is the recognised heir. Younger daughters and sons remain members of the royal family, but do not displace the eldest daughter in the succession. Royal children bear their mother's royal family identity, and marriage does not remove a woman from her maternal royal line. The monarchy thus maintains its continuity through generations of Queens.
+
+### 3. Of the Two Formal Classes of Norwyn
+Norwyn recognises two formal social classes.
+Royals. The members of the royal family, including the reigning Queen, her children, and other recognised descendants of the royal line.
+Non-royals. All other inhabitants of the kingdom.
+The non-royal population is not a single economic or social body. It includes people of different occupations, degrees of wealth, education, professional duty, and access to opportunity. A person's financial position does not of itself change their formal class. The distinction between royals and non-royals is an established feature of Norwynian society, and is reflected in royal protocol, inheritance, public responsibilities, and the administration of the kingdom.
+
+### 4. Of the Continuity of Royal Authority
+Every Queen inherits a kingdom shaped by the decisions of her predecessors. She does not begin her reign with an entirely new legal system. She inherits the laws, institutions, records, obligations, and established arrangements that have gathered through the history of the Crown.
+A Queen may introduce new legislation, amend an existing law, repeal a law that no longer serves its purpose, reaffirm a law established by a predecessor, establish new administrative arrangements, and issue royal decrees within her sovereign authority.
+A law introduced by one Queen may remain in force for several generations. The age of a law does not of itself make it obsolete; and its historical weight does not make it immune to revision. By this principle Norwyn retains a continuous legal identity while answering the circumstances of different generations.
+
+## Part the Second: The Royal Genealogy
+### 1. Of the Direct Line of Succession
+The nine Queens following form the developed direct line of succession, from the founding of Norwyn to the reign of Queen Ecaterina. The next generation is represented by Princess Elisabeta, born in 1974.
+Each bar is one reign. Arabella, the founder, stands apart; the mark at 1985 is the reign of Queen Ecaterina, which continues in the 1990s.
+The Queens, in order of succession, with their years of birth: Arabella (1698), Theodora (1724), Constantina (1753), Alexandrina (1784), Eleonora (1811), Margareta (1840), Anastasia (1871), Ioana (1901), and Ecaterina (1931).
+
+### 2. The Founding Generation
+#### Her Majesty Queen Arabella
+First Queen of Norwyn. Born 1698. Reigned 1724 to 1761. Died 1761.
+Arabella is remembered as the founder of Norwyn and the first sovereign of the kingdom. Her significance lies in this: that she created the monarchy, and did not inherit it. She brought the three villages together, established the authority of the Crown, and introduced the founding principles that would guide the royal line. Her reign established the political identity of Norwyn.
+Her family. Husband: Prince Leopold. Eldest daughter: Princess Theodora, born 1724. Younger daughter: Princess Eudoxia, born 1728. Son: Prince Maximilian, born 1731.
+The succession. Princess Theodora became heir to the throne by virtue of being Arabella's eldest daughter, and succeeded her mother in 1761.
+Her significance. Arabella's reign established the monarchy, the founding legal order, and the principle that the Crown should descend through the female line. Her name remains bound to the creation of the kingdom itself.
+
+### 3. The Second Generation
+#### Her Majesty Queen Theodora
+Second Queen of Norwyn. Born 1724. Reigned 1761 to 1795. Died 1795.
+Theodora inherited a newly established kingdom whose political identity had been shaped by her mother's leadership. Her charge was to preserve the union of the three villages, and to make the arrangements established in the founding reign more consistent. Her reign is associated with the consolidation of the kingdom.
+Her family. Mother: Queen Arabella. Father: Prince Leopold. Younger sister: Princess Eudoxia. Younger brother: Prince Maximilian. Husband: Prince Sebastian. Eldest daughter: Princess Constantina, born 1753. Younger daughter: Princess Adelina, born 1757. Son: Prince Ferdinand, born 1760.
+The succession. Princess Constantina succeeded Theodora in 1795.
+Her significance. Theodora strengthened the administrative foundations of the kingdom, and established greater consistency in the relation between the Crown and the communities of Norwyn.
+
+### 4. The Third Generation
+#### Her Majesty Queen Constantina
+Third Queen of Norwyn. Born 1753. Reigned 1795 to 1828. Died 1828.
+Constantina inherited a kingdom that had survived its founding period and was developing a more ordered system of public administration. Her reign was given to public responsibilities, local administration, and the relation between individual obligations and the wider interests of the kingdom.
+Her family. Mother: Queen Theodora. Father: Prince Sebastian. Younger sister: Princess Adelina. Younger brother: Prince Ferdinand. Husband: Prince Constantin. Eldest daughter: Princess Alexandrina, born 1784. Younger daughter: Princess Amalia, born 1788. Son: Prince Octavian, born 1791.
+The succession. Princess Alexandrina succeeded Constantina in 1828.
+Her significance. Constantina's reign is associated with the development of public order, the organisation of administrative responsibilities, and the growing importance of consistent legal procedure.
+
+### 5. The Fourth Generation
+#### Her Majesty Queen Alexandrina
+Fourth Queen of Norwyn. Born 1784. Reigned 1828 to 1862. Died 1862.
+Alexandrina inherited a kingdom of increasingly settled administrative arrangements. Her reign was marked by the development of public institutions, of education, of professional responsibility, and of the preservation of official records.
+Her family. Mother: Queen Constantina. Father: Prince Constantin. Younger sister: Princess Amalia. Younger brother: Prince Octavian. Husband: Prince Valerian. Eldest daughter: Princess Eleonora, born 1811. Younger daughter: Princess Dorothea, born 1815. Son: Prince Casimir, born 1818.
+The succession. Princess Eleonora succeeded Alexandrina in 1862.
+Her significance. Alexandrina's reign contributed to the ordering of public education, of professional standards, and of the administrative structures needful to a growing kingdom.
+
+### 6. The Fifth Generation
+#### Her Majesty Queen Eleonora
+Fifth Queen of Norwyn. Born 1811. Reigned 1862 to 1894. Died 1894.
+Eleonora inherited a kingdom whose institutions had grown more developed. Her reign was given to the relation between commerce, education, professional conduct, and public administration.
+Her family. Mother: Queen Alexandrina. Father: Prince Valerian. Younger sister: Princess Dorothea. Younger brother: Prince Casimir. Husband: Prince Leopold. Eldest daughter: Princess Margareta, born 1840. Younger daughter: Princess Isadora, born 1844. Son: Prince Nicodemus, born 1847.
+The succession. Princess Margareta succeeded Eleonora in 1894.
+Her significance. Eleonora's reign is associated with the refinement of commercial regulation, and the strengthening of professional and administrative standards.
+
+### 7. The Sixth Generation
+#### Her Majesty Queen Margareta
+Sixth Queen of Norwyn. Born 1840. Reigned 1894 to 1926. Died 1926.
+Margareta ruled in a season of growing commercial and industrial activity. The rise of manufacturing, transport, agriculture, construction, and trade made the ordering of economic life a weighty concern of the Crown.
+Her family. Mother: Queen Eleonora. Father: Prince Leopold. Younger sister: Princess Isadora. Younger brother: Prince Nicodemus. Husband: Prince Octavian. Eldest daughter: Princess Anastasia, born 1871. Younger daughter: Princess Seraphina, born 1875. Son: Prince Evander, born 1878.
+The succession. Princess Anastasia succeeded Margareta in 1926.
+Her significance. Margareta's reign is associated with the expansion of commercial law, the regulation of manufacturing, and the development of transport and public infrastructure.
+
+### 8. The Seventh Generation
+#### Her Majesty Queen Anastasia
+Seventh Queen of Norwyn. Born 1871. Reigned 1926 to 1957. Died 1957.
+Anastasia inherited a kingdom whose commercial and administrative systems had grown ever more complex. Her reign was given to the modernising of public administration, while keeping the established authority of the monarchy.
+Her family. Mother: Queen Margareta. Father: Prince Octavian. Younger sister: Princess Seraphina. Younger brother: Prince Evander. Husband: Prince Ferdinand. Eldest daughter: Princess Ioana, born 1901. Younger daughter: Princess Ginevra, born 1905. Son: Prince Lucian, born 1908.
+The succession. Princess Ioana succeeded Anastasia in 1957.
+Her significance. Anastasia's reign is associated with modern public administration, clearer civil regulation, and the ordering of public institutions.
+
+### 9. The Eighth Generation
+#### Her Majesty Queen Ioana
+Eighth Queen of Norwyn. Born 1901. Reigned 1957 to 1985. Died 1985.
+Ioana inherited a kingdom whose commercial, industrial, and administrative systems had developed over several generations. Her reign fell in a season when modern technology, communication, and institutional administration grew ever weightier in Norwynian life. Her charge was to preserve the inherited legal arrangements, while ensuring that the institutions of the kingdom might work under contemporary conditions.
+Her family. Mother: Queen Anastasia. Father: Prince Ferdinand. Younger sister: Princess Ginevra. Younger brother: Prince Lucian. Husband: Prince Adrian. Eldest daughter: Princess Ecaterina, born 1931. Younger daughter: Princess Alexandrina, born 1934. Son: Prince Maximilian, born 1937.
+The succession. Princess Ecaterina succeeded Ioana in 1985.
+Her significance. Ioana's reign is associated with the adapting of inherited administrative and legal arrangements to modern institutions, communication, and professional education. Her place in the royal line is preserved also through her daughter, Queen Ecaterina Ioana.
+
+### 10. The Ninth Generation
+#### Her Majesty Queen Ecaterina
+Ninth Queen of Norwyn. Born 1931. Reigning from 1985.
+Ecaterina inherited a kingdom with centuries of established law, a mature administrative structure, and a royal tradition reaching back to Arabella. Her reign is the continuation of the royal line in contemporary Norwyn. She is charged with preserving the legal foundations of the kingdom, while administering a society whose institutions, economy, and technology have changed greatly since the founding era.
+Her family. Mother: Queen Ioana. Father: Prince Adrian. Younger sister: Princess Alexandrina. Younger brother: Prince Maximilian. Husband: Prince Dara. Eldest daughter and heir: Princess Elisabeta Ecaterina, born 1974. Younger daughter: Princess Ileana.
+Prince Dara. Prince Dara comes from the southern coast of Norwyn. He holds the portfolios of the Fisheries and the Lights. His place as the Queen's husband gives him royal rank, but not the sovereign authority of the Crown.
+The succession. Princess Elisabeta is the recognised heir. As the eldest daughter of Queen Ecaterina, she holds the first place in the line of succession.
+Her significance. Ecaterina's reign is associated with the preservation and review of inherited legislation, the administration of contemporary royal institutions, and the continued application of the founding principles of Norwyn.
+
+### 11. The Tenth Generation: The Heir
+#### Her Royal Highness Princess Elisabeta Ecaterina
+Born 1974. Eldest daughter of Queen Ecaterina, and heir to the throne of Norwyn.
+Elisabeta represents the next generation of the royal line. She has been raised within the Royal Palace, and educated in the responsibilities belonging to her station. Her education includes the study of Structural Ideology, and formal academic training at the Royal Academy of Governance. Her position joins her directly to the legal and political history of every Queen who went before her.
+She is not yet a reigning monarch. The laws established in her lifetime therefore belong to the reign of Ecaterina, unless and until Elisabeta succeeds to the Crown.
+Her family. Mother: Queen Ecaterina. Father: Prince Dara. Younger sister: Princess Ileana.
+The succession. Elisabeta is first in the line of succession. Her younger sister, Princess Ileana, follows her in the royal line, subject to the established law of succession.
+Princess Ileana. Ileana is the younger daughter of Queen Ecaterina and Prince Dara. She is a member of the royal family, and holds the place after Elisabeta in the immediate line of succession.
+The second daughter of the Queen traditionally holds the household office of Head of the Department of Poisons. Ileana holds this office, and serves also as the fire officer of the household. Her duties within the palace are distinct from Elisabeta's position as heir.
+
+## Part the Third: The Royal Laws of Norwyn
+### Introduction to the Legal Archive
+The laws of Norwyn are the gathered work of its Queens. The legal history of the kingdom begins with Arabella's founding legislation and runs on through successive reigns. Each Queen inherited the laws of her predecessors, and used her sovereign authority to introduce new legislation, to amend existing provisions, or to repeal arrangements that had grown unsuitable.
+The laws are recorded according to the monarch who introduced them. The register that follows sets forth the principal legislation of each reign. Individual provisions are given as historical descriptions of the laws, and not as a complete modern statutory code.
+The laws concerning the founding of the Crown and succession through the female line are constitutional foundations. Later legislation developed the administration, commerce, education, institutions, and public responsibilities of the kingdom.
+
+### Generation the First: The Founding Laws of Queen Arabella
+#### 1724 to 1761
+Arabella's laws established the foundations of the kingdom. Her legislation addressed the existence of the Crown, the union of the three villages, the inheritance of royal authority, the protection of public order, and the responsibilities created by political unity. Her reign established the legal identity of Norwyn.
+Law I: The Act of Royal Establishment. Enacted 1724 by Queen Arabella. Foundational law; remains in force in principle. The Act of Royal Establishment formally recognised Norwyn as a unified kingdom under one sovereign authority. Before its enactment, the three villages acted as separate communities. The Act established the Crown as the central authority responsible for the united kingdom.
+Its principal provisions: the recognition of Norwyn as a single kingdom; the establishment of the Queen as sovereign; the recognition of the Crown as the central source of royal authority; the recognition of the united territory as belonging to the kingdom; the establishment of a common framework for the administration of the three villages; and the recognition that the interests of the kingdom took precedence over any attempt to restore the former political divisions.
+Its significance. This Act is regarded as the legal beginning of Norwyn. Without it, the union achieved by Arabella would have remained a political arrangement, and not the foundation of a recognised kingdom.
+Law II: The Law of Female-Line Succession. Enacted 1725 by Queen Arabella. Foundational law; remains in force. This law established the hereditary principle governing the Norwynian Crown. It declared that the Crown should descend through the female line, with the eldest daughter of the reigning Queen recognised as the first heir.
+Its principal provisions: the eldest daughter of the reigning Queen shall inherit the Crown; the Queen's husband shall not acquire sovereign authority through marriage; the Queen's children shall belong to their mother's royal family; sons shall remain members of the royal family, but shall not displace an eligible daughter in the succession; younger daughters shall remain members of the royal line without displacing their elder sister; and marriage shall not transfer the Crown to the husband's family.
+Its significance. This law established the most recognisable feature of Norwyn's monarchy. It preserved the maternal line as the basis of royal inheritance, and prevented marriage from carrying sovereign authority away from the descendants of the reigning Queen.
+Law III: The Law of the United Communities. Enacted 1726 by Queen Arabella. Foundational law; later developed by succeeding Queens. This law established the legal responsibilities of the three villages following their union. It recognised that the communities were no longer independent political authorities, but formed a part of one kingdom.
+Its provisions addressed: the recognition of common royal authority; the responsibilities of local leadership; the maintenance of public order; the recognition of common obligations; the resolution of disputes touching more than one community; and the prevention of private interests undermining the unity of the kingdom.
+Its significance. The law ensured that the political union of the villages was upheld by a shared legal arrangement.
+Law IV: The Law of the Royal House. Enacted 1730 by Queen Arabella. Foundational law; remains in force in principle. This law established the legal identity and continuity of the royal family. It defined the relation between the reigning Queen, her children, her husband, and the royal succession.
+Its provisions: the recognition of the Queen as head of the royal family; the recognition of the Queen's children as members of her royal line; the establishment of the Prince's position as husband of the sovereign; the separation of marital status from sovereign authority; the recognition of the eldest daughter as successor; and the protection of the continuity of the royal family beyond the death of any one monarch.
+Its significance. The Law of the Royal House gave the monarchy an enduring family structure.
+Law V: The Law of Public Responsibility. Enacted 1737 by Queen Arabella. Foundational law; later amended. This law established the principle that those entrusted with responsibilities affecting the kingdom were answerable for their conduct. It addressed the use of authority, the handling of public resources, and the duties of individuals acting in the name of the Crown. Its central purpose was to prevent those entrusted with public responsibilities from treating their positions as occasions of personal advantage.
+Its significance. This law reflected one of Arabella's central political concerns: that authority should serve the kingdom, and not the private interests of those who hold it.
+Law VI: The Law of Royal Records. Enacted 1745 by Queen Arabella. Foundational law; later expanded. This law established the preservation of important documents concerning the kingdom. It recognised that the continuity of the Crown required trustworthy records of royal decisions, inheritance, public obligations, and the administration of the kingdom. It established the principle that official decisions affecting the kingdom should be preserved for future generations.
+Its significance. This legislation became the foundation of Norwyn's historical and administrative record-keeping.
+
+### Generation the Second: The Consolidation Laws of Queen Theodora
+#### 1761 to 1795
+Theodora inherited the founding legal structure established by Arabella. Her chief charge was to make the administrative arrangements of the kingdom more consistent, and to ensure that the laws of the Crown could work across the united communities. Her reign is associated with administrative consolidation.
+Law I: The Law of Local Administration. Enacted 1764 by Queen Theodora. This law established clearer responsibilities for local administration. It recognised that the Queen could not personally oversee every matter touching the communities of the kingdom, and that certain duties therefore required designated individuals acting under royal authority.
+Its provisions addressed: the appointment of local administrators; the responsibilities of those entrusted with local duties; the reporting of significant matters to the Crown; the maintenance of local records; the obligation to follow royal legislation; and the prevention of local authority being used to challenge the unity of the kingdom.
+Its significance. The law developed the administrative framework established in Arabella's reign.
+Law II: The Law of Common Measure and Exchange. Enacted 1769 by Queen Theodora. This law established greater consistency in commercial transactions. It addressed the use of measures in the exchange of agricultural produce, flour, fabric, and other goods.
+Its provisions: the recognition of common standards of commercial measurement; requirements concerning the accuracy of measures used in trade; protection against deliberate misrepresentation of quantities; the recognition of commercial agreements; and procedures for disputes concerning the quantity or quality of exchanged goods.
+Its significance. The law supported trade between the communities, and lessened the difficulties arising from inconsistent local practice.
+Law III: The Law of Public Obligations. Enacted 1778 by Queen Theodora. This law clarified the responsibilities attached to designated public duties. It established that a person entrusted with a public responsibility was expected to fulfil the duties of that position, and addressed neglect of responsibility, misuse of authority, and the failure to carry out duties affecting the kingdom.
+Its significance. The law strengthened the bond between public service and accountability.
+Law IV: The Law of Royal Inheritance Records. Enacted 1786 by Queen Theodora. This legislation expanded the earlier Law of Royal Records. It established more consistent documentation of royal births, marriages, deaths, parentage, and succession, and required the preservation of genealogical records relevant to the continuity of the Crown.
+Its significance. The law made the royal genealogy an important legal and historical record, and not merely a private family history.
+Law V: The Law of Common Jurisdiction. Enacted 1791 by Queen Theodora. This law established that disputes affecting the united kingdom should be addressed under the authority of the Crown, and not according to conflicting independent village arrangements. It provided a common legal foundation for matters affecting more than one community.
+Its significance. The law further lessened the possibility of the kingdom returning to separate legal and political systems.
+
+### Generation the Third: The Public Order Laws of Queen Constantina
+#### 1795 to 1828
+Constantina inherited a more settled administrative system. Her reign was given to defining public responsibilities, protecting property, ordering obligations, and strengthening the bond between the individual and the kingdom.
+Law I: The Law of Public Property. Enacted 1798 by Queen Constantina. This law established clearer distinctions between property belonging to the Crown, property held for public purposes, and privately owned property. Its provisions addressed: the identification of royal property; the protection of property designated for public use; the responsibilities of those entrusted with public property; the prevention of unauthorised private appropriation; and the preservation of records concerning property under royal authority.
+Its significance. The law established a more consistent legal understanding of property within the kingdom.
+Law II: The Law of Public Duty. Enacted 1804 by Queen Constantina. This law developed the principles of public responsibility introduced by Arabella and Theodora. It established that designated public duties could not be treated as optional personal arrangements, and addressed the conduct of individuals whose responsibilities touched public administration, the maintenance of shared facilities, and the execution of royal decisions.
+Its significance. It strengthened the expectation that public responsibilities should be performed steadily, and not according to personal convenience.
+Law III: The Law of Contractual Obligation. Enacted 1810 by Queen Constantina. This law recognised the importance of agreements in commercial and private affairs. It established that agreements entered into voluntarily carried obligations that could not simply be disregarded when circumstances grew inconvenient. Its provisions addressed: the recognition of agreements; the responsibilities of parties to commercial arrangements; the consequences of failing to fulfil agreed obligations; the treatment of disputes concerning agreements; and the importance of trustworthy documentation.
+Its significance. The law contributed to a more dependable setting for commerce and private agreement.
+Law IV: The Law of Community Maintenance. Enacted 1817 by Queen Constantina. This legislation addressed the upkeep of shared facilities and the responsibilities touching local communities. It recognised that the condition of roads, transport routes, public structures, and shared resources affected the prosperity of the wider kingdom, and clarified the duties of those entrusted with maintaining them.
+Its significance. It strengthened the bond between local responsibility and the wider interests of Norwyn.
+Law V: The Law of Official Conduct. Enacted 1823 by Queen Constantina. This law established standards of conduct for those holding designated administrative positions. It addressed the misuse of office, the concealment of official decisions, and the improper use of authority for private benefit.
+Its significance. It reinforced the principle that authority carried obligations, and that the misuse of an entrusted position could do harm to the kingdom.
+
+### Generation the Fourth: The Institutional Laws of Queen Alexandrina
+#### 1828 to 1862
+Alexandrina inherited a kingdom with settled administrative and commercial arrangements. Her reign was given to institutions, education, professional responsibilities, and the preservation of public knowledge.
+Law I: The Law of Public Education. Enacted 1832 by Queen Alexandrina. This law established a more ordered framework for public education. It recognised education as an important means by which individuals acquired the knowledge and abilities required to take part in the economic and administrative life of the kingdom. Its provisions addressed: the organisation of educational provision; the responsibilities of educational institutions; the preservation of educational records; standards for appointed educators; and the recognition of educational qualifications.
+Its significance. The law established a more consistent approach to education across the kingdom.
+Law II: The Law of Professional Responsibility. Enacted 1838 by Queen Alexandrina. This law addressed the responsibilities belonging to professional occupations. It recognised that certain occupations required specialised knowledge, and that professional work could have consequences for the wider population. Its provisions addressed professional standards, the duties of practitioners, and the consequences of serious professional misconduct.
+Its significance. It strengthened the bond between professional knowledge, responsibility, and public confidence.
+Law III: The Law of Official Registration. Enacted 1844 by Queen Alexandrina. This law expanded the record-keeping arrangements of the kingdom. It addressed the systematic preservation of important official information, including records relevant to property, commercial agreements, and public administration.
+Its significance. The law strengthened the continuity and trustworthiness of the official records of the kingdom.
+Law IV: The Law of Public Works. Enacted 1851 by Queen Alexandrina. This law established clearer arrangements for the organisation and supervision of public construction and maintenance. It addressed the responsibilities of individuals and organisations undertaking work affecting public infrastructure. Its scope included construction, joinery, carpentry, and the maintenance of structures designated for public purposes.
+Its significance. It supported the development of a more ordered approach to public construction and infrastructure.
+Law V: The Law of Educational Qualification. Enacted 1858 by Queen Alexandrina. This law established clearer recognition of educational achievement and qualification. It addressed the documentation of study, the recognition of completed educational programmes, and the relation between education and professional appointment.
+Its significance. It helped establish a more consistent relation between education and professional responsibility.
+
+### Generation the Fifth: The Commercial and Professional Laws of Queen Eleonora
+#### 1862 to 1894
+Eleonora inherited the institutions developed under Alexandrina. Her reign was given to commercial dependability, professional conduct, the ordering of economic activity, and the responsibilities of employers and traders.
+Law I: The Law of Commercial Agreements. Enacted 1865 by Queen Eleonora. This law developed the earlier provisions concerning contractual obligations. It established more detailed expectations for commercial agreements, and recognised the importance of clear terms between parties. Its provisions addressed: written commercial agreements; the obligations of buyers and sellers; the treatment of incomplete transactions; the consequences of deliberate misrepresentation; and procedures for resolving commercial disputes.
+Its significance. It strengthened commercial confidence, and provided clearer standards for business arrangements.
+Law II: The Law of Manufacturing Standards. Enacted 1870 by Queen Eleonora. This law addressed standards in manufacturing and the production of goods. It recognised the importance of consistency, quality, and dependability in goods produced for commercial exchange, and applied to manufacturing activities and the responsibilities of those overseeing production.
+Its significance. The law supported the growth of Norwyn's manufacturing economy.
+Law III: The Law of Professional Appointment. Enacted 1876 by Queen Eleonora. This law established clearer principles for appointment to designated professional and administrative positions. It recognised that appointments carrying specialised responsibilities should take account of relevant education, knowledge, and experience.
+Its significance. It developed the relation between professional qualification and public responsibility.
+Law IV: The Law of Commercial Accountability. Enacted 1882 by Queen Eleonora. This legislation addressed the obligations of individuals and businesses engaged in commercial activity. It established standards concerning the accurate recording of transactions and the fulfilment of commercial responsibilities.
+Its significance. The law contributed to a more dependable commercial environment.
+Law V: The Law of Working Responsibilities. Enacted 1889 by Queen Eleonora. This law addressed responsibilities arising within organised employment. It recognised that the relation between employers and workers involved obligations on both sides, and addressed agreed working conditions, the fulfilment of contractual duties, and the treatment of disputes arising from employment arrangements.
+Its significance. It marked a more developed legal recognition of the responsibilities created by organised work.
+
+### Generation the Sixth: The Industrial and Transport Laws of Queen Margareta
+#### 1894 to 1926
+Margareta inherited a kingdom with an ever more active commercial and manufacturing economy. Her reign was given to industrial organisation, transport, agriculture, trade, and the relation between economic growth and public responsibility.
+Law I: The Law of Industrial Regulation. Enacted 1898 by Queen Margareta. This law established a more ordered framework for industrial activity. It addressed the responsibilities of manufacturers, the upkeep of production facilities, and the standards expected of organised industrial operations.
+Its significance. It recognised the growing importance of manufacturing to the kingdom.
+Law II: The Law of Transport and Carriage. Enacted 1903 by Queen Margareta. This legislation addressed the ordering of commercial transport. Its provisions concerned the duties of transport operators, the movement of goods, and the agreements governing carriage. It recognised the importance of dependable transport to agriculture, manufacturing, and commerce.
+Its significance. The law supported the growing movement of goods and people throughout the kingdom.
+Law III: The Law of Agricultural Responsibility. Enacted 1909 by Queen Margareta. This law addressed responsibilities attached to agricultural production and the use of land for productive purposes. It recognised agriculture as an important part of Norwyn's economy, and established clearer expectations concerning the management of agricultural property and commercial produce.
+Its significance. It strengthened the legal framework supporting agriculture and the trade in agricultural goods.
+Law IV: The Law of Railway Administration. Enacted 1915 by Queen Margareta. This legislation established legal responsibilities concerning the administration and operation of railway transport. Its provisions addressed: the responsibilities of railway operators; the maintenance of railway infrastructure; the movement of commercial goods; the preservation of railway records; and the responsibilities arising from the operation of railway services.
+Its significance. It recognised railway transport as an important part of the economic and administrative infrastructure of the kingdom.
+Law V: The Law of Commercial Property. Enacted 1921 by Queen Margareta. This law addressed property used for commercial and manufacturing purposes. It established clearer expectations concerning the ownership, use, and transfer of commercial property, and the obligations attached to its management.
+Its significance. It contributed to the legal ordering of an increasingly complex commercial economy.
+
+### Generation the Seventh: The Modern Administration Laws of Queen Anastasia
+#### 1926 to 1957
+Anastasia inherited a kingdom with settled industrial, commercial, and transport systems. Her reign was given to the modernising of public administration, civil responsibilities, and the ordering of government records.
+Law I: The Law of Civil Registration. Enacted 1930 by Queen Anastasia. This law developed the registration of important civil events. It established more consistent arrangements for documenting births, deaths, marriages, and other matters requiring official recognition.
+Its significance. It strengthened the civil records of the kingdom, and improved the trustworthiness of official documentation.
+Law II: The Law of Administrative Responsibility. Enacted 1936 by Queen Anastasia. This legislation clarified the responsibilities of administrative offices and of individuals acting under royal authority. It addressed the handling of official matters, the preservation of records, and the obligation to carry out designated duties.
+Its significance. It supported the development of a more ordered administrative system.
+Law III: The Law of Public Procurement. Enacted 1941 by Queen Anastasia. This law addressed the acquisition of goods and services for public purposes. It established clearer procedures for purchasing, contracting, and recording expenditure involving public resources.
+Its significance. It strengthened accountability in the use of resources entrusted to public administration.
+Law IV: The Law of Public Health Responsibilities. Enacted 1947 by Queen Anastasia. This law established responsibilities concerning the maintenance of public conditions affecting health and safety. It addressed the duties of designated authorities in matters of sanitation, public facilities, and the prevention of conditions that might threaten the wider population.
+Its significance. It recognised public health as a matter requiring ordered administration and consistent legal responsibility.
+Law V: The Law of Official Information. Enacted 1953 by Queen Anastasia. This legislation established more detailed requirements for the preservation and administration of official information. It addressed the organisation of records, the responsibilities of those entrusted with official documents, and the continuity of administrative information.
+Its significance. It developed the earlier royal record-keeping laws in answer to the growing complexity of modern government.
+
+### Generation the Eighth: The Contemporary Governance Laws of Queen Ioana
+#### 1957 to 1985
+Ioana inherited a kingdom whose administration had grown more complex, and whose institutions relied ever more on modern communication and technology. Her reign was given to contemporary civil administration, professional education, institutional organisation, and the legal treatment of modern communications.
+Law I: The Law of Modern Civil Administration. Enacted 1960 by Queen Ioana. This law modernised administrative procedure, and established more consistent arrangements for the working of civil offices. It addressed the organisation of official responsibilities, the preservation of records, and the efficient handling of administrative matters.
+Its significance. It brought older administrative arrangements into closer accord with the needs of contemporary Norwyn.
+Law II: The Law of Professional Education. Enacted 1965 by Queen Ioana. This legislation addressed the organisation and recognition of advanced professional education. It established clearer expectations concerning the responsibilities of institutions providing specialised education, and the recognition of qualifications.
+Its significance. It strengthened the relation between education, professional knowledge, and the needs of public institutions.
+Law III: The Law of Institutional Governance. Enacted 1970 by Queen Ioana. This law addressed the internal organisation and responsibilities of established institutions. It recognised that institutions required defined responsibilities, consistent procedures, and fitting supervision. The law applied to designated institutions operating within the kingdom, including educational and administrative bodies.
+Its significance. It strengthened the legal framework within which the institutions of Norwyn operated.
+Law IV: The Law of Communications and Official Records. Enacted 1976 by Queen Ioana. This legislation addressed the increasing use of modern communication systems. It recognised that official information might be transmitted by means beyond traditional handwritten correspondence. Its provisions addressed the preservation of official communications, the responsibilities of those handling such information, and the dependability of records.
+Its significance. It developed the older record-keeping traditions of the kingdom to receive contemporary communication.
+Law V: The Law of Public Infrastructure. Enacted 1981 by Queen Ioana. This law addressed the maintenance and administration of public infrastructure. It recognised the importance of transport, public construction, utilities, and shared facilities to the working of contemporary Norwyn.
+Its significance. It established a more coordinated approach to infrastructure responsibilities.
+
+### Generation the Ninth: The Laws of Queen Ecaterina
+#### 1985 to the 1990s
+Ecaterina inherited a legal system shaped by eight preceding generations. Her reign is concerned with the administration of contemporary Norwyn, the preservation of inherited laws, and the continued development of institutions. Unlike Arabella, she has no need to establish the monarchy. Unlike Theodora, she has no need to consolidate the original union. Her charge is to govern an established kingdom, and her legal legacy therefore reflects the practical demands of contemporary government.
+Law I: The Law of Administrative Review. Enacted 1987 by Queen Ecaterina. This law established a process for reviewing administrative arrangements that had grown outdated or inconsistent with the needs of contemporary Norwyn. It did not remove the authority of the Crown. It provided instead a more ordered means of examining the working of existing administrative procedures.
+Its provisions addressed: the review of administrative responsibilities; the identification of outdated procedures; the preservation of established legal authority; recommendations for administrative improvement; and the implementation of approved changes under royal authority.
+Its significance. The law reflected Ecaterina's responsibility to maintain an effective administrative system without needlessly abandoning inherited arrangements.
+Law II: The Law of Official Documentation. Enacted 1989 by Queen Ecaterina. This law addressed the preservation and handling of official documents in contemporary Norwyn. It recognised the growing importance of dependable documentation in government, education, commerce, and institutional administration. Its provisions addressed the preservation of official records, the responsibilities of designated record custodians, and the handling of important administrative documents.
+Its significance. It continued the record-keeping tradition established by Arabella and developed by succeeding Queens.
+Law III: The Law of Institutional Standards. Enacted 1991 by Queen Ecaterina. This law addressed standards of administration within designated public and educational institutions. It established expectations concerning institutional responsibilities, record-keeping, professional conduct, and the fulfilment of designated duties.
+Its significance. It reflected the growing importance of institutional consistency in contemporary Norwyn.
+Law IV: The Law of Commercial Documentation. Enacted 1993 by Queen Ecaterina. This legislation addressed the documentation of commercial agreements and transactions. It developed the earlier commercial laws by recognising contemporary methods of record-keeping and communication. Its provisions addressed the preservation of commercial records, the responsibilities of parties to documented agreements, and the handling of disputes concerning commercial transactions.
+Its significance. It joined Norwyn's older commercial laws to the practical needs of contemporary commerce.
+Law V: The Law of Public Record Preservation. Enacted 1995 by Queen Ecaterina. This law established more detailed arrangements for preserving historically and administratively significant records. It recognised that the continuity of the kingdom depended not only upon the preservation of royal genealogies, but also upon the survival of records concerning the administration, institutions, and economic development of Norwyn.
+Its significance. It strengthened the historical record of the kingdom, and supported the preservation of documents for future generations.
+
+## Part the Fourth: Laws and Institutions of the Present Kingdom
+The register above sets forth the extended legal development of Norwyn. Certain laws, customs, and institutions besides are of weight in the present working of the kingdom. These are part of the living legal and administrative system of the Crown.
+
+### 1. The Timber Inspection Schedule
+The Timber Inspection Schedule is an established system governing the inspection of timber entering trade. Timber comes from the coast, the river districts, and the high forests. It is an important part of the economy of Norwyn, supporting joiners, sawyers, timber yards, and other commercial activities.
+Every lot entering trade is inspected by seal on one of four fixed days each year. The system establishes a common inspection procedure for timber owners and traders, and touches the movement of timber through the kingdom and the businesses that depend upon its supply.
+The law is of particular weight because inspection does not of necessity mean immediate movement. A lot of timber may be inspected and approved, and yet wait before it can be carried or used.
+
+### 2. The Board of Transport (Carriage and Wharf)
+The Board of Transport (Carriage and Wharf) is responsible for the carrying of goods by rail and river. It forms a part of the administrative structure through which goods are moved, given priority, and distributed. The Board works within a wider system of public administration involving ministers, committees, and officials. Minister Brask oversees the Board's area of government.
+
+### 3. The Royal Household Rules
+The palace is governed by printed rules and established custom. These arrangements cover: the notice and announcement of engagements; the keeping and distribution of keys; household schedules; the duties and responsibilities of staff; the handling of royal correspondence; the maintenance of ledgers and records; and the ordering of household work.
+The steward's office manages the schedules, post, and ledgers of the household. The Queen's secretaries see to it that the papers reaching her have been properly prepared. The royal household is not merely a private residence. It is an organised institution that supports the daily working of the monarchy.
+
+### 4. The Department of Poisons
+The Queen's second daughter traditionally holds the title of Head of the Department of Poisons. The office is part of the inherited structure of the royal household. Princess Ileana holds this position in the reign of Ecaterina.
+
+### 5. The Royal Academy of Governance
+The Royal Academy of Governance is an important educational institution in Norwyn. It provides lectures, seminars, critiques, library work, and examination by panel. Senior students are examined before a panel of three.
+The heir to the throne attends seminars at the Academy, while the royal children also receive private instruction. The Academy teaches Norwyn Structural Ideology, a body of political and social thought concerned with the organisation of society and the relation between its several parts.
+
+### 6. The Archive Trust and the Founders' Trust
+The Archive Trust and the Founders' Trust are private foundations of considerable public influence. They support buildings, scholars, public institutions, and other projects. They help also to preserve the historical records and founding traditions of the kingdom.
+The Archive Trust supports Lucian Fletcher's education at the Academy. The Founders' Trust holds an annual gala at which the names of its forty patrons are read aloud and the room drinks to the founders of the kingdom. The Trusts are private foundations, and are not to be described as government departments or royal offices.
+
+## Part the Fifth: The Laws That Connect the Generations
+The laws of Norwyn are not nine separate legal systems. They form one continuous body of legislation. Some laws were enlarged by later Queens. Others remained largely unchanged. Some grew less weighty as the kingdom developed. The register below sets forth the major legal traditions and their historical development.
+Royal establishment — Originating Queen: Arabella — Later development: Preserved by every successor.
+Female-line succession — Originating Queen: Arabella — Later development: Maintained throughout the dynasty.
+Royal family identity — Originating Queen: Arabella — Later development: Clarified through royal inheritance records.
+United communities — Originating Queen: Arabella — Later development: Developed by Theodora.
+Public responsibility — Originating Queen: Arabella — Later development: Expanded by Constantina and later Queens.
+Royal records — Originating Queen: Arabella — Later development: Expanded by Theodora, Alexandrina, and later Queens.
+Local administration — Originating Queen: Theodora — Later development: Modernised by successive Queens.
+Common commercial standards — Originating Queen: Theodora — Later development: Developed by Constantina and later Queens.
+Public property — Originating Queen: Constantina — Later development: Refined by later Queens.
+Contractual obligations — Originating Queen: Constantina — Later development: Expanded by Eleonora.
+Public education — Originating Queen: Alexandrina — Later development: Developed through later professional education laws.
+Professional responsibility — Originating Queen: Alexandrina — Later development: Expanded by Eleonora and later Queens.
+Public works — Originating Queen: Alexandrina — Later development: Developed by Margareta.
+Manufacturing standards — Originating Queen: Eleonora — Later development: Expanded by Margareta.
+Working responsibilities — Originating Queen: Eleonora — Later development: Developed through later commercial and employment legislation.
+Transport and carriage — Originating Queen: Margareta — Later development: Expanded through railway and infrastructure legislation.
+Industrial regulation — Originating Queen: Margareta — Later development: Maintained through later administrative laws.
+Civil registration — Originating Queen: Anastasia — Later development: Modernised by later Queens.
+Public procurement — Originating Queen: Anastasia — Later development: Continued under contemporary administration.
+Public health responsibilities — Originating Queen: Anastasia — Later development: Maintained through later public administration.
+Institutional governance — Originating Queen: Ioana — Later development: Developed by Ecaterina.
+Communications and official records — Originating Queen: Ioana — Later development: Expanded by Ecaterina.
+Administrative review — Originating Queen: Ecaterina — Later development: Current legal development in the 1990s.
+
+## Part the Sixth: The Law of Succession in the Present Day
+### 1. Of the Position of Princess Elisabeta
+By the 1990s the Law of Female-Line Succession has stood for more than two and a half centuries. It remains one of the most important laws in Norwyn.
+Princess Elisabeta's position is not founded on her personal achievements, her education, her engagement, or her prospects of marriage. It arises from her birth as the eldest daughter of the reigning Queen. Her succession is established through the law introduced by Arabella and preserved by every succeeding Queen.
+Her younger sister, Princess Ileana, is also a member of the royal family, but does not displace Elisabeta in the line of succession. The future of the Crown therefore rests upon the continuity of the maternal royal line.
+
+### 2. Of the Queen's Husband
+A Queen's husband is a Prince. His marriage to the Queen does not grant him the Crown, nor make him sovereign. He may take part in royal life and undertake the responsibilities of his station, but his authority is distinct from the sovereign authority of his wife. Prince Dara's responsibilities concerning the Fisheries and the Lights illustrate this distinction.
+
+### 3. Of the Children of a Queen
+The children of a Queen belong to her royal family, and their royal identity comes through their mother. The eldest daughter inherits the first position in the line of succession. Younger daughters and sons remain members of the royal family. This principle applies regardless of the personal standing, wealth, or family background of the Queen's husband.
+
+### 4. Of Royal Marriage
+A royal marriage carries both personal and public significance. The royal wedding procedure of Norwyn includes: a formal procession; a brass plate on the hall floor at which the bride pauses; a marriage register signed before witnesses on either side; and a copy of the marriage record lodged with the state records.
+When the Crown marries into a foreign royal house, the ceremony becomes also a treaty occasion, attended by representatives of other countries. Marriage does not alter the maternal basis of succession. A royal woman's husband does not acquire the Crown through the marriage, and the royal line remains joined to her mother's family.
+
+## Part the Seventh: The Royal Archive
+### 1. Of the Preservation of the Laws
+The history of the legislation of Norwyn is preserved through the royal record-keeping tradition established in Arabella's reign. The archive holds documents concerning: the founding of the kingdom; royal succession; royal births, marriages, and deaths; the laws introduced by succeeding Queens; amendments and repeals; royal decrees; administrative records; commercial legislation; institutional development; public responsibilities; and the historical decisions of the Crown. Each Queen's reign is recorded as a separate historical period within the continuous history of the monarchy.
+
+### 2. The Founders' Archive
+The Founders' Archive preserves the historical and legal records associated with the creation of Norwyn. Its most significant documents concern Arabella's leadership, the union of the three villages, the establishment of the Crown, and the original principles of succession. The Archive is supported by the Archive Trust, and is a repository of the historical inheritance of the kingdom.
+
+### 3. The Founders' Trust
+The Founders' Trust is associated with the preservation and continued recognition of Norwyn's founding history. It supports public projects and institutions, and holds an annual gala at which its patrons are recognised. The annual toast to the founders reflects the continuing importance of the founding history of the kingdom in public life.
+
+### 4. The Royal Legal Register
+The Royal Legal Register is the chronological record of the legislation introduced by the Queens of Norwyn. Each entry should identify: the Queen responsible for the law; the year of enactment; the title of the legislation; the historical circumstances; the purpose of the law; its principal provisions; its subsequent amendments; and its present legal status. By this a reader may trace the history of a single law across several centuries.
+
+## Part the Eighth: The Nine Queens and Their Historical Legacies
+Each Queen is remembered for a distinct contribution to the kingdom.
+Queen Arabella: the Founder. Established Norwyn, united the three villages, founded the monarchy, and introduced succession through the female line.
+Queen Theodora: the Consolidator. Strengthened the administration of the kingdom, and developed common standards across the united communities.
+Queen Constantina: the Organiser. Developed public responsibilities, property arrangements, contractual obligations, and the ordering of shared resources.
+Queen Alexandrina: the Institutional Builder. Expanded public education, professional standards, official records, and public works.
+Queen Eleonora: the Commercial Reformer. Strengthened commercial agreements, manufacturing standards, professional appointments, and working responsibilities.
+Queen Margareta: the Industrial Moderniser. Developed the laws concerning manufacturing, agriculture, transport, railways, and commercial property.
+Queen Anastasia: the Administrative Moderniser. Strengthened civil registration, public administration, procurement, public health responsibilities, and official information.
+Queen Ioana: the Contemporary Governance Reformer. Adapted inherited legal arrangements to modern communication, professional education, and institutional governance.
+Queen Ecaterina: the Preserver and Reviewer. Maintains the accumulated legal system, while reviewing administrative and institutional arrangements for contemporary Norwyn.
+Princess Elisabeta: the Heir. Represents the next generation of the royal line, and the inheritance of more than two centuries of royal law.
+
+## Part the Ninth: The Significance of Norwyn's Legal History
+The legal history of Norwyn is also the history of its changing society.
+The earliest laws were concerned with the very existence of the kingdom. They established the Crown, united the communities, and defined the inheritance of royal authority. As the kingdom became more ordered, its laws addressed public administration, property, responsibility, and the relation between individuals and the wider society.
+As commerce grew, legislation developed about trade, manufacturing, transport, employment, and contractual obligation. As institutions grew more complex, the Queens introduced laws concerning education, professional responsibility, public records, and administration. By the reign of Ecaterina, the legal system had become an accumulation of decisions made across nine generations.
+The present kingdom is therefore not the creation of one Queen alone. It is the product of a continuing royal institution, in which each monarch inherits a structure shaped by those who came before her.
+Arabella established the Crown.
+Theodora made its administration more consistent.
+Constantina developed public order.
+Alexandrina expanded its institutions.
+Eleonora strengthened commercial and professional arrangements.
+Margareta developed the legal foundations of industrial and commercial growth.
+Anastasia modernised administration.
+Ioana adapted the kingdom to contemporary institutional and technological conditions.
+Ecaterina inherited that history, and continues to govern it.
+And Elisabeta stands at the beginning of its next generation.
+
+## Part the Tenth: The Settled Particulars of the Realm
+The particulars following are the settled facts of the kingdom, gathered here for the reader's reference.
+### Of the realm and its institutions
+Norwyn is an island kingdom governed by an absolute monarchy.
+Queen Ecaterina is the reigning monarch.
+Elisabeta is her elder daughter and heir.
+Ileana is her younger daughter.
+Succession follows the female line.
+Royal children take their mother's name.
+The Queen's husband holds the title of Prince, and not King.
+The present Prince is Dara.
+Dara comes from the southern coast, and holds the portfolios of the Fisheries and the Lights.
+Ecaterina is the daughter of Ioana, a previous holder of the Crown.
+The second daughter traditionally holds the office of Head of the Department of Poisons.
+The palace has printed rules and established household customs.
+The Timber Inspection Schedule governs the inspection of timber entering trade.
+The Board of Transport (Carriage and Wharf) oversees the carrying of goods by rail and river.
+The Archive Trust and the Founders' Trust are private foundations of public influence.
+The Royal Academy of Governance provides lectures, seminars, critiques, and examination by panel.
+Queen Ecaterina reigns in the 1990s.
+
+### Of the reigns and their records
+The sequence of nine Queens, their births, deaths, and years of reign, the names of their husbands and children, the six founding laws of Arabella, and the register of laws enacted by her successors, with their years and descriptions, form the settled record of the kingdom.
+These particulars are to be kept consistently in every later account of the kingdom.
+
+## Final Historical Statement
+The monarchy of Norwyn is built about continuity through women.
+Its founding Queen established a kingdom from three separate villages, and created a royal institution whose authority should pass through the maternal line. Generations later, Queen Ecaterina occupies the throne, while her eldest daughter, Elisabeta, prepares to inherit it.
+The royal family is more than a sequence of private relations. It is the living structure through which the government, the traditions, and the public identity of Norwyn continue. The history of the kingdom is therefore the history of its Queens: the decisions they inherited, the laws they introduced, the institutions they strengthened, and the responsibilities they passed to their daughters.
+Arabella founded the Crown.
+Eight Queens followed her.
+Ecaterina now holds the authority that has passed through their line.
+And Elisabeta is the next heir.
+THE CROWN CONTINUES THROUGH THE DAUGHTER.
+The Royal History and Laws of Norwyn is the historical record of the monarchy, its successive Queens, and the legislation through which the kingdom developed, from its founding in the eighteenth century to the contemporary reign of Queen Ecaterina.`
       }
     ];
 
@@ -5222,21 +5300,11 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
 
     var archiveReaderView = $('#archiveReaderView'), stage = $('#scriptoriumStage'), bookEl = $('#scriptoriumBook'), hintEl = $('#scriptoriumHint');
     var cur = null, sides = [], leaves = [], s = 0, layout = 'spread', pw = 300, lastBtn = null, hintTimer = null;
-    var tipShown = false, lastW = 0, closing = false, busyUntil = 0, animTimer = null;
+    var tipShown = false, lastW = 0, closing = false, busyUntil = 0, animTimer = null, closeTimer = null;
 
     function wantSingle() { return window.innerWidth < 720 || window.innerHeight < 460; }
     function single() { return layout === 'single'; }
     function fOf(x) { return single() ? x : Math.ceil(x / 2); }
-    function pageNumberLabel(i) {
-      var n = ((i - 2) >> 1) + 1;
-      return String(n);
-    }
-    function sideLabel(i) {
-      var last = sides.length - 1;
-      if (i === 0) return 'Cover'; if (i === 1) return 'Inside cover';
-      if (i === last) return 'Back cover'; if (i === last - 1) return 'Endpaper';
-      return 'Page ' + pageNumberLabel(i);
-    }
 
     function paperFox(el, seed) {
       var r = mulberry(seed * 7919 + 13), n = 3 + Math.floor(r() * 4), h = '';
@@ -5650,12 +5718,6 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       return D + 40;
     }
 
-    function ui() {
-      var last = sides.length - 1;
-      $('#scriptoriumFolio').textContent = single() ? (s === 0 ? 'Cover' : s === last ? 'The end' : 'Page ' + s + ' of ' + (last - 1)) : sideLabel(s);
-      $('#scriptoriumPrev').disabled = s === 0; $('#scriptoriumNext').disabled = s === last;
-    }
-
     function go(ns, force) {
       if (!cur) return 0;
       var now = Date.now();
@@ -5675,7 +5737,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         position(); thickness();
       }
       busyUntil = now + total;
-      ui(); hideHint();
+      hideHint();
       if (single() || f !== prevF) pageSound(single() ? .68 : 1);
       if (!tipShown && s > 0) {
         tipShown = true;
@@ -5711,18 +5773,19 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       }, reduce ? 20 : 320);
     }
     function openBook(b) {
+      clearTimeout(closeTimer);
       closing = false; busyUntil = 0; cur = b; s = 0; tipShown = false;
       layout = wantSingle() ? 'single' : 'spread';
       document.body.dataset.archiveMode = 'reader';
       $('#scriptoriumRTitle').textContent = b.short + (b.who ? ' · ' + b.who : '');
       $('#toShelfBtn').disabled = false;
+      $('#scriptoriumCoverBtn').disabled = false;
       requestAnimationFrame(function () {
         build(b);
         sizeBook();
         var anim = !single();
         if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '36px'); bookEl.style.setProperty('--rx', '12deg'); }
         applyState();
-        ui();
         if (anim) {
           void bookEl.offsetWidth;
           bookEl.classList.remove('nt');
@@ -5734,22 +5797,54 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
     }
     function closeBook() {
       if (document.body.dataset.archiveMode !== 'reader' || closing) return;
-      closing = true; hideHint();
-      $('#scriptoriumPrev').disabled = true; $('#scriptoriumNext').disabled = true; $('#toShelfBtn').disabled = true;
+      closing = true; hideHint(); clearTimeout(closeTimer);
+      $('#toShelfBtn').disabled = true;
+      $('#scriptoriumCoverBtn').disabled = true;
       var wait = 0;
       if (s > 0) {
         if (single()) {
-          var c0 = leaves[0].el;
-          c0.style.transition = 'none'; c0.style.display = ''; c0.classList.add('flipped');
-          void c0.offsetWidth;
-          c0.style.transition = ''; c0.classList.add('turning'); c0.classList.remove('flipped');
-          s = 0; pageSound(.68); wait = FLIP_S + 50;
-        } else wait = go(0, true);
+          clearTimeout(animTimer);
+          var N = leaves.length;
+          leaves.forEach(function (lf, idx) {
+            lf.el.style.display = (idx === 0 || idx === s) ? '' : 'none';
+            lf.el.classList.remove('turning', 'under', 'over');
+          });
+          var coverLeaf = leaves[0];
+          var currentLeaf = leaves[s];
+          if (currentLeaf && s !== 0) {
+            currentLeaf.el.style.zIndex = N + 4;
+            currentLeaf.flipped = false;
+            currentLeaf.el.classList.remove('flipped');
+          }
+          if (coverLeaf) {
+            coverLeaf.el.style.transition = 'none';
+            coverLeaf.el.style.display = '';
+            coverLeaf.el.style.zIndex = N + 10;
+            coverLeaf.flipped = true;
+            coverLeaf.el.classList.add('flipped');
+            void coverLeaf.el.offsetWidth;
+            coverLeaf.el.style.transition = '';
+            coverLeaf.flipped = false;
+            coverLeaf.el.classList.add('turning');
+            coverLeaf.el.classList.remove('flipped');
+            animTimer = setTimeout(function () {
+              coverLeaf.el.classList.remove('turning');
+              applyState();
+            }, FLIP_S + 30);
+          }
+          s = 0;
+          pageSound(.68);
+          wait = FLIP_S + 60;
+        } else {
+          wait = go(0, true);
+        }
       }
-      setTimeout(toShelf, wait + (reduce ? 20 : 280));
+      closeTimer = setTimeout(toShelf, wait + (reduce ? 20 : 280));
     }
     function toShelf() {
-      closing = false; $('#toShelfBtn').disabled = false;
+      closing = false;
+      $('#toShelfBtn').disabled = false;
+      $('#scriptoriumCoverBtn').disabled = false;
       document.body.dataset.archiveMode = 'shelf';
       hideHint();
       buildCase();
@@ -5776,7 +5871,6 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         if (s > newLast) s = newLast;
       }
       applyState();
-      ui();
       return true;
     }
 
@@ -5803,8 +5897,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
       if (goNext) { if (s !== last) next(); else prev(); } else prev();
     });
     stage.addEventListener('pointercancel', function () { down = null; });
-    $('#scriptoriumNext').addEventListener('click', next);
-    $('#scriptoriumPrev').addEventListener('click', prev);
+    $('#scriptoriumCoverBtn').addEventListener('click', function () { go(0); });
     $('#toShelfBtn').addEventListener('click', closeBook);
 
     addEventListener('keydown', function (e) {
@@ -5854,7 +5947,6 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
               if (s > newLast) s = newLast;
             }
             applyState();
-            ui();
           }
         }
         else if (window.innerWidth !== lastW) { lastW = window.innerWidth; buildCase(); }
@@ -5863,6 +5955,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
 
     window.ScriptoriumArchive = {
       showShelf: function () {
+        clearTimeout(closeTimer);
         closing = false;
         document.body.dataset.archiveMode = 'shelf';
         hideHint();
@@ -5875,7 +5968,6 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
         if (document.body.dataset.archiveMode === 'reader' && cur) {
           sizeBook();
           applyState();
-          ui();
         } else {
           buildCase();
         }
