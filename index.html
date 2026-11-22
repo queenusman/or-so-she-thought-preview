@@ -730,6 +730,71 @@
     }
 
     /* ========================================================
+       HYBRID HORIZONTAL SLIDING SELECTOR STRIP (World & People)
+       ======================================================== */
+    .nw-hybrid-strip {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 12px;
+      padding: 4px 2px 10px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-border) transparent;
+    }
+    .nw-hybrid-strip::-webkit-scrollbar {
+      height: 5px;
+    }
+    .nw-hybrid-strip::-webkit-scrollbar-thumb {
+      background: var(--color-border);
+      border-radius: 999px;
+    }
+    .nw-hybrid-pill {
+      flex: 0 0 auto;
+      min-width: 195px;
+      max-width: 245px;
+      scroll-snap-align: center;
+      text-align: left;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--primary-btn-border);
+      background-color: var(--primary-btn-bg);
+      color: var(--primary-btn-text);
+      cursor: pointer;
+      transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+    }
+    .nw-hybrid-pill:hover {
+      border-color: var(--color-accent);
+      color: var(--color-text);
+    }
+    .nw-hybrid-pill.is-active {
+      border-color: var(--color-accent);
+      background-color: var(--color-panel-hover);
+      color: var(--color-text);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+    }
+
+    /* ========================================================
+       SOFT CROSS-FADE ("TURN LEAF") SHEET TRANSITION
+       ======================================================== */
+    .leaf-sheet {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.28s ease, transform 0.32s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    .leaf-sheet.is-fading-out {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .leaf-sheet {
+        transition: none !important;
+        transform: none !important;
+      }
+    }
+
+    /* ========================================================
        NORWYN GALLERY (HORIZONTAL SLIDING STRIP + LIGHTBOX)
        ======================================================== */
     .nw-gallery-wrap {
@@ -2110,7 +2175,7 @@
       </div>
     </section>
 
-    <!-- 2. THE WORLD OF NORWYN (Index-First Reader + Sliding Gallery) -->
+    <!-- 2. THE WORLD OF NORWYN (Hybrid Index + Sliding Selector + Reading Sheet + Sliding Gallery) -->
     <section id="view-world" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="font-display text-3xl md:text-5xl text-theme-text tracking-wide mb-3 font-semibold uppercase">DISCOVER NORWYN</h2>
@@ -2119,7 +2184,7 @@
         </p>
       </div>
 
-      <!-- Dynamic Index / Single-Section Mount -->
+      <!-- Dynamic Index / Hybrid Sliding Reader Mount -->
       <div id="worldMainContainer"></div>
 
       <!-- ==================== GALLERY (Part of The World of Norwyn) ==================== -->
@@ -2133,7 +2198,7 @@
       </div>
     </section>
 
-    <!-- 3. THE PEOPLE OF NORWYN (Threshold Index + Restrained Registry Glimpses) -->
+    <!-- 3. THE PEOPLE OF NORWYN (Threshold Index + Hybrid Sliding Selector + Registry Glimpses) -->
     <section id="view-characters" class="view-section view-hidden max-w-4xl mx-auto px-6 py-16">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="font-display text-3xl md:text-5xl text-theme-text mb-3 tracking-wide font-semibold uppercase">THE PEOPLE OF NORWYN</h2>
@@ -2142,7 +2207,7 @@
         </p>
       </div>
 
-      <!-- Dynamic Index / Single-Person Registry Mount -->
+      <!-- Dynamic Index / Hybrid Sliding Registry Mount -->
       <div id="peopleMainContainer"></div>
     </section>
 
@@ -2206,17 +2271,18 @@
       </div>
     </section>
 
-    <!-- 6. CHAPTERS (Dynamic Reader Sanctuary - Chapter Index) -->
+    <!-- 6. CHAPTERS (Dynamic Reader Sanctuary - Epigraph Preview + Progress Markers + Turn-Leaf Cross-Fade) -->
     <section id="view-reader" class="view-section view-hidden py-12 transition-colors duration-300 relative">
-      <div class="max-w-3xl mx-auto px-6 mb-6 flex justify-end">
-        <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5">
+      <div class="max-w-3xl mx-auto px-6 mb-6 flex items-center justify-between gap-4">
+        <div id="readerTopNavBar" class="flex items-center gap-2"></div>
+        <div class="inline-flex items-center border border-theme-border rounded-lg text-xs font-sans bg-theme-panel/90 backdrop-blur-sm shadow-sm overflow-hidden p-0.5 ml-auto">
           <button type="button" onclick="changeFontSize(-1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text transition-colors cursor-pointer" title="Decrease font size">A-</button>
           <span class="text-theme-border select-none px-1">|</span>
           <button type="button" onclick="changeFontSize(1)" class="px-3 py-1.5 text-theme-text-muted hover:text-theme-text font-semibold transition-colors cursor-pointer" title="Increase font size">A+</button>
         </div>
       </div>
 
-      <div id="readerMainContainer" class="max-w-3xl mx-auto px-6"></div>
+      <div id="readerMainContainer" class="max-w-3xl mx-auto px-6 leaf-sheet"></div>
     </section>
 
     <!-- 7. ARCHIVE (Scriptorium Bookcase Shelf & Interactive Reader) -->
@@ -2907,7 +2973,7 @@
     document.addEventListener('keydown', onKey);
   })();
   </script>
- <!-- External Chapter & Gallery Files -->
+  <!-- External Chapter & Gallery Files -->
   <script src="chapters.js"></script>
   <script src="chapter-4.js"></script>
   <script src="norwyn-visual-archive.js"></script>
@@ -3134,14 +3200,44 @@
   })();
   </script>
 
-  <!-- Main Application Logic (Unified Navigation, World Index/Reader, People Registry/Reader, Chapter Reader) -->
+  <!-- Main Application Logic (Unified Navigation, Hybrid World/People Sliders, Chapter Preview + Turn-Leaf Cross-Fade) -->
   <script>
     let activeEra = 'crowned';
     let activeChapterIndex = null;
+    let previewedChapterIndex = 0;
     let activeWorldIndex = null;
     let activePersonKey = null;
     let baseFontSize = 18;
     let isIvoryMode = false;
+    let chapterTransitionTimer = null;
+
+    const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
+
+    function getReadChaptersSet() {
+      try {
+        const raw = localStorage.getItem(READ_STORAGE_KEY);
+        const arr = raw ? JSON.parse(raw) : [];
+        return new Set(Array.isArray(arr) ? arr : []);
+      } catch (e) {
+        return new Set();
+      }
+    }
+
+    function markChapterAsRead(era, index) {
+      try {
+        const set = getReadChaptersSet();
+        set.add(`${era}:${index}`);
+        localStorage.setItem(READ_STORAGE_KEY, JSON.stringify(Array.from(set)));
+      } catch (e) {}
+    }
+
+    function escapeHtmlText(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
 
     const WORLD_SECTIONS = [
       {
@@ -3518,7 +3614,7 @@
       if (viewId === 'reader') {
         activeEra = 'crowned';
         if (opts.resetIndex !== false) activeChapterIndex = null;
-        renderReaderView();
+        renderReaderView(false);
       } else if (viewId === 'world') {
         if (opts.resetIndex !== false) activeWorldIndex = null;
         renderWorldView();
@@ -3549,10 +3645,21 @@
       scrollToTopClean();
     }
 
+    function centerHybridPill(stripId, selector) {
+      requestAnimationFrame(() => {
+        const strip = document.getElementById(stripId);
+        if (!strip) return;
+        const activePill = strip.querySelector(selector);
+        if (!activePill) return;
+        const targetLeft = activePill.offsetLeft - (strip.clientWidth - activePill.offsetWidth) / 2;
+        strip.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+      });
+    }
+
     function selectWorldSection(idx) {
       activeWorldIndex = idx;
       renderWorldView();
-      scrollToTopClean();
+      centerHybridPill('worldHybridStrip', `[data-world-pill="${idx}"]`);
     }
 
     function openWorldIndex() {
@@ -3606,20 +3713,31 @@
       }
 
       const sec = WORLD_SECTIONS[activeWorldIndex];
-      const hasPrev = activeWorldIndex > 0;
-      const hasNext = activeWorldIndex + 1 < WORLD_SECTIONS.length;
+      const stripHtml = WORLD_SECTIONS.map((item, idx) => {
+        const isCurrent = idx === activeWorldIndex;
+        return `
+          <button type="button" data-world-pill="${idx}" onclick="selectWorldSection(${idx})" class="nw-hybrid-pill ${isCurrent ? 'is-active' : ''}">
+            <span class="font-sans text-[8px] tracking-[0.22em] uppercase opacity-75 block mb-0.5">${item.label}</span>
+            <span class="font-display text-xs font-semibold tracking-wider block truncate">${item.title}</span>
+          </button>
+        `;
+      }).join('');
 
       const bodyHtml = sec.paragraphs.map(p => `<p class="entry-paragraph text-theme-text">${p}</p>`).join('\n');
 
-      const prevBtn = hasPrev
-        ? `<button type="button" onclick="selectWorldSection(${activeWorldIndex - 1})" style="${btnStyle}" class="py-2.5 px-4 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">&larr; Previous</button>`
-        : `<span></span>`;
-
-      const nextBtn = hasNext
-        ? `<button type="button" onclick="selectWorldSection(${activeWorldIndex + 1})" style="${btnStyle}" class="py-2.5 px-4 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Next &rarr;</button>`
-        : `<span></span>`;
-
       container.innerHTML = `
+        <div class="mb-6">
+          <div class="flex items-center justify-between gap-3 mb-2">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Slide Across Norwyn</span>
+            <button type="button" onclick="openWorldIndex()" style="${btnStyle}" class="py-2 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+              &larr; Norwyn Index
+            </button>
+          </div>
+          <div id="worldHybridStrip" class="nw-hybrid-strip" role="group" aria-label="Norwyn section selector">
+            ${stripHtml}
+          </div>
+        </div>
+
         <article class="book-card p-8 md:p-14 rounded-sm font-serif prose-body">
           <div class="text-center mb-12 space-y-2">
             <p class="font-sans text-[10px] tracking-[0.3em] uppercase text-theme-secondary font-bold">${sec.label}</p>
@@ -3633,10 +3751,10 @@
           <div class="space-y-6">
             ${bodyHtml}
           </div>
-          <div class="mt-14 pt-8 border-t border-theme-border flex flex-wrap items-center justify-between gap-3 text-xs font-sans uppercase tracking-[0.18em]">
-            ${prevBtn}
-            <button type="button" onclick="openWorldIndex()" style="${btnStyle}" class="py-2.5 px-4 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Norwyn Index</button>
-            ${nextBtn}
+          <div class="mt-12 pt-8 border-t border-theme-border flex items-center justify-center">
+            <button type="button" onclick="openWorldIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+              Return to Norwyn Index
+            </button>
           </div>
         </article>
       `;
@@ -3645,7 +3763,7 @@
     function selectPerson(key) {
       activePersonKey = key;
       renderPeopleView();
-      scrollToTopClean();
+      centerHybridPill('peopleHybridStrip', `[data-person-pill="${key}"]`);
     }
 
     function openPeopleIndex() {
@@ -3713,20 +3831,31 @@
         return;
       }
 
-      const idx = FLAT_PEOPLE.findIndex(m => m.key === activePersonKey);
-      const person = idx >= 0 ? FLAT_PEOPLE[idx] : FLAT_PEOPLE[0];
-      const hasPrev = idx > 0;
-      const hasNext = idx + 1 < FLAT_PEOPLE.length;
+      const person = FLAT_PEOPLE.find(m => m.key === activePersonKey) || FLAT_PEOPLE[0];
 
-      const prevBtn = hasPrev
-        ? `<button type="button" onclick="selectPerson('${FLAT_PEOPLE[idx - 1].key}')" style="${btnStyle}" class="py-2.5 px-4 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">&larr; Previous</button>`
-        : `<span></span>`;
-
-      const nextBtn = hasNext
-        ? `<button type="button" onclick="selectPerson('${FLAT_PEOPLE[idx + 1].key}')" style="${btnStyle}" class="py-2.5 px-4 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Next &rarr;</button>`
-        : `<span></span>`;
+      const stripHtml = FLAT_PEOPLE.map(m => {
+        const isCurrent = m.key === person.key;
+        return `
+          <button type="button" data-person-pill="${m.key}" onclick="selectPerson('${m.key}')" class="nw-hybrid-pill ${isCurrent ? 'is-active' : ''}">
+            <span class="font-sans text-[8px] tracking-[0.22em] uppercase opacity-75 block mb-0.5">${m.epithet}</span>
+            <span class="font-display text-xs font-semibold tracking-wider block truncate">${m.name}</span>
+          </button>
+        `;
+      }).join('');
 
       container.innerHTML = `
+        <div class="mb-6">
+          <div class="flex items-center justify-between gap-3 mb-2">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Slide Through Norwyn's People</span>
+            <button type="button" onclick="openPeopleIndex()" style="${btnStyle}" class="py-2 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+              &larr; People Index
+            </button>
+          </div>
+          <div id="peopleHybridStrip" class="nw-hybrid-strip" role="group" aria-label="People of Norwyn selector">
+            ${stripHtml}
+          </div>
+        </div>
+
         <article class="book-card p-8 md:p-14 rounded-sm font-serif prose-body">
           <div class="text-center mb-10 space-y-2">
             <p class="font-sans text-[10px] tracking-[0.3em] uppercase text-theme-secondary font-bold">${person.epithet}</p>
@@ -3750,53 +3879,161 @@
 
           <p class="entry-paragraph text-theme-text">${person.glimpse}</p>
 
-          <div class="mt-14 pt-8 border-t border-theme-border flex flex-wrap items-center justify-between gap-3 text-xs font-sans uppercase tracking-[0.18em]">
-            ${prevBtn}
-            <button type="button" onclick="openPeopleIndex()" style="${btnStyle}" class="py-2.5 px-4 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">People Index</button>
-            ${nextBtn}
+          <div class="mt-12 pt-8 border-t border-theme-border flex items-center justify-center">
+            <button type="button" onclick="openPeopleIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+              Return to People Index
+            </button>
           </div>
         </article>
       `;
     }
 
-    function openReaderIndex() {
-      navigateTo('reader', { resetIndex: true });
+    function extractChapterOpeningLine(chapter) {
+      let body = (chapter.content || '').trim();
+      if (chapter.title) {
+        const re = new RegExp(`^(?:Chapter\\s+[A-Za-z]+\\s*:\\s*${chapter.title}|${chapter.number}\\s*:\\s*${chapter.title}|${chapter.title})\\s*`, 'i');
+        body = body.replace(re, '').trim();
+      }
+      const firstPara = (body.split(/\n\s*\n/)[0] || '').trim();
+      if (!firstPara) return '';
+      const sentenceMatch = firstPara.match(/^.+?[.!?]["”']?(?=\s|$)/);
+      const line = sentenceMatch ? sentenceMatch[0] : firstPara;
+      return line.length > 175 ? line.slice(0, 172).trimEnd() + '…' : line;
     }
 
-    function selectChapter(era, index) {
-      activeEra = 'crowned';
-      activeChapterIndex = index;
-      renderReaderView();
-      scrollToTopClean();
+    function transitionReaderContent(commitFn) {
+      const sheet = document.getElementById('readerMainContainer');
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!sheet || prefersReduced) {
+        commitFn();
+        scrollToTopClean();
+        return;
+      }
+
+      if (chapterTransitionTimer) {
+        clearTimeout(chapterTransitionTimer);
+        chapterTransitionTimer = null;
+      }
+
+      sheet.classList.add('is-fading-out');
+      chapterTransitionTimer = setTimeout(() => {
+        commitFn();
+        scrollToTopClean();
+        requestAnimationFrame(() => {
+          sheet.classList.remove('is-fading-out');
+        });
+      }, 210);
+    }
+
+    function previewChapterRow(index) {
+      previewedChapterIndex = index;
+      renderReaderView(false);
+    }
+
+    function openReaderIndex(useCrossFade) {
+      const commit = () => {
+        activeEra = 'crowned';
+        activeChapterIndex = null;
+        renderReaderView(false);
+      };
+      if (useCrossFade) {
+        transitionReaderContent(commit);
+      } else {
+        commit();
+        scrollToTopClean();
+      }
+    }
+
+    function selectChapter(era, index, useCrossFade) {
+      const commit = () => {
+        activeEra = 'crowned';
+        activeChapterIndex = index;
+        previewedChapterIndex = index;
+        markChapterAsRead(activeEra, index);
+        renderReaderView(false);
+        const readingBody = document.getElementById('readingBody');
+        if (readingBody) {
+          readingBody.style.fontSize = `${baseFontSize}px`;
+          readingBody.style.lineHeight = `${baseFontSize * 1.75}px`;
+        }
+      };
+      if (useCrossFade) {
+        transitionReaderContent(commit);
+      } else {
+        commit();
+        scrollToTopClean();
+      }
     }
 
     function renderReaderView() {
       const mainContainer = document.getElementById('readerMainContainer');
+      const topBar = document.getElementById('readerTopNavBar');
 
       if (typeof NOVEL_CHAPTERS === 'undefined' || !NOVEL_CHAPTERS[activeEra]) {
+        if (topBar) topBar.innerHTML = '';
         mainContainer.innerHTML = `<p class="text-center text-theme-text-muted py-12">Chapter files (chapters.js) not loaded properly.</p>`;
         return;
       }
 
       const eraChapters = NOVEL_CHAPTERS[activeEra];
+      const readSet = getReadChaptersSet();
+      const btnStyle = "background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);";
 
       if (activeChapterIndex === null) {
-        const eraTitle = "Chapter Index";
+        if (topBar) topBar.innerHTML = '';
 
-        const chapterButtonsHtml = eraChapters.map((ch, idx) => `
-          <button type="button" onclick="selectChapter('${activeEra}', ${idx})" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="w-full text-left p-6 border rounded-lg hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer group block">
-            <div>
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80 block mb-1.5">${ch.number}</span>
-              ${ch.title ? `<h3 class="font-display text-lg font-semibold">${ch.title}</h3>` : ''}
+        const safePreviewIdx = Math.max(0, Math.min(previewedChapterIndex, eraChapters.length - 1));
+        const previewCh = eraChapters[safePreviewIdx];
+        const previewOpening = previewCh ? extractChapterOpeningLine(previewCh) : '';
+
+        const chapterButtonsHtml = eraChapters.map((ch, idx) => {
+          const isRead = readSet.has(`${activeEra}:${idx}`);
+          const isPreviewed = idx === safePreviewIdx;
+          const markerLabel = isRead ? 'Read · ✦' : 'Unread';
+          const markerClass = isRead ? 'text-theme-accent' : 'text-theme-text-faint';
+
+          return `
+            <div style="${btnStyle}" class="w-full p-5 md:p-6 border rounded-lg ${isPreviewed ? 'border-theme-accent' : ''} transition-all shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <button type="button" onclick="previewChapterRow(${idx})" class="text-left flex-grow cursor-pointer focus:outline-none">
+                <div class="flex items-center gap-2.5 mb-1">
+                  <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80">${escapeHtmlText(ch.number)}</span>
+                  <span class="font-sans text-[9px] tracking-[0.2em] uppercase ${markerClass}">${markerLabel}</span>
+                </div>
+                ${ch.title ? `<h3 class="font-display text-lg font-semibold text-theme-text">${escapeHtmlText(ch.title)}</h3>` : ''}
+              </button>
+              <button type="button" onclick="selectChapter('${activeEra}', ${idx}, true)" class="py-2 px-4 border border-theme-border rounded-lg text-[10px] font-sans uppercase tracking-[0.2em] text-theme-accent hover:border-theme-accent hover:text-theme-text transition-all cursor-pointer shrink-0 self-start sm:self-center">
+                Open &rarr;
+              </button>
             </div>
-          </button>
-        `).join('');
+          `;
+        }).join('');
 
         mainContainer.innerHTML = `
-          <div class="text-center mb-12 space-y-2">
-            <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">${eraTitle}</h2>
+          <div class="text-center mb-10 space-y-2">
+            <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">Chapter Index</h2>
+            <p class="font-sans text-[10px] tracking-[0.24em] uppercase text-theme-secondary">
+              ${readSet.size} of ${eraChapters.length} Read
+            </p>
           </div>
-          <div class="space-y-4">
+
+          ${previewCh ? `
+            <div class="book-card p-6 md:p-8 rounded-sm mb-8 space-y-2">
+              <span class="font-sans text-[9px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">
+                Opening Line · ${escapeHtmlText(previewCh.number)}
+              </span>
+              <p class="font-serif italic text-lg md:text-xl text-theme-text leading-relaxed">
+                “${escapeHtmlText(previewOpening)}”
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="selectChapter('${activeEra}', ${safePreviewIdx}, true)" class="font-sans text-[10px] tracking-[0.2em] uppercase text-theme-accent hover:underline cursor-pointer">
+                  Enter ${escapeHtmlText(previewCh.number)} &rarr;
+                </button>
+              </div>
+            </div>
+          ` : ''}
+
+          <div class="space-y-3.5">
             ${chapterButtonsHtml}
           </div>
         `;
@@ -3804,6 +4041,23 @@
       }
 
       const chapter = eraChapters[activeChapterIndex];
+      const hasPrev = activeChapterIndex > 0;
+      const hasNext = activeChapterIndex + 1 < eraChapters.length;
+
+      if (topBar) {
+        topBar.innerHTML = `
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="openReaderIndex(true)" style="${btnStyle}" class="py-1.5 px-3.5 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+              &larr; Chapter Index
+            </button>
+            ${hasPrev ? `
+              <button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1}, true)" style="${btnStyle}" class="py-1.5 px-3 border rounded-lg text-[10px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+                &lsaquo; Prev
+              </button>
+            ` : ''}
+          </div>
+        `;
+      }
 
       let cleanContent = chapter.content.trim();
       if (chapter.title) {
@@ -3817,41 +4071,70 @@
         .filter(Boolean);
 
       const formattedParagraphs = paragraphs.map((para) => {
-        return `<p class="chapter-paragraph text-theme-text">${para}</p>`;
+        return `<p class="chapter-paragraph text-theme-text">${escapeHtmlText(para)}</p>`;
       }).join('\n');
 
-      const hasPrev = activeChapterIndex > 0;
-      const hasNext = activeChapterIndex + 1 < eraChapters.length;
+      const nextChapter = hasNext ? eraChapters[activeChapterIndex + 1] : null;
+      const nextOpening = nextChapter ? extractChapterOpeningLine(nextChapter) : '';
 
-      const btnStyle = "background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);";
-
-      const prevLinkHtml = hasPrev
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Previous Chapter</button>`
-        : `<span></span>`;
-
-      const nextLinkHtml = hasNext
-        ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1})" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Next Chapter</button>`
-        : `<span></span>`;
+      const thresholdHtml = nextChapter
+        ? `
+          <div class="book-card p-7 md:p-9 rounded-sm space-y-3 text-center">
+            <span class="font-sans text-[9px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">
+              Next Threshold · ${escapeHtmlText(nextChapter.number)}
+            </span>
+            ${nextChapter.title ? `<h3 class="font-display text-xl md:text-2xl text-theme-text font-semibold">${escapeHtmlText(nextChapter.title)}</h3>` : ''}
+            <p class="font-serif italic text-theme-text-muted text-base md:text-lg max-w-xl mx-auto">
+              “${escapeHtmlText(nextOpening)}”
+            </p>
+            <div class="pt-3 flex flex-wrap items-center justify-center gap-3">
+              <button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex + 1}, true)" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-[11px] font-sans uppercase tracking-[0.2em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+                Turn to ${escapeHtmlText(nextChapter.number)} &rarr;
+              </button>
+            </div>
+          </div>
+        `
+        : `
+          <div class="book-card p-7 md:p-9 rounded-sm space-y-2 text-center">
+            <span class="font-sans text-[9px] tracking-[0.28em] uppercase text-theme-secondary font-bold block">
+              End of Available Chapters
+            </span>
+            <p class="font-serif italic text-theme-text-muted text-base md:text-lg">
+              You have reached the end of the chapters currently available here.
+            </p>
+          </div>
+        `;
 
       mainContainer.innerHTML = `
         <article id="readingBody" class="text-lg leading-relaxed font-serif transition-all duration-200">
           <div class="text-center mb-14 space-y-3">
-            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-bold">${chapter.number}</p>
-            ${chapter.title ? `<h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide font-semibold">${chapter.title}</h2>` : ''}
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-theme-secondary font-bold">${escapeHtmlText(chapter.number)}</p>
+            ${chapter.title ? `<h2 class="font-display text-3xl sm:text-4xl text-theme-text tracking-wide font-semibold">${escapeHtmlText(chapter.title)}</h2>` : ''}
             <div class="flex items-center justify-center gap-3 mt-6">
               <span class="w-8 h-px bg-theme-border"></span>
               <span class="text-theme-secondary text-[10px]">✦</span>
               <span class="w-8 h-px bg-theme-border"></span>
             </div>
           </div>
+
           <div class="space-y-7">
             ${formattedParagraphs}
           </div>
 
-          <div class="mt-20 pt-10 border-t border-theme-border flex items-center justify-between gap-4 text-xs font-sans uppercase tracking-[0.2em]">
-            ${prevLinkHtml}
-            <button type="button" onclick="openReaderIndex()" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-xs font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
-            ${nextLinkHtml}
+          <div class="flex items-center justify-center gap-3 my-14">
+            <span class="w-10 h-px bg-theme-border"></span>
+            <span class="text-theme-accent text-xs">✦</span>
+            <span class="w-10 h-px bg-theme-border"></span>
+          </div>
+
+          <div class="space-y-6">
+            ${thresholdHtml}
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2 text-xs font-sans uppercase tracking-[0.18em]">
+              ${hasPrev
+                ? `<button type="button" onclick="selectChapter('${activeEra}', ${activeChapterIndex - 1}, true)" style="${btnStyle}" class="py-2.5 px-4 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">&larr; Previous Chapter</button>`
+                : `<span></span>`}
+              <button type="button" onclick="openReaderIndex(true)" style="${btnStyle}" class="py-2.5 px-5 border rounded-lg text-[11px] font-sans uppercase tracking-[0.18em] font-medium hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">Chapter Index</button>
+            </div>
           </div>
         </article>
       `;
@@ -5015,7 +5298,7 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
             currentItems = [];
             tx.innerHTML = '';
           } else {
-            currentItems.push({ kind: item.kind, text: item.text, dropCap: false, running: currentRunning });
+            currentItems.push({ kind: 'p', text: item.text, dropCap: false, running: currentRunning });
             if (item.kind === 'bh1' || item.kind === 'bh2') {
               nextSectionDrop = true;
             }
@@ -5489,4 +5772,4 @@ Archival manuscript prepared for the Scriptorium. Full chronicle text to be inse
   })();
   </script>
 </body>
-</html> 
+</html>
