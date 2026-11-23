@@ -1915,7 +1915,6 @@
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text" data-archive-mode="shelf">
-
   <!-- ==================== CINEMATIC ENTRANCE OVERLAY ==================== -->
   <div class="qu-intro" id="quIntro" role="dialog" aria-modal="true" aria-label="Welcome to Or So She Thought"
        data-image="" data-door="50,58,24,58" data-arch="true" data-lamps="24,50,18,2.2;76,50,18,2.2">
@@ -2181,7 +2180,6 @@
 
       <div id="peopleMainContainer" class="leaf-sheet"></div>
     </section>
-
     <!-- ==================== READ THE CHAPTERS ==================== -->
     <section id="view-reader" class="view-section view-hidden max-w-3xl mx-auto px-6 py-10 md:py-14">
       <div class="mb-6 flex items-center justify-between border-b border-theme-border pb-3.5">
@@ -2320,29 +2318,18 @@
       </div>
     </div>
   </footer>
+
   <!-- ==================== CINEMATIC ENTRANCE SCRIPT ==================== -->
   <script>
   (function () {
     var root = document.getElementById('quIntro');
     if (!root) return;
 
-    var STORAGE_KEY = 'qu_intro_seen_v1';
     var url = new URL(location.href);
-    var force = url.searchParams.has('intro');
     var calibrate = url.searchParams.has('calibrate');
     var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    var seen = false;
-    try { seen = sessionStorage.getItem(STORAGE_KEY) === '1'; } catch (e) {}
-
-    if (seen && !force && !calibrate) {
-      document.documentElement.classList.remove('qu-intro-on', 'qu-intro-ivory');
-      root.remove();
-      return;
-    }
-
     document.documentElement.classList.add('qu-intro-on');
-    try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
 
     var ENTER_MS = reduced ? 650 : 2500;
     var SKIP_MS = reduced ? 550 : 750;
@@ -2353,18 +2340,16 @@
     var RAMP_SEC = 1.6;
     var FADE_SEC = 1.1;
 
-    var scene = root.querySelector('.qu-scene');
     var frame = root.querySelector('.qu-frame');
     var photo = root.querySelector('.qu-photo');
     var door = root.querySelector('.qu-door');
     var orb = root.querySelector('.qu-orb');
     var motes = root.querySelector('.qu-motes');
-    var enterBtn = root.getElementById('quEnter');
-    var skipBtn = root.getElementById('quSkip');
-    var soundBtn = root.getElementById('quSound');
+    var enterBtn = document.getElementById('quEnter');
+    var skipBtn = document.getElementById('quSkip');
+    var soundBtn = document.getElementById('quSound');
     var prevFocus = document.activeElement;
 
-    function parseNum(v, fb) { var n = parseFloat(v); return isFinite(n) ? n : fb; }
     function parseDoor(str) {
       var p = (str || '').split(',').map(Number);
       return { cx: p[0] || 50, cy: p[1] || 58, w: p[2] || 24, h: p[3] || 58 };
@@ -2905,7 +2890,6 @@
     };
   })();
   </script>
-
   <!-- Main Application Logic (Unified Navigation, Hybrid World/Characters/Chapter Sliders, Chapter Index + Turn-Leaf Cross-Fade) -->
   <script>
     let activeEra = 'crowned';
@@ -3926,11 +3910,6 @@
       const activePill = strip ? strip.querySelector(`[data-chapter-pill="${activeChapterIndex}"]`) : null;
       centerHybridPillOnce(strip, activePill);
     }
-    const strip = document.getElementById('chapterHybridStrip');
-      const activePill = strip ? strip.querySelector(`[data-chapter-pill="${activeChapterIndex}"]`) : null;
-      centerHybridPillOnce(strip, activePill);
-    }
-
     function changeFontSize(delta) {
       baseFontSize = Math.min(26, Math.max(16, baseFontSize + (delta * 1.5)));
       const readingBody = document.getElementById('readingBody');
@@ -4317,24 +4296,6 @@ The chapter also takes care to distinguish alignment from simple agreement or ob
 The converse is equally true. Constantin observes that an institution may maintain its outward appearance while its actual function has become disconnected from its stated purpose. A body may keep its name, its offices, and its ceremonies, and still no longer do what it was established to do. Such an institution looks aligned, and may even be treated as aligned, but it is not. Alignment therefore requires examination rather than assumption: it cannot be read from outward appearances, but only from a study of what the elements actually do and why.
 The chapter closes by connecting alignment to the volume's larger concerns. Because it depends on understanding purpose, alignment cannot be maintained by habit alone. It requires that those who hold positions, and those who design them, keep the purposes of the structure in view. This links the principle directly to the questions of generational transmission and preservation that occupy the next two chapters.
 
-### Chapter XII
-#### Generational Responsibility
-Constantin considers the relationship between successive generations and the continuity of social arrangements. The chapter takes the principle of continuity, introduced among the foundations of the volume, and examines what it asks of the people who live within it.
-He begins with the process of transmission. Each generation receives knowledge, institutional responsibilities, and established practices from the one before. The chapter examines how this handing-over takes place, through the household, through education, and through participation in institutions, and what is carried with it. What passes between generations is not only information. It also includes expectations, ways of acting, and a sense of what is owed to whom.
-The chapter argues that each generation inherits both the benefits and the obligations associated with arrangements established before it. The benefits are plain: a generation that receives working institutions, accumulated knowledge, and settled expectations does not have to build them from nothing. But Constantin argues that these benefits are not free of cost. Arrangements that have been handed down carry the obligations of keeping them going, and a generation that enjoys what it was given has some responsibility to sustain it. To accept the inheritance and refuse its obligations, he suggests, is to treat as unconditional something that was in fact conditional on being maintained.
-A further theme is the responsibility each generation bears toward the next. Constantin considers the duty of one generation to make inherited knowledge intelligible to the next. It is not enough to pass on practices unchanged if the reasons for them are lost in the handing over. A generation that transmits what it received without explaining its purpose leaves its successors with the form of an arrangement but not its meaning. They may keep it faithfully while being unable to judge whether it is still serving its purpose, and this makes the arrangement fragile in ways its keepers may not notice.
-This argument ties directly to the earlier discussion of education. If education is the main means by which knowledge is handed down, then the responsibility to make it intelligible falls heavily on educational institutions and on households alike. But Constantin does not confine it to them. He argues that it falls on every individual who holds a position in an inherited arrangement and who will, in due course, be succeeded in it. Each holder is, in effect, a link in a chain, receiving something from those before and handing something to those after.
-The chapter closes with a reflection on what this implies for the individual's sense of their own place. A person who understands themselves as one link in a chain of transmission has a view of their responsibilities that reaches beyond their own lifetime. They are accountable not only to those they serve now, but to those who will inherit the results of how they act. Constantin treats this as one of the most important ways in which the individual and society are connected across time.
-
-### Chapter XIII
-#### Continuity and the Preservation of Order
-This chapter examines the importance of maintaining functioning social arrangements. It is the last chapter of the fourth part, and it brings the discussion of continuity and alignment to a point at which Constantin's traditional position, and its limits, are stated most directly.
-Constantin argues that continuity allows institutions and communities to retain accumulated knowledge and experience. An arrangement that has operated over a long period has, in effect, been tested by the circumstances it has met. It carries within it lessons learned from earlier difficulties, including some that its current members may not even know about. To discard such an arrangement is to discard what it has learned along with whatever may be wrong with it. This is the core of his case for caution, and it explains why he values continuity as a social achievement.
-He therefore cautions against changes that disregard the relationships supporting an established structure. Structures, as the volume has argued throughout, are defined by relationships. A change that alters one element may alter the relationships that element has to others, and the effects may spread in ways that were not intended. Constantin's concern is less with change as such than with change made without attention to these connections. An alteration that looks sensible when one element is considered alone may undermine the structure when the relationships are taken into account.
-However, he distinguishes continuity from the preservation of every existing practice. This is the qualification that keeps his position from becoming simple conservatism. The continued existence of an arrangement does not remove the need to examine its purpose. A practice may persist because it serves its purpose, or merely because it is familiar, and the two cannot be told apart from the fact of persistence alone. What continuity requires is the preservation of the structure's purpose, not of every habit that has gathered around it.
-The chapter considers the conditions under which adjustment may preserve rather than undermine the wider structure. Constantin suggests several. The purpose of the arrangement should be understood before any change is made. The change should be directed at a practice that no longer serves that purpose, rather than at the purpose itself. The effects on the relationships that support the structure should be considered in advance. And the change should be made with attention to those who depend on the arrangement and who will live with the result. Where these conditions are met, he argues, adjustment is a way of keeping a structure in good order, because it keeps the structure's practices aligned with its purpose.
-The chapter ends by restating the balance that governs the whole volume. An arrangement deserves neither automatic preservation nor careless rejection. It deserves to be understood. This leads naturally into the fifth and final part, which turns to the limits of the whole enterprise of social organisation and asks what the study of society cannot, by itself, settle.
-
 ## Part V: The Limits of Social Organisation
 ### Chapter XIV
 #### The Limits of Individual Interpretation
@@ -4344,24 +4305,6 @@ The chapter considers the limitations of general explanations when applied to pa
 This boundary has practical consequences, and the chapter spells them out. A judge of conduct who relied only on position might expect from a person what their position usually requires, and overlook circumstances that made it impossible or unreasonable in their case. A student of society who relied only on position might attribute to an individual views that their position makes likely but that they do not in fact hold. In both cases, the error lies in treating the general as though it settled the particular.
 The chapter therefore argues that the study of society requires attention to both the structure and the people who participate in it. Neither can be reduced to the other. The structure explains why certain expectations and responsibilities exist and how they relate. The individual explains how those expectations are actually met, bent, or missed in a particular life. A complete account needs both, and the discipline of Structural Ideology must, in Constantin's view, be honest about the point at which it needs to hand over to closer attention to the person.
 The chapter closes by tying this limit back to the first chapter of the volume. There Constantin insisted that the individual is both a person and an element in a structure, and that neither description is sufficient alone. Here he shows what that insistence means in practice: an interpretation that forgets the person has gone beyond what the structural view can support.
-
-### Chapter XV
-#### The Examination of Established Arrangements
-This chapter considers how inherited arrangements should be examined. It is the most practical chapter in the volume, and it draws on nearly every earlier argument to describe how a careful person should approach an institution or practice they have inherited.
-Constantin argues that age and familiarity are not sufficient evidence of an arrangement's purpose or value. It is natural to assume that something which has lasted a long time must be worth keeping, and equally natural to assume that something familiar must be understood. Constantin rejects both assumptions. An arrangement may survive because it works, or because no one has questioned it, or because the people who depend on it have no alternative. Longevity, taken alone, cannot tell these apart.
-To examine an arrangement properly, he proposes attention to several questions. The first is the function the institution was established to perform: what it was for. The second is the practices through which it actually operates: what it does. The third is the consequences of maintaining or altering those practices: what follows if they are kept, and what follows if they are changed. Together these allow a comparison between purpose and practice, and it is in the gap between them, if there is one, that the case for adjustment or preservation is made.
-The chapter provides a framework for examining established arrangements without treating either preservation or alteration as automatically justified. This is its central contribution. Constantin does not tell the reader to preserve, and he does not tell the reader to reform. He tells them to find out what the arrangement is for, to see whether it still does it, and to weigh what would follow from keeping it or changing it. The answer may be to leave it as it is, to adjust a practice that has drifted from its purpose, or in some cases to replace the arrangement entirely. What matters is that the decision rests on understanding.
-The chapter also notes a difficulty. The people best placed to describe an arrangement are often those who work within it, and they may be the least able to see it clearly, because it is familiar to them. Conversely, those outside it may see its faults but miss the reasons for its features. Constantin suggests that a sound examination draws on both, and that neither the defender's confidence nor the critic's impatience should be taken as settling the matter.
-The chapter concludes by linking examination to the principle of alignment. To examine an arrangement is to ask whether its position, function, and responsibilities still correspond to one another and to the structure around it. When they do, preservation is justified because the arrangement is doing what it is for. When they do not, the arrangement has drifted, and the task is to understand why before deciding what to do.
-
-### Chapter XVI
-#### The Responsibilities of an Organised Society
-The concluding chapter returns to the relationship between the individual and the wider social structure. It gathers the volume's arguments into a single account, and it ends by restating the proposition from which they began.
-Constantin examines the responsibilities of individuals, households, and institutions in maintaining the arrangements through which society operates. Each has a part. Individuals bear the responsibilities attached to their positions and the responsibility of understanding them. Households transmit conduct, knowledge, and expectation to those raised within them. Institutions organise public functions and preserve the knowledge needed to carry them out. The chapter treats these not as three separate lists of duties, but as a connected set, in which the proper functioning of each depends on the others.
-He argues that continuity depends upon more than the existence of established institutions. An institution can exist without functioning, and a society can retain its forms while losing what they were meant to achieve. Continuity requires an understanding of the purposes of those institutions, and of the responsibilities of those who participate in them. It is this understanding, carried from person to person and from generation to generation, that allows an arrangement to endure as the thing it was meant to be, rather than as an empty shape.
-The chapter recalls the responsibilities of the arrangements themselves, a theme that has recurred throughout the volume. An institution that assigns duties without regard to the circumstances in which they must be carried out, or that exercises authority without regard to its purpose, has not fulfilled its own obligations. Constantin insists that the responsibilities of an organised society do not fall only on its individual members. They fall also on the structures that define what those members are asked to do.
-The chapter concludes by returning to the central proposition of the volume: individual responsibility and collective stability cannot be adequately understood in isolation from one another. An account of society that considered only individual duty would overlook the arrangements that give those duties their meaning. An account that considered only structure would overlook the persons through whom the structure actually operates. The task of the discipline is to keep both in view, and to understand how each depends on the other.
-It is fitting that the volume ends not with a rule but with a question. Constantin does not claim to have said what any particular person should do in any particular case. He claims to have provided a way of asking: what position does one hold, what responsibilities attach to it, what purposes do they serve, and how do they stand in relation to the larger structure. How an individual answers will depend on circumstances that no general account can anticipate. That is the point at which, as the previous chapters have argued, the work of understanding passes from the structure to the person.
 
 ## Selected Passages from the Work
 #### The following propositions represent the central ideas developed throughout the volume.
