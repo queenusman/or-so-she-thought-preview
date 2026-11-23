@@ -2522,8 +2522,20 @@
       }
     }
 
+    function unlockForEnter() {
+      var ctx = ensureAudio();
+      if (!ctx) return;
+      if (ctx.state === 'suspended') {
+        try { ctx.resume(); } catch (e) {}
+      }
+      var t = ctx.currentTime;
+      master.gain.cancelScheduledValues(t);
+      master.gain.setValueAtTime(Math.max(0.0001, master.gain.value), t);
+      master.gain.linearRampToValueAtTime(1, t + 0.05);
+    }
+
     function playChime() {
-      if (!soundWant || !ac || !master || ac.state !== 'running') return;
+      if (!ac || !master) return;
       var now = ac.currentTime;
       [440, 659.25, 880, 1318.5].forEach(function (freq, idx) {
         var o = ac.createOscillator();
@@ -2542,7 +2554,7 @@
     }
 
     function playDoor() {
-      if (!soundWant || !ac || !master || ac.state !== 'running') return;
+      if (!ac || !master) return;
       var now = ac.currentTime;
       var len = Math.floor(ac.sampleRate * 1.4);
       var buf = ac.createBuffer(1, len, ac.sampleRate);
@@ -2598,6 +2610,7 @@
       if (leaving) return;
       leaving = true;
       root.classList.add('is-leaving', 'is-opening');
+      unlockForEnter();
       playChime();
       playDoor();
       setTimeout(finish, ENTER_MS);
@@ -3910,6 +3923,7 @@
       const activePill = strip ? strip.querySelector(`[data-chapter-pill="${activeChapterIndex}"]`) : null;
       centerHybridPillOnce(strip, activePill);
     }
+
     function changeFontSize(delta) {
       baseFontSize = Math.min(26, Math.max(16, baseFontSize + (delta * 1.5)));
       const readingBody = document.getElementById('readingBody');
@@ -3975,7 +3989,6 @@
       navigateTo('home');
     });
   </script>
-
   <!-- ==================== SCRIPTORIUM ARCHIVE LOGIC ==================== -->
   <script>
   (function () {
@@ -4506,199 +4519,7 @@ The essay considers how expectations may change through repeated experiences wit
 Theodore observes that this process is not inherently regrettable. Expectations that are adjusted in response to reality are often better calibrated for it, and a person who kept expecting what the world never provided would be poorly served. The difficulty lies in cases where the adjustment reflects a pattern that could have been different: where the thing hoped for failed to occur not because it was impossible, but because it was not asked for, or because the person adapted before finding out.
 In such cases the expectation has been lowered by experience that was itself partly shaped by the person's earlier lowered expectations. The process feeds itself. A person who expects to be disappointed may behave in ways that make disappointment more likely, or may withdraw from situations where the expectation could have been proved wrong, and so never receive the evidence that would have corrected it.
 The essay closes with a point about perspective. Because expectations adjust quietly, a person's present expectations may differ considerably from those they held earlier, without their having noticed the change. Theodore suggests that one way of recognising this is to ask not what one expects now, but what one would have expected at an earlier time, and to notice, where the answers differ, that something has been adjusted.
-
-### Essay VII
-#### When a Preference Becomes a Personality
-Asked what they like, most people answer without hesitation. Asked how they came to like it, many have less to say. This essay examines the space between the two answers.
-Theodore considers how repeated choices may eventually be interpreted as evidence of permanent character. A person who has chosen the same thing many times, whether a kind of work, a manner of spending time, or a way of relating to others, will naturally conclude that this is what they prefer. The conclusion is usually sound. But Theodore draws attention to a case in which it is not: when the repetition has a cause other than preference.
-The essay explores the difference between preferring something and becoming accustomed to choosing it. The two produce the same behaviour. A person who prefers tea to coffee and a person who has simply had tea every morning for twenty years will both reach for the tea. But the second has demonstrated familiarity, not preference, and would have no way of knowing the difference without trying something else. Where the stakes are small, the confusion is harmless. Where the choice concerns how a person lives, works, or relates to others, it may matter a great deal.
-Theodore's more pointed observation concerns what he calls the mistaking of the absence of an alternative for the absence of desire. A person who has never been in a position to choose differently may conclude that they have no wish to. The conclusion feels like self-knowledge. But it rests on an untested premise, since the wish may simply never have had occasion to emerge. A preference cannot be said to be absent in a situation where nothing has made it relevant.
-The essay takes care not to turn this into suspicion of all settled preferences. Many preferences are what they appear to be, and a long-held choice is often a considered one. The claim is limited to this: that repetition alone cannot establish preference, and that a person who treats their pattern of choices as a complete account of their wants may be underestimating what they have not had the chance to find out.
-The essay concludes that the question to ask is not whether one's preferences are real, since they generally are, but whether they are complete. A person may sincerely prefer what they choose and still have other preferences that have never been called on.
-
-### Essay VIII
-#### The Lives We No Longer Consider
-In youth, a person may be able to imagine many different lives for themselves. Later, the number that remain imaginable is usually smaller. This essay asks how that narrowing occurs, and whether it is always a matter of choice.
-Theodore explores the possibilities that gradually disappear from an individual's ordinary imagination. The word he stresses is ordinary. The alternatives have not been formally rejected. They have simply stopped being the kind of thing that occurs to the person when they think about their future. They have slipped out of the range of what is considered.
-The essay examines how decisions, responsibilities, and repeated circumstances influence the alternatives people continue to regard as available. Every decision that commits a person to one course makes other courses harder to take. Responsibilities, such as to a household, an occupation, or other people, add weight to the existing course. Repeated circumstances make the present way of life feel increasingly like the only practical one. None of these forces is unreasonable. Together they produce a life in which certain paths are no longer visible.
-Theodore is attentive to how this narrowing is experienced from within. It does not feel like loss. A person who no longer considers a certain life does not feel the absence of that life, because it is no longer among the things they think of. The narrowing is therefore invisible to the one it happens to. It becomes visible only in unusual circumstances: when something prompts the person to recall an old ambition, or when someone else describes a life the person had once imagined for themselves.
-The essay distinguishes carefully between two situations that may look the same. In one, a person has considered an alternative and decided against it for good reasons. In the other, a person has simply stopped considering it, without ever having decided. The first is a choice. The second is a drift. Theodore does not say that drift is always regrettable, since circumstances may have changed such that the alternative is no longer suitable in any case. But he notes that a person who has drifted cannot say that they chose.
-The essay closes the second part by returning to the theme of recognition. A person who wishes to know whether their present life reflects their choices might ask not only what they have chosen, but what they have ceased to consider, and whether they remember when and why.
-
-## Part III: The Dispossessed Heart
-### Essay IX
-#### The Person You Become to Be Loved
-People rarely present themselves identically to everyone. They show different sides in different company, and this is ordinary social life. This essay asks a more particular question: what happens when the adjustments a person makes to preserve closeness with someone begin to harden into a settled way of being.
-Theodore examines the relationship between attachment and self-presentation. Where a relationship matters to a person, they become attentive to what sustains it. They notice which behaviours bring warmth, which bring distance, which topics are welcome, and which are better left aside. This attentiveness is a normal part of caring about someone and is not, in itself, a distortion.
-The essay considers how individuals may become attentive to the behaviours that preserve closeness and how these behaviours can gradually become familiar. The word that carries the weight is gradually. A person who adjusts in one conversation has made a small, reversible choice. A person who adjusts in every conversation, for years, has developed a pattern, and the pattern has stopped feeling like an adjustment. It has become simply how they are in that relationship, and possibly, over time, how they are generally.
-Theodore takes care to say that accommodation is not a fault. Most lasting relationships involve people learning one another's needs and meeting them, and a person who never adapted would be a difficult companion. The essay's question is more specific. It asks when accommodation becomes part of an individual's understanding of themselves. At what point does a person stop experiencing the accommodation as something they do for the other person, and begin experiencing it as who they are?
-He suggests that the transition is marked by a loss of the sense of choice. While a person remembers that they are accommodating, the accommodation remains a gift. Once they have forgotten, it has become a condition, and they may find it difficult to say what they would do or say if it were not required. They may not even know whether it is still required, having never tested it.
-The essay opens the collection's central part by naming its subject. The risk Theodore points to is not that a person loves too much or adapts too willingly. It is that a person may adapt so thoroughly, and for so long, that they can no longer distinguish the person they are from the person who has been kept in the relationship.
-
-### Essay X
-#### The Things We Learn Not to Ask For
-A request is a small risk. It exposes a wish, invites a response, and may be refused. Over time, the pattern of responses a person receives teaches them which risks are worth taking. This essay examines what is learned.
-Theodore explores how repeated experiences influence what individuals feel comfortable requesting from others. A person who asks for something and receives a warm response is likely to ask again. One whose requests are met with irritation, indifference, or reproach learns something different, and the lesson need not be stated. It is absorbed through the experience itself.
-The essay considers the difference between choosing not to ask for something and learning to expect that asking will produce an undesirable response. The first is a decision made in the moment, with the possibility of making a different one. The second is a settled expectation, and it operates before any decision is reached. The person does not weigh whether to ask. They simply do not think of asking, or think of it and immediately dismiss it, without registering that they have done so.
-What distinguishes this from ordinary tact is that the expectation may no longer be accurate. A person who learned in one relationship that asking is unwelcome may carry the expectation into others, where it does not apply, and in doing so deprive themselves of responses they might have received. Even within the original relationship, circumstances may have changed. The other person may now be willing, but the one who has learned not to ask will not find this out.
-Theodore also notes a feature that makes the pattern hard to detect. Not asking produces no visible event. There is no refusal to remember, no disappointment to point to. The person simply goes without, and from the outside, and often from the inside, this looks like contentment, or like a lack of wanting. The needs are unmet but also unspoken, and so there is nothing to bring the situation to light.
-The essay closes without prescribing anything. It observes that the things a person has learned not to ask for form a kind of map of what their relationships have taught them, and that reading the map is difficult precisely because its contents are things that never happened. Theodore leaves the reader with the thought that to know what one would ask for, in a place where asking was safe, is a form of self-knowledge that long habit may have put out of reach.
-
-### Essay XI
-#### The Difference Between Being Needed and Being Known
-To be needed is to be valued for what one provides. To be known is to be understood for who one is. The two often accompany one another, but they are not the same, and this essay examines the space between them.
-Theodore examines the distinction between the role an individual fulfils in another person's life and the person they understand themselves to be. A role is defined by function: the one who can be relied on, who listens, who manages, who understands. It describes what a person does for others. A self includes all of that and much else, including wants, doubts, and aspects of character that serve no one else's purpose.
-The essay considers how usefulness, reliability, and emotional availability may influence the recognition individuals receive. A person who is consistently dependable is valued for it, and the valuing is genuine. They receive warmth and appreciation. But the recognition they receive is attached to the role. It is addressed to the dependable one, and the person within may find that the other, quieter parts of themselves receive little attention, simply because they are not what the relationship draws upon.
-There is a subtle risk in this. Because recognition is pleasant, and because it follows the role, a person may be encouraged to emphasise the role. The more they provide what is valued, the more they are valued for providing it, and the stronger the incentive to continue. Gradually, the role may come to occupy more of their sense of themselves, and what falls outside it may seem less real or less relevant.
-Theodore is careful not to suggest that being needed is hollow. To be of use to people one cares about is among the real satisfactions of a life, and a relationship built on mutual reliance can be deep. The concern is with a particular imbalance: where being needed has become the main form of recognition a person receives, and being known has quietly dropped away. In such a case the person may feel, without being able to say why, that they are valued but not seen.
-The essay ends with a question about how to tell the difference from within. One indication, Theodore suggests, is how a person imagines the other responding if they stopped providing what they usually provide. If the answer is a sense that the relationship would be at risk, then the recognition may have been attached to the role more than to the person.
-
-### Essay XII
-#### The Self That Exists in Someone Else's Presence
-Most people notice that they are slightly different with different people. More talkative with one friend, more reserved with another, more playful at home than at work. This essay asks what these variations mean for the question of who a person is.
-Theodore explores how different relationships may bring forward different aspects of an individual's personality. A relationship is a particular context, with its own history, expectations, and rhythms, and a person responds to the context they are in. Some qualities are drawn out by one relationship and left dormant by another. This is not deception. It is the natural effect of different circumstances on a flexible character.
-The essay considers whether the person someone becomes in the presence of another is a departure from their identity or another expression of it. Two answers present themselves. According to the first, a person has a fixed core, and the variations are surface adaptations that leave it intact. According to the second, there is no such core, and a person simply is the range of selves that different relationships bring out. Theodore does not commit to either.
-He suggests instead that the interesting cases are those in which the two views give different answers. Imagine a person who is, in one relationship, quiet and deferential, and in others confident and direct. If the quiet version is merely an adaptation, then the confident version is closer to who they really are. But if the person has spent many years almost entirely in the first relationship, then the quiet version may have become the one they know best, and the confident one may feel less like a return to themselves than like a stranger.
-The essay thus observes that what counts as a person's own way of being may depend partly on which relationships they have had the most of. A relationship that has lasted a long time is likely to have shaped a person's habitual self more than one that has been brief, and the aspects of themselves it did not draw upon may have receded.
-Theodore closes with an observation about perspective. A person cannot step outside all relationships to see what they are like independently of them, since there is no such place to stand. But they can notice the differences between their ways of being in different company, and treat those differences as information. What a person is like when they are with those who bring out their ease, their humour, or their candour is a part of the truth about them, and may be a part that a single dominant relationship has left unexpressed.
-
-### Essay XIII
-#### When Being Understood Becomes a Requirement
-To be understood is among the most sought-after experiences in human life. This essay considers what happens when the wish for it becomes so strong that it begins to shape what a person is willing to say or show.
-Theodore examines the desire to be recognised and interpreted correctly by others. The desire is natural and healthy. People want those close to them to grasp what they mean, to see why they feel as they do, and to respond accordingly. A relationship in which this happens is deeply satisfying, and the want for it is no weakness.
-The essay considers how the need for understanding may influence what people reveal, explain, or withhold. If understanding is wanted very much, a person may become cautious about anything that risks being misunderstood. They may avoid raising thoughts that are hard to explain, or feelings that others have misread before. They may explain themselves at length, or in a particular way, to ensure that they are grasped. Or they may withhold what seems unlikely to be understood, and keep it to themselves.
-Each of these responses is reasonable, and each has a cost. The person who explains everything at length may find the effort tiring, and may eventually stop trying. The person who withholds what might be misunderstood may find that over time the withheld portion grows, and that the relationship is conducted with only part of them present. The person who edits themselves to be easily understood may become, in effect, a simpler version of themselves, one that is easier to read.
-Theodore points to a distinction that clarifies the difficulty. Wanting to be understood is one thing. Requiring it, as a condition of speaking, is another. When understanding becomes a requirement, a person will say only what they are confident will be understood, and what is hard to express goes unexpressed. This narrows the range of what is shared, and what is not shared is not understood, which in turn may feel like confirmation that it was too difficult to explain.
-The essay ends the third part by noting that the aspects of a person that are hardest to articulate are often the most distinctive. A self that is presented only in terms others can readily grasp is a self that has been translated, and translation loses something. Theodore leaves open how much loss is acceptable, but suggests that a person who has ceased to say what is hard to explain has, in a small way, ceased to be fully present.
-
-## Part IV: The Private Consequences of Attachment
-### Essay XIV
-#### The Quiet Education of Attachment
-No one is taught how to be in a relationship the way they are taught arithmetic. Yet people emerge from their attachments with a great deal of learning: what to anticipate, what to say, and how to respond. This essay asks how that learning takes place.
-Theodore explores how emotional relationships teach individuals what to anticipate, what to express, and how to respond. The lessons are rarely stated. A person learns that a particular mood in another signals a certain kind of evening. They learn which remarks are received well and which are not. They learn, through repetition, how their own feelings are likely to be met. None of this is formal instruction, but it is instruction nonetheless, and its effects can be lasting.
-The essay examines how expectations may develop through ordinary interactions rather than explicit instructions. This is the central claim. What is taught is taught through the pattern of everyday experience, not through anything that was said. A person who learned that their enthusiasm was met with indifference has not been told to be less enthusiastic. They have simply found that enthusiasm does not lead where they hoped, and have adjusted accordingly. The adjustment was a reasonable response to the information available.
-Because the education is implicit, it is difficult to examine. A person asked what they have learned from a relationship may struggle to answer, since the lessons were never put into words. They show up instead as inclinations: a tendency to hold back at certain moments, an unease at certain topics, a readiness to expect a particular response. These are the residue of the education, and they operate without being consulted.
-Theodore also considers that the education is mutual. Each person in a relationship is learning from the other, and the patterns that form are produced by both. Neither alone has designed them. A pattern in which one person defers and the other leads, for example, may have been constructed through a thousand small exchanges in which each was responding to the other, and neither could say who began it.
-The essay opens the fourth part of the collection with this reflection on how relationships teach. It leaves the reader with the thought that a person's behaviour within a close relationship is partly a record of what that relationship has taught them, and that to understand oneself in it, one has to be able to read the record.
-
-### Essay XV
-#### The Habits of Being Considerate
-Consideration is among the most admired qualities in a person. It is also, as this essay shows, one of the qualities most likely to change its character over time without anyone noticing.
-Theodore examines the relationship between consideration and self-adjustment. To be considerate is to take another person's needs, feelings, and circumstances into account. In practice this often means adjusting one's own behaviour: waiting, softening, yielding, or staying quiet. These adjustments are, at their best, expressions of care, freely given, and they are the substance of much that is good in close relationships.
-The essay considers how behaviour that begins as an expression of care may become an established expectation. A kindness offered once is a gift. Offered regularly, it becomes a custom. Offered for years, it may become something the other person has come to rely on, and perhaps no longer notices as a kindness at all. At that point it has the structure of an obligation, even though neither person ever agreed to one.
-This shift can occur on both sides. The person who is considerate may begin to feel that they must continue, since to stop would be noticed or would disappoint. The person who receives the consideration may begin to expect it, without having asked for it and without recognising that it was ever optional. Each is responding to a pattern that the other's behaviour helped to establish.
-Theodore asks when consideration remains a freely chosen expression of affection and when it becomes difficult to distinguish from obligation. His answer is deliberately inexact. The distinction, he suggests, may lie in whether the person could stop without a sense of alarm. Consideration that remains free can be set down without distress. Consideration that has become an obligation carries a cost for stopping, even if the cost is only the discomfort of imagining another's disappointment.
-The essay is careful not to condemn the habit. Consistency in consideration is part of what makes a relationship dependable, and a person who gave care only when it was newly chosen would be a poor partner. The concern is with the loss of awareness. A person who has been considerate for so long that they no longer remember that it was a choice has, in a small way, lost the ability to offer it as a gift, because they can no longer see that they might have done otherwise.
-
-### Essay XVI
-#### The Difficulty of Recognising an Abandoned Desire
-Returning to something once loved can be disorienting. A person may pick up an old interest, revisit a former ambition, or hear a long-forgotten piece of music, and find that the feeling they expected does not come. This essay asks why.
-Theodore explores the experience of returning to a preference or ambition after a long period of neglect. The expectation, naturally, is that the person will recognise it at once: that the old desire will be waiting, intact, and will be felt again with the force it once had. Often this is not what occurs. The desire seems distant, or unfamiliar, or oddly small, and the person is left uncertain whether they ever cared about it as much as they remember.
-The essay considers why the individual may find it difficult to recognise the original importance of something they once wanted. Several explanations are offered. A desire that has gone unexercised for years has not been developed, and what remains of it may be only its outline. The person who held it has changed, and may no longer have the same context for it. And the long habit of living without it may have reorganised the person's attention, so that what once mattered feels like something that belongs to someone else.
-Theodore draws attention to a further difficulty: the person's own judgement of the desire is shaped by the years in which it was neglected. Having lived without it, they may reason that it cannot have been so important, since they managed. This inference is natural, but it reverses the order of events. The desire may have been important and been set aside, in which case the fact of living without it does not show that it was unimportant. It shows only that it was set aside.
-The essay is cautious about what follows. It does not claim that every abandoned desire is waiting to be recovered, or that the person ought to pursue it. A desire can be genuinely outgrown, and not recognising one's old self in it can be an accurate perception. The point is that the experience of not recognising it is ambiguous. It can mean the desire is gone, or it can mean that the person has lost the means of recognising it.
-Theodore closes with a reflection on the strangeness of the situation. A person can be unable to tell, by introspection alone, whether they have outgrown something or merely forgotten how to want it. The question may be decided only by returning to the experience, patiently, and observing what it stirs.
-
-### Essay XVII
-#### What Remains Outside the Relationship
-A close relationship can come to occupy so much of a life that it seems to be the whole of it. This essay asks what, in such a case, lies beyond.
-Theodore examines the aspects of identity that exist independently of a particular emotional attachment. Every person has interests, convictions, abilities, friendships, and ways of passing time that were present before a given relationship began and that do not depend on it. Others have developed alongside it but are not about it. These make up a part of the person that the relationship does not define.
-The essay considers the difference between a shared life and an entire identity organised around that shared life. A shared life is one in which two people have woven their routines, responsibilities, and hopes together. This is among the deepest forms of human closeness and involves, necessarily, giving up some independence. But an identity organised around the shared life is something more: it is one in which everything the person values and does is understood in terms of the relationship, and nothing stands apart from it.
-Theodore observes that the difference is not always visible from outside, and is often invisible from inside. A person whose entire life revolves around a relationship may appear, to themselves and others, to be simply devoted. Whether there is anything beyond the devotion becomes apparent only if the relationship changes or ends, or if the person is asked to describe themselves apart from it. In such moments, the answer may come slowly, or not at all.
-He is careful to avoid the opposite error. The essay does not praise independence for its own sake, nor suggest that a person should keep a portion of their life walled off. A relationship in which each person retained nothing of themselves would be impoverished in a different way. What he asks is that a person know what lies outside the relationship, and that it continues to be theirs: interests that remain active, judgements that remain their own, and relationships with others that are not mediated by the central one.
-The essay closes the fourth part by returning to the question of recognition. To know what remains outside a relationship is a way of knowing oneself, and the ability to answer, when asked, what one is like apart from the person one loves, may be one of the better indications that the self has not been entirely absorbed.
-
-## Part V: Memory, Recognition and Return
-### Essay XVIII
-#### The Person We Remember Being
-When people think of who they used to be, they feel they are recalling a person. This essay asks whether what they recall is that person, or a version assembled in the present.
-Theodore examines how people remember earlier versions of themselves. Memory is often treated as a record, a store of what was. But the recollection of a former self is not like the recollection of a fact. It involves reconstructing a whole person: their moods, their wants, their outlook, and their sense of themselves. That reconstruction is done from the standpoint of the present, and it inevitably draws on what the rememberer now knows and feels.
-The essay considers the relationship between memory, nostalgia, and present identity. Nostalgia is a warm, selective form of remembering that emphasises what was valued and softens what was difficult. It can make a former self seem more coherent, more confident, or more free than it actually was. Equally, a person in a difficult present may remember an earlier time as worse than it was, to make sense of how they came to be where they are. In both cases, the remembered self is shaped by present needs.
-Theodore questions whether people remember the past as it was experienced or as it has subsequently been interpreted. His answer is that it is largely the latter. The person who lived through an event experienced it without knowing how it would turn out. The person who remembers it knows the outcome, and the knowledge colours everything. A decision that seemed open at the time now appears to have been leading somewhere. A feeling that was uncertain now looks like a sign of what was to come.
-This has an implication for any attempt to recover an earlier self. The self that a person wishes to return to may be partly a construction, and what is being missed may be an image created by the present rather than a person who existed. Theodore does not conclude from this that nostalgia is worthless. A remembered self may still point to real values or wants that were present. But he cautions that it should be treated as an interpretation, not a photograph.
-The essay opens the fifth part by asking the reader to hold their own memories of themselves somewhat loosely. The person they remember being is real, but the remembering is an act of the person they are now, and both are part of the account.
-
-### Essay XIX
-#### When the Circumstances Have Changed
-Many habits begin as sensible responses to a particular situation. This essay considers what happens when the situation passes and the habit does not.
-Theodore explores behaviours that continue after the circumstances that originally produced them have disappeared. A person who learned to be wary in an unpredictable household may remain wary long after leaving it. A person who learned to ask for little during a period of scarcity may go on asking for little in abundance. The behaviour was well adapted to its origin. It persists because nothing has prompted its revision.
-The essay considers the persistence of expectations and habits beyond their original context. A response, once learned, does not carry a note saying when it should expire. It becomes part of the person's repertoire and is available whenever something resembles the original situation. Resemblance is enough. A new relationship, a new workplace, or a new household may contain features that echo the old one, and the old response is triggered, whether or not it suits the new case.
-Theodore draws attention to the way this blends with the earlier themes of the collection. The person who adapted in one relationship may carry the adaptation into others, and the people in those relationships may take it as a fact about the person, and respond accordingly. The habit is then reinforced by new circumstances that had nothing to do with its cause, and its origin recedes further into the past.
-What makes this hard to recognise is that the old behaviour is rarely experienced as old. It feels like the sensible way to act in the present. The person is not aware of responding to a past situation. They believe they are responding to the one before them. Only if the response produces a result that surprises them, an outcome that does not fit the expectation, might they begin to wonder whether the old pattern is in play.
-The essay does not suggest that the past should be disregarded. Habits formed in earlier circumstances often carry real wisdom, and a person who discarded all of them would lose valuable protection. The suggestion is simply that it is worth asking, of any long-standing way of responding, whether the circumstances that called for it are still the circumstances one is in.
-
-### Essay XX
-#### The Difference Between Returning and Repeating
-There is a common wish, at certain moments, to get back to how one used to be. This essay asks what such a return could consist of, and whether it is possible.
-Theodore examines the desire to recover an earlier sense of self. The wish is often prompted by a feeling that something has been lost, whether energy, spontaneity, ambition, or a sense of ownership over one's own life. The earlier self is imagined as having had it, and the thought arises that by going back to what that self did or liked, the quality might be regained.
-The essay asks whether returning to an earlier preference or way of living is necessarily a return to the person one once was. Theodore's answer is that it is not. A person who takes up an old pursuit is no longer the person who first undertook it. They bring with them the intervening years, with everything those years taught them and changed in them. The pursuit may be the same, but the person doing it is different, and the experience will be different too.
-This leads him to distinguish between returning and repeating. Repeating is doing again what was done before, in the hope of reproducing its effect. It is often disappointing, because the conditions that gave the original its meaning have changed, and because the effort to recreate a past experience can be an obstacle to having a new one. Returning, in the sense Theodore favours, is something else: a renewed engagement with a value or interest that was once important, undertaken with awareness of how the person has changed, and open to whatever it now turns out to mean.
-The distinction is practical. A person who sets out to repeat the past may judge the attempt a failure if it does not feel as it once did. A person who sets out to return may find that it feels different and be willing to learn what the difference means. The first measures the present against the past. The second treats the present as the place where something is to be discovered.
-The essay is careful not to promise a happy outcome. A return may reveal that the old interest has been outgrown, and that is itself a kind of knowledge. But Theodore suggests that it is knowledge a person can get only by actually returning, and that the choice between returning and repeating shapes what the attempt can teach.
-
-### Essay XXI
-#### The Individual Beyond Recognition
-Most of the ways people describe themselves are borrowed. They use words others have used of them, categories others have supplied, and roles others have assigned. This essay asks what remains of a person once these are set aside.
-Theodore explores identity outside the expectations and descriptions provided by other people. A person is, from early life, described to themselves by others: as shy or outgoing, as sensible or dreamy, as the capable one or the sensitive one. Some of these descriptions are accurate and useful. Many are approximate. All of them are made from the outside, from what was visible to the describer and relevant to their purposes.
-The essay considers the difficulty of understanding oneself independently of familiar roles and relationships. The roles are not merely labels. They organise how a person is treated, what is asked of them, and what is made room for. Over a long period, they shape the person's own sense of what they are like, until it is hard to say which parts of that sense are their own observation and which are an inheritance of other people's.
-Theodore points to the particular difficulty of the exercise. To ask what one is like apart from all roles and descriptions is to ask a question for which one has few tools. The vocabulary for describing oneself is largely the vocabulary supplied by others, and the experience of being oneself, in the sense that precedes description, does not readily convert into words. The attempt to step outside recognition tends to meet a kind of blankness, which is not emptiness but a lack of language.
-He does not conclude that the exercise is pointless. Noticing the blankness is itself informative, because it shows how much of one's self-understanding has depended on others' terms. And the attempt can proceed by indirect means: by attending to what interests one when no one is watching, to what one does when nothing is expected, and to reactions that fit none of the familiar descriptions.
-The essay closes by observing that an individual beyond recognition is not an individual beyond relationships. People do not exist outside all relations, and Theodore does not suggest they should. The point is that a person's own perspective on themselves, assembled from their own attention to their experience, is a part of the truth that others' descriptions cannot supply, and that it is worth cultivating.
-
-### Essay XXII
-#### What Belongs to the Self
-The concluding essay asks the question the whole collection has been circling: what, in the end, belongs to the self? It does so without expecting to settle it.
-Theodore examines the relationship between personal identity, experience, attachment, and choice. Across the preceding essays, he has shown how identity is shaped by repeated experience, how desire is educated by circumstance, how attachment can alter self-presentation, and how memory reinterprets the past. A natural question follows: if so much of what a person is has been shaped by what has happened to them and by those they have loved, is there anything that is simply theirs?
-The essay considers whether the self can be separated entirely from the circumstances through which it has developed. Theodore's answer is that it cannot, and that the demand to separate them rests on a mistake. To ask what part of a person is really theirs, as opposed to the product of influences, assumes that influences are external intrusions on an otherwise pure self. But the self has no existence apart from the experiences that formed it. A person who had experienced nothing would not be a purer self but no self at all.
-What can be asked instead is whether a person recognises the processes through which they have become who they are. Here the essay returns to the central concern of the collection. The relevant difference is not between a self shaped by circumstances and a self untouched by them, since all selves are shaped. It is between a self that is aware of how it has been shaped and one that is not, between someone who can say how a trait or habit came about and someone for whom it is simply a given.
-Awareness of this kind does not undo the shaping. It does, however, restore a measure of choice. A person who sees that a response originated in a particular relationship can ask whether it still serves them. A person who sees that a desire was long postponed can ask whether it has really faded. The self does not become more authentic by this scrutiny, but it becomes more answerable to its own judgement.
-Rather than offering a final definition, the essay ends where the collection began, with the quiet nature of the losses it has described and the difficulty of seeing them. What belongs to the self, Theodore suggests, is not a fixed possession to be defended, but a continuing relation between a person and the story of how they came to be who they are. The task is not to recover a self that was lost, but to remain acquainted with the one that is here.
-
-## Selected Passages
-### On the formation of identity
-An individual does not necessarily recognise the experiences through which a particular version of themselves became familiar. Some changes are understood only after they have been repeated long enough to lose the appearance of change.
-### On desire
-Not everything a person stops pursuing has ceased to matter to them. Sometimes the circumstances surrounding a desire become so familiar that the desire itself is gradually removed from consideration.
-### On attachment
-People are influenced not only by what others ask of them, but by what they learn to anticipate without being asked.
-### On emotional roles
-A person may become known for a quality that began as a response to someone else's circumstances. Eventually, the response may be remembered as though it had always belonged to them.
-### On recognition
-To be understood by another person is a form of recognition. To become dependent upon that understanding is a different matter.
-### On memory
-The person remembered from the past is not always the person who existed there. Memory carries the interpretation of the individual who is remembering.
-### On change
-Not every departure from an earlier self is a loss. Some changes are discoveries. Others are accommodations. The difficulty is that both may become equally familiar.
-### On the dispossessed heart
-Perhaps the most difficult losses to recognise are those that occur without requiring us to leave anything behind. We remain where we are, continue what we have been doing and gradually become unfamiliar with the parts of ourselves that no longer participate.
-
-## The Work's Philosophical Position
-The Dispossessed Heart does not present the individual as an entirely independent being whose identity can be preserved by avoiding attachment. It recognises that human development takes place through relationships and circumstances. People learn from one another. They acquire habits through shared experience. They reconsider their preferences, develop new expectations, and change through the presence of others. These changes are not inherently undesirable. The work is concerned with understanding them.
-It distinguishes between three processes.
-Development. A change through which an individual acquires new understanding, abilities, preferences, or ways of relating to the world.
-Adaptation. A modification of behaviour or expectation in response to particular circumstances.
-Dispossession. A gradual loss of access to, familiarity with, or recognition of aspects of oneself through repeated adaptation and changing expectations.
-These processes may overlap. An individual may develop through adaptation. An adaptation may eventually become part of their identity. In other circumstances, an adaptation may make certain desires or possibilities increasingly difficult to recognise. The collection does not suggest that these processes can always be separated neatly. Its purpose is to examine the circumstances in which they occur.
-
-## The Work's Place in Norwynian Intellectual Life
-The Dispossessed Heart occupies a different intellectual position from the formal philosophical works concerned with the organisation of Norwynian society. Where Structural Ideology examines relationships between individuals, institutions, and wider structures, this collection turns its attention towards the development of individual experience.
-Its subject is less concerned with public arrangements than with the private processes through which people acquire expectations, interpret relationships, and develop a sense of identity. It is therefore relevant to philosophical discussions concerning human behaviour, emotional experience, and personal formation.
-Its essays have particular value as works of observation. They examine familiar circumstances without reducing them to universal explanations. The collection is read as a work of psychological reflection rather than as a manual for personal conduct. Its significance lies in the questions it raises and the distinctions it makes visible.
-
-## A Note to the Reader
-The experiences examined in this collection are not limited to romantic relationships. Attachment may develop within families, friendships, households, institutions, and other relationships through which people acquire a sense of belonging. Likewise, the formation of identity is not restricted to emotional experience. Education, social expectations, responsibility, culture, and repeated circumstances all influence the ways individuals understand themselves. The essays therefore approach attachment as one part of a larger examination of human development.
-They do not assume that a person must return to an earlier version of themselves, nor that the individual exists in a state of complete independence from others. They ask instead that the reader consider the experiences through which their present understanding of themselves has developed.
-Some changes are deliberate. Some are necessary. Some are welcomed. Others are recognised only much later. The distinction is not always immediately apparent.
-
-## The Lasting Question
-A person may spend years becoming familiar with the life they have built. They may understand their responsibilities, recognise their habits, and know what others expect of them. They may even be content.
-Yet familiarity with a life does not necessarily mean that every part of the individual is represented within it. There may be preferences that have become difficult to express, possibilities that no longer receive attention, and earlier ways of understanding oneself that have gradually disappeared from memory.
-The question is not whether these changes should always be reversed. It is whether they can be recognised.
-What remains of the individual when the person they have learned to be is examined alongside the experiences that taught them to become that person?
-#### The Dispossessed Heart
-#### A study of attachment, adaptation and the formation of the self.`
-      },
-      {
+{
         id: 'annals-second',
         short: 'THE ANNALS OF NORWYN',
         cover: 'THE ANNALS OF NORWYN',
