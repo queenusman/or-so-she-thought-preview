@@ -667,21 +667,16 @@ body {
   font-size: 1.125rem;
   line-height: 1.78;
 }
-.prose-body-lg {
-  font-size: 1.1875rem;
-  line-height: 1.8;
+.entry-paragraph {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 1.45rem;
 }
-.character-bio {
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
 .chapter-paragraph {
   text-align: justify;
   text-justify: inter-word;
   margin-bottom: 1.75rem;
 }
-
 .chapter-paragraph:first-of-type::first-letter {
   font-family: 'Cinzel', serif;
   font-size: 3.5rem;
@@ -694,8 +689,70 @@ body {
   font-weight: normal;
 }
 
+.leaf-sheet {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.leaf-sheet.is-fading-out {
+  opacity: 0;
+  transform: translateY(6px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .leaf-sheet {
+    transition: none;
+  }
+  .leaf-sheet.is-fading-out {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ========================================================
-   NORWYN GALLERY (NĀDIRAH-STYLE STACK / SWIPE + DIALOG)
+   HYBRID HORIZONTAL SELECTOR STRIPS (CHAPTERS / NORWYN / PEOPLE)
+   ======================================================== */
+.nw-hybrid-strip {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-behavior: auto;
+  padding: 2px 2px 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+.nw-hybrid-strip::-webkit-scrollbar {
+  display: none;
+}
+.nw-hybrid-pill {
+  flex: 0 0 auto;
+  min-width: 118px;
+  max-width: 175px;
+  padding: 7px 11px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-btn-border);
+  background-color: var(--primary-btn-bg);
+  color: var(--primary-btn-text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+.nw-hybrid-pill:hover,
+.nw-hybrid-pill:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+  outline: none;
+}
+.nw-hybrid-pill.is-active {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+  background-color: var(--color-panel-hover);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+/* ========================================================
+   NORWYN GALLERY (HORIZONTAL SLIDING VIEWS + DIALOG)
    ======================================================== */
 .nw-gallery-wrap {
   width: 100%;
@@ -703,19 +760,32 @@ body {
 }
 .nw-gallery {
   display: flex;
-  flex-direction: column;
-  gap: 28px;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 14px;
   width: 100%;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.nw-gallery::-webkit-scrollbar {
+  display: none;
 }
 .nw-g-item {
+  flex: 0 0 84%;
+  scroll-snap-align: start;
   display: block;
-  width: 100%;
   padding: 0;
   border: 0;
   background: none;
   color: inherit;
   cursor: zoom-in;
   text-align: left;
+}
+@media (min-width: 700px) {
+  .nw-g-item {
+    flex: 0 0 46%;
+  }
 }
 .nw-media {
   position: relative;
@@ -762,7 +832,6 @@ body {
   background: var(--color-accent);
 }
 .nw-g-count {
-  display: none;
   margin-top: 10px;
   font-family: 'Inter', sans-serif;
   font-size: 11px;
@@ -770,43 +839,6 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-muted);
-}
-
-@media (min-width: 900px) {
-  .nw-gallery {
-    flex-direction: column;
-    gap: 32px;
-  }
-  .nw-media {
-    min-height: 520px;
-  }
-  .nw-g-count {
-    display: none;
-  }
-}
-
-@media (max-width: 899px) {
-  .nw-gallery {
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 12px;
-    scrollbar-width: none;
-  }
-  .nw-gallery::-webkit-scrollbar {
-    display: none;
-  }
-  .nw-g-item {
-    flex: 0 0 86%;
-    scroll-snap-align: start;
-  }
-  .nw-media {
-    min-height: 0;
-    aspect-ratio: 4 / 5;
-  }
-  .nw-g-count {
-    display: block;
-  }
 }
 
 dialog.nw-lb {
@@ -878,16 +910,6 @@ dialog.nw-lb::backdrop {
   top: calc(env(safe-area-inset-top, 0px) + 12px);
   right: 12px;
 }
-.nw-lb .nw-ctl--prev {
-  left: 8px;
-  top: 50%;
-  margin-top: -24px;
-}
-.nw-lb .nw-ctl--next {
-  right: 8px;
-  top: 50%;
-  margin-top: -24px;
-}
 .nw-lb .nw-ctl svg {
   width: 22px;
   height: 22px;
@@ -897,13 +919,18 @@ dialog.nw-lb::backdrop {
 }
 @media (max-width: 600px) {
   .nw-lb__stage {
-    inset: 72px 12px 80px;
+    inset: 0;
   }
-  .nw-lb .nw-ctl--prev,
-  .nw-lb .nw-ctl--next {
-    top: auto;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
-    margin: 0;
+  .nw-lb__frame {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+    border: 0;
+    background: #111111;
+  }
+  .nw-lb__frame img {
+    object-fit: cover;
   }
 }
 
@@ -985,15 +1012,6 @@ body[data-archive-mode="reader"] .shelf-subview {
   text-transform: uppercase;
   margin: 0 0 10px;
   color: var(--ui);
-}
-.scriptorium-mast p.scriptorium-lead {
-  margin: 0;
-  color: var(--ui-dim);
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  font-size: clamp(16px, 2.1vw, 19px);
-  max-width: 56ch;
-  line-height: 1.45;
 }
 
 .scriptorium-case {
@@ -1178,21 +1196,6 @@ body[data-archive-mode="reader"] .archive-reader-subview {
   text-overflow: ellipsis;
   pointer-events: none;
 }
-.scriptorium-folio {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--ui);
-  min-width: 13ch;
-  text-align: center;
-  font-size: 11px;
-  padding: 8px 14px;
-  background: var(--btn-bg);
-  border: 1px solid var(--btn-border);
-  border-radius: 8px;
-  backdrop-filter: blur(8px);
-}
 .scriptorium-hint {
   position: absolute;
   z-index: 30;
@@ -1257,7 +1260,8 @@ body[data-archive-mode="reader"] .archive-reader-subview {
 }
 .scriptorium-book .slab.r { left: 50%; }
 .scriptorium-book .slab.l { left: 0; }
-.scriptorium-book.closed-cover .slab {
+.scriptorium-book.closed-cover .slab,
+.scriptorium-book.closed-back .slab {
   opacity: 0 !important;
   box-shadow: none !important;
 }
@@ -1622,16 +1626,6 @@ body[data-archive-mode="reader"] .archive-reader-subview {
   color: var(--rubric);
   transform: translate(-50%, -50%);
 }
-.scriptorium-book .note {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  font-size: .92em;
-  line-height: 1.45;
-  margin: 0;
-  max-width: 30ch;
-  text-align: center;
-  color: var(--ink-muted);
-}
 .scriptorium-book .verso-meta {
   width: 100%;
   max-width: 28ch;
@@ -1754,7 +1748,6 @@ body[data-archive-mode="reader"] .archive-reader-subview {
   .scriptorium-rtitle { display: none; }
   .scriptorium-btn { font-size: 10px; padding: 7px 10px; }
   .scriptorium-hint { font-size: 15px; }
-  .scriptorium-mast p.scriptorium-lead { font-size: 15px; }
   .scriptorium-fine { font-size: 14px; }
   .scriptorium-stage { height: clamp(560px, 82vh, 780px); }
   #view-archive.max-w-6xl { padding-left: 0.5rem; padding-right: 0.5rem; }
