@@ -324,6 +324,24 @@ The chapter also takes care to distinguish alignment from simple agreement or ob
 The converse is equally true. Constantin observes that an institution may maintain its outward appearance while its actual function has become disconnected from its stated purpose. A body may keep its name, its offices, and its ceremonies, and still no longer do what it was established to do. Such an institution looks aligned, and may even be treated as aligned, but it is not. Alignment therefore requires examination rather than assumption: it cannot be read from outward appearances, but only from a study of what the elements actually do and why.
 The chapter closes by connecting alignment to the volume's larger concerns. Because it depends on understanding purpose, alignment cannot be maintained by habit alone. It requires that those who hold positions, and those who design them, keep the purposes of the structure in view. This links the principle directly to the questions of generational transmission and preservation that occupy the next two chapters.
 
+### Chapter XII
+#### Generational Responsibility
+Constantin considers the relationship between successive generations and the continuity of social arrangements. The chapter takes the principle of continuity, introduced among the foundations of the volume, and examines what it asks of the people who live within it.
+He begins with the process of transmission. Each generation receives knowledge, institutional responsibilities, and established practices from the one before. The chapter examines how this handing-over takes place, through the household, through education, and through participation in institutions, and what is carried with it. What passes between generations is not only information. It also includes expectations, ways of acting, and a sense of what is owed to whom.
+The chapter argues that each generation inherits both the benefits and the obligations associated with arrangements established before it. The benefits are plain: a generation that receives working institutions, accumulated knowledge, and settled expectations does not have to build them from nothing. But Constantin argues that these benefits are not free of cost. Arrangements that have been handed down carry the obligations of keeping them going, and a generation that enjoys what it was given has some responsibility to sustain it. To accept the inheritance and refuse its obligations, he suggests, is to treat as unconditional something that was in fact conditional on being maintained.
+A further theme is the responsibility each generation bears toward the next. Constantin considers the duty of one generation to make inherited knowledge intelligible to the next. It is not enough to pass on practices unchanged if the reasons for them are lost in the handing over. A generation that transmits what it received without explaining its purpose leaves its successors with the form of an arrangement but not its meaning. They may keep it faithfully while being unable to judge whether it is still serving its purpose, and this makes the arrangement fragile in ways its keepers may not notice.
+This argument ties directly to the earlier discussion of education. If education is the main means by which knowledge is handed down, then the responsibility to make it intelligible falls heavily on educational institutions and on households alike. But Constantin does not confine it to them. He argues that it falls on every individual who holds a position in an inherited arrangement and who will, in due course, be succeeded in it. Each holder is, in effect, a link in a chain, receiving something from those before and handing something to those after.
+The chapter closes with a reflection on what this implies for the individual's sense of their own place. A person who understands themselves as one link in a chain of transmission has a view of their responsibilities that reaches beyond their own lifetime. They are accountable not only to those they serve now, but to those who will inherit the results of how they act. Constantin treats this as one of the most important ways in which the individual and society are connected across time.
+
+### Chapter XIII
+#### Continuity and the Preservation of Order
+This chapter examines the importance of maintaining functioning social arrangements. It is the last chapter of the fourth part, and it brings the discussion of continuity and alignment to a point at which Constantin's traditional position, and its limits, are stated most directly.
+Constantin argues that continuity allows institutions and communities to retain accumulated knowledge and experience. An arrangement that has operated over a long period has, in effect, been tested by the circumstances it has met. It carries within it lessons learned from earlier difficulties, including some that its current members may not even know about. To discard such an arrangement is to discard what it has learned along with whatever may be wrong with it. This is the core of his case for caution, and it explains why he values continuity as a social achievement.
+He therefore cautions against changes that disregard the relationships supporting an established structure. Structures, as the volume has argued throughout, are defined by relationships. A change that alters one element may alter the relationships that element has to others, and the effects may spread in ways that were not intended. Constantin's concern is less with change as such than with change made without attention to these connections. An alteration that looks sensible when one element is considered alone may undermine the structure when the relationships are taken into account.
+However, he distinguishes continuity from the preservation of every existing practice. This is the qualification that keeps his position from becoming simple conservatism. The continued existence of an arrangement does not remove the need to examine its purpose. A practice may persist because it serves its purpose, or merely because it is familiar, and the two cannot be told apart from the fact of persistence alone. What continuity requires is the preservation of the structure's purpose, not of every habit that has gathered around it.
+The chapter considers the conditions under which adjustment may preserve rather than undermine the wider structure. Constantin suggests several. The purpose of the arrangement should be understood before any change is made. The change should be directed at a practice that no longer serves that purpose, rather than at the purpose itself. The effects on the relationships that support the structure should be considered in advance. And the change should be made with attention to those who depend on the arrangement and who will live with the result. Where these conditions are met, he argues, adjustment is a way of keeping a structure in good order, because it keeps the structure's practices aligned with its purpose.
+The chapter ends by restating the balance that governs the whole volume. An arrangement deserves neither automatic preservation nor careless rejection. It deserves to be understood. This leads naturally into the fifth and final part, which turns to the limits of the whole enterprise of social organisation and asks what the study of society cannot, by itself, settle.
+
 ## Part V: The Limits of Social Organisation
 ### Chapter XIV
 #### The Limits of Individual Interpretation
@@ -383,13 +401,7 @@ A multi-volume examination of the relationships through which an organised socie
 Volume I: Foundations of Structural Ideology. The principles through which structures, relationships, functions, and organised arrangements may be understood.
 Volume II: The Individual and Society. The position of individuals within social structures, including responsibility, education, authority, and continuity.
 Volume III: Institutions and Governance. The organisation of institutions, the exercise of authority, and the responsibilities associated with public administration.
-Volume IV: Alignment and Social Organisation. The correspondence between different elements of a structure and the relationships through which organised systems function.
-Volume V: Structural Change and Continuity. The development of established arrangements, the conditions surrounding change, and the preservation of institutional purpose.
-#### Maximilian Constantin
-#### Norwynian philosopher. Author of Norwyn Structural Ideology.
-An influential voice in the philosophical examination of the individual, society, and the structures through which collective life is organised.`
-    },
-    {
+{
       id: 'theodore',
       short: 'THE DISPOSSESSED HEART',
       cover: 'THE DISPOSSESSED HEART',
@@ -1794,7 +1806,7 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
           coverLeaf.el.style.zIndex = N + 10;
           coverLeaf.flipped = true;
           coverLeaf.el.classList.add('flipped');
-          void coverLeaf.el.offsetWidth;
+          void coverLeaf.offsetWidth;
           coverLeaf.el.style.transition = '';
           coverLeaf.flipped = false;
           coverLeaf.el.classList.add('turning');
@@ -1949,3 +1961,9 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
   lastW = window.innerWidth;
   buildCase();
 })();
+Volume IV: Alignment and Social Organisation. The correspondence between different elements of a structure and the relationships through which organised systems function.
+Volume V: Structural Change and Continuity. The development of established arrangements, the conditions surrounding change, and the preservation of institutional purpose.
+#### Maximilian Constantin
+#### Norwynian philosopher. Author of Norwyn Structural Ideology.
+An influential voice in the philosophical examination of the individual, society, and the structures through which collective life is organised.`
+    },
