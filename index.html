@@ -3664,7 +3664,10 @@ function scheduleChapterAsRead(era, index) {
       });
     }
 
-    function navigateTo(viewId, options) {
+   function navigateTo(viewId, options = {}) {
+  if (viewId !== 'reader') {
+    clearChapterReadTimer();
+  }
       const opts = options || {};
       const views = ['home', 'prologue', 'world', 'characters', 'reader', 'archive', 'author-note', 'disclaimer'];
 
@@ -4039,12 +4042,14 @@ function scheduleChapterAsRead(era, index) {
       }, 210);
     }
 
-    function openReaderIndex(useCrossFade) {
-      const commit = () => {
-        activeEra = 'crowned';
-        activeChapterIndex = null;
-        renderReaderView();
-      };
+    function openReaderIndex(useCrossFade = false) {
+  const commit = () => {
+    clearChapterReadTimer();
+    activeEra = 'crowned';
+    activeChapterIndex = null;
+    renderReaderView();
+  };
+  // ... keep the rest of your existing openReaderIndex code below this line ...
       if (useCrossFade) {
         transitionReaderContent(commit);
       } else {
@@ -4140,7 +4145,7 @@ function scheduleChapterAsRead(era, index) {
     function selectChapter(era, index, useCrossFade) {
       activeEra = 'crowned';
       activeChapterIndex = index;
-      markChapterAsRead(activeEra, index);
+    scheduleChapterAsRead(activeEra, index);
 
       const eraChapters = (typeof NOVEL_CHAPTERS !== 'undefined' && NOVEL_CHAPTERS[activeEra]) ? NOVEL_CHAPTERS[activeEra] : null;
       const existingStrip = document.getElementById('chapterHybridStrip');
