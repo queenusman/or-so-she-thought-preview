@@ -2092,7 +2092,7 @@
         <div class="book-card p-8 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section One</span>
+      
             </div>
             <h2 class="font-display text-xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Before You Begin
@@ -2179,15 +2179,7 @@
         <p class="entry-paragraph font-serif italic text-theme-text-muted text-center pt-2">
           And Elisabeta thought she knew hers.
         </p>
-
-        <div class="pt-8 border-t border-theme-border flex flex-col sm:flex-row gap-4 justify-center">
-          <button type="button" onclick="navigateTo('reader')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="px-6 py-3 border text-xs font-sans uppercase tracking-[0.2em] font-medium hover:border-theme-accent hover:text-theme-text transition-all rounded-lg shadow-sm cursor-pointer">
-            Begin Reading
-          </button>
-          <button type="button" onclick="navigateTo('world')" style="background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);" class="px-6 py-3 border text-xs font-sans uppercase tracking-[0.2em] font-medium hover:border-theme-accent hover:text-theme-text transition-all rounded-lg shadow-sm cursor-pointer">
-            Explore Norwyn
-          </button>
-        </div>
+        
       </article>
     </section>
     <!-- ==================== DISCOVER NORWYN ==================== -->
@@ -3449,10 +3441,10 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
       }
     ];
     const PEOPLE_GROUPS = [
-      {
+     {
         threshold: 'THE ROYAL FAMILY',
         members: [
-         {
+          {
             key: 'elisabeta',
             name: 'Princess Elisabeta',
             epithet: 'The Heir',
@@ -3467,29 +3459,41 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
             key: 'ecaterina',
             name: 'Queen Ecaterina',
             epithet: 'The Sovereign',
-            registry: { belonging: 'Royal Family', role: 'Reigning Queen of Norwyn', noted: 'Listens without interruption; makes small, settled corrections' },
-            glimpse: 'Thoughtful, warm and exacting in equal measure, Ecaterina rarely seems hurried. Years of carrying the Crown have left her attentive to appearances, decisions and details left unguarded, yet she is also a mother to Elisabeta and Ileana—two roles that have never sat entirely apart.'
+            registry: {
+              belonging: 'Royal Family',
+              role: 'Reigning Queen of Norwyn',
+              noted: 'Listens without interruption, then makes the smallest of corrections.'
+            },
+            glimpse: 'Thoughtful, warm and exacting, Queen Ecaterina has a way of making even an unhurried silence feel like part of a conversation. Years of carrying the Crown have taught her to notice what others overlook, to weigh her words carefully and to understand how much can rest on a seemingly small decision. Yet beyond the responsibilities of the throne, she is also a mother to Elisabeta and Ileana. She knows her daughters in ways few others can, though knowing someone so well does not always mean knowing what they are thinking. Between the Queen the kingdom sees and the mother her daughters know, Ecaterina has a life of her own to navigate.'
           },
           {
             key: 'ileana',
             name: 'Princess Ileana',
             epithet: 'The Second Daughter',
-            registry: { belonging: 'Royal Family', role: 'Second Daughter of the Queen', noted: 'Draws to papers, records, figures and what outlasts an argument' },
-            glimpse: 'Quiet, practical and dry in a humour easy to miss, Ileana notices what others forget to check. She knows the palace well, though often through records and details that leave her looking at the same rooms differently than everyone else.'
+            registry: {
+              belonging: 'Royal Family',
+              role: 'Second Daughter of the Queen',
+              noted: 'Drawn to papers, records and figures, and to the things that remain after an argument is over.'
+            },
+            glimpse: 'Quiet, practical and possessed of a dry humour that can easily pass unnoticed, Ileana has little interest in making herself the centre of attention. She is more likely to be found among papers and records than in the middle of a lively gathering, and she has a habit of noticing what others forget to check. She knows the palace well, but perhaps not in quite the same way as the people who spend their days moving through its grand rooms. Where others remember conversations, Ileana remembers what was written down. And sometimes, what a person leaves on paper tells a rather different story from what they said aloud.'
           },
           {
             key: 'dara',
-            name: 'Prince Dara',
-            epithet: "The Queen's Husband",
-            registry: { belonging: 'Royal Family', role: 'Consort to Queen Ecaterina · Father', noted: 'Southern harbours, fishing boats and lighthouses' },
-            glimpse: 'Warm, easy to please and hard to make solemn for long, Dara carries an enduring affection for the southern coast where he came from. Fond of his daughters and quick to find humour where others stay stiff, he has never made much effort to hide where he feels most at home.'
+            name: 'Dara',
+            epithet: 'The Consort',
+            registry: {
+              belonging: 'Royal Family',
+              role: 'Consort to Queen Ecaterina · Father',
+              noted: 'Southern harbours, fishing boats and lighthouses. He never quite loses his affection for the sea.'
+            },
+            glimpse: "Warm-hearted, easy to please and rarely solemn for long, Dara has never entirely exchanged the life he knew along Norwyn's southern coast for the one he leads at the palace. He is devoted to his daughters, generous with his affection and often the first to find something amusing in a situation everyone else is taking rather seriously. Royal life has brought him into rooms and conversations far removed from the harbours he remembers, but he has never felt the need to become someone else to belong there. Of all the things the palace has given him, none has quite replaced the simple pleasure of being near the sea."
           },
           {
             key: 'safira',
             name: 'Safira',
             epithet: 'The Palace Cat',
-            registry: { belonging: 'Royal Family', role: 'Uninvited Resident', noted: 'Notch in left ear; sleeps beneath Elisabeta\'s table' },
-            glimpse: 'Small, grey and indifferent to rank, Safira slips into rooms she was never invited into and moves between the sisters\' quarters as if arranging the palace herself.'
+            registry: { belonging: 'Royal Family', role: 'Uninvited Resident', noted: 'A notch in her left ear; a favourite sleeping place beneath Elisabeta\'s table.' },
+            glimpse: 'Small, grey and entirely unimpressed by rank, Safira has made herself at home in the Royal Palace without troubling herself over whether anyone thought to invite her. She slips into rooms, settles wherever she pleases and moves between the sisters\' quarters with the confidence of someone who considers the entire palace her private property. Elisabeta may be the heir to the Crown, but beneath her table, at least, Safira is very much in charge. She has no title, no duties and absolutely no intention of being told where she belongs.'
           }
         ]
       },
@@ -3500,22 +3504,22 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
             key: 'alexandru',
             name: 'Alexandru',
             epithet: 'The Intended',
-            registry: { belonging: 'Valenne', role: 'Heir to Valenne · Betrothed', noted: 'Grey horse Marrow refuses to cross water' },
-            glimpse: 'Tall, fair and seldom as formal as court occasions expect, Alexandru puts people at ease quickly and enjoys conversation, even when his memory for small details is slightly off. Easy company and easy to know are not always the same thing.'
+            registry: { belonging: 'Valenne', role: 'Heir to Valenne · Betrothed', noted: 'His grey horse, Marrow, refuses to cross water.' },
+            glimpse: 'Tall, fair and seldom as formal as court occasions might prefer, Alexandru has a natural gift for putting people at ease. He enjoys conversation, remembers enough to make others feel noticed and is not above laughing at himself when the details escape him. There is an openness to his manner that makes him pleasant company, and a confidence that rarely seems forced. Yet being comfortable in someone\'s company is not quite the same as knowing them. Alexandru is easy to like. Whether he is as easy to understand is another matter.'
           },
           {
             key: 'duvall',
             name: 'Ambassador Duvall',
             epithet: 'The Diplomat',
-            registry: { belonging: 'Valenne', role: 'Ambassador to Norwyn', noted: 'Silver-haired; reads what is not asked directly' },
-            glimpse: 'Spare and measured in manner, Duvall knows that court talk often circles around its real question, and he represents Valenne without letting much of himself into the room.'
+            registry: { belonging: 'Valenne', role: 'Ambassador to Norwyn', noted: 'Silver-haired; often understands the question beneath the one being asked.' },
+            glimpse: 'Spare in manner and careful with his words, Duvall is a man who rarely gives a conversation more than it requires. Years of representing Valenne have taught him that the most important parts of a discussion are not always spoken aloud. He listens closely, notices what others leave unsaid and seldom appears surprised by what he hears. In Norwyn, he is there to represent another kingdom, not to make himself known. And yet, in a room full of people trying to understand one another, Duvall may be among the few who understand rather more than he lets on.'
           },
           {
             key: 'aubrac',
             name: 'Madame Aubrac',
             epithet: 'The Observer',
-            registry: { belonging: 'Valenne', role: 'Member of Alexandru\'s Household', noted: 'Polite, attentive and rarely without her notebook' },
-            glimpse: 'With an eye for arrangements, people, photographs and the small touches that shape how an occasion is remembered, Madame Aubrac seems less like someone merely attending than someone taking note.'
+            registry: { belonging: 'Valenne', role: 'Member of Alexandru\'s Household', noted: 'Polite, attentive and rarely without her notebook.' },
+            glimpse: 'Madame Aubrac has an eye for the details that make an occasion memorable: the arrangement of a room, the people who gravitate towards one another, the photographs worth keeping and the small touches others might not think to notice. Always polite and quietly attentive, she rarely seems to be simply passing the time. Her notebook is never far away, and neither is her interest in how people present themselves when they know they are being observed. Some people attend an occasion. Madame Aubrac remembers how it came together, who was there and what everyone else might have overlooked.'
           }
         ]
       },
@@ -3526,36 +3530,36 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
             key: 'corrow',
             name: 'Mr. Corrow',
             epithet: 'The Tutor',
-            registry: { belonging: 'The Household', role: 'Private Tutor (Four Years)', noted: 'Trims his own nibs; teaches Structural Ideology' },
-            glimpse: 'Courteous, precise and fond of order, Mr. Corrow values a pupil who can explain not only what she believes, but why—and his lessons rarely give way just because other things crowd her mind.'
+            registry: { belonging: 'The Household', role: 'Private Tutor (Four Years)', noted: 'Trims his own nibs; teaches Structural Ideology.' },
+            glimpse: 'Courteous, precise and devoted to order, Mr. Corrow is not easily satisfied by an answer simply because it sounds convincing. He wants to know what a pupil believes, how she arrived at that belief and whether she can defend it when questioned. His lessons in Structural Ideology leave little room for vague explanations, and he has a particular appreciation for a well-reasoned disagreement. He may be patient, but he is not easily distracted, and the demands of palace life have never been enough to persuade him to abandon a lesson. Under his instruction, even the most familiar ideas can begin to look rather different.'
           },
           {
             key: 'anselm',
             name: 'Anselm',
             epithet: 'The Attendant',
-            registry: { belonging: 'The Household', role: 'Attendant to Princess Elisabeta', noted: 'Keeps a log; reads paperbacks in corridors' },
-            glimpse: 'Tall, slightly stooped and dry in his sense of duty, Anselm goes where the Princess goes. Because his presence is so constant, it is easy to overlook how much passes in front of him.'
+            registry: { belonging: 'The Household', role: 'Attendant to Princess Elisabeta', noted: 'Keeps a log; reads paperbacks in corridors.' },
+            glimpse: 'Tall, slightly stooped and quietly devoted to his duties, Anselm is rarely far from Princess Elisabeta. He knows the rhythm of her days, the places she is expected to be and the small interruptions that rarely make it into anyone else\'s account. He keeps a log of his duties and, when the occasion allows, can often be found reading a paperback in some quiet stretch of corridor. His presence is so familiar that people seldom think twice about him. But those who are always nearby have a way of seeing things that others never notice.'
           },
           {
             key: 'hale',
             name: 'Mrs. Hale',
             epithet: 'The Dresser',
-            registry: { belonging: 'The Household', role: 'Royal Dresser (Nearly Thirty Years)', noted: 'Measurements, fabrics and an inconvenient pin' },
-            glimpse: 'Direct and observant, Mrs. Hale knows what it takes to get a gown right under tight pressure—and thirty years of tending to appearances leaves very little unnoticed.'
+            registry: { belonging: 'The Household', role: 'Royal Dresser (Nearly Thirty Years)', noted: 'Measurements, fabrics and an inconvenient pin.' },
+            glimpse: 'Direct and observant and rarely impressed by unnecessary fuss, Mrs. Hale has spent nearly thirty years making sure the royal family is properly dressed for whatever the day may bring. She knows her fabrics, remembers her measurements and can spot a poorly fitted sleeve from across a room. An inconvenient pin is unlikely to trouble her for long, but a badly made gown is another matter entirely. After so many years tending to appearances, she has become familiar with the people beneath them, too. A great deal can be learned about someone while helping them get dressed, especially when they forget you are there.'
           },
           {
             key: 'steward',
             name: 'The Steward',
             epithet: 'The Keeper of the Household',
-            registry: { belonging: 'The Household', role: 'Senior Household Officer', noted: 'Schedules, correspondence and quiet palace order' },
-            glimpse: 'Restrained and methodical, the steward oversees the daily machinery of schedules, notices and domestic arrangements that keep the palace running as expected.'
+            registry: { belonging: 'The Household', role: 'Senior Household Officer', noted: 'Schedules, correspondence and the quiet order of palace life.' },
+            glimpse: 'Restrained, methodical and rarely caught unprepared, the Senior Household Officer is responsible for the arrangements that allow the palace to function without appearing to require much effort at all. Schedules must be kept, correspondence attended to, rooms prepared and countless small matters settled before they become anyone else\'s concern. He knows who is expected, what has been arranged and which details still need attention. Most people notice the palace when something goes wrong. He is the reason so much of it goes right. In a household where everyone has somewhere to be, he knows precisely what must happen before they get there.'
           },
           {
             key: 'staff',
             name: 'The Household Staff',
             epithet: 'The People Behind the Palace',
-            registry: { belonging: 'The Household', role: 'Attendants, Maids, Cooks, Gardeners & Clerks', noted: 'Fires, rooms, papers, meals and repairs' },
-            glimpse: 'Before the household wakes, fires are lit, rooms are aired, meals are planned and halls are set in order. The quiet of the palace is built out of work that rarely draws attention to itself.'
+            registry: { belonging: 'The Household', role: 'Attendants, Maids, Cooks, Gardeners & Clerks', noted: 'Fires, rooms, papers, meals and repairs.' },
+            glimpse: 'Long before the palace fills with conversation, its day is already underway. Fires are lit, rooms are aired, breakfast is prepared, papers are carried and the first arrangements are made for the hours ahead. Cooks, maids, attendants, gardeners and clerks each have their part to play, often in places the royal family and their guests rarely think to look. They have their own routines, responsibilities and relationships, and know the palace through a side of its life few visitors ever see. The royal family may give the palace its name, but it is the people who work within it who make it a home.'
           }
         ]
       },
@@ -3573,22 +3577,22 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
             key: 'lucian',
             name: 'Lucian Fletcher',
             epithet: "The Joiner's Son",
-            registry: { belonging: 'The Academy', role: 'Academy Student · Son of Tobias Fletcher', noted: 'Mended grey jumper, scar along jaw, pencil by ear' },
-            glimpse: 'Broad-shouldered, slightly stooped and plain-spoken, Lucian knows wood from the yard side before it ever reaches a lecture room—and he is comfortable saying plainly when he does not know something.'
+            registry: { belonging: 'The Academy', role: 'Academy Student · Son of Tobias Fletcher', noted: 'Mended grey jumper, scar along his jaw, pencil tucked behind his ear.' },
+            glimpse: 'Broad-shouldered, slightly stooped and plain-spoken, Lucian has a practical understanding of wood that begins long before it reaches a lecture room. He knows the work behind the materials discussed in the Academy, and he is just as comfortable admitting what he does not know as explaining what he does. He has little patience for making simple things sound complicated and no particular desire to impress people with what he knows. There is something refreshingly straightforward about him, though straightforward does not necessarily mean easy to read. Lucian rarely tries to appear more interesting than he is. That may be precisely what makes him difficult to overlook.'
           },
           {
             key: 'tobias',
             name: 'Tobias Fletcher',
             epithet: 'The Joiner',
-            registry: { belonging: 'The Academy & River Trade', role: 'Joiner · Timber Yard by River Siding', noted: 'Palace woodwork; knows what is truly finished' },
-            glimpse: 'Broad, grey-haired and unhurried, Tobias works a timber yard beside the river siding and has done woodwork for the palace itself, where a joint either holds or it does not.'
+            registry: { belonging: 'The Academy & River Trade', role: 'Joiner · Timber Yard by River Siding', noted: 'Palace woodwork; knows when a piece is truly finished.' },
+            glimpse: 'Broad, grey-haired and rarely in a hurry, Tobias has spent much of his life working with wood at the timber yard beside the river siding. He has supplied and worked on pieces for the palace itself, where fine appearances count for little if a joint will not hold. He knows the difference between something that looks finished and something that has been properly made, and he is not easily persuaded to call a job complete before it is ready. His work may find its way into the finest rooms in Norwyn, but Tobias has never been one to mistake a grand room for a measure of a man\'s worth.'
           },
           {
             key: 'seminar',
             name: 'The Thursday Seminar',
             epithet: 'The Students',
-            registry: { belonging: 'The Academy', role: 'Sokha Vann, Sabine Roque & Teodor Vasc', noted: 'Shared room, separate habits and opinions' },
-            glimpse: 'Around the Thursday table sit Sokha Vann, Sabine Roque and Teodor Vasc—each bringing different habits, sharpness and amusement to the same room without becoming alike.'
+            registry: { belonging: 'The Academy', role: 'Sokha Vann, Sabine Roque & Teodor Vasc', noted: 'One shared room, three sets of habits and opinions.' },
+            glimpse: 'Around the Thursday table sit Sokha Vann, Sabine Roque and Teodor Vasc. They share a room, but rarely approach anything in quite the same way. Each brings a different kind of sharpness, a particular sense of humour and opinions that are not always easily set aside. There are conversations that wander, disagreements that last longer than expected and moments of amusement that make little sense to anyone outside the room. They have learned to share the space without needing to become alike. After all, knowing someone well does not mean agreeing with them. Sometimes, it simply means knowing exactly how to disagree.'
           }
         ]
       },
@@ -3599,15 +3603,15 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
             key: 'brask',
             name: 'Minister Brask',
             epithet: 'The Minister of Transport',
-            registry: { belonging: 'Government', role: 'Transport, Carriage & Wharf', noted: 'Three daughters; busy office; warm moments' },
-            glimpse: 'A substantial man with a busy office and three daughters, Brask deals with transport and wharf affairs that rarely grow simpler simply by being talked through.'
+            registry: { belonging: 'Government', role: 'Transport, Carriage & Wharf', noted: 'Three daughters, a busy office and a softer side that occasionally escapes him.' },
+            glimpse: 'A substantial man with a crowded office and three daughters, Brask spends much of his working life dealing with transport and wharf affairs, where one arrangement can lead to several more and a straightforward matter rarely stays that way for long. He is accustomed to difficult discussions, practical decisions and people who arrive expecting an immediate answer. At home, however, the demands are rather different. His daughters have their own ideas about how things should be done, and they are not always impressed by the authority he carries elsewhere. He may know how to keep the kingdom\'s transport moving, but three daughters have taught him that some things cannot be managed by schedule or instruction.'
           },
           {
             key: 'fenn-vireak',
             name: 'Mr. Fenn and Vireak',
             epithet: 'The Photographers',
-            registry: { belonging: 'Public Life', role: 'Royal Portrait Photographer & Assistant', noted: 'Light, stillness and quiet words not in Norwynian' },
-            glimpse: 'While Fenn guides royal portraits, Vireak watches the light and murmurs softly in another tongue—working where people must hold still and trust the frame.'
+            registry: { belonging: 'Public Life', role: 'Royal Portrait Photographer & Assistant', noted: 'Light, stillness and quiet words in a language not spoken in Norwyn.' },
+            glimpse: 'Fenn guides the royal portraits, arranging each pose and waiting for the expression that belongs in the finished photograph. Beside him, Vireak watches the light, makes small adjustments and occasionally murmurs something in another tongue. Their work requires patience, a careful eye and the cooperation of people who are not always accustomed to standing still. Together, they capture the royal family as it wishes to be seen, though a photograph can preserve only so much of a person. The camera records what is placed before it. What lies beyond the frame is another matter.'
           },
           {
             key: 'ives',
@@ -3774,14 +3778,11 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
 
       const btnStyle = "background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);";
 
-      if (activeWorldIndex === null) {
+     if (activeWorldIndex === null) {
         const listHtml = WORLD_SECTIONS.map((sec, idx) => `
-          <button type="button" onclick="selectWorldSection(${idx})" style="${btnStyle}" class="w-full text-left p-4 md:p-5 border rounded-lg hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer flex items-center justify-between gap-4">
-            <div>
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80 block mb-1">${escapeHtmlText(sec.label)}</span>
-              <h3 class="font-display text-sm md:text-base font-semibold tracking-wider">${escapeHtmlText(sec.title)}</h3>
-            </div>
-            <span class="font-sans text-[9px] uppercase tracking-[0.2em] text-theme-accent shrink-0">Read</span>
+          <button type="button" onclick="selectWorldSection(${idx})" style="${btnStyle}" class="w-full text-left p-4 md:p-5 border rounded-lg hover:border-theme-accent hover:text-theme-text transition-all shadow-sm cursor-pointer">
+            <span class="font-sans text-[9px] tracking-[0.25em] uppercase opacity-80 block mb-1">${escapeHtmlText(sec.label)}</span>
+            <h3 class="font-display text-sm md:text-base font-semibold tracking-wider">${escapeHtmlText(sec.title)}</h3>
           </button>
         `).join('');
 
@@ -5886,10 +5887,9 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
         html = '<div class="marble-wrap"><div class="marble" style="--hue:' + b.hue + 'deg"></div></div>';
       } else if (k === 'back') {
         html = '<div class="blind"><div class="emb">' + EMB[b.emb]() + '</div></div>';
-      } else if (k === 'title') {
+    } else if (k === 'title') {
         var tp = b.titlePage || {};
         html = '<div class="pg"><div class="center-pg">' +
-          '<p class="tp-small">Here begins the book</p><div class="rule"></div>' +
           '<h4 class="tp-title">' + esc(tp.title || b.short) + '</h4>' +
           '<div class="tp-emb">' + EMB[b.emb]() + '</div>' +
           (tp.subtitle ? '<p class="tp-by">' + esc(tp.subtitle) + '</p>' : '') +
