@@ -3202,7 +3202,10 @@
     let activePersonKey = null;
     let baseFontSize = 18;
     let isIvoryMode = false;
-    let chapterTransitionTimer = null;
+   let chapterTransitionTimer = null;
+let chapterReadTimer = null;
+
+const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
 
     const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
 
@@ -3216,7 +3219,34 @@
       }
     }
 
-    function markChapterAsRead(era, index) {
+    function function clearChapterReadTimer() {
+  if (chapterReadTimer) {
+    clearTimeout(chapterReadTimer);
+    chapterReadTimer = null;
+  }
+}
+
+function scheduleChapterAsRead(era, index) {
+  clearChapterReadTimer();
+  const chapterKey = `${era}:${index}`;
+
+  // Skip starting a timer if this chapter is already marked Read
+  if (getReadChaptersSet().has(chapterKey)) return;
+
+  chapterReadTimer = setTimeout(() => {
+    // Only mark as read if the user is still in the reader view on this exact chapter
+    const readerView = document.getElementById('view-reader');
+    const isReaderVisible = readerView && !readerView.classList.contains('view-hidden');
+    if (isReaderVisible && activeEra === era && activeChapterIndex === index) {
+      try {
+        const set = getReadChaptersSet();
+        set.add(chapterKey);
+        localStorage.setItem(READ_STORAGE_KEY, JSON.stringify(Array.from(set)));
+      } catch (e) {}
+    }
+    chapterReadTimer = null;
+  }, 30000); // 30 seconds
+}(era, index) {
       try {
         const set = getReadChaptersSet();
         set.add(`${era}:${index}`);
@@ -4183,8 +4213,9 @@
       }
 
       const eraChapters = NOVEL_CHAPTERS[activeEra];
-     const rawRead = JSON.parse(localStorage.getItem('queen_usman_read_chapters') || '[]');
-    const readSet = new Set(rawRead.filter(id => String(id).startsWith(activeEra + ':')));
+     const readSet = new Set(
+  Array.from(getReadChaptersSet()).filter(id => String(id).startsWith(activeEra + ':'))
+);
       const btnStyle = "background-color: var(--primary-btn-bg); color: var(--primary-btn-text); border-color: var(--primary-btn-border);";
 
       if (activeChapterIndex === null) {
