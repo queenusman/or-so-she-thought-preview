@@ -3823,12 +3823,11 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
         `;
       }).join('');
 
-      container.innerHTML = `
-        <div class="mb-5">
-          <div id="worldHybridStrip" class="nw-hybrid-strip" role="group" aria-label="Norwyn section selector">
-            ${stripHtml}
-          </div>
-        </div>
+     container.innerHTML = `
+         <div class="book-card mx-auto w-full p-7 md:p-9 rounded-sm space-y-4 font-serif prose-body text-theme-text text-justify mb-8">
+            <div class="text-center mb-8">
+              <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">A Kingdom Beyond the Familiar</h2>
+            </div>
 
         <article id="worldReadingArticle" class="book-card p-7 md:p-11 rounded-sm font-serif prose-body">
           ${buildWorldArticleHtml(sec)}
@@ -5131,7 +5130,7 @@ What remains of the individual when the person they have learned to be is examin
         emb: 'ziggurat',
         hue: 340,
         titlePage: {
-          title: 'The Second Book: The Royal History and Laws of Norwyn',
+          title: 'The Royal History and Laws of Norwyn',
           subtitle: 'The Crown, the Royal Lineage, and the Laws of Nine Queens',
           author: '',
           desc: ''
