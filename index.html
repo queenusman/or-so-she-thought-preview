@@ -2324,7 +2324,7 @@
     </div>
   </footer>
 
-  <!-- ==================== SELF-CONTAINED CINEMATIC OPENING SCRIPT ==================== -->
+ <!-- ==================== SELF-CONTAINED CINEMATIC OPENING SCRIPT ==================== -->
   <script>
   (function () {
     var root = document.documentElement;
@@ -2437,7 +2437,15 @@
     var AC = window.AudioContext || window.webkitAudioContext;
     var ctx = null, master = null, verb = null, noise = null, brown = null;
     var modA = null, modB = null, ambSrcs = [];
-    var soundPref = 'unset', ambOn = false, ambG = null, ambT = 0;
+    var soundPref = 'unset';
+    var SOUND_PREF_KEY = 'qu_intro_sound_pref';
+    try {
+      var savedSoundPref = localStorage.getItem(SOUND_PREF_KEY);
+      if (savedSoundPref === 'on' || savedSoundPref === 'off') {
+        soundPref = savedSoundPref;
+      }
+    } catch (e) {}
+    var ambOn = false, ambG = null, ambT = 0;
 
     function audio() {
       if (!AC) return null;
@@ -2770,20 +2778,60 @@
       bright(reduce ? 0.12 : 0.25);
     }
 
-    function setSound(on) {
-      soundPref = on ? 'on' : 'off';
+    function syncSoundBtn() {
+      var isOn = soundPref !== 'off';
       if (soundBtn) {
-        soundBtn.setAttribute('aria-pressed', String(on));
-        soundBtn.setAttribute('aria-label', on ? 'Turn sound off' : 'Turn sound on');
-        soundBtn.textContent = '\u266a ' + (on ? 'Sound on' : 'Sound off');
+        soundBtn.setAttribute('aria-pressed', String(isOn));
+        soundBtn.setAttribute('aria-label', isOn ? 'Turn sound off' : 'Turn sound on');
+        soundBtn.textContent = '\u266a ' + (isOn ? 'Sound on' : 'Sound off');
       }
+    }
+
+    function setSound(on, persist) {
+      soundPref = on ? 'on' : 'off';
+      if (persist) {
+        try {
+          localStorage.setItem(SOUND_PREF_KEY, soundPref);
+        } catch (e) {}
+      }
+      syncSoundBtn();
       if (on) startAmb();
       else stopAmb(0.3);
     }
 
+    function attemptAutoSound() {
+      if (soundPref === 'off' || leaving) return;
+      if (!ambOn) startAmb();
+      if (ctx && ctx.state === 'suspended') {
+        try {
+          ctx.resume().then(function () {
+            if (soundPref !== 'off' && !ambOn && !leaving) startAmb();
+          }).catch(function () {});
+        } catch (e) {}
+      }
+    }
+
+    function unlockSoundOnGesture() {
+      if (soundPref === 'off' || leaving) return;
+      if (!audio()) return;
+      if (ctx && ctx.state === 'suspended') {
+        try { ctx.resume(); } catch (e) {}
+      }
+      if (!ambOn) startAmb();
+    }
+
+    syncSoundBtn();
+    if (soundPref !== 'off') {
+      attemptAutoSound();
+      intro.addEventListener('pointerdown', unlockSoundOnGesture, { passive: true });
+      intro.addEventListener('keydown', unlockSoundOnGesture);
+    }
+
     if (soundBtn) {
-      soundBtn.addEventListener('click', function () {
-        setSound(soundPref !== 'on');
+      soundBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var nextOn = soundPref === 'off';
+        setSound(nextOn, true);
       });
     }
 
@@ -2792,7 +2840,11 @@
       if (document.hidden) {
         try { ctx.suspend(); } catch (e) {}
       } else if (soundPref !== 'off') {
-        try { ctx.resume(); } catch (e) {}
+        try {
+          ctx.resume().then(function () {
+            if (soundPref !== 'off' && !ambOn && !leaving) startAmb();
+          }).catch(function () {});
+        } catch (e) {}
       }
     });
 
