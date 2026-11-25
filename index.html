@@ -5552,672 +5552,790 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
       }
     ];
 
-    function mulberry(a) {
-      return function () {
-        a |= 0;
-        a = a + 0x6D2B79F5 | 0;
-        var t = Math.imul(a ^ a >>> 15, 1 | a);
-        t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-        return ((t ^ t >>> 14) >>> 0) / 4294967296;
-      };
-    }
+    function mulberry(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+    function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 
-    function esc(s) {
-      return String(s || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-    }
-
-    /* ── Web Audio Page-Turn Synthesizer ───────────────────── */
     var ac = null, noiseBuf = null, bus = null, soundOn = true;
-
     function audio() {
       if (!ac) {
         try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; }
-        var sr = ac.sampleRate, len = sr * 2;
-        noiseBuf = ac.createBuffer(1, len, sr);
-        var d = noiseBuf.getChannelData(0);
-        for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
-
-        var irLen = Math.floor(sr * (coarse ? 0.8 : 1.5));
-        var ir = ac.createBuffer(2, irLen, sr);
+        var sr = ac.sampleRate, len = sr * 2; noiseBuf = ac.createBuffer(1, len, sr);
+        var d = noiseBuf.getChannelData(0); for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+        var irLen = Math.floor(sr * (window.matchMedia('(pointer: coarse)').matches ? .8 : 1.5)), ir = ac.createBuffer(2, irLen, sr);
         for (var c = 0; c < 2; c++) {
           var ch = ir.getChannelData(c), lp = 0;
-          for (var j = 0; j < irLen; j++) {
-            lp += (Math.random() * 2 - 1 - lp) * 0.35;
-            ch[j] = lp * Math.pow(1 - j / irLen, 3.2);
-          }
+          for (var j = 0; j < irLen; j++) { lp += (Math.random() * 2 - 1 - lp) * .35; ch[j] = lp * Math.pow(1 - j / irLen, 3.2); }
         }
-        var conv = ac.createConvolver();
-        conv.buffer = ir;
-        var wetGain = ac.createGain();
-        wetGain.gain.value = 0.3;
-        var dry = ac.createGain();
-        dry.gain.value = 1;
+        var conv = ac.createConvolver(); conv.buffer = ir;
+        var wetGain = ac.createGain(); wetGain.gain.value = .3;
+        var dry = ac.createGain(); dry.gain.value = 1;
         var inp = ac.createGain();
-        inp.connect(dry);
-        inp.connect(conv);
-        conv.connect(wetGain);
-        dry.connect(ac.destination);
-        wetGain.connect(ac.destination);
+        inp.connect(dry); inp.connect(conv); conv.connect(wetGain);
+        dry.connect(ac.destination); wetGain.connect(ac.destination);
         bus = inp;
       }
-      if (ac.state === 'suspended') {
-        try { ac.resume(); } catch (e) {}
-      }
+      if (ac.state === 'suspended') { try { ac.resume(); } catch (e) {} }
       return ac;
     }
-
     function burst(o) {
-      if (!soundOn) return;
-      var a = audio();
-      if (!a) return;
-      var t = a.currentTime + (o.at || 0), dur = o.dur || 0.3;
-      var src = a.createBufferSource();
-      src.buffer = noiseBuf;
-      var f = a.createBiquadFilter();
-      f.type = o.type || 'bandpass';
-      f.Q.value = o.q || 0.8;
-      f.frequency.setValueAtTime(o.f0 || 3000, t);
-      f.frequency.exponentialRampToValueAtTime(o.f1 || o.f0 || 3000, t + dur);
-      var g = a.createGain();
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.exponentialRampToValueAtTime(o.gain || 0.15, t + (o.attack || 0.01));
+      if (!soundOn) return; var a = audio(); if (!a) return;
+      var t = a.currentTime + (o.at || 0), dur = o.dur || .3;
+      var src = a.createBufferSource(); src.buffer = noiseBuf;
+      var f = a.createBiquadFilter(); f.type = o.type || 'bandpass'; f.Q.value = o.q || .8;
+      f.frequency.setValueAtTime(o.f0 || 3000, t); f.frequency.exponentialRampToValueAtTime(o.f1 || o.f0 || 3000, t + dur);
+      var g = a.createGain(); g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(o.gain || .15, t + (o.attack || .01));
       g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
       var pan = a.createStereoPanner ? a.createStereoPanner() : null;
-      src.connect(f);
-      f.connect(g);
-      if (pan) {
-        pan.pan.value = o.pan || 0;
-        g.connect(pan);
-        pan.connect(bus);
-      } else {
-        g.connect(bus);
-      }
-      src.start(t, Math.random() * 1.5);
-      src.stop(t + dur + 0.05);
+      src.connect(f); f.connect(g);
+      if (pan) { pan.pan.value = o.pan || 0; g.connect(pan); pan.connect(bus); } else g.connect(bus);
+      src.start(t, Math.random() * 1.5); src.stop(t + dur + .05);
     }
-
     function thump(freq, gain, dur, at) {
-      if (!soundOn) return;
-      var a = audio();
-      if (!a) return;
-      var t = a.currentTime + (at || 0);
-      var o = a.createOscillator();
-      o.type = 'sine';
-      o.frequency.setValueAtTime(freq, t);
-      o.frequency.exponentialRampToValueAtTime(freq * 0.55, t + dur);
-      var g = a.createGain();
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.exponentialRampToValueAtTime(gain, t + 0.01);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
-      o.connect(g);
-      g.connect(bus);
-      o.start(t);
-      o.stop(t + dur + 0.05);
+      if (!soundOn) return; var a = audio(); if (!a) return; var t = a.currentTime + (at || 0);
+      var o = a.createOscillator(); o.type = 'sine'; o.frequency.setValueAtTime(freq, t); o.frequency.exponentialRampToValueAtTime(freq * .55, t + dur);
+      var g = a.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(gain, t + .01); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(bus); o.start(t); o.stop(t + dur + .05);
     }
-
     function rnd(a, b) { return a + Math.random() * (b - a); }
-
     function pageSound(k) {
       k = k || 1;
-      var side = rnd(-0.25, 0.25);
-      burst({ type: 'bandpass', f0: 700, f1: 2400, q: 0.55, dur: 0.75 * k, gain: 0.075, attack: 0.25 * k, pan: side });
-      burst({ type: 'highpass', f0: 2600, f1: 5200, q: 0.4, dur: 0.6 * k, gain: 0.02, attack: 0.25 * k, pan: side });
+      var side = rnd(-.25, .25);
+      burst({ type: 'bandpass', f0: 700, f1: 2400, q: .55, dur: .75 * k, gain: .075, attack: .25 * k, pan: side });
+      burst({ type: 'highpass', f0: 2600, f1: 5200, q: .4, dur: .6 * k, gain: .02, attack: .25 * k, pan: side });
       var n = 8 + Math.floor(Math.random() * 5);
       for (var i = 0; i < n; i++) {
-        var at = rnd(0.04, 0.55) * k;
-        burst({ at: at, dur: rnd(0.01, 0.03), f0: rnd(2400, 6500), q: rnd(1.5, 3.5), gain: rnd(0.025, 0.075) * (1 - at * 0.5), attack: 0.002, pan: side + rnd(-0.1, 0.1) });
+        var at = rnd(.04, .55) * k;
+        burst({ at: at, dur: rnd(.01, .03), f0: rnd(2400, 6500), q: rnd(1.5, 3.5), gain: rnd(.025, .075) * (1 - at * .5), attack: .002, pan: side + rnd(-.1, .1) });
       }
-      burst({ at: 0.8 * k, type: 'lowpass', f0: 520, f1: 190, q: 0.5, dur: 0.16, gain: 0.13, attack: 0.012, pan: side });
-      burst({ at: 0.81 * k, dur: 0.05, f0: 3200, f1: 1500, q: 1.4, gain: 0.04, attack: 0.004, pan: side });
-      thump(68, 0.08, 0.14, 0.8 * k);
+      burst({ at: .8 * k, type: 'lowpass', f0: 520, f1: 190, q: .5, dur: .16, gain: .13, attack: .012, pan: side });
+      burst({ at: .81 * k, dur: .05, f0: 3200, f1: 1500, q: 1.4, gain: .04, attack: .004, pan: side });
+      thump(68, .08, .14, .8 * k);
     }
 
-    /* ── DOM References ────────────────────────────────────── */
-    var caseEl = $('#scriptoriumCase');
-    var readerSub = $('#archiveReaderView');
-    var stageEl = $('#scriptoriumStage');
-    var bookEl = $('#scriptoriumBook');
-    var rTitleEl = $('#scriptoriumRTitle');
-    var hintEl = $('#scriptoriumHint');
-    var toShelfBtn = $('#toShelfBtn');
-    var coverBtn = $('#scriptoriumCoverBtn');
-    var soundBtns = [$('#bSoundShelf'), $('#bSoundReader')].filter(Boolean);
-
-    function syncSoundButtons() {
-      soundBtns.forEach(function (btn) {
-        btn.setAttribute('aria-pressed', String(soundOn));
-      });
-    }
-
-    soundBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        soundOn = !soundOn;
-        syncSoundButtons();
-      });
-    });
-
-    /* ── Bookcase Construction ─────────────────────────────── */
     var FILL = ['#49474E', '#574B55', '#46414B', '#5E525C', '#3E3D43', '#524952', '#4D4249', '#5A5056', '#444048', '#564750', '#4A4652'];
-
-    function band(top) {
-      return '<i class="band" style="top:' + top + '%"></i>';
+    var POS = [3, 6, 4, 6];
+    function band(top) { return '<i class="band" style="top:' + top + '%"></i>'; }
+    function mkFiller(rnd) {
+      var w = 2.2 + rnd() * 3.2, h = 14 + rnd() * 8;
+      var el = document.createElement('div'); el.className = 'scriptorium-spine'; el.setAttribute('aria-hidden', 'true');
+      el.style.setProperty('--w', w.toFixed(2)); el.style.setProperty('--h', h.toFixed(2)); el.style.setProperty('--c', FILL[Math.floor(rnd() * FILL.length)]);
+      var html = ''; if (rnd() < .7) html += band(8) + band(12); if (rnd() < .5) html += band(86); if (rnd() < .3) html += band(46);
+      el.innerHTML = html; return { el: el, w: w };
     }
-
-    function mkFiller(rng) {
-      var w = 2.4 + rng() * 3.0;
-      var h = 14 + rng() * 7.5;
-      var el = document.createElement('div');
-      el.className = 'scriptorium-spine';
-      el.setAttribute('aria-hidden', 'true');
-      el.style.setProperty('--w', w.toFixed(2));
-      el.style.setProperty('--h', h.toFixed(2));
-      el.style.setProperty('--c', FILL[Math.floor(rng() * FILL.length)]);
-      var html = '';
-      if (rng() < 0.7) html += band(8) + band(12);
-      if (rng() < 0.5) html += band(86);
-      if (rng() < 0.3) html += band(46);
-      el.innerHTML = html;
-      return { el: el, w: w };
-    }
-
     function mkReal(b) {
-      var slot = document.createElement('div');
-      slot.className = 'scriptorium-slot';
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'scriptorium-spine real';
-      btn.dataset.book = b.id;
+      var slot = document.createElement('div'); slot.className = 'scriptorium-slot';
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'scriptorium-spine real'; btn.dataset.book = b.id;
       btn.setAttribute('aria-label', 'Take ' + b.short + ' (' + b.who + ') from the shelf');
-      btn.style.setProperty('--w', 9);
-      btn.style.setProperty('--h', 23);
-      btn.style.setProperty('--c', b.spine);
-      btn.innerHTML =
-        band(6) + band(10) + band(88) + band(92) +
-        '<span class="st" style="font-size:calc(var(--u) * ' + b.fs + ')">' + b.spineTitle + '</span>';
-      var plate = document.createElement('div');
-      plate.className = 'scriptorium-plate';
-      plate.textContent = b.plate;
-      slot.appendChild(btn);
-      slot.appendChild(plate);
-      btn.addEventListener('click', function () {
-        pullBook(b, slot);
-      });
+      btn.style.setProperty('--w', 9); btn.style.setProperty('--h', 23); btn.style.setProperty('--c', b.spine);
+      btn.innerHTML = band(6) + band(10) + band(88) + band(92) + '<span class="st" style="font-size:calc(var(--u) * ' + b.fs + ')">' + b.spineTitle + '</span>';
+      var plate = document.createElement('div'); plate.className = 'scriptorium-plate'; plate.textContent = b.plate;
+      slot.appendChild(btn); slot.appendChild(plate);
+      btn.addEventListener('click', function () { pullBook(b, slot, btn); });
       return slot;
     }
-
-    function updateCaseUnit() {
-      if (!caseEl) return;
-      var w = caseEl.clientWidth || 880;
-      var u = Math.max(5.2, Math.min(8.4, w / 108));
-      caseEl.style.setProperty('--u', u.toFixed(2) + 'px');
-    }
-
     function buildCase() {
-      if (!caseEl) return;
+      var caseEl = $('#scriptoriumCase'); if (!caseEl) return;
       caseEl.innerHTML = '';
-      updateCaseUnit();
-
-      var rng = mulberry(1724);
-      var isNarrow = (caseEl.clientWidth || window.innerWidth) < 620;
-      var rows = isNarrow
-        ? [[BOOKS[0], BOOKS[1]], [BOOKS[2], BOOKS[3]]]
-        : [BOOKS.slice()];
-      var targetUnits = isNarrow ? 54 : 98;
-
-      rows.forEach(function (rowBooks) {
-        var shelf = document.createElement('div');
-        shelf.className = 'scriptorium-shelf';
-        var row = document.createElement('div');
-        row.className = 'scriptorium-row';
-        row.style.gap = '2px';
-        row.style.justifyContent = 'center';
-
-        var realUnits = rowBooks.length * 9.5;
-        var fillerBudget = Math.max(12, targetUnits - realUnits);
-        var slotsCount = rowBooks.length + 1;
-        var perGap = fillerBudget / slotsCount;
-
-        for (var i = 0; i < slotsCount; i++) {
-          var used = 0;
-          while (used < perGap - 2.5) {
-            var f = mkFiller(rng);
-            row.appendChild(f.el);
-            used += f.w + 0.3;
-          }
-          if (i < rowBooks.length) {
-            row.appendChild(mkReal(rowBooks[i]));
-          }
+      var hostW = caseEl.parentElement ? caseEl.parentElement.clientWidth : window.innerWidth;
+      var U = Math.max(5.2, Math.min(8.8, hostW * 0.0095));
+      caseEl.style.setProperty('--u', U + 'px');
+      BOOKS.forEach(function (b, si) {
+        var rnd = mulberry(101 + si * 37);
+        var shelf = document.createElement('div'); shelf.className = 'scriptorium-shelf';
+        var row = document.createElement('div'); row.className = 'scriptorium-row';
+        var board = document.createElement('div'); board.className = 'scriptorium-plank';
+        shelf.appendChild(row); shelf.appendChild(board); caseEl.appendChild(shelf);
+        var avail = Math.max(240, (row.clientWidth || (hostW - 60)) - 2 * 1.2 * U), used = 0;
+        for (var i = 0; i < POS[si]; i++) { var f = mkFiller(rnd); row.appendChild(f.el); used += f.w * U; }
+        row.appendChild(mkReal(b)); used += 9 * U;
+        var guard = 0;
+        while (used < avail - 2 * U && guard++ < 60) {
+          var g = mkFiller(rnd); if (used + g.w * U > avail) break;
+          row.appendChild(g.el); used += g.w * U;
         }
-
-        var plank = document.createElement('div');
-        plank.className = 'scriptorium-plank';
-        plank.setAttribute('aria-hidden', 'true');
-
-        shelf.appendChild(row);
-        shelf.appendChild(plank);
-        caseEl.appendChild(shelf);
       });
     }
 
-    /* ── Pagination & 3D Leaf Reader ───────────────────────── */
-    var activeBook = null;
-    var leaves = [];
-    var curLeaf = 0;
-    var isSingle = false;
-    var hintTimer = null;
+    var archiveReaderView = $('#archiveReaderView'), stage = $('#scriptoriumStage'), bookEl = $('#scriptoriumBook'), hintEl = $('#scriptoriumHint');
+    var cur = null, sides = [], leaves = [], s = 0, layout = 'spread', pw = 300, lastBtn = null, hintTimer = null;
+    var tipShown = false, lastW = 0, closing = false, busyUntil = 0, animTimer = null, closeTimer = null;
 
-    function showHint(msg) {
-      if (!hintEl) return;
-      hintEl.textContent = msg;
-      hintEl.classList.add('on');
-      clearTimeout(hintTimer);
-      hintTimer = setTimeout(function () {
-        hintEl.classList.remove('on');
-      }, 3400);
-    }
+    function wantSingle() { return window.innerWidth < 720 || window.innerHeight < 460; }
+    function single() { return layout === 'single'; }
+    function fOf(x) { return single() ? x : Math.ceil(x / 2); }
 
-    function parseBodyBlocks(bodyText) {
-      var lines = String(bodyText || '').split('\n');
-      var blocks = [];
-      for (var i = 0; i < lines.length; i++) {
-        var line = lines[i].trim();
-        if (!line) continue;
-        if (line.indexOf('#### ') === 0) {
-          blocks.push({ type: 'h3', text: line.slice(5).trim() });
-        } else if (line.indexOf('### ') === 0) {
-          blocks.push({ type: 'h2', text: line.slice(4).trim() });
-        } else if (line.indexOf('## ') === 0) {
-          blocks.push({ type: 'h1', text: line.slice(3).trim() });
-        } else {
-          blocks.push({ type: 'p', text: line });
-        }
+    function paperFox(el, seed) {
+      var r = mulberry(seed * 7919 + 13), n = 3 + Math.floor(r() * 4), h = '';
+      for (var i = 0; i < n; i++) {
+        var sz = 3 + r() * 9;
+        h += '<i class="fox" style="left:' + (r() * 92).toFixed(1) + '%;top:' + (r() * 92).toFixed(1) + '%;width:' + sz.toFixed(1) + '%;height:' + (sz * .72).toFixed(1) + '%;opacity:' + (.35 + r() * .5).toFixed(2) + '"></i>';
       }
-      return blocks;
+      el.insertAdjacentHTML('afterbegin', h);
     }
 
-    function paginateBlocks(blocks, pageW, pageH, fontSize) {
+    function parseBodyItems(bodyText) {
+      return String(bodyText || '')
+        .split(/\n+/)
+        .map(function (ln) { return ln.trim(); })
+        .filter(Boolean)
+        .map(function (ln) {
+          if (ln.startsWith('## ')) return { kind: 'bh1', text: ln.slice(3).trim() };
+          if (ln.startsWith('### ')) return { kind: 'bh2', text: ln.slice(4).trim() };
+          if (ln.startsWith('#### ')) return { kind: 'bh3', text: ln.slice(5).trim() };
+          return { kind: 'p', text: ln };
+        });
+    }
+
+    function buildBlockElement(blk, isDropCap) {
+      if (blk.kind === 'bh1') return '<div class="bh1">' + esc(blk.text) + '</div>';
+      if (blk.kind === 'bh2') return '<div class="bh2">' + esc(blk.text) + '</div>';
+      if (blk.kind === 'bh3') return '<div class="bh3">' + esc(blk.text) + '</div>';
+      return '<p' + (isDropCap ? ' class="first"' : '') + '>' + esc(blk.text) + '</p>';
+    }
+
+    function getStageDimensions() {
+      var W = stage.clientWidth || (stage.parentElement ? stage.parentElement.clientWidth : Math.min(window.innerWidth - 16, 1100));
+      var H = stage.clientHeight || Math.max(540, Math.min(820, window.innerHeight * 0.78));
+      return { W: Math.max(280, W), H: Math.max(420, H) };
+    }
+
+    function measureAndPaginate(b, isOneSheet) {
+      var rawItems = parseBodyItems(b.body);
       var probe = document.createElement('div');
-      probe.style.cssText =
-        'position:fixed;left:-9999px;top:0;visibility:hidden;' +
-        'width:' + Math.max(180, pageW) + 'px;' +
-        'font-family:"Newsreader",Georgia,serif;' +
-        'font-size:' + fontSize + 'px;' +
-        'line-height:1.5;text-align:justify;';
+      probe.className = 'scriptorium-book' + (isOneSheet ? ' sg' : '');
+      probe.style.position = 'fixed';
+      probe.style.left = '-99999px';
+      probe.style.top = '0';
+      probe.style.visibility = 'hidden';
+      probe.style.pointerEvents = 'none';
+
+      var dims = getStageDimensions();
+      if (isOneSheet) {
+        probe.style.width = dims.W + 'px';
+        probe.style.height = dims.H + 'px';
+        probe.style.fontSize = Math.max(16, Math.min(19.5, dims.W * 0.044)).toFixed(2) + 'px';
+      } else {
+        var ratio = 7 / 5;
+        var pWidth = Math.max(210, Math.floor(Math.min((dims.W - 44) / 2, (dims.H - 44) / ratio)));
+        probe.style.width = (2 * pWidth) + 'px';
+        probe.style.height = Math.round(pWidth * ratio) + 'px';
+        probe.style.fontSize = (pWidth * .044).toFixed(2) + 'px';
+      }
+
+      var leaf = document.createElement('div');
+      leaf.className = 'leaf';
+      leaf.style.left = isOneSheet ? '0' : '50%';
+      leaf.style.width = isOneSheet ? '100%' : '50%';
+      leaf.style.height = '100%';
+
+      var face = document.createElement('div');
+      face.className = 'face paper front';
+      face.style.visibility = 'visible';
+
+      var pg = document.createElement('div');
+      pg.className = 'pg';
+
+      var rh = document.createElement('div');
+      rh.className = 'rh';
+      rh.textContent = b.short;
+
+      var tx = document.createElement('div');
+      tx.className = 'tx';
+      tx.setAttribute('lang', 'en');
+
+      var ft = document.createElement('div');
+      ft.className = 'ft';
+      ft.innerHTML = '<span>1</span>';
+
+      pg.appendChild(rh);
+      pg.appendChild(tx);
+      pg.appendChild(ft);
+      face.appendChild(pg);
+      leaf.appendChild(face);
+      probe.appendChild(leaf);
       document.body.appendChild(probe);
 
+      var queue = rawItems.map(function (it) { return { kind: it.kind, text: it.text, cont: false }; });
       var pages = [];
-      var curHtml = '';
-      var prevWasHeading = true;
+      var currentItems = [];
+      var currentRunning = 'Archival Chronicle';
+      var nextSectionDrop = true;
 
-      function flush() {
-        if (curHtml) {
-          pages.push(curHtml);
-          curHtml = '';
-        }
+      tx.innerHTML = '';
+
+      function fitsNow() {
+        return tx.scrollHeight <= tx.clientHeight + 1;
       }
 
-      for (var i = 0; i < blocks.length; i++) {
-        var b = blocks[i];
-        var piece = '';
-        if (b.type === 'h1') {
-          piece = '<div class="bh1" style="font-family:Cinzel,Georgia,serif;font-size:1.06em;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin:.55em 0 .25em;padding-bottom:.18em;">' + esc(b.text) + '</div>';
-          prevWasHeading = true;
-        } else if (b.type === 'h2') {
-          piece = '<div class="bh2" style="font-family:Cinzel,Georgia,serif;font-size:.88em;font-weight:600;letter-spacing:.09em;text-transform:uppercase;margin:.62em 0 .18em;">' + esc(b.text) + '</div>';
-          prevWasHeading = true;
-        } else if (b.type === 'h3') {
-          piece = '<div class="bh3" style="font-family:\'Cormorant Garamond\',Georgia,serif;font-style:italic;font-weight:600;font-size:.98em;margin:.08em 0 .45em;">' + esc(b.text) + '</div>';
-          prevWasHeading = true;
+      while (queue.length > 0) {
+        var item = queue[0];
+        if (item.kind === 'bh1' || item.kind === 'bh2') {
+          currentRunning = item.text;
+        }
+
+        var useDrop = (item.kind === 'p') && nextSectionDrop && !item.cont;
+        var htmlPiece = buildBlockElement(item, useDrop);
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = htmlPiece;
+        var node = tempDiv.firstElementChild;
+        tx.appendChild(node);
+
+        if (fitsNow()) {
+          currentItems.push({ kind: item.kind, text: item.text, dropCap: useDrop, running: currentRunning });
+          if (item.kind === 'bh1' || item.kind === 'bh2') {
+            nextSectionDrop = true;
+          } else if (item.kind === 'p') {
+            nextSectionDrop = false;
+          }
+          queue.shift();
         } else {
-          var cls = prevWasHeading ? ' class="first"' : '';
-          piece = '<p' + cls + ' style="margin:0 0 .64em;">' + esc(b.text) + '</p>';
-          prevWasHeading = false;
-        }
+          tx.removeChild(node);
 
-        probe.innerHTML = curHtml + piece;
-        if (probe.scrollHeight > pageH && curHtml) {
-          flush();
-          probe.innerHTML = piece;
+          if (item.kind === 'p') {
+            var words = item.text.split(/\s+/);
+            var lo = 1, hi = words.length, best = 0;
+            while (lo <= hi) {
+              var mid = (lo + hi) >> 1;
+              var testDiv = document.createElement('div');
+              testDiv.innerHTML = buildBlockElement({ kind: 'p', text: words.slice(0, mid).join(' ') }, useDrop);
+              var testNode = testDiv.firstElementChild;
+              tx.appendChild(testNode);
+              if (fitsNow()) {
+                best = mid;
+                lo = mid + 1;
+              } else {
+                hi = mid - 1;
+              }
+              tx.removeChild(testNode);
+            }
+
+            if (best > 0) {
+              var headText = words.slice(0, best).join(' ');
+              currentItems.push({ kind: 'p', text: headText, dropCap: useDrop, running: currentRunning });
+              nextSectionDrop = false;
+              pages.push({ r: currentRunning, items: currentItems });
+              currentItems = [];
+              tx.innerHTML = '';
+
+              var remText = words.slice(best).join(' ');
+              queue.shift();
+              if (remText) {
+                queue.unshift({ kind: 'p', text: remText, cont: true });
+              }
+            } else if (currentItems.length > 0) {
+              pages.push({ r: currentRunning, items: currentItems });
+              currentItems = [];
+              tx.innerHTML = '';
+            } else {
+              currentItems.push({ kind: 'p', text: item.text, dropCap: useDrop, running: currentRunning });
+              nextSectionDrop = false;
+              pages.push({ r: currentRunning, items: currentItems });
+              currentItems = [];
+              tx.innerHTML = '';
+              queue.shift();
+            }
+          } else if (currentItems.length > 0) {
+            pages.push({ r: currentRunning, items: currentItems });
+            currentItems = [];
+            tx.innerHTML = '';
+          } else {
+            currentItems.push({ kind: 'p', text: item.text, dropCap: false, running: currentRunning });
+            if (item.kind === 'bh1' || item.kind === 'bh2') {
+              nextSectionDrop = true;
+            }
+            queue.shift();
+          }
         }
-        curHtml += piece;
       }
-      flush();
-      probe.remove();
+
+      if (currentItems.length > 0) {
+        pages.push({ r: currentRunning, items: currentItems });
+      }
+
+      document.body.removeChild(probe);
       return pages;
     }
 
-    function renderCoverFront(b) {
-      var embSvg = (EMB[b.emb] || EMB.crown)();
-      return (
-        '<div class="cv">' +
-          '<div class="cv-fr"><div class="cv-fr2">' +
-            '<div class="emb">' + embSvg + '</div>' +
-            '<div class="orn"></div>' +
-            '<h4 class="cv-t foil" style="font-size:' + b.tsz + 'em">' + esc(b.cover) + '</h4>' +
-            '<div class="orn"></div>' +
-            '<p class="cv-a foil">' + esc(b.author) + '</p>' +
-          '</div></div>' +
-        '</div>'
-      );
+    function makeSides(b, isOneSheet) {
+      var a = [{ kind: 'cover' }, { kind: 'inside' }, { kind: 'title' }, { kind: 'verso' }];
+      var paginatedPages = measureAndPaginate(b, isOneSheet);
+      paginatedPages.forEach(function (pgObj, idx) {
+        a.push({ kind: 'text', r: pgObj.r, items: pgObj.items, pgNum: idx + 1 });
+      });
+      if (!isOneSheet && a.length % 2) a.push({ kind: 'finis' });
+      a.push({ kind: 'endR' }); a.push({ kind: 'back' });
+      return a;
     }
 
-    function renderEndpaper(b) {
-      return '<div class="marble-wrap"><div class="marble" style="--hue:' + (b.hue || 0) + 'deg"></div></div>';
-    }
-
-    function renderTitlePage(b) {
-      var tp = b.titlePage || {};
-      var embSvg = (EMB[b.emb] || EMB.crown)();
-      return (
-        '<div class="pg"><div class="center-pg">' +
-          '<p class="tp-small">The Norwyn Archives</p>' +
-          '<div class="tp-emb">' + embSvg + '</div>' +
+    function makeFace(side, i, b, one) {
+      var d = document.createElement('div'), isBack = !one && i % 2 === 1, k = side.kind;
+      var cls = 'face ' + (isBack ? 'back' : 'front');
+      if (k === 'cover' || k === 'inside' || k === 'endR' || k === 'back') cls += ' board'; else cls += ' paper';
+      d.className = cls;
+      var html = '';
+      if (k === 'cover') {
+        html = '<div class="cv"><div class="cv-fr"><div class="cv-fr2">' +
+          '<div class="orn"></div>' +
+          '<h4 class="foil cv-t" style="font-size:calc(' + b.tsz + 'em * var(--k, 1))">' + esc(b.cover) + '</h4>' +
+          '<div class="emb">' + EMB[b.emb]() + '</div>' +
+          '<div class="orn"></div>' +
+          '<p class="foil cv-a">' + esc(b.author) + '</p>' +
+          '</div></div></div>';
+      } else if (k === 'inside' || k === 'endR') {
+        html = '<div class="marble-wrap"><div class="marble" style="--hue:' + b.hue + 'deg"></div></div>';
+      } else if (k === 'back') {
+        html = '<div class="blind"><div class="emb">' + EMB[b.emb]() + '</div></div>';
+      } else if (k === 'title') {
+        var tp = b.titlePage || {};
+        html = '<div class="pg"><div class="center-pg">' +
+          '<p class="tp-small">Here begins the book</p><div class="rule"></div>' +
           '<h4 class="tp-title">' + esc(tp.title || b.short) + '</h4>' +
+          '<div class="tp-emb">' + EMB[b.emb]() + '</div>' +
           (tp.subtitle ? '<p class="tp-by">' + esc(tp.subtitle) + '</p>' : '') +
-          '<div class="rule"></div>' +
-          (tp.author ? '<p class="tp-small">' + esc(tp.author) + '</p>' : '') +
-          (tp.desc ? '<p class="tp-meta">' + esc(tp.desc) + '</p>' : '') +
-        '</div></div>'
-      );
+          (tp.author ? '<p class="tp-meta">' + esc(tp.author) + '</p>' : '') +
+          (tp.desc ? '<div class="rule"></div><p class="tp-meta">' + esc(tp.desc) + '</p>' : '') +
+          '</div></div>';
+      } else if (k === 'verso') {
+        var metaRowsHtml = (b.versoMeta || []).map(function (entry) {
+          return '<div><strong>' + esc(entry.label) + ':</strong> ' + esc(entry.value) + '</div>';
+        }).join('');
+        html = '<div class="pg"><div class="center-pg">' +
+          '<div class="stamp">EX LIBRIS<br>NORWYN ARCHIVE</div>' +
+          '<div class="verso-meta">' + metaRowsHtml + '</div>' +
+          '</div></div>';
+      } else if (k === 'finis') {
+        html = '<div class="pg"><div class="center-pg"><div class="rule"></div><p class="finis">Finis</p><div class="rule"></div></div></div>';
+      } else if (k === 'text') {
+        var blocksHtml = (side.items || []).map(function (it) {
+          return buildBlockElement(it, Boolean(it.dropCap));
+        }).join('');
+        var head = one
+          ? '<span>' + esc(b.short) + '</span><span>' + esc(side.r) + '</span>'
+          : '<span>' + (isBack ? esc(b.short) : esc(side.r)) + '</span>';
+        var numStr = side.pgNum ? String(side.pgNum) : String(i);
+        var foot = '<span>' + esc(numStr) + '</span>';
+        html = '<div class="pg"><div class="rh">' + head + '</div><div class="tx" lang="en">' + blocksHtml + '</div><div class="ft">' + foot + '</div></div>';
+      }
+      d.innerHTML = html;
+      if (!one && d.classList.contains('paper')) paperFox(d, i + b.id.length * 31);
+      return d;
     }
 
-    function renderVersoCatalog(b) {
-      var rows = (b.versoMeta || []).map(function (m) {
-        return '<div><strong>' + esc(m.label) + ':</strong> ' + esc(m.value) + '</div>';
-      }).join('');
-      return (
-        '<div class="pg"><div class="center-pg">' +
-          '<p class="tp-small">Archival Record</p>' +
-          '<div class="verso-meta">' + rows + '</div>' +
-          '<div class="stamp">ROYAL<br>ARCHIVE<br>OF NORWYN</div>' +
-        '</div></div>'
-      );
+    function buildSpread(b) {
+      sides = makeSides(b, false);
+      bookEl.innerHTML = '';
+      var shadow = document.createElement('div'); shadow.className = 'shadow'; bookEl.appendChild(shadow);
+      var sl = document.createElement('div'); sl.className = 'slab l'; var sr = document.createElement('div'); sr.className = 'slab r';
+      bookEl.appendChild(sl); bookEl.appendChild(sr);
+      bookEl.slabL = sl; bookEl.slabR = sr;
+      leaves = []; var N = sides.length / 2;
+      for (var k = 0; k < N; k++) {
+        var el = document.createElement('div'); el.className = 'leaf';
+        el.style.zIndex = N - k; el.style.transitionDuration = FLIP + 'ms';
+        el.appendChild(makeFace(sides[2 * k], 2 * k, b, false));
+        el.appendChild(makeFace(sides[2 * k + 1], 2 * k + 1, b, false));
+        bookEl.appendChild(el);
+        leaves.push({ el: el, flipped: false });
+      }
+    }
+    function buildSingle(b) {
+      var full = makeSides(b, true);
+      sides = [full[0]].concat(full.slice(2, full.length - 2));
+      bookEl.innerHTML = '';
+      leaves = [];
+      sides.forEach(function (sd, k) {
+        var el = document.createElement('div'); el.className = 'leaf'; el.style.zIndex = sides.length - k;
+        el.appendChild(makeFace(sd, k, b, true));
+        bookEl.appendChild(el);
+        leaves.push({ el: el, flipped: false });
+      });
+    }
+    function build(b) {
+      bookEl.className = 'scriptorium-book' + (single() ? ' sg' : '');
+      archiveReaderView.dataset.layout = layout;
+      bookEl.style.setProperty('--cv', b.cv); bookEl.style.setProperty('--cv2', b.cv2);
+      bookEl.style.setProperty('--fd', (single() ? FLIP_S : FLIP) + 'ms');
+      bookEl.style.setProperty('--k', single() ? '1.25' : '1');
+      bookEl.style.setProperty('--tx', '0px'); bookEl.style.setProperty('--ty', '0px'); bookEl.style.setProperty('--rx', '0deg');
+      if (single()) buildSingle(b); else buildSpread(b);
     }
 
-    function renderColophon(b) {
-      return (
-        '<div class="pg"><div class="center-pg">' +
-          '<p class="finis">Finis</p>' +
-          '<div class="rule"></div>' +
-          '<p class="note">' + esc(b.short) + '<br>' + esc(b.plate) + '</p>' +
-        '</div></div>'
-      );
+    function applyState() {
+      clearTimeout(animTimer);
+      var f = fOf(s), N = leaves.length, last = sides.length - 1;
+      bookEl.classList.toggle('closed-cover', !single() && s === 0);
+      bookEl.classList.toggle('closed-back', !single() && s === last);
+      leaves.forEach(function (lf, i) {
+        var el = lf.el, want = i < f; lf.flipped = want;
+        el.style.transition = 'none';
+        el.classList.remove('turning', 'under', 'over');
+        el.classList.toggle('flipped', want);
+        if (single()) {
+          el.style.display = (i >= s - 1 && i <= s + 2) ? '' : 'none';
+          el.style.zIndex = want ? (i + 1) : (N - i);
+        } else {
+          el.style.zIndex = want ? (i + 1) : (N - i);
+        }
+      });
+      void bookEl.offsetWidth;
+      leaves.forEach(function (lf) {
+        lf.el.style.transition = '';
+        lf.el.style.transitionDuration = (single() ? FLIP_S : FLIP) + 'ms';
+      });
     }
 
-    function renderTextFace(b, html, pageNum) {
-      return (
-        '<div class="pg">' +
-          '<div class="rh"><span>' + esc(b.short) + '</span></div>' +
-          '<div class="tx">' + html + '</div>' +
-          '<div class="ft"><span>— ' + pageNum + ' —</span></div>' +
-        '</div>'
-      );
+    function sizeBook() {
+      var dims = getStageDimensions();
+      if (single()) {
+        pw = dims.W;
+        bookEl.style.width = dims.W + 'px'; bookEl.style.height = dims.H + 'px';
+        bookEl.style.fontSize = Math.max(16, Math.min(19.5, dims.W * 0.044)).toFixed(2) + 'px';
+      } else {
+        var ratio = 7 / 5;
+        pw = Math.max(210, Math.floor(Math.min((dims.W - 44) / 2, (dims.H - 44) / ratio)));
+        bookEl.style.width = (2 * pw) + 'px'; bookEl.style.height = Math.round(pw * ratio) + 'px';
+        bookEl.style.fontSize = (pw * .044).toFixed(2) + 'px';
+        position(); thickness();
+      }
     }
 
-    function renderBackBoard(b) {
-      var embSvg = (EMB[b.emb] || EMB.crown)();
-      return '<div class="blind"><div class="emb">' + embSvg + '</div></div>';
+    function position() {
+      if (!cur || single()) return;
+      var last = sides.length - 1, x = 0;
+      if (s === 0) x = -pw / 2; else if (s === last) x = pw / 2;
+      bookEl.style.setProperty('--tx', x + 'px');
     }
-
-    function updateBookPose() {
-      if (!bookEl) return;
-      if (isSingle) {
-        bookEl.classList.remove('closed-cover', 'closed-back');
-        bookEl.style.removeProperty('--tx');
+    function thickness() {
+      if (single() || !bookEl.slabR) return;
+      var last = sides.length - 1;
+      bookEl.classList.toggle('closed-cover', s === 0);
+      bookEl.classList.toggle('closed-back', s === last);
+      if (s === 0 || s === last) {
+        bookEl.slabR.style.opacity = 0;
+        bookEl.slabR.style.boxShadow = 'none';
+        bookEl.slabL.style.opacity = 0;
+        bookEl.slabL.style.boxShadow = 'none';
         return;
       }
-      var bw = bookEl.offsetWidth || 800;
-      if (curLeaf === 0) {
-        bookEl.classList.add('closed-cover');
-        bookEl.classList.remove('closed-back');
-        bookEl.style.setProperty('--tx', (-bw * 0.25).toFixed(0) + 'px');
-      } else if (curLeaf >= leaves.length) {
-        bookEl.classList.add('closed-back');
-        bookEl.classList.remove('closed-cover');
-        bookEl.style.setProperty('--tx', (bw * 0.25).toFixed(0) + 'px');
-      } else {
-        bookEl.classList.remove('closed-cover', 'closed-back');
-        bookEl.style.setProperty('--tx', '0px');
+      var n = leaves.length, f = Math.ceil(s / 2);
+      function sh(count, dir) {
+        var t = Math.min(9, Math.round(count * 1.3)), out = [];
+        for (var i = 0; i < t; i++) out.push((dir * (i + 1)) + 'px ' + (i + 1) + 'px 0 ' + (i % 2 ? '#EAE4DC' : '#D5CDC2'));
+        return out.join(',');
       }
+      bookEl.slabR.style.boxShadow = sh(n - f, 1); bookEl.slabL.style.boxShadow = sh(f, -1);
+      bookEl.slabR.style.opacity = (f >= n) ? 0 : 1; bookEl.slabL.style.opacity = (f <= 0) ? 0 : 1;
     }
 
-    function updateZIndices() {
-      var total = leaves.length;
-      for (var i = 0; i < total; i++) {
-        var leaf = leaves[i];
-        if (leaf.classList.contains('turning')) {
-          leaf.style.zIndex = total + 10;
-        } else if (i < curLeaf) {
-          leaf.style.zIndex = i + 1;
-        } else {
-          leaf.style.zIndex = total - i;
-        }
-      }
+    function flip(i, want, delay, orderIdx) {
+      var lf = leaves[i], N = leaves.length; if (lf.flipped === want) return; lf.flipped = want;
+      lf.el.style.zIndex = N + 10 - (orderIdx || 0);
+      setTimeout(function () { lf.el.classList.add('turning'); lf.el.classList.toggle('flipped', want); }, delay || 0);
+      setTimeout(function () { lf.el.classList.remove('turning'); lf.el.style.zIndex = want ? (i + 1) : (N - i); }, (delay || 0) + FLIP + 40);
     }
 
-    function buildBook(b) {
-      if (!bookEl || !stageEl) return;
-      activeBook = b;
-      if (rTitleEl) rTitleEl.textContent = b.short;
-
-      var sw = stageEl.clientWidth || 840;
-      var sh = stageEl.clientHeight || 640;
-      isSingle = sw < 680;
-      if (readerSub) readerSub.setAttribute('data-layout', isSingle ? 'single' : 'spread');
-
-      var bw, bh, fs;
-      if (isSingle) {
-        bw = sw;
-        bh = sh;
-        fs = Math.max(15, Math.min(18, sw / 24));
-        bookEl.className = 'scriptorium-book sg nt';
-        bookEl.style.width = bw + 'px';
-        bookEl.style.height = bh + 'px';
-        bookEl.style.fontSize = fs + 'px';
-        bookEl.style.setProperty('--fd', (FLIP_S / 1000) + 's');
+    function turnSingle(from, d) {
+      clearTimeout(animTimer);
+      var D = FLIP_S, N = leaves.length, lf, beneath;
+      if (d > 0) {
+        lf = leaves[from]; beneath = leaves[from + 1];
+        if (!lf || !beneath) { applyState(); return 120; }
+        lf.el.style.display = '';
+        beneath.el.style.display = '';
+        lf.el.style.zIndex = N + 8;
+        beneath.el.style.zIndex = N + 2;
+        lf.flipped = true;
+        lf.el.classList.add('turning', 'flipped');
+        beneath.el.classList.add('under');
+        animTimer = setTimeout(function () {
+          lf.el.classList.remove('turning');
+          beneath.el.classList.remove('under');
+          applyState();
+        }, D + 30);
       } else {
-        bh = Math.min(sh - 56, 620);
-        bw = Math.min(sw - 48, Math.round(bh * 1.44));
-        bh = Math.round(bw / 1.44);
-        fs = Math.max(13, Math.min(17, bw / 54));
-        bookEl.className = 'scriptorium-book nt';
-        bookEl.style.width = bw + 'px';
-        bookEl.style.height = bh + 'px';
-        bookEl.style.fontSize = fs + 'px';
-        bookEl.style.setProperty('--fd', (FLIP / 1000) + 's');
+        lf = leaves[from - 1]; beneath = leaves[from];
+        if (!lf || !beneath) { applyState(); return 120; }
+        lf.el.style.transition = 'none';
+        lf.el.style.display = '';
+        lf.el.style.zIndex = N + 8;
+        beneath.el.style.display = '';
+        beneath.el.style.zIndex = N + 2;
+        lf.el.classList.add('flipped');
+        void lf.el.offsetWidth;
+        lf.el.style.transition = '';
+        lf.flipped = false;
+        lf.el.classList.add('turning');
+        beneath.el.classList.add('over');
+        lf.el.classList.remove('flipped');
+        animTimer = setTimeout(function () {
+          lf.el.classList.remove('turning');
+          beneath.el.classList.remove('over');
+          applyState();
+        }, D + 30);
       }
+      return D + 40;
+    }
 
-      var textW = isSingle ? Math.min(bw - 44, 520) : (bw * 0.5) * 0.805;
-      var textH = isSingle ? (bh - 125) : (bh * 0.76);
-      var blocks = parseBodyBlocks(b.body);
-      var textPages = paginateBlocks(blocks, textW, textH, fs);
-
-      var faces = [];
-      faces.push({ type: 'board', html: renderCoverFront(b) });
-      if (!isSingle) faces.push({ type: 'board', html: renderEndpaper(b) });
-      faces.push({ type: 'paper', html: renderTitlePage(b) });
-      faces.push({ type: 'paper', html: renderVersoCatalog(b) });
-
-      for (var p = 0; p < textPages.length; p++) {
-        faces.push({ type: 'paper', html: renderTextFace(b, textPages[p], p + 1) });
-      }
-
-      faces.push({ type: 'paper', html: renderColophon(b) });
-      if (!isSingle) {
-        if (faces.length % 2 === 1) {
-          faces.push({ type: 'paper', html: '<div class="pg"></div>' });
-        }
-        faces.push({ type: 'board', html: renderEndpaper(b) });
-        faces.push({ type: 'board', html: renderBackBoard(b) });
-      }
-
-      bookEl.innerHTML =
-        '<div class="shadow"></div>' +
-        '<div class="slab l"></div>' +
-        '<div class="slab r"></div>';
-
-      leaves = [];
-      if (isSingle) {
-        for (var s = 0; s < faces.length; s++) {
-          var leafS = document.createElement('div');
-          leafS.className = 'leaf';
-          var fS = faces[s];
-          leafS.innerHTML = '<div class="face ' + fS.type + ' front" style="--cv:' + b.cv + ';--cv2:' + b.cv2 + '">' + fS.html + '</div>';
-          bookEl.appendChild(leafS);
-          leaves.push(leafS);
-        }
+    function go(ns, force) {
+      if (!cur) return 0;
+      var now = Date.now();
+      if (!force && (closing || now < busyUntil)) return 0;
+      var last = sides.length - 1;
+      ns = Math.max(0, Math.min(last, ns)); if (ns === s) return 0;
+      var prevS = s, prevF = fOf(s); s = ns; var f = fOf(s), total;
+      if (single()) {
+        if (Math.abs(s - prevS) === 1) total = turnSingle(prevS, s - prevS);
+        else { applyState(); total = 180; }
       } else {
-        for (var i = 0; i < faces.length; i += 2) {
-          var frontF = faces[i];
-          var backF = faces[i + 1] || { type: 'paper', html: '<div class="pg"></div>' };
-          var leaf = document.createElement('div');
-          leaf.className = 'leaf';
-          leaf.innerHTML =
-            '<div class="face ' + frontF.type + ' front" style="--cv:' + b.cv + ';--cv2:' + b.cv2 + '">' + frontF.html + '</div>' +
-            '<div class="face ' + backF.type + ' back" style="--cv:' + b.cv + ';--cv2:' + b.cv2 + '">' + backF.html + '</div>';
-          bookEl.appendChild(leaf);
-          leaves.push(leaf);
-        }
+        var stagger = Math.abs(f - prevF) > 1 ? (closing ? 95 : 85) : 0, c = 0, todo = [];
+        for (var i = 0; i < leaves.length; i++) { if (leaves[i].flipped !== (i < f)) todo.push(i); }
+        if (f < prevF) todo.reverse();
+        todo.forEach(function (i, idx) { flip(i, i < f, stagger * c++, idx); });
+        total = stagger * Math.max(0, c - 1) + FLIP + 50;
+        position(); thickness();
       }
+      busyUntil = now + total;
+      hideHint();
+      if (single() || f !== prevF) pageSound(single() ? .68 : 1);
+      if (!tipShown && s > 0) {
+        tipShown = true;
+        var tip = single() ? 'Swipe left/right or tap the left or right half to turn pages.' : (coarse ? 'Tap the right page to turn forward, the left to go back.' : 'Click a page, or use the arrow keys.');
+        setTimeout(function () { if (!closing) showHint(tip, 4500); }, total + 200);
+      }
+      return total;
+    }
+    function next() {
+      if (single()) return go(s + 1);
+      var f = Math.min(leaves.length, Math.ceil(s / 2) + 1);
+      go(f === leaves.length ? 2 * f - 1 : 2 * f);
+    }
+    function prev() {
+      if (single()) return go(s - 1);
+      var f = Math.ceil(s / 2) - 1; if (f < 0) return; go(2 * f);
+    }
 
-      curLeaf = 0;
-      updateZIndices();
-      updateBookPose();
+    function showHint(t, ms) {
+      hintEl.textContent = t; hintEl.classList.add('on'); clearTimeout(hintTimer);
+      if (ms) hintTimer = setTimeout(function () { hintEl.classList.remove('on'); }, ms);
+    }
+    function hideHint() { clearTimeout(hintTimer); hintEl.classList.remove('on'); }
+
+    function pullBook(b, slot, btn) {
+      if (slot.classList.contains('pulling')) return;
+      lastBtn = btn; slot.classList.add('pulling'); audio();
+      setTimeout(function () {
+        openBook(b);
+        slot.classList.remove('pulling');
+        var shell = $('#scriptoriumShell');
+        if (shell) shell.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, reduce ? 20 : 320);
+    }
+    function openBook(b) {
+      clearTimeout(closeTimer);
+      closing = false; busyUntil = 0; cur = b; s = 0; tipShown = false;
+      layout = wantSingle() ? 'single' : 'spread';
+      document.body.dataset.archiveMode = 'reader';
+      $('#scriptoriumRTitle').textContent = b.short + (b.who ? ' · ' + b.who : '');
+      $('#toShelfBtn').disabled = false;
+      $('#scriptoriumCoverBtn').disabled = false;
       requestAnimationFrame(function () {
-        if (bookEl) bookEl.classList.remove('nt');
-      });
-    }
-
-    function flipForward() {
-      if (!activeBook || curLeaf >= leaves.length) return;
-      var idx = curLeaf;
-      var leaf = leaves[idx];
-      curLeaf++;
-      leaf.classList.add('turning', 'flipped');
-      updateZIndices();
-      updateBookPose();
-      pageSound(isSingle ? 0.72 : 1);
-      setTimeout(function () {
-        leaf.classList.remove('turning');
-        updateZIndices();
-      }, isSingle ? FLIP_S : FLIP);
-    }
-
-    function flipBackward() {
-      if (!activeBook || curLeaf <= 0) return;
-      curLeaf--;
-      var idx = curLeaf;
-      var leaf = leaves[idx];
-      leaf.classList.add('turning');
-      leaf.classList.remove('flipped');
-      updateZIndices();
-      updateBookPose();
-      pageSound(isSingle ? 0.72 : 1);
-      setTimeout(function () {
-        leaf.classList.remove('turning');
-        updateZIndices();
-      }, isSingle ? FLIP_S : FLIP);
-    }
-
-    function resetToCover() {
-      if (!activeBook) return;
-      curLeaf = 0;
-      leaves.forEach(function (leaf) {
-        leaf.classList.remove('flipped', 'turning');
-      });
-      updateZIndices();
-      updateBookPose();
-      pageSound(0.65);
-    }
-
-    function pullBook(b, slotEl) {
-      if (slotEl) slotEl.classList.add('pulling');
-      pageSound(0.8);
-      setTimeout(function () {
-        if (slotEl) slotEl.classList.remove('pulling');
-        document.body.setAttribute('data-archive-mode', 'reader');
-        buildBook(b);
-        showHint(coarse ? 'Tap right or left edge to turn pages' : 'Click right or left page to turn · Arrow keys supported');
-      }, reduce ? 40 : 320);
-    }
-
-    function showShelf() {
-      document.body.setAttribute('data-archive-mode', 'shelf');
-      activeBook = null;
-      buildCase();
-    }
-
-    if (toShelfBtn) {
-      toShelfBtn.addEventListener('click', showShelf);
-    }
-    if (coverBtn) {
-      coverBtn.addEventListener('click', resetToCover);
-    }
-
-    if (stageEl) {
-      stageEl.addEventListener('click', function (e) {
-        if (!activeBook) return;
-        var rect = stageEl.getBoundingClientRect();
-        var relX = (e.clientX - rect.left) / rect.width;
-        if (relX < 0.42) {
-          flipBackward();
-        } else {
-          flipForward();
+        build(b);
+        sizeBook();
+        var anim = !single();
+        if (anim) { bookEl.classList.add('nt'); bookEl.style.setProperty('--ty', '36px'); bookEl.style.setProperty('--rx', '12deg'); }
+        applyState();
+        if (anim) {
+          void bookEl.offsetWidth;
+          bookEl.classList.remove('nt');
+          bookEl.style.setProperty('--ty', '0px');
+          bookEl.style.setProperty('--rx', '0deg');
         }
+        showHint((coarse ? 'Tap' : 'Click') + ' the cover to open it.');
       });
     }
+    function closeBook() {
+      if (document.body.dataset.archiveMode !== 'reader' || closing) return;
+      closing = true; hideHint(); clearTimeout(closeTimer);
+      $('#toShelfBtn').disabled = true;
+      $('#scriptoriumCoverBtn').disabled = true;
+      var wait = 0;
+      if (s > 0) {
+        if (single()) {
+          clearTimeout(animTimer);
+          var N = leaves.length;
+          leaves.forEach(function (lf, idx) {
+            lf.el.style.display = (idx === 0 || idx === s) ? '' : 'none';
+            lf.el.classList.remove('turning', 'under', 'over');
+          });
+          var coverLeaf = leaves[0];
+          var currentLeaf = leaves[s];
+          if (currentLeaf && s !== 0) {
+            currentLeaf.el.style.zIndex = N + 4;
+            currentLeaf.flipped = false;
+            currentLeaf.el.classList.remove('flipped');
+          }
+          if (coverLeaf) {
+            coverLeaf.el.style.transition = 'none';
+            coverLeaf.el.style.display = '';
+            coverLeaf.el.style.zIndex = N + 10;
+            coverLeaf.flipped = true;
+            coverLeaf.el.classList.add('flipped');
+            void coverLeaf.el.offsetWidth;
+            coverLeaf.el.style.transition = '';
+            coverLeaf.flipped = false;
+            coverLeaf.el.classList.add('turning');
+            coverLeaf.el.classList.remove('flipped');
+            animTimer = setTimeout(function () {
+              coverLeaf.el.classList.remove('turning');
+              applyState();
+            }, FLIP_S + 30);
+          }
+          s = 0;
+          pageSound(.68);
+          wait = FLIP_S + 60;
+        } else {
+          wait = go(0, true);
+        }
+      }
+      closeTimer = setTimeout(toShelf, wait + (reduce ? 20 : 280));
+    }
+    function toShelf() {
+      closing = false;
+      $('#toShelfBtn').disabled = false;
+      $('#scriptoriumCoverBtn').disabled = false;
+      document.body.dataset.archiveMode = 'shelf';
+      hideHint();
+      buildCase();
+      if (lastBtn) setTimeout(function () { lastBtn.focus({ preventScroll: true }); }, 60);
+    }
 
-    document.addEventListener('keydown', function (e) {
-      if (document.body.getAttribute('data-archive-mode') !== 'reader' || !activeBook) return;
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        flipForward();
-      } else if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        flipBackward();
-      } else if (e.key === 'Escape') {
-        e.preventDefault();
-        showShelf();
+    function relayout() {
+      if (!cur) return false;
+      var nextSingle = wantSingle();
+      if (single() === nextSingle) return false;
+      var prevTotal = Math.max(1, sides.length - 1);
+      var ratio = s / prevTotal;
+      layout = nextSingle ? 'single' : 'spread';
+      build(cur);
+      sizeBook();
+      var newLast = sides.length - 1;
+      if (s === 0) {
+        s = 0;
+      } else if (nextSingle) {
+        s = Math.max(1, Math.min(newLast, Math.round(ratio * newLast)));
+      } else {
+        var mapped = Math.max(2, Math.min(newLast - 1, Math.round(ratio * newLast)));
+        s = mapped % 2 === 1 ? mapped + 1 : mapped;
+        if (s > newLast) s = newLast;
+      }
+      applyState();
+      return true;
+    }
+
+    var down = null;
+    stage.addEventListener('pointerdown', function (e) { down = { x: e.clientX, y: e.clientY }; });
+    stage.addEventListener('pointerup', function (e) {
+      if (!down) return;
+      var dx = e.clientX - down.x, dy = e.clientY - down.y;
+      down = null;
+      if (Math.abs(dx) > 32 && Math.abs(dx) > Math.abs(dy) * 1.1) {
+        dx < 0 ? next() : prev();
+        return;
+      }
+      if (Math.abs(dx) > 14 || Math.abs(dy) > 14) return;
+      var last = sides.length - 1;
+      if (s === 0) return next();
+      var r = stage.getBoundingClientRect(), goNext;
+      if (single()) {
+        goNext = e.clientX >= r.left + r.width * 0.48;
+      } else {
+        var br = bookEl.getBoundingClientRect();
+        goNext = e.clientX >= br.left + br.width / 2;
+      }
+      if (goNext) { if (s !== last) next(); else prev(); } else prev();
+    });
+    stage.addEventListener('pointercancel', function () { down = null; });
+    $('#scriptoriumCoverBtn').addEventListener('click', function () { go(0); });
+    $('#toShelfBtn').addEventListener('click', closeBook);
+
+    addEventListener('keydown', function (e) {
+      var viewArchive = $('#view-archive');
+      if (!viewArchive || viewArchive.classList.contains('view-hidden')) return;
+      if (document.body.dataset.archiveMode !== 'reader') return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+      else if (e.key === 'Home') { e.preventDefault(); go(0); }
+      else if (e.key === 'End') { e.preventDefault(); go(sides.length - 1); }
+      else if (e.key === 'Escape') { closeBook(); }
+    });
+
+    function syncSoundButtons() {
+      ['#bSoundShelf', '#bSoundReader'].forEach(function (sel) {
+        var btn = $(sel);
+        if (btn) btn.setAttribute('aria-pressed', String(soundOn));
+      });
+    }
+    ['#bSoundShelf', '#bSoundReader'].forEach(function (sel) {
+      var btn = $(sel);
+      if (btn) {
+        btn.addEventListener('click', function () {
+          soundOn = !soundOn;
+          syncSoundButtons();
+          if (soundOn) audio();
+        });
       }
     });
 
-    var resizeTimer = null;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        if (document.body.getAttribute('data-archive-mode') === 'reader' && activeBook) {
-          var savedRatio = leaves.length ? (curLeaf / leaves.length) : 0;
-          buildBook(activeBook);
-          var target = Math.round(savedRatio * leaves.length);
-          for (var i = 0; i < target; i++) {
-            leaves[i].classList.add('flipped');
+    var rt = null;
+    addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () {
+        if (document.body.dataset.archiveMode === 'reader') {
+          if (!relayout() && cur) {
+            var prevTotal = Math.max(1, sides.length - 1);
+            var ratio = s / prevTotal;
+            build(cur);
+            sizeBook();
+            var newLast = sides.length - 1;
+            if (s === 0) s = 0;
+            else if (single()) s = Math.max(1, Math.min(newLast, Math.round(ratio * newLast)));
+            else {
+              var mapped = Math.max(2, Math.min(newLast - 1, Math.round(ratio * newLast)));
+              s = mapped % 2 === 1 ? mapped + 1 : mapped;
+              if (s > newLast) s = newLast;
+            }
+            applyState();
           }
-          curLeaf = target;
-          updateZIndices();
-          updateBookPose();
-        } else {
-          buildCase();
         }
-      }, 160);
+        else if (window.innerWidth !== lastW) { lastW = window.innerWidth; buildCase(); }
+      }, 140);
     });
-
-    buildCase();
 
     window.ScriptoriumArchive = {
-      showShelf: showShelf,
+      showShelf: function () {
+        clearTimeout(closeTimer);
+        closing = false;
+        document.body.dataset.archiveMode = 'shelf';
+        hideHint();
+        requestAnimationFrame(function () {
+          lastW = window.innerWidth;
+          buildCase();
+        });
+      },
       reflow: function () {
-        if (document.body.getAttribute('data-archive-mode') === 'reader' && activeBook) {
-          buildBook(activeBook);
+        if (document.body.dataset.archiveMode === 'reader' && cur) {
+          sizeBook();
+          applyState();
         } else {
           buildCase();
         }
       }
     };
+
+    lastW = window.innerWidth;
+    buildCase();
   })();
   </script>
 </body>
-</html>
+</html>   
