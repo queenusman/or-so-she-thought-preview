@@ -204,24 +204,18 @@ html.qu-intro-on body {
   filter: saturate(0.76) contrast(1.05) brightness(0.82);
 }
 
-.qu-photo--right {
-  left: 50%;
-  right: 0;
-  transform-origin: right center;
-  border-left: 4px solid #0c0b0a;
-  box-shadow: inset 6px 0 14px rgba(0, 0, 0, 0.65), -6px 0 24px rgba(0, 0, 0, 0.75);
-}
-
-.qu-photo--right::before {
-  left: -100%;
-  right: 0;
+.qu-photo--left {
+  left: 0;
+  transform-origin: left center;
+  border-right: 2px solid #0c0b0a;
+  box-shadow: inset -6px 0 14px rgba(0, 0, 0, 0.65), 6px 0 24px rgba(0, 0, 0, 0.75);
 }
 
 .qu-photo--right {
   left: 50%;
   right: auto;
   transform-origin: right center;
-  border-left: 4px solid #0c0b0a;
+  border-left: 2px solid #0c0b0a;
   box-shadow: inset 6px 0 14px rgba(0, 0, 0, 0.65), -6px 0 24px rgba(0, 0, 0, 0.75);
 }
 
@@ -231,17 +225,17 @@ html.qu-intro-on body {
 }
 
 .is-opening .qu-photo--left {
-  transform: perspective(1500px) rotateY(-54deg) translateX(-3%);
-  border-right: 10px solid #090808;
-  box-shadow: 18px 0 32px rgba(0, 0, 0, 0.85);
-  filter: brightness(0.68);
+  transform: rotateY(68deg);
+  border-right: 8px solid #090808;
+  box-shadow: 24px 0 40px rgba(0, 0, 0, 0.9);
+  filter: brightness(0.62);
 }
 
-  .is-opening .qu-photo--right {
-  transform: perspective(1500px) rotateY(54deg) translateX(3%);
-  border-left: 10px solid #090808;
-  box-shadow: -18px 0 32px rgba(0, 0, 0, 0.85);
-  filter: brightness(0.68);
+.is-opening .qu-photo--right {
+  transform: rotateY(-68deg);
+  border-left: 8px solid #090808;
+  box-shadow: -24px 0 40px rgba(0, 0, 0, 0.9);
+  filter: brightness(0.62);
 }
 
 /* Light spilling out immediately as the doors open, building as they open wider */
@@ -281,6 +275,7 @@ html.qu-intro-on body {
   transform: scaleX(1.35);
   filter: blur(3px);
 }
+
 /* Restrained obsidian + champagne grading (no heavy color wash) */
 .qu-tint {
   position: absolute;
@@ -293,6 +288,7 @@ html.qu-intro-on body {
     rgba(17, 17, 17, 0.65) 100%
   );
 }
+
 .qu-glow-grade {
   position: absolute;
   inset: 0;
@@ -309,9 +305,11 @@ html.qu-intro-on body {
   aspect-ratio: 1 / 1;
   transform: translate(-50%, -50%);
 }
+
 .qu-glow {
   background: radial-gradient(closest-side, rgba(185, 168, 143, 0.24), rgba(185, 168, 143, 0.08) 45%, transparent 72%);
 }
+
 .qu-bulb {
   background: radial-gradient(closest-side, rgba(245, 241, 234, 0.72) 0%, rgba(185, 168, 143, 0.25) 45%, transparent 100%);
 }
