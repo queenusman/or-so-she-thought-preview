@@ -57,7 +57,7 @@
     /* ========================================================
        SELF-CONTAINED CINEMATIC OPENING
        ======================================================== */
-    .qu-intro {
+  .qu-intro {
       --qu-bg: #242328;
       --qu-plum: #3E3D43;
       --qu-panel: rgba(73, 71, 78, 0.88);
@@ -72,15 +72,17 @@
       position: fixed;
       inset: 0;
       z-index: 99999;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       height: 100dvh;
       background: var(--qu-bg);
       overflow: hidden;
+      touch-action: manipulation;
       color: var(--qu-text);
       font-family: 'Cormorant Garamond', Georgia, serif;
       -webkit-font-smoothing: antialiased;
-      transition: opacity 1.05s ease, visibility 0s linear 1.05s;
+      transition: opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
+                  visibility 0s linear 2.1s;
     }
     html.qu-intro-ivory .qu-intro {
       --qu-reveal: #F8F7F5;
