@@ -94,26 +94,17 @@
     html.qu-intro-on body {
       overflow: hidden;
     }
-    .qu-intro {
+   .qu-intro {
   position: fixed;
   inset: 0;
   z-index: 99999;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
-              visibility 0s linear 2s;
-}
-
-.qu-intro {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
-              visibility 0s linear 2s;
+  perspective: 1400px;
+  /* Starts fading out AFTER the door has visibly opened */
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.55s,
+              visibility 0s linear 2.4s;
 }
 
 .qu-intro.is-leaving {
@@ -127,33 +118,53 @@
   pointer-events: none;
   transition: none;
 }
-    .qu-intro.is-skipping {
-      transition-duration: 0.55s;
-    }
 
-    .qu-stage {
-      position: absolute;
-      inset: 0;
-      transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .is-opening .qu-stage {
-      transform: scale(1.26);
-    }
+.qu-intro.is-skipping {
+  transition-duration: 0.55s;
+}
 
-    .qu-scene {
-      position: absolute;
-      inset: 0;
-      animation: quFade 1.2s ease-out both, quDrift 40s ease-in-out infinite alternate;
-    }
-    @keyframes quFade {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes quDrift {
-      from { transform: scale(1); }
-      to { transform: scale(1.035) translate(-0.4%, -0.5%); }
-    }
+.qu-stage {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  will-change: transform;
+  transition: transform 1.65s cubic-bezier(0.22, 0.85, 0.36, 1);
+}
 
+.is-opening .qu-stage {
+  transform: rotateY(-62deg) scale(1.08);
+}
+
+.qu-scene {
+  position: absolute;
+  inset: 0;
+  animation: quFade 1.2s ease-out both, quDrift 40s ease-in-out infinite alternate;
+}
+
+@keyframes quFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes quDrift {
+  from { transform: scale(1); }
+  to { transform: scale(1.035) translate(-0.4%, -0.5%); }
+}
+
+@media (max-width: 768px) {
+  .qu-intro {
+    perspective: 1000px;
+  }
+
+  .qu-stage {
+    /* Slightly snappier swing on mobile so it reads clearly before the light/fade */
+    transition-duration: 1.4s;
+  }
+
+  .is-opening .qu-stage {
+    transform: rotateY(-54deg) scale(1.05);
+  }
+}
     .qu-frame {
       position: absolute;
       overflow: hidden;
@@ -2182,7 +2193,6 @@
   
       <article class="book-card p-8 md:p-12 rounded-sm space-y-6 font-serif prose-body text-theme-text text-justify">
         <div class="text-center mb-8">
-          <p class="font-sans text-[10px] tracking-[0.3em] uppercase text-theme-secondary mb-2 font-bold">The Premise</p>
           <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">Or So She Thought</h2>
         </div>
 
