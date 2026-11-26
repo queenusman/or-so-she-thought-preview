@@ -69,8 +69,7 @@
   --qu-text: #F5F1EA;
   --qu-text-muted: rgba(245, 241, 234, 0.72);
   --qu-reveal: #111111;
-  --qu-door-img: url('images/norwyn-door.jpg');
-
+  --qu-door-img: url('norwyn-door.jpg');
   display: none;
   position: fixed;
   inset: 0;
@@ -2047,7 +2046,7 @@ html.qu-intro-on body {
 
  <!-- ==================== SELF-CONTAINED CINEMATIC OPENING ==================== -->
   <div class="qu-intro" id="quIntro" role="dialog" aria-modal="true" aria-label="Welcome to Or So She Thought"
-       data-image="images/norwyn-door.jpg" data-door="50,58,24,58" data-arch="true" data-lamps="24,50,18,2.2;76,50,18,2.2">
+       data-image="norwyn-door.jpg" data-door="50,58,24,58" data-arch="true" data-lamps="24,50,18,2.2;76,50,18,2.2">
     <div class="qu-stage">
       <div class="qu-scene" aria-hidden="true">
         <div class="qu-frame">
@@ -2415,7 +2414,7 @@ html.qu-intro-on body {
  <!-- ==================== SELF-CONTAINED CINEMATIC OPENING SCRIPT ==================== -->
   <script>
   (function () {
-    const DOOR_PATH = 'images/norwyn-door.jpg';
+    const DOOR_PATH = 'norwyn-door.jpg';
     const intro = document.getElementById('quIntro');
     if (!intro) return;
 
