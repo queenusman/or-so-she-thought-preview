@@ -57,7 +57,7 @@
     /* ========================================================
        SELF-CONTAINED CINEMATIC OPENING
        ======================================================== */
-  .qu-intro {
+.qu-intro {
       --qu-bg: #242328;
       --qu-plum: #3E3D43;
       --qu-panel: rgba(73, 71, 78, 0.88);
@@ -81,8 +81,11 @@
       color: var(--qu-text);
       font-family: 'Cormorant Garamond', Georgia, serif;
       -webkit-font-smoothing: antialiased;
-      transition: opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
-                  visibility 0s linear 2.1s;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.65s,
+                  visibility 0s linear 2.55s;
     }
     html.qu-intro-ivory .qu-intro {
       --qu-reveal: #F8F7F5;
@@ -94,73 +97,60 @@
     html.qu-intro-on body {
       overflow: hidden;
     }
-  .qu-intro {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
-              visibility 0s linear 2s;
-}
 
-.qu-intro.is-leaving {
-  opacity: 0;
-  pointer-events: none;
-}
+    .qu-intro.is-leaving {
+      opacity: 0;
+      pointer-events: none;
+    }
 
-.qu-intro.is-done {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: none;
-}
+    .qu-intro.is-done {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: none;
+    }
 
-.qu-intro.is-skipping {
-  transition-duration: 0.55s;
-}
+    .qu-intro.is-skipping {
+      transition-duration: 0.55s;
+    }
 
-.qu-stage {
-  position: absolute;
-  inset: 0;
-  transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .qu-stage {
+      position: absolute;
+      inset: 0;
+      will-change: transform;
+      transition: transform 2.3s cubic-bezier(0.22, 0.85, 0.36, 1);
+    }
 
-.is-opening .qu-stage {
-  transform: scale(1.26);
-}
+    .is-opening .qu-stage {
+      transform: scale(1.26);
+    }
 
-.qu-scene {
-  position: absolute;
-  inset: 0;
-  animation: quFade 1.2s ease-out both, quDrift 40s ease-in-out infinite alternate;
-}
+    @media (max-width: 768px) {
+      .qu-stage {
+        transition-duration: 1.75s;
+      }
 
-@keyframes quFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+      .is-opening .qu-stage {
+        transform: scale(1.2);
+      }
+    }
 
-@keyframes quDrift {
-  from { transform: scale(1); }
-  to { transform: scale(1.035) translate(-0.4%, -0.5%); }
-}
+    .qu-scene {
+      position: absolute;
+      inset: 0;
+      animation: quFade 1.2s ease-out both, quDrift 40s ease-in-out infinite alternate;
+    }
 
-@media (max-width: 768px) {
-  .qu-intro {
-    perspective: 1000px;
-  }
+    @keyframes quFade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-  .qu-stage {
-    /* Slightly snappier swing on mobile so it reads clearly before the light/fade */
-    transition-duration: 1.4s;
-  }
+    @keyframes quDrift {
+      from { transform: scale(1); }
+      to { transform: scale(1.035) translate(-0.4%, -0.5%); }
+    }
 
-  .is-opening .qu-stage {
-    transform: rotateY(-54deg) scale(1.05);
-  }
-}
     .qu-frame {
       position: absolute;
       overflow: hidden;
@@ -302,7 +292,7 @@
       filter: blur(1.5px);
       opacity: 0.68;
       background: linear-gradient(180deg, rgba(248, 247, 245, 0.25), #F8F7F5 50%, rgba(226, 208, 212, 0.35));
-      transition: width 1.6s cubic-bezier(0.55, 0, 0.2, 1), opacity 1.1s ease 0.15s;
+      transition: width 1.4s cubic-bezier(0.55, 0, 0.2, 1) 0.75s, opacity 1s ease 0.75s;
       animation: quSeam 4.5s ease-in-out infinite alternate;
     }
     @keyframes quSeam {
@@ -322,7 +312,7 @@
       opacity: 0;
       transform: translate(-50%, -50%) scale(0.6);
       background: radial-gradient(closest-side, #F8F7F5 0%, rgba(244, 232, 235, 0.96) 42%, rgba(226, 208, 212, 0) 100%);
-      transition: transform 1.6s cubic-bezier(0.5, 0, 0.3, 1) 0.3s, opacity 0.85s ease 0.2s;
+      transition: transform 1.45s cubic-bezier(0.5, 0, 0.3, 1) 0.9s, opacity 0.8s ease 0.85s;
     }
     .is-opening .qu-orb {
       opacity: 1;
@@ -385,7 +375,7 @@
       pointer-events: none;
       opacity: 0;
       background: radial-gradient(ellipse at 50% 55%, #F8F7F5 0%, var(--qu-accent) 48%, var(--qu-reveal) 100%);
-      transition: opacity 1s ease 0.65s;
+      transition: opacity 0.95s ease 1.15s;
     }
     .is-opening .qu-flash {
       opacity: 1;
