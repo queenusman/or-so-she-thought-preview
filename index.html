@@ -127,7 +127,7 @@ html.qu-intro-on body {
 }
 
 .is-opening .qu-stage {
-  transform: scale(1.12);
+  transform: scale(1.08);
 }
 
 @media (max-width: 768px) {
@@ -137,7 +137,7 @@ html.qu-intro-on body {
   }
 
   .is-opening .qu-stage {
-    transform: scale(1.08);
+    transform: scale(1.05);
   }
 }
 
@@ -155,25 +155,21 @@ html.qu-intro-on body {
 
 @keyframes quDrift {
   from { transform: scale(1); }
-  to { transform: scale(1.025) translate(-0.3%, -0.4%); }
+  to { transform: scale(1.02) translate(-0.25%, -0.3%); }
 }
 
 .qu-frame {
   position: absolute;
   inset: 0;
   overflow: hidden;
+  perspective: 1600px;
+  transform-style: preserve-3d;
   background:
     radial-gradient(ellipse 46% 64% at 50% 54%, rgba(185, 168, 143, 0.14), transparent 72%),
     linear-gradient(180deg, var(--qu-charcoal) 0%, var(--qu-bg) 100%);
 }
 
-/* Split the double-door photo into left and right hinged leaves */
-.qu-stage,
-.qu-frame {
-  perspective: 1600px;
-  transform-style: preserve-3d;
-}
-
+/* Split the double-door photo into left and right thick hinged leaves */
 .qu-photo {
   position: absolute;
   top: 0;
@@ -183,10 +179,12 @@ html.qu-intro-on body {
   display: block;
   overflow: hidden;
   opacity: 1;
+  z-index: 2;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity, filter, box-shadow;
   transition: transform 2.2s cubic-bezier(0.22, 0.85, 0.25, 1),
+              box-shadow 2.2s cubic-bezier(0.22, 0.85, 0.25, 1),
               opacity 1.3s ease,
               filter 1.6s ease;
 }
@@ -208,7 +206,8 @@ html.qu-intro-on body {
 .qu-photo--left {
   left: 0;
   transform-origin: left center;
-  border-right: 1px solid rgba(17, 17, 17, 0.85);
+  border-right: 4px solid #0c0b0a;
+  box-shadow: inset -6px 0 14px rgba(0, 0, 0, 0.65), 6px 0 24px rgba(0, 0, 0, 0.75);
 }
 
 .qu-photo--left::before {
@@ -218,7 +217,8 @@ html.qu-intro-on body {
 .qu-photo--right {
   right: 0;
   transform-origin: right center;
-  border-left: 1px solid rgba(17, 17, 17, 0.85);
+  border-left: 4px solid #0c0b0a;
+  box-shadow: inset 6px 0 14px rgba(0, 0, 0, 0.65), -6px 0 24px rgba(0, 0, 0, 0.75);
 }
 
 .qu-photo--right::before {
@@ -231,16 +231,20 @@ html.qu-intro-on body {
   }
 }
 
+/* Thick hinged swing: stops at 54deg with a heavy dark door edge */
 .is-opening .qu-photo--left {
-  transform: rotateY(-78deg);
-  filter: brightness(0.55);
+  transform: perspective(1500px) rotateY(-54deg) translateX(-3%);
+  border-right: 10px solid #090808;
+  box-shadow: 18px 0 32px rgba(0, 0, 0, 0.85);
+  filter: brightness(0.68);
 }
 
 .is-opening .qu-photo--right {
-  transform: rotateY(78deg);
-  filter: brightness(0.55);
+  transform: perspective(1500px) rotateY(54deg) translateX(3%);
+  border-left: 10px solid #090808;
+  box-shadow: -18px 0 32px rgba(0, 0, 0, 0.85);
+  filter: brightness(0.68);
 }
-
 /* Restrained obsidian + champagne grading (no heavy color wash) */
 .qu-tint {
   position: absolute;
