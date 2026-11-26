@@ -516,27 +516,34 @@ html.qu-intro-on body {
 }
 
 .qu-crest {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   margin: 0 auto 1.25rem;
-  border-radius: 2px;
-  border: 1px solid var(--qu-border);
-  background: var(--qu-panel);
+  border-radius: 10px;
+  border: 1px solid rgba(245, 241, 234, 0.16);
+  background: rgba(58, 56, 62, 0.78);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--qu-secondary);
+  color: #D6D3D8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
   animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.2s both;
+}
+.qu-crest svg {
+  width: 18px;
+  height: 18px;
+  stroke: #D6D3D8;
 }
 
 .qu-eyebrow {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10.5px;
   font-weight: 500;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: var(--qu-secondary);
+  color: #9E97A6;
   margin: 0 0 0.75rem;
   animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.35s both;
 }
@@ -548,8 +555,8 @@ html.qu-intro-on body {
   font-size: clamp(2.2rem, 6.8vw, 4.5rem);
   letter-spacing: 0.22em;
   padding-left: 0.22em;
-  color: var(--qu-text);
-  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.85);
+  color: #F5F1EA;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
   animation: quRise 1.6s cubic-bezier(0.2, 0.6, 0.2, 1) 0.5s both;
 }
 
@@ -564,11 +571,11 @@ html.qu-intro-on body {
 .qu-ornament span.line {
   width: clamp(44px, 7vw, 84px);
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--qu-border), transparent);
+  background: linear-gradient(90deg, transparent, rgba(245, 241, 234, 0.2), transparent);
 }
 .qu-ornament span.star {
   font-size: 10px;
-  color: var(--qu-secondary);
+  color: #9E97A6;
   line-height: 1;
 }
 
@@ -579,8 +586,8 @@ html.qu-intro-on body {
   font-weight: 400;
   font-size: clamp(1.15rem, 2.5vw, 1.55rem);
   letter-spacing: 0.08em;
-  color: var(--qu-text-muted);
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
+  color: rgba(245, 241, 234, 0.76);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
   animation: quRise 1.6s ease 0.95s both;
 }
 
@@ -890,7 +897,6 @@ body {
   color: var(--color-accent);
   font-weight: normal;
 }
-
     /* ========================================================
        HYBRID HORIZONTAL SLIDING SELECTOR STRIP (World, Characters & Chapters)
        ======================================================== */
