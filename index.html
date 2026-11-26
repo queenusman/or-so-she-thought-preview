@@ -620,12 +620,12 @@ html.qu-intro-on body {
   bottom: max(1.2rem, env(safe-area-inset-bottom));
   background: var(--qu-panel);
   border: 1px solid var(--qu-border);
-  border-radius: 2px;
+  border-radius: 8px;
   backdrop-filter: blur(8px);
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--qu-text-muted);
@@ -635,34 +635,25 @@ html.qu-intro-on body {
 }
 .qu-sound:hover {
   color: var(--qu-text);
-  border-color: var(--qu-secondary);
+  border-color: var(--qu-accent);
+}
+.qu-sound:focus-visible {
+  outline: 1px solid var(--qu-accent);
+  outline-offset: 4px;
 }
 .is-leaving .qu-sound,
-.is-skipping .qu-sound {
+.is-skipping .qu-sound,
+.is-calibrating .qu-sound {
   opacity: 0;
   pointer-events: none;
 }
 
-.qu-skip {
-  position: absolute;
-  right: max(1.4rem, env(safe-area-inset-right));
-  bottom: max(1.2rem, env(safe-area-inset-bottom));
-  background: var(--qu-panel);
-  border: 1px solid var(--qu-border);
-  border-radius: 2px;
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--qu-text-muted);
-  padding: 0.5rem 0.9rem;
-  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.9s ease;
-  animation: quSkip 1.4s ease 1s both;
+@media (max-width: 420px) {
+  .qu-sound { letter-spacing: 0.14em; font-size: 9px; padding: 0.45rem 0.7rem; }
 }
-.qu-skip:hover {
+@media (prefers-reduced-motion: reduce) {
+  .qu-sound { animation: quSkip 1s ease both; }
+}.qu-skip:hover {
   color: var(--qu-text);
   border-color: var(--qu-secondary);
 }
