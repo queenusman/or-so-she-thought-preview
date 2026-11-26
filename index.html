@@ -172,11 +172,12 @@ html.qu-intro-on body {
 .qu-photo {
   position: absolute;
   top: 0;
+  bottom: 0;
   width: 50%;
   height: 100%;
   display: block;
   overflow: hidden;
-  opacity: 0;
+  opacity: 1;
   backface-visibility: hidden;
   will-change: transform;
   transition: opacity 1.3s ease,
@@ -188,25 +189,34 @@ html.qu-intro-on body {
   content: '';
   position: absolute;
   top: 0;
+  bottom: 0;
   width: 100vw;
   height: 100%;
-  background-image: var(--qu-door-img);
+  background-image: url('images/norwyn-door.jpg');
   background-size: cover;
   background-position: center 38%;
   background-repeat: no-repeat;
   filter: saturate(0.72) contrast(1.06) brightness(0.78);
 }
 
-.qu-photo:first-of-type,
 .qu-photo--left {
   left: 0;
   transform-origin: left center;
   border-right: 1px solid rgba(17, 17, 17, 0.85);
 }
 
-.qu-photo:first-of-type::before,
 .qu-photo--left::before {
   left: 0;
+}
+
+.qu-photo--right {
+  right: 0;
+  transform-origin: right center;
+  border-left: 1px solid rgba(17, 17, 17, 0.85);
+}
+
+.qu-photo--right::before {
+  right: 0;
 }
 
 .qu-photo:last-of-type,
