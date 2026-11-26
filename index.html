@@ -168,6 +168,12 @@ html.qu-intro-on body {
 }
 
 /* Split the double-door photo into left and right hinged leaves */
+.qu-stage,
+.qu-frame {
+  perspective: 1600px;
+  transform-style: preserve-3d;
+}
+
 .qu-photo {
   position: absolute;
   top: 0;
@@ -178,9 +184,10 @@ html.qu-intro-on body {
   overflow: hidden;
   opacity: 1;
   backface-visibility: hidden;
-  will-change: transform;
-  transition: opacity 1.3s ease,
-              transform 2.1s cubic-bezier(0.25, 0.9, 0.3, 1),
+  transform-style: preserve-3d;
+  will-change: transform, opacity, filter;
+  transition: transform 2.2s cubic-bezier(0.22, 0.85, 0.25, 1),
+              opacity 1.3s ease,
               filter 1.6s ease;
 }
 
@@ -189,13 +196,13 @@ html.qu-intro-on body {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100vw;
+  width: 200%;
   height: 100%;
   background-image: url('norwyn-door.jpg');
   background-size: cover;
-  background-position: center 38%;
+  background-position: center center;
   background-repeat: no-repeat;
-  filter: saturate(0.72) contrast(1.06) brightness(0.78);
+  filter: saturate(0.76) contrast(1.05) brightness(0.82);
 }
 
 .qu-photo--left {
@@ -218,34 +225,20 @@ html.qu-intro-on body {
   right: 0;
 }
 
-.qu-photo:last-of-type,
-.qu-photo--right {
-  right: 0;
-  transform-origin: right center;
-  border-left: 1px solid rgba(17, 17, 17, 0.85);
+@media (min-width: 900px) {
+  .qu-photo::before {
+    background-position: center 45%;
+  }
 }
 
-.qu-photo:last-of-type::before,
-.qu-photo--right::before {
-  right: 0;
-}
-
-.qu-photo.is-loaded,
-.is-loaded .qu-photo {
-  opacity: 1;
-}
-
-/* Swing left and right iron doors inward when opening */
-.is-opening .qu-photo:first-of-type,
 .is-opening .qu-photo--left {
-  transform: rotateY(74deg);
-  filter: brightness(0.45);
+  transform: rotateY(-78deg);
+  filter: brightness(0.55);
 }
 
-.is-opening .qu-photo:last-of-type,
 .is-opening .qu-photo--right {
-  transform: rotateY(-74deg);
-  filter: brightness(0.45);
+  transform: rotateY(78deg);
+  filter: brightness(0.55);
 }
 
 /* Restrained obsidian + champagne grading (no heavy color wash) */
