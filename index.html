@@ -92,11 +92,12 @@
     html.qu-intro-on body {
       overflow: hidden;
     }
-    .qu-intro.is-done {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
+    .qu-intro.is-leaving,
+.qu-intro.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
     .qu-intro.is-skipping {
       transition-duration: 0.55s;
     }
@@ -3875,15 +3876,22 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
       }).join('');
 
      container.innerHTML = `
-         <div class="book-card mx-auto w-full p-7 md:p-9 rounded-sm space-y-4 font-serif prose-body text-theme-text text-justify mb-8">
-            <div class="text-center mb-8">
-              <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">A Kingdom Beyond the Familiar</h2>
-            </div>
+  <div class="book-card mx-auto w-full p-7 md:p-9 rounded-sm space-y-4 font-serif prose-body text-theme-text text-justify mb-6">
+    <div class="text-center">
+      <h2 class="font-display text-2xl md:text-3xl text-theme-text tracking-wide font-semibold">A Kingdom Beyond the Familiar</h2>
+    </div>
+  </div>
 
-        <article id="worldReadingArticle" class="book-card p-7 md:p-11 rounded-sm font-serif prose-body">
-          ${buildWorldArticleHtml(sec)}
-        </article>
-      `;
+  <div class="mb-5">
+    <div id="worldHybridStrip" class="nw-hybrid-strip" role="group" aria-label="Norwyn section selector">
+      ${stripHtml}
+    </div>
+  </div>
+
+  <article id="worldReadingArticle" class="book-card p-7 md:p-11 rounded-sm font-serif prose-body">
+    ${buildWorldArticleHtml(sec)}
+  </article>
+`;
     }
 
     function buildPersonArticleHtml(person) {
