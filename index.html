@@ -94,17 +94,15 @@
     html.qu-intro-on body {
       overflow: hidden;
     }
-   .qu-intro {
+  .qu-intro {
   position: fixed;
   inset: 0;
   z-index: 99999;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  perspective: 1400px;
-  /* Starts fading out AFTER the door has visibly opened */
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.55s,
-              visibility 0s linear 2.4s;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
+              visibility 0s linear 2s;
 }
 
 .qu-intro.is-leaving {
@@ -126,13 +124,11 @@
 .qu-stage {
   position: absolute;
   inset: 0;
-  transform-origin: left center;
-  will-change: transform;
-  transition: transform 1.65s cubic-bezier(0.22, 0.85, 0.36, 1);
+  transition: transform 2.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-opening .qu-stage {
-  transform: rotateY(-62deg) scale(1.08);
+  transform: scale(1.26);
 }
 
 .qu-scene {
@@ -2159,7 +2155,6 @@
         <div class="book-card p-8 rounded-sm flex flex-col justify-between hover:border-theme-accent transition-all duration-300 group">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="font-sans text-[9px] tracking-[0.25em] uppercase text-theme-secondary font-bold">Section Two</span>
             </div>
             <h2 class="font-display text-xl text-theme-text mb-3 tracking-wide group-hover:text-theme-accent transition-colors font-semibold">
               Story &amp; World of Norwyn
