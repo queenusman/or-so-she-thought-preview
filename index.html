@@ -2188,7 +2188,6 @@
       <div class="text-center mb-10 space-y-2">
         <h2 class="font-display text-3xl md:text-4xl text-theme-text tracking-wide font-semibold">DISCOVER NORWYN</h2>
       </div>
-
       <div id="worldMainContainer" class="leaf-sheet"></div>
 
       <div id="world-gallery" class="mt-10 pt-8 border-t border-theme-border">
@@ -3895,20 +3894,16 @@ const READ_STORAGE_KEY = 'or_so_she_thought_read_chapters_v1';
           <h3 class="font-display text-2xl sm:text-3xl text-theme-text tracking-wide font-semibold">${escapeHtmlText(person.name)}</h3>
         </div>
 
-        <div class="border-t border-b border-theme-border-subtle py-3.5 px-4 mb-7 bg-theme-bg-subtle/50 space-y-1.5 text-sm font-sans">
-          <div class="flex flex-wrap gap-2">
-            <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Belonging</span>
-            <span class="text-theme-text-muted">${escapeHtmlText(person.registry.belonging)}</span>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Role</span>
-            <span class="text-theme-text-muted">${escapeHtmlText(person.registry.role)}</span>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold w-24 shrink-0">Noted Detail</span>
-            <span class="text-theme-text-muted">${escapeHtmlText(person.registry.noted)}</span>
-          </div>
-        </div>
+       <dl class="border-t border-b border-theme-border-subtle py-3.5 px-4 mb-7 bg-theme-bg-subtle/50 grid grid-cols-1 sm:grid-cols-[110px_1fr] gap-x-4 gap-y-2.5 items-baseline text-sm font-sans">
+  <dt class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold m-0">Belonging</dt>
+  <dd class="text-theme-text-muted leading-relaxed m-0">${escapeHtmlText(person.registry.belonging)}</dd>
+
+  <dt class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold m-0">Role</dt>
+  <dd class="text-theme-text-muted leading-relaxed m-0">${escapeHtmlText(person.registry.role)}</dd>
+
+  <dt class="text-[9px] uppercase tracking-[0.2em] text-theme-secondary font-bold m-0">Noted Detail</dt>
+  <dd class="text-theme-text-muted leading-relaxed m-0">${escapeHtmlText(person.registry.noted)}</dd>
+</dl>
 
         <p class="entry-paragraph text-theme-text">${escapeHtmlText(person.glimpse)}</p>
 
