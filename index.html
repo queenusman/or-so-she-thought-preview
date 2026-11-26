@@ -92,11 +92,38 @@
     html.qu-intro-on body {
       overflow: hidden;
     }
-    .qu-intro.is-leaving,
+    .qu-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
+              visibility 0s linear 2s;
+}
+
+.qu-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.15s,
+              visibility 0s linear 2s;
+}
+
+.qu-intro.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .qu-intro.is-done {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: none;
 }
     .qu-intro.is-skipping {
       transition-duration: 0.55s;
