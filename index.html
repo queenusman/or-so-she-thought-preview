@@ -178,7 +178,7 @@ html.qu-intro-on body {
   width: 50%;
   height: 100%;
   display: block;
-  overflow: hidden;
+  overflow: visible;
   opacity: 1;
   z-index: 2;
   backface-visibility: hidden;
@@ -226,75 +226,81 @@ html.qu-intro-on body {
 
 .is-opening .qu-photo--left {
   transform: rotateY(68deg);
-  border-right: 8px solid #090808;
-  box-shadow: 24px 0 40px rgba(0, 0, 0, 0.9);
-  filter: brightness(0.62);
+  border-right: 4px solid rgba(245, 241, 234, 0.45);
+  box-shadow: 16px 0 36px rgba(245, 241, 234, 0.28);
+  filter: brightness(1.06);
 }
 
 .is-opening .qu-photo--right {
   transform: rotateY(-68deg);
-  border-left: 8px solid #090808;
-  box-shadow: -24px 0 40px rgba(0, 0, 0, 0.9);
-  filter: brightness(0.62);
+  border-left: 4px solid rgba(245, 241, 234, 0.45);
+  box-shadow: -16px 0 36px rgba(245, 241, 234, 0.28);
+  filter: brightness(1.06);
 }
 
-/* Light spilling out immediately as the doors open, building as they open wider */
+/* Bright light spilling cleanly through the opening doors without dark shadows */
 .qu-door-light {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
+  mix-blend-mode: screen;
   opacity: 0;
-  transform: scaleX(0.12);
+  transform: scaleX(0.15);
   transform-origin: center center;
   background:
     linear-gradient(
       90deg,
-      rgba(17, 17, 17, 0) 38%,
-      rgba(245, 241, 234, 0.24) 47%,
-      rgba(245, 241, 234, 0.58) 50%,
-      rgba(245, 241, 234, 0.24) 53%,
-      rgba(17, 17, 17, 0) 62%
+      rgba(245, 241, 234, 0) 25%,
+      rgba(245, 241, 234, 0.45) 42%,
+      rgba(245, 241, 234, 0.92) 50%,
+      rgba(245, 241, 234, 0.45) 58%,
+      rgba(245, 241, 234, 0) 75%
     ),
     radial-gradient(
-      ellipse 34% 68% at 50% 52%,
-      rgba(185, 168, 143, 0.36) 0%,
-      rgba(245, 241, 234, 0.14) 48%,
-      rgba(17, 17, 17, 0) 76%
+      ellipse 52% 85% at 50% 50%,
+      rgba(245, 241, 234, 0.85) 0%,
+      rgba(185, 168, 143, 0.48) 52%,
+      rgba(245, 241, 234, 0) 82%
     );
-  filter: blur(8px);
+  filter: blur(10px);
   will-change: opacity, transform, filter;
   transition:
-    opacity 1.9s cubic-bezier(0.18, 0.85, 0.25, 1) 0s,
-    transform 2.2s cubic-bezier(0.22, 0.85, 0.25, 1) 0s,
-    filter 2.1s ease 0s;
+    opacity 1.6s cubic-bezier(0.18, 0.85, 0.25, 1) 0s,
+    transform 2.1s cubic-bezier(0.22, 0.85, 0.25, 1) 0s,
+    filter 1.8s ease 0s;
 }
 
 .is-opening .qu-door-light {
-  opacity: 0.95;
-  transform: scaleX(1.35);
-  filter: blur(3px);
+  opacity: 1;
+  transform: scaleX(1.65);
+  filter: blur(4px);
 }
 
-/* Restrained obsidian + champagne grading (no heavy color wash) */
+/* Lift dark top/bottom vignette as the doors open */
 .qu-tint {
   position: absolute;
   inset: 0;
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(17, 17, 17, 0.52) 0%,
-    rgba(17, 17, 17, 0.28) 50%,
-    rgba(17, 17, 17, 0.65) 100%
+    rgba(17, 17, 17, 0.35) 0%,
+    rgba(17, 17, 17, 0.12) 50%,
+    rgba(17, 17, 17, 0.38) 100%
   );
+  transition: opacity 1.4s ease;
+}
+
+.is-opening .qu-tint {
+  opacity: 0.15;
 }
 
 .qu-glow-grade {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  mix-blend-mode: soft-light;
-  background: radial-gradient(ellipse at 50% 52%, rgba(185, 168, 143, 0.22), transparent 68%);
+  mix-blend-mode: screen;
+  background: radial-gradient(ellipse at 50% 50%, rgba(245, 241, 234, 0.35), transparent 72%);
 }
 
 .qu-glow, .qu-bulb {
@@ -307,11 +313,11 @@ html.qu-intro-on body {
 }
 
 .qu-glow {
-  background: radial-gradient(closest-side, rgba(185, 168, 143, 0.24), rgba(185, 168, 143, 0.08) 45%, transparent 72%);
+  background: radial-gradient(closest-side, rgba(245, 241, 234, 0.45), rgba(185, 168, 143, 0.18) 50%, transparent 75%);
 }
 
 .qu-bulb {
-  background: radial-gradient(closest-side, rgba(245, 241, 234, 0.72) 0%, rgba(185, 168, 143, 0.25) 45%, transparent 100%);
+  background: radial-gradient(closest-side, rgba(245, 241, 234, 0.92) 0%, rgba(245, 241, 234, 0.4) 50%, transparent 100%);
 }
 
 .is-calibrating .qu-content,
@@ -5916,6 +5922,168 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
     lastW = window.innerWidth;
     buildCase();
   })();
-  </script>
+    buildCase();
+  })();
+
+  let norwynAudioCtx = null;
+
+  function playNorwynDoorSound() {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+
+    if (!norwynAudioCtx) {
+      norwynAudioCtx = new AudioCtx();
+    }
+    if (norwynAudioCtx.state === 'suspended') {
+      norwynAudioCtx.resume();
+    }
+
+    const now = norwynAudioCtx.currentTime;
+    const duration = 2.1;
+
+    // 1. Deep timber & latch thud (low sine pitch drop)
+    const thudOsc = norwynAudioCtx.createOscillator();
+    const thudGain = norwynAudioCtx.createGain();
+    thudOsc.type = 'sine';
+    thudOsc.frequency.setValueAtTime(115, now);
+    thudOsc.frequency.exponentialRampToValueAtTime(34, now + 0.45);
+
+    thudGain.gain.setValueAtTime(0.001, now);
+    thudGain.gain.linearRampToValueAtTime(0.45, now + 0.03);
+    thudGain.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
+
+    thudOsc.connect(thudGain);
+    thudGain.connect(norwynAudioCtx.destination);
+    thudOsc.start(now);
+    thudOsc.stop(now + 0.6);
+
+    // 2. Heavy low rumble as the doors swing wide
+    const rumbleOsc = norwynAudioCtx.createOscillator();
+    const rumbleFilter = norwynAudioCtx.createBiquadFilter();
+    const rumbleGain = norwynAudioCtx.createGain();
+
+    rumbleOsc.type = 'sawtooth';
+    rumbleOsc.frequency.setValueAtTime(52, now + 0.08);
+    rumbleOsc.frequency.linearRampToValueAtTime(38, now + duration);
+
+    rumbleFilter.type = 'lowpass';
+    rumbleFilter.frequency.setValueAtTime(140, now + 0.08);
+    rumbleFilter.frequency.exponentialRampToValueAtTime(65, now + duration);
+
+    rumbleGain.gain.setValueAtTime(0.001, now + 0.08);
+    rumbleGain.gain.linearRampToValueAtTime(0.18, now + 0.35);
+    rumbleGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+
+    rumbleOsc.connect(rumbleFilter);
+    rumbleFilter.connect(rumbleGain);
+    rumbleGain.connect(norwynAudioCtx.destination);
+    rumbleOsc.start(now + 0.08);
+    rumbleOsc.stop(now + duration + 0.05);
+
+    // 3. Subtle low iron-hinge groan
+    const creakOsc = norwynAudioCtx.createOscillator();
+    const creakFilter = norwynAudioCtx.createBiquadFilter();
+    const creakGain = norwynAudioCtx.createGain();
+
+    creakOsc.type = 'triangle';
+    creakOsc.frequency.setValueAtTime(84, now + 0.15);
+    creakOsc.frequency.linearRampToValueAtTime(68, now + 1.1);
+    creakOsc.frequency.linearRampToValueAtTime(76, now + 1.75);
+
+    creakFilter.type = 'bandpass';
+    creakFilter.frequency.setValueAtTime(160, now + 0.15);
+    creakFilter.Q.setValueAtTime(3.2, now + 0.15);
+
+    creakGain.gain.setValueAtTime(0.001, now + 0.15);
+    creakGain.gain.linearRampToValueAtTime(0.09, now + 0.4);
+    creakGain.gain.exponentialRampToValueAtTime(0.001, now + 1.85);
+
+    creakOsc.connect(creakFilter);
+  creakFilter.connect(creakGain);
+    creakGain.connect(norwynAudioCtx.destination);
+    creakOsc.start(now + 0.15);
+    creakOsc.stop(now + 1.9);
+  }
+
+  let norwynAudioCtx = null;
+
+  function playNorwynDoorSound() {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+
+    if (!norwynAudioCtx) {
+      norwynAudioCtx = new AudioCtx();
+    }
+    if (norwynAudioCtx.state === 'suspended') {
+      norwynAudioCtx.resume();
+    }
+
+    const now = norwynAudioCtx.currentTime;
+    const duration = 2.1;
+
+    // 1. Deep timber & latch thud (low sine pitch drop)
+    const thudOsc = norwynAudioCtx.createOscillator();
+    const thudGain = norwynAudioCtx.createGain();
+    thudOsc.type = 'sine';
+    thudOsc.frequency.setValueAtTime(115, now);
+    thudOsc.frequency.exponentialRampToValueAtTime(34, now + 0.45);
+
+    thudGain.gain.setValueAtTime(0.001, now);
+    thudGain.gain.linearRampToValueAtTime(0.45, now + 0.03);
+    thudGain.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
+
+    thudOsc.connect(thudGain);
+    thudGain.connect(norwynAudioCtx.destination);
+    thudOsc.start(now);
+    thudOsc.stop(now + 0.6);
+
+    // 2. Heavy low rumble as the doors swing wide
+    const rumbleOsc = norwynAudioCtx.createOscillator();
+    const rumbleFilter = norwynAudioCtx.createBiquadFilter();
+    const rumbleGain = norwynAudioCtx.createGain();
+
+    rumbleOsc.type = 'sawtooth';
+    rumbleOsc.frequency.setValueAtTime(52, now + 0.08);
+    rumbleOsc.frequency.linearRampToValueAtTime(38, now + duration);
+
+    rumbleFilter.type = 'lowpass';
+    rumbleFilter.frequency.setValueAtTime(140, now + 0.08);
+    rumbleFilter.frequency.exponentialRampToValueAtTime(65, now + duration);
+
+    rumbleGain.gain.setValueAtTime(0.001, now + 0.08);
+    rumbleGain.gain.linearRampToValueAtTime(0.18, now + 0.35);
+    rumbleGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+
+    rumbleOsc.connect(rumbleFilter);
+    rumbleFilter.connect(rumbleGain);
+    rumbleGain.connect(norwynAudioCtx.destination);
+    rumbleOsc.start(now + 0.08);
+    rumbleOsc.stop(now + duration + 0.05);
+
+    // 3. Subtle low iron-hinge groan
+    const creakOsc = norwynAudioCtx.createOscillator();
+    const creakFilter = norwynAudioCtx.createBiquadFilter();
+    const creakGain = norwynAudioCtx.createGain();
+
+    creakOsc.type = 'triangle';
+    creakOsc.frequency.setValueAtTime(84, now + 0.15);
+    creakOsc.frequency.linearRampToValueAtTime(68, now + 1.1);
+    creakOsc.frequency.linearRampToValueAtTime(76, now + 1.75);
+
+    creakFilter.type = 'bandpass';
+    creakFilter.frequency.setValueAtTime(160, now + 0.15);
+    creakFilter.Q.setValueAtTime(3.2, now + 0.15);
+
+    creakGain.gain.setValueAtTime(0.001, now + 0.15);
+    creakGain.gain.linearRampToValueAtTime(0.09, now + 0.4);
+    creakGain.gain.exponentialRampToValueAtTime(0.001, now + 1.85);
+
+    creakOsc.connect(creakFilter);
+    creakFilter.connect(creakGain);
+    creakGain.connect(norwynAudioCtx.destination);
+    creakOsc.start(now + 0.15);
+    creakOsc.stop(now + 1.9);
+  }
+</script>
 </body>
 </html>   
