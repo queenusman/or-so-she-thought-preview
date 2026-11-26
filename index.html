@@ -2070,7 +2070,27 @@ html.qu-intro-on body {
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text" data-archive-mode="shelf">
+  <body class="min-h-screen flex flex-col justify-between selection:bg-theme-secondary selection:text-theme-text" data-archive-mode="shelf">
+  <main class="stage" id="entranceStage">
+    <div class="scene" id="doorScene" role="button" tabindex="0" aria-label="Enter Norwyn">
+      <video
+        id="doorVideo"
+        class="door-video"
+        src="videos/norwyn-door.mp4"
+        poster="images/norwyn-door.jpg"
+        playsinline
+        preload="auto"
+      ></video>
+    </div>
+    <div class="entrance-ui">
+      <p class="enter-prompt">Click the doors to enter</p>
+      <button type="button" class="skip-btn" id="skipBtn">Skip entrance</button>
+    </div>
+  </main>
+
+  <!-- Your existing header, novel/Norwyn sections, reader list, and footer stay right here -->
+
+  
 
  <!-- ==================== SELF-CONTAINED CINEMATIC OPENING ==================== -->
   <div class="qu-intro" id="quIntro" role="dialog" aria-modal="true" aria-label="Welcome to Or So She Thought"
@@ -6143,69 +6163,21 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
       pointer-events: none;
     }
 
-    /* 3D Doorway Scene */
+    /* Doorway video frame */
     .scene {
       position: relative;
       width: var(--w);
       aspect-ratio: 736 / 1104;
-      perspective: 1400px;
       cursor: pointer;
+      user-select: none;
+      background: #090706;
     }
 
-    /* Threshold light behind the door */
-    .threshold-glow {
-      position: absolute;
-      inset: 6% 12% 2%;
-      background: radial-gradient(circle at 50% 45%, rgba(236, 228, 210, 0.28) 0%, rgba(183, 154, 91, 0.08) 55%, transparent 80%);
-      opacity: 0;
-      transition: opacity 1.4s ease;
-      pointer-events: none;
-    }
-
-    .scene.is-opening .threshold-glow {
-      opacity: 1;
-    }
-
-    /* Static outer architectural arch/frame */
-    .frame, .face {
-      position: absolute;
-      inset: 0;
-      background-image: url("images/norwyn-door.jpg");
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-
-    /* Mask out the inner door leaf on the static frame so only the stone/wood surround stays still */
-    .frame {
-      clip-path: polygon(
-        0% 0%, 100% 0%, 100% 100%, 0% 100%,
-        0% 100%, 16% 100%, 16% 14%, 84% 14%, 84% 100%, 0% 100%
-      );
-      filter: brightness(0.92);
-    }
-
-    /* Swinging door leaf */
-    .door-leaf {
-      position: absolute;
-      inset: 0;
-      transform-origin: 16% 50%;
-      transform-style: preserve-3d;
-      transition: transform 1.8s cubic-bezier(0.25, 0.9, 0.3, 1), filter 1.8s ease;
-      will-change: transform;
-    }
-
-    .face {
-      clip-path: inset(14% 16% 0% 16%);
-      backface-visibility: hidden;
-    }
-
-    .scene:hover .door-leaf {
-      transform: rotateY(-8deg);
-    }
-
-    .scene.is-opening .door-leaf {
-      transform: rotateY(-82deg);
-      filter: brightness(0.55);
+    .door-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     /* Subtle prompt & skip controls */
@@ -6255,19 +6227,18 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
       outline-offset: 2px;
     }
 
+    .scene.is-open + .entrance-ui .enter-prompt,
+    .scene.is-open + .entrance-ui .skip-btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     /* Reduced motion accessibility */
     @media (prefers-reduced-motion: reduce) {
-      .stage, .door-leaf, .threshold-glow {
+      .stage, .door-video, .enter-prompt, .skip-btn {
         transition: opacity 0.35s ease !important;
       }
-      .scene:hover .door-leaf,
-      .scene.is-opening .door-leaf {
-        transform: none !important;
-      }
     }
-  </style>
-</head>
-<body>
 
   <!-- Entrance Overlay -->
   <div class="stage" id="norwyn-entrance" role="dialog" aria-modal="true" aria-label="Enter Or So She Thought">
@@ -6289,48 +6260,50 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
   <main id="site-content">
     <!-- ... -->
   </main>
+<script>
+    const stage = document.getElementById('entranceStage');
+    const scene = document.getElementById('doorScene');
+    const video = document.getElementById('doorVideo');
+    const skipBtn = document.getElementById('skipBtn');
 
-  <script>
-    (function () {
-      const STORAGE_KEY = 'norwyn_entered_v1';
-      const stage = document.getElementById('norwyn-entrance');
-      const scene = document.getElementById('door-scene');
-      const skipBtn = document.getElementById('skip-entrance');
+    function finishEntrance() {
+      if (!stage) return;
+      stage.classList.add('is-hidden');
+    }
 
-      // Skip automatically if already visited in this browser session
-      if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
-        stage.remove();
-        return;
-      }
+    function openDoors() {
+      if (!scene || !video || scene.classList.contains('is-open')) return;
+      scene.classList.add('is-open');
 
-      // Lock background scroll while entrance is active
-      document.documentElement.style.overflow = 'hidden';
+      video.play().catch(() => {
+        video.muted = true;
+        video.play().catch(() => {});
+      });
+    }
 
-      function finishEntrance() {
-        sessionStorage.setItem(STORAGE_KEY, 'true');
-        stage.classList.add('is-hidden');
-        document.documentElement.style.overflow = '';
-        setTimeout(() => stage.remove(), 1150);
-      }
-
-      function openDoor() {
-        if (scene.classList.contains('is-opening')) return;
-        scene.classList.add('is-opening');
-
-        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        setTimeout(finishEntrance, prefersReduced ? 250 : 1250);
-      }
-
-      scene.addEventListener('click', openDoor);
+    if (scene) {
+      scene.addEventListener('click', openDoors);
       scene.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          openDoor();
+          openDoors();
         }
       });
+    }
 
-      skipBtn.addEventListener('click', finishEntrance);
-    })();
-</script>
+    if (video) {
+      video.addEventListener('ended', finishEntrance);
+    }
+
+    if (skipBtn) {
+      skipBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video) {
+          video.pause();
+        }
+        finishEntrance();
+      });
+    }
+  </script>
 </body>
 </html>   
