@@ -6084,6 +6084,256 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
     creakOsc.start(now + 0.15);
     creakOsc.stop(now + 1.9);
   }
+    <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Or So She Thought</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0e0b0a;
+      --gold: #b79a5b;
+      --ivory: #ece4d2;
+      --w: min(94vw, calc(72svh * 0.6667));
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      background: var(--bg);
+    }
+
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ivory);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Full-screen entrance stage */
+    .stage {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--bg);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2svh 0;
+      overflow: hidden;
+      transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1), visibility 1.1s;
+    }
+
+    .stage.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* 3D Doorway Scene */
+    .scene {
+      position: relative;
+      width: var(--w);
+      aspect-ratio: 736 / 1104;
+      perspective: 1400px;
+      cursor: pointer;
+    }
+
+    /* Threshold light behind the door */
+    .threshold-glow {
+      position: absolute;
+      inset: 6% 12% 2%;
+      background: radial-gradient(circle at 50% 45%, rgba(236, 228, 210, 0.28) 0%, rgba(183, 154, 91, 0.08) 55%, transparent 80%);
+      opacity: 0;
+      transition: opacity 1.4s ease;
+      pointer-events: none;
+    }
+
+    .scene.is-opening .threshold-glow {
+      opacity: 1;
+    }
+
+    /* Static outer architectural arch/frame */
+    .frame, .face {
+      position: absolute;
+      inset: 0;
+      background-image: url("images/norwyn-door.jpg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    /* Mask out the inner door leaf on the static frame so only the stone/wood surround stays still */
+    .frame {
+      clip-path: polygon(
+        0% 0%, 100% 0%, 100% 100%, 0% 100%,
+        0% 100%, 16% 100%, 16% 14%, 84% 14%, 84% 100%, 0% 100%
+      );
+      filter: brightness(0.92);
+    }
+
+    /* Swinging door leaf */
+    .door-leaf {
+      position: absolute;
+      inset: 0;
+      transform-origin: 16% 50%;
+      transform-style: preserve-3d;
+      transition: transform 1.8s cubic-bezier(0.25, 0.9, 0.3, 1), filter 1.8s ease;
+      will-change: transform;
+    }
+
+    .face {
+      clip-path: inset(14% 16% 0% 16%);
+      backface-visibility: hidden;
+    }
+
+    .scene:hover .door-leaf {
+      transform: rotateY(-8deg);
+    }
+
+    .scene.is-opening .door-leaf {
+      transform: rotateY(-82deg);
+      filter: brightness(0.55);
+    }
+
+    /* Subtle prompt & skip controls */
+    .entrance-ui {
+      margin-top: 2.4svh;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .enter-prompt {
+      font-family: 'Newsreader', 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+      letter-spacing: 0.06em;
+      color: var(--ivory);
+      opacity: 0.85;
+      margin: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .scene:hover + .entrance-ui .enter-prompt {
+      opacity: 1;
+      color: var(--gold);
+    }
+
+    .skip-btn {
+      background: none;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.65;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .skip-btn:hover,
+    .skip-btn:focus-visible {
+      opacity: 1;
+      outline: 1px solid rgba(183, 154, 91, 0.4);
+      outline-offset: 2px;
+    }
+
+    /* Reduced motion accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .stage, .door-leaf, .threshold-glow {
+        transition: opacity 0.35s ease !important;
+      }
+      .scene:hover .door-leaf,
+      .scene.is-opening .door-leaf {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Entrance Overlay -->
+  <div class="stage" id="norwyn-entrance" role="dialog" aria-modal="true" aria-label="Enter Or So She Thought">
+    <div class="scene" id="door-scene" tabindex="0" role="button" aria-label="Open the door to Norwyn">
+      <div class="threshold-glow"></div>
+      <div class="frame"></div>
+      <div class="door-leaf">
+        <div class="face"></div>
+      </div>
+    </div>
+
+    <div class="entrance-ui">
+      <p class="enter-prompt">Step inside Norwyn</p>
+      <button type="button" class="skip-btn" id="skip-entrance">Skip Entrance</button>
+    </div>
+  </div>
+
+  <!-- Your existing Or So She Thought site content goes below here -->
+  <main id="site-content">
+    <!-- ... -->
+  </main>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = 'norwyn_entered_v1';
+      const stage = document.getElementById('norwyn-entrance');
+      const scene = document.getElementById('door-scene');
+      const skipBtn = document.getElementById('skip-entrance');
+
+      // Skip automatically if already visited in this browser session
+      if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+        stage.remove();
+        return;
+      }
+
+      // Lock background scroll while entrance is active
+      document.documentElement.style.overflow = 'hidden';
+
+      function finishEntrance() {
+        sessionStorage.setItem(STORAGE_KEY, 'true');
+        stage.classList.add('is-hidden');
+        document.documentElement.style.overflow = '';
+        setTimeout(() => stage.remove(), 1150);
+      }
+
+      function openDoor() {
+        if (scene.classList.contains('is-opening')) return;
+        scene.classList.add('is-opening');
+
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        setTimeout(finishEntrance, prefersReduced ? 250 : 1250);
+      }
+
+      scene.addEventListener('click', openDoor);
+      scene.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openDoor();
+        }
+      });
+
+      skipBtn.addEventListener('click', finishEntrance);
+    })();
+  </script>
+</body>
+</html>
 </script>
 </body>
 </html>   
