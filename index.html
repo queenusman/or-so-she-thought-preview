@@ -56,655 +56,131 @@
   <style>
     /* ========================================================
      /* ========================================================
- /* ========================================================
-   SELF-CONTAINED CINEMATIC OPENING (DARK MODE ARCHITECTURAL)
-   ======================================================== */
-.qu-intro {
-  --qu-bg: #111111;
-  --qu-charcoal: #242424;
-  --qu-panel: rgba(17, 17, 17, 0.84);
-  --qu-border: rgba(185, 168, 143, 0.28);
-  --qu-accent: #C2A36B;
-  --qu-secondary: #B9A88F;
-  --qu-text: #F5F1EA;
-  --qu-text-muted: rgba(245, 241, 234, 0.72);
-  --qu-reveal: #111111;
-  --qu-door-img: url('norwyn-door.jpg');
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  background: var(--qu-bg);
-  overflow: hidden;
-  touch-action: manipulation;
-  color: var(--qu-text);
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  -webkit-font-smoothing: antialiased;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1) 1.6s,
-              visibility 0s linear 2.55s;
-}
-html.qu-intro-ivory .qu-intro {
-  --qu-reveal: #F5F1EA;
-}
-html.qu-intro-on .qu-intro {
-  display: block;
-}
-html.qu-intro-on,
-html.qu-intro-on body {
-  overflow: hidden;
-}
+ /* Norwyn gate intro: one self-contained file. Add ONE line inside <head> of index.html:
+   <script src="norwyn-gate.js"></script>
+   Keep this file, door-open.mp3 and norwyn-door.jpg in the same folder as index.html. */
+(function () {
+  if (window.__nwGate) return;
+  window.__nwGate = true;
+  var PHOTO = 'norwyn-door.jpg', SOUND = 'door-open.mp3';
+  var html = document.documentElement;
+  html.classList.remove('qu-intro-on');        // switch off the old intro
+  html.classList.add('nw-gate-on');
 
-.qu-intro.is-leaving {
-  opacity: 0;
-  pointer-events: none;
-}
+  var css = `
+.qu-intro{display:none!important}
+html.nw-gate-on,html.nw-gate-on body{overflow:hidden}
+html.nw-gate-on:not(.nw-gate-ready)::before{content:"";position:fixed;inset:0;z-index:99998;background:#0e0b0a}
+.gt-root{--gt-w:min(94vw,calc(72svh*.6667));--gt-bg:#0e0b0a;--gt-gold:#b79a5b;--gt-ivory:#ece4d2;
+  --gt-arch:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 596 944' preserveAspectRatio='none'%3E%3Cpath d='M0 944V214A298 214 0 0 1 596 214V944Z'/%3E%3C/svg%3E");
+  --gt-hole:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 736 1104' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M0 0H736V1104H0Z M70 1030V300A298 214 0 0 1 666 300V1030Z'/%3E%3C/svg%3E");
+  position:fixed;inset:0;z-index:99999;width:100%;height:100vh;height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2svh 0;background:var(--gt-bg);color:var(--gt-ivory);overflow:hidden;transition:opacity 1.2s ease}
+.gt-root.is-leaving{opacity:0;pointer-events:none}
+.gt-scene{position:relative;width:var(--gt-w);aspect-ratio:736/1104;--gt-a:0;--gt-p:0;opacity:0;transition:opacity .9s ease}
+.gt-scene.is-ready{opacity:1}
+.gt-frame,.gt-face{background-image:url("${PHOTO}");background-repeat:no-repeat}
+.gt-frame,.gt-glow,.gt-face{-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.gt-frame{position:absolute;inset:0;z-index:3;pointer-events:none;background-size:100% 100%;-webkit-mask-image:var(--gt-hole);mask-image:var(--gt-hole);-webkit-mask-size:100% 100%;mask-size:100% 100%}
+.gt-glow{position:absolute;inset:0;z-index:4;pointer-events:none;mix-blend-mode:screen;opacity:var(--gt-p);
+  background:radial-gradient(ellipse 50% 40% at 50% 52%,rgba(255,214,140,.6),rgba(255,190,110,.18) 60%,transparent 80%);
+  -webkit-mask-image:var(--gt-hole);mask-image:var(--gt-hole);-webkit-mask-size:100% 100%;mask-size:100% 100%}
+.gt-fade{position:absolute;inset:-1px;z-index:5;pointer-events:none;
+  background:linear-gradient(to right,var(--gt-bg),transparent 6%),linear-gradient(to left,var(--gt-bg),transparent 6%),linear-gradient(var(--gt-bg),transparent 4%),linear-gradient(to top,var(--gt-bg),transparent 4%)}
+.gt-opening{position:absolute;left:9.5109%;top:7.7899%;width:80.978%;height:85.507%;perspective:var(--gt-w);perspective-origin:50% 55%}
+.gt-beyond{position:absolute;inset:0;background:#0c0806}
+.gt-beyond::before{content:"";position:absolute;inset:0;opacity:calc(.16 + var(--gt-p)*.84);background:radial-gradient(ellipse 70% 62% at 50% 62%,#fffaf0 0,#fbe6b4 30%,#e0b46a 62%,#8a5a28 100%)}
+.gt-leaf{position:absolute;top:0;height:100%;width:50%;transform-style:preserve-3d;will-change:transform}
+.gt-leaf.gt-l{left:0;transform-origin:0 50%;transform:rotateY(calc(var(--gt-a)*1deg))}
+.gt-leaf.gt-r{right:0;transform-origin:100% 50%;transform:rotateY(calc(var(--gt-a)*-1deg))}
+.gt-face{position:absolute;inset:0;background-size:246.98% 116.95%;background-position:15.982% 53.75%;filter:brightness(calc(1 - var(--gt-p)*.35));
+  -webkit-mask-image:var(--gt-arch);mask-image:var(--gt-arch);-webkit-mask-size:200% 100%;mask-size:200% 100%;-webkit-mask-position:0 0;mask-position:0 0}
+.gt-r .gt-face{background-position:84.018% 53.75%;-webkit-mask-position:100% 0;mask-position:100% 0}
+.gt-face::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,calc(var(--gt-p)*.6)),transparent 65%)}
+.gt-r .gt-face::after{background:linear-gradient(270deg,rgba(0,0,0,calc(var(--gt-p)*.6)),transparent 65%)}
+.gt-edge{position:absolute;top:0;width:6.8%;height:100%;background:linear-gradient(90deg,#3a2b20,#1b130e);box-shadow:inset 0 0 12px rgba(255,210,130,calc(var(--gt-p)*.5))}
+.gt-l .gt-edge{right:0;transform-origin:100% 50%;transform:rotateY(-90deg)}
+.gt-r .gt-edge{left:0;transform-origin:0 50%;transform:rotateY(90deg)}
+.gt-hit{position:absolute;inset:0;z-index:6;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gt-hit:focus-visible{outline:2px solid var(--gt-gold);outline-offset:4px}
+.gt-line{margin:1.4rem 0 0;width:min(92vw,34rem);text-align:center;font:400 clamp(1.05rem,.9rem + 1.3vw,1.45rem)/1.55 'Newsreader',Georgia,serif;color:var(--gt-ivory);text-wrap:balance}
+.gt-line span{display:block}.gt-line .gt-b{margin-top:.35em;font-style:italic;color:#c4a868}
+.gt-btn{position:absolute;bottom:max(14px,env(safe-area-inset-bottom));z-index:8;font:italic 400 .9rem 'Newsreader',Georgia,serif;color:var(--gt-gold);opacity:.6;background:none;border:0;padding:.5em .75em;cursor:pointer}
+.gt-btn:hover,.gt-btn:focus-visible{opacity:1}
+.gt-sound{left:max(14px,env(safe-area-inset-left))}.gt-skip{right:max(14px,env(safe-area-inset-right))}
+.gt-flood{position:absolute;inset:0;z-index:20;pointer-events:none;opacity:var(--gt-f,0);background:radial-gradient(ellipse at 50% 55%,#fffdf6 0,#fff1cf 45%,#f6d894 100%)}
+`;
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
-.qu-intro.is-done {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: none;
-}
+  var markup = `
+<div class="gt-scene" id="gtScene">
+  <div class="gt-opening"><div class="gt-beyond"></div>
+    <div class="gt-leaf gt-l"><div class="gt-face"></div><div class="gt-edge"></div></div>
+    <div class="gt-leaf gt-r"><div class="gt-face"></div><div class="gt-edge"></div></div></div>
+  <div class="gt-frame"></div><div class="gt-glow"></div><div class="gt-fade"></div>
+  <button class="gt-hit" type="button" aria-label="Open the doors"></button>
+</div>
+<p class="gt-line"><span class="gt-a">There is a kingdom behind this door that no map admits to.</span><span class="gt-b">Close it quietly behind you.</span></p>
+<button class="gt-btn gt-sound" type="button" aria-pressed="true">Sound on</button>
+<button class="gt-btn gt-skip" type="button" aria-label="Skip introduction">Skip</button>
+<div class="gt-flood" aria-hidden="true"></div>`;
 
-.qu-intro.is-skipping {
-  transition-duration: 0.55s;
-}
+  function build() {
+    var root = document.createElement('div');
+    root.className = 'gt-root'; root.setAttribute('role', 'dialog'); root.setAttribute('aria-modal', 'true');
+    root.setAttribute('aria-label', 'Welcome to Or So She Thought');
+    root.innerHTML = markup; document.body.appendChild(root);
+    html.classList.add('nw-gate-ready');
 
-/* 3D perspective stage for the double-door swing */
-.qu-stage {
-  position: absolute;
-  inset: 0;
-  perspective: 1800px;
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 2.3s cubic-bezier(0.22, 0.85, 0.36, 1);
-}
+    var scene = root.querySelector('.gt-scene'), hit = root.querySelector('.gt-hit');
+    var snd = root.querySelector('.gt-sound'), skip = root.querySelector('.gt-skip');
+    var audio = new Audio(SOUND); audio.preload = 'auto';
+    var MAX = 78, a = 0, started = false, finished = false;
 
-.is-opening .qu-stage {
-  transform: scale(1.08);
-}
+    var img = new Image(); img.onload = img.onerror = function () { scene.classList.add('is-ready'); }; img.src = PHOTO;
+    setTimeout(function () { scene.classList.add('is-ready'); }, 2500);
 
-@media (max-width: 768px) {
-  .qu-stage {
-    perspective: 1200px;
-    transition-duration: 1.75s;
+    function clamp(x) { return Math.min(1, Math.max(0, x)); }
+    function quart(t) { return t < .5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2; }
+    function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+    function set() { scene.style.setProperty('--gt-a', a.toFixed(3)); scene.style.setProperty('--gt-p', clamp(a / MAX).toFixed(4)); }
+    function tween(ms, fn) {
+      return new Promise(function (res) {
+        var t0 = performance.now();
+        (function f(n) { if (finished) { res(); return; } var t = clamp((n - t0) / ms); fn(t); set(); if (t < 1) requestAnimationFrame(f); else res(); })(t0);
+      });
+    }
+    function finish() {
+      if (finished) return; finished = true;
+      var fade = setInterval(function () {
+        if (audio.volume > .08) audio.volume = Math.max(0, audio.volume - .08); else { audio.pause(); clearInterval(fade); }
+      }, 90);
+      root.classList.add('is-leaving');                          // fades into your website
+      setTimeout(function () { root.remove(); html.classList.remove('nw-gate-on', 'nw-gate-ready'); }, 1300);
+    }
+    async function open() {
+      if (started) return; started = true; hit.disabled = true;
+      try { audio.currentTime = 0; await audio.play(); } catch (e) {}
+      await wait(700);
+      await tween(450, function (t) { a = .8 * Math.sin(Math.PI * t); });
+      var lit = false;
+      await tween(6400, function (t) {
+        a = MAX * quart(t);
+        if (!lit && a > 14) { lit = true; tween(1300, function (u) { root.style.setProperty('--gt-f', (u * u * (3 - 2 * u)).toFixed(4)); }); }
+      });
+      await wait(1400);
+      finish();
+    }
+    hit.addEventListener('click', open);
+    skip.addEventListener('click', finish);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !finished) finish(); });
+    snd.addEventListener('click', function () {
+      audio.muted = !audio.muted; snd.textContent = audio.muted ? 'Sound off' : 'Sound on'; snd.setAttribute('aria-pressed', String(!audio.muted));
+    });
+    set();
   }
-
-  .is-opening .qu-stage {
-    transform: scale(1.05);
-  }
-}
-
-.qu-scene {
-  position: absolute;
-  inset: 0;
-  transform-style: preserve-3d;
-  animation: quFade 1.2s ease-out both, quDrift 40s ease-in-out infinite alternate;
-}
-
-@keyframes quFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes quDrift {
-  from { transform: scale(1); }
-  to { transform: scale(1.02) translate(-0.25%, -0.3%); }
-}
-
-.qu-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  perspective: 1600px;
-  transform-style: preserve-3d;
-  background:
-    radial-gradient(ellipse 46% 64% at 50% 54%, rgba(185, 168, 143, 0.14), transparent 72%),
-    linear-gradient(180deg, var(--qu-charcoal) 0%, var(--qu-bg) 100%);
-}
-
-.qu-photo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  display: block;
-  overflow: visible;
-  opacity: 1;
-  z-index: 2;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  will-change: transform, opacity, filter, box-shadow;
-  transition: transform 2.2s cubic-bezier(0.22, 0.85, 0.25, 1),
-              box-shadow 2.2s cubic-bezier(0.22, 0.85, 0.25, 1),
-              opacity 1.3s ease,
-              filter 1.6s ease;
-}
-
-.qu-photo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background-image: url('norwyn-door.jpg');
-  background-size: cover;
-  background-position: center 45%;
-  background-repeat: no-repeat;
-  filter: saturate(0.76) contrast(1.05) brightness(0.82);
-}
-
-.qu-photo--left {
-  left: 0;
-  transform-origin: left center;
-  border-right: 2px solid #0c0b0a;
-  box-shadow: inset -6px 0 14px rgba(0, 0, 0, 0.65), 6px 0 24px rgba(0, 0, 0, 0.75);
-}
-
-.qu-photo--right {
-  left: 50%;
-  right: auto;
-  transform-origin: right center;
-  border-left: 2px solid #0c0b0a;
-  box-shadow: inset 6px 0 14px rgba(0, 0, 0, 0.65), -6px 0 24px rgba(0, 0, 0, 0.75);
-}
-
-.qu-photo--right::before {
-  left: -100%;
-  right: auto;
-}
-
-.is-opening .qu-photo--left {
-  transform: rotateY(68deg);
-  border-right: 4px solid rgba(245, 241, 234, 0.45);
-  box-shadow: 16px 0 36px rgba(245, 241, 234, 0.28);
-  filter: brightness(1.06);
-}
-
-.is-opening .qu-photo--right {
-  transform: rotateY(-68deg);
-  border-left: 4px solid rgba(245, 241, 234, 0.45);
-  box-shadow: -16px 0 36px rgba(245, 241, 234, 0.28);
-  filter: brightness(1.06);
-}
-
-/* Bright light spilling cleanly through the opening doors without dark shadows */
-.qu-door-light {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  opacity: 0;
-  transform: scaleX(0.15);
-  transform-origin: center center;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(245, 241, 234, 0) 25%,
-      rgba(245, 241, 234, 0.45) 42%,
-      rgba(245, 241, 234, 0.92) 50%,
-      rgba(245, 241, 234, 0.45) 58%,
-      rgba(245, 241, 234, 0) 75%
-    ),
-    radial-gradient(
-      ellipse 52% 85% at 50% 50%,
-      rgba(245, 241, 234, 0.85) 0%,
-      rgba(185, 168, 143, 0.48) 52%,
-      rgba(245, 241, 234, 0) 82%
-    );
-  filter: blur(10px);
-  will-change: opacity, transform, filter;
-  transition:
-    opacity 1.6s cubic-bezier(0.18, 0.85, 0.25, 1) 0s,
-    transform 2.1s cubic-bezier(0.22, 0.85, 0.25, 1) 0s,
-    filter 1.8s ease 0s;
-}
-
-.is-opening .qu-door-light {
-  opacity: 1;
-  transform: scaleX(1.65);
-  filter: blur(4px);
-}
-
-/* Lift dark top/bottom vignette as the doors open */
-.qu-tint {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(17, 17, 17, 0.35) 0%,
-    rgba(17, 17, 17, 0.12) 50%,
-    rgba(17, 17, 17, 0.38) 100%
-  );
-  transition: opacity 1.4s ease;
-}
-
-.is-opening .qu-tint {
-  opacity: 0.15;
-}
-
-.qu-glow-grade {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background: radial-gradient(ellipse at 50% 50%, rgba(245, 241, 234, 0.35), transparent 72%);
-}
-
-.qu-glow, .qu-bulb {
-  position: absolute;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-  transform: translate(-50%, -50%);
-}
-
-.qu-glow {
-  background: radial-gradient(closest-side, rgba(245, 241, 234, 0.45), rgba(185, 168, 143, 0.18) 50%, transparent 75%);
-}
-
-.qu-bulb {
-  background: radial-gradient(closest-side, rgba(245, 241, 234, 0.92) 0%, rgba(245, 241, 234, 0.4) 50%, transparent 100%);
-}
-
-.is-calibrating .qu-content,
-.is-calibrating .qu-skip,
-.is-calibrating .qu-sound,
-.is-calibrating .qu-vignette {
-  display: none;
-}
-.is-calibrating .qu-scene {
-  animation: none;
-}
-.is-calibrating {
-  cursor: crosshair;
-}
-.qu-cal {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  z-index: 5;
-  max-width: min(640px, calc(100% - 2rem));
-  background: var(--qu-charcoal);
-  border: 1px solid var(--qu-border);
-  border-radius: 2px;
-  padding: 0.9rem 1rem;
-  font: 13px/1.55 ui-monospace, Menlo, Consolas, monospace;
-  color: var(--qu-text);
-  user-select: text;
-  cursor: auto;
-  word-break: break-all;
-}
-.qu-dot {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border: 1.5px solid var(--qu-secondary);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-.qu-wash {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 50% 50%, rgba(17, 17, 17, 0.18), rgba(17, 17, 17, 0.55) 80%);
-  opacity: 0.75;
-}
-
-.qu-door {
-  position: absolute;
-  overflow: hidden;
-  pointer-events: none;
-  border: 1px solid var(--qu-border);
-  box-shadow:
-    inset 0 0 24px rgba(17, 17, 17, 0.45),
-    0 0 36px rgba(0, 0, 0, 0.55);
-  background:
-    linear-gradient(90deg, rgba(17, 17, 17, 0.62) 0 49.4%, transparent 49.4% 50.6%, rgba(17, 17, 17, 0.62) 50.6% 100%),
-    radial-gradient(ellipse at 50% 55%, rgba(185, 168, 143, 0.08), rgba(17, 17, 17, 0.55) 85%);
-}
-.qu-door-panels {
-  position: absolute;
-  inset: 9% 8%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10%;
-  pointer-events: none;
-}
-.qu-door-leaf {
-  display: flex;
-  flex-direction: column;
-  gap: 10%;
-  height: 100%;
-}
-.qu-door-panel {
-  flex: 1;
-  border: 1px solid rgba(185, 168, 143, 0.16);
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(180deg, rgba(185, 168, 143, 0.03), rgba(17, 17, 17, 0.25));
-}
-.qu-slit {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 1.5%;
-  z-index: 2;
-  transform: translateX(-50%);
-  filter: blur(1.5px);
-  opacity: 0.45;
-  background: linear-gradient(180deg, rgba(185, 168, 143, 0.15), rgba(245, 241, 234, 0.72) 50%, rgba(185, 168, 143, 0.18));
-  transition: width 1.4s cubic-bezier(0.55, 0, 0.2, 1) 0.75s, opacity 1s ease 0.75s;
-  animation: quSeam 4.5s ease-in-out infinite alternate;
-}
-@keyframes quSeam {
-  from { opacity: 0.28; }
-  to { opacity: 0.62; }
-}
-.is-opening .qu-slit {
-  width: 100%;
-  opacity: 0.92;
-  animation: none;
-}
-
-.qu-orb {
-  position: absolute;
-  pointer-events: none;
-  border-radius: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.6);
-  background: radial-gradient(closest-side, rgba(245, 241, 234, 0.65) 0%, rgba(185, 168, 143, 0.28) 45%, rgba(17, 17, 17, 0) 100%);
-  transition: transform 1.45s cubic-bezier(0.5, 0, 0.3, 1) 0.9s, opacity 0.8s ease 0.85s;
-}
-.is-opening .qu-orb {
-  opacity: 0.85;
-  transform: translate(-50%, -50%) scale(var(--os, 14));
-}
-
-.qu-vignette {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(rgba(17, 17, 17, 0.78), transparent 28%, transparent 70%, rgba(17, 17, 17, 0.85)),
-    radial-gradient(ellipse at 50% 50%, transparent 52%, rgba(17, 17, 17, 0.74) 100%);
-}
-
-.qu-motes {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.qu-motes span {
-  position: absolute;
-  bottom: -10px;
-  width: var(--s);
-  height: var(--s);
-  border-radius: 50%;
-  background: rgba(185, 168, 143, 0.75);
-  box-shadow: 0 0 6px rgba(185, 168, 143, 0.45);
-  opacity: 0;
-  animation: quMote var(--d) linear var(--dl) infinite;
-}
-@keyframes quMote {
-  0% { transform: translate(0, 0); opacity: 0; }
-  15% { opacity: var(--o); }
-  85% { opacity: var(--o); }
-  100% { transform: translate(var(--x), -105vh); opacity: 0; }
-}
-
-.qu-grain {
-  position: absolute;
-  inset: -20%;
-  pointer-events: none;
-  opacity: 0.045;
-  mix-blend-mode: overlay;
-  animation: quGrain 0.8s steps(1) infinite;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-@keyframes quGrain {
-  0% { transform: translate(0, 0); }
-  20% { transform: translate(-4%, 3%); }
-  40% { transform: translate(3%, -5%); }
-  60% { transform: translate(-3%, -2%); }
-  80% { transform: translate(5%, 4%); }
-}
-
-/* Smooth fade directly into dark mode (#111111) rather than a bright flash */
-.qu-flash {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  background: radial-gradient(ellipse at 50% 52%, rgba(185, 168, 143, 0.16) 0%, rgba(17, 17, 17, 0.88) 65%, var(--qu-reveal) 100%);
-  transition: opacity 0.95s ease 1.15s;
-}
-.is-opening .qu-flash {
-  opacity: 1;
-}
-
-.qu-content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  padding: clamp(2.75rem, 9vh, 6rem) 2rem clamp(3rem, 10vh, 6rem);
-  transition: opacity 0.85s ease, transform 0.85s ease;
-}
-.is-leaving .qu-content,
-.is-skipping .qu-content {
-  opacity: 0;
-  transform: translateY(-8px);
-  pointer-events: none;
-}
-
-.qu-crest {
-  width: 42px;
-  height: 42px;
-  margin: 0 auto 1.25rem;
-  border-radius: 2px;
-  border: 1px solid var(--qu-border);
-  background: var(--qu-panel);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--qu-secondary);
-  animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.2s both;
-}
-
-.qu-eyebrow {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: var(--qu-secondary);
-  margin: 0 0 0.75rem;
-  animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.35s both;
-}
-
-.qu-name {
-  margin: 0;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(2.2rem, 6.8vw, 4.5rem);
-  letter-spacing: 0.22em;
-  padding-left: 0.22em;
-  color: var(--qu-text);
-  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.85);
-  animation: quRise 1.6s cubic-bezier(0.2, 0.6, 0.2, 1) 0.5s both;
-}
-
-.qu-ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.85rem;
-  margin: 1.25rem auto 1.15rem;
-  animation: quRule 1.4s ease 0.8s both;
-}
-.qu-ornament span.line {
-  width: clamp(44px, 7vw, 84px);
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--qu-border), transparent);
-}
-.qu-ornament span.star {
-  font-size: 10px;
-  color: var(--qu-secondary);
-  line-height: 1;
-}
-
-.qu-tag {
-  margin: 0;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
-  letter-spacing: 0.08em;
-  color: var(--qu-text-muted);
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
-  animation: quRise 1.6s ease 0.95s both;
-}
-
-.qu-enter {
-  background: var(--qu-panel);
-  border: 1px solid var(--qu-border);
-  border-radius: 2px;
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-  color: var(--qu-text);
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  padding: 0.9rem 1.95rem;
-  display: inline-flex;
-  gap: 0.65rem;
-  align-items: center;
-  transition: border-color 0.35s ease, color 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
-  animation: quRise 1.5s ease 1.1s both;
-}
-.qu-enter:hover,
-.qu-enter:focus-visible {
-  border-color: var(--qu-secondary);
-  color: var(--qu-secondary);
-  background: var(--qu-charcoal);
-  transform: translateY(-1px);
-}
-.qu-enter:focus-visible,
-.qu-skip:focus-visible,
-.qu-sound:focus-visible {
-  outline: 1px solid var(--qu-secondary);
-  outline-offset: 4px;
-}
-
-.qu-sound {
-  position: absolute;
-  left: max(1.4rem, env(safe-area-inset-left));
-  bottom: max(1.2rem, env(safe-area-inset-bottom));
-  background: var(--qu-panel);
-  border: 1px solid var(--qu-border);
-  border-radius: 8px;
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--qu-text-muted);
-  padding: 0.5rem 0.9rem;
-  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.9s ease;
-  animation: quSkip 1.4s ease 0.9s both;
-}
-.qu-sound:hover {
-  color: var(--qu-text);
-  border-color: var(--qu-accent);
-}
-.qu-sound:focus-visible {
-  outline: 1px solid var(--qu-accent);
-  outline-offset: 4px;
-}
-.is-leaving .qu-sound,
-.is-skipping .qu-sound,
-.is-calibrating .qu-sound {
-  opacity: 0;
-  pointer-events: none;
-}
-
-@media (max-width: 420px) {
-  .qu-sound { letter-spacing: 0.14em; font-size: 9px; padding: 0.45rem 0.7rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .qu-sound { animation: quSkip 1s ease both; }
-}.qu-skip:hover {
-  color: var(--qu-text);
-  border-color: var(--qu-secondary);
-}
-.is-leaving .qu-skip,
-.is-skipping .qu-skip {
-  opacity: 0;
-  pointer-events: none;
-}
-
-@keyframes quRise {
-  from { opacity: 0; transform: translateY(14px); filter: blur(4px); }
-  to { opacity: 1; transform: none; filter: none; }
-}
-@keyframes quRule {
-  from { opacity: 0; transform: scaleX(0.6); }
-  to { opacity: 1; transform: scaleX(1); }
-}
-@keyframes quSkip {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@media (max-width: 600px) {
-  .qu-name { letter-spacing: 0.16em; padding-left: 0.16em; }
-  .qu-tag { letter-spacing: 0.05em; }
-}
-@media (max-height: 520px) {
-  .qu-crest { display: none; }
-  .qu-ornament { margin: 0.75rem auto; }
-}
-@media (max-width: 420px) {
-  .qu-sound, .qu-skip { letter-spacing: 0.14em; font-size: 9px; padding: 0.45rem 0.7rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .qu-scene { animation: quFade 1s ease-out both; }
-  .qu-crest, .qu-eyebrow, .qu-name, .qu-tag, .qu-enter, .qu-skip, .qu-sound, .qu-ornament { animation: quSkip 1s ease both; }
-  .is-opening .qu-stage { transform: none; }
-  .qu-photo, .is-opening .qu-photo { transform: none !important; transition: opacity 0.5s ease; }
-  .qu-slit { animation: none; transition: opacity 0.5s ease; }
-  .is-opening .qu-slit { width: 100%; }
-  .qu-orb, .is-opening .qu-orb { transform: translate(-50%, -50%) scale(var(--os, 14)); transition: opacity 0.5s ease; }
-  .qu-flash { transition-delay: 0s; transition-duration: 0.5s; }
-  .qu-motes { display: none; }
-  .qu-grain { animation: none; }
-  .qu-intro, .qu-intro.is-skipping { transition: opacity 0.5s ease, visibility 0s linear 0.5s; }
-  .qu-content { transition: opacity 0.4s ease; transform: none !important; }
-}
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build); else build();
+})();
     /* ========================================================
        DEFAULT: DARK MODE (Charcoal Plum Velvet)
        ======================================================== */
@@ -6331,9 +5807,6 @@ The Royal History and Laws of Norwyn is the historical record of the monarchy, i
 
       skipBtn.addEventListener('click', finishEntrance);
     })();
-  </script>
-</body>
-</html>
 </script>
 </body>
 </html>   
