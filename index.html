@@ -56,549 +56,614 @@
   <style>
     /* ========================================================
      /* ========================================================
-   SELF-CONTAINED CINEMATIC OPENING
+ /* ========================================================
+   SELF-CONTAINED CINEMATIC OPENING (3D DOOR SWING + SOUND)
    ======================================================== */
 .qu-intro {
-      --qu-bg: #111111;
-      --qu-plum: #3A151B;
-      --qu-panel: rgba(36, 36, 36, 0.88);
-      --qu-border: rgba(185, 168, 143, 0.42);
-      --qu-accent: #C2A36B;
-      --qu-secondary: #B9A88F;
-      --qu-text: #F5F1EA;
-      --qu-text-muted: #D6CEC2;
-      --qu-reveal: #3A151B;
+  --qu-bg: #111111;
+  --qu-plum: #3A151B;
+  --qu-panel: rgba(36, 36, 36, 0.88);
+  --qu-border: rgba(185, 168, 143, 0.42);
+  --qu-accent: #C2A36B;
+  --qu-secondary: #B9A88F;
+  --qu-text: #F5F1EA;
+  --qu-text-muted: #D6CEC2;
+  --qu-reveal: #3A151B;
+  --qu-door-img: url('images/norwyn-door.jpg');
 
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      width: 100%;
-      height: 100vh;
-      height: 100dvh;
-      background: var(--qu-bg);
-      overflow: hidden;
-      touch-action: manipulation;
-      color: var(--qu-text);
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      -webkit-font-smoothing: antialiased;
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.65s,
-                  visibility 0s linear 2.55s;
-    }
-    html.qu-intro-ivory .qu-intro {
-      --qu-reveal: #F5F1EA;
-    }
-    html.qu-intro-on .qu-intro {
-      display: block;
-    }
-    html.qu-intro-on,
-    html.qu-intro-on body {
-      overflow: hidden;
-    }
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--qu-bg);
+  overflow: hidden;
+  touch-action: manipulation;
+  color: var(--qu-text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.65s,
+              visibility 0s linear 2.55s;
+}
+html.qu-intro-ivory .qu-intro {
+  --qu-reveal: #F5F1EA;
+}
+html.qu-intro-on .qu-intro {
+  display: block;
+}
+html.qu-intro-on,
+html.qu-intro-on body {
+  overflow: hidden;
+}
 
-    .qu-intro.is-leaving {
-      opacity: 0;
-      pointer-events: none;
-    }
+.qu-intro.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
 
-    .qu-intro.is-done {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: none;
-    }
+.qu-intro.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: none;
+}
 
-    .qu-intro.is-skipping {
-      transition-duration: 0.55s;
-    }
+.qu-intro.is-skipping {
+  transition-duration: 0.55s;
+}
 
-    .qu-stage {
-      position: absolute;
-      inset: 0;
-      will-change: transform;
-      transition: transform 2.3s cubic-bezier(0.22, 0.85, 0.36, 1);
-    }
+/* 3D perspective stage for the double-door swing */
+.qu-stage {
+  position: absolute;
+  inset: 0;
+  perspective: 1800px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 2.3s cubic-bezier(0.22, 0.85, 0.36, 1);
+}
 
-    .is-opening .qu-stage {
-      transform: scale(1.26);
-    }
+.is-opening .qu-stage {
+  transform: scale(1.16);
+}
 
-    @media (max-width: 768px) {
-      .qu-stage {
-        transition-duration: 1.75s;
-      }
+@media (max-width: 768px) {
+  .qu-stage {
+    perspective: 1200px;
+    transition-duration: 1.75s;
+  }
 
-      .is-opening .qu-stage {
-        transform: scale(1.2);
-      }
-    }
+  .is-opening .qu-stage {
+    transform: scale(1.1);
+  }
+}
 
-    .qu-scene {
-      position: absolute;
-      inset: 0;
-      animation: quFade 1.2s ease-out both, quDrift 40s ease-in-out infinite alternate;
-    }
+.qu-scene {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  animation: quFade 1.2s ease-out both, quDrift 40s ease-in-out infinite alternate;
+}
 
-    @keyframes quFade {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+@keyframes quFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    @keyframes quDrift {
-      from { transform: scale(1); }
-      to { transform: scale(1.035) translate(-0.4%, -0.5%); }
-    }
+@keyframes quDrift {
+  from { transform: scale(1); }
+  to { transform: scale(1.035) translate(-0.4%, -0.5%); }
+}
 
-    .qu-frame {
-      position: absolute;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse 42% 62% at 50% 56%, rgba(185, 168, 143, 0.32), transparent 72%),
-        linear-gradient(180deg, #242424 0%, #111111 100%);
-    }
-    .qu-photo {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1.3s ease;
-      filter: saturate(0.84) contrast(1.08) brightness(0.9);
-    }
-    .is-loaded .qu-photo {
-      opacity: 1;
-    }
+.qu-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 42% 62% at 50% 56%, rgba(194, 163, 107, 0.28), transparent 72%),
+    linear-gradient(180deg, #242424 0%, #111111 100%);
+}
 
-    .qu-tint {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      mix-blend-mode: multiply;
-      background: linear-gradient(rgba(58, 21, 27, 0.28), rgba(17, 17, 17, 0.52));
-    }
-    .qu-glow-grade {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      mix-blend-mode: soft-light;
-      background: radial-gradient(ellipse at 50% 54%, rgba(194, 163, 107, 0.42), transparent 68%);
-    }
+/* Split the double-door photo into left and right hinged leaves */
+.qu-photo {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  backface-visibility: hidden;
+  will-change: transform;
+  transition: opacity 1.3s ease,
+              transform 2.1s cubic-bezier(0.25, 0.9, 0.3, 1),
+              filter 1.6s ease;
+}
 
-    .qu-glow, .qu-bulb {
-      position: absolute;
-      pointer-events: none;
-      mix-blend-mode: screen;
-      border-radius: 50%;
-      aspect-ratio: 1 / 1;
-      transform: translate(-50%, -50%);
-    }
-    .qu-glow {
-      background: radial-gradient(closest-side, rgba(194, 163, 107, 0.52), rgba(185, 168, 143, 0.2) 38%, rgba(58, 21, 27, 0.05) 70%, transparent);
-    }
-    .qu-bulb {
-      background: radial-gradient(closest-side, #F5F1EA 0%, #EADAC0 32%, rgba(194, 163, 107, 0.65) 60%, transparent 100%);
-    }
+.qu-photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: var(--qu-door-img);
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  filter: saturate(0.86) contrast(1.08) brightness(0.88);
+}
 
-    .is-calibrating .qu-content,
-    .is-calibrating .qu-skip,
-    .is-calibrating .qu-sound,
-    .is-calibrating .qu-vignette {
-      display: none;
-    }
-    .is-calibrating .qu-scene {
-      animation: none;
-    }
-    .is-calibrating {
-      cursor: crosshair;
-    }
-    .qu-cal {
-      position: absolute;
-      left: 1rem;
-      bottom: 1rem;
-      z-index: 5;
-      max-width: min(640px, calc(100% - 2rem));
-      background: rgba(36, 36, 36, 0.94);
-      border: 1px solid var(--qu-accent);
-      border-radius: 8px;
-      padding: 0.9rem 1rem;
-      font: 13px/1.55 ui-monospace, Menlo, Consolas, monospace;
-      color: var(--qu-text);
-      user-select: text;
-      cursor: auto;
-      word-break: break-all;
-    }
-    .qu-dot {
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      border: 2px solid var(--qu-accent);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-    .qu-wash {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      mix-blend-mode: screen;
-      background: radial-gradient(ellipse at 50% 50%, rgba(194, 163, 107, 0.16), transparent 75%);
-      opacity: 0.55;
-    }
+.qu-photo:first-of-type,
+.qu-photo--left {
+  left: 0;
+  transform-origin: left center;
+  border-right: 1px solid rgba(17, 17, 17, 0.65);
+}
 
-    .qu-door {
-      position: absolute;
-      overflow: hidden;
-      pointer-events: none;
-      border: 1.5px solid rgba(194, 163, 107, 0.44);
-      box-shadow:
-        inset 0 0 28px rgba(194, 163, 107, 0.16),
-        0 0 38px rgba(58, 21, 27, 0.28);
-      background:
-        linear-gradient(90deg, rgba(17, 17, 17, 0.74) 0 49.2%, transparent 49.2% 50.8%, rgba(17, 17, 17, 0.74) 50.8% 100%),
-        radial-gradient(ellipse at 50% 55%, rgba(194, 163, 107, 0.14), rgba(17, 17, 17, 0.6) 85%);
-    }
-    .qu-door-panels {
-      position: absolute;
-      inset: 9% 8%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10%;
-      pointer-events: none;
-    }
-    .qu-door-leaf {
-      display: flex;
-      flex-direction: column;
-      gap: 10%;
-      height: 100%;
-    }
-    .qu-door-panel {
-      flex: 1;
-      border: 1px solid rgba(194, 163, 107, 0.24);
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.28);
-      background: linear-gradient(180deg, rgba(194, 163, 107, 0.06), rgba(17, 17, 17, 0.24));
-    }
-    .qu-slit {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2.2%;
-      z-index: 2;
-      transform: translateX(-50%);
-      filter: blur(1.5px);
-      opacity: 0.68;
-      background: linear-gradient(180deg, rgba(245, 241, 234, 0.25), #F5F1EA 50%, rgba(194, 163, 107, 0.35));
-      transition: width 1.4s cubic-bezier(0.55, 0, 0.2, 1) 0.75s, opacity 1s ease 0.75s;
-      animation: quSeam 4.5s ease-in-out infinite alternate;
-    }
-    @keyframes quSeam {
-      from { opacity: 0.45; }
-      to { opacity: 0.85; }
-    }
-    .is-opening .qu-slit {
-      width: 100%;
-      opacity: 1;
-      animation: none;
-    }
+.qu-photo:first-of-type::before,
+.qu-photo--left::before {
+  left: 0;
+}
 
-    .qu-orb {
-      position: absolute;
-      pointer-events: none;
-      border-radius: 50%;
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(0.6);
-      background: radial-gradient(closest-side, #F5F1EA 0%, rgba(234, 218, 192, 0.96) 42%, rgba(194, 163, 107, 0) 100%);
-      transition: transform 1.45s cubic-bezier(0.5, 0, 0.3, 1) 0.9s, opacity 0.8s ease 0.85s;
-    }
-    .is-opening .qu-orb {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(var(--os, 16));
-    }
+.qu-photo:last-of-type,
+.qu-photo--right {
+  right: 0;
+  transform-origin: right center;
+  border-left: 1px solid rgba(17, 17, 17, 0.65);
+}
 
-    .qu-vignette {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        linear-gradient(rgba(17, 17, 17, 0.72), transparent 30%, transparent 68%, rgba(17, 17, 17, 0.78)),
-        radial-gradient(ellipse at 50% 50%, transparent 56%, rgba(17, 17, 17, 0.66) 100%);
-    }
+.qu-photo:last-of-type::before,
+.qu-photo--right::before {
+  right: 0;
+}
 
-    .qu-motes {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .qu-motes span {
-      position: absolute;
-      bottom: -10px;
-      width: var(--s);
-      height: var(--s);
-      border-radius: 50%;
-      background: rgba(194, 163, 107, 0.85);
-      box-shadow: 0 0 6px rgba(194, 163, 107, 0.65);
-      opacity: 0;
-      animation: quMote var(--d) linear var(--dl) infinite;
-    }
-    @keyframes quMote {
-      0% { transform: translate(0, 0); opacity: 0; }
-      15% { opacity: var(--o); }
-      85% { opacity: var(--o); }
-      100% { transform: translate(var(--x), -105vh); opacity: 0; }
-    }
+.is-loaded .qu-photo {
+  opacity: 1;
+}
 
-    .qu-grain {
-      position: absolute;
-      inset: -20%;
-      pointer-events: none;
-      opacity: 0.055;
-      mix-blend-mode: overlay;
-      animation: quGrain 0.8s steps(1) infinite;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    }
-    @keyframes quGrain {
-      0% { transform: translate(0, 0); }
-      20% { transform: translate(-4%, 3%); }
-      40% { transform: translate(3%, -5%); }
-      60% { transform: translate(-3%, -2%); }
-      80% { transform: translate(5%, 4%); }
-    }
+/* Swing left and right iron doors inward when opening */
+.is-opening .qu-photo:first-of-type,
+.is-opening .qu-photo--left {
+  transform: rotateY(76deg);
+  filter: brightness(0.55);
+}
 
-    .qu-flash {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0;
-      background: radial-gradient(ellipse at 50% 55%, #F5F1EA 0%, var(--qu-accent) 48%, var(--qu-reveal) 100%);
-      transition: opacity 0.95s ease 1.15s;
-    }
-    .is-opening .qu-flash {
-      opacity: 1;
-    }
+.is-opening .qu-photo:last-of-type,
+.is-opening .qu-photo--right {
+  transform: rotateY(-76deg);
+  filter: brightness(0.55);
+}
 
-    .qu-content {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      text-align: center;
-      padding: clamp(2.75rem, 9vh, 6rem) 2rem clamp(3rem, 10vh, 6rem);
-      transition: opacity 0.85s ease, transform 0.85s ease;
-    }
-    .is-leaving .qu-content,
-    .is-skipping .qu-content {
-      opacity: 0;
-      transform: translateY(-8px);
-      pointer-events: none;
-    }
+.qu-tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background: linear-gradient(rgba(58, 21, 27, 0.28), rgba(17, 17, 17, 0.52));
+}
+.qu-glow-grade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  background: radial-gradient(ellipse at 50% 54%, rgba(194, 163, 107, 0.42), transparent 68%);
+}
 
-    .qu-crest {
-      width: 44px;
-      height: 44px;
-      margin: 0 auto 1.2rem;
-      border-radius: 10px;
-      border: 1px solid var(--qu-border);
-      background: var(--qu-panel);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--qu-accent);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-      animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.2s both;
-    }
+.qu-glow, .qu-bulb {
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
+}
+.qu-glow {
+  background: radial-gradient(closest-side, rgba(194, 163, 107, 0.52), rgba(185, 168, 143, 0.2) 38%, rgba(58, 21, 27, 0.05) 70%, transparent);
+}
+.qu-bulb {
+  background: radial-gradient(closest-side, #F5F1EA 0%, #EADAC0 32%, rgba(194, 163, 107, 0.65) 60%, transparent 100%);
+}
 
-    .qu-eyebrow {
-      font-family: 'Inter', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.34em;
-      text-transform: uppercase;
-      color: var(--qu-secondary);
-      margin: 0 0 0.75rem;
-      animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.35s both;
-    }
+.is-calibrating .qu-content,
+.is-calibrating .qu-skip,
+.is-calibrating .qu-sound,
+.is-calibrating .qu-vignette {
+  display: none;
+}
+.is-calibrating .qu-scene {
+  animation: none;
+}
+.is-calibrating {
+  cursor: crosshair;
+}
+.qu-cal {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 5;
+  max-width: min(640px, calc(100% - 2rem));
+  background: rgba(36, 36, 36, 0.94);
+  border: 1px solid var(--qu-accent);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  font: 13px/1.55 ui-monospace, Menlo, Consolas, monospace;
+  color: var(--qu-text);
+  user-select: text;
+  cursor: auto;
+  word-break: break-all;
+}
+.qu-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--qu-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.qu-wash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(ellipse at 50% 50%, rgba(194, 163, 107, 0.16), transparent 75%);
+  opacity: 0.55;
+}
 
-    .qu-name {
-      margin: 0;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 500;
-      font-size: clamp(2.2rem, 6.8vw, 4.5rem);
-      letter-spacing: 0.22em;
-      padding-left: 0.22em;
-      color: var(--qu-text);
-      text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72);
-      animation: quRise 1.6s cubic-bezier(0.2, 0.6, 0.2, 1) 0.5s both;
-    }
+.qu-door {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  border: 1.5px solid rgba(194, 163, 107, 0.44);
+  box-shadow:
+    inset 0 0 28px rgba(194, 163, 107, 0.16),
+    0 0 38px rgba(58, 21, 27, 0.28);
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, 0.74) 0 49.2%, transparent 49.2% 50.8%, rgba(17, 17, 17, 0.74) 50.8% 100%),
+    radial-gradient(ellipse at 50% 55%, rgba(194, 163, 107, 0.14), rgba(17, 17, 17, 0.6) 85%);
+}
+.qu-door-panels {
+  position: absolute;
+  inset: 9% 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  pointer-events: none;
+}
+.qu-door-leaf {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  height: 100%;
+}
+.qu-door-panel {
+  flex: 1;
+  border: 1px solid rgba(194, 163, 107, 0.24);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(180deg, rgba(194, 163, 107, 0.06), rgba(17, 17, 17, 0.24));
+}
+.qu-slit {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2.2%;
+  z-index: 2;
+  transform: translateX(-50%);
+  filter: blur(1.5px);
+  opacity: 0.68;
+  background: linear-gradient(180deg, rgba(245, 241, 234, 0.25), #F5F1EA 50%, rgba(194, 163, 107, 0.35));
+  transition: width 1.4s cubic-bezier(0.55, 0, 0.2, 1) 0.75s, opacity 1s ease 0.75s;
+  animation: quSeam 4.5s ease-in-out infinite alternate;
+}
+@keyframes quSeam {
+  from { opacity: 0.45; }
+  to { opacity: 0.85; }
+}
+.is-opening .qu-slit {
+  width: 100%;
+  opacity: 1;
+  animation: none;
+}
 
-    .qu-ornament {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.85rem;
-      margin: 1.2rem auto 1.1rem;
-      animation: quRule 1.4s ease 0.8s both;
-    }
-    .qu-ornament span.line {
-      width: clamp(44px, 7vw, 84px);
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--qu-border), transparent);
-    }
-    .qu-ornament span.star {
-      font-size: 11px;
-      color: var(--qu-accent);
-      line-height: 1;
-    }
+.qu-orb {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+  background: radial-gradient(closest-side, #F5F1EA 0%, rgba(234, 218, 192, 0.96) 42%, rgba(194, 163, 107, 0) 100%);
+  transition: transform 1.45s cubic-bezier(0.5, 0, 0.3, 1) 0.9s, opacity 0.8s ease 0.85s;
+}
+.is-opening .qu-orb {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(var(--os, 16));
+}
 
-    .qu-tag {
-      margin: 0;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
-      letter-spacing: 0.08em;
-      color: var(--qu-text-muted);
-      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
-      animation: quRise 1.6s ease 0.95s both;
-    }
+.qu-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.72), transparent 30%, transparent 68%, rgba(17, 17, 17, 0.78)),
+    radial-gradient(ellipse at 50% 50%, transparent 56%, rgba(17, 17, 17, 0.66) 100%);
+}
 
-    .qu-enter {
-      background: var(--qu-panel);
-      border: 1px solid var(--qu-accent);
-      border-radius: 8px;
-      backdrop-filter: blur(8px);
-      cursor: pointer;
-      color: var(--qu-accent);
-      font-family: 'Inter', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      padding: 0.9rem 1.9rem;
-      display: inline-flex;
-      gap: 0.65rem;
-      align-items: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
-      transition: border-color 0.35s ease, color 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
-      animation: quRise 1.5s ease 1.1s both;
-    }
-    .qu-enter:hover,
-    .qu-enter:focus-visible {
-      border-color: var(--qu-text);
-      color: var(--qu-text);
-      background: rgba(58, 21, 27, 0.92);
-      transform: translateY(-1px);
-    }
-    .qu-enter:focus-visible,
-    .qu-skip:focus-visible,
-    .qu-sound:focus-visible {
-      outline: 1px solid var(--qu-accent);
-      outline-offset: 4px;
-    }
+.qu-motes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.qu-motes span {
+  position: absolute;
+  bottom: -10px;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: rgba(194, 163, 107, 0.85);
+  box-shadow: 0 0 6px rgba(194, 163, 107, 0.65);
+  opacity: 0;
+  animation: quMote var(--d) linear var(--dl) infinite;
+}
+@keyframes quMote {
+  0% { transform: translate(0, 0); opacity: 0; }
+  15% { opacity: var(--o); }
+  85% { opacity: var(--o); }
+  100% { transform: translate(var(--x), -105vh); opacity: 0; }
+}
 
-    .qu-sound {
-      position: absolute;
-      left: max(1.4rem, env(safe-area-inset-left));
-      bottom: max(1.2rem, env(safe-area-inset-bottom));
-      background: var(--qu-panel);
-      border: 1px solid var(--qu-border);
-      border-radius: 8px;
-      backdrop-filter: blur(8px);
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--qu-text-muted);
-      padding: 0.5rem 0.9rem;
-      transition: color 0.3s ease, border-color 0.3s ease, opacity 0.9s ease;
-      animation: quSkip 1.4s ease 0.9s both;
-    }
-    .qu-sound:hover {
-      color: var(--qu-text);
-      border-color: var(--qu-accent);
-    }
-    .is-leaving .qu-sound,
-    .is-skipping .qu-sound {
-      opacity: 0;
-      pointer-events: none;
-    }
+.qu-grain {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  opacity: 0.055;
+  mix-blend-mode: overlay;
+  animation: quGrain 0.8s steps(1) infinite;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@keyframes quGrain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-4%, 3%); }
+  40% { transform: translate(3%, -5%); }
+  60% { transform: translate(-3%, -2%); }
+  80% { transform: translate(5%, 4%); }
+}
 
-    .qu-skip {
-      position: absolute;
-      right: max(1.4rem, env(safe-area-inset-right));
-      bottom: max(1.2rem, env(safe-area-inset-bottom));
-      background: var(--qu-panel);
-      border: 1px solid var(--qu-border);
-      border-radius: 8px;
-      backdrop-filter: blur(8px);
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--qu-text-muted);
-      padding: 0.5rem 0.9rem;
-      transition: color 0.3s ease, border-color 0.3s ease, opacity 0.9s ease;
-      animation: quSkip 1.4s ease 1s both;
-    }
-    .qu-skip:hover {
-      color: var(--qu-text);
-      border-color: var(--qu-accent);
-    }
-    .is-leaving .qu-skip,
-    .is-skipping .qu-skip {
-      opacity: 0;
-      pointer-events: none;
-    }
+.qu-flash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(ellipse at 50% 55%, #F5F1EA 0%, var(--qu-accent) 48%, var(--qu-reveal) 100%);
+  transition: opacity 0.95s ease 1.15s;
+}
+.is-opening .qu-flash {
+  opacity: 1;
+}
 
-    @keyframes quRise {
-      from { opacity: 0; transform: translateY(14px); filter: blur(4px); }
-      to { opacity: 1; transform: none; filter: none; }
-    }
-    @keyframes quRule {
-      from { opacity: 0; transform: scaleX(0.6); }
-      to { opacity: 1; transform: scaleX(1); }
-    }
-    @keyframes quSkip {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+.qu-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: clamp(2.75rem, 9vh, 6rem) 2rem clamp(3rem, 10vh, 6rem);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+.is-leaving .qu-content,
+.is-skipping .qu-content {
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
 
-    @media (max-width: 600px) {
-      .qu-name { letter-spacing: 0.16em; padding-left: 0.16em; }
-      .qu-tag { letter-spacing: 0.05em; }
-    }
-    @media (max-height: 520px) {
-      .qu-crest { display: none; }
-      .qu-ornament { margin: 0.75rem auto; }
-    }
-    @media (max-width: 420px) {
-      .qu-sound, .qu-skip { letter-spacing: 0.14em; font-size: 9px; padding: 0.45rem 0.7rem; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .qu-scene { animation: quFade 1s ease-out both; }
-      .qu-crest, .qu-eyebrow, .qu-name, .qu-tag, .qu-enter, .qu-skip, .qu-sound, .qu-ornament { animation: quSkip 1s ease both; }
-      .is-opening .qu-stage { transform: none; }
-      .qu-slit { animation: none; transition: opacity 0.5s ease; }
-      .is-opening .qu-slit { width: 100%; }
-      .qu-orb, .is-opening .qu-orb { transform: translate(-50%, -50%) scale(var(--os, 16)); transition: opacity 0.5s ease; }
-      .qu-flash { transition-delay: 0s; transition-duration: 0.5s; }
-      .qu-motes { display: none; }
-      .qu-grain { animation: none; }
-      .qu-intro, .qu-intro.is-skipping { transition: opacity 0.5s ease, visibility 0s linear 0.5s; }
-      .qu-content { transition: opacity 0.4s ease; transform: none !important; }
-    }
+.qu-crest {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 1.2rem;
+  border-radius: 10px;
+  border: 1px solid var(--qu-border);
+  background: var(--qu-panel);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--qu-accent);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.2s both;
+}
+
+.qu-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--qu-secondary);
+  margin: 0 0 0.75rem;
+  animation: quRise 1.4s cubic-bezier(0.2, 0.6, 0.2, 1) 0.35s both;
+}
+
+.qu-name {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 6.8vw, 4.5rem);
+  letter-spacing: 0.22em;
+  padding-left: 0.22em;
+  color: var(--qu-text);
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72);
+  animation: quRise 1.6s cubic-bezier(0.2, 0.6, 0.2, 1) 0.5s both;
+}
+
+.qu-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 1.2rem auto 1.1rem;
+  animation: quRule 1.4s ease 0.8s both;
+}
+.qu-ornament span.line {
+  width: clamp(44px, 7vw, 84px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--qu-border), transparent);
+}
+.qu-ornament span.star {
+  font-size: 11px;
+  color: var(--qu-accent);
+  line-height: 1;
+}
+
+.qu-tag {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+  letter-spacing: 0.08em;
+  color: var(--qu-text-muted);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
+  animation: quRise 1.6s ease 0.95s both;
+}
+
+.qu-enter {
+  background: var(--qu-panel);
+  border: 1px solid var(--qu-accent);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  color: var(--qu-accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.9rem;
+  display: inline-flex;
+  gap: 0.65rem;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+  transition: border-color 0.35s ease, color 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
+  animation: quRise 1.5s ease 1.1s both;
+}
+.qu-enter:hover,
+.qu-enter:focus-visible {
+  border-color: var(--qu-text);
+  color: var(--qu-text);
+  background: rgba(58, 21, 27, 0.92);
+  transform: translateY(-1px);
+}
+.qu-enter:focus-visible,
+.qu-skip:focus-visible,
+.qu-sound:focus-visible {
+  outline: 1px solid var(--qu-accent);
+  outline-offset: 4px;
+}
+
+.qu-sound {
+  position: absolute;
+  left: max(1.4rem, env(safe-area-inset-left));
+  bottom: max(1.2rem, env(safe-area-inset-bottom));
+  background: var(--qu-panel);
+  border: 1px solid var(--qu-border);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--qu-text-muted);
+  padding: 0.5rem 0.9rem;
+  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.9s ease;
+  animation: quSkip 1.4s ease 0.9s both;
+}
+.qu-sound:hover {
+  color: var(--qu-text);
+  border-color: var(--qu-accent);
+}
+.is-leaving .qu-sound,
+.is-skipping .qu-sound {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.qu-skip {
+  position: absolute;
+  right: max(1.4rem, env(safe-area-inset-right));
+  bottom: max(1.2rem, env(safe-area-inset-bottom));
+  background: var(--qu-panel);
+  border: 1px solid var(--qu-border);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--qu-text-muted);
+  padding: 0.5rem 0.9rem;
+  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.9s ease;
+  animation: quSkip 1.4s ease 1s both;
+}
+.qu-skip:hover {
+  color: var(--qu-text);
+  border-color: var(--qu-accent);
+}
+.is-leaving .qu-skip,
+.is-skipping .qu-skip {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes quRise {
+  from { opacity: 0; transform: translateY(14px); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+@keyframes quRule {
+  from { opacity: 0; transform: scaleX(0.6); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+@keyframes quSkip {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .qu-name { letter-spacing: 0.16em; padding-left: 0.16em; }
+  .qu-tag { letter-spacing: 0.05em; }
+}
+@media (max-height: 520px) {
+  .qu-crest { display: none; }
+  .qu-ornament { margin: 0.75rem auto; }
+}
+@media (max-width: 420px) {
+  .qu-sound, .qu-skip { letter-spacing: 0.14em; font-size: 9px; padding: 0.45rem 0.7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qu-scene { animation: quFade 1s ease-out both; }
+  .qu-crest, .qu-eyebrow, .qu-name, .qu-tag, .qu-enter, .qu-skip, .qu-sound, .qu-ornament { animation: quSkip 1s ease both; }
+  .is-opening .qu-stage { transform: none; }
+  .qu-photo, .is-opening .qu-photo { transform: none !important; transition: opacity 0.5s ease; }
+  .qu-slit { animation: none; transition: opacity 0.5s ease; }
+  .is-opening .qu-slit { width: 100%; }
+  .qu-orb, .is-opening .qu-orb { transform: translate(-50%, -50%) scale(var(--os, 16)); transition: opacity 0.5s ease; }
+  .qu-flash { transition-delay: 0s; transition-duration: 0.5s; }
+  .qu-motes { display: none; }
+  .qu-grain { animation: none; }
+  .qu-intro, .qu-intro.is-skipping { transition: opacity 0.5s ease, visibility 0s linear 0.5s; }
+  .qu-content { transition: opacity 0.4s ease; transform: none !important; }
+}
     /* ========================================================
        DEFAULT: DARK MODE (Charcoal Plum Velvet)
        ======================================================== */
